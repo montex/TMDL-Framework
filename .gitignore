@@ -1,0 +1,4 @@
+*.class
+*/.metadata
+.am3
+bin

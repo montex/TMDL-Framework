@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.modelspartiti.formalisms.san/src" modelPluginID="org.modelspartiti.formalisms.san"
+    modelName="SAN" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>san.ecore</foreignModel>
+  <genPackages prefix="SAN" resource="XML" disposableProviderFactory="true" contentTypeIdentifier=""
+      fileExtensions="san.ms,msan" ecorePackage="san.ecore#/" publicationLocation="">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="san.ecore#//VariableType">
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/short"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/int"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/long"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/float"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/double"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/bool"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/char"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="san.ecore#//CodeFragment"/>
+    <genClasses ecoreClass="san.ecore#//SAN">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/places"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//SAN/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/activities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/globalVariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/arcs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/gates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/initialization"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Place">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Place/marking"/>
+      <genOperations ecoreOperation="san.ecore#//Place/isExtended"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//Activity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Activity/cases"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Case">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Case/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Case/p"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//Arc"/>
+    <genClasses ecoreClass="san.ecore#//InputArc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//InputArc/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//InputArc/target"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//OutputArc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//OutputArc/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//OutputArc/target"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//Gate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Gate/function"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//Gate/places"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//OutputGate"/>
+    <genClasses ecoreClass="san.ecore#//InputGate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//InputGate/predicate"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//InstantaneousActivity"/>
+    <genClasses ecoreClass="san.ecore#//TimedActivity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/timeDistribution"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/activation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/reactivation"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//Distribution"/>
+    <genClasses ecoreClass="san.ecore#//Expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Expression/segments"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//ExpressionText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//ExpressionText/text"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//ExpressionMarking">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionMarking/place"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//ExpressionVariable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionVariable/variable"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//Marking"/>
+    <genClasses ecoreClass="san.ecore#//MarkingInteger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingInteger/value"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//MarkingDouble">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingDouble/value"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//GlobalVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//GlobalVariable/type"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//MarkingVariable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingVariable/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Exponential">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Exponential/rate"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Normal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Normal/mean"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Normal/variance"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Gamma">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Gamma/alpha"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Gamma/beta"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Binomial">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Binomial/t"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Binomial/p"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Deterministic">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Deterministic/value"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Lognormal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Lognormal/mu"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Lognormal/alphaSquared"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Beta">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Beta/alpha1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Beta/beta1"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//NegativeBinomial">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//NegativeBinomial/s"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//NegativeBinomial/p"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Geometric">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Geometric/p"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Erlang">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Erlang/m"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Erlang/beta"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Uniform">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Uniform/lowerBound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Uniform/upperBound"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//HyperExponential">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//HyperExponential/rate0"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//HyperExponential/p0"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Weibull">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Weibull/alpha"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Weibull/beta"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Triangular">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Triangular/min"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Triangular/middle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Triangular/max"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//ConditionalWeibull">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ConditionalWeibull/alpha"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ConditionalWeibull/beta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ConditionalWeibull/t"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//HypoExponential">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//HypoExponential/rate0"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Pareto">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Pareto/lowerBound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Pareto/shape"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//ExpressionSegment"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated san -->
+      <package
+            uri="http://www.modelspartiti.org/templates/san/san"
+            class="san.SANPackage"
+            genModel="model/san.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated san -->
+      <parser
+            type="san.ms"
+            class="san.util.SANResourceFactoryImpl"/>
+      <parser
+            type="msan"
+            class="san.util.SANResourceFactoryImpl"/>
+   </extension>
+
+</plugin>
