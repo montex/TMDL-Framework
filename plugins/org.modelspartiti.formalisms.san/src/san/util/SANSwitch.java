@@ -199,14 +199,15 @@ public class SANSwitch<T> extends Switch<T> {
 			case SANPackage.MARKING_INTEGER: {
 				MarkingInteger markingInteger = (MarkingInteger)theEObject;
 				T result = caseMarkingInteger(markingInteger);
+				if (result == null) result = caseMarkingSimple(markingInteger);
 				if (result == null) result = caseMarking(markingInteger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANPackage.MARKING_DOUBLE: {
-				MarkingDouble markingDouble = (MarkingDouble)theEObject;
-				T result = caseMarkingDouble(markingDouble);
-				if (result == null) result = caseMarking(markingDouble);
+			case SANPackage.MARKING_EXTENDED: {
+				MarkingExtended markingExtended = (MarkingExtended)theEObject;
+				T result = caseMarkingExtended(markingExtended);
+				if (result == null) result = caseMarking(markingExtended);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -220,6 +221,7 @@ public class SANSwitch<T> extends Switch<T> {
 			case SANPackage.MARKING_VARIABLE: {
 				MarkingVariable markingVariable = (MarkingVariable)theEObject;
 				T result = caseMarkingVariable(markingVariable);
+				if (result == null) result = caseMarkingSimple(markingVariable);
 				if (result == null) result = caseMarking(markingVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -346,6 +348,29 @@ public class SANSwitch<T> extends Switch<T> {
 			case SANPackage.EXPRESSION_SEGMENT: {
 				ExpressionSegment expressionSegment = (ExpressionSegment)theEObject;
 				T result = caseExpressionSegment(expressionSegment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.MARKING_SIMPLE: {
+				MarkingSimple markingSimple = (MarkingSimple)theEObject;
+				T result = caseMarkingSimple(markingSimple);
+				if (result == null) result = caseMarking(markingSimple);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.NORMAL_PLACE: {
+				NormalPlace normalPlace = (NormalPlace)theEObject;
+				T result = caseNormalPlace(normalPlace);
+				if (result == null) result = casePlace(normalPlace);
+				if (result == null) result = caseNamedElement(normalPlace);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.EXTENDED_PLACE: {
+				ExtendedPlace extendedPlace = (ExtendedPlace)theEObject;
+				T result = caseExtendedPlace(extendedPlace);
+				if (result == null) result = casePlace(extendedPlace);
+				if (result == null) result = caseNamedElement(extendedPlace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -654,17 +679,17 @@ public class SANSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marking Double</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Marking Extended</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marking Double</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Marking Extended</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMarkingDouble(MarkingDouble object) {
+	public T caseMarkingExtended(MarkingExtended object) {
 		return null;
 	}
 
@@ -965,6 +990,51 @@ public class SANSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExpressionSegment(ExpressionSegment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Marking Simple</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Marking Simple</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMarkingSimple(MarkingSimple object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Normal Place</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Normal Place</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNormalPlace(NormalPlace object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Extended Place</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Extended Place</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExtendedPlace(ExtendedPlace object) {
 		return null;
 	}
 

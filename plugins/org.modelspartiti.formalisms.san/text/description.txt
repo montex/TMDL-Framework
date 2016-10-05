@@ -17,8 +17,6 @@ Package san <http://www.modelspartiti.org/templates/san/san>
     Reference initialization : Expression<<0..*>>
 
   Class Place -> NamedElement
-    Reference marking : Marking<<1..1>>
-    Operation isExtended() : EBoolean<<1..1>>
 
   Class Activity -> NamedElement
     Reference cases : Case<<1..*>>
@@ -72,16 +70,16 @@ Package san <http://www.modelspartiti.org/templates/san/san>
 
   Class Marking
 
-  Class MarkingInteger -> Marking
+  Class MarkingInteger -> MarkingSimple
     Attribute value : EInt<<1..1>>
 
-  Class MarkingDouble -> Marking
-    Attribute value : EDouble<<1..1>>
+  Class MarkingExtended -> Marking
+    Attribute value : EString<<1..1>>
 
   Class GlobalVariable -> NamedElement
     Attribute type : VariableType<<1..1>>
 
-  Class MarkingVariable -> Marking
+  Class MarkingVariable -> MarkingSimple
     Reference variable : GlobalVariable<<1..1>>
 
   Class Exponential -> Distribution
@@ -151,6 +149,14 @@ Package san <http://www.modelspartiti.org/templates/san/san>
     Reference shape : Expression<<1..1>>
 
   Class ExpressionSegment
+
+  Class MarkingSimple -> Marking
+
+  Class NormalPlace -> Place
+    Reference marking : MarkingSimple<<1..1>>
+
+  Class ExtendedPlace -> Place
+    Reference marking : Marking<<1..1>>
 
   Enum VariableType
     Literal short = 0

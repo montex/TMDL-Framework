@@ -4,25 +4,25 @@ package san.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import san.Place;
+import san.MarkingSimple;
 import san.SANPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Place</b></em>'.
+ * An implementation of the model object '<em><b>Marking Simple</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public abstract class PlaceImpl extends NamedElementImpl implements Place {
+public abstract class MarkingSimpleImpl extends MarkingImpl implements MarkingSimple {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PlaceImpl() {
+	protected MarkingSimpleImpl() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public abstract class PlaceImpl extends NamedElementImpl implements Place {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.PLACE;
+		return SANPackage.Literals.MARKING_SIMPLE;
 	}
 
-} //PlaceImpl
+} //MarkingSimpleImpl

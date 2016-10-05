@@ -58,7 +58,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case SANPackage.SAN: return createSAN();
-			case SANPackage.PLACE: return createPlace();
 			case SANPackage.CASE: return createCase();
 			case SANPackage.INPUT_ARC: return createInputArc();
 			case SANPackage.OUTPUT_ARC: return createOutputArc();
@@ -71,7 +70,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.EXPRESSION_MARKING: return createExpressionMarking();
 			case SANPackage.EXPRESSION_VARIABLE: return createExpressionVariable();
 			case SANPackage.MARKING_INTEGER: return createMarkingInteger();
-			case SANPackage.MARKING_DOUBLE: return createMarkingDouble();
+			case SANPackage.MARKING_EXTENDED: return createMarkingExtended();
 			case SANPackage.GLOBAL_VARIABLE: return createGlobalVariable();
 			case SANPackage.MARKING_VARIABLE: return createMarkingVariable();
 			case SANPackage.EXPONENTIAL: return createExponential();
@@ -91,6 +90,8 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.CONDITIONAL_WEIBULL: return createConditionalWeibull();
 			case SANPackage.HYPO_EXPONENTIAL: return createHypoExponential();
 			case SANPackage.PARETO: return createPareto();
+			case SANPackage.NORMAL_PLACE: return createNormalPlace();
+			case SANPackage.EXTENDED_PLACE: return createExtendedPlace();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -138,16 +139,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public SAN createSAN() {
 		SANImpl san = new SANImpl();
 		return san;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Place createPlace() {
-		PlaceImpl place = new PlaceImpl();
-		return place;
 	}
 
 	/**
@@ -275,9 +266,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingDouble createMarkingDouble() {
-		MarkingDoubleImpl markingDouble = new MarkingDoubleImpl();
-		return markingDouble;
+	public MarkingExtended createMarkingExtended() {
+		MarkingExtendedImpl markingExtended = new MarkingExtendedImpl();
+		return markingExtended;
 	}
 
 	/**
@@ -468,6 +459,26 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public Pareto createPareto() {
 		ParetoImpl pareto = new ParetoImpl();
 		return pareto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NormalPlace createNormalPlace() {
+		NormalPlaceImpl normalPlace = new NormalPlaceImpl();
+		return normalPlace;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExtendedPlace createExtendedPlace() {
+		ExtendedPlaceImpl extendedPlace = new ExtendedPlaceImpl();
+		return extendedPlace;
 	}
 
 	/**

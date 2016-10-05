@@ -6,7 +6,6 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -27,6 +26,7 @@ import san.ExpressionMarking;
 import san.ExpressionSegment;
 import san.ExpressionText;
 import san.ExpressionVariable;
+import san.ExtendedPlace;
 import san.Gamma;
 import san.Gate;
 import san.Geometric;
@@ -38,12 +38,14 @@ import san.InputGate;
 import san.InstantaneousActivity;
 import san.Lognormal;
 import san.Marking;
-import san.MarkingDouble;
+import san.MarkingExtended;
 import san.MarkingInteger;
+import san.MarkingSimple;
 import san.MarkingVariable;
 import san.NamedElement;
 import san.NegativeBinomial;
 import san.Normal;
+import san.NormalPlace;
 import san.OutputArc;
 import san.OutputGate;
 import san.Pareto;
@@ -208,7 +210,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass markingDoubleEClass = null;
+	private EClass markingExtendedEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -349,6 +351,27 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * @generated
 	 */
 	private EClass expressionSegmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass markingSimpleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass normalPlaceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass extendedPlaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -504,24 +527,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 */
 	public EClass getPlace() {
 		return placeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPlace_Marking() {
-		return (EReference)placeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPlace__IsExtended() {
-		return placeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -862,8 +867,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMarkingDouble() {
-		return markingDoubleEClass;
+	public EClass getMarkingExtended() {
+		return markingExtendedEClass;
 	}
 
 	/**
@@ -871,8 +876,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMarkingDouble_Value() {
-		return (EAttribute)markingDoubleEClass.getEStructuralFeatures().get(0);
+	public EAttribute getMarkingExtended_Value() {
+		return (EAttribute)markingExtendedEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1366,6 +1371,51 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMarkingSimple() {
+		return markingSimpleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNormalPlace() {
+		return normalPlaceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNormalPlace_Marking() {
+		return (EReference)normalPlaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExtendedPlace() {
+		return extendedPlaceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExtendedPlace_Marking() {
+		return (EReference)extendedPlaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVariableType() {
 		return variableTypeEEnum;
 	}
@@ -1417,8 +1467,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		createEReference(sanEClass, SAN__INITIALIZATION);
 
 		placeEClass = createEClass(PLACE);
-		createEReference(placeEClass, PLACE__MARKING);
-		createEOperation(placeEClass, PLACE___IS_EXTENDED);
 
 		activityEClass = createEClass(ACTIVITY);
 		createEReference(activityEClass, ACTIVITY__CASES);
@@ -1475,8 +1523,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		markingIntegerEClass = createEClass(MARKING_INTEGER);
 		createEAttribute(markingIntegerEClass, MARKING_INTEGER__VALUE);
 
-		markingDoubleEClass = createEClass(MARKING_DOUBLE);
-		createEAttribute(markingDoubleEClass, MARKING_DOUBLE__VALUE);
+		markingExtendedEClass = createEClass(MARKING_EXTENDED);
+		createEAttribute(markingExtendedEClass, MARKING_EXTENDED__VALUE);
 
 		globalVariableEClass = createEClass(GLOBAL_VARIABLE);
 		createEAttribute(globalVariableEClass, GLOBAL_VARIABLE__TYPE);
@@ -1552,6 +1600,14 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		expressionSegmentEClass = createEClass(EXPRESSION_SEGMENT);
 
+		markingSimpleEClass = createEClass(MARKING_SIMPLE);
+
+		normalPlaceEClass = createEClass(NORMAL_PLACE);
+		createEReference(normalPlaceEClass, NORMAL_PLACE__MARKING);
+
+		extendedPlaceEClass = createEClass(EXTENDED_PLACE);
+		createEReference(extendedPlaceEClass, EXTENDED_PLACE__MARKING);
+
 		// Create enums
 		variableTypeEEnum = createEEnum(VARIABLE_TYPE);
 
@@ -1599,10 +1655,10 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		expressionTextEClass.getESuperTypes().add(this.getExpressionSegment());
 		expressionMarkingEClass.getESuperTypes().add(this.getExpressionSegment());
 		expressionVariableEClass.getESuperTypes().add(this.getExpressionSegment());
-		markingIntegerEClass.getESuperTypes().add(this.getMarking());
-		markingDoubleEClass.getESuperTypes().add(this.getMarking());
+		markingIntegerEClass.getESuperTypes().add(this.getMarkingSimple());
+		markingExtendedEClass.getESuperTypes().add(this.getMarking());
 		globalVariableEClass.getESuperTypes().add(this.getNamedElement());
-		markingVariableEClass.getESuperTypes().add(this.getMarking());
+		markingVariableEClass.getESuperTypes().add(this.getMarkingSimple());
 		exponentialEClass.getESuperTypes().add(this.getDistribution());
 		normalEClass.getESuperTypes().add(this.getDistribution());
 		gammaEClass.getESuperTypes().add(this.getDistribution());
@@ -1620,6 +1676,9 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		conditionalWeibullEClass.getESuperTypes().add(this.getDistribution());
 		hypoExponentialEClass.getESuperTypes().add(this.getDistribution());
 		paretoEClass.getESuperTypes().add(this.getDistribution());
+		markingSimpleEClass.getESuperTypes().add(this.getMarking());
+		normalPlaceEClass.getESuperTypes().add(this.getPlace());
+		extendedPlaceEClass.getESuperTypes().add(this.getPlace());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(sanEClass, san.SAN.class, "SAN", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1634,10 +1693,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEReference(getSAN_Gates(), this.getGate(), null, "gates", null, 0, -1, san.SAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSAN_Initialization(), this.getExpression(), null, "initialization", null, 0, -1, san.SAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlace_Marking(), this.getMarking(), null, "marking", null, 1, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getPlace__IsExtended(), ecorePackage.getEBoolean(), "isExtended", 1, 1, IS_UNIQUE, IS_ORDERED);
+		initEClass(placeEClass, Place.class, "Place", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(activityEClass, Activity.class, "Activity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActivity_Cases(), this.getCase(), null, "cases", null, 1, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1695,8 +1751,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEClass(markingIntegerEClass, MarkingInteger.class, "MarkingInteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMarkingInteger_Value(), ecorePackage.getEInt(), "value", null, 1, 1, MarkingInteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(markingDoubleEClass, MarkingDouble.class, "MarkingDouble", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMarkingDouble_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, MarkingDouble.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(markingExtendedEClass, MarkingExtended.class, "MarkingExtended", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMarkingExtended_Value(), ecorePackage.getEString(), "value", "0", 1, 1, MarkingExtended.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(globalVariableEClass, GlobalVariable.class, "GlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGlobalVariable_Type(), this.getVariableType(), "type", "int", 1, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1771,6 +1827,14 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEReference(getPareto_Shape(), this.getExpression(), null, "shape", null, 1, 1, Pareto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressionSegmentEClass, ExpressionSegment.class, "ExpressionSegment", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(markingSimpleEClass, MarkingSimple.class, "MarkingSimple", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(normalPlaceEClass, NormalPlace.class, "NormalPlace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNormalPlace_Marking(), this.getMarkingSimple(), null, "marking", null, 1, 1, NormalPlace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(extendedPlaceEClass, ExtendedPlace.class, "ExtendedPlace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExtendedPlace_Marking(), this.getMarking(), null, "marking", null, 1, 1, ExtendedPlace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(variableTypeEEnum, VariableType.class, "VariableType");

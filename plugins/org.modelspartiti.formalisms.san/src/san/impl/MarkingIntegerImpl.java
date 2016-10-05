@@ -24,7 +24,7 @@ import san.SANPackage;
  *
  * @generated
  */
-public class MarkingIntegerImpl extends MarkingImpl implements MarkingInteger {
+public class MarkingIntegerImpl extends MarkingSimpleImpl implements MarkingInteger {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

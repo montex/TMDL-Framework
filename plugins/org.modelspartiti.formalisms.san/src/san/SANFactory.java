@@ -31,15 +31,6 @@ public interface SANFactory extends EFactory {
 	SAN createSAN();
 
 	/**
-	 * Returns a new object of class '<em>Place</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Place</em>'.
-	 * @generated
-	 */
-	Place createPlace();
-
-	/**
 	 * Returns a new object of class '<em>Case</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,13 +139,13 @@ public interface SANFactory extends EFactory {
 	MarkingInteger createMarkingInteger();
 
 	/**
-	 * Returns a new object of class '<em>Marking Double</em>'.
+	 * Returns a new object of class '<em>Marking Extended</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Double</em>'.
+	 * @return a new object of class '<em>Marking Extended</em>'.
 	 * @generated
 	 */
-	MarkingDouble createMarkingDouble();
+	MarkingExtended createMarkingExtended();
 
 	/**
 	 * Returns a new object of class '<em>Global Variable</em>'.
@@ -326,6 +317,24 @@ public interface SANFactory extends EFactory {
 	 * @generated
 	 */
 	Pareto createPareto();
+
+	/**
+	 * Returns a new object of class '<em>Normal Place</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Normal Place</em>'.
+	 * @generated
+	 */
+	NormalPlace createNormalPlace();
+
+	/**
+	 * Returns a new object of class '<em>Extended Place</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Extended Place</em>'.
+	 * @generated
+	 */
+	ExtendedPlace createExtendedPlace();
 
 	/**
 	 * Returns the package supported by this factory.

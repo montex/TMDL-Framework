@@ -18,11 +18,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="initialization" upperBound="-1"
         eType="#//Expression" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//NamedElement">
-    <eOperations name="isExtended" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"
-        eType="#//Marking" containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" abstract="true" eSuperTypes="#//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cases" lowerBound="1" upperBound="-1"
         eType="#//Case" containment="true" eKeys="#//Case/ID"/>
@@ -92,11 +88,12 @@
         eType="#//GlobalVariable"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Marking" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MarkingInteger" eSuperTypes="#//Marking">
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingInteger" eSuperTypes="#//MarkingSimple">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MarkingDouble" eSuperTypes="#//Marking">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingExtended" eSuperTypes="#//Marking">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VariableType">
     <eLiterals name="short"/>
@@ -111,7 +108,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//VariableType"
         defaultValueLiteral="int"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MarkingVariable" eSuperTypes="#//Marking">
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingVariable" eSuperTypes="#//MarkingSimple">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
         eType="#//GlobalVariable"/>
   </eClassifiers>
@@ -214,4 +211,13 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpressionSegment" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingSimple" abstract="true" eSuperTypes="#//Marking"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NormalPlace" eSuperTypes="#//Place">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"
+        eType="#//MarkingSimple" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedPlace" eSuperTypes="#//Place">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"
+        eType="#//Marking" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -19,7 +19,7 @@ package san;
  * @model
  * @generated
  */
-public interface MarkingVariable extends Marking {
+public interface MarkingVariable extends MarkingSimple {
 	/**
 	 * Returns the value of the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -19,7 +19,7 @@ package san;
  * @model
  * @generated
  */
-public interface MarkingInteger extends Marking {
+public interface MarkingInteger extends MarkingSimple {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

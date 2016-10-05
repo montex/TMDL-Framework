@@ -148,8 +148,8 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createMarkingIntegerAdapter();
 			}
 			@Override
-			public Adapter caseMarkingDouble(MarkingDouble object) {
-				return createMarkingDoubleAdapter();
+			public Adapter caseMarkingExtended(MarkingExtended object) {
+				return createMarkingExtendedAdapter();
 			}
 			@Override
 			public Adapter caseGlobalVariable(GlobalVariable object) {
@@ -230,6 +230,18 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseExpressionSegment(ExpressionSegment object) {
 				return createExpressionSegmentAdapter();
+			}
+			@Override
+			public Adapter caseMarkingSimple(MarkingSimple object) {
+				return createMarkingSimpleAdapter();
+			}
+			@Override
+			public Adapter caseNormalPlace(NormalPlace object) {
+				return createNormalPlaceAdapter();
+			}
+			@Override
+			public Adapter caseExtendedPlace(ExtendedPlace object) {
+				return createExtendedPlaceAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -532,16 +544,16 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingDouble <em>Marking Double</em>}'.
+	 * Creates a new adapter for an object of class '{@link san.MarkingExtended <em>Marking Extended</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see san.MarkingDouble
+	 * @see san.MarkingExtended
 	 * @generated
 	 */
-	public Adapter createMarkingDoubleAdapter() {
+	public Adapter createMarkingExtendedAdapter() {
 		return null;
 	}
 
@@ -822,6 +834,48 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExpressionSegmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.MarkingSimple <em>Marking Simple</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.MarkingSimple
+	 * @generated
+	 */
+	public Adapter createMarkingSimpleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.NormalPlace <em>Normal Place</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.NormalPlace
+	 * @generated
+	 */
+	public Adapter createNormalPlaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.ExtendedPlace <em>Extended Place</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.ExtendedPlace
+	 * @generated
+	 */
+	public Adapter createExtendedPlaceAdapter() {
 		return null;
 	}
 

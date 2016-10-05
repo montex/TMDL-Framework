@@ -26,7 +26,7 @@ import san.SANPackage;
  *
  * @generated
  */
-public class MarkingVariableImpl extends MarkingImpl implements MarkingVariable {
+public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVariable {
 	/**
 	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->

@@ -6,7 +6,6 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -207,31 +206,13 @@ public interface SANPackage extends EPackage {
 	int PLACE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Marking</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACE__MARKING = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Place</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Is Extended</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACE___IS_EXTENDED = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int PLACE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Place</em>' class.
@@ -240,7 +221,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 1;
+	int PLACE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.impl.ActivityImpl <em>Activity</em>}' class.
@@ -980,6 +961,34 @@ public interface SANPackage extends EPackage {
 	int MARKING_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.MarkingSimpleImpl <em>Marking Simple</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.MarkingSimpleImpl
+	 * @see san.impl.SANPackageImpl#getMarkingSimple()
+	 * @generated
+	 */
+	int MARKING_SIMPLE = 41;
+
+	/**
+	 * The number of structural features of the '<em>Marking Simple</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_SIMPLE_FEATURE_COUNT = MARKING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Marking Simple</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_SIMPLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link san.impl.MarkingIntegerImpl <em>Marking Integer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -996,7 +1005,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_INTEGER__VALUE = MARKING_FEATURE_COUNT + 0;
+	int MARKING_INTEGER__VALUE = MARKING_SIMPLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Marking Integer</em>' class.
@@ -1005,7 +1014,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_INTEGER_FEATURE_COUNT = MARKING_FEATURE_COUNT + 1;
+	int MARKING_INTEGER_FEATURE_COUNT = MARKING_SIMPLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Marking Integer</em>' class.
@@ -1014,17 +1023,17 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_INTEGER_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
+	int MARKING_INTEGER_OPERATION_COUNT = MARKING_SIMPLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.MarkingDoubleImpl <em>Marking Double</em>}' class.
+	 * The meta object id for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingDoubleImpl
-	 * @see san.impl.SANPackageImpl#getMarkingDouble()
+	 * @see san.impl.MarkingExtendedImpl
+	 * @see san.impl.SANPackageImpl#getMarkingExtended()
 	 * @generated
 	 */
-	int MARKING_DOUBLE = 20;
+	int MARKING_EXTENDED = 20;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1033,25 +1042,25 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_DOUBLE__VALUE = MARKING_FEATURE_COUNT + 0;
+	int MARKING_EXTENDED__VALUE = MARKING_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Marking Double</em>' class.
+	 * The number of structural features of the '<em>Marking Extended</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_DOUBLE_FEATURE_COUNT = MARKING_FEATURE_COUNT + 1;
+	int MARKING_EXTENDED_FEATURE_COUNT = MARKING_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Marking Double</em>' class.
+	 * The number of operations of the '<em>Marking Extended</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_DOUBLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
+	int MARKING_EXTENDED_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -1116,7 +1125,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE__VARIABLE = MARKING_FEATURE_COUNT + 0;
+	int MARKING_VARIABLE__VARIABLE = MARKING_SIMPLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Marking Variable</em>' class.
@@ -1125,7 +1134,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_FEATURE_COUNT = MARKING_FEATURE_COUNT + 1;
+	int MARKING_VARIABLE_FEATURE_COUNT = MARKING_SIMPLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Marking Variable</em>' class.
@@ -1134,7 +1143,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
+	int MARKING_VARIABLE_OPERATION_COUNT = MARKING_SIMPLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.impl.ExponentialImpl <em>Exponential</em>}' class.
@@ -1901,6 +1910,98 @@ public interface SANPackage extends EPackage {
 	int PARETO_OPERATION_COUNT = DISTRIBUTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.NormalPlaceImpl <em>Normal Place</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.NormalPlaceImpl
+	 * @see san.impl.SANPackageImpl#getNormalPlace()
+	 * @generated
+	 */
+	int NORMAL_PLACE = 42;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NORMAL_PLACE__NAME = PLACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Marking</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NORMAL_PLACE__MARKING = PLACE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Normal Place</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NORMAL_PLACE_FEATURE_COUNT = PLACE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Normal Place</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NORMAL_PLACE_OPERATION_COUNT = PLACE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.ExtendedPlaceImpl <em>Extended Place</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.ExtendedPlaceImpl
+	 * @see san.impl.SANPackageImpl#getExtendedPlace()
+	 * @generated
+	 */
+	int EXTENDED_PLACE = 43;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENDED_PLACE__NAME = PLACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Marking</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENDED_PLACE__MARKING = PLACE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Extended Place</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENDED_PLACE_FEATURE_COUNT = PLACE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Extended Place</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENDED_PLACE_OPERATION_COUNT = PLACE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link san.VariableType <em>Variable Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1908,7 +2009,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getVariableType()
 	 * @generated
 	 */
-	int VARIABLE_TYPE = 41;
+	int VARIABLE_TYPE = 44;
 
 	/**
 	 * The meta object id for the '<em>Code Fragment</em>' data type.
@@ -1918,7 +2019,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getCodeFragment()
 	 * @generated
 	 */
-	int CODE_FRAGMENT = 42;
+	int CODE_FRAGMENT = 45;
 
 
 	/**
@@ -2017,27 +2118,6 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPlace();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.Place#getMarking <em>Marking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Marking</em>'.
-	 * @see san.Place#getMarking()
-	 * @see #getPlace()
-	 * @generated
-	 */
-	EReference getPlace_Marking();
-
-	/**
-	 * Returns the meta object for the '{@link san.Place#isExtended() <em>Is Extended</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Extended</em>' operation.
-	 * @see san.Place#isExtended()
-	 * @generated
-	 */
-	EOperation getPlace__IsExtended();
 
 	/**
 	 * Returns the meta object for class '{@link san.Activity <em>Activity</em>}'.
@@ -2429,25 +2509,25 @@ public interface SANPackage extends EPackage {
 	EAttribute getMarkingInteger_Value();
 
 	/**
-	 * Returns the meta object for class '{@link san.MarkingDouble <em>Marking Double</em>}'.
+	 * Returns the meta object for class '{@link san.MarkingExtended <em>Marking Extended</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking Double</em>'.
-	 * @see san.MarkingDouble
+	 * @return the meta object for class '<em>Marking Extended</em>'.
+	 * @see san.MarkingExtended
 	 * @generated
 	 */
-	EClass getMarkingDouble();
+	EClass getMarkingExtended();
 
 	/**
-	 * Returns the meta object for the attribute '{@link san.MarkingDouble#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link san.MarkingExtended#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see san.MarkingDouble#getValue()
-	 * @see #getMarkingDouble()
+	 * @see san.MarkingExtended#getValue()
+	 * @see #getMarkingExtended()
 	 * @generated
 	 */
-	EAttribute getMarkingDouble_Value();
+	EAttribute getMarkingExtended_Value();
 
 	/**
 	 * Returns the meta object for class '{@link san.GlobalVariable <em>Global Variable</em>}'.
@@ -3024,6 +3104,58 @@ public interface SANPackage extends EPackage {
 	EClass getExpressionSegment();
 
 	/**
+	 * Returns the meta object for class '{@link san.MarkingSimple <em>Marking Simple</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Marking Simple</em>'.
+	 * @see san.MarkingSimple
+	 * @generated
+	 */
+	EClass getMarkingSimple();
+
+	/**
+	 * Returns the meta object for class '{@link san.NormalPlace <em>Normal Place</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Normal Place</em>'.
+	 * @see san.NormalPlace
+	 * @generated
+	 */
+	EClass getNormalPlace();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.NormalPlace#getMarking <em>Marking</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Marking</em>'.
+	 * @see san.NormalPlace#getMarking()
+	 * @see #getNormalPlace()
+	 * @generated
+	 */
+	EReference getNormalPlace_Marking();
+
+	/**
+	 * Returns the meta object for class '{@link san.ExtendedPlace <em>Extended Place</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Extended Place</em>'.
+	 * @see san.ExtendedPlace
+	 * @generated
+	 */
+	EClass getExtendedPlace();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.ExtendedPlace#getMarking <em>Marking</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Marking</em>'.
+	 * @see san.ExtendedPlace#getMarking()
+	 * @see #getExtendedPlace()
+	 * @generated
+	 */
+	EReference getExtendedPlace_Marking();
+
+	/**
 	 * Returns the meta object for enum '{@link san.VariableType <em>Variable Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3142,22 +3274,6 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PLACE = eINSTANCE.getPlace();
-
-		/**
-		 * The meta object literal for the '<em><b>Marking</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PLACE__MARKING = eINSTANCE.getPlace_Marking();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Extended</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PLACE___IS_EXTENDED = eINSTANCE.getPlace__IsExtended();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.ActivityImpl <em>Activity</em>}' class.
@@ -3492,14 +3608,14 @@ public interface SANPackage extends EPackage {
 		EAttribute MARKING_INTEGER__VALUE = eINSTANCE.getMarkingInteger_Value();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.MarkingDoubleImpl <em>Marking Double</em>}' class.
+		 * The meta object literal for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingDoubleImpl
-		 * @see san.impl.SANPackageImpl#getMarkingDouble()
+		 * @see san.impl.MarkingExtendedImpl
+		 * @see san.impl.SANPackageImpl#getMarkingExtended()
 		 * @generated
 		 */
-		EClass MARKING_DOUBLE = eINSTANCE.getMarkingDouble();
+		EClass MARKING_EXTENDED = eINSTANCE.getMarkingExtended();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -3507,7 +3623,7 @@ public interface SANPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MARKING_DOUBLE__VALUE = eINSTANCE.getMarkingDouble_Value();
+		EAttribute MARKING_EXTENDED__VALUE = eINSTANCE.getMarkingExtended_Value();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -3980,6 +4096,52 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EXPRESSION_SEGMENT = eINSTANCE.getExpressionSegment();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.MarkingSimpleImpl <em>Marking Simple</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.MarkingSimpleImpl
+		 * @see san.impl.SANPackageImpl#getMarkingSimple()
+		 * @generated
+		 */
+		EClass MARKING_SIMPLE = eINSTANCE.getMarkingSimple();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.NormalPlaceImpl <em>Normal Place</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.NormalPlaceImpl
+		 * @see san.impl.SANPackageImpl#getNormalPlace()
+		 * @generated
+		 */
+		EClass NORMAL_PLACE = eINSTANCE.getNormalPlace();
+
+		/**
+		 * The meta object literal for the '<em><b>Marking</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NORMAL_PLACE__MARKING = eINSTANCE.getNormalPlace_Marking();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.ExtendedPlaceImpl <em>Extended Place</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.ExtendedPlaceImpl
+		 * @see san.impl.SANPackageImpl#getExtendedPlace()
+		 * @generated
+		 */
+		EClass EXTENDED_PLACE = eINSTANCE.getExtendedPlace();
+
+		/**
+		 * The meta object literal for the '<em><b>Marking</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXTENDED_PLACE__MARKING = eINSTANCE.getExtendedPlace_Marking();
 
 		/**
 		 * The meta object literal for the '{@link san.VariableType <em>Variable Type</em>}' enum.
