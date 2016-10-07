@@ -10,7 +10,7 @@ package san;
  *
  *
  * @see san.SANPackage#getOutputGate()
- * @model
+ * @model extendedMetaData="kind='elementOnly'"
  * @generated
  */
 public interface OutputGate extends Gate {

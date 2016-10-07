@@ -38,7 +38,7 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_EDEFAULT = 1;
+	protected static final int ID_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.

@@ -17,9 +17,6 @@
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <!-- @generated san -->
       <parser
-            type="san.ms"
-            class="san.util.SANResourceFactoryImpl"/>
-      <parser
             type="msan"
             class="san.util.SANResourceFactoryImpl"/>
    </extension>

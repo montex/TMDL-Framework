@@ -473,13 +473,22 @@ public interface SANPackage extends EPackage {
 	int GATE__PLACES = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE__ACTIVITY = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Gate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int GATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Gate</em>' class.
@@ -526,6 +535,15 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int OUTPUT_GATE__PLACES = GATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__ACTIVITY = GATE__ACTIVITY;
 
 	/**
 	 * The number of structural features of the '<em>Output Gate</em>' class.
@@ -581,6 +599,15 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int INPUT_GATE__PLACES = GATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__ACTIVITY = GATE__ACTIVITY;
 
 	/**
 	 * The feature id for the '<em><b>Predicate</b></em>' containment reference.
@@ -2300,6 +2327,17 @@ public interface SANPackage extends EPackage {
 	EReference getGate_Places();
 
 	/**
+	 * Returns the meta object for the reference '{@link san.Gate#getActivity <em>Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Activity</em>'.
+	 * @see san.Gate#getActivity()
+	 * @see #getGate()
+	 * @generated
+	 */
+	EReference getGate_Activity();
+
+	/**
 	 * Returns the meta object for class '{@link san.OutputGate <em>Output Gate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3424,6 +3462,14 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GATE__PLACES = eINSTANCE.getGate_Places();
+
+		/**
+		 * The meta object literal for the '<em><b>Activity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GATE__ACTIVITY = eINSTANCE.getGate_Activity();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.OutputGateImpl <em>Output Gate</em>}' class.

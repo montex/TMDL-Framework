@@ -16,7 +16,7 @@ package san;
  * </p>
  *
  * @see san.SANPackage#getInputGate()
- * @model
+ * @model extendedMetaData="kind='elementOnly'"
  * @generated
  */
 public interface InputGate extends Gate {

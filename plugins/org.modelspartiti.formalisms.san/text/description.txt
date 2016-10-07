@@ -41,6 +41,7 @@ Package san <http://www.modelspartiti.org/templates/san/san>
   Class Gate -> NamedElement
     Reference function : Expression<<1..1>>
     Reference places : Place<<0..*>>
+    Reference activity : Activity<<1..1>>
 
   Class OutputGate -> Gate
 

@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Case extends EObject {
 	/**
 	 * Returns the value of the '<em><b>ID</b></em>' attribute.
-	 * The default value is <code>"1"</code>.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>ID</em>' attribute isn't clear,
@@ -34,7 +34,7 @@ public interface Case extends EObject {
 	 * @return the value of the '<em>ID</em>' attribute.
 	 * @see #setID(int)
 	 * @see san.SANPackage#getCase_ID()
-	 * @model default="1" required="true"
+	 * @model default="0" required="true"
 	 * @generated
 	 */
 	int getID();

@@ -6,7 +6,7 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>san.ecore</foreignModel>
   <genPackages prefix="SAN" resource="XML" disposableProviderFactory="true" contentTypeIdentifier=""
-      fileExtensions="san.ms,msan" ecorePackage="san.ecore#/" publicationLocation="">
+      fileExtensions="msan" ecorePackage="san.ecore#/" publicationLocation="">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="san.ecore#//VariableType">
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/short"/>
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/int"/>
@@ -26,10 +26,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/gates"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/initialization"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//Place">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Place/marking"/>
-      <genOperations ecoreOperation="san.ecore#//Place/isExtended"/>
-    </genClasses>
+    <genClasses ecoreClass="san.ecore#//Place"/>
     <genClasses image="false" ecoreClass="san.ecore#//Activity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Activity/cases"/>
     </genClasses>
@@ -80,8 +77,8 @@
     <genClasses ecoreClass="san.ecore#//MarkingInteger">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingInteger/value"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingDouble">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingDouble/value"/>
+    <genClasses ecoreClass="san.ecore#//MarkingExtended">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingExtended/value"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//GlobalVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//GlobalVariable/type"/>
@@ -156,5 +153,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Pareto/shape"/>
     </genClasses>
     <genClasses image="false" ecoreClass="san.ecore#//ExpressionSegment"/>
+    <genClasses image="false" ecoreClass="san.ecore#//MarkingSimple"/>
+    <genClasses ecoreClass="san.ecore#//NormalPlace">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//NormalPlace/marking"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//ExtendedPlace">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExtendedPlace/marking"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

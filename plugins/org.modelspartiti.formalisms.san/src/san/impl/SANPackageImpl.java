@@ -687,6 +687,15 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getGate_Activity() {
+		return (EReference)gateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOutputGate() {
 		return outputGateEClass;
 	}
@@ -1491,6 +1500,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		gateEClass = createEClass(GATE);
 		createEReference(gateEClass, GATE__FUNCTION);
 		createEReference(gateEClass, GATE__PLACES);
+		createEReference(gateEClass, GATE__ACTIVITY);
 
 		outputGateEClass = createEClass(OUTPUT_GATE);
 
@@ -1703,7 +1713,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCase_ID(), ecorePackage.getEInt(), "ID", "1", 1, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCase_ID(), ecorePackage.getEInt(), "ID", "0", 1, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCase_P(), this.getExpression(), null, "p", null, 1, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arcEClass, Arc.class, "Arc", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1719,6 +1729,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEClass(gateEClass, Gate.class, "Gate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGate_Function(), this.getExpression(), null, "function", null, 1, 1, Gate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGate_Places(), this.getPlace(), null, "places", null, 0, -1, Gate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGate_Activity(), this.getActivity(), null, "activity", null, 1, 1, Gate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputGateEClass, OutputGate.class, "OutputGate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1865,6 +1876,24 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 */
 	protected void createExtendedMetaDataAnnotations() {
 		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		addAnnotation
+		  (gateEClass, 
+		   source, 
+		   new String[] {
+			 "kind", "elementOnly"
+		   });	
+		addAnnotation
+		  (outputGateEClass, 
+		   source, 
+		   new String[] {
+			 "kind", "elementOnly"
+		   });	
+		addAnnotation
+		  (inputGateEClass, 
+		   source, 
+		   new String[] {
+			 "kind", "elementOnly"
+		   });	
 		addAnnotation
 		  (expressionTextEClass, 
 		   source, 
