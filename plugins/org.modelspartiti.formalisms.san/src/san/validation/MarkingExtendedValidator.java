@@ -14,5 +14,4 @@ package san.validation;
 public interface MarkingExtendedValidator {
 	boolean validate();
 
-	boolean validateValue(String value);
 }

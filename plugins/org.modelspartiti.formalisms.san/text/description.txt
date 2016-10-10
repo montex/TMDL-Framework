@@ -41,12 +41,13 @@ Package san <http://www.modelspartiti.org/templates/san/san>
   Class Gate -> NamedElement
     Reference function : Expression<<1..1>>
     Reference places : Place<<0..*>>
-    Reference activity : Activity<<1..1>>
 
   Class OutputGate -> Gate
+    Reference activityCase : Case<<1..1>>
 
   Class InputGate -> Gate
     Reference predicate : Expression<<1..1>>
+    Reference activity : Activity<<1..1>>
 
   Class InstantaneousActivity -> Activity
 
@@ -75,12 +76,11 @@ Package san <http://www.modelspartiti.org/templates/san/san>
     Attribute value : EInt<<1..1>>
 
   Class MarkingExtended -> Marking
-    Attribute value : EString<<1..1>>
 
   Class GlobalVariable -> NamedElement
     Attribute type : VariableType<<1..1>>
 
-  Class MarkingVariable -> MarkingSimple
+  Class MarkingVariableSimple -> MarkingSimple
     Reference variable : GlobalVariable<<1..1>>
 
   Class Exponential -> Distribution
@@ -157,7 +157,14 @@ Package san <http://www.modelspartiti.org/templates/san/san>
     Reference marking : MarkingSimple<<1..1>>
 
   Class ExtendedPlace -> Place
-    Reference marking : Marking<<1..1>>
+    Reference marking : MarkingExtended<<1..1>>
+    Attribute type : ExtendedPlaceType<<1..1>>
+
+  Class MarkingString -> MarkingExtended
+    Attribute value : EString<<1..1>>
+
+  Class MarkingVariableExtended -> MarkingExtended
+    Reference variable : GlobalVariable<<1..1>>
 
   Enum VariableType
     Literal short = 0
@@ -166,6 +173,13 @@ Package san <http://www.modelspartiti.org/templates/san/san>
     Literal float = 3
     Literal double = 4
     Literal bool = 5
+    Literal char = 6
+
+  Enum ExtendedPlaceType
+    Literal int = 1
+    Literal short = 0
+    Literal float = 3
+    Literal double = 4
     Literal char = 6
 
   DataType CodeFragment <java.lang.String>

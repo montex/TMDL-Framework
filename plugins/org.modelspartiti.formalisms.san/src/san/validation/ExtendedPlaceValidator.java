@@ -4,7 +4,8 @@
  */
 package san.validation;
 
-import san.Marking;
+import san.ExtendedPlaceType;
+import san.MarkingExtended;
 
 /**
  * A sample validator interface for {@link san.ExtendedPlace}.
@@ -15,5 +16,6 @@ import san.Marking;
 public interface ExtendedPlaceValidator {
 	boolean validate();
 
-	boolean validateMarking(Marking value);
+	boolean validateMarking(MarkingExtended value);
+	boolean validateType(ExtendedPlaceType value);
 }

@@ -70,9 +70,8 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.EXPRESSION_MARKING: return createExpressionMarking();
 			case SANPackage.EXPRESSION_VARIABLE: return createExpressionVariable();
 			case SANPackage.MARKING_INTEGER: return createMarkingInteger();
-			case SANPackage.MARKING_EXTENDED: return createMarkingExtended();
 			case SANPackage.GLOBAL_VARIABLE: return createGlobalVariable();
-			case SANPackage.MARKING_VARIABLE: return createMarkingVariable();
+			case SANPackage.MARKING_VARIABLE_SIMPLE: return createMarkingVariableSimple();
 			case SANPackage.EXPONENTIAL: return createExponential();
 			case SANPackage.NORMAL: return createNormal();
 			case SANPackage.GAMMA: return createGamma();
@@ -92,6 +91,8 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.PARETO: return createPareto();
 			case SANPackage.NORMAL_PLACE: return createNormalPlace();
 			case SANPackage.EXTENDED_PLACE: return createExtendedPlace();
+			case SANPackage.MARKING_STRING: return createMarkingString();
+			case SANPackage.MARKING_VARIABLE_EXTENDED: return createMarkingVariableExtended();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -107,6 +108,8 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 		switch (eDataType.getClassifierID()) {
 			case SANPackage.VARIABLE_TYPE:
 				return createVariableTypeFromString(eDataType, initialValue);
+			case SANPackage.EXTENDED_PLACE_TYPE:
+				return createExtendedPlaceTypeFromString(eDataType, initialValue);
 			case SANPackage.CODE_FRAGMENT:
 				return createCodeFragmentFromString(eDataType, initialValue);
 			default:
@@ -124,6 +127,8 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 		switch (eDataType.getClassifierID()) {
 			case SANPackage.VARIABLE_TYPE:
 				return convertVariableTypeToString(eDataType, instanceValue);
+			case SANPackage.EXTENDED_PLACE_TYPE:
+				return convertExtendedPlaceTypeToString(eDataType, instanceValue);
 			case SANPackage.CODE_FRAGMENT:
 				return convertCodeFragmentToString(eDataType, instanceValue);
 			default:
@@ -266,16 +271,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingExtended createMarkingExtended() {
-		MarkingExtendedImpl markingExtended = new MarkingExtendedImpl();
-		return markingExtended;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GlobalVariable createGlobalVariable() {
 		GlobalVariableImpl globalVariable = new GlobalVariableImpl();
 		return globalVariable;
@@ -286,9 +281,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingVariable createMarkingVariable() {
-		MarkingVariableImpl markingVariable = new MarkingVariableImpl();
-		return markingVariable;
+	public MarkingVariableSimple createMarkingVariableSimple() {
+		MarkingVariableSimpleImpl markingVariableSimple = new MarkingVariableSimpleImpl();
+		return markingVariableSimple;
 	}
 
 	/**
@@ -486,6 +481,26 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MarkingString createMarkingString() {
+		MarkingStringImpl markingString = new MarkingStringImpl();
+		return markingString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MarkingVariableExtended createMarkingVariableExtended() {
+		MarkingVariableExtendedImpl markingVariableExtended = new MarkingVariableExtendedImpl();
+		return markingVariableExtended;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VariableType createVariableTypeFromString(EDataType eDataType, String initialValue) {
 		VariableType result = VariableType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -498,6 +513,26 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * @generated
 	 */
 	public String convertVariableTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExtendedPlaceType createExtendedPlaceTypeFromString(EDataType eDataType, String initialValue) {
+		ExtendedPlaceType result = ExtendedPlaceType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertExtendedPlaceTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

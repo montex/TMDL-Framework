@@ -9,40 +9,40 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import san.Case;
-import san.OutputGate;
+import san.GlobalVariable;
+import san.MarkingVariableExtended;
 import san.SANPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Output Gate</b></em>'.
+ * An implementation of the model object '<em><b>Marking Variable Extended</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link san.impl.OutputGateImpl#getActivityCase <em>Activity Case</em>}</li>
+ *   <li>{@link san.impl.MarkingVariableExtendedImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class OutputGateImpl extends GateImpl implements OutputGate {
+public class MarkingVariableExtendedImpl extends MarkingExtendedImpl implements MarkingVariableExtended {
 	/**
-	 * The cached value of the '{@link #getActivityCase() <em>Activity Case</em>}' reference.
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActivityCase()
+	 * @see #getVariable()
 	 * @generated
 	 * @ordered
 	 */
-	protected Case activityCase;
+	protected GlobalVariable variable;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OutputGateImpl() {
+	protected MarkingVariableExtendedImpl() {
 		super();
 	}
 
@@ -53,7 +53,7 @@ public class OutputGateImpl extends GateImpl implements OutputGate {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.OUTPUT_GATE;
+		return SANPackage.Literals.MARKING_VARIABLE_EXTENDED;
 	}
 
 	/**
@@ -61,16 +61,16 @@ public class OutputGateImpl extends GateImpl implements OutputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Case getActivityCase() {
-		if (activityCase != null && activityCase.eIsProxy()) {
-			InternalEObject oldActivityCase = (InternalEObject)activityCase;
-			activityCase = (Case)eResolveProxy(oldActivityCase);
-			if (activityCase != oldActivityCase) {
+	public GlobalVariable getVariable() {
+		if (variable != null && variable.eIsProxy()) {
+			InternalEObject oldVariable = (InternalEObject)variable;
+			variable = (GlobalVariable)eResolveProxy(oldVariable);
+			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.OUTPUT_GATE__ACTIVITY_CASE, oldActivityCase, activityCase));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.MARKING_VARIABLE_EXTENDED__VARIABLE, oldVariable, variable));
 			}
 		}
-		return activityCase;
+		return variable;
 	}
 
 	/**
@@ -78,8 +78,8 @@ public class OutputGateImpl extends GateImpl implements OutputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Case basicGetActivityCase() {
-		return activityCase;
+	public GlobalVariable basicGetVariable() {
+		return variable;
 	}
 
 	/**
@@ -87,11 +87,11 @@ public class OutputGateImpl extends GateImpl implements OutputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActivityCase(Case newActivityCase) {
-		Case oldActivityCase = activityCase;
-		activityCase = newActivityCase;
+	public void setVariable(GlobalVariable newVariable) {
+		GlobalVariable oldVariable = variable;
+		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.OUTPUT_GATE__ACTIVITY_CASE, oldActivityCase, activityCase));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_VARIABLE_EXTENDED__VARIABLE, oldVariable, variable));
 	}
 
 	/**
@@ -102,9 +102,9 @@ public class OutputGateImpl extends GateImpl implements OutputGate {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANPackage.OUTPUT_GATE__ACTIVITY_CASE:
-				if (resolve) return getActivityCase();
-				return basicGetActivityCase();
+			case SANPackage.MARKING_VARIABLE_EXTENDED__VARIABLE:
+				if (resolve) return getVariable();
+				return basicGetVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,8 +117,8 @@ public class OutputGateImpl extends GateImpl implements OutputGate {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANPackage.OUTPUT_GATE__ACTIVITY_CASE:
-				setActivityCase((Case)newValue);
+			case SANPackage.MARKING_VARIABLE_EXTENDED__VARIABLE:
+				setVariable((GlobalVariable)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,8 +132,8 @@ public class OutputGateImpl extends GateImpl implements OutputGate {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANPackage.OUTPUT_GATE__ACTIVITY_CASE:
-				setActivityCase((Case)null);
+			case SANPackage.MARKING_VARIABLE_EXTENDED__VARIABLE:
+				setVariable((GlobalVariable)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,10 +147,10 @@ public class OutputGateImpl extends GateImpl implements OutputGate {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANPackage.OUTPUT_GATE__ACTIVITY_CASE:
-				return activityCase != null;
+			case SANPackage.MARKING_VARIABLE_EXTENDED__VARIABLE:
+				return variable != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //OutputGateImpl
+} //MarkingVariableExtendedImpl

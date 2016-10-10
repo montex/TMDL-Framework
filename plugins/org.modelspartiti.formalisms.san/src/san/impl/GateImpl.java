@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import san.Activity;
 import san.Expression;
 import san.Gate;
 import san.Place;
@@ -31,7 +30,6 @@ import san.SANPackage;
  * <ul>
  *   <li>{@link san.impl.GateImpl#getFunction <em>Function</em>}</li>
  *   <li>{@link san.impl.GateImpl#getPlaces <em>Places</em>}</li>
- *   <li>{@link san.impl.GateImpl#getActivity <em>Activity</em>}</li>
  * </ul>
  * </p>
  *
@@ -57,16 +55,6 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 	 * @ordered
 	 */
 	protected EList<Place> places;
-
-	/**
-	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActivity()
-	 * @generated
-	 * @ordered
-	 */
-	protected Activity activity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,44 +135,6 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activity getActivity() {
-		if (activity != null && activity.eIsProxy()) {
-			InternalEObject oldActivity = (InternalEObject)activity;
-			activity = (Activity)eResolveProxy(oldActivity);
-			if (activity != oldActivity) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.GATE__ACTIVITY, oldActivity, activity));
-			}
-		}
-		return activity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activity basicGetActivity() {
-		return activity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setActivity(Activity newActivity) {
-		Activity oldActivity = activity;
-		activity = newActivity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.GATE__ACTIVITY, oldActivity, activity));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -206,9 +156,6 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 				return getFunction();
 			case SANPackage.GATE__PLACES:
 				return getPlaces();
-			case SANPackage.GATE__ACTIVITY:
-				if (resolve) return getActivity();
-				return basicGetActivity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -229,9 +176,6 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 				getPlaces().clear();
 				getPlaces().addAll((Collection<? extends Place>)newValue);
 				return;
-			case SANPackage.GATE__ACTIVITY:
-				setActivity((Activity)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -250,9 +194,6 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 			case SANPackage.GATE__PLACES:
 				getPlaces().clear();
 				return;
-			case SANPackage.GATE__ACTIVITY:
-				setActivity((Activity)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -269,8 +210,6 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 				return function != null;
 			case SANPackage.GATE__PLACES:
 				return places != null && !places.isEmpty();
-			case SANPackage.GATE__ACTIVITY:
-				return activity != null;
 		}
 		return super.eIsSet(featureID);
 	}

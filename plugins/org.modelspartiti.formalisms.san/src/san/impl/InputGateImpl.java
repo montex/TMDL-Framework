@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import san.Activity;
 import san.Expression;
 import san.InputGate;
 import san.SANPackage;
@@ -22,6 +23,7 @@ import san.SANPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link san.impl.InputGateImpl#getPredicate <em>Predicate</em>}</li>
+ *   <li>{@link san.impl.InputGateImpl#getActivity <em>Activity</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +39,16 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * @ordered
 	 */
 	protected Expression predicate;
+
+	/**
+	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivity()
+	 * @generated
+	 * @ordered
+	 */
+	protected Activity activity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,6 +117,44 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Activity getActivity() {
+		if (activity != null && activity.eIsProxy()) {
+			InternalEObject oldActivity = (InternalEObject)activity;
+			activity = (Activity)eResolveProxy(oldActivity);
+			if (activity != oldActivity) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.INPUT_GATE__ACTIVITY, oldActivity, activity));
+			}
+		}
+		return activity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activity basicGetActivity() {
+		return activity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActivity(Activity newActivity) {
+		Activity oldActivity = activity;
+		activity = newActivity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.INPUT_GATE__ACTIVITY, oldActivity, activity));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -124,6 +174,9 @@ public class InputGateImpl extends GateImpl implements InputGate {
 		switch (featureID) {
 			case SANPackage.INPUT_GATE__PREDICATE:
 				return getPredicate();
+			case SANPackage.INPUT_GATE__ACTIVITY:
+				if (resolve) return getActivity();
+				return basicGetActivity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,6 +191,9 @@ public class InputGateImpl extends GateImpl implements InputGate {
 		switch (featureID) {
 			case SANPackage.INPUT_GATE__PREDICATE:
 				setPredicate((Expression)newValue);
+				return;
+			case SANPackage.INPUT_GATE__ACTIVITY:
+				setActivity((Activity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -154,6 +210,9 @@ public class InputGateImpl extends GateImpl implements InputGate {
 			case SANPackage.INPUT_GATE__PREDICATE:
 				setPredicate((Expression)null);
 				return;
+			case SANPackage.INPUT_GATE__ACTIVITY:
+				setActivity((Activity)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -168,6 +227,8 @@ public class InputGateImpl extends GateImpl implements InputGate {
 		switch (featureID) {
 			case SANPackage.INPUT_GATE__PREDICATE:
 				return predicate != null;
+			case SANPackage.INPUT_GATE__ACTIVITY:
+				return activity != null;
 		}
 		return super.eIsSet(featureID);
 	}

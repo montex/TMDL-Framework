@@ -6,7 +6,6 @@ package san.validation;
 
 import org.eclipse.emf.common.util.EList;
 
-import san.Activity;
 import san.Expression;
 import san.Place;
 
@@ -21,6 +20,4 @@ public interface GateValidator {
 
 	boolean validateFunction(Expression value);
 	boolean validatePlaces(EList<Place> value);
-
-	boolean validateActivity(Activity value);
 }

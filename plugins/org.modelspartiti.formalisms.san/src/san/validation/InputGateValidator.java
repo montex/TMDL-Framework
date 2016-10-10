@@ -4,6 +4,7 @@
  */
 package san.validation;
 
+import san.Activity;
 import san.Expression;
 
 /**
@@ -16,4 +17,5 @@ public interface InputGateValidator {
 	boolean validate();
 
 	boolean validatePredicate(Expression value);
+	boolean validateActivity(Activity value);
 }

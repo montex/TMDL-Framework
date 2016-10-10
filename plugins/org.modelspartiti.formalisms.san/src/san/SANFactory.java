@@ -139,15 +139,6 @@ public interface SANFactory extends EFactory {
 	MarkingInteger createMarkingInteger();
 
 	/**
-	 * Returns a new object of class '<em>Marking Extended</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Extended</em>'.
-	 * @generated
-	 */
-	MarkingExtended createMarkingExtended();
-
-	/**
 	 * Returns a new object of class '<em>Global Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,13 +148,13 @@ public interface SANFactory extends EFactory {
 	GlobalVariable createGlobalVariable();
 
 	/**
-	 * Returns a new object of class '<em>Marking Variable</em>'.
+	 * Returns a new object of class '<em>Marking Variable Simple</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Variable</em>'.
+	 * @return a new object of class '<em>Marking Variable Simple</em>'.
 	 * @generated
 	 */
-	MarkingVariable createMarkingVariable();
+	MarkingVariableSimple createMarkingVariableSimple();
 
 	/**
 	 * Returns a new object of class '<em>Exponential</em>'.
@@ -335,6 +326,24 @@ public interface SANFactory extends EFactory {
 	 * @generated
 	 */
 	ExtendedPlace createExtendedPlace();
+
+	/**
+	 * Returns a new object of class '<em>Marking String</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking String</em>'.
+	 * @generated
+	 */
+	MarkingString createMarkingString();
+
+	/**
+	 * Returns a new object of class '<em>Marking Variable Extended</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Variable Extended</em>'.
+	 * @generated
+	 */
+	MarkingVariableExtended createMarkingVariableExtended();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -10,23 +10,23 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import san.GlobalVariable;
-import san.MarkingVariable;
+import san.MarkingVariableSimple;
 import san.SANPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Marking Variable</b></em>'.
+ * An implementation of the model object '<em><b>Marking Variable Simple</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link san.impl.MarkingVariableImpl#getVariable <em>Variable</em>}</li>
+ *   <li>{@link san.impl.MarkingVariableSimpleImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVariable {
+public class MarkingVariableSimpleImpl extends MarkingSimpleImpl implements MarkingVariableSimple {
 	/**
 	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MarkingVariableImpl() {
+	protected MarkingVariableSimpleImpl() {
 		super();
 	}
 
@@ -53,7 +53,7 @@ public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVar
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.MARKING_VARIABLE;
+		return SANPackage.Literals.MARKING_VARIABLE_SIMPLE;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVar
 			variable = (GlobalVariable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.MARKING_VARIABLE__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.MARKING_VARIABLE_SIMPLE__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -91,7 +91,7 @@ public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVar
 		GlobalVariable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_VARIABLE__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_VARIABLE_SIMPLE__VARIABLE, oldVariable, variable));
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVar
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANPackage.MARKING_VARIABLE__VARIABLE:
+			case SANPackage.MARKING_VARIABLE_SIMPLE__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
 		}
@@ -117,7 +117,7 @@ public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVar
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANPackage.MARKING_VARIABLE__VARIABLE:
+			case SANPackage.MARKING_VARIABLE_SIMPLE__VARIABLE:
 				setVariable((GlobalVariable)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVar
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_VARIABLE__VARIABLE:
+			case SANPackage.MARKING_VARIABLE_SIMPLE__VARIABLE:
 				setVariable((GlobalVariable)null);
 				return;
 		}
@@ -147,10 +147,10 @@ public class MarkingVariableImpl extends MarkingSimpleImpl implements MarkingVar
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_VARIABLE__VARIABLE:
+			case SANPackage.MARKING_VARIABLE_SIMPLE__VARIABLE:
 				return variable != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //MarkingVariableImpl
+} //MarkingVariableSimpleImpl

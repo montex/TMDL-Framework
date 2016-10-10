@@ -156,8 +156,8 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createGlobalVariableAdapter();
 			}
 			@Override
-			public Adapter caseMarkingVariable(MarkingVariable object) {
-				return createMarkingVariableAdapter();
+			public Adapter caseMarkingVariableSimple(MarkingVariableSimple object) {
+				return createMarkingVariableSimpleAdapter();
 			}
 			@Override
 			public Adapter caseExponential(Exponential object) {
@@ -242,6 +242,14 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseExtendedPlace(ExtendedPlace object) {
 				return createExtendedPlaceAdapter();
+			}
+			@Override
+			public Adapter caseMarkingString(MarkingString object) {
+				return createMarkingStringAdapter();
+			}
+			@Override
+			public Adapter caseMarkingVariableExtended(MarkingVariableExtended object) {
+				return createMarkingVariableExtendedAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -572,16 +580,16 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingVariable <em>Marking Variable</em>}'.
+	 * Creates a new adapter for an object of class '{@link san.MarkingVariableSimple <em>Marking Variable Simple</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see san.MarkingVariable
+	 * @see san.MarkingVariableSimple
 	 * @generated
 	 */
-	public Adapter createMarkingVariableAdapter() {
+	public Adapter createMarkingVariableSimpleAdapter() {
 		return null;
 	}
 
@@ -876,6 +884,34 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExtendedPlaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.MarkingString <em>Marking String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.MarkingString
+	 * @generated
+	 */
+	public Adapter createMarkingStringAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.MarkingVariableExtended <em>Marking Variable Extended</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.MarkingVariableExtended
+	 * @generated
+	 */
+	public Adapter createMarkingVariableExtendedAdapter() {
 		return null;
 	}
 
