@@ -3,10 +3,8 @@
 package san.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import san.GlobalVariable;
@@ -153,4 +151,13 @@ public class MarkingVariableExtendedImpl extends MarkingExtendedImpl implements 
 		return super.eIsSet(featureID);
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String toString() {
+		return variable.getName();
+	}
 } //MarkingVariableExtendedImpl
