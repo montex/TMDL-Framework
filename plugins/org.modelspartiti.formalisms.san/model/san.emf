@@ -1,0 +1,234 @@
+@namespace(uri="http://www.modelspartiti.org/templates/san/san", prefix="san")
+package san;
+
+class SAN {
+  val Place[+] places;
+  id attr String[1] name;
+  val Activity[*] activities;
+  val GlobalVariable[*] globalVariables;
+  val Arc[*] arcs;
+  val Gate[*] gates;
+  val Expression[*] initialization;
+}
+
+abstract class Place extends NamedElement {
+}
+
+abstract class Activity extends NamedElement {
+  val Case[+] cases;
+}
+
+abstract class NamedElement {
+  id attr String[1] name;
+}
+
+class Case {
+  attr int[1] ID = 0;
+  val Expression[1] p;
+}
+
+abstract class Arc {
+}
+
+class InputArc extends Arc {
+  ref Place[1] source;
+  ref Activity[1] target;
+}
+
+class OutputArc extends Arc {
+  ref Case[1] source;
+  ref Place[1] target;
+}
+
+@ExtendedMetaData(kind="elementOnly")
+abstract class Gate extends NamedElement {
+  val Expression[1] function;
+  ref Place[*] places;
+}
+
+@ExtendedMetaData(kind="elementOnly")
+class OutputGate extends Gate {
+  ref Case[1] activityCase;
+}
+
+@ExtendedMetaData(kind="elementOnly")
+class InputGate extends Gate {
+  val Expression[1] predicate;
+  ref Activity[1] activity;
+}
+
+class InstantaneousActivity extends Activity {
+}
+
+class TimedActivity extends Activity {
+  val Distribution[1] timeDistribution;
+  val Expression activation;
+  val Expression reactivation;
+}
+
+abstract class Distribution {
+}
+
+datatype CodeFragment : java.lang.String;
+
+class Expression {
+  val ExpressionSegment[+] segments;
+}
+
+@ExtendedMetaData
+class ExpressionText extends ExpressionSegment {
+
+  @ExtendedMetaData(kind="element")
+  attr CodeFragment[1] text;
+}
+
+class ExpressionMarking extends ExpressionSegment {
+  ref Place[1] place;
+}
+
+class ExpressionVariable extends ExpressionSegment {
+  ref GlobalVariable[1] variable;
+}
+
+abstract class Marking {
+}
+
+class MarkingInteger extends MarkingSimple {
+  attr int[1] value;
+}
+
+abstract class MarkingExtended extends Marking {
+}
+
+enum VariableType {
+  short = 0;
+  int = 1;
+  long = 2;
+  float = 3;
+  double = 4;
+  bool = 5;
+  char = 6;
+}
+
+class GlobalVariable extends NamedElement {
+  attr VariableType[1] type = "int";
+}
+
+class MarkingVariableSimple extends MarkingSimple {
+  ref GlobalVariable[1] variable;
+}
+
+class Exponential extends Distribution {
+  val Expression[1] rate;
+}
+
+class Normal extends Distribution {
+  val Expression[1] mean;
+  val Expression[1] variance;
+}
+
+class Gamma extends Distribution {
+  val Expression[1] alpha;
+  val Expression[1] beta;
+}
+
+class Binomial extends Distribution {
+  val Expression[1] t;
+  val Expression[1] p;
+}
+
+class Deterministic extends Distribution {
+  val Expression[1] value;
+}
+
+class Lognormal extends Distribution {
+  val Expression[1] mu;
+  val Expression[1] alphaSquared;
+}
+
+class Beta extends Distribution {
+  val Expression[1] alpha1;
+  val Expression[1] beta1;
+}
+
+class NegativeBinomial extends Distribution {
+  val Expression[1] s;
+  val Expression[1] p;
+}
+
+class Geometric extends Distribution {
+  val Expression[1] p;
+}
+
+class Erlang extends Distribution {
+  val Expression[1] m;
+  val Expression[1] beta;
+}
+
+class Uniform extends Distribution {
+  val Expression[1] lowerBound;
+  val Expression[1] upperBound;
+}
+
+class HyperExponential extends Distribution {
+  val Expression[1] rate0;
+  val Expression[1] p0;
+}
+
+class Weibull extends Distribution {
+  val Expression[1] alpha;
+  val Expression[1] beta;
+}
+
+class Triangular extends Distribution {
+  val Expression[1] min;
+  val Expression[1] middle;
+  val Expression[1] max;
+}
+
+class ConditionalWeibull extends Distribution {
+  val Expression[1] alpha;
+  val Expression[1] beta;
+  val Expression[1] t;
+}
+
+class HypoExponential extends Distribution {
+  val Expression[1] rate0;
+}
+
+class Pareto extends Distribution {
+  val Expression[1] lowerBound;
+  val Expression[1] shape;
+}
+
+abstract class ExpressionSegment {
+}
+
+abstract class MarkingSimple extends Marking {
+}
+
+class NormalPlace extends Place {
+  val MarkingSimple[1] marking;
+}
+
+class ExtendedPlace extends Place {
+  val MarkingExtended[1] marking;
+  attr ExtendedPlaceType[1] type = "double";
+}
+
+class MarkingString extends MarkingExtended {
+  attr String[1] value = "0";
+}
+
+class MarkingVariableExtended extends MarkingExtended {
+  ref GlobalVariable[1] variable;
+}
+
+enum ExtendedPlaceType {
+  int = 1;
+  short = 0;
+  float = 3;
+  double = 4;
+  char = 6;
+}
+
