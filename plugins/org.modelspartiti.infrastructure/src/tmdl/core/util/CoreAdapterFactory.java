@@ -116,6 +116,22 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 				return createMultiplicityParametricAdapter();
 			}
 			@Override
+			public Adapter caseParameterExpression(ParameterExpression object) {
+				return createParameterExpressionAdapter();
+			}
+			@Override
+			public Adapter caseParameterExpressionValue(ParameterExpressionValue object) {
+				return createParameterExpressionValueAdapter();
+			}
+			@Override
+			public Adapter caseParameterExpressionValueAt(ParameterExpressionValueAt object) {
+				return createParameterExpressionValueAtAdapter();
+			}
+			@Override
+			public Adapter caseParameterExpressionAggregate(ParameterExpressionAggregate object) {
+				return createParameterExpressionAggregateAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -300,6 +316,62 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMultiplicityParametricAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link tmdl.core.ParameterExpression <em>Parameter Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see tmdl.core.ParameterExpression
+	 * @generated
+	 */
+	public Adapter createParameterExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link tmdl.core.ParameterExpressionValue <em>Parameter Expression Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see tmdl.core.ParameterExpressionValue
+	 * @generated
+	 */
+	public Adapter createParameterExpressionValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link tmdl.core.ParameterExpressionValueAt <em>Parameter Expression Value At</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see tmdl.core.ParameterExpressionValueAt
+	 * @generated
+	 */
+	public Adapter createParameterExpressionValueAtAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link tmdl.core.ParameterExpressionAggregate <em>Parameter Expression Aggregate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see tmdl.core.ParameterExpressionAggregate
+	 * @generated
+	 */
+	public Adapter createParameterExpressionAggregateAdapter() {
 		return null;
 	}
 

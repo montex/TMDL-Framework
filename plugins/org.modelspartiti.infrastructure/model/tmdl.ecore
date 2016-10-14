@@ -150,5 +150,28 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
           eType="#//core/Parameter"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterExpression" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterExpressionValue" eSuperTypes="#//core/ParameterExpression">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//core/ParameterSimple"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterExpressionValueAt" eSuperTypes="#//core/ParameterExpression">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//core/ParameterArray"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="AggregateFunctionKind">
+      <eLiterals name="size"/>
+      <eLiterals name="min" value="1"/>
+      <eLiterals name="max" value="2"/>
+      <eLiterals name="avg" value="3"/>
+      <eLiterals name="sum" value="4"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterExpressionAggregate" eSuperTypes="#//core/ParameterExpression">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//core/Parameter"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="function" eType="#//core/AggregateFunctionKind"/>
+    </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

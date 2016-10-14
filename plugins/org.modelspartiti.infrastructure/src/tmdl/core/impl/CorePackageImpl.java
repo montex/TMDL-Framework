@@ -4,12 +4,14 @@ package tmdl.core.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import tmdl.core.AggregateFunctionKind;
 import tmdl.core.Assignment;
 import tmdl.core.AssignmentArray;
 import tmdl.core.AssignmentSimple;
@@ -22,6 +24,10 @@ import tmdl.core.MultiplicityParametric;
 import tmdl.core.MultiplicityValue;
 import tmdl.core.Parameter;
 import tmdl.core.ParameterArray;
+import tmdl.core.ParameterExpression;
+import tmdl.core.ParameterExpressionAggregate;
+import tmdl.core.ParameterExpressionValue;
+import tmdl.core.ParameterExpressionValueAt;
 import tmdl.core.ParameterSimple;
 import tmdl.core.TemplateModel;
 
@@ -123,6 +129,41 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	private EClass multiplicityParametricEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parameterExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parameterExpressionValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parameterExpressionValueAtEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parameterExpressionAggregateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum aggregateFunctionKindEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -396,6 +437,96 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getParameterExpression() {
+		return parameterExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParameterExpressionValue() {
+		return parameterExpressionValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParameterExpressionValue_Parameter() {
+		return (EReference)parameterExpressionValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParameterExpressionValueAt() {
+		return parameterExpressionValueAtEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParameterExpressionValueAt_Parameter() {
+		return (EReference)parameterExpressionValueAtEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getParameterExpressionValueAt_Position() {
+		return (EAttribute)parameterExpressionValueAtEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParameterExpressionAggregate() {
+		return parameterExpressionAggregateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParameterExpressionAggregate_Parameter() {
+		return (EReference)parameterExpressionAggregateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getParameterExpressionAggregate_Function() {
+		return (EAttribute)parameterExpressionAggregateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getAggregateFunctionKind() {
+		return aggregateFunctionKindEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CoreFactory getCoreFactory() {
 		return (CoreFactory)getEFactoryInstance();
 	}
@@ -452,6 +583,22 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		multiplicityParametricEClass = createEClass(MULTIPLICITY_PARAMETRIC);
 		createEReference(multiplicityParametricEClass, MULTIPLICITY_PARAMETRIC__PARAMETER);
+
+		parameterExpressionEClass = createEClass(PARAMETER_EXPRESSION);
+
+		parameterExpressionValueEClass = createEClass(PARAMETER_EXPRESSION_VALUE);
+		createEReference(parameterExpressionValueEClass, PARAMETER_EXPRESSION_VALUE__PARAMETER);
+
+		parameterExpressionValueAtEClass = createEClass(PARAMETER_EXPRESSION_VALUE_AT);
+		createEReference(parameterExpressionValueAtEClass, PARAMETER_EXPRESSION_VALUE_AT__PARAMETER);
+		createEAttribute(parameterExpressionValueAtEClass, PARAMETER_EXPRESSION_VALUE_AT__POSITION);
+
+		parameterExpressionAggregateEClass = createEClass(PARAMETER_EXPRESSION_AGGREGATE);
+		createEReference(parameterExpressionAggregateEClass, PARAMETER_EXPRESSION_AGGREGATE__PARAMETER);
+		createEAttribute(parameterExpressionAggregateEClass, PARAMETER_EXPRESSION_AGGREGATE__FUNCTION);
+
+		// Create enums
+		aggregateFunctionKindEEnum = createEEnum(AGGREGATE_FUNCTION_KIND);
 	}
 
 	/**
@@ -489,6 +636,9 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		multiplicityValueEClass.getESuperTypes().add(this.getMultiplicity());
 		multiplicityArrayEClass.getESuperTypes().add(this.getMultiplicity());
 		multiplicityParametricEClass.getESuperTypes().add(this.getMultiplicity());
+		parameterExpressionValueEClass.getESuperTypes().add(this.getParameterExpression());
+		parameterExpressionValueAtEClass.getESuperTypes().add(this.getParameterExpression());
+		parameterExpressionAggregateEClass.getESuperTypes().add(this.getParameterExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(concreteModelEClass, ConcreteModel.class, "ConcreteModel", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -527,6 +677,27 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		initEClass(multiplicityParametricEClass, MultiplicityParametric.class, "MultiplicityParametric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMultiplicityParametric_Parameter(), this.getParameter(), null, "parameter", null, 1, 1, MultiplicityParametric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(parameterExpressionEClass, ParameterExpression.class, "ParameterExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(parameterExpressionValueEClass, ParameterExpressionValue.class, "ParameterExpressionValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getParameterExpressionValue_Parameter(), this.getParameterSimple(), null, "parameter", null, 1, 1, ParameterExpressionValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(parameterExpressionValueAtEClass, ParameterExpressionValueAt.class, "ParameterExpressionValueAt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getParameterExpressionValueAt_Parameter(), this.getParameterArray(), null, "parameter", null, 1, 1, ParameterExpressionValueAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParameterExpressionValueAt_Position(), ecorePackage.getEInt(), "position", null, 1, 1, ParameterExpressionValueAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(parameterExpressionAggregateEClass, ParameterExpressionAggregate.class, "ParameterExpressionAggregate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getParameterExpressionAggregate_Parameter(), this.getParameter(), null, "parameter", null, 1, 1, ParameterExpressionAggregate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParameterExpressionAggregate_Function(), this.getAggregateFunctionKind(), "function", null, 0, 1, ParameterExpressionAggregate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(aggregateFunctionKindEEnum, AggregateFunctionKind.class, "AggregateFunctionKind");
+		addEEnumLiteral(aggregateFunctionKindEEnum, AggregateFunctionKind.SIZE);
+		addEEnumLiteral(aggregateFunctionKindEEnum, AggregateFunctionKind.MIN);
+		addEEnumLiteral(aggregateFunctionKindEEnum, AggregateFunctionKind.MAX);
+		addEEnumLiteral(aggregateFunctionKindEEnum, AggregateFunctionKind.AVG);
+		addEEnumLiteral(aggregateFunctionKindEEnum, AggregateFunctionKind.SUM);
 
 		// Create resource
 		createResource(eNS_URI);
