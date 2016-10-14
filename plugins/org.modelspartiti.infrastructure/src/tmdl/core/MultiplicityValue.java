@@ -1,6 +1,6 @@
 /**
  */
-package tmdl.library;
+package tmdl.core;
 
 
 /**
@@ -11,11 +11,11 @@ package tmdl.library;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link tmdl.library.MultiplicityValue#getValue <em>Value</em>}</li>
+ *   <li>{@link tmdl.core.MultiplicityValue#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see tmdl.library.LibraryPackage#getMultiplicityValue()
+ * @see tmdl.core.CorePackage#getMultiplicityValue()
  * @model
  * @generated
  */
@@ -30,14 +30,14 @@ public interface MultiplicityValue extends Multiplicity {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(double)
-	 * @see tmdl.library.LibraryPackage#getMultiplicityValue_Value()
+	 * @see tmdl.core.CorePackage#getMultiplicityValue_Value()
 	 * @model required="true"
 	 * @generated
 	 */
 	double getValue();
 
 	/**
-	 * Sets the value of the '{@link tmdl.library.MultiplicityValue#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link tmdl.core.MultiplicityValue#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.

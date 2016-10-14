@@ -1,8 +1,7 @@
 /**
  */
-package tmdl.library;
+package tmdl.core;
 
-import tmdl.core.Parameter;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,11 +11,11 @@ import tmdl.core.Parameter;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link tmdl.library.MultiplicityParametric#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link tmdl.core.MultiplicityParametric#getParameter <em>Parameter</em>}</li>
  * </ul>
  * </p>
  *
- * @see tmdl.library.LibraryPackage#getMultiplicityParametric()
+ * @see tmdl.core.CorePackage#getMultiplicityParametric()
  * @model
  * @generated
  */
@@ -31,14 +30,14 @@ public interface MultiplicityParametric extends Multiplicity {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameter</em>' reference.
 	 * @see #setParameter(Parameter)
-	 * @see tmdl.library.LibraryPackage#getMultiplicityParametric_Parameter()
+	 * @see tmdl.core.CorePackage#getMultiplicityParametric_Parameter()
 	 * @model required="true"
 	 * @generated
 	 */
 	Parameter getParameter();
 
 	/**
-	 * Sets the value of the '{@link tmdl.library.MultiplicityParametric#getParameter <em>Parameter</em>}' reference.
+	 * Sets the value of the '{@link tmdl.core.MultiplicityParametric#getParameter <em>Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Parameter</em>' reference.

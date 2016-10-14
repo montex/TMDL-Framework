@@ -62,9 +62,6 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.TEMPLATE_COMPOSITE: return createTemplateComposite();
 			case LibraryPackage.BLOCK: return createBlock();
 			case LibraryPackage.INTERFACE_VARIABLE: return createInterfaceVariable();
-			case LibraryPackage.MULTIPLICITY_VALUE: return createMultiplicityValue();
-			case LibraryPackage.MULTIPLICITY_ARRAY: return createMultiplicityArray();
-			case LibraryPackage.MULTIPLICITY_PARAMETRIC: return createMultiplicityParametric();
 			case LibraryPackage.COMPOSITION_RULE_ALL: return createCompositionRuleAll();
 			case LibraryPackage.COMPOSITION_RULE_MATCH: return createCompositionRuleMatch();
 			case LibraryPackage.COMPOSITION_RULE_FORWARDS: return createCompositionRuleForwards();
@@ -131,36 +128,6 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	public InterfaceVariable createInterfaceVariable() {
 		InterfaceVariableImpl interfaceVariable = new InterfaceVariableImpl();
 		return interfaceVariable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MultiplicityValue createMultiplicityValue() {
-		MultiplicityValueImpl multiplicityValue = new MultiplicityValueImpl();
-		return multiplicityValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MultiplicityArray createMultiplicityArray() {
-		MultiplicityArrayImpl multiplicityArray = new MultiplicityArrayImpl();
-		return multiplicityArray;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MultiplicityParametric createMultiplicityParametric() {
-		MultiplicityParametricImpl multiplicityParametric = new MultiplicityParametricImpl();
-		return multiplicityParametric;
 	}
 
 	/**

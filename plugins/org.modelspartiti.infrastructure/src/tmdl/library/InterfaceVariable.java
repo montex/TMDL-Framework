@@ -6,6 +6,8 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
+import tmdl.core.Multiplicity;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Interface Variable</b></em>'.

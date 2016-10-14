@@ -6,7 +6,7 @@ package tmdl.library.validation;
 
 import org.eclipse.emf.common.util.EList;
 
-import tmdl.library.Multiplicity;
+import tmdl.core.Multiplicity;
 
 /**
  * A sample validator interface for {@link tmdl.library.InterfaceVariable}.

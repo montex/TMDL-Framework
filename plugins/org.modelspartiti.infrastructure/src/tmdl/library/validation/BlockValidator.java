@@ -6,8 +6,9 @@ package tmdl.library.validation;
 
 import org.eclipse.emf.common.util.EList;
 
+import tmdl.core.Multiplicity;
+
 import tmdl.library.ModelInterface;
-import tmdl.library.Multiplicity;
 
 /**
  * A sample validator interface for {@link tmdl.library.Block}.

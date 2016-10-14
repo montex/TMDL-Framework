@@ -16,6 +16,10 @@ import tmdl.core.AssignmentSimple;
 import tmdl.core.ConcreteModel;
 import tmdl.core.CoreFactory;
 import tmdl.core.CorePackage;
+import tmdl.core.Multiplicity;
+import tmdl.core.MultiplicityArray;
+import tmdl.core.MultiplicityParametric;
+import tmdl.core.MultiplicityValue;
 import tmdl.core.Parameter;
 import tmdl.core.ParameterArray;
 import tmdl.core.ParameterSimple;
@@ -91,6 +95,34 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	private EClass assignmentArrayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multiplicityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multiplicityValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multiplicityArrayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multiplicityParametricEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -301,6 +333,69 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMultiplicity() {
+		return multiplicityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultiplicityValue() {
+		return multiplicityValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMultiplicityValue_Value() {
+		return (EAttribute)multiplicityValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultiplicityArray() {
+		return multiplicityArrayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMultiplicityArray_Values() {
+		return (EAttribute)multiplicityArrayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultiplicityParametric() {
+		return multiplicityParametricEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMultiplicityParametric_Parameter() {
+		return (EReference)multiplicityParametricEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CoreFactory getCoreFactory() {
 		return (CoreFactory)getEFactoryInstance();
 	}
@@ -346,6 +441,17 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		assignmentArrayEClass = createEClass(ASSIGNMENT_ARRAY);
 		createEReference(assignmentArrayEClass, ASSIGNMENT_ARRAY__PARAMETER);
 		createEAttribute(assignmentArrayEClass, ASSIGNMENT_ARRAY__VALUE);
+
+		multiplicityEClass = createEClass(MULTIPLICITY);
+
+		multiplicityValueEClass = createEClass(MULTIPLICITY_VALUE);
+		createEAttribute(multiplicityValueEClass, MULTIPLICITY_VALUE__VALUE);
+
+		multiplicityArrayEClass = createEClass(MULTIPLICITY_ARRAY);
+		createEAttribute(multiplicityArrayEClass, MULTIPLICITY_ARRAY__VALUES);
+
+		multiplicityParametricEClass = createEClass(MULTIPLICITY_PARAMETRIC);
+		createEReference(multiplicityParametricEClass, MULTIPLICITY_PARAMETRIC__PARAMETER);
 	}
 
 	/**
@@ -380,6 +486,9 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		parameterArrayEClass.getESuperTypes().add(this.getParameter());
 		assignmentSimpleEClass.getESuperTypes().add(this.getAssignment());
 		assignmentArrayEClass.getESuperTypes().add(this.getAssignment());
+		multiplicityValueEClass.getESuperTypes().add(this.getMultiplicity());
+		multiplicityArrayEClass.getESuperTypes().add(this.getMultiplicity());
+		multiplicityParametricEClass.getESuperTypes().add(this.getMultiplicity());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(concreteModelEClass, ConcreteModel.class, "ConcreteModel", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -407,6 +516,17 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		initEClass(assignmentArrayEClass, AssignmentArray.class, "AssignmentArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssignmentArray_Parameter(), this.getParameterArray(), null, "parameter", null, 1, 1, AssignmentArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssignmentArray_Value(), ecorePackage.getEDouble(), "value", null, 0, -1, AssignmentArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(multiplicityValueEClass, MultiplicityValue.class, "MultiplicityValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMultiplicityValue_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, MultiplicityValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(multiplicityArrayEClass, MultiplicityArray.class, "MultiplicityArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMultiplicityArray_Values(), ecorePackage.getEDouble(), "values", null, 1, -1, MultiplicityArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(multiplicityParametricEClass, MultiplicityParametric.class, "MultiplicityParametric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMultiplicityParametric_Parameter(), this.getParameter(), null, "parameter", null, 1, 1, MultiplicityParametric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

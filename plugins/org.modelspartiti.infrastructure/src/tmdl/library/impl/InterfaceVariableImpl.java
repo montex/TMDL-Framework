@@ -17,9 +17,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
+import tmdl.core.Multiplicity;
+
 import tmdl.library.InterfaceVariable;
 import tmdl.library.LibraryPackage;
-import tmdl.library.Multiplicity;
 
 /**
  * <!-- begin-user-doc -->

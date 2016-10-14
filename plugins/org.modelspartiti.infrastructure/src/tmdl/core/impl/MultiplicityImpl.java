@@ -1,13 +1,13 @@
 /**
  */
-package tmdl.library.impl;
+package tmdl.core.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import tmdl.library.LibraryPackage;
-import tmdl.library.Multiplicity;
+import tmdl.core.CorePackage;
+import tmdl.core.Multiplicity;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class MultiplicityImpl extends MinimalEObjectImpl.Container impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return LibraryPackage.Literals.MULTIPLICITY;
+		return CorePackage.Literals.MULTIPLICITY;
 	}
 
 } //MultiplicityImpl

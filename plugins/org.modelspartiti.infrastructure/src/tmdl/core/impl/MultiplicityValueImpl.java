@@ -1,48 +1,56 @@
 /**
  */
-package tmdl.library.impl;
+package tmdl.core.impl;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import tmdl.library.LibraryPackage;
-import tmdl.library.MultiplicityArray;
+import tmdl.core.CorePackage;
+import tmdl.core.MultiplicityValue;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Multiplicity Array</b></em>'.
+ * An implementation of the model object '<em><b>Multiplicity Value</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link tmdl.library.impl.MultiplicityArrayImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link tmdl.core.impl.MultiplicityValueImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class MultiplicityArrayImpl extends MultiplicityImpl implements MultiplicityArray {
+public class MultiplicityValueImpl extends MultiplicityImpl implements MultiplicityValue {
 	/**
-	 * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValues()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Double> values;
+	protected static final double VALUE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected double value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MultiplicityArrayImpl() {
+	protected MultiplicityValueImpl() {
 		super();
 	}
 
@@ -53,7 +61,7 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return LibraryPackage.Literals.MULTIPLICITY_ARRAY;
+		return CorePackage.Literals.MULTIPLICITY_VALUE;
 	}
 
 	/**
@@ -61,11 +69,20 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Double> getValues() {
-		if (values == null) {
-			values = new EDataTypeUniqueEList<Double>(Double.class, this, LibraryPackage.MULTIPLICITY_ARRAY__VALUES);
-		}
-		return values;
+	public double getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(double newValue) {
+		double oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.MULTIPLICITY_VALUE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -76,8 +93,8 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case LibraryPackage.MULTIPLICITY_ARRAY__VALUES:
-				return getValues();
+			case CorePackage.MULTIPLICITY_VALUE__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -87,13 +104,11 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case LibraryPackage.MULTIPLICITY_ARRAY__VALUES:
-				getValues().clear();
-				getValues().addAll((Collection<? extends Double>)newValue);
+			case CorePackage.MULTIPLICITY_VALUE__VALUE:
+				setValue((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -107,8 +122,8 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case LibraryPackage.MULTIPLICITY_ARRAY__VALUES:
-				getValues().clear();
+			case CorePackage.MULTIPLICITY_VALUE__VALUE:
+				setValue(VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -122,8 +137,8 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case LibraryPackage.MULTIPLICITY_ARRAY__VALUES:
-				return values != null && !values.isEmpty();
+			case CorePackage.MULTIPLICITY_VALUE__VALUE:
+				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -138,10 +153,10 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (values: ");
-		result.append(values);
+		result.append(" (value: ");
+		result.append(value);
 		result.append(')');
 		return result.toString();
 	}
 
-} //MultiplicityArrayImpl
+} //MultiplicityValueImpl

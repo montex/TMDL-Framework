@@ -100,6 +100,22 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 				return createAssignmentArrayAdapter();
 			}
 			@Override
+			public Adapter caseMultiplicity(Multiplicity object) {
+				return createMultiplicityAdapter();
+			}
+			@Override
+			public Adapter caseMultiplicityValue(MultiplicityValue object) {
+				return createMultiplicityValueAdapter();
+			}
+			@Override
+			public Adapter caseMultiplicityArray(MultiplicityArray object) {
+				return createMultiplicityArrayAdapter();
+			}
+			@Override
+			public Adapter caseMultiplicityParametric(MultiplicityParametric object) {
+				return createMultiplicityParametricAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -228,6 +244,62 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAssignmentArrayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link tmdl.core.Multiplicity <em>Multiplicity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see tmdl.core.Multiplicity
+	 * @generated
+	 */
+	public Adapter createMultiplicityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link tmdl.core.MultiplicityValue <em>Multiplicity Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see tmdl.core.MultiplicityValue
+	 * @generated
+	 */
+	public Adapter createMultiplicityValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link tmdl.core.MultiplicityArray <em>Multiplicity Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see tmdl.core.MultiplicityArray
+	 * @generated
+	 */
+	public Adapter createMultiplicityArrayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link tmdl.core.MultiplicityParametric <em>Multiplicity Parametric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see tmdl.core.MultiplicityParametric
+	 * @generated
+	 */
+	public Adapter createMultiplicityParametricAdapter() {
 		return null;
 	}
 

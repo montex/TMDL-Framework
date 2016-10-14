@@ -1,6 +1,6 @@
 /**
  */
-package tmdl.library;
+package tmdl.core;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see tmdl.library.LibraryPackage#getMultiplicity()
+ * @see tmdl.core.CorePackage#getMultiplicity()
  * @model abstract="true"
  * @generated
  */

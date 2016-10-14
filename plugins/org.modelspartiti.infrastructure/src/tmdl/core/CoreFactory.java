@@ -58,6 +58,33 @@ public interface CoreFactory extends EFactory {
 	AssignmentArray createAssignmentArray();
 
 	/**
+	 * Returns a new object of class '<em>Multiplicity Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multiplicity Value</em>'.
+	 * @generated
+	 */
+	MultiplicityValue createMultiplicityValue();
+
+	/**
+	 * Returns a new object of class '<em>Multiplicity Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multiplicity Array</em>'.
+	 * @generated
+	 */
+	MultiplicityArray createMultiplicityArray();
+
+	/**
+	 * Returns a new object of class '<em>Multiplicity Parametric</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multiplicity Parametric</em>'.
+	 * @generated
+	 */
+	MultiplicityParametric createMultiplicityParametric();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

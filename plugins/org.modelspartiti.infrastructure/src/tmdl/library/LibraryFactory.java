@@ -76,33 +76,6 @@ public interface LibraryFactory extends EFactory {
 	InterfaceVariable createInterfaceVariable();
 
 	/**
-	 * Returns a new object of class '<em>Multiplicity Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Multiplicity Value</em>'.
-	 * @generated
-	 */
-	MultiplicityValue createMultiplicityValue();
-
-	/**
-	 * Returns a new object of class '<em>Multiplicity Array</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Multiplicity Array</em>'.
-	 * @generated
-	 */
-	MultiplicityArray createMultiplicityArray();
-
-	/**
-	 * Returns a new object of class '<em>Multiplicity Parametric</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Multiplicity Parametric</em>'.
-	 * @generated
-	 */
-	MultiplicityParametric createMultiplicityParametric();
-
-	/**
 	 * Returns a new object of class '<em>Composition Rule All</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

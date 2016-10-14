@@ -1,6 +1,6 @@
 /**
  */
-package tmdl.library.impl;
+package tmdl.core.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -9,10 +9,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import tmdl.core.CorePackage;
+import tmdl.core.MultiplicityParametric;
 import tmdl.core.Parameter;
-
-import tmdl.library.LibraryPackage;
-import tmdl.library.MultiplicityParametric;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import tmdl.library.MultiplicityParametric;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link tmdl.library.impl.MultiplicityParametricImpl#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link tmdl.core.impl.MultiplicityParametricImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,7 +53,7 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return LibraryPackage.Literals.MULTIPLICITY_PARAMETRIC;
+		return CorePackage.Literals.MULTIPLICITY_PARAMETRIC;
 	}
 
 	/**
@@ -68,7 +67,7 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 			parameter = (Parameter)eResolveProxy(oldParameter);
 			if (parameter != oldParameter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LibraryPackage.MULTIPLICITY_PARAMETRIC__PARAMETER, oldParameter, parameter));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CorePackage.MULTIPLICITY_PARAMETRIC__PARAMETER, oldParameter, parameter));
 			}
 		}
 		return parameter;
@@ -92,7 +91,7 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 		Parameter oldParameter = parameter;
 		parameter = newParameter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.MULTIPLICITY_PARAMETRIC__PARAMETER, oldParameter, parameter));
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.MULTIPLICITY_PARAMETRIC__PARAMETER, oldParameter, parameter));
 	}
 
 	/**
@@ -103,7 +102,7 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case LibraryPackage.MULTIPLICITY_PARAMETRIC__PARAMETER:
+			case CorePackage.MULTIPLICITY_PARAMETRIC__PARAMETER:
 				if (resolve) return getParameter();
 				return basicGetParameter();
 		}
@@ -118,7 +117,7 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case LibraryPackage.MULTIPLICITY_PARAMETRIC__PARAMETER:
+			case CorePackage.MULTIPLICITY_PARAMETRIC__PARAMETER:
 				setParameter((Parameter)newValue);
 				return;
 		}
@@ -133,7 +132,7 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case LibraryPackage.MULTIPLICITY_PARAMETRIC__PARAMETER:
+			case CorePackage.MULTIPLICITY_PARAMETRIC__PARAMETER:
 				setParameter((Parameter)null);
 				return;
 		}
@@ -148,7 +147,7 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case LibraryPackage.MULTIPLICITY_PARAMETRIC__PARAMETER:
+			case CorePackage.MULTIPLICITY_PARAMETRIC__PARAMETER:
 				return parameter != null;
 		}
 		return super.eIsSet(featureID);

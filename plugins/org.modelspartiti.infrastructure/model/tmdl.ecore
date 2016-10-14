@@ -83,7 +83,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="labels" upperBound="-1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicity" lowerBound="1"
-          eType="#//library/Multiplicity" containment="true"/>
+          eType="#//core/Multiplicity" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="requiredInterfaces" upperBound="-1"
           eType="#//library/ModelInterface"/>
     </eClassifiers>
@@ -94,20 +94,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="labels" upperBound="-1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicity" lowerBound="1"
-          eType="#//library/Multiplicity" containment="true"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Multiplicity" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityValue" eSuperTypes="#//library/Multiplicity">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityArray" eSuperTypes="#//library/Multiplicity">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" lowerBound="1"
-          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityParametric" eSuperTypes="#//library/Multiplicity">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
-          eType="#//core/Parameter"/>
+          eType="#//core/Multiplicity" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CompositionRule" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
@@ -149,6 +136,19 @@
           eType="#//core/ParameterArray"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" upperBound="-1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Multiplicity" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityValue" eSuperTypes="#//core/Multiplicity">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityArray" eSuperTypes="#//core/Multiplicity">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" lowerBound="1"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityParametric" eSuperTypes="#//core/Multiplicity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//core/Parameter"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

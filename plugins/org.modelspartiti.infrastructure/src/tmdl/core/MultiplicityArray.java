@@ -1,6 +1,6 @@
 /**
  */
-package tmdl.library;
+package tmdl.core;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -12,11 +12,11 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link tmdl.library.MultiplicityArray#getValues <em>Values</em>}</li>
+ *   <li>{@link tmdl.core.MultiplicityArray#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
- * @see tmdl.library.LibraryPackage#getMultiplicityArray()
+ * @see tmdl.core.CorePackage#getMultiplicityArray()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface MultiplicityArray extends Multiplicity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' attribute list.
-	 * @see tmdl.library.LibraryPackage#getMultiplicityArray_Values()
+	 * @see tmdl.core.CorePackage#getMultiplicityArray_Values()
 	 * @model required="true"
 	 * @generated
 	 */

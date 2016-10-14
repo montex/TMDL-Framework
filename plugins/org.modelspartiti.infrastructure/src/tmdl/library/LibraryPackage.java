@@ -478,145 +478,6 @@ public interface LibraryPackage extends EPackage {
 	int INTERFACE_VARIABLE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link tmdl.library.impl.MultiplicityImpl <em>Multiplicity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see tmdl.library.impl.MultiplicityImpl
-	 * @see tmdl.library.impl.LibraryPackageImpl#getMultiplicity()
-	 * @generated
-	 */
-	int MULTIPLICITY = 7;
-
-	/**
-	 * The number of structural features of the '<em>Multiplicity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Multiplicity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link tmdl.library.impl.MultiplicityValueImpl <em>Multiplicity Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see tmdl.library.impl.MultiplicityValueImpl
-	 * @see tmdl.library.impl.LibraryPackageImpl#getMultiplicityValue()
-	 * @generated
-	 */
-	int MULTIPLICITY_VALUE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_VALUE__VALUE = MULTIPLICITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Multiplicity Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_VALUE_FEATURE_COUNT = MULTIPLICITY_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Multiplicity Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_VALUE_OPERATION_COUNT = MULTIPLICITY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link tmdl.library.impl.MultiplicityArrayImpl <em>Multiplicity Array</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see tmdl.library.impl.MultiplicityArrayImpl
-	 * @see tmdl.library.impl.LibraryPackageImpl#getMultiplicityArray()
-	 * @generated
-	 */
-	int MULTIPLICITY_ARRAY = 9;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_ARRAY__VALUES = MULTIPLICITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Multiplicity Array</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_ARRAY_FEATURE_COUNT = MULTIPLICITY_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Multiplicity Array</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_ARRAY_OPERATION_COUNT = MULTIPLICITY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link tmdl.library.impl.MultiplicityParametricImpl <em>Multiplicity Parametric</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see tmdl.library.impl.MultiplicityParametricImpl
-	 * @see tmdl.library.impl.LibraryPackageImpl#getMultiplicityParametric()
-	 * @generated
-	 */
-	int MULTIPLICITY_PARAMETRIC = 10;
-
-	/**
-	 * The feature id for the '<em><b>Parameter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_PARAMETRIC__PARAMETER = MULTIPLICITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Multiplicity Parametric</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_PARAMETRIC_FEATURE_COUNT = MULTIPLICITY_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Multiplicity Parametric</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_PARAMETRIC_OPERATION_COUNT = MULTIPLICITY_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link tmdl.library.impl.CompositionRuleImpl <em>Composition Rule</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -624,7 +485,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see tmdl.library.impl.LibraryPackageImpl#getCompositionRule()
 	 * @generated
 	 */
-	int COMPOSITION_RULE = 11;
+	int COMPOSITION_RULE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -670,7 +531,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see tmdl.library.impl.LibraryPackageImpl#getCompositionRuleAll()
 	 * @generated
 	 */
-	int COMPOSITION_RULE_ALL = 12;
+	int COMPOSITION_RULE_ALL = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -716,7 +577,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see tmdl.library.impl.LibraryPackageImpl#getCompositionRuleMatch()
 	 * @generated
 	 */
-	int COMPOSITION_RULE_MATCH = 13;
+	int COMPOSITION_RULE_MATCH = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -771,7 +632,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see tmdl.library.impl.LibraryPackageImpl#getCompositionRuleForwards()
 	 * @generated
 	 */
-	int COMPOSITION_RULE_FORWARDS = 14;
+	int COMPOSITION_RULE_FORWARDS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1090,79 +951,6 @@ public interface LibraryPackage extends EPackage {
 	EReference getInterfaceVariable_Multiplicity();
 
 	/**
-	 * Returns the meta object for class '{@link tmdl.library.Multiplicity <em>Multiplicity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Multiplicity</em>'.
-	 * @see tmdl.library.Multiplicity
-	 * @generated
-	 */
-	EClass getMultiplicity();
-
-	/**
-	 * Returns the meta object for class '{@link tmdl.library.MultiplicityValue <em>Multiplicity Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Multiplicity Value</em>'.
-	 * @see tmdl.library.MultiplicityValue
-	 * @generated
-	 */
-	EClass getMultiplicityValue();
-
-	/**
-	 * Returns the meta object for the attribute '{@link tmdl.library.MultiplicityValue#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see tmdl.library.MultiplicityValue#getValue()
-	 * @see #getMultiplicityValue()
-	 * @generated
-	 */
-	EAttribute getMultiplicityValue_Value();
-
-	/**
-	 * Returns the meta object for class '{@link tmdl.library.MultiplicityArray <em>Multiplicity Array</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Multiplicity Array</em>'.
-	 * @see tmdl.library.MultiplicityArray
-	 * @generated
-	 */
-	EClass getMultiplicityArray();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link tmdl.library.MultiplicityArray#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see tmdl.library.MultiplicityArray#getValues()
-	 * @see #getMultiplicityArray()
-	 * @generated
-	 */
-	EAttribute getMultiplicityArray_Values();
-
-	/**
-	 * Returns the meta object for class '{@link tmdl.library.MultiplicityParametric <em>Multiplicity Parametric</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Multiplicity Parametric</em>'.
-	 * @see tmdl.library.MultiplicityParametric
-	 * @generated
-	 */
-	EClass getMultiplicityParametric();
-
-	/**
-	 * Returns the meta object for the reference '{@link tmdl.library.MultiplicityParametric#getParameter <em>Parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parameter</em>'.
-	 * @see tmdl.library.MultiplicityParametric#getParameter()
-	 * @see #getMultiplicityParametric()
-	 * @generated
-	 */
-	EReference getMultiplicityParametric_Parameter();
-
-	/**
 	 * Returns the meta object for class '{@link tmdl.library.CompositionRule <em>Composition Rule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1479,70 +1267,6 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INTERFACE_VARIABLE__MULTIPLICITY = eINSTANCE.getInterfaceVariable_Multiplicity();
-
-		/**
-		 * The meta object literal for the '{@link tmdl.library.impl.MultiplicityImpl <em>Multiplicity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see tmdl.library.impl.MultiplicityImpl
-		 * @see tmdl.library.impl.LibraryPackageImpl#getMultiplicity()
-		 * @generated
-		 */
-		EClass MULTIPLICITY = eINSTANCE.getMultiplicity();
-
-		/**
-		 * The meta object literal for the '{@link tmdl.library.impl.MultiplicityValueImpl <em>Multiplicity Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see tmdl.library.impl.MultiplicityValueImpl
-		 * @see tmdl.library.impl.LibraryPackageImpl#getMultiplicityValue()
-		 * @generated
-		 */
-		EClass MULTIPLICITY_VALUE = eINSTANCE.getMultiplicityValue();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MULTIPLICITY_VALUE__VALUE = eINSTANCE.getMultiplicityValue_Value();
-
-		/**
-		 * The meta object literal for the '{@link tmdl.library.impl.MultiplicityArrayImpl <em>Multiplicity Array</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see tmdl.library.impl.MultiplicityArrayImpl
-		 * @see tmdl.library.impl.LibraryPackageImpl#getMultiplicityArray()
-		 * @generated
-		 */
-		EClass MULTIPLICITY_ARRAY = eINSTANCE.getMultiplicityArray();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MULTIPLICITY_ARRAY__VALUES = eINSTANCE.getMultiplicityArray_Values();
-
-		/**
-		 * The meta object literal for the '{@link tmdl.library.impl.MultiplicityParametricImpl <em>Multiplicity Parametric</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see tmdl.library.impl.MultiplicityParametricImpl
-		 * @see tmdl.library.impl.LibraryPackageImpl#getMultiplicityParametric()
-		 * @generated
-		 */
-		EClass MULTIPLICITY_PARAMETRIC = eINSTANCE.getMultiplicityParametric();
-
-		/**
-		 * The meta object literal for the '<em><b>Parameter</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MULTIPLICITY_PARAMETRIC__PARAMETER = eINSTANCE.getMultiplicityParametric_Parameter();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.library.impl.CompositionRuleImpl <em>Composition Rule</em>}' class.

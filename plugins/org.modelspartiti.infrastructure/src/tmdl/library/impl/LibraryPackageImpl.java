@@ -23,10 +23,6 @@ import tmdl.library.Library;
 import tmdl.library.LibraryFactory;
 import tmdl.library.LibraryPackage;
 import tmdl.library.ModelInterface;
-import tmdl.library.Multiplicity;
-import tmdl.library.MultiplicityArray;
-import tmdl.library.MultiplicityParametric;
-import tmdl.library.MultiplicityValue;
 import tmdl.library.TemplateAtomic;
 import tmdl.library.TemplateComposite;
 import tmdl.library.TemplateSpecification;
@@ -90,34 +86,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * @generated
 	 */
 	private EClass interfaceVariableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass multiplicityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass multiplicityValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass multiplicityArrayEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass multiplicityParametricEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -455,69 +423,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMultiplicity() {
-		return multiplicityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMultiplicityValue() {
-		return multiplicityValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMultiplicityValue_Value() {
-		return (EAttribute)multiplicityValueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMultiplicityArray() {
-		return multiplicityArrayEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMultiplicityArray_Values() {
-		return (EAttribute)multiplicityArrayEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMultiplicityParametric() {
-		return multiplicityParametricEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMultiplicityParametric_Parameter() {
-		return (EReference)multiplicityParametricEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCompositionRule() {
 		return compositionRuleEClass;
 	}
@@ -637,17 +542,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEAttribute(interfaceVariableEClass, INTERFACE_VARIABLE__LABELS);
 		createEReference(interfaceVariableEClass, INTERFACE_VARIABLE__MULTIPLICITY);
 
-		multiplicityEClass = createEClass(MULTIPLICITY);
-
-		multiplicityValueEClass = createEClass(MULTIPLICITY_VALUE);
-		createEAttribute(multiplicityValueEClass, MULTIPLICITY_VALUE__VALUE);
-
-		multiplicityArrayEClass = createEClass(MULTIPLICITY_ARRAY);
-		createEAttribute(multiplicityArrayEClass, MULTIPLICITY_ARRAY__VALUES);
-
-		multiplicityParametricEClass = createEClass(MULTIPLICITY_PARAMETRIC);
-		createEReference(multiplicityParametricEClass, MULTIPLICITY_PARAMETRIC__PARAMETER);
-
 		compositionRuleEClass = createEClass(COMPOSITION_RULE);
 		createEAttribute(compositionRuleEClass, COMPOSITION_RULE__NAME);
 		createEReference(compositionRuleEClass, COMPOSITION_RULE__VARIABLES);
@@ -693,9 +587,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		// Add supertypes to classes
 		templateAtomicEClass.getESuperTypes().add(this.getTemplateSpecification());
 		templateCompositeEClass.getESuperTypes().add(this.getTemplateSpecification());
-		multiplicityValueEClass.getESuperTypes().add(this.getMultiplicity());
-		multiplicityArrayEClass.getESuperTypes().add(this.getMultiplicity());
-		multiplicityParametricEClass.getESuperTypes().add(this.getMultiplicity());
 		compositionRuleAllEClass.getESuperTypes().add(this.getCompositionRule());
 		compositionRuleMatchEClass.getESuperTypes().add(this.getCompositionRule());
 		compositionRuleForwardsEClass.getESuperTypes().add(this.getCompositionRule());
@@ -726,24 +617,13 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 
 		initEClass(blockEClass, Block.class, "Block", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBlock_Labels(), ecorePackage.getEString(), "labels", null, 0, -1, Block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBlock_Multiplicity(), this.getMultiplicity(), null, "multiplicity", null, 1, 1, Block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBlock_Multiplicity(), theCorePackage.getMultiplicity(), null, "multiplicity", null, 1, 1, Block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBlock_RequiredInterfaces(), this.getModelInterface(), null, "requiredInterfaces", null, 0, -1, Block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interfaceVariableEClass, InterfaceVariable.class, "InterfaceVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInterfaceVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, InterfaceVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInterfaceVariable_Labels(), ecorePackage.getEString(), "labels", null, 0, -1, InterfaceVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInterfaceVariable_Multiplicity(), this.getMultiplicity(), null, "multiplicity", null, 1, 1, InterfaceVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(multiplicityValueEClass, MultiplicityValue.class, "MultiplicityValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMultiplicityValue_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, MultiplicityValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(multiplicityArrayEClass, MultiplicityArray.class, "MultiplicityArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMultiplicityArray_Values(), ecorePackage.getEDouble(), "values", null, 1, -1, MultiplicityArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(multiplicityParametricEClass, MultiplicityParametric.class, "MultiplicityParametric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMultiplicityParametric_Parameter(), theCorePackage.getParameter(), null, "parameter", null, 1, 1, MultiplicityParametric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInterfaceVariable_Multiplicity(), theCorePackage.getMultiplicity(), null, "multiplicity", null, 1, 1, InterfaceVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositionRuleEClass, CompositionRule.class, "CompositionRule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCompositionRule_Name(), ecorePackage.getEString(), "name", null, 1, 1, CompositionRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

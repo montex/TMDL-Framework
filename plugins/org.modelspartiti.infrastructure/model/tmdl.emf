@@ -63,29 +63,14 @@ package library {
 
   class Block {
     attr String[*] labels;
-    val Multiplicity[1] multiplicity;
+    val core.Multiplicity[1] multiplicity;
     ref ModelInterface[*] requiredInterfaces;
   }
 
   class InterfaceVariable {
     id attr String[1] name;
     attr String[*] labels;
-    val Multiplicity[1] multiplicity;
-  }
-
-  abstract class Multiplicity {
-  }
-
-  class MultiplicityValue extends Multiplicity {
-    attr double[1] value;
-  }
-
-  class MultiplicityArray extends Multiplicity {
-    attr double[+] values;
-  }
-
-  class MultiplicityParametric extends Multiplicity {
-    ref core.Parameter[1] parameter;
+    val core.Multiplicity[1] multiplicity;
   }
 
   abstract class CompositionRule {
@@ -136,6 +121,21 @@ package core {
   class AssignmentArray extends Assignment {
     ref ParameterArray[1] parameter;
     attr double[*] value;
+  }
+
+  abstract class Multiplicity {
+  }
+
+  class MultiplicityValue extends Multiplicity {
+    attr double[1] value;
+  }
+
+  class MultiplicityArray extends Multiplicity {
+    attr double[+] values;
+  }
+
+  class MultiplicityParametric extends Multiplicity {
+    ref Parameter[1] parameter;
   }
 
 }
