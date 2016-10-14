@@ -3,8 +3,7 @@
 package san;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
+import tmdl.core.ConcreteModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SAN extends EObject {
+public interface SAN extends ConcreteModel {
 	/**
 	 * Returns the value of the '<em><b>Places</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Place}.

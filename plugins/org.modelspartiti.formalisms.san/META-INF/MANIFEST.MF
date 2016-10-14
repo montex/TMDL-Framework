@@ -14,6 +14,7 @@ Export-Package: san,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.modelspartiti.infrastructure;visibility:=reexport,
  org.eclipse.acceleo.engine,
  com.google.guava;bundle-version="15.0.0"
 Bundle-ActivationPolicy: lazy

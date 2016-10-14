@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import san.*;
+import tmdl.core.ConcreteModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,6 +70,7 @@ public class SANSwitch<T> extends Switch<T> {
 			case SANPackage.SAN: {
 				SAN san = (SAN)theEObject;
 				T result = caseSAN(san);
+				if (result == null) result = caseConcreteModel(san);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1081,6 +1083,21 @@ public class SANSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMarkingVariableExtended(MarkingVariableExtended object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Concrete Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Concrete Model</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConcreteModel(ConcreteModel object) {
 		return null;
 	}
 

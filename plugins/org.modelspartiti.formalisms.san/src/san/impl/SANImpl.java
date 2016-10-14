@@ -2,22 +2,17 @@
  */
 package san.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import san.Activity;
 import san.Arc;
 import san.Expression;
@@ -26,6 +21,7 @@ import san.GlobalVariable;
 import san.Place;
 import san.SAN;
 import san.SANPackage;
+import tmdl.core.TemplateModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -244,6 +240,17 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TemplateModel templatize() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -386,6 +393,20 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return initialization != null && !initialization.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case SANPackage.SAN___TEMPLATIZE:
+				return templatize();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

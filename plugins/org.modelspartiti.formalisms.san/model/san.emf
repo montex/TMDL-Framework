@@ -1,7 +1,9 @@
 @namespace(uri="http://www.modelspartiti.org/templates/san/san", prefix="san")
 package san;
 
-class SAN {
+import "platform:/resource/org.modelspartiti.infrastructure/model/tmdl.ecore";
+
+class SAN extends tmdl.core.ConcreteModel {
   val Place[+] places;
   id attr String[1] name;
   val Activity[*] activities;

@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import tmdl.core.CorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,7 +76,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SAN__PLACES = 0;
+	int SAN__PLACES = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -84,7 +85,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SAN__NAME = 1;
+	int SAN__NAME = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
@@ -93,7 +94,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SAN__ACTIVITIES = 2;
+	int SAN__ACTIVITIES = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Global Variables</b></em>' containment reference list.
@@ -102,7 +103,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SAN__GLOBAL_VARIABLES = 3;
+	int SAN__GLOBAL_VARIABLES = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Arcs</b></em>' containment reference list.
@@ -111,7 +112,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SAN__ARCS = 4;
+	int SAN__ARCS = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Gates</b></em>' containment reference list.
@@ -120,7 +121,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SAN__GATES = 5;
+	int SAN__GATES = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Initialization</b></em>' containment reference list.
@@ -129,7 +130,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SAN__INITIALIZATION = 6;
+	int SAN__INITIALIZATION = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>SAN</em>' class.
@@ -138,7 +139,16 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SAN_FEATURE_COUNT = 7;
+	int SAN_FEATURE_COUNT = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Templatize</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAN___TEMPLATIZE = CorePackage.CONCRETE_MODEL___TEMPLATIZE;
 
 	/**
 	 * The number of operations of the '<em>SAN</em>' class.
@@ -147,7 +157,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SAN_OPERATION_COUNT = 0;
+	int SAN_OPERATION_COUNT = CorePackage.CONCRETE_MODEL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.impl.NamedElementImpl <em>Named Element</em>}' class.

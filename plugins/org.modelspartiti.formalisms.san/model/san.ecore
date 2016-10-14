@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="san" nsURI="http://www.modelspartiti.org/templates/san/san"
     nsPrefix="san">
-  <eClassifiers xsi:type="ecore:EClass" name="SAN">
+  <eClassifiers xsi:type="ecore:EClass" name="SAN" eSuperTypes="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/ConcreteModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="places" lowerBound="1"
         upperBound="-1" eType="#//Place" containment="true" eKeys="#//NamedElement/name"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

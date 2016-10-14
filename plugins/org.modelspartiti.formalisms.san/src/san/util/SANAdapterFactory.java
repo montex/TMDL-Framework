@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import san.*;
+import tmdl.core.ConcreteModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -250,6 +251,10 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMarkingVariableExtended(MarkingVariableExtended object) {
 				return createMarkingVariableExtendedAdapter();
+			}
+			@Override
+			public Adapter caseConcreteModel(ConcreteModel object) {
+				return createConcreteModelAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -912,6 +917,20 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMarkingVariableExtendedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link tmdl.core.ConcreteModel <em>Concrete Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see tmdl.core.ConcreteModel
+	 * @generated
+	 */
+	public Adapter createConcreteModelAdapter() {
 		return null;
 	}
 

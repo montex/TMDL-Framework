@@ -60,6 +60,9 @@ import san.Triangular;
 import san.Uniform;
 import san.VariableType;
 import san.Weibull;
+import tmdl.core.CorePackage;
+import tmdl.library.LibraryPackage;
+import tmdl.scenario.ScenarioPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -456,6 +459,11 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		SANPackageImpl theSANPackage = (SANPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SANPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SANPackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		ScenarioPackage.eINSTANCE.eClass();
+		LibraryPackage.eINSTANCE.eClass();
+		CorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSANPackage.createPackageContents();
@@ -1734,11 +1742,15 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		sanEClass.getESuperTypes().add(theCorePackage.getConcreteModel());
 		placeEClass.getESuperTypes().add(this.getNamedElement());
 		activityEClass.getESuperTypes().add(this.getNamedElement());
 		inputArcEClass.getESuperTypes().add(this.getArc());

@@ -7,7 +7,7 @@ This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator
 
 Package san <http://www.modelspartiti.org/templates/san/san>
 
-  Class SAN
+  Class SAN -> ConcreteModel
     Reference places : Place<<1..*>>
     Attribute name : EString<<1..1>>
     Reference activities : Activity<<0..*>>

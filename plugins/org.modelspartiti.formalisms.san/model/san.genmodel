@@ -3,6 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.modelspartiti.formalisms.san/src" modelPluginID="org.modelspartiti.formalisms.san"
     modelName="SAN" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.modelspartiti.infrastructure/model/tmdl.genmodel#//tmdl"
     operationReflection="true" importOrganizing="true">
   <foreignModel>san.ecore</foreignModel>
   <genPackages prefix="SAN" resource="XML" disposableProviderFactory="true" contentTypeIdentifier=""
@@ -15,6 +16,13 @@
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/double"/>
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/bool"/>
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/char"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="san.ecore#//ExtendedPlaceType">
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/int"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/short"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/float"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/double"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/char"/>
     </genEnums>
     <genDataTypes ecoreDataType="san.ecore#//CodeFragment"/>
     <genClasses ecoreClass="san.ecore#//SAN">
@@ -50,9 +58,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Gate/function"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//Gate/places"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//OutputGate"/>
+    <genClasses ecoreClass="san.ecore#//OutputGate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//OutputGate/activityCase"/>
+    </genClasses>
     <genClasses ecoreClass="san.ecore#//InputGate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//InputGate/predicate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//InputGate/activity"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//InstantaneousActivity"/>
     <genClasses ecoreClass="san.ecore#//TimedActivity">
@@ -77,14 +88,12 @@
     <genClasses ecoreClass="san.ecore#//MarkingInteger">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingInteger/value"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingExtended">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingExtended/value"/>
-    </genClasses>
+    <genClasses ecoreClass="san.ecore#//MarkingExtended"/>
     <genClasses ecoreClass="san.ecore#//GlobalVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//GlobalVariable/type"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingVariable">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingVariable/variable"/>
+    <genClasses ecoreClass="san.ecore#//MarkingVariableSimple">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingVariableSimple/variable"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//Exponential">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Exponential/rate"/>
@@ -159,6 +168,13 @@
     </genClasses>
     <genClasses ecoreClass="san.ecore#//ExtendedPlace">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExtendedPlace/marking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//ExtendedPlace/type"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//MarkingString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingString/value"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//MarkingVariableExtended">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingVariableExtended/variable"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
