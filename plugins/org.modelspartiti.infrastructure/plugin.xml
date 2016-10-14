@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tmdl -->
+      <package
+            uri="http://www.modelspartiti.org/infrastructure/tmdl/scenario"
+            class="tmdl.scenario.ScenarioPackage"
+            genModel="model/tmdl.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tmdl -->
+      <package
+            uri="http://www.modelspartiti.org/infrastructure/tmdl/library"
+            class="tmdl.library.LibraryPackage"
+            genModel="model/tmdl.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tmdl -->
+      <package
+            uri="http://www.modelspartiti.org/infrastructure/tmdl/core"
+            class="tmdl.core.CorePackage"
+            genModel="model/tmdl.genmodel"/>
+   </extension>
+
+</plugin>

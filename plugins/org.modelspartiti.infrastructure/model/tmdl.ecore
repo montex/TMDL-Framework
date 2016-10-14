@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tmdl" nsURI="http://www.modelspartiti.org/infrastructure/tmdl"
+    nsPrefix="tmdl">
+  <eSubpackages name="scenario" nsURI="http://www.modelspartiti.org/infrastructure/tmdl/scenario"
+      nsPrefix="scn">
+    <eClassifiers xsi:type="ecore:EClass" name="Scenario">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variants" lowerBound="1"
+          upperBound="-1" eType="#//scenario/Variant" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="root" lowerBound="1"
+          eType="#//scenario/Variant"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Variant" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assignments" upperBound="-1"
+          eType="#//core/Assignment" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VariantAtomic" eSuperTypes="#//scenario/Variant">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="template" lowerBound="1"
+          eType="#//library/TemplateAtomic"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="labels" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VariantComposite" eSuperTypes="#//scenario/Variant">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="template" lowerBound="1"
+          eType="#//library/TemplateComposite"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="realizations" lowerBound="1"
+          upperBound="-1" eType="#//scenario/BlockRealization" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BlockRealization">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1"
+          eType="#//library/Block"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variant" lowerBound="1"
+          eType="#//scenario/Variant"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="library" nsURI="http://www.modelspartiti.org/infrastructure/tmdl/library"
+      nsPrefix="lib">
+    <eClassifiers xsi:type="ecore:EClass" name="Library">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" lowerBound="1"
+          upperBound="-1" eType="#//library/ModelInterface" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="templates" lowerBound="1"
+          upperBound="-1" eType="#//library/TemplateSpecification" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelInterface">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variables" lowerBound="1"
+          upperBound="-1" eType="#//library/InterfaceVariable" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+          eType="#//core/Parameter" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TemplateSpecification" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" lowerBound="1"
+          upperBound="-1" eType="#//library/ModelInterface"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" eType="#//core/Parameter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TemplateAtomic" eSuperTypes="#//library/TemplateSpecification">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="labels" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TemplateComposite" eSuperTypes="#//library/TemplateSpecification">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rules" lowerBound="1"
+          upperBound="-1" eType="#//library/CompositionRule" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="blocks" lowerBound="1"
+          upperBound="-1" eType="#//library/Block" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Block">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="labels" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicity" lowerBound="1"
+          eType="#//library/Multiplicity" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredInterfaces" upperBound="-1"
+          eType="#//library/ModelInterface"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InterfaceVariable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="labels" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicity" lowerBound="1"
+          eType="#//library/Multiplicity" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Multiplicity" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityValue" eSuperTypes="#//library/Multiplicity">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityArray" eSuperTypes="#//library/Multiplicity">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" lowerBound="1"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MultiplicityParametric" eSuperTypes="#//library/Multiplicity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//core/Parameter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CompositionRule" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
+          eType="#//library/InterfaceVariable"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CompositionRuleAll" eSuperTypes="#//library/CompositionRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CompositionRuleMatch" eSuperTypes="#//library/CompositionRule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="labels" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CompositionRuleForwards" eSuperTypes="#//library/CompositionRule"/>
+  </eSubpackages>
+  <eSubpackages name="core" nsURI="http://www.modelspartiti.org/infrastructure/tmdl/core"
+      nsPrefix="core">
+    <eClassifiers xsi:type="ecore:EClass" name="ConcreteModel" abstract="true" interface="true">
+      <eOperations name="templatize" lowerBound="1" eType="#//core/TemplateModel"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TemplateModel" abstract="true" interface="true">
+      <eOperations name="concretize" lowerBound="1" eType="#//core/ConcreteModel">
+        <eParameters name="parameterValues" upperBound="-1" eType="#//core/Assignment"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterSimple" eSuperTypes="#//core/Parameter"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterArray" eSuperTypes="#//core/Parameter"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Assignment" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AssignmentSimple" eSuperTypes="#//core/Assignment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//core/ParameterSimple"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AssignmentArray" eSuperTypes="#//core/Assignment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+          eType="#//core/ParameterArray"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

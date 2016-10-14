@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.modelspartiti.infrastructure/src" modelPluginID="org.modelspartiti.infrastructure"
+    modelName="TMDL" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>tmdl.ecore</foreignModel>
+  <genPackages prefix="TMDL" disposableProviderFactory="true" ecorePackage="tmdl.ecore#/">
+    <nestedGenPackages prefix="Library" disposableProviderFactory="true" ecorePackage="tmdl.ecore#//library">
+      <genClasses ecoreClass="tmdl.ecore#//library/Library">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//library/Library/name"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Core" disposableProviderFactory="true" ecorePackage="tmdl.ecore#//core">
+      <genClasses image="false" ecoreClass="tmdl.ecore#//core/ConcreteModel">
+        <genOperations ecoreOperation="tmdl.ecore#//core/ConcreteModel/export"/>
+        <genOperations ecoreOperation="tmdl.ecore#//core/ConcreteModel/export.1">
+          <genParameters ecoreParameter="tmdl.ecore#//core/ConcreteModel/export.1/format"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tmdl.ecore#//core/TemplateImplementation">
+        <genOperations ecoreOperation="tmdl.ecore#//core/TemplateImplementation/concretize">
+          <genParameters ecoreParameter="tmdl.ecore#//core/TemplateImplementation/concretize/parameterValues"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tmdl.ecore#//core/Parameter">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/Parameter/name"/>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//core/ParameterSingle"/>
+      <genClasses ecoreClass="tmdl.ecore#//core/ParameterArray"/>
+      <genClasses image="false" ecoreClass="tmdl.ecore#//core/Assignment"/>
+      <genClasses ecoreClass="tmdl.ecore#//core/AssignmentSingle">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference tmdl.ecore#//core/AssignmentSingle/parameter"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/AssignmentSingle/value"/>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//core/AssignmentArray">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference tmdl.ecore#//core/AssignmentArray/parameter"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/AssignmentArray/value"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

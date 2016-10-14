@@ -1,0 +1,142 @@
+@namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl", prefix="tmdl")
+package tmdl;
+
+@namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl/scenario", prefix="scn")
+package scenario {
+  class Scenario {
+    id attr String[1] name;
+    val Variant[+] variants;
+    ref Variant[1] root;
+  }
+
+  abstract class Variant {
+    id attr String[1] name;
+    val core.Assignment[*] assignments;
+  }
+
+  class VariantAtomic extends Variant {
+    ref library.TemplateAtomic[1] template;
+    attr String[*] labels;
+  }
+
+  class VariantComposite extends Variant {
+    ref library.TemplateComposite[1] template;
+    val BlockRealization[+] realizations;
+  }
+
+  class BlockRealization {
+    ref library.Block[1] block;
+    ref Variant[1] variant;
+  }
+
+}
+
+@namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl/library", prefix="lib")
+package library {
+  class Library {
+    id attr String[1] name;
+    val ModelInterface[+] interfaces;
+    val TemplateSpecification[+] templates;
+  }
+
+  class ModelInterface {
+    id attr String[1] name;
+    val InterfaceVariable[+] variables;
+    val core.Parameter[*] parameters;
+  }
+
+  abstract class TemplateSpecification {
+    id attr String[1] name;
+    ref ModelInterface[+] interfaces;
+    ref core.Parameter parameters;
+  }
+
+  class TemplateAtomic extends TemplateSpecification {
+    attr String[1] source;
+    attr String[*] labels;
+  }
+
+  class TemplateComposite extends TemplateSpecification {
+    val CompositionRule[+] rules;
+    val Block[+] blocks;
+  }
+
+  class Block {
+    attr String[*] labels;
+    val Multiplicity[1] multiplicity;
+    ref ModelInterface[*] requiredInterfaces;
+  }
+
+  class InterfaceVariable {
+    id attr String[1] name;
+    attr String[*] labels;
+    val Multiplicity[1] multiplicity;
+  }
+
+  abstract class Multiplicity {
+  }
+
+  class MultiplicityValue extends Multiplicity {
+    attr double[1] value;
+  }
+
+  class MultiplicityArray extends Multiplicity {
+    attr double[+] values;
+  }
+
+  class MultiplicityParametric extends Multiplicity {
+    ref core.Parameter[1] parameter;
+  }
+
+  abstract class CompositionRule {
+    attr String[1] name;
+    ref InterfaceVariable[*] variables;
+  }
+
+  class CompositionRuleAll extends CompositionRule {
+  }
+
+  class CompositionRuleMatch extends CompositionRule {
+    attr String[*] labels;
+  }
+
+  class CompositionRuleForwards extends CompositionRule {
+  }
+
+}
+
+@namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl/core", prefix="core")
+package core {
+  abstract interface ConcreteModel {
+    op TemplateModel[1] templatize();
+  }
+
+  abstract interface TemplateModel {
+    op ConcreteModel[1] concretize(Assignment[*] parameterValues);
+  }
+
+  abstract class Parameter {
+    attr String[*] name;
+  }
+
+  class ParameterSimple extends Parameter {
+  }
+
+  class ParameterArray extends Parameter {
+  }
+
+  abstract class Assignment {
+  }
+
+  class AssignmentSimple extends Assignment {
+    ref ParameterSimple[1] parameter;
+    attr double value;
+  }
+
+  class AssignmentArray extends Assignment {
+    ref ParameterArray[1] parameter;
+    attr double[*] value;
+  }
+
+}
+
