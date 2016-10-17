@@ -13,6 +13,10 @@ import tmdl.core.CorePackage;
 
 import tmdl.core.impl.CorePackageImpl;
 
+import tmdl.expressions.ExpressionsPackage;
+
+import tmdl.expressions.impl.ExpressionsPackageImpl;
+
 import tmdl.library.LibraryPackage;
 
 import tmdl.library.impl.LibraryPackageImpl;
@@ -116,16 +120,19 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		// Obtain or create and register interdependencies
 		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) instanceof LibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) : LibraryPackage.eINSTANCE);
 		CorePackageImpl theCorePackage = (CorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) instanceof CorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) : CorePackage.eINSTANCE);
+		ExpressionsPackageImpl theExpressionsPackage = (ExpressionsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI) instanceof ExpressionsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI) : ExpressionsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theScenarioPackage.createPackageContents();
 		theLibraryPackage.createPackageContents();
 		theCorePackage.createPackageContents();
+		theExpressionsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theScenarioPackage.initializePackageContents();
 		theLibraryPackage.initializePackageContents();
 		theCorePackage.initializePackageContents();
+		theExpressionsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theScenarioPackage.freeze();

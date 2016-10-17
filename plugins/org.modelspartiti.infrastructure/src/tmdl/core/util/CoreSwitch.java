@@ -145,33 +145,6 @@ public class CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CorePackage.PARAMETER_EXPRESSION: {
-				ParameterExpression parameterExpression = (ParameterExpression)theEObject;
-				T result = caseParameterExpression(parameterExpression);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CorePackage.PARAMETER_EXPRESSION_VALUE: {
-				ParameterExpressionValue parameterExpressionValue = (ParameterExpressionValue)theEObject;
-				T result = caseParameterExpressionValue(parameterExpressionValue);
-				if (result == null) result = caseParameterExpression(parameterExpressionValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CorePackage.PARAMETER_EXPRESSION_VALUE_AT: {
-				ParameterExpressionValueAt parameterExpressionValueAt = (ParameterExpressionValueAt)theEObject;
-				T result = caseParameterExpressionValueAt(parameterExpressionValueAt);
-				if (result == null) result = caseParameterExpression(parameterExpressionValueAt);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CorePackage.PARAMETER_EXPRESSION_AGGREGATE: {
-				ParameterExpressionAggregate parameterExpressionAggregate = (ParameterExpressionAggregate)theEObject;
-				T result = caseParameterExpressionAggregate(parameterExpressionAggregate);
-				if (result == null) result = caseParameterExpression(parameterExpressionAggregate);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -353,66 +326,6 @@ public class CoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMultiplicityParametric(MultiplicityParametric object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter Expression</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseParameterExpression(ParameterExpression object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter Expression Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter Expression Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseParameterExpressionValue(ParameterExpressionValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter Expression Value At</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter Expression Value At</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseParameterExpressionValueAt(ParameterExpressionValueAt object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter Expression Aggregate</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter Expression Aggregate</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseParameterExpressionAggregate(ParameterExpressionAggregate object) {
 		return null;
 	}
 

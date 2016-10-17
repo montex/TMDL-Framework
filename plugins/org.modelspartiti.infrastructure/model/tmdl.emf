@@ -138,30 +138,126 @@ package core {
     ref Parameter[1] parameter;
   }
 
-  abstract class ParameterExpression {
+}
+
+@namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl/expressions", prefix="exp")
+package expressions {
+  abstract class TemplateExpression {
   }
-  
-  class ParameterExpressionValue extends ParameterExpression {
-  	ref ParameterSimple[1] parameter;
+
+  abstract class TemplateExpressionInteger extends TemplateExpression {
   }
-  
-  class ParameterExpressionValueAt extends ParameterExpression {
-  	ref ParameterArray[1] parameter;
-  	attr int[1] position;
+
+  abstract class TemplateExpressionReal extends TemplateExpression {
   }
-  
-  enum AggregateFunctionKind {
-   	size = 0;
-  	min = 1;
-  	max = 2;
-  	avg = 3;
-  	sum = 4;
+
+  abstract class TemplateExpressionBoolean extends TemplateExpression {
   }
-  
-  class ParameterExpressionAggregate extends ParameterExpression {
-  	ref Parameter[1] parameter;
-  	attr AggregateFunctionKind function;
-  }  
+
+  class TemplateExpressionIntegerLiteral extends TemplateExpressionInteger {
+    attr int[1] value;
+  }
+
+  class TemplateExpressionRealLiteral extends TemplateExpressionReal {
+    attr double[1] value;
+  }
+
+  class TemplateExpressionBoolaenLiteral extends TemplateExpressionBoolean {
+    attr boolean[1] value;
+  }
+
+  class TemplateExpressionIntegerFromReal extends TemplateExpressionInteger {
+    val TemplateExpressionReal[1] exp;
+  }
+
+  class TemplateExpressionRealFromInteger extends TemplateExpressionReal {
+    val TemplateExpressionInteger[1] exp;
+  }
+
+  class TemplateExpressionParameterSimple extends TemplateExpressionReal {
+    ref core.ParameterSimple[1] parameter;
+  }
+
+  class TemplateExpressionParameterArrayValueAt extends TemplateExpressionReal {
+    ref core.ParameterArray[1] parameter;
+    val TemplateExpressionInteger[1] position;
+  }
+
+  class TemplateExpressionParameterArraySize extends TemplateExpressionInteger {
+    ref core.ParameterArray[1] parameter;
+  }
+
+  class TemplateExpressionArrayAggregate extends TemplateExpressionReal {
+    ref core.ParameterArray[1] parameter;
+    attr ArrayAggregateKind function;
+  }
+
+  enum ArrayAggregateKind {
+    min = 1;
+    max = 2;
+    avg = 3;
+    sum = 4;
+  }
+
+  abstract class TemplateExpressionRealBinary extends TemplateExpressionReal {
+    val TemplateExpressionReal[1] exp1;
+    val TemplateExpressionReal[1] exp2;
+  }
+
+  class TemplateExpressionRealSum extends TemplateExpressionRealBinary {
+  }
+
+  class TemplateExpressionRealSubtract extends TemplateExpressionRealBinary {
+  }
+
+  class TemplateExpressionRealMultiply extends TemplateExpressionRealBinary {
+  }
+
+  class TemplateExpressionRealDivide extends TemplateExpressionRealBinary {
+  }
+
+  class TemplateExpressionRealModulo extends TemplateExpressionRealBinary {
+  }
+
+  abstract class TemplateExpressionRealUnary extends TemplateExpressionReal {
+    val TemplateExpressionReal[1] exp;
+  }
+
+  class TemplateExpressionRealFloor extends TemplateExpressionRealUnary {
+  }
+
+  class TemplateExpressionRealCeil extends TemplateExpressionRealUnary {
+  }
+
+  class TemplateExpressionRealRound extends TemplateExpressionRealUnary {
+  }
+
+  class TemplateExpressionRealIfThenElse extends TemplateExpressionReal {
+    val TemplateExpressionBoolean[1] condition;
+    val TemplateExpressionReal[1] ifTrue;
+    val TemplateExpressionReal[0..1] ifFalse;
+  }
+
+  abstract class TemplateExpressionBooleanUnary extends TemplateExpressionBoolean {
+    val TemplateExpressionBoolean[1] exp;
+  }
+
+  class TemplateExpressionBooleanNot extends TemplateExpressionBooleanUnary {
+  }
+
+  class TemplateExpressionBooleanToInteger extends TemplateExpressionBooleanUnary {
+  }
+
+  abstract class TemplateExpressionBooleanBinary extends TemplateExpressionBoolean {
+    val TemplateExpressionBoolean[1] exp1;
+    val TemplateExpressionBoolean[1] exp2;
+  }
+
+  class TemplateExpressionBooleanAnd extends TemplateExpressionBooleanBinary {
+  }
+
+  class TemplateExpressionBooleanOr extends TemplateExpressionBooleanBinary {
+  }
 
 }
 

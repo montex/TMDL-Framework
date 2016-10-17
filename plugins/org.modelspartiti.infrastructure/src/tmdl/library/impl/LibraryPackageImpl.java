@@ -13,6 +13,10 @@ import tmdl.core.CorePackage;
 
 import tmdl.core.impl.CorePackageImpl;
 
+import tmdl.expressions.ExpressionsPackage;
+
+import tmdl.expressions.impl.ExpressionsPackageImpl;
+
 import tmdl.library.Block;
 import tmdl.library.CompositionRule;
 import tmdl.library.CompositionRuleAll;
@@ -164,16 +168,19 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		// Obtain or create and register interdependencies
 		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) instanceof ScenarioPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) : ScenarioPackage.eINSTANCE);
 		CorePackageImpl theCorePackage = (CorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) instanceof CorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) : CorePackage.eINSTANCE);
+		ExpressionsPackageImpl theExpressionsPackage = (ExpressionsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI) instanceof ExpressionsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI) : ExpressionsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theLibraryPackage.createPackageContents();
 		theScenarioPackage.createPackageContents();
 		theCorePackage.createPackageContents();
+		theExpressionsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theLibraryPackage.initializePackageContents();
 		theScenarioPackage.initializePackageContents();
 		theCorePackage.initializePackageContents();
+		theExpressionsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theLibraryPackage.freeze();

@@ -30,4 +30,12 @@
             genModel="model/tmdl.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tmdl -->
+      <package
+            uri="http://www.modelspartiti.org/infrastructure/tmdl/expressions"
+            class="tmdl.expressions.ExpressionsPackage"
+            genModel="model/tmdl.genmodel"/>
+   </extension>
+
 </plugin>

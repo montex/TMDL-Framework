@@ -85,33 +85,6 @@ public interface CoreFactory extends EFactory {
 	MultiplicityParametric createMultiplicityParametric();
 
 	/**
-	 * Returns a new object of class '<em>Parameter Expression Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter Expression Value</em>'.
-	 * @generated
-	 */
-	ParameterExpressionValue createParameterExpressionValue();
-
-	/**
-	 * Returns a new object of class '<em>Parameter Expression Value At</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter Expression Value At</em>'.
-	 * @generated
-	 */
-	ParameterExpressionValueAt createParameterExpressionValueAt();
-
-	/**
-	 * Returns a new object of class '<em>Parameter Expression Aggregate</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter Expression Aggregate</em>'.
-	 * @generated
-	 */
-	ParameterExpressionAggregate createParameterExpressionAggregate();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
