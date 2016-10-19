@@ -221,7 +221,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="shape" lowerBound="1" eType="#//Expression"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpressionSegment" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionSegment" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="MarkingSimple" abstract="true" eSuperTypes="#//Marking"/>
   <eClassifiers xsi:type="ecore:EClass" name="NormalPlace" eSuperTypes="#//Place">
     <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"

@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import san.ExpressionText;
 import san.SANPackage;
 
@@ -24,7 +25,7 @@ import san.SANPackage;
  *
  * @generated
  */
-public class ExpressionTextImpl extends ExpressionSegmentImpl implements ExpressionText {
+public class ExpressionTextImpl extends MinimalEObjectImpl.Container implements ExpressionText {
 	/**
 	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->

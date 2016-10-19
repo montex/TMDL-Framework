@@ -822,10 +822,10 @@ public interface SANPackage extends EPackage {
 	int EXPRESSION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.ExpressionSegmentImpl <em>Expression Segment</em>}' class.
+	 * The meta object id for the '{@link san.ExpressionSegment <em>Expression Segment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see san.impl.ExpressionSegmentImpl
+	 * @see san.ExpressionSegment
 	 * @see san.impl.SANPackageImpl#getExpressionSegment()
 	 * @generated
 	 */
@@ -4282,10 +4282,10 @@ public interface SANPackage extends EPackage {
 		EReference PARETO__SHAPE = eINSTANCE.getPareto_Shape();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.ExpressionSegmentImpl <em>Expression Segment</em>}' class.
+		 * The meta object literal for the '{@link san.ExpressionSegment <em>Expression Segment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see san.impl.ExpressionSegmentImpl
+		 * @see san.ExpressionSegment
 		 * @see san.impl.SANPackageImpl#getExpressionSegment()
 		 * @generated
 		 */

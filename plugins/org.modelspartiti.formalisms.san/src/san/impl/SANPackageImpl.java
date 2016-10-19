@@ -61,6 +61,7 @@ import san.Uniform;
 import san.VariableType;
 import san.Weibull;
 import tmdl.core.CorePackage;
+import tmdl.expressions.ExpressionsPackage;
 import tmdl.library.LibraryPackage;
 import tmdl.scenario.ScenarioPackage;
 
@@ -464,6 +465,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		ScenarioPackage.eINSTANCE.eClass();
 		LibraryPackage.eINSTANCE.eClass();
 		CorePackage.eINSTANCE.eClass();
+		ExpressionsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSANPackage.createPackageContents();
@@ -1937,7 +1939,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEReference(getPareto_LowerBound(), this.getExpression(), null, "lowerBound", null, 1, 1, Pareto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPareto_Shape(), this.getExpression(), null, "shape", null, 1, 1, Pareto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(expressionSegmentEClass, ExpressionSegment.class, "ExpressionSegment", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(expressionSegmentEClass, ExpressionSegment.class, "ExpressionSegment", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(markingSimpleEClass, MarkingSimple.class, "MarkingSimple", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

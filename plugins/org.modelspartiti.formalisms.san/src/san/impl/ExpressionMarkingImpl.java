@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import san.ExpressionMarking;
 import san.Place;
 import san.SANPackage;
@@ -24,7 +25,7 @@ import san.SANPackage;
  *
  * @generated
  */
-public class ExpressionMarkingImpl extends ExpressionSegmentImpl implements ExpressionMarking {
+public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implements ExpressionMarking {
 	/**
 	 * The cached value of the '{@link #getPlace() <em>Place</em>}' reference.
 	 * <!-- begin-user-doc -->

@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import san.ExpressionVariable;
 import san.GlobalVariable;
 import san.SANPackage;
@@ -24,7 +25,7 @@ import san.SANPackage;
  *
  * @generated
  */
-public class ExpressionVariableImpl extends ExpressionSegmentImpl implements ExpressionVariable {
+public class ExpressionVariableImpl extends MinimalEObjectImpl.Container implements ExpressionVariable {
 	/**
 	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
