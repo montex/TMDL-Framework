@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import tmdl.expressions.ExpressionsPackage;
 import tmdl.expressions.TemplateExpressionBoolaenLiteral;
@@ -24,7 +25,7 @@ import tmdl.expressions.TemplateExpressionBoolaenLiteral;
  *
  * @generated
  */
-public class TemplateExpressionBoolaenLiteralImpl extends TemplateExpressionBooleanImpl implements TemplateExpressionBoolaenLiteral {
+public class TemplateExpressionBoolaenLiteralImpl extends MinimalEObjectImpl.Container implements TemplateExpressionBoolaenLiteral {
 	/**
 	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import tmdl.expressions.ExpressionsPackage;
 import tmdl.expressions.TemplateExpressionBoolean;
@@ -27,7 +28,7 @@ import tmdl.expressions.TemplateExpressionBooleanUnary;
  *
  * @generated
  */
-public abstract class TemplateExpressionBooleanUnaryImpl extends TemplateExpressionBooleanImpl implements TemplateExpressionBooleanUnary {
+public abstract class TemplateExpressionBooleanUnaryImpl extends MinimalEObjectImpl.Container implements TemplateExpressionBooleanUnary {
 	/**
 	 * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
 	 * <!-- begin-user-doc -->

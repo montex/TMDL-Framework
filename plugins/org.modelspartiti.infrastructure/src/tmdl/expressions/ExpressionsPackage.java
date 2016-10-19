@@ -58,10 +58,10 @@ public interface ExpressionsPackage extends EPackage {
 	ExpressionsPackage eINSTANCE = tmdl.expressions.impl.ExpressionsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionImpl <em>Template Expression</em>}' class.
+	 * The meta object id for the '{@link tmdl.expressions.TemplateExpression <em>Template Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tmdl.expressions.impl.TemplateExpressionImpl
+	 * @see tmdl.expressions.TemplateExpression
 	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpression()
 	 * @generated
 	 */
@@ -86,10 +86,10 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionIntegerImpl <em>Template Expression Integer</em>}' class.
+	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionInteger <em>Template Expression Integer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tmdl.expressions.impl.TemplateExpressionIntegerImpl
+	 * @see tmdl.expressions.TemplateExpressionInteger
 	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionInteger()
 	 * @generated
 	 */
@@ -114,10 +114,10 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT = TEMPLATE_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealImpl <em>Template Expression Real</em>}' class.
+	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionReal <em>Template Expression Real</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tmdl.expressions.impl.TemplateExpressionRealImpl
+	 * @see tmdl.expressions.TemplateExpressionReal
 	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionReal()
 	 * @generated
 	 */
@@ -142,10 +142,10 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanImpl <em>Template Expression Boolean</em>}' class.
+	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionBoolean <em>Template Expression Boolean</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tmdl.expressions.impl.TemplateExpressionBooleanImpl
+	 * @see tmdl.expressions.TemplateExpressionBoolean
 	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBoolean()
 	 * @generated
 	 */
@@ -1813,40 +1813,40 @@ public interface ExpressionsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionImpl <em>Template Expression</em>}' class.
+		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpression <em>Template Expression</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tmdl.expressions.impl.TemplateExpressionImpl
+		 * @see tmdl.expressions.TemplateExpression
 		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpression()
 		 * @generated
 		 */
 		EClass TEMPLATE_EXPRESSION = eINSTANCE.getTemplateExpression();
 
 		/**
-		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionIntegerImpl <em>Template Expression Integer</em>}' class.
+		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionInteger <em>Template Expression Integer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tmdl.expressions.impl.TemplateExpressionIntegerImpl
+		 * @see tmdl.expressions.TemplateExpressionInteger
 		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionInteger()
 		 * @generated
 		 */
 		EClass TEMPLATE_EXPRESSION_INTEGER = eINSTANCE.getTemplateExpressionInteger();
 
 		/**
-		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealImpl <em>Template Expression Real</em>}' class.
+		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionReal <em>Template Expression Real</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tmdl.expressions.impl.TemplateExpressionRealImpl
+		 * @see tmdl.expressions.TemplateExpressionReal
 		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionReal()
 		 * @generated
 		 */
 		EClass TEMPLATE_EXPRESSION_REAL = eINSTANCE.getTemplateExpressionReal();
 
 		/**
-		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanImpl <em>Template Expression Boolean</em>}' class.
+		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionBoolean <em>Template Expression Boolean</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tmdl.expressions.impl.TemplateExpressionBooleanImpl
+		 * @see tmdl.expressions.TemplateExpressionBoolean
 		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBoolean()
 		 * @generated
 		 */

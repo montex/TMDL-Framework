@@ -10,7 +10,7 @@ package tmdl.expressions;
  *
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionInteger()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface TemplateExpressionInteger extends TemplateExpression {

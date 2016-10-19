@@ -524,7 +524,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		initEReference(getAssignmentArray_Parameter(), this.getParameterArray(), null, "parameter", null, 1, 1, AssignmentArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssignmentArray_Value(), ecorePackage.getEDouble(), "value", null, 0, -1, AssignmentArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(multiplicityValueEClass, MultiplicityValue.class, "MultiplicityValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMultiplicityValue_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, MultiplicityValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

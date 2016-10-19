@@ -137,7 +137,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" upperBound="-1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Multiplicity" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Multiplicity" abstract="true" interface="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="MultiplicityValue" eSuperTypes="#//core/Multiplicity">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
@@ -153,13 +153,14 @@
   </eSubpackages>
   <eSubpackages name="expressions" nsURI="http://www.modelspartiti.org/infrastructure/tmdl/expressions"
       nsPrefix="exp">
-    <eClassifiers xsi:type="ecore:EClass" name="TemplateExpression" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TemplateExpression" abstract="true"
+        interface="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionInteger" abstract="true"
-        eSuperTypes="#//expressions/TemplateExpression"/>
+        interface="true" eSuperTypes="#//expressions/TemplateExpression"/>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionReal" abstract="true"
-        eSuperTypes="#//expressions/TemplateExpression"/>
+        interface="true" eSuperTypes="#//expressions/TemplateExpression"/>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionBoolean" abstract="true"
-        eSuperTypes="#//expressions/TemplateExpression"/>
+        interface="true" eSuperTypes="#//expressions/TemplateExpression"/>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionIntegerLiteral"
         eSuperTypes="#//expressions/TemplateExpressionInteger">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"

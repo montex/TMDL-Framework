@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import tmdl.core.ParameterArray;
 
@@ -30,7 +31,7 @@ import tmdl.expressions.TemplateExpressionParameterArrayValueAt;
  *
  * @generated
  */
-public class TemplateExpressionParameterArrayValueAtImpl extends TemplateExpressionRealImpl implements TemplateExpressionParameterArrayValueAt {
+public class TemplateExpressionParameterArrayValueAtImpl extends MinimalEObjectImpl.Container implements TemplateExpressionParameterArrayValueAt {
 	/**
 	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->

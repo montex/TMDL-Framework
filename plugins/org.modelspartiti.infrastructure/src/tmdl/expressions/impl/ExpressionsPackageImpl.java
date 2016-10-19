@@ -985,13 +985,13 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		templateExpressionBooleanOrEClass.getESuperTypes().add(this.getTemplateExpressionBooleanBinary());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(templateExpressionEClass, TemplateExpression.class, "TemplateExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(templateExpressionEClass, TemplateExpression.class, "TemplateExpression", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(templateExpressionIntegerEClass, TemplateExpressionInteger.class, "TemplateExpressionInteger", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(templateExpressionIntegerEClass, TemplateExpressionInteger.class, "TemplateExpressionInteger", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(templateExpressionRealEClass, TemplateExpressionReal.class, "TemplateExpressionReal", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(templateExpressionRealEClass, TemplateExpressionReal.class, "TemplateExpressionReal", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(templateExpressionBooleanEClass, TemplateExpressionBoolean.class, "TemplateExpressionBoolean", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(templateExpressionBooleanEClass, TemplateExpressionBoolean.class, "TemplateExpressionBoolean", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(templateExpressionIntegerLiteralEClass, TemplateExpressionIntegerLiteral.class, "TemplateExpressionIntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTemplateExpressionIntegerLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, TemplateExpressionIntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

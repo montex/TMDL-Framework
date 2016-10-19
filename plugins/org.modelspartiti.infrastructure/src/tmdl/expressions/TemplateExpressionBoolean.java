@@ -10,7 +10,7 @@ package tmdl.expressions;
  *
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionBoolean()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface TemplateExpressionBoolean extends TemplateExpression {

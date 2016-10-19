@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import tmdl.expressions.ExpressionsPackage;
 import tmdl.expressions.TemplateExpressionReal;
@@ -27,7 +28,7 @@ import tmdl.expressions.TemplateExpressionRealUnary;
  *
  * @generated
  */
-public abstract class TemplateExpressionRealUnaryImpl extends TemplateExpressionRealImpl implements TemplateExpressionRealUnary {
+public abstract class TemplateExpressionRealUnaryImpl extends MinimalEObjectImpl.Container implements TemplateExpressionRealUnary {
 	/**
 	 * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
 	 * <!-- begin-user-doc -->

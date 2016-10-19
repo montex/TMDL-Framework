@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import tmdl.core.CorePackage;
 import tmdl.core.MultiplicityParametric;
@@ -26,7 +27,7 @@ import tmdl.core.Parameter;
  *
  * @generated
  */
-public class MultiplicityParametricImpl extends MultiplicityImpl implements MultiplicityParametric {
+public class MultiplicityParametricImpl extends MinimalEObjectImpl.Container implements MultiplicityParametric {
 	/**
 	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->

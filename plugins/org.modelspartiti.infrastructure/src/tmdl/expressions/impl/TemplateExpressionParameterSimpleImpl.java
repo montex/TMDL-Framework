@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import tmdl.core.ParameterSimple;
 
@@ -27,7 +28,7 @@ import tmdl.expressions.TemplateExpressionParameterSimple;
  *
  * @generated
  */
-public class TemplateExpressionParameterSimpleImpl extends TemplateExpressionRealImpl implements TemplateExpressionParameterSimple {
+public class TemplateExpressionParameterSimpleImpl extends MinimalEObjectImpl.Container implements TemplateExpressionParameterSimple {
 	/**
 	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->

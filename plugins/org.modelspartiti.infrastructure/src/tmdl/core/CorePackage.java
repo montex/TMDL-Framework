@@ -363,10 +363,10 @@ public interface CorePackage extends EPackage {
 	int ASSIGNMENT_ARRAY_OPERATION_COUNT = ASSIGNMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link tmdl.core.impl.MultiplicityImpl <em>Multiplicity</em>}' class.
+	 * The meta object id for the '{@link tmdl.core.Multiplicity <em>Multiplicity</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tmdl.core.impl.MultiplicityImpl
+	 * @see tmdl.core.Multiplicity
 	 * @see tmdl.core.impl.CorePackageImpl#getMultiplicity()
 	 * @generated
 	 */
@@ -890,10 +890,10 @@ public interface CorePackage extends EPackage {
 		EAttribute ASSIGNMENT_ARRAY__VALUE = eINSTANCE.getAssignmentArray_Value();
 
 		/**
-		 * The meta object literal for the '{@link tmdl.core.impl.MultiplicityImpl <em>Multiplicity</em>}' class.
+		 * The meta object literal for the '{@link tmdl.core.Multiplicity <em>Multiplicity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tmdl.core.impl.MultiplicityImpl
+		 * @see tmdl.core.Multiplicity
 		 * @see tmdl.core.impl.CorePackageImpl#getMultiplicity()
 		 * @generated
 		 */

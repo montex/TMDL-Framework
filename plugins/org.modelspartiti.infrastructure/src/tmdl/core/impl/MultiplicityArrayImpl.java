@@ -8,6 +8,8 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import tmdl.core.CorePackage;
@@ -26,7 +28,7 @@ import tmdl.core.MultiplicityArray;
  *
  * @generated
  */
-public class MultiplicityArrayImpl extends MultiplicityImpl implements MultiplicityArray {
+public class MultiplicityArrayImpl extends MinimalEObjectImpl.Container implements MultiplicityArray {
 	/**
 	 * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
 	 * <!-- begin-user-doc -->

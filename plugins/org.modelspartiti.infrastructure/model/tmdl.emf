@@ -123,7 +123,7 @@ package core {
     attr double[*] value;
   }
 
-  abstract class Multiplicity {
+  abstract interface Multiplicity {
   }
 
   class MultiplicityValue extends Multiplicity {
@@ -142,16 +142,16 @@ package core {
 
 @namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl/expressions", prefix="exp")
 package expressions {
-  abstract class TemplateExpression {
+  abstract interface TemplateExpression {
   }
 
-  abstract class TemplateExpressionInteger extends TemplateExpression {
+  abstract interface TemplateExpressionInteger extends TemplateExpression {
   }
 
-  abstract class TemplateExpressionReal extends TemplateExpression {
+  abstract interface TemplateExpressionReal extends TemplateExpression {
   }
 
-  abstract class TemplateExpressionBoolean extends TemplateExpression {
+  abstract interface TemplateExpressionBoolean extends TemplateExpression {
   }
 
   class TemplateExpressionIntegerLiteral extends TemplateExpressionInteger {
@@ -235,7 +235,7 @@ package expressions {
   class TemplateExpressionRealIfThenElse extends TemplateExpressionReal {
     val TemplateExpressionBoolean[1] condition;
     val TemplateExpressionReal[1] ifTrue;
-    val TemplateExpressionReal[0..1] ifFalse;
+    val TemplateExpressionReal ifFalse;
   }
 
   abstract class TemplateExpressionBooleanUnary extends TemplateExpressionBoolean {
