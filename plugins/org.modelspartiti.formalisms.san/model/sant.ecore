@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sant" nsURI="http://www.modelspartiti.org/templates/san/sant"
+    nsPrefix="sant">
+  <eClassifiers xsi:type="ecore:EClass" name="SANT" eSuperTypes="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/TemplateModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Parameter"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="places" lowerBound="1"
+        upperBound="-1" eType="#//Place" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
+        eType="#//Activity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalVariables" upperBound="-1"
+        eType="#//GlobalVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arcs" upperBound="-1" eType="#//Arc"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gates" upperBound="-1"
+        eType="#//Gate" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initialization" upperBound="-1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eOperations name="hasVariability" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicity" lowerBound="1"
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Multiplicity"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NormalPlace" eSuperTypes="#//Place">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"
+        eType="#//MarkingSimple" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedPlace" eSuperTypes="#//Place">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"
+        eType="#//MarkingExtended" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//ExtendedPlaceType"
+        defaultValueLiteral="double"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cases" lowerBound="1" eType="#//CasesSpecification"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecification" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Case">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ID" lowerBound="1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationCases" eSuperTypes="#//CasesSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cases" lowerBound="1" upperBound="-1"
+        eType="#//Case" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationProbabilityArray"
+      eSuperTypes="#//CasesSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pValues" lowerBound="1"
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/ParameterArray"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationParametric" eSuperTypes="#//CasesSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="numCases" lowerBound="1"
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pExpression" lowerBound="1"
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionReal"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arc" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InputArc" eSuperTypes="#//Arc">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Place"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Activity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputArc" eSuperTypes="#//Arc">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Case"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Place"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Gate" abstract="true" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="function" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="places" upperBound="-1"
+        eType="#//Place"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputGate" abstract="true" eSuperTypes="#//Gate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputGateConcrete" eSuperTypes="#//OutputGate">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activityCase" lowerBound="1"
+        eType="#//Case"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputGateTemplate" eSuperTypes="#//OutputGate">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+        eType="#//Activity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputGate" eSuperTypes="#//Gate">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+        eType="#//Activity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InstantaneousActivity" eSuperTypes="#//Activity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedActivity" eSuperTypes="#//Activity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeDistribution" lowerBound="1"
+        eType="#//Distribution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activation" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reactivation" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Distribution" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="CodeFragment" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="segments" lowerBound="1"
+        upperBound="-1" eType="#//ExpressionSegment" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionSegment" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionText" eSuperTypes="#//ExpressionSegment">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="#//CodeFragment">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionMarking" eSuperTypes="#//ExpressionSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="place" lowerBound="1" eType="#//Place"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="index" lowerBound="1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionVariable" eSuperTypes="#//ExpressionSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="#//GlobalVariable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionTemplateExpression" eSuperTypes="#//ExpressionSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" lowerBound="1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionIterationElement" eSuperTypes="#//ExpressionSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iterator" lowerBound="1"
+        eType="#//VariabilityIterator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="i" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionActivityCasesNumber" eSuperTypes="#//ExpressionSegment ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+        eType="#//Activity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionPlaceTemplateSize" eSuperTypes="#//ExpressionSegment ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="place" lowerBound="1" eType="#//Place"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionIfThenElse" eSuperTypes="#//ExpressionSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionBoolean"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ifTrue" lowerBound="1"
+        eType="#//ExpressionSegment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ifFalse" eType="#//ExpressionSegment"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionLoop" eSuperTypes="#//ExpressionSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="begin" lowerBound="1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="end" lowerBound="1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="do" lowerBound="1" upperBound="-1"
+        eType="#//ExpressionSegment" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariabilityIterator" abstract="true"
+      interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThisContextIterator" eSuperTypes="#//VariabilityIterator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LoopIterator" eSuperTypes="#//VariabilityIterator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loop" lowerBound="1" eType="#//ExpressionLoop"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Marking" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingInteger" eSuperTypes="#//MarkingSimple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingExtended" abstract="true" eSuperTypes="#//Marking"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="VariableType">
+    <eLiterals name="short"/>
+    <eLiterals name="int" value="1"/>
+    <eLiterals name="long" value="2"/>
+    <eLiterals name="float" value="3"/>
+    <eLiterals name="double" value="4"/>
+    <eLiterals name="bool" value="5"/>
+    <eLiterals name="char" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GlobalVariable" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//VariableType"
+        defaultValueLiteral="int"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingVariableSimple" eSuperTypes="#//MarkingSimple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="#//GlobalVariable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exponential" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rate" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Normal" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mean" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variance" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Gamma" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alpha" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beta" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Binomial" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Deterministic" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lognormal" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mu" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alphaSquared" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Beta" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alpha1" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beta1" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NegativeBinomial" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="s" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Geometric" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Erlang" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="m" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beta" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Uniform" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lowerBound" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="upperBound" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HyperExponential" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rate0" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p0" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Weibull" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alpha" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beta" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Triangular" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="min" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="middle" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="max" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionalWeibull" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alpha" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beta" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HypoExponential" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rate0" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pareto" eSuperTypes="#//Distribution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lowerBound" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shape" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingSimple" abstract="true" eSuperTypes="#//Marking"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingString" eSuperTypes="#//MarkingExtended">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingVariableExtended" eSuperTypes="#//MarkingExtended">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="#//GlobalVariable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ExtendedPlaceType">
+    <eLiterals name="int" value="1"/>
+    <eLiterals name="short"/>
+    <eLiterals name="float" value="3"/>
+    <eLiterals name="double" value="4"/>
+    <eLiterals name="char" value="6"/>
+  </eClassifiers>
+</ecore:EPackage>

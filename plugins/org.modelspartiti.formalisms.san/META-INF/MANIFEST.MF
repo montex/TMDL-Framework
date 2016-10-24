@@ -10,6 +10,9 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: san,
  san.impl,
  san.util,
+ sant,
+ sant.impl,
+ sant.util,
  transform
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,

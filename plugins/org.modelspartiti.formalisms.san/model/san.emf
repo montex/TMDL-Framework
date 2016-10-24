@@ -203,7 +203,7 @@ class Pareto extends Distribution {
   val Expression[1] shape;
 }
 
-abstract class ExpressionSegment {
+abstract interface ExpressionSegment {
 }
 
 abstract class MarkingSimple extends Marking {

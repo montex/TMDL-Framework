@@ -21,4 +21,18 @@
             class="san.util.SANResourceFactoryImpl"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sant -->
+      <package
+            uri="http://www.modelspartiti.org/templates/san/sant"
+            class="sant.SANTPackage"
+            genModel="model/sant.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated sant -->
+      <parser
+            type="tsan"
+            class="sant.util.SANTResourceFactoryImpl"/>
+   </extension>
 </plugin>
