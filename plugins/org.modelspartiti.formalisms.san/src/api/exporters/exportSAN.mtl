@@ -269,7 +269,7 @@
 							</point>
 						</vector>
 					</class>
-						[/for]				
+						[/for]
 					[/for]
 					[for (g : OutputGate | net.gates->selectByType(OutputGate))]
 					<class id="Mobius.BaseClasses.BaseEdgeClass">
@@ -307,7 +307,7 @@
 							</point>
 						</vector>
 					</class>
-						[/for]				
+						[/for]
 					[/for]
 				</class>
 				<vector id="LocalGlobalNamesList">
@@ -341,9 +341,9 @@
 [/template]
 
 [comment]
-The queries below are mainly used to compute the graphical position of nodes. 
+The queries below are mainly used to compute the graphical position of nodes.
 The size of the panel is computed based on the square root of the total number of "nodes" elements,
-i.e., activities, gates, and places. A grid of a fixed dimension is used, and each of them is 
+i.e., activities, gates, and places. A grid of a fixed dimension is used, and each of them is
 placed in one spot of the grid.
 [/comment]
 
@@ -351,9 +351,9 @@ placed in one spot of the grid.
 [query private sqrt(d : Real) : Real = invoke('java.lang.Math', 'sqrt(double)', Sequence{d}) /]
 
 [comment]Selects SAN elements that should be treated as nodes in the graphical representation[/comment]
-[query private getNodes(net : SAN) : Sequence(NamedElement) = 
+[query private getNodes(net : SAN) : Sequence(NamedElement) =
 	net.places->asSequence()->union(net.gates->asSequence())->union(net.activities->asSequence()) /]
-[comment] Gets the index of a node among the set of nodes. 
+[comment] Gets the index of a node among the set of nodes.
 This is used to find the spot in which the node should be placed[/comment]
 [query private getIndex(net : SAN, e : OclAny) : Integer = getNodes(net)->indexOf(e) /]
 
@@ -366,7 +366,7 @@ This is used to find the spot in which the node should be placed[/comment]
 [comment]Get the position of a node, in terms of slot in the grid, and in terms of pixels[/comment]
 [query private getPosition(net : SAN, e : OclAny) : Sequence(Integer) =
 	Sequence{(getIndex(net, e)/canvasSize(net)).floor(), getIndex(net, e).mod(canvasSize(net)).floor()} /]
-[query private getPositionPixel(net : SAN, e : OclAny) : Sequence(Integer) = 
+[query private getPositionPixel(net : SAN, e : OclAny) : Sequence(Integer) =
 	getPosition(net, e)->collect(e | (e+1)*100)	/]
 
 [comment]
@@ -374,11 +374,11 @@ Get the position of an activity case in terms of pixels.
 This query is of great importance, as Mobius stores the connection between places/gates and cases only in
 terms of their graphical position. In the current version it is assumed a region of 11 pixels for each case.
 [/comment]
-[query private getCasePositionPixel (net : SAN, c : Case) : Sequence(Integer) = 
+[query private getCasePositionPixel (net : SAN, c : Case) : Sequence(Integer) =
 	let a : Activity = c.eContainer().oclAsType(Activity)
 	in
 		let act : Sequence(Integer) = getPositionPixel(net, a)
-		in Sequence{act->at(1), (act->at(2) - (a.cases->size()*11/2) + c.ID*11 + 11/2).round() } 
+		in Sequence{act->at(1), (act->at(2) - (a.cases->size()*11/2) + c.ID*11 + 11/2).round() }
 /]
 
 

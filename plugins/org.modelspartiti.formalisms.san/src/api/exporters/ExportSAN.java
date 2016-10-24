@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package transform;
+package api.exporters;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,7 +40,7 @@ public class ExportSAN extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/transform/exportSAN";
+    public static final String MODULE_FILE_NAME = "/api/exporters/exportSAN";
     
     /**
      * The name of the templates that are to be generated.

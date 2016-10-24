@@ -7,13 +7,15 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: san,
+Export-Package: api.exporters,
+ api.importers,
+ api.transformers,
+ san,
  san.impl,
  san.util,
  sant,
  sant.impl,
- sant.util,
- transform
+ sant.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
