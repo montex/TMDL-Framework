@@ -1,0 +1,441 @@
+-----------------------------------------------------------------------
+-- Copyright (C) 2016                                                --
+-- University of Firenze, Italy                                      --
+--                                                                   --
+-- All rights reserved. This program and the accompanying materials  --
+-- are made available under the terms of the Eclipse Public License  --
+-- v1.0 which accompanies this distribution, and is available at     --
+-- http://www.eclipse.org/legal/epl-v10.html                         --
+--                                                                   --
+-- Contributors:                                                     --
+-- Leonardo Montecchi 	lmontecchi@unifi.it                          --
+-----------------------------------------------------------------------
+
+-- @nsURI SAN=http://www.modelspartiti.org/templates/san/san
+-- @nsURI SANT=http://www.modelspartiti.org/templates/san/sant
+-- @path TMDL=/org.modelspartiti.infrastructure/model/tmdl.ecore
+
+module templatize;
+create core : TMDL, template : SANT from concrete : SAN;
+
+--The SAN/SANT element
+rule ModelRoot {
+	from
+		model : SAN!SAN
+	to
+		template : SANT!SANT (
+			name <- model.name,
+			globalVariables <- model.globalVariables,
+			places <- model.places,
+			activities <- model.activities,
+			gates <- model.gates,
+			initialization <- model.initialization,
+			arcs <- model.arcs,
+			parameters <- Sequence{}
+		)
+}
+
+--Global Variables
+rule GlobalVariables {
+	from
+		v : SAN!GlobalVariable
+	to
+		tv : SANT!GlobalVariable (
+			name <- v.name,
+			type <- v.type
+		)
+}
+
+--Places
+abstract rule Places {
+	from
+		p : SAN!Place
+	to
+		tp : SANT!Place (
+			name <- p.name,
+			multiplicity <- mult
+		),
+		mult : TMDL!MultiplicityValue ( value <- 1 )
+}
+
+rule NormalPlaces extends Places {
+	from
+		p : SAN!NormalPlace
+	to
+		tp : SANT!NormalPlace (
+			marking <- p.marking
+		)
+}
+
+rule ExtendedPlaces extends Places {
+	from
+		p : SAN!ExtendedPlace
+	to
+		tp : SANT!ExtendedPlace (
+			marking <- p.marking
+		)
+}
+
+--Initial Marking
+abstract rule Marking {
+	from
+		m : SAN!Marking
+	to
+		tm : SANT!Marking
+}
+
+rule MarkingInteger extends Marking {
+	from
+		m : SAN!MarkingInteger
+	to
+		tm : SANT!MarkingInteger (
+			value <- exp
+		),
+		exp : TMDL!TemplateExpressionIntegerLiteral (
+			value <- m.value
+		)
+}
+
+rule MarkingVariableSimple extends Marking {
+	from
+		m : SAN!MarkingVariableSimple
+	to
+		tm : SANT!MarkingVariableSimple (
+			variable <- m.variable
+		)
+}
+
+rule MarkingString extends Marking {
+	from
+		m : SAN!MarkingString
+	to
+		tm : SANT!MarkingString (
+			value <- m.value
+		)
+}
+
+rule MarkingVariableExtended extends Marking {
+	from
+		m : SAN!MarkingVariableExtended
+	to
+		tm : SANT!MarkingVariableExtended (
+			variable <- m.variable
+		)
+}
+
+--Activities
+abstract rule Activity {
+	from
+		a : SAN!Activity
+	to
+		ta : SANT!Activity (
+			name <- a.name,
+			cases <- cspec
+		),
+		cspec : SANT!CasesSpecificationCases (
+			cases <- a.cases
+		)
+}
+
+rule ActivityInstantaneous extends Activity {
+	from
+		a : SAN!InstantaneousActivity
+	to
+		ta : SANT!InstantaneousActivity
+}
+
+rule ActivityTimed extends Activity {
+	from
+		a : SAN!TimedActivity
+	to
+		ta : SANT!TimedActivity (
+			timeDistribution <- a.timeDistribution,
+			activation <- a.activation,
+			reactivation <- a.reactivation
+		)
+}
+
+rule Case {
+	from
+		c : SAN!Case
+	to
+		tc : SANT!Case (
+			ID <- idexp,
+			p <- c.p
+		),
+		idexp : TMDL!TemplateExpressionIntegerLiteral (
+			value <- c.ID
+		)
+}
+
+--Arcs
+rule InputArc {
+	from
+		ia : SAN!InputArc
+	to
+		tia : SANT!InputArc (
+			source <- ia.source,
+			target <- ia.target
+		)
+}
+
+rule OutputArc {
+	from
+		oa : SAN!OutputArc
+	to
+		toa : SANT!OutputArc (
+			source <- oa.source,
+			target <- oa.target
+		)
+
+}
+
+--Gates
+rule InputGate {
+	from
+		ig : SAN!InputGate
+	to
+		tig : SANT!InputGate (
+			name <- ig.name,
+			activity <- ig.activity,
+			places <- ig.places,
+			predicate <- ig.predicate,
+			function <- ig.function
+		)
+		
+}
+
+rule OutputGate {
+	from
+		og : SAN!OutputGate
+	to
+		tog : SANT!OutputGateConcrete (
+			name <- og.name,
+			places <- og.places,
+			function <- og.function
+		)
+}
+
+--Expressions
+rule Expression {
+	from
+		e : SAN!Expression
+	to
+		te : SANT!Expression (
+			segments <- e.segments
+		)
+}
+
+abstract rule ExpressionSegment {
+	from
+		es : SAN!ExpressionSegment
+	to
+		tes : SANT!ExpressionSegment
+}
+
+rule ExpressionText extends ExpressionSegment {
+	from
+		es : SAN!ExpressionText
+	to
+		tes : SANT!ExpressionText (
+			text <- es.text
+		)
+}
+
+rule ExpressionMarking extends ExpressionSegment  {
+	from
+		es : SAN!ExpressionMarking
+	to
+		tes : SANT!ExpressionMarking (
+			place <- es.place,
+			index <- i
+		),
+		i : TMDL!TemplateExpressionIntegerLiteral (
+			value <- 1
+		)
+}
+
+rule ExpressionVariable extends ExpressionSegment {
+	from
+		es : SAN!ExpressionVariable
+	to
+		tes : SANT!ExpressionVariable (
+			variable <- es.variable
+		)
+}
+
+--Distributions
+abstract rule Distribution {
+	from
+		d : SAN!Distribution
+	to
+		td : SANT!Distribution
+}
+
+rule Exponential extends Distribution {
+	from
+		d : SAN!Exponential
+	to
+		td : SANT!Exponential (
+			rate <- d.rate
+		)
+}
+
+rule Normal extends Distribution {
+	from
+		d : SAN!Normal
+	to
+		td : SANT!Normal (
+			mean <- d.mean,
+			variance <- d.variance
+		)
+}
+
+rule Gamma extends Distribution {
+	from
+		d : SAN!Gamma
+	to
+		td : SANT!Gamma (
+			alpha <- d.alpha,
+			beta <- d.beta
+		)
+}
+
+rule Binomial extends Distribution {
+	from
+		d : SAN!Binomial
+	to
+		td : SANT!Binomial (
+			t <- d.t,
+			p <- d.p
+		)
+}
+
+rule Deterministic extends Distribution {
+	from
+		d : SAN!Deterministic
+	to
+		td : SANT!Deterministic (
+			value <- d.value
+		)
+}
+
+rule Lognormal extends Distribution {
+	from
+		d : SAN!Lognormal
+	to
+		td : SANT!Lognormal (
+			mu <- d.mu,
+			alphaSquared <- d.alphaSquared
+		)
+}
+
+rule Beta extends Distribution {
+	from
+		d : SAN!Beta
+	to
+		td : SANT!Beta (
+			alpha1 <- d.alpha1,
+			beta1 <- d.beta1
+		)
+}
+
+rule NegativeBinomial extends Distribution {
+	from
+		d : SAN!NegativeBinomial
+	to
+		td : SANT!NegativeBinomial (
+			s <- d.s,
+			p <- d.p
+		)
+}
+
+rule Geometric extends Distribution {
+	from
+		d : SAN!Geometric
+	to
+		td : SANT!Geometric (
+			p <- d.p
+		)
+}
+
+rule Erlang extends Distribution {
+	from
+		d : SAN!Erlang
+	to
+		td : SANT!Erlang (
+			m <- d.m,
+			beta <- d.beta
+		)
+}
+
+rule Uniform extends Distribution {
+	from
+		d : SAN!Uniform
+	to
+		td : SANT!Uniform (
+			lowerBound <- d.lowerBound,
+			upperBound <- d.upperBound
+		)
+}
+
+rule HyperExponential extends Distribution {
+	from
+		d : SAN!HyperExponential
+	to
+		td : SANT!HyperExponential (
+			rate0 <- d.rate0,
+			p0 <- d.p0
+		)
+}
+
+rule Weibull extends Distribution {
+	from
+		d : SAN!Weibull
+	to
+		td : SANT!Weibull (
+			alpha <- d.alpha,
+			beta <- d.beta
+		)
+}
+
+rule Triangular extends Distribution {
+	from
+		d : SAN!Triangular
+	to
+		td : SANT!Triangular (
+			min <- d.min,
+			middle <- d.middle,
+			max <- d.max
+		)
+}
+
+rule ConditionalWeibull extends Distribution {
+	from
+		d : SAN!ConditionalWeibull
+	to
+		td : SANT!ConditionalWeibull (
+			alpha <- d.alpha,
+			beta <- d.beta,
+			t <- d.t
+		)
+}
+
+rule HypoExponential extends Distribution {
+	from
+		d : SAN!HypoExponential
+	to
+		td : SANT!HypoExponential (
+			rate0 <- d.rate0
+		)
+}
+
+rule Pareto extends Distribution {
+	from
+		d : SAN!Pareto
+	to
+		td : SANT!Pareto (
+			lowerBound <- d.lowerBound,
+			shape <- d.shape
+		)
+}
