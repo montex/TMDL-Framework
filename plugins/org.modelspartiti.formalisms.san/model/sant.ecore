@@ -2,6 +2,16 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sant" nsURI="http://www.modelspartiti.org/templates/san/sant"
     nsPrefix="sant">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="core" value="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core"/>
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+    <details key="exp_0" value="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="SANT" eSuperTypes="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/TemplateModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
@@ -158,10 +168,22 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="i" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpressionActivityCasesNumber" eSuperTypes="#//ExpressionSegment ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger">
+    <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="&#xA;&#x9;&#x9;&#x9;let c = activity.cases&#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;if c.oclIsTypeOf(CasesSpecificationCases) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;c.oclAsType(CasesSpecificationCases).cases->size()&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if c.oclIsTypeOf(CasesSpecificationProbabilityArray) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;c.oclAsType(CasesSpecificationProbabilityArray).pValues->size()&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;c.oclAsType(CasesSpecificationParametric).pExpression.evaluate(assignments)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;&#x9;endif"/>
+      </eAnnotations>
+      <eParameters name="assignments" ordered="false" upperBound="-1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Assignment"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
         eType="#//Activity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpressionPlaceTemplateSize" eSuperTypes="#//ExpressionSegment ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger">
+    <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="&#xA;&#x9;&#x9;&#x9;let mult = place.multiplicity &#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;if mult.oclIsTypeOf(core::MultiplicityValue) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;mult.oclAsType(core::MultiplicityValue).value.floor()&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if mult.oclIsTypeOf(core::MultiplicityArray) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;mult.oclAsType(core::MultiplicityArray).values->size()&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;let par = mult.oclAsType(core::MultiplicityParametric).parameter&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if par.oclIsTypeOf(core::ParameterSimple) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;assignments->select(a | a.oclIsTypeOf(core::AssignmentSimple))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->collect(as | as.oclAsType(core::AssignmentSimple))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->select(i | i.parameter = par)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->asSequence()->first().value&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;assignments->select(a | a.oclIsTypeOf(core::AssignmentArray))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->collect(as | as.oclAsType(core::AssignmentArray))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->select(i | i.parameter = par)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->asSequence()->first().values->size()&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;&#x9;endif"/>
+      </eAnnotations>
+      <eParameters name="assignments" ordered="false" upperBound="-1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Assignment"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="place" lowerBound="1" eType="#//Place"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpressionIfThenElse" eSuperTypes="#//ExpressionSegment">

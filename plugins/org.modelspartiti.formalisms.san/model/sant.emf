@@ -1,3 +1,5 @@
+@"http://www.eclipse.org/OCL/Import"(core="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core", ecore="http://www.eclipse.org/emf/2002/Ecore", exp_0="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions")
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
 @namespace(uri="http://www.modelspartiti.org/templates/san/sant", prefix="sant")
 package sant;
 
@@ -89,7 +91,6 @@ class OutputGateTemplate extends OutputGate {
   ref Activity[1] activity;
 }
 
-
 @ExtendedMetaData(kind="elementOnly")
 class InputGate extends Gate {
   val Expression[1] predicate;
@@ -143,17 +144,57 @@ class ExpressionIterationElement extends ExpressionSegment {
 }
 
 class ExpressionActivityCasesNumber extends ExpressionSegment, tmdl.expressions.TemplateExpressionInteger {
+
+  @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="
+			let c = activity.cases
+			in
+				if c.oclIsTypeOf(CasesSpecificationCases) then
+					c.oclAsType(CasesSpecificationCases).cases->size()
+				else
+					if c.oclIsTypeOf(CasesSpecificationProbabilityArray) then
+						c.oclAsType(CasesSpecificationProbabilityArray).pValues->size()
+					else
+						c.oclAsType(CasesSpecificationParametric).pExpression.evaluate(assignments)
+					endif
+				endif")
+  op int[1] evaluate(!ordered tmdl.core.Assignment[*] assignments);
   ref Activity[1] activity;
 }
 
 class ExpressionPlaceTemplateSize extends ExpressionSegment, tmdl.expressions.TemplateExpressionInteger {
+
+  @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="
+			let mult = place.multiplicity 
+			in
+				if mult.oclIsTypeOf(core::MultiplicityValue) then
+					mult.oclAsType(core::MultiplicityValue).value.floor()
+				else
+					if mult.oclIsTypeOf(core::MultiplicityArray) then
+						mult.oclAsType(core::MultiplicityArray).values->size()
+					else
+						let par = mult.oclAsType(core::MultiplicityParametric).parameter
+						in
+							if par.oclIsTypeOf(core::ParameterSimple) then
+								assignments->select(a | a.oclIsTypeOf(core::AssignmentSimple))
+									->collect(as | as.oclAsType(core::AssignmentSimple))
+									->select(i | i.parameter = par)
+									->asSequence()->first().value
+							else
+								assignments->select(a | a.oclIsTypeOf(core::AssignmentArray))
+									->collect(as | as.oclAsType(core::AssignmentArray))
+									->select(i | i.parameter = par)
+									->asSequence()->first().values->size()
+							endif
+					endif
+				endif")
+  op int[1] evaluate(!ordered tmdl.core.Assignment[*] assignments);
   ref Place[1] place;
 }
 
 class ExpressionIfThenElse extends ExpressionSegment {
   val tmdl.expressions.TemplateExpressionBoolean[1] condition;
   val ExpressionSegment[1] ifTrue;
-  val ExpressionSegment[0..1] ifFalse;
+  val ExpressionSegment ifFalse;
 }
 
 class ExpressionLoop extends ExpressionSegment {

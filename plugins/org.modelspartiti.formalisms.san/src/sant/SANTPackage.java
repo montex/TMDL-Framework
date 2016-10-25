@@ -26,6 +26,8 @@ import tmdl.core.CorePackage;
  * <!-- end-user-doc -->
  * @see sant.SANTFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/OCL/Import core='../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core' ecore='http://www.eclipse.org/emf/2002/Ecore' exp_0='../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface SANTPackage extends EPackage {
@@ -1595,13 +1597,22 @@ public interface SANTPackage extends EPackage {
 	int EXPRESSION_ACTIVITY_CASES_NUMBER_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE__ELIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Expression Activity Cases Number</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_ACTIVITY_CASES_NUMBER_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 0;
+	int EXPRESSION_ACTIVITY_CASES_NUMBER_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link sant.impl.ExpressionPlaceTemplateSizeImpl <em>Expression Place Template Size</em>}' class.
@@ -1632,13 +1643,22 @@ public interface SANTPackage extends EPackage {
 	int EXPRESSION_PLACE_TEMPLATE_SIZE_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Expression Place Template Size</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_PLACE_TEMPLATE_SIZE_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 0;
+	int EXPRESSION_PLACE_TEMPLATE_SIZE_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link sant.impl.ExpressionIfThenElseImpl <em>Expression If Then Else</em>}' class.
@@ -3698,6 +3718,16 @@ public interface SANTPackage extends EPackage {
 	EReference getExpressionActivityCasesNumber_Activity();
 
 	/**
+	 * Returns the meta object for the '{@link sant.ExpressionActivityCasesNumber#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see sant.ExpressionActivityCasesNumber#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getExpressionActivityCasesNumber__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link sant.ExpressionPlaceTemplateSize <em>Expression Place Template Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3717,6 +3747,16 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getExpressionPlaceTemplateSize_Place();
+
+	/**
+	 * Returns the meta object for the '{@link sant.ExpressionPlaceTemplateSize#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see sant.ExpressionPlaceTemplateSize#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getExpressionPlaceTemplateSize__Evaluate__EList();
 
 	/**
 	 * Returns the meta object for class '{@link sant.ExpressionIfThenElse <em>Expression If Then Else</em>}'.
@@ -5201,6 +5241,14 @@ public interface SANTPackage extends EPackage {
 		EReference EXPRESSION_ACTIVITY_CASES_NUMBER__ACTIVITY = eINSTANCE.getExpressionActivityCasesNumber_Activity();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE__ELIST = eINSTANCE.getExpressionActivityCasesNumber__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link sant.impl.ExpressionPlaceTemplateSizeImpl <em>Expression Place Template Size</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5217,6 +5265,14 @@ public interface SANTPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EXPRESSION_PLACE_TEMPLATE_SIZE__PLACE = eINSTANCE.getExpressionPlaceTemplateSize_Place();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST = eINSTANCE.getExpressionPlaceTemplateSize__Evaluate__EList();
 
 		/**
 		 * The meta object literal for the '{@link sant.impl.ExpressionIfThenElseImpl <em>Expression If Then Else</em>}' class.

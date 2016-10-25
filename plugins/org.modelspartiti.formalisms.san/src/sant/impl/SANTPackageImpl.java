@@ -1263,6 +1263,15 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getExpressionActivityCasesNumber__Evaluate__EList() {
+		return expressionActivityCasesNumberEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getExpressionPlaceTemplateSize() {
 		return expressionPlaceTemplateSizeEClass;
 	}
@@ -1274,6 +1283,15 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 */
 	public EReference getExpressionPlaceTemplateSize_Place() {
 		return (EReference)expressionPlaceTemplateSizeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getExpressionPlaceTemplateSize__Evaluate__EList() {
+		return expressionPlaceTemplateSizeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2099,9 +2117,11 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 
 		expressionActivityCasesNumberEClass = createEClass(EXPRESSION_ACTIVITY_CASES_NUMBER);
 		createEReference(expressionActivityCasesNumberEClass, EXPRESSION_ACTIVITY_CASES_NUMBER__ACTIVITY);
+		createEOperation(expressionActivityCasesNumberEClass, EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE__ELIST);
 
 		expressionPlaceTemplateSizeEClass = createEClass(EXPRESSION_PLACE_TEMPLATE_SIZE);
 		createEReference(expressionPlaceTemplateSizeEClass, EXPRESSION_PLACE_TEMPLATE_SIZE__PLACE);
+		createEOperation(expressionPlaceTemplateSizeEClass, EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST);
 
 		expressionIfThenElseEClass = createEClass(EXPRESSION_IF_THEN_ELSE);
 		createEReference(expressionIfThenElseEClass, EXPRESSION_IF_THEN_ELSE__CONDITION);
@@ -2407,8 +2427,14 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		initEClass(expressionActivityCasesNumberEClass, ExpressionActivityCasesNumber.class, "ExpressionActivityCasesNumber", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExpressionActivityCasesNumber_Activity(), this.getActivity(), null, "activity", null, 1, 1, ExpressionActivityCasesNumber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		EOperation op = initEOperation(getExpressionActivityCasesNumber__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(expressionPlaceTemplateSizeEClass, ExpressionPlaceTemplateSize.class, "ExpressionPlaceTemplateSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExpressionPlaceTemplateSize_Place(), this.getPlace(), null, "place", null, 1, 1, ExpressionPlaceTemplateSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getExpressionPlaceTemplateSize__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(expressionIfThenElseEClass, ExpressionIfThenElse.class, "ExpressionIfThenElse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExpressionIfThenElse_Condition(), theExpressionsPackage.getTemplateExpressionBoolean(), null, "condition", null, 1, 1, ExpressionIfThenElse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2538,8 +2564,50 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		createResource(eNS_URI);
 
 		// Create annotations
+		// http://www.eclipse.org/OCL/Import
+		createImportAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
 		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
 		createExtendedMetaDataAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/OCL/Import</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createImportAnnotations() {
+		String source = "http://www.eclipse.org/OCL/Import";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "core", "../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core",
+			 "ecore", "http://www.eclipse.org/emf/2002/Ecore",
+			 "exp_0", "../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });
 	}
 
 	/**
@@ -2584,6 +2652,28 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		   source, 
 		   new String[] {
 			 "kind", "element"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (getExpressionActivityCasesNumber__Evaluate__EList(), 
+		   source, 
+		   new String[] {
+			 "body", "\n\t\t\tlet c = activity.cases\n\t\t\tin\n\t\t\t\tif c.oclIsTypeOf(CasesSpecificationCases) then\n\t\t\t\t\tc.oclAsType(CasesSpecificationCases).cases->size()\n\t\t\t\telse\n\t\t\t\t\tif c.oclIsTypeOf(CasesSpecificationProbabilityArray) then\n\t\t\t\t\t\tc.oclAsType(CasesSpecificationProbabilityArray).pValues->size()\n\t\t\t\t\telse\n\t\t\t\t\t\tc.oclAsType(CasesSpecificationParametric).pExpression.evaluate(assignments)\n\t\t\t\t\tendif\n\t\t\t\tendif"
+		   });	
+		addAnnotation
+		  (getExpressionPlaceTemplateSize__Evaluate__EList(), 
+		   source, 
+		   new String[] {
+			 "body", "\n\t\t\tlet mult = place.multiplicity \n\t\t\tin\n\t\t\t\tif mult.oclIsTypeOf(core::MultiplicityValue) then\n\t\t\t\t\tmult.oclAsType(core::MultiplicityValue).value.floor()\n\t\t\t\telse\n\t\t\t\t\tif mult.oclIsTypeOf(core::MultiplicityArray) then\n\t\t\t\t\t\tmult.oclAsType(core::MultiplicityArray).values->size()\n\t\t\t\t\telse\n\t\t\t\t\t\tlet par = mult.oclAsType(core::MultiplicityParametric).parameter\n\t\t\t\t\t\tin\n\t\t\t\t\t\t\tif par.oclIsTypeOf(core::ParameterSimple) then\n\t\t\t\t\t\t\t\tassignments->select(a | a.oclIsTypeOf(core::AssignmentSimple))\n\t\t\t\t\t\t\t\t\t->collect(as | as.oclAsType(core::AssignmentSimple))\n\t\t\t\t\t\t\t\t\t->select(i | i.parameter = par)\n\t\t\t\t\t\t\t\t\t->asSequence()->first().value\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\tassignments->select(a | a.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t\t\t\t->collect(as | as.oclAsType(core::AssignmentArray))\n\t\t\t\t\t\t\t\t\t->select(i | i.parameter = par)\n\t\t\t\t\t\t\t\t\t->asSequence()->first().values->size()\n\t\t\t\t\t\t\tendif\n\t\t\t\t\tendif\n\t\t\t\tendif"
 		   });
 	}
 

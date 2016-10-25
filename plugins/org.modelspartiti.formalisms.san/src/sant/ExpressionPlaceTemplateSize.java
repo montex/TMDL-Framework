@@ -2,6 +2,8 @@
  */
 package sant;
 
+import org.eclipse.emf.common.util.EList;
+import tmdl.core.Assignment;
 import tmdl.expressions.TemplateExpressionInteger;
 
 /**
@@ -46,5 +48,14 @@ public interface ExpressionPlaceTemplateSize extends ExpressionSegment, Template
 	 * @generated
 	 */
 	void setPlace(Place value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\tlet mult = place.multiplicity \n\t\t\tin\n\t\t\t\tif mult.oclIsTypeOf(core::MultiplicityValue) then\n\t\t\t\t\tmult.oclAsType(core::MultiplicityValue).value.floor()\n\t\t\t\telse\n\t\t\t\t\tif mult.oclIsTypeOf(core::MultiplicityArray) then\n\t\t\t\t\t\tmult.oclAsType(core::MultiplicityArray).values->size()\n\t\t\t\t\telse\n\t\t\t\t\t\tlet par = mult.oclAsType(core::MultiplicityParametric).parameter\n\t\t\t\t\t\tin\n\t\t\t\t\t\t\tif par.oclIsTypeOf(core::ParameterSimple) then\n\t\t\t\t\t\t\t\tassignments->select(a | a.oclIsTypeOf(core::AssignmentSimple))\n\t\t\t\t\t\t\t\t\t->collect(as | as.oclAsType(core::AssignmentSimple))\n\t\t\t\t\t\t\t\t\t->select(i | i.parameter = par)\n\t\t\t\t\t\t\t\t\t->asSequence()->first().value\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\tassignments->select(a | a.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t\t\t\t->collect(as | as.oclAsType(core::AssignmentArray))\n\t\t\t\t\t\t\t\t\t->select(i | i.parameter = par)\n\t\t\t\t\t\t\t\t\t->asSequence()->first().values->size()\n\t\t\t\t\t\t\tendif\n\t\t\t\t\tendif\n\t\t\t\tendif'"
+	 * @generated
+	 */
+	int evaluate(EList<Assignment> assignments);
 
 } // ExpressionPlaceTemplateSize

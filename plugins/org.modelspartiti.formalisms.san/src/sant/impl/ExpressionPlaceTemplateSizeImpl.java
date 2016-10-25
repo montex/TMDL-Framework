@@ -2,9 +2,14 @@
  */
 package sant.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -13,6 +18,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import sant.ExpressionPlaceTemplateSize;
 import sant.Place;
 import sant.SANTPackage;
+import tmdl.core.Assignment;
+import tmdl.expressions.ExpressionsPackage;
+import tmdl.expressions.TemplateExpression;
+import tmdl.expressions.TemplateExpressionInteger;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,6 +105,30 @@ public class ExpressionPlaceTemplateSizeImpl extends MinimalEObjectImpl.Containe
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate EVALUATE_ELIST__EINVOCATION_DELEGATE = ((EOperation.Internal)SANTPackage.Literals.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int evaluate(EList<Assignment> assignments) {
+		try {
+			return (Integer)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -152,6 +185,42 @@ public class ExpressionPlaceTemplateSizeImpl extends MinimalEObjectImpl.Containe
 				return place != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == TemplateExpression.class) {
+			switch (baseOperationID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == TemplateExpressionInteger.class) {
+			switch (baseOperationID) {
+				case ExpressionsPackage.TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST: return SANTPackage.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case SANTPackage.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST:
+				return evaluate((EList<Assignment>)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ExpressionPlaceTemplateSizeImpl
