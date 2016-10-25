@@ -20,7 +20,7 @@ public interface TemplateExpressionBoolean extends TemplateExpression {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" assignmentsMany="true"
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
 	 * @generated
 	 */
 	boolean evaluate(EList<Assignment> assignments);

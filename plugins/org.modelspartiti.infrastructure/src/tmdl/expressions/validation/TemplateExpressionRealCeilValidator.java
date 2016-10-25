@@ -4,6 +4,7 @@
  */
 package tmdl.expressions.validation;
 
+import tmdl.expressions.TemplateExpressionReal;
 
 /**
  * A sample validator interface for {@link tmdl.expressions.TemplateExpressionRealCeil}.
@@ -14,4 +15,5 @@ package tmdl.expressions.validation;
 public interface TemplateExpressionRealCeilValidator {
 	boolean validate();
 
+	boolean validateExp(TemplateExpressionReal value);
 }

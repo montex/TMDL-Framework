@@ -2,6 +2,9 @@
  */
 package tmdl.expressions;
 
+import org.eclipse.emf.common.util.EList;
+
+import tmdl.core.Assignment;
 import tmdl.core.ParameterArray;
 
 /**
@@ -61,7 +64,7 @@ public interface TemplateExpressionArrayAggregate extends TemplateExpressionReal
 	 * @see tmdl.expressions.ArrayAggregateKind
 	 * @see #setFunction(ArrayAggregateKind)
 	 * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionArrayAggregate_Function()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	ArrayAggregateKind getFunction();
@@ -76,5 +79,14 @@ public interface TemplateExpressionArrayAggregate extends TemplateExpressionReal
 	 * @generated
 	 */
 	void setFunction(ArrayAggregateKind value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\t\tlet array = assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\tin\n\t\t\t\t\tif function = ArrayAggregateKind::sum then array->sum()\n\t\t\t\t\telse if function = ArrayAggregateKind::min then array->min()\n\t\t\t\t\telse if function = ArrayAggregateKind::max then array->max()\n\t\t\t\t\telse\n\t\t\t\t\t\tarray->sum()/array->size()\n\t\t\t\t\tendif endif endif'"
+	 * @generated
+	 */
+	double evaluate(EList<Assignment> assignments);
 
 } // TemplateExpressionArrayAggregate

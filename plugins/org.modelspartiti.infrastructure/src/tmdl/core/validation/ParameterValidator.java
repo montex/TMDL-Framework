@@ -15,5 +15,7 @@ import org.eclipse.emf.common.util.EList;
 public interface ParameterValidator {
 	boolean validate();
 
+	boolean validateName(String value);
+
 	boolean validateName(EList<String> value);
 }

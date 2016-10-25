@@ -120,8 +120,8 @@ public class ExpressionsAdapterFactory extends AdapterFactoryImpl {
 				return createTemplateExpressionArrayAggregateAdapter();
 			}
 			@Override
-			public Adapter caseTemplateExpressionRealBinary(TemplateExpressionRealBinary object) {
-				return createTemplateExpressionRealBinaryAdapter();
+			public Adapter caseTemplateExpressionRealBinaryOperation(TemplateExpressionRealBinaryOperation object) {
+				return createTemplateExpressionRealBinaryOperationAdapter();
 			}
 			@Override
 			public Adapter caseTemplateExpressionRealSum(TemplateExpressionRealSum object) {
@@ -164,8 +164,8 @@ public class ExpressionsAdapterFactory extends AdapterFactoryImpl {
 				return createTemplateExpressionRealIfThenElseAdapter();
 			}
 			@Override
-			public Adapter caseTemplateExpressionBooleanUnary(TemplateExpressionBooleanUnary object) {
-				return createTemplateExpressionBooleanUnaryAdapter();
+			public Adapter caseTemplateExpressionBooleanUnaryOperation(TemplateExpressionBooleanUnaryOperation object) {
+				return createTemplateExpressionBooleanUnaryOperationAdapter();
 			}
 			@Override
 			public Adapter caseTemplateExpressionBooleanNot(TemplateExpressionBooleanNot object) {
@@ -176,8 +176,8 @@ public class ExpressionsAdapterFactory extends AdapterFactoryImpl {
 				return createTemplateExpressionBooleanToIntegerAdapter();
 			}
 			@Override
-			public Adapter caseTemplateExpressionBooleanBinary(TemplateExpressionBooleanBinary object) {
-				return createTemplateExpressionBooleanBinaryAdapter();
+			public Adapter caseTemplateExpressionBooleanBinaryOperation(TemplateExpressionBooleanBinaryOperation object) {
+				return createTemplateExpressionBooleanBinaryOperationAdapter();
 			}
 			@Override
 			public Adapter caseTemplateExpressionBooleanAnd(TemplateExpressionBooleanAnd object) {
@@ -390,16 +390,16 @@ public class ExpressionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link tmdl.expressions.TemplateExpressionRealBinary <em>Template Expression Real Binary</em>}'.
+	 * Creates a new adapter for an object of class '{@link tmdl.expressions.TemplateExpressionRealBinaryOperation <em>Template Expression Real Binary Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see tmdl.expressions.TemplateExpressionRealBinary
+	 * @see tmdl.expressions.TemplateExpressionRealBinaryOperation
 	 * @generated
 	 */
-	public Adapter createTemplateExpressionRealBinaryAdapter() {
+	public Adapter createTemplateExpressionRealBinaryOperationAdapter() {
 		return null;
 	}
 
@@ -544,16 +544,16 @@ public class ExpressionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link tmdl.expressions.TemplateExpressionBooleanUnary <em>Template Expression Boolean Unary</em>}'.
+	 * Creates a new adapter for an object of class '{@link tmdl.expressions.TemplateExpressionBooleanUnaryOperation <em>Template Expression Boolean Unary Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see tmdl.expressions.TemplateExpressionBooleanUnary
+	 * @see tmdl.expressions.TemplateExpressionBooleanUnaryOperation
 	 * @generated
 	 */
-	public Adapter createTemplateExpressionBooleanUnaryAdapter() {
+	public Adapter createTemplateExpressionBooleanUnaryOperationAdapter() {
 		return null;
 	}
 
@@ -586,16 +586,16 @@ public class ExpressionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link tmdl.expressions.TemplateExpressionBooleanBinary <em>Template Expression Boolean Binary</em>}'.
+	 * Creates a new adapter for an object of class '{@link tmdl.expressions.TemplateExpressionBooleanBinaryOperation <em>Template Expression Boolean Binary Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see tmdl.expressions.TemplateExpressionBooleanBinary
+	 * @see tmdl.expressions.TemplateExpressionBooleanBinaryOperation
 	 * @generated
 	 */
-	public Adapter createTemplateExpressionBooleanBinaryAdapter() {
+	public Adapter createTemplateExpressionBooleanBinaryOperationAdapter() {
 		return null;
 	}
 

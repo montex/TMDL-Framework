@@ -20,7 +20,7 @@ public interface TemplateExpressionInteger extends TemplateExpression {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" assignmentsMany="true"
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
 	 * @generated
 	 */
 	int evaluate(EList<Assignment> assignments);

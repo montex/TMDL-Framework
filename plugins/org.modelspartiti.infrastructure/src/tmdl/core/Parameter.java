@@ -2,8 +2,6 @@
  */
 package tmdl.core;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,19 +22,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Parameter extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute list.
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
 	 * @see tmdl.core.CorePackage#getParameter_Name()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<String> getName();
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link tmdl.core.Parameter#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Parameter

@@ -2,6 +2,9 @@
  */
 package tmdl.expressions;
 
+import org.eclipse.emf.common.util.EList;
+
+import tmdl.core.Assignment;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,5 +48,14 @@ public interface TemplateExpressionRealLiteral extends TemplateExpressionReal {
 	 * @generated
 	 */
 	void setValue(double value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='value'"
+	 * @generated
+	 */
+	double evaluate(EList<Assignment> assignments);
 
 } // TemplateExpressionRealLiteral

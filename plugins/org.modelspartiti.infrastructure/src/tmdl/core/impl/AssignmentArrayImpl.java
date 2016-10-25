@@ -27,7 +27,7 @@ import tmdl.core.ParameterArray;
  * The following features are implemented:
  * <ul>
  *   <li>{@link tmdl.core.impl.AssignmentArrayImpl#getParameter <em>Parameter</em>}</li>
- *   <li>{@link tmdl.core.impl.AssignmentArrayImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link tmdl.core.impl.AssignmentArrayImpl#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,14 +45,14 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 	protected ParameterArray parameter;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute list.
+	 * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getValues()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Double> value;
+	protected EList<Double> values;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,11 +116,11 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Double> getValue() {
-		if (value == null) {
-			value = new EDataTypeUniqueEList<Double>(Double.class, this, CorePackage.ASSIGNMENT_ARRAY__VALUE);
+	public EList<Double> getValues() {
+		if (values == null) {
+			values = new EDataTypeUniqueEList<Double>(Double.class, this, CorePackage.ASSIGNMENT_ARRAY__VALUES);
 		}
-		return value;
+		return values;
 	}
 
 	/**
@@ -134,8 +134,8 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 			case CorePackage.ASSIGNMENT_ARRAY__PARAMETER:
 				if (resolve) return getParameter();
 				return basicGetParameter();
-			case CorePackage.ASSIGNMENT_ARRAY__VALUE:
-				return getValue();
+			case CorePackage.ASSIGNMENT_ARRAY__VALUES:
+				return getValues();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -152,9 +152,9 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 			case CorePackage.ASSIGNMENT_ARRAY__PARAMETER:
 				setParameter((ParameterArray)newValue);
 				return;
-			case CorePackage.ASSIGNMENT_ARRAY__VALUE:
-				getValue().clear();
-				getValue().addAll((Collection<? extends Double>)newValue);
+			case CorePackage.ASSIGNMENT_ARRAY__VALUES:
+				getValues().clear();
+				getValues().addAll((Collection<? extends Double>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -171,8 +171,8 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 			case CorePackage.ASSIGNMENT_ARRAY__PARAMETER:
 				setParameter((ParameterArray)null);
 				return;
-			case CorePackage.ASSIGNMENT_ARRAY__VALUE:
-				getValue().clear();
+			case CorePackage.ASSIGNMENT_ARRAY__VALUES:
+				getValues().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -188,8 +188,8 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 		switch (featureID) {
 			case CorePackage.ASSIGNMENT_ARRAY__PARAMETER:
 				return parameter != null;
-			case CorePackage.ASSIGNMENT_ARRAY__VALUE:
-				return value != null && !value.isEmpty();
+			case CorePackage.ASSIGNMENT_ARRAY__VALUES:
+				return values != null && !values.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -204,8 +204,8 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
-		result.append(value);
+		result.append(" (values: ");
+		result.append(values);
 		result.append(')');
 		return result.toString();
 	}

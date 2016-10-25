@@ -2,6 +2,9 @@
  */
 package tmdl.expressions;
 
+import org.eclipse.emf.common.util.EList;
+
+import tmdl.core.Assignment;
 
 /**
  * <!-- begin-user-doc -->
@@ -85,7 +88,7 @@ public interface TemplateExpressionRealIfThenElse extends TemplateExpressionReal
 	 * @return the value of the '<em>If False</em>' containment reference.
 	 * @see #setIfFalse(TemplateExpressionReal)
 	 * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionRealIfThenElse_IfFalse()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	TemplateExpressionReal getIfFalse();
@@ -99,5 +102,14 @@ public interface TemplateExpressionRealIfThenElse extends TemplateExpressionReal
 	 * @generated
 	 */
 	void setIfFalse(TemplateExpressionReal value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\t\tif condition.evaluate(assignments)\n\t\t\t\tthen ifTrue.evaluate(assignments)\n\t\t\t\telse ifFalse.evaluate(assignments)\n\t\t\t\tendif'"
+	 * @generated
+	 */
+	double evaluate(EList<Assignment> assignments);
 
 } // TemplateExpressionRealIfThenElse

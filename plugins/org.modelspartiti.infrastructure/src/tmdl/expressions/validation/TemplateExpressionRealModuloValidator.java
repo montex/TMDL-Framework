@@ -4,6 +4,7 @@
  */
 package tmdl.expressions.validation;
 
+import tmdl.expressions.TemplateExpressionInteger;
 
 /**
  * A sample validator interface for {@link tmdl.expressions.TemplateExpressionRealModulo}.
@@ -14,4 +15,6 @@ package tmdl.expressions.validation;
 public interface TemplateExpressionRealModuloValidator {
 	boolean validate();
 
+	boolean validateExp1(TemplateExpressionInteger value);
+	boolean validateExp2(TemplateExpressionInteger value);
 }

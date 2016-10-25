@@ -1,3 +1,4 @@
+@"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore")
 @namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl", prefix="tmdl")
 package tmdl;
 
@@ -101,7 +102,7 @@ package core {
   }
 
   abstract class Parameter {
-    attr String[*] name;
+    attr String[1] name;
   }
 
   class ParameterSimple extends Parameter {
@@ -120,7 +121,7 @@ package core {
 
   class AssignmentArray extends Assignment {
     ref ParameterArray[1] parameter;
-    attr double[*] value;
+    attr double[*] values;
   }
 
   abstract interface Multiplicity {
@@ -140,60 +141,105 @@ package core {
 
 }
 
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
 @namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl/expressions", prefix="exp")
 package expressions {
   abstract interface TemplateExpression {
   }
 
   abstract interface TemplateExpressionInteger extends TemplateExpression {
-    op int[1] evaluate(core.Assignment[*] assignments);
-  }
- 
-  abstract interface TemplateExpressionReal extends TemplateExpression {
-    op double[1] evaluate(core.Assignment[*] assignments);
-  }
- 
-  abstract interface TemplateExpressionBoolean extends TemplateExpression {
-    op boolean[1] evaluate(core.Assignment[*] assignments);
+    op int[1] evaluate(!ordered core.Assignment[*] assignments);
   }
 
+  abstract interface TemplateExpressionReal extends TemplateExpression {
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
+  }
+
+  abstract interface TemplateExpressionBoolean extends TemplateExpression {
+    op boolean[1] evaluate(!ordered core.Assignment[*] assignments);
+  }
 
   class TemplateExpressionIntegerLiteral extends TemplateExpressionInteger {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="value")
+    op int[1] evaluate(!ordered core.Assignment[*] assignments);
     attr int[1] value;
   }
 
   class TemplateExpressionRealLiteral extends TemplateExpressionReal {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="value")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
     attr double[1] value;
   }
 
   class TemplateExpressionBoolaenLiteral extends TemplateExpressionBoolean {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="value")
+    op boolean[1] evaluate(!ordered core.Assignment[*] assignments);
     attr boolean[1] value;
   }
 
   class TemplateExpressionIntegerFromReal extends TemplateExpressionInteger {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp.evaluate(assignments).floor()")
+    op int[1] evaluate(!ordered core.Assignment[*] assignments);
     val TemplateExpressionReal[1] exp;
   }
 
   class TemplateExpressionRealFromInteger extends TemplateExpressionReal {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp.evaluate(assignments)")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
     val TemplateExpressionInteger[1] exp;
   }
 
   class TemplateExpressionParameterSimple extends TemplateExpressionReal {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="assignments->select(as | as.oclIsTypeOf(core::AssignmentSimple))
+						->select(a | a.oclAsType(core::AssignmentSimple).parameter = self.parameter)
+						->asSequence()->first().oclAsType(core::AssignmentSimple).value")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
     ref core.ParameterSimple[1] parameter;
   }
 
   class TemplateExpressionParameterArrayValueAt extends TemplateExpressionReal {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))
+						->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)
+						->asSequence()->first().oclAsType(core::AssignmentArray).values
+						->at(position.evaluate(assignments))")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
     ref core.ParameterArray[1] parameter;
     val TemplateExpressionInteger[1] position;
   }
 
   class TemplateExpressionParameterArraySize extends TemplateExpressionInteger {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))
+						->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)
+						->asSequence()->first().oclAsType(core::AssignmentArray).values
+						->size()")
+    op int[1] evaluate(!ordered core.Assignment[*] assignments);
     ref core.ParameterArray[1] parameter;
   }
 
   class TemplateExpressionArrayAggregate extends TemplateExpressionReal {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="
+				let array = assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))
+					->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)
+					->asSequence()->first().oclAsType(core::AssignmentArray).values
+				in
+					if function = ArrayAggregateKind::sum then array->sum()
+					else if function = ArrayAggregateKind::min then array->min()
+					else if function = ArrayAggregateKind::max then array->max()
+					else
+						array->sum()/array->size()
+					endif endif endif")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
     ref core.ParameterArray[1] parameter;
-    attr ArrayAggregateKind function;
+    attr ArrayAggregateKind[1] function;
   }
 
   enum ArrayAggregateKind {
@@ -203,64 +249,116 @@ package expressions {
     sum = 4;
   }
 
-  abstract interface TemplateExpressionRealBinary extends TemplateExpressionReal {
+  abstract interface TemplateExpressionRealBinaryOperation extends TemplateExpressionReal {
     val TemplateExpressionReal[1] exp1;
     val TemplateExpressionReal[1] exp2;
   }
 
-  class TemplateExpressionRealSum extends TemplateExpressionRealBinary {
+  class TemplateExpressionRealSum extends TemplateExpressionRealBinaryOperation {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp1.evaluate(assignments) + exp2.evaluate(assignments)")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
   }
 
-  class TemplateExpressionRealSubtract extends TemplateExpressionRealBinary {
+  class TemplateExpressionRealSubtract extends TemplateExpressionRealBinaryOperation {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp1.evaluate(assignments) - exp2.evaluate(assignments)")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
   }
 
-  class TemplateExpressionRealMultiply extends TemplateExpressionRealBinary {
+  class TemplateExpressionRealMultiply extends TemplateExpressionRealBinaryOperation {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp1.evaluate(assignments) * exp2.evaluate(assignments)")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
   }
 
-  class TemplateExpressionRealDivide extends TemplateExpressionRealBinary {
+  class TemplateExpressionRealDivide extends TemplateExpressionRealBinaryOperation {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp1.evaluate(assignments) / exp2.evaluate(assignments)")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
   }
 
-  class TemplateExpressionRealModulo extends TemplateExpressionRealBinary {
+  class TemplateExpressionRealModulo extends TemplateExpressionInteger {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp1.evaluate(assignments).mod(exp2.evaluate(assignments))")
+    op int[1] evaluate(!ordered core.Assignment[*] assignments);
+    val TemplateExpressionInteger[1] exp1;
+    val TemplateExpressionInteger[1] exp2;
   }
 
   abstract interface TemplateExpressionRealUnary extends TemplateExpressionReal {
     val TemplateExpressionReal[1] exp;
   }
 
-  class TemplateExpressionRealFloor extends TemplateExpressionRealUnary {
+  class TemplateExpressionRealFloor extends TemplateExpressionInteger {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp.evaluate(assignments).floor()")
+    op int[1] evaluate(!ordered core.Assignment[*] assignments);
+    val TemplateExpressionReal[1] exp;
   }
 
-  class TemplateExpressionRealCeil extends TemplateExpressionRealUnary {
+  class TemplateExpressionRealCeil extends TemplateExpressionInteger {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="
+				let n = exp.evaluate(assignments) in
+				if n.floor() = n.round() then n.floor()+1
+				else n.round() endif")
+    op int[1] evaluate(!ordered core.Assignment[*] assignments);
+    val TemplateExpressionReal[1] exp;
   }
 
-  class TemplateExpressionRealRound extends TemplateExpressionRealUnary {
+  class TemplateExpressionRealRound extends TemplateExpressionInteger {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp.evaluate(assignments).round()")
+    op int[1] evaluate(!ordered core.Assignment[*] assignments);
+    val TemplateExpressionReal[1] exp;
   }
 
   class TemplateExpressionRealIfThenElse extends TemplateExpressionReal {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="
+				if condition.evaluate(assignments)
+				then ifTrue.evaluate(assignments)
+				else ifFalse.evaluate(assignments)
+				endif")
+    op double[1] evaluate(!ordered core.Assignment[*] assignments);
     val TemplateExpressionBoolean[1] condition;
     val TemplateExpressionReal[1] ifTrue;
-    val TemplateExpressionReal ifFalse;
+    val TemplateExpressionReal[1] ifFalse;
   }
 
-  abstract interface TemplateExpressionBooleanUnary extends TemplateExpressionBoolean {
+  abstract interface TemplateExpressionBooleanUnaryOperation extends TemplateExpressionBoolean {
     val TemplateExpressionBoolean[1] exp;
   }
 
-  class TemplateExpressionBooleanNot extends TemplateExpressionBooleanUnary {
+  class TemplateExpressionBooleanNot extends TemplateExpressionBooleanUnaryOperation {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="not exp.evaluate(assignments)")
+    op boolean[1] evaluate(!ordered core.Assignment[*] assignments);
   }
 
-  class TemplateExpressionBooleanToInteger extends TemplateExpressionBooleanUnary {
+  class TemplateExpressionBooleanToInteger extends TemplateExpressionInteger {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp.evaluate(assignments)")
+    op int[1] evaluate(!ordered core.Assignment[*] assignments);
+    val TemplateExpressionBoolean[1] exp;
   }
 
-  abstract interface TemplateExpressionBooleanBinary extends TemplateExpressionBoolean {
+  abstract interface TemplateExpressionBooleanBinaryOperation extends TemplateExpressionBoolean {
     val TemplateExpressionBoolean[1] exp1;
     val TemplateExpressionBoolean[1] exp2;
   }
 
-  class TemplateExpressionBooleanAnd extends TemplateExpressionBooleanBinary {
+  class TemplateExpressionBooleanAnd extends TemplateExpressionBooleanBinaryOperation {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp1.evaluate(assignments) and exp2.evaluate(assignments)")
+    op boolean[1] evaluate(!ordered core.Assignment[*] assignments);
   }
 
-  class TemplateExpressionBooleanOr extends TemplateExpressionBooleanBinary {
+  class TemplateExpressionBooleanOr extends TemplateExpressionBooleanBinaryOperation {
+
+    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="exp1.evaluate(assignments) or exp2.evaluate(assignments)")
+    op boolean[1] evaluate(!ordered core.Assignment[*] assignments);
   }
 
 }

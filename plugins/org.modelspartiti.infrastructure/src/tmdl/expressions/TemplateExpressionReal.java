@@ -20,7 +20,7 @@ public interface TemplateExpressionReal extends TemplateExpression {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" assignmentsMany="true"
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
 	 * @generated
 	 */
 	double evaluate(EList<Assignment> assignments);

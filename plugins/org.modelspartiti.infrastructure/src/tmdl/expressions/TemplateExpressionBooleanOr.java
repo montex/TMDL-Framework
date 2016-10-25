@@ -2,6 +2,9 @@
  */
 package tmdl.expressions;
 
+import org.eclipse.emf.common.util.EList;
+
+import tmdl.core.Assignment;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,5 +16,14 @@ package tmdl.expressions;
  * @model
  * @generated
  */
-public interface TemplateExpressionBooleanOr extends TemplateExpressionBooleanBinary {
+public interface TemplateExpressionBooleanOr extends TemplateExpressionBooleanBinaryOperation {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='exp1.evaluate(assignments) or exp2.evaluate(assignments)'"
+	 * @generated
+	 */
+	boolean evaluate(EList<Assignment> assignments);
+
 } // TemplateExpressionBooleanOr

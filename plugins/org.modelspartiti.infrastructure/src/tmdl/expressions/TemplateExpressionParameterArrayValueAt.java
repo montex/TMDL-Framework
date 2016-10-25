@@ -2,6 +2,9 @@
  */
 package tmdl.expressions;
 
+import org.eclipse.emf.common.util.EList;
+
+import tmdl.core.Assignment;
 import tmdl.core.ParameterArray;
 
 /**
@@ -73,5 +76,14 @@ public interface TemplateExpressionParameterArrayValueAt extends TemplateExpress
 	 * @generated
 	 */
 	void setPosition(TemplateExpressionInteger value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\t\t\t->at(position.evaluate(assignments))'"
+	 * @generated
+	 */
+	double evaluate(EList<Assignment> assignments);
 
 } // TemplateExpressionParameterArrayValueAt

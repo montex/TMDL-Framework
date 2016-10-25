@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see tmdl.expressions.ExpressionsFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface ExpressionsPackage extends EPackage {
@@ -232,7 +233,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_INTEGER_LITERAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_INTEGER_LITERAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Integer Literal</em>' class.
@@ -241,7 +242,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_INTEGER_LITERAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_INTEGER_LITERAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealLiteralImpl <em>Template Expression Real Literal</em>}' class.
@@ -278,7 +279,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_LITERAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_LITERAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real Literal</em>' class.
@@ -287,7 +288,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_LITERAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_LITERAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionBoolaenLiteralImpl <em>Template Expression Boolaen Literal</em>}' class.
@@ -324,7 +325,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLAEN_LITERAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_BOOLAEN_LITERAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Boolaen Literal</em>' class.
@@ -333,7 +334,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLAEN_LITERAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLAEN_LITERAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionIntegerFromRealImpl <em>Template Expression Integer From Real</em>}' class.
@@ -370,7 +371,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_INTEGER_FROM_REAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_INTEGER_FROM_REAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Integer From Real</em>' class.
@@ -379,7 +380,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_INTEGER_FROM_REAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_INTEGER_FROM_REAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealFromIntegerImpl <em>Template Expression Real From Integer</em>}' class.
@@ -416,7 +417,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_FROM_INTEGER___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_FROM_INTEGER___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real From Integer</em>' class.
@@ -425,7 +426,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_FROM_INTEGER_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_FROM_INTEGER_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionParameterSimpleImpl <em>Template Expression Parameter Simple</em>}' class.
@@ -462,7 +463,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_PARAMETER_SIMPLE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_PARAMETER_SIMPLE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Parameter Simple</em>' class.
@@ -471,7 +472,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_PARAMETER_SIMPLE_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_PARAMETER_SIMPLE_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionParameterArrayValueAtImpl <em>Template Expression Parameter Array Value At</em>}' class.
@@ -517,7 +518,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Parameter Array Value At</em>' class.
@@ -526,7 +527,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionParameterArraySizeImpl <em>Template Expression Parameter Array Size</em>}' class.
@@ -563,7 +564,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Parameter Array Size</em>' class.
@@ -572,7 +573,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionArrayAggregateImpl <em>Template Expression Array Aggregate</em>}' class.
@@ -618,7 +619,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_ARRAY_AGGREGATE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_ARRAY_AGGREGATE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Array Aggregate</em>' class.
@@ -627,17 +628,17 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_ARRAY_AGGREGATE_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_ARRAY_AGGREGATE_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionRealBinary <em>Template Expression Real Binary</em>}' class.
+	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionRealBinaryOperation <em>Template Expression Real Binary Operation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tmdl.expressions.TemplateExpressionRealBinary
-	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionRealBinary()
+	 * @see tmdl.expressions.TemplateExpressionRealBinaryOperation
+	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionRealBinaryOperation()
 	 * @generated
 	 */
-	int TEMPLATE_EXPRESSION_REAL_BINARY = 13;
+	int TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -646,7 +647,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_BINARY__EXP1 = TEMPLATE_EXPRESSION_REAL_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP1 = TEMPLATE_EXPRESSION_REAL_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Exp2</b></em>' containment reference.
@@ -655,16 +656,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_BINARY__EXP2 = TEMPLATE_EXPRESSION_REAL_FEATURE_COUNT + 1;
+	int TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP2 = TEMPLATE_EXPRESSION_REAL_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Template Expression Real Binary</em>' class.
+	 * The number of structural features of the '<em>Template Expression Real Binary Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_BINARY_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_FEATURE_COUNT + 2;
+	int TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -673,16 +674,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_BINARY___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
 
 	/**
-	 * The number of operations of the '<em>Template Expression Real Binary</em>' class.
+	 * The number of operations of the '<em>Template Expression Real Binary Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealSumImpl <em>Template Expression Real Sum</em>}' class.
@@ -701,7 +702,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUM__EXP1 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP1;
+	int TEMPLATE_EXPRESSION_REAL_SUM__EXP1 = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP1;
 
 	/**
 	 * The feature id for the '<em><b>Exp2</b></em>' containment reference.
@@ -710,7 +711,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUM__EXP2 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP2;
+	int TEMPLATE_EXPRESSION_REAL_SUM__EXP2 = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP2;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Real Sum</em>' class.
@@ -719,7 +720,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUM_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_SUM_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -728,7 +729,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUM___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_SUM___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real Sum</em>' class.
@@ -737,7 +738,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUM_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_SUM_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealSubtractImpl <em>Template Expression Real Subtract</em>}' class.
@@ -756,7 +757,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUBTRACT__EXP1 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP1;
+	int TEMPLATE_EXPRESSION_REAL_SUBTRACT__EXP1 = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP1;
 
 	/**
 	 * The feature id for the '<em><b>Exp2</b></em>' containment reference.
@@ -765,7 +766,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUBTRACT__EXP2 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP2;
+	int TEMPLATE_EXPRESSION_REAL_SUBTRACT__EXP2 = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP2;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Real Subtract</em>' class.
@@ -774,7 +775,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUBTRACT_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_SUBTRACT_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -783,7 +784,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUBTRACT___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_SUBTRACT___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real Subtract</em>' class.
@@ -792,7 +793,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_SUBTRACT_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_SUBTRACT_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealMultiplyImpl <em>Template Expression Real Multiply</em>}' class.
@@ -811,7 +812,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MULTIPLY__EXP1 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP1;
+	int TEMPLATE_EXPRESSION_REAL_MULTIPLY__EXP1 = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP1;
 
 	/**
 	 * The feature id for the '<em><b>Exp2</b></em>' containment reference.
@@ -820,7 +821,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MULTIPLY__EXP2 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP2;
+	int TEMPLATE_EXPRESSION_REAL_MULTIPLY__EXP2 = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP2;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Real Multiply</em>' class.
@@ -829,7 +830,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MULTIPLY_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_MULTIPLY_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -838,7 +839,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MULTIPLY___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_MULTIPLY___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real Multiply</em>' class.
@@ -847,7 +848,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MULTIPLY_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_MULTIPLY_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealDivideImpl <em>Template Expression Real Divide</em>}' class.
@@ -866,7 +867,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_DIVIDE__EXP1 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP1;
+	int TEMPLATE_EXPRESSION_REAL_DIVIDE__EXP1 = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP1;
 
 	/**
 	 * The feature id for the '<em><b>Exp2</b></em>' containment reference.
@@ -875,7 +876,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_DIVIDE__EXP2 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP2;
+	int TEMPLATE_EXPRESSION_REAL_DIVIDE__EXP2 = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP2;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Real Divide</em>' class.
@@ -884,7 +885,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_DIVIDE_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_DIVIDE_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -893,7 +894,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_DIVIDE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_DIVIDE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real Divide</em>' class.
@@ -902,7 +903,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_DIVIDE_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_DIVIDE_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealModuloImpl <em>Template Expression Real Modulo</em>}' class.
@@ -921,7 +922,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MODULO__EXP1 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP1;
+	int TEMPLATE_EXPRESSION_REAL_MODULO__EXP1 = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Exp2</b></em>' containment reference.
@@ -930,7 +931,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MODULO__EXP2 = TEMPLATE_EXPRESSION_REAL_BINARY__EXP2;
+	int TEMPLATE_EXPRESSION_REAL_MODULO__EXP2 = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Real Modulo</em>' class.
@@ -939,7 +940,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MODULO_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_MODULO_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -948,7 +949,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MODULO___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_MODULO___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real Modulo</em>' class.
@@ -957,7 +958,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_MODULO_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_MODULO_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionRealUnary <em>Template Expression Real Unary</em>}' class.
@@ -1022,7 +1023,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_FLOOR__EXP = TEMPLATE_EXPRESSION_REAL_UNARY__EXP;
+	int TEMPLATE_EXPRESSION_REAL_FLOOR__EXP = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Real Floor</em>' class.
@@ -1031,7 +1032,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_FLOOR_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_UNARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_FLOOR_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1040,7 +1041,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_FLOOR___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_UNARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_FLOOR___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real Floor</em>' class.
@@ -1049,7 +1050,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_FLOOR_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_UNARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_FLOOR_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealCeilImpl <em>Template Expression Real Ceil</em>}' class.
@@ -1068,7 +1069,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_CEIL__EXP = TEMPLATE_EXPRESSION_REAL_UNARY__EXP;
+	int TEMPLATE_EXPRESSION_REAL_CEIL__EXP = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Real Ceil</em>' class.
@@ -1077,7 +1078,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_CEIL_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_UNARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_CEIL_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1086,7 +1087,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_CEIL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_UNARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_CEIL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real Ceil</em>' class.
@@ -1095,7 +1096,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_CEIL_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_UNARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_CEIL_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealRoundImpl <em>Template Expression Real Round</em>}' class.
@@ -1114,7 +1115,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_ROUND__EXP = TEMPLATE_EXPRESSION_REAL_UNARY__EXP;
+	int TEMPLATE_EXPRESSION_REAL_ROUND__EXP = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Real Round</em>' class.
@@ -1123,7 +1124,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_ROUND_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_UNARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_ROUND_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1132,7 +1133,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_ROUND___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_UNARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_ROUND___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real Round</em>' class.
@@ -1141,7 +1142,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_ROUND_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_UNARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_ROUND_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionRealIfThenElseImpl <em>Template Expression Real If Then Else</em>}' class.
@@ -1196,7 +1197,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Real If Then Else</em>' class.
@@ -1205,17 +1206,17 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE_OPERATION_COUNT = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionBooleanUnary <em>Template Expression Boolean Unary</em>}' class.
+	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionBooleanUnaryOperation <em>Template Expression Boolean Unary Operation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tmdl.expressions.TemplateExpressionBooleanUnary
-	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBooleanUnary()
+	 * @see tmdl.expressions.TemplateExpressionBooleanUnaryOperation
+	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBooleanUnaryOperation()
 	 * @generated
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY = 24;
+	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -1224,16 +1225,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY__EXP = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION__EXP = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Template Expression Boolean Unary</em>' class.
+	 * The number of structural features of the '<em>Template Expression Boolean Unary Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 1;
+	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1242,16 +1243,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST;
 
 	/**
-	 * The number of operations of the '<em>Template Expression Boolean Unary</em>' class.
+	 * The number of operations of the '<em>Template Expression Boolean Unary Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanNotImpl <em>Template Expression Boolean Not</em>}' class.
@@ -1270,7 +1271,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_NOT__EXP = TEMPLATE_EXPRESSION_BOOLEAN_UNARY__EXP;
+	int TEMPLATE_EXPRESSION_BOOLEAN_NOT__EXP = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION__EXP;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Boolean Not</em>' class.
@@ -1279,7 +1280,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_NOT_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_NOT_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1288,7 +1289,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_NOT___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN_UNARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_BOOLEAN_NOT___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Boolean Not</em>' class.
@@ -1297,7 +1298,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_NOT_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_NOT_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanToIntegerImpl <em>Template Expression Boolean To Integer</em>}' class.
@@ -1316,7 +1317,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER__EXP = TEMPLATE_EXPRESSION_BOOLEAN_UNARY__EXP;
+	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER__EXP = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Boolean To Integer</em>' class.
@@ -1325,7 +1326,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1334,7 +1335,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN_UNARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Boolean To Integer</em>' class.
@@ -1343,17 +1344,17 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER_OPERATION_COUNT = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionBooleanBinary <em>Template Expression Boolean Binary</em>}' class.
+	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionBooleanBinaryOperation <em>Template Expression Boolean Binary Operation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see tmdl.expressions.TemplateExpressionBooleanBinary
-	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBooleanBinary()
+	 * @see tmdl.expressions.TemplateExpressionBooleanBinaryOperation
+	 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBooleanBinaryOperation()
 	 * @generated
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY = 27;
+	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Exp1</b></em>' containment reference.
@@ -1362,7 +1363,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY__EXP1 = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP1 = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Exp2</b></em>' containment reference.
@@ -1371,16 +1372,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY__EXP2 = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 1;
+	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP2 = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Template Expression Boolean Binary</em>' class.
+	 * The number of structural features of the '<em>Template Expression Boolean Binary Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 2;
+	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1389,16 +1390,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST;
 
 	/**
-	 * The number of operations of the '<em>Template Expression Boolean Binary</em>' class.
+	 * The number of operations of the '<em>Template Expression Boolean Binary Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanAndImpl <em>Template Expression Boolean And</em>}' class.
@@ -1417,7 +1418,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_AND__EXP1 = TEMPLATE_EXPRESSION_BOOLEAN_BINARY__EXP1;
+	int TEMPLATE_EXPRESSION_BOOLEAN_AND__EXP1 = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP1;
 
 	/**
 	 * The feature id for the '<em><b>Exp2</b></em>' containment reference.
@@ -1426,7 +1427,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_AND__EXP2 = TEMPLATE_EXPRESSION_BOOLEAN_BINARY__EXP2;
+	int TEMPLATE_EXPRESSION_BOOLEAN_AND__EXP2 = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP2;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Boolean And</em>' class.
@@ -1435,7 +1436,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_AND_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_AND_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1444,7 +1445,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_AND___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN_BINARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_BOOLEAN_AND___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Boolean And</em>' class.
@@ -1453,7 +1454,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_AND_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_AND_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanOrImpl <em>Template Expression Boolean Or</em>}' class.
@@ -1472,7 +1473,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_OR__EXP1 = TEMPLATE_EXPRESSION_BOOLEAN_BINARY__EXP1;
+	int TEMPLATE_EXPRESSION_BOOLEAN_OR__EXP1 = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP1;
 
 	/**
 	 * The feature id for the '<em><b>Exp2</b></em>' containment reference.
@@ -1481,7 +1482,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_OR__EXP2 = TEMPLATE_EXPRESSION_BOOLEAN_BINARY__EXP2;
+	int TEMPLATE_EXPRESSION_BOOLEAN_OR__EXP2 = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP2;
 
 	/**
 	 * The number of structural features of the '<em>Template Expression Boolean Or</em>' class.
@@ -1490,7 +1491,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_OR_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_FEATURE_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_OR_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1499,7 +1500,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_OR___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN_BINARY___EVALUATE__ELIST;
+	int TEMPLATE_EXPRESSION_BOOLEAN_OR___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Template Expression Boolean Or</em>' class.
@@ -1508,7 +1509,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_OR_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_COUNT + 0;
+	int TEMPLATE_EXPRESSION_BOOLEAN_OR_OPERATION_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.ArrayAggregateKind <em>Array Aggregate Kind</em>}' enum.
@@ -1613,6 +1614,16 @@ public interface ExpressionsPackage extends EPackage {
 	EAttribute getTemplateExpressionIntegerLiteral_Value();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionIntegerLiteral#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionIntegerLiteral#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionIntegerLiteral__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealLiteral <em>Template Expression Real Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1632,6 +1643,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTemplateExpressionRealLiteral_Value();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealLiteral#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealLiteral#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealLiteral__Evaluate__EList();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBoolaenLiteral <em>Template Expression Boolaen Literal</em>}'.
@@ -1655,6 +1676,16 @@ public interface ExpressionsPackage extends EPackage {
 	EAttribute getTemplateExpressionBoolaenLiteral_Value();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionBoolaenLiteral#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionBoolaenLiteral#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionBoolaenLiteral__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionIntegerFromReal <em>Template Expression Integer From Real</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1674,6 +1705,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTemplateExpressionIntegerFromReal_Exp();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionIntegerFromReal#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionIntegerFromReal#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionIntegerFromReal__Evaluate__EList();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealFromInteger <em>Template Expression Real From Integer</em>}'.
@@ -1697,6 +1738,16 @@ public interface ExpressionsPackage extends EPackage {
 	EReference getTemplateExpressionRealFromInteger_Exp();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealFromInteger#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealFromInteger#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealFromInteger__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionParameterSimple <em>Template Expression Parameter Simple</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1716,6 +1767,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTemplateExpressionParameterSimple_Parameter();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionParameterSimple#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionParameterSimple#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionParameterSimple__Evaluate__EList();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionParameterArrayValueAt <em>Template Expression Parameter Array Value At</em>}'.
@@ -1750,6 +1811,16 @@ public interface ExpressionsPackage extends EPackage {
 	EReference getTemplateExpressionParameterArrayValueAt_Position();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionParameterArrayValueAt#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionParameterArrayValueAt#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionParameterArrayValueAt__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionParameterArraySize <em>Template Expression Parameter Array Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1769,6 +1840,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTemplateExpressionParameterArraySize_Parameter();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionParameterArraySize#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionParameterArraySize#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionParameterArraySize__Evaluate__EList();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionArrayAggregate <em>Template Expression Array Aggregate</em>}'.
@@ -1803,36 +1884,46 @@ public interface ExpressionsPackage extends EPackage {
 	EAttribute getTemplateExpressionArrayAggregate_Function();
 
 	/**
-	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealBinary <em>Template Expression Real Binary</em>}'.
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionArrayAggregate#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Template Expression Real Binary</em>'.
-	 * @see tmdl.expressions.TemplateExpressionRealBinary
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionArrayAggregate#evaluate(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EClass getTemplateExpressionRealBinary();
+	EOperation getTemplateExpressionArrayAggregate__Evaluate__EList();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionRealBinary#getExp1 <em>Exp1</em>}'.
+	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealBinaryOperation <em>Template Expression Real Binary Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Template Expression Real Binary Operation</em>'.
+	 * @see tmdl.expressions.TemplateExpressionRealBinaryOperation
+	 * @generated
+	 */
+	EClass getTemplateExpressionRealBinaryOperation();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionRealBinaryOperation#getExp1 <em>Exp1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Exp1</em>'.
-	 * @see tmdl.expressions.TemplateExpressionRealBinary#getExp1()
-	 * @see #getTemplateExpressionRealBinary()
+	 * @see tmdl.expressions.TemplateExpressionRealBinaryOperation#getExp1()
+	 * @see #getTemplateExpressionRealBinaryOperation()
 	 * @generated
 	 */
-	EReference getTemplateExpressionRealBinary_Exp1();
+	EReference getTemplateExpressionRealBinaryOperation_Exp1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionRealBinary#getExp2 <em>Exp2</em>}'.
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionRealBinaryOperation#getExp2 <em>Exp2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Exp2</em>'.
-	 * @see tmdl.expressions.TemplateExpressionRealBinary#getExp2()
-	 * @see #getTemplateExpressionRealBinary()
+	 * @see tmdl.expressions.TemplateExpressionRealBinaryOperation#getExp2()
+	 * @see #getTemplateExpressionRealBinaryOperation()
 	 * @generated
 	 */
-	EReference getTemplateExpressionRealBinary_Exp2();
+	EReference getTemplateExpressionRealBinaryOperation_Exp2();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealSum <em>Template Expression Real Sum</em>}'.
@@ -1845,6 +1936,16 @@ public interface ExpressionsPackage extends EPackage {
 	EClass getTemplateExpressionRealSum();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealSum#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealSum#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealSum__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealSubtract <em>Template Expression Real Subtract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1853,6 +1954,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTemplateExpressionRealSubtract();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealSubtract#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealSubtract#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealSubtract__Evaluate__EList();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealMultiply <em>Template Expression Real Multiply</em>}'.
@@ -1865,6 +1976,16 @@ public interface ExpressionsPackage extends EPackage {
 	EClass getTemplateExpressionRealMultiply();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealMultiply#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealMultiply#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealMultiply__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealDivide <em>Template Expression Real Divide</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1875,6 +1996,16 @@ public interface ExpressionsPackage extends EPackage {
 	EClass getTemplateExpressionRealDivide();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealDivide#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealDivide#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealDivide__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealModulo <em>Template Expression Real Modulo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1883,6 +2014,38 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTemplateExpressionRealModulo();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionRealModulo#getExp1 <em>Exp1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Exp1</em>'.
+	 * @see tmdl.expressions.TemplateExpressionRealModulo#getExp1()
+	 * @see #getTemplateExpressionRealModulo()
+	 * @generated
+	 */
+	EReference getTemplateExpressionRealModulo_Exp1();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionRealModulo#getExp2 <em>Exp2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Exp2</em>'.
+	 * @see tmdl.expressions.TemplateExpressionRealModulo#getExp2()
+	 * @see #getTemplateExpressionRealModulo()
+	 * @generated
+	 */
+	EReference getTemplateExpressionRealModulo_Exp2();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealModulo#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealModulo#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealModulo__Evaluate__EList();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealUnary <em>Template Expression Real Unary</em>}'.
@@ -1916,6 +2079,27 @@ public interface ExpressionsPackage extends EPackage {
 	EClass getTemplateExpressionRealFloor();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionRealFloor#getExp <em>Exp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Exp</em>'.
+	 * @see tmdl.expressions.TemplateExpressionRealFloor#getExp()
+	 * @see #getTemplateExpressionRealFloor()
+	 * @generated
+	 */
+	EReference getTemplateExpressionRealFloor_Exp();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealFloor#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealFloor#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealFloor__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealCeil <em>Template Expression Real Ceil</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1926,6 +2110,27 @@ public interface ExpressionsPackage extends EPackage {
 	EClass getTemplateExpressionRealCeil();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionRealCeil#getExp <em>Exp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Exp</em>'.
+	 * @see tmdl.expressions.TemplateExpressionRealCeil#getExp()
+	 * @see #getTemplateExpressionRealCeil()
+	 * @generated
+	 */
+	EReference getTemplateExpressionRealCeil_Exp();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealCeil#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealCeil#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealCeil__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealRound <em>Template Expression Real Round</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1934,6 +2139,27 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTemplateExpressionRealRound();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionRealRound#getExp <em>Exp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Exp</em>'.
+	 * @see tmdl.expressions.TemplateExpressionRealRound#getExp()
+	 * @see #getTemplateExpressionRealRound()
+	 * @generated
+	 */
+	EReference getTemplateExpressionRealRound_Exp();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealRound#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealRound#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionRealRound__Evaluate__EList();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionRealIfThenElse <em>Template Expression Real If Then Else</em>}'.
@@ -1979,25 +2205,35 @@ public interface ExpressionsPackage extends EPackage {
 	EReference getTemplateExpressionRealIfThenElse_IfFalse();
 
 	/**
-	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBooleanUnary <em>Template Expression Boolean Unary</em>}'.
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionRealIfThenElse#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Template Expression Boolean Unary</em>'.
-	 * @see tmdl.expressions.TemplateExpressionBooleanUnary
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionRealIfThenElse#evaluate(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EClass getTemplateExpressionBooleanUnary();
+	EOperation getTemplateExpressionRealIfThenElse__Evaluate__EList();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionBooleanUnary#getExp <em>Exp</em>}'.
+	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBooleanUnaryOperation <em>Template Expression Boolean Unary Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Template Expression Boolean Unary Operation</em>'.
+	 * @see tmdl.expressions.TemplateExpressionBooleanUnaryOperation
+	 * @generated
+	 */
+	EClass getTemplateExpressionBooleanUnaryOperation();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionBooleanUnaryOperation#getExp <em>Exp</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Exp</em>'.
-	 * @see tmdl.expressions.TemplateExpressionBooleanUnary#getExp()
-	 * @see #getTemplateExpressionBooleanUnary()
+	 * @see tmdl.expressions.TemplateExpressionBooleanUnaryOperation#getExp()
+	 * @see #getTemplateExpressionBooleanUnaryOperation()
 	 * @generated
 	 */
-	EReference getTemplateExpressionBooleanUnary_Exp();
+	EReference getTemplateExpressionBooleanUnaryOperation_Exp();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBooleanNot <em>Template Expression Boolean Not</em>}'.
@@ -2010,6 +2246,16 @@ public interface ExpressionsPackage extends EPackage {
 	EClass getTemplateExpressionBooleanNot();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionBooleanNot#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionBooleanNot#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionBooleanNot__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBooleanToInteger <em>Template Expression Boolean To Integer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2020,36 +2266,57 @@ public interface ExpressionsPackage extends EPackage {
 	EClass getTemplateExpressionBooleanToInteger();
 
 	/**
-	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBooleanBinary <em>Template Expression Boolean Binary</em>}'.
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionBooleanToInteger#getExp <em>Exp</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Template Expression Boolean Binary</em>'.
-	 * @see tmdl.expressions.TemplateExpressionBooleanBinary
+	 * @return the meta object for the containment reference '<em>Exp</em>'.
+	 * @see tmdl.expressions.TemplateExpressionBooleanToInteger#getExp()
+	 * @see #getTemplateExpressionBooleanToInteger()
 	 * @generated
 	 */
-	EClass getTemplateExpressionBooleanBinary();
+	EReference getTemplateExpressionBooleanToInteger_Exp();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionBooleanBinary#getExp1 <em>Exp1</em>}'.
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionBooleanToInteger#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionBooleanToInteger#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionBooleanToInteger__Evaluate__EList();
+
+	/**
+	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBooleanBinaryOperation <em>Template Expression Boolean Binary Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Template Expression Boolean Binary Operation</em>'.
+	 * @see tmdl.expressions.TemplateExpressionBooleanBinaryOperation
+	 * @generated
+	 */
+	EClass getTemplateExpressionBooleanBinaryOperation();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionBooleanBinaryOperation#getExp1 <em>Exp1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Exp1</em>'.
-	 * @see tmdl.expressions.TemplateExpressionBooleanBinary#getExp1()
-	 * @see #getTemplateExpressionBooleanBinary()
+	 * @see tmdl.expressions.TemplateExpressionBooleanBinaryOperation#getExp1()
+	 * @see #getTemplateExpressionBooleanBinaryOperation()
 	 * @generated
 	 */
-	EReference getTemplateExpressionBooleanBinary_Exp1();
+	EReference getTemplateExpressionBooleanBinaryOperation_Exp1();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionBooleanBinary#getExp2 <em>Exp2</em>}'.
+	 * Returns the meta object for the containment reference '{@link tmdl.expressions.TemplateExpressionBooleanBinaryOperation#getExp2 <em>Exp2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Exp2</em>'.
-	 * @see tmdl.expressions.TemplateExpressionBooleanBinary#getExp2()
-	 * @see #getTemplateExpressionBooleanBinary()
+	 * @see tmdl.expressions.TemplateExpressionBooleanBinaryOperation#getExp2()
+	 * @see #getTemplateExpressionBooleanBinaryOperation()
 	 * @generated
 	 */
-	EReference getTemplateExpressionBooleanBinary_Exp2();
+	EReference getTemplateExpressionBooleanBinaryOperation_Exp2();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBooleanAnd <em>Template Expression Boolean And</em>}'.
@@ -2062,6 +2329,16 @@ public interface ExpressionsPackage extends EPackage {
 	EClass getTemplateExpressionBooleanAnd();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionBooleanAnd#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionBooleanAnd#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionBooleanAnd__Evaluate__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBooleanOr <em>Template Expression Boolean Or</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2070,6 +2347,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTemplateExpressionBooleanOr();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionBooleanOr#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionBooleanOr#evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getTemplateExpressionBooleanOr__Evaluate__EList();
 
 	/**
 	 * Returns the meta object for enum '{@link tmdl.expressions.ArrayAggregateKind <em>Array Aggregate Kind</em>}'.
@@ -2187,6 +2474,14 @@ public interface ExpressionsPackage extends EPackage {
 		EAttribute TEMPLATE_EXPRESSION_INTEGER_LITERAL__VALUE = eINSTANCE.getTemplateExpressionIntegerLiteral_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_INTEGER_LITERAL___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionIntegerLiteral__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealLiteralImpl <em>Template Expression Real Literal</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2203,6 +2498,14 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEMPLATE_EXPRESSION_REAL_LITERAL__VALUE = eINSTANCE.getTemplateExpressionRealLiteral_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_LITERAL___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealLiteral__Evaluate__EList();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionBoolaenLiteralImpl <em>Template Expression Boolaen Literal</em>}' class.
@@ -2223,6 +2526,14 @@ public interface ExpressionsPackage extends EPackage {
 		EAttribute TEMPLATE_EXPRESSION_BOOLAEN_LITERAL__VALUE = eINSTANCE.getTemplateExpressionBoolaenLiteral_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_BOOLAEN_LITERAL___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionBoolaenLiteral__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionIntegerFromRealImpl <em>Template Expression Integer From Real</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2239,6 +2550,14 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TEMPLATE_EXPRESSION_INTEGER_FROM_REAL__EXP = eINSTANCE.getTemplateExpressionIntegerFromReal_Exp();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_INTEGER_FROM_REAL___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionIntegerFromReal__Evaluate__EList();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealFromIntegerImpl <em>Template Expression Real From Integer</em>}' class.
@@ -2259,6 +2578,14 @@ public interface ExpressionsPackage extends EPackage {
 		EReference TEMPLATE_EXPRESSION_REAL_FROM_INTEGER__EXP = eINSTANCE.getTemplateExpressionRealFromInteger_Exp();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_FROM_INTEGER___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealFromInteger__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionParameterSimpleImpl <em>Template Expression Parameter Simple</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2275,6 +2602,14 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TEMPLATE_EXPRESSION_PARAMETER_SIMPLE__PARAMETER = eINSTANCE.getTemplateExpressionParameterSimple_Parameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_PARAMETER_SIMPLE___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionParameterSimple__Evaluate__EList();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionParameterArrayValueAtImpl <em>Template Expression Parameter Array Value At</em>}' class.
@@ -2303,6 +2638,14 @@ public interface ExpressionsPackage extends EPackage {
 		EReference TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT__POSITION = eINSTANCE.getTemplateExpressionParameterArrayValueAt_Position();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionParameterArrayValueAt__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionParameterArraySizeImpl <em>Template Expression Parameter Array Size</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2319,6 +2662,14 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE__PARAMETER = eINSTANCE.getTemplateExpressionParameterArraySize_Parameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionParameterArraySize__Evaluate__EList();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionArrayAggregateImpl <em>Template Expression Array Aggregate</em>}' class.
@@ -2347,14 +2698,22 @@ public interface ExpressionsPackage extends EPackage {
 		EAttribute TEMPLATE_EXPRESSION_ARRAY_AGGREGATE__FUNCTION = eINSTANCE.getTemplateExpressionArrayAggregate_Function();
 
 		/**
-		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionRealBinary <em>Template Expression Real Binary</em>}' class.
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tmdl.expressions.TemplateExpressionRealBinary
-		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionRealBinary()
 		 * @generated
 		 */
-		EClass TEMPLATE_EXPRESSION_REAL_BINARY = eINSTANCE.getTemplateExpressionRealBinary();
+		EOperation TEMPLATE_EXPRESSION_ARRAY_AGGREGATE___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionArrayAggregate__Evaluate__EList();
+
+		/**
+		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionRealBinaryOperation <em>Template Expression Real Binary Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see tmdl.expressions.TemplateExpressionRealBinaryOperation
+		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionRealBinaryOperation()
+		 * @generated
+		 */
+		EClass TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION = eINSTANCE.getTemplateExpressionRealBinaryOperation();
 
 		/**
 		 * The meta object literal for the '<em><b>Exp1</b></em>' containment reference feature.
@@ -2362,7 +2721,7 @@ public interface ExpressionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TEMPLATE_EXPRESSION_REAL_BINARY__EXP1 = eINSTANCE.getTemplateExpressionRealBinary_Exp1();
+		EReference TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP1 = eINSTANCE.getTemplateExpressionRealBinaryOperation_Exp1();
 
 		/**
 		 * The meta object literal for the '<em><b>Exp2</b></em>' containment reference feature.
@@ -2370,7 +2729,7 @@ public interface ExpressionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TEMPLATE_EXPRESSION_REAL_BINARY__EXP2 = eINSTANCE.getTemplateExpressionRealBinary_Exp2();
+		EReference TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP2 = eINSTANCE.getTemplateExpressionRealBinaryOperation_Exp2();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealSumImpl <em>Template Expression Real Sum</em>}' class.
@@ -2383,6 +2742,14 @@ public interface ExpressionsPackage extends EPackage {
 		EClass TEMPLATE_EXPRESSION_REAL_SUM = eINSTANCE.getTemplateExpressionRealSum();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_SUM___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealSum__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealSubtractImpl <em>Template Expression Real Subtract</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2391,6 +2758,14 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEMPLATE_EXPRESSION_REAL_SUBTRACT = eINSTANCE.getTemplateExpressionRealSubtract();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_SUBTRACT___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealSubtract__Evaluate__EList();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealMultiplyImpl <em>Template Expression Real Multiply</em>}' class.
@@ -2403,6 +2778,14 @@ public interface ExpressionsPackage extends EPackage {
 		EClass TEMPLATE_EXPRESSION_REAL_MULTIPLY = eINSTANCE.getTemplateExpressionRealMultiply();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_MULTIPLY___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealMultiply__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealDivideImpl <em>Template Expression Real Divide</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2413,6 +2796,14 @@ public interface ExpressionsPackage extends EPackage {
 		EClass TEMPLATE_EXPRESSION_REAL_DIVIDE = eINSTANCE.getTemplateExpressionRealDivide();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_DIVIDE___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealDivide__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealModuloImpl <em>Template Expression Real Modulo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2421,6 +2812,30 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEMPLATE_EXPRESSION_REAL_MODULO = eINSTANCE.getTemplateExpressionRealModulo();
+
+		/**
+		 * The meta object literal for the '<em><b>Exp1</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEMPLATE_EXPRESSION_REAL_MODULO__EXP1 = eINSTANCE.getTemplateExpressionRealModulo_Exp1();
+
+		/**
+		 * The meta object literal for the '<em><b>Exp2</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEMPLATE_EXPRESSION_REAL_MODULO__EXP2 = eINSTANCE.getTemplateExpressionRealModulo_Exp2();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_MODULO___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealModulo__Evaluate__EList();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionRealUnary <em>Template Expression Real Unary</em>}' class.
@@ -2451,6 +2866,22 @@ public interface ExpressionsPackage extends EPackage {
 		EClass TEMPLATE_EXPRESSION_REAL_FLOOR = eINSTANCE.getTemplateExpressionRealFloor();
 
 		/**
+		 * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEMPLATE_EXPRESSION_REAL_FLOOR__EXP = eINSTANCE.getTemplateExpressionRealFloor_Exp();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_FLOOR___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealFloor__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealCeilImpl <em>Template Expression Real Ceil</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2461,6 +2892,22 @@ public interface ExpressionsPackage extends EPackage {
 		EClass TEMPLATE_EXPRESSION_REAL_CEIL = eINSTANCE.getTemplateExpressionRealCeil();
 
 		/**
+		 * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEMPLATE_EXPRESSION_REAL_CEIL__EXP = eINSTANCE.getTemplateExpressionRealCeil_Exp();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_CEIL___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealCeil__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealRoundImpl <em>Template Expression Real Round</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2469,6 +2916,22 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEMPLATE_EXPRESSION_REAL_ROUND = eINSTANCE.getTemplateExpressionRealRound();
+
+		/**
+		 * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEMPLATE_EXPRESSION_REAL_ROUND__EXP = eINSTANCE.getTemplateExpressionRealRound_Exp();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL_ROUND___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealRound__Evaluate__EList();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionRealIfThenElseImpl <em>Template Expression Real If Then Else</em>}' class.
@@ -2505,14 +2968,22 @@ public interface ExpressionsPackage extends EPackage {
 		EReference TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE__IF_FALSE = eINSTANCE.getTemplateExpressionRealIfThenElse_IfFalse();
 
 		/**
-		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionBooleanUnary <em>Template Expression Boolean Unary</em>}' class.
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tmdl.expressions.TemplateExpressionBooleanUnary
-		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBooleanUnary()
 		 * @generated
 		 */
-		EClass TEMPLATE_EXPRESSION_BOOLEAN_UNARY = eINSTANCE.getTemplateExpressionBooleanUnary();
+		EOperation TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionRealIfThenElse__Evaluate__EList();
+
+		/**
+		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionBooleanUnaryOperation <em>Template Expression Boolean Unary Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see tmdl.expressions.TemplateExpressionBooleanUnaryOperation
+		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBooleanUnaryOperation()
+		 * @generated
+		 */
+		EClass TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION = eINSTANCE.getTemplateExpressionBooleanUnaryOperation();
 
 		/**
 		 * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -2520,7 +2991,7 @@ public interface ExpressionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TEMPLATE_EXPRESSION_BOOLEAN_UNARY__EXP = eINSTANCE.getTemplateExpressionBooleanUnary_Exp();
+		EReference TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION__EXP = eINSTANCE.getTemplateExpressionBooleanUnaryOperation_Exp();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanNotImpl <em>Template Expression Boolean Not</em>}' class.
@@ -2533,6 +3004,14 @@ public interface ExpressionsPackage extends EPackage {
 		EClass TEMPLATE_EXPRESSION_BOOLEAN_NOT = eINSTANCE.getTemplateExpressionBooleanNot();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_BOOLEAN_NOT___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionBooleanNot__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanToIntegerImpl <em>Template Expression Boolean To Integer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2543,14 +3022,30 @@ public interface ExpressionsPackage extends EPackage {
 		EClass TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER = eINSTANCE.getTemplateExpressionBooleanToInteger();
 
 		/**
-		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionBooleanBinary <em>Template Expression Boolean Binary</em>}' class.
+		 * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see tmdl.expressions.TemplateExpressionBooleanBinary
-		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBooleanBinary()
 		 * @generated
 		 */
-		EClass TEMPLATE_EXPRESSION_BOOLEAN_BINARY = eINSTANCE.getTemplateExpressionBooleanBinary();
+		EReference TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER__EXP = eINSTANCE.getTemplateExpressionBooleanToInteger_Exp();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionBooleanToInteger__Evaluate__EList();
+
+		/**
+		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionBooleanBinaryOperation <em>Template Expression Boolean Binary Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see tmdl.expressions.TemplateExpressionBooleanBinaryOperation
+		 * @see tmdl.expressions.impl.ExpressionsPackageImpl#getTemplateExpressionBooleanBinaryOperation()
+		 * @generated
+		 */
+		EClass TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION = eINSTANCE.getTemplateExpressionBooleanBinaryOperation();
 
 		/**
 		 * The meta object literal for the '<em><b>Exp1</b></em>' containment reference feature.
@@ -2558,7 +3053,7 @@ public interface ExpressionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TEMPLATE_EXPRESSION_BOOLEAN_BINARY__EXP1 = eINSTANCE.getTemplateExpressionBooleanBinary_Exp1();
+		EReference TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP1 = eINSTANCE.getTemplateExpressionBooleanBinaryOperation_Exp1();
 
 		/**
 		 * The meta object literal for the '<em><b>Exp2</b></em>' containment reference feature.
@@ -2566,7 +3061,7 @@ public interface ExpressionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TEMPLATE_EXPRESSION_BOOLEAN_BINARY__EXP2 = eINSTANCE.getTemplateExpressionBooleanBinary_Exp2();
+		EReference TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP2 = eINSTANCE.getTemplateExpressionBooleanBinaryOperation_Exp2();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanAndImpl <em>Template Expression Boolean And</em>}' class.
@@ -2579,6 +3074,14 @@ public interface ExpressionsPackage extends EPackage {
 		EClass TEMPLATE_EXPRESSION_BOOLEAN_AND = eINSTANCE.getTemplateExpressionBooleanAnd();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_BOOLEAN_AND___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionBooleanAnd__Evaluate__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionBooleanOrImpl <em>Template Expression Boolean Or</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2587,6 +3090,14 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEMPLATE_EXPRESSION_BOOLEAN_OR = eINSTANCE.getTemplateExpressionBooleanOr();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_BOOLEAN_OR___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionBooleanOr__Evaluate__EList();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.ArrayAggregateKind <em>Array Aggregate Kind</em>}' enum.

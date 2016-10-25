@@ -142,7 +142,7 @@ public interface CorePackage extends EPackage {
 	int PARAMETER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute list.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -179,7 +179,7 @@ public interface CorePackage extends EPackage {
 	int PARAMETER_SIMPLE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute list.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -216,7 +216,7 @@ public interface CorePackage extends EPackage {
 	int PARAMETER_ARRAY = 4;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute list.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -336,13 +336,13 @@ public interface CorePackage extends EPackage {
 	int ASSIGNMENT_ARRAY__PARAMETER = ASSIGNMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * The feature id for the '<em><b>Values</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSIGNMENT_ARRAY__VALUE = ASSIGNMENT_FEATURE_COUNT + 1;
+	int ASSIGNMENT_ARRAY__VALUES = ASSIGNMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Assignment Array</em>' class.
@@ -553,10 +553,10 @@ public interface CorePackage extends EPackage {
 	EClass getParameter();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link tmdl.core.Parameter#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link tmdl.core.Parameter#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Name</em>'.
+	 * @return the meta object for the attribute '<em>Name</em>'.
 	 * @see tmdl.core.Parameter#getName()
 	 * @see #getParameter()
 	 * @generated
@@ -647,15 +647,15 @@ public interface CorePackage extends EPackage {
 	EReference getAssignmentArray_Parameter();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link tmdl.core.AssignmentArray#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute list '{@link tmdl.core.AssignmentArray#getValues <em>Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Value</em>'.
-	 * @see tmdl.core.AssignmentArray#getValue()
+	 * @return the meta object for the attribute list '<em>Values</em>'.
+	 * @see tmdl.core.AssignmentArray#getValues()
 	 * @see #getAssignmentArray()
 	 * @generated
 	 */
-	EAttribute getAssignmentArray_Value();
+	EAttribute getAssignmentArray_Values();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.core.Multiplicity <em>Multiplicity</em>}'.
@@ -800,7 +800,7 @@ public interface CorePackage extends EPackage {
 		EClass PARAMETER = eINSTANCE.getParameter();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -882,12 +882,12 @@ public interface CorePackage extends EPackage {
 		EReference ASSIGNMENT_ARRAY__PARAMETER = eINSTANCE.getAssignmentArray_Parameter();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ASSIGNMENT_ARRAY__VALUE = eINSTANCE.getAssignmentArray_Value();
+		EAttribute ASSIGNMENT_ARRAY__VALUES = eINSTANCE.getAssignmentArray_Values();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.core.Multiplicity <em>Multiplicity</em>}' class.

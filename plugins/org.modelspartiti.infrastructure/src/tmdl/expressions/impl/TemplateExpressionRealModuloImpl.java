@@ -7,9 +7,12 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.WrappedException;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -18,7 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import tmdl.core.Assignment;
 
 import tmdl.expressions.ExpressionsPackage;
-import tmdl.expressions.TemplateExpressionReal;
+import tmdl.expressions.TemplateExpressionInteger;
 import tmdl.expressions.TemplateExpressionRealModulo;
 
 /**
@@ -44,7 +47,7 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 * @ordered
 	 */
-	protected TemplateExpressionReal exp1;
+	protected TemplateExpressionInteger exp1;
 
 	/**
 	 * The cached value of the '{@link #getExp2() <em>Exp2</em>}' containment reference.
@@ -54,7 +57,7 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 * @ordered
 	 */
-	protected TemplateExpressionReal exp2;
+	protected TemplateExpressionInteger exp2;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,7 +83,7 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TemplateExpressionReal getExp1() {
+	public TemplateExpressionInteger getExp1() {
 		return exp1;
 	}
 
@@ -89,8 +92,8 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExp1(TemplateExpressionReal newExp1, NotificationChain msgs) {
-		TemplateExpressionReal oldExp1 = exp1;
+	public NotificationChain basicSetExp1(TemplateExpressionInteger newExp1, NotificationChain msgs) {
+		TemplateExpressionInteger oldExp1 = exp1;
 		exp1 = newExp1;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_MODULO__EXP1, oldExp1, newExp1);
@@ -104,7 +107,7 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExp1(TemplateExpressionReal newExp1) {
+	public void setExp1(TemplateExpressionInteger newExp1) {
 		if (newExp1 != exp1) {
 			NotificationChain msgs = null;
 			if (exp1 != null)
@@ -123,7 +126,7 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TemplateExpressionReal getExp2() {
+	public TemplateExpressionInteger getExp2() {
 		return exp2;
 	}
 
@@ -132,8 +135,8 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExp2(TemplateExpressionReal newExp2, NotificationChain msgs) {
-		TemplateExpressionReal oldExp2 = exp2;
+	public NotificationChain basicSetExp2(TemplateExpressionInteger newExp2, NotificationChain msgs) {
+		TemplateExpressionInteger oldExp2 = exp2;
 		exp2 = newExp2;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_MODULO__EXP2, oldExp2, newExp2);
@@ -147,7 +150,7 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExp2(TemplateExpressionReal newExp2) {
+	public void setExp2(TemplateExpressionInteger newExp2) {
 		if (newExp2 != exp2) {
 			NotificationChain msgs = null;
 			if (exp2 != null)
@@ -162,14 +165,27 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #evaluate(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate EVALUATE_ELIST__EINVOCATION_DELEGATE = ((EOperation.Internal)ExpressionsPackage.Literals.TEMPLATE_EXPRESSION_REAL_MODULO___EVALUATE__ELIST).getInvocationDelegate();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double evaluate(EList<Assignment> assignments) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int evaluate(EList<Assignment> assignments) {
+		try {
+			return (Integer)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
 	}
 
 	/**
@@ -213,10 +229,10 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_MODULO__EXP1:
-				setExp1((TemplateExpressionReal)newValue);
+				setExp1((TemplateExpressionInteger)newValue);
 				return;
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_MODULO__EXP2:
-				setExp2((TemplateExpressionReal)newValue);
+				setExp2((TemplateExpressionInteger)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -231,10 +247,10 @@ public class TemplateExpressionRealModuloImpl extends MinimalEObjectImpl.Contain
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_MODULO__EXP1:
-				setExp1((TemplateExpressionReal)null);
+				setExp1((TemplateExpressionInteger)null);
 				return;
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_MODULO__EXP2:
-				setExp2((TemplateExpressionReal)null);
+				setExp2((TemplateExpressionInteger)null);
 				return;
 		}
 		super.eUnset(featureID);

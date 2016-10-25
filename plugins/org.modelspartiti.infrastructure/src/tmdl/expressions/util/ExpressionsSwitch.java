@@ -165,18 +165,18 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_BINARY: {
-				TemplateExpressionRealBinary templateExpressionRealBinary = (TemplateExpressionRealBinary)theEObject;
-				T result = caseTemplateExpressionRealBinary(templateExpressionRealBinary);
-				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealBinary);
-				if (result == null) result = caseTemplateExpression(templateExpressionRealBinary);
+			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION: {
+				TemplateExpressionRealBinaryOperation templateExpressionRealBinaryOperation = (TemplateExpressionRealBinaryOperation)theEObject;
+				T result = caseTemplateExpressionRealBinaryOperation(templateExpressionRealBinaryOperation);
+				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealBinaryOperation);
+				if (result == null) result = caseTemplateExpression(templateExpressionRealBinaryOperation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_SUM: {
 				TemplateExpressionRealSum templateExpressionRealSum = (TemplateExpressionRealSum)theEObject;
 				T result = caseTemplateExpressionRealSum(templateExpressionRealSum);
-				if (result == null) result = caseTemplateExpressionRealBinary(templateExpressionRealSum);
+				if (result == null) result = caseTemplateExpressionRealBinaryOperation(templateExpressionRealSum);
 				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealSum);
 				if (result == null) result = caseTemplateExpression(templateExpressionRealSum);
 				if (result == null) result = defaultCase(theEObject);
@@ -185,7 +185,7 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_SUBTRACT: {
 				TemplateExpressionRealSubtract templateExpressionRealSubtract = (TemplateExpressionRealSubtract)theEObject;
 				T result = caseTemplateExpressionRealSubtract(templateExpressionRealSubtract);
-				if (result == null) result = caseTemplateExpressionRealBinary(templateExpressionRealSubtract);
+				if (result == null) result = caseTemplateExpressionRealBinaryOperation(templateExpressionRealSubtract);
 				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealSubtract);
 				if (result == null) result = caseTemplateExpression(templateExpressionRealSubtract);
 				if (result == null) result = defaultCase(theEObject);
@@ -194,7 +194,7 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_MULTIPLY: {
 				TemplateExpressionRealMultiply templateExpressionRealMultiply = (TemplateExpressionRealMultiply)theEObject;
 				T result = caseTemplateExpressionRealMultiply(templateExpressionRealMultiply);
-				if (result == null) result = caseTemplateExpressionRealBinary(templateExpressionRealMultiply);
+				if (result == null) result = caseTemplateExpressionRealBinaryOperation(templateExpressionRealMultiply);
 				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealMultiply);
 				if (result == null) result = caseTemplateExpression(templateExpressionRealMultiply);
 				if (result == null) result = defaultCase(theEObject);
@@ -203,7 +203,7 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_DIVIDE: {
 				TemplateExpressionRealDivide templateExpressionRealDivide = (TemplateExpressionRealDivide)theEObject;
 				T result = caseTemplateExpressionRealDivide(templateExpressionRealDivide);
-				if (result == null) result = caseTemplateExpressionRealBinary(templateExpressionRealDivide);
+				if (result == null) result = caseTemplateExpressionRealBinaryOperation(templateExpressionRealDivide);
 				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealDivide);
 				if (result == null) result = caseTemplateExpression(templateExpressionRealDivide);
 				if (result == null) result = defaultCase(theEObject);
@@ -212,8 +212,7 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_MODULO: {
 				TemplateExpressionRealModulo templateExpressionRealModulo = (TemplateExpressionRealModulo)theEObject;
 				T result = caseTemplateExpressionRealModulo(templateExpressionRealModulo);
-				if (result == null) result = caseTemplateExpressionRealBinary(templateExpressionRealModulo);
-				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealModulo);
+				if (result == null) result = caseTemplateExpressionInteger(templateExpressionRealModulo);
 				if (result == null) result = caseTemplateExpression(templateExpressionRealModulo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -229,8 +228,7 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_FLOOR: {
 				TemplateExpressionRealFloor templateExpressionRealFloor = (TemplateExpressionRealFloor)theEObject;
 				T result = caseTemplateExpressionRealFloor(templateExpressionRealFloor);
-				if (result == null) result = caseTemplateExpressionRealUnary(templateExpressionRealFloor);
-				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealFloor);
+				if (result == null) result = caseTemplateExpressionInteger(templateExpressionRealFloor);
 				if (result == null) result = caseTemplateExpression(templateExpressionRealFloor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -238,8 +236,7 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_CEIL: {
 				TemplateExpressionRealCeil templateExpressionRealCeil = (TemplateExpressionRealCeil)theEObject;
 				T result = caseTemplateExpressionRealCeil(templateExpressionRealCeil);
-				if (result == null) result = caseTemplateExpressionRealUnary(templateExpressionRealCeil);
-				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealCeil);
+				if (result == null) result = caseTemplateExpressionInteger(templateExpressionRealCeil);
 				if (result == null) result = caseTemplateExpression(templateExpressionRealCeil);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -247,8 +244,7 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_REAL_ROUND: {
 				TemplateExpressionRealRound templateExpressionRealRound = (TemplateExpressionRealRound)theEObject;
 				T result = caseTemplateExpressionRealRound(templateExpressionRealRound);
-				if (result == null) result = caseTemplateExpressionRealUnary(templateExpressionRealRound);
-				if (result == null) result = caseTemplateExpressionReal(templateExpressionRealRound);
+				if (result == null) result = caseTemplateExpressionInteger(templateExpressionRealRound);
 				if (result == null) result = caseTemplateExpression(templateExpressionRealRound);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -261,18 +257,18 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_UNARY: {
-				TemplateExpressionBooleanUnary templateExpressionBooleanUnary = (TemplateExpressionBooleanUnary)theEObject;
-				T result = caseTemplateExpressionBooleanUnary(templateExpressionBooleanUnary);
-				if (result == null) result = caseTemplateExpressionBoolean(templateExpressionBooleanUnary);
-				if (result == null) result = caseTemplateExpression(templateExpressionBooleanUnary);
+			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION: {
+				TemplateExpressionBooleanUnaryOperation templateExpressionBooleanUnaryOperation = (TemplateExpressionBooleanUnaryOperation)theEObject;
+				T result = caseTemplateExpressionBooleanUnaryOperation(templateExpressionBooleanUnaryOperation);
+				if (result == null) result = caseTemplateExpressionBoolean(templateExpressionBooleanUnaryOperation);
+				if (result == null) result = caseTemplateExpression(templateExpressionBooleanUnaryOperation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_NOT: {
 				TemplateExpressionBooleanNot templateExpressionBooleanNot = (TemplateExpressionBooleanNot)theEObject;
 				T result = caseTemplateExpressionBooleanNot(templateExpressionBooleanNot);
-				if (result == null) result = caseTemplateExpressionBooleanUnary(templateExpressionBooleanNot);
+				if (result == null) result = caseTemplateExpressionBooleanUnaryOperation(templateExpressionBooleanNot);
 				if (result == null) result = caseTemplateExpressionBoolean(templateExpressionBooleanNot);
 				if (result == null) result = caseTemplateExpression(templateExpressionBooleanNot);
 				if (result == null) result = defaultCase(theEObject);
@@ -281,24 +277,23 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER: {
 				TemplateExpressionBooleanToInteger templateExpressionBooleanToInteger = (TemplateExpressionBooleanToInteger)theEObject;
 				T result = caseTemplateExpressionBooleanToInteger(templateExpressionBooleanToInteger);
-				if (result == null) result = caseTemplateExpressionBooleanUnary(templateExpressionBooleanToInteger);
-				if (result == null) result = caseTemplateExpressionBoolean(templateExpressionBooleanToInteger);
+				if (result == null) result = caseTemplateExpressionInteger(templateExpressionBooleanToInteger);
 				if (result == null) result = caseTemplateExpression(templateExpressionBooleanToInteger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_BINARY: {
-				TemplateExpressionBooleanBinary templateExpressionBooleanBinary = (TemplateExpressionBooleanBinary)theEObject;
-				T result = caseTemplateExpressionBooleanBinary(templateExpressionBooleanBinary);
-				if (result == null) result = caseTemplateExpressionBoolean(templateExpressionBooleanBinary);
-				if (result == null) result = caseTemplateExpression(templateExpressionBooleanBinary);
+			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION: {
+				TemplateExpressionBooleanBinaryOperation templateExpressionBooleanBinaryOperation = (TemplateExpressionBooleanBinaryOperation)theEObject;
+				T result = caseTemplateExpressionBooleanBinaryOperation(templateExpressionBooleanBinaryOperation);
+				if (result == null) result = caseTemplateExpressionBoolean(templateExpressionBooleanBinaryOperation);
+				if (result == null) result = caseTemplateExpression(templateExpressionBooleanBinaryOperation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_AND: {
 				TemplateExpressionBooleanAnd templateExpressionBooleanAnd = (TemplateExpressionBooleanAnd)theEObject;
 				T result = caseTemplateExpressionBooleanAnd(templateExpressionBooleanAnd);
-				if (result == null) result = caseTemplateExpressionBooleanBinary(templateExpressionBooleanAnd);
+				if (result == null) result = caseTemplateExpressionBooleanBinaryOperation(templateExpressionBooleanAnd);
 				if (result == null) result = caseTemplateExpressionBoolean(templateExpressionBooleanAnd);
 				if (result == null) result = caseTemplateExpression(templateExpressionBooleanAnd);
 				if (result == null) result = defaultCase(theEObject);
@@ -307,7 +302,7 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_OR: {
 				TemplateExpressionBooleanOr templateExpressionBooleanOr = (TemplateExpressionBooleanOr)theEObject;
 				T result = caseTemplateExpressionBooleanOr(templateExpressionBooleanOr);
-				if (result == null) result = caseTemplateExpressionBooleanBinary(templateExpressionBooleanOr);
+				if (result == null) result = caseTemplateExpressionBooleanBinaryOperation(templateExpressionBooleanOr);
 				if (result == null) result = caseTemplateExpressionBoolean(templateExpressionBooleanOr);
 				if (result == null) result = caseTemplateExpression(templateExpressionBooleanOr);
 				if (result == null) result = defaultCase(theEObject);
@@ -513,17 +508,17 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Template Expression Real Binary</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Template Expression Real Binary Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Template Expression Real Binary</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Template Expression Real Binary Operation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTemplateExpressionRealBinary(TemplateExpressionRealBinary object) {
+	public T caseTemplateExpressionRealBinaryOperation(TemplateExpressionRealBinaryOperation object) {
 		return null;
 	}
 
@@ -678,17 +673,17 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Template Expression Boolean Unary</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Template Expression Boolean Unary Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Template Expression Boolean Unary</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Template Expression Boolean Unary Operation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTemplateExpressionBooleanUnary(TemplateExpressionBooleanUnary object) {
+	public T caseTemplateExpressionBooleanUnaryOperation(TemplateExpressionBooleanUnaryOperation object) {
 		return null;
 	}
 
@@ -723,17 +718,17 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Template Expression Boolean Binary</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Template Expression Boolean Binary Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Template Expression Boolean Binary</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Template Expression Boolean Binary Operation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTemplateExpressionBooleanBinary(TemplateExpressionBooleanBinary object) {
+	public T caseTemplateExpressionBooleanBinaryOperation(TemplateExpressionBooleanBinaryOperation object) {
 		return null;
 	}
 

@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link tmdl.core.AssignmentArray#getParameter <em>Parameter</em>}</li>
- *   <li>{@link tmdl.core.AssignmentArray#getValue <em>Value</em>}</li>
+ *   <li>{@link tmdl.core.AssignmentArray#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,19 +49,19 @@ public interface AssignmentArray extends Assignment {
 	void setParameter(ParameterArray value);
 
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Values</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Double}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Values</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute list.
-	 * @see tmdl.core.CorePackage#getAssignmentArray_Value()
+	 * @return the value of the '<em>Values</em>' attribute list.
+	 * @see tmdl.core.CorePackage#getAssignmentArray_Values()
 	 * @model
 	 * @generated
 	 */
-	EList<Double> getValue();
+	EList<Double> getValues();
 
 } // AssignmentArray

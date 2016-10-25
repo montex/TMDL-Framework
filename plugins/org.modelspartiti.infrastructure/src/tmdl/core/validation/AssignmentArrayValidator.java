@@ -18,5 +18,7 @@ public interface AssignmentArrayValidator {
 	boolean validate();
 
 	boolean validateParameter(ParameterArray value);
+	boolean validateValues(EList<Double> value);
+
 	boolean validateValue(EList<Double> value);
 }

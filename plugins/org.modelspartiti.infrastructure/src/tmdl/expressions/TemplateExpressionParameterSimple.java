@@ -2,6 +2,9 @@
  */
 package tmdl.expressions;
 
+import org.eclipse.emf.common.util.EList;
+
+import tmdl.core.Assignment;
 import tmdl.core.ParameterSimple;
 
 /**
@@ -46,5 +49,14 @@ public interface TemplateExpressionParameterSimple extends TemplateExpressionRea
 	 * @generated
 	 */
 	void setParameter(ParameterSimple value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='assignments->select(as | as.oclIsTypeOf(core::AssignmentSimple))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentSimple).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentSimple).value'"
+	 * @generated
+	 */
+	double evaluate(EList<Assignment> assignments);
 
 } // TemplateExpressionParameterSimple

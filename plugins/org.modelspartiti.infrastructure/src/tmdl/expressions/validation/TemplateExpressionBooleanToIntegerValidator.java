@@ -4,6 +4,7 @@
  */
 package tmdl.expressions.validation;
 
+import tmdl.expressions.TemplateExpressionBoolean;
 
 /**
  * A sample validator interface for {@link tmdl.expressions.TemplateExpressionBooleanToInteger}.
@@ -14,4 +15,5 @@ package tmdl.expressions.validation;
 public interface TemplateExpressionBooleanToIntegerValidator {
 	boolean validate();
 
+	boolean validateExp(TemplateExpressionBoolean value);
 }

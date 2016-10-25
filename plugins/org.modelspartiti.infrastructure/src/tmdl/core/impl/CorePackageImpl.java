@@ -331,7 +331,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAssignmentArray_Value() {
+	public EAttribute getAssignmentArray_Values() {
 		return (EAttribute)assignmentArrayEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -447,7 +447,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		assignmentArrayEClass = createEClass(ASSIGNMENT_ARRAY);
 		createEReference(assignmentArrayEClass, ASSIGNMENT_ARRAY__PARAMETER);
-		createEAttribute(assignmentArrayEClass, ASSIGNMENT_ARRAY__VALUE);
+		createEAttribute(assignmentArrayEClass, ASSIGNMENT_ARRAY__VALUES);
 
 		multiplicityEClass = createEClass(MULTIPLICITY);
 
@@ -508,7 +508,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		addEParameter(op, this.getAssignment(), "parameterValues", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(parameterEClass, Parameter.class, "Parameter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, -1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 1, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterSimpleEClass, ParameterSimple.class, "ParameterSimple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -522,7 +522,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		initEClass(assignmentArrayEClass, AssignmentArray.class, "AssignmentArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssignmentArray_Parameter(), this.getParameterArray(), null, "parameter", null, 1, 1, AssignmentArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssignmentArray_Value(), ecorePackage.getEDouble(), "value", null, 0, -1, AssignmentArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssignmentArray_Values(), ecorePackage.getEDouble(), "values", null, 0, -1, AssignmentArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

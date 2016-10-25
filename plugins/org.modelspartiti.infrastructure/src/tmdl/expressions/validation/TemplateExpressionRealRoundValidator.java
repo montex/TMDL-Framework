@@ -4,6 +4,7 @@
  */
 package tmdl.expressions.validation;
 
+import tmdl.expressions.TemplateExpressionReal;
 
 /**
  * A sample validator interface for {@link tmdl.expressions.TemplateExpressionRealRound}.
@@ -14,4 +15,5 @@ package tmdl.expressions.validation;
 public interface TemplateExpressionRealRoundValidator {
 	boolean validate();
 
+	boolean validateExp(TemplateExpressionReal value);
 }
