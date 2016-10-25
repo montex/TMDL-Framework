@@ -2,7 +2,11 @@
  */
 package tmdl.expressions.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -10,6 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import tmdl.core.Assignment;
 import tmdl.core.ParameterSimple;
 
 import tmdl.expressions.ExpressionsPackage;
@@ -101,6 +106,17 @@ public class TemplateExpressionParameterSimpleImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double evaluate(EList<Assignment> assignments) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -153,6 +169,21 @@ public class TemplateExpressionParameterSimpleImpl extends MinimalEObjectImpl.Co
 				return parameter != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ExpressionsPackage.TEMPLATE_EXPRESSION_PARAMETER_SIMPLE___EVALUATE__ELIST:
+				return evaluate((EList<Assignment>)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //TemplateExpressionParameterSimpleImpl

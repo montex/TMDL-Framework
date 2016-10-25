@@ -156,11 +156,23 @@
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpression" abstract="true"
         interface="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionInteger" abstract="true"
-        interface="true" eSuperTypes="#//expressions/TemplateExpression"/>
+        interface="true" eSuperTypes="#//expressions/TemplateExpression">
+      <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eParameters name="assignments" upperBound="-1" eType="#//core/Assignment"/>
+      </eOperations>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionReal" abstract="true"
-        interface="true" eSuperTypes="#//expressions/TemplateExpression"/>
+        interface="true" eSuperTypes="#//expressions/TemplateExpression">
+      <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eParameters name="assignments" upperBound="-1" eType="#//core/Assignment"/>
+      </eOperations>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionBoolean" abstract="true"
-        interface="true" eSuperTypes="#//expressions/TemplateExpression"/>
+        interface="true" eSuperTypes="#//expressions/TemplateExpression">
+      <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="assignments" upperBound="-1" eType="#//core/Assignment"/>
+      </eOperations>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionIntegerLiteral"
         eSuperTypes="#//expressions/TemplateExpressionInteger">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
@@ -215,7 +227,7 @@
       <eLiterals name="sum" value="4"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionRealBinary" abstract="true"
-        eSuperTypes="#//expressions/TemplateExpressionReal">
+        interface="true" eSuperTypes="#//expressions/TemplateExpressionReal">
       <eStructuralFeatures xsi:type="ecore:EReference" name="exp1" lowerBound="1"
           eType="#//expressions/TemplateExpressionReal" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="exp2" lowerBound="1"
@@ -227,7 +239,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionRealDivide" eSuperTypes="#//expressions/TemplateExpressionRealBinary"/>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionRealModulo" eSuperTypes="#//expressions/TemplateExpressionRealBinary"/>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionRealUnary" abstract="true"
-        eSuperTypes="#//expressions/TemplateExpressionReal">
+        interface="true" eSuperTypes="#//expressions/TemplateExpressionReal">
       <eStructuralFeatures xsi:type="ecore:EReference" name="exp" lowerBound="1" eType="#//expressions/TemplateExpressionReal"
           containment="true"/>
     </eClassifiers>
@@ -244,7 +256,7 @@
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionBooleanUnary" abstract="true"
-        eSuperTypes="#//expressions/TemplateExpressionBoolean">
+        interface="true" eSuperTypes="#//expressions/TemplateExpressionBoolean">
       <eStructuralFeatures xsi:type="ecore:EReference" name="exp" lowerBound="1" eType="#//expressions/TemplateExpressionBoolean"
           containment="true"/>
     </eClassifiers>
@@ -252,7 +264,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionBooleanToInteger"
         eSuperTypes="#//expressions/TemplateExpressionBooleanUnary"/>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionBooleanBinary" abstract="true"
-        eSuperTypes="#//expressions/TemplateExpressionBoolean">
+        interface="true" eSuperTypes="#//expressions/TemplateExpressionBoolean">
       <eStructuralFeatures xsi:type="ecore:EReference" name="exp1" lowerBound="1"
           eType="#//expressions/TemplateExpressionBoolean" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="exp2" lowerBound="1"

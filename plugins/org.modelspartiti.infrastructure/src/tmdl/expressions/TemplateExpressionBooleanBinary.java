@@ -17,7 +17,7 @@ package tmdl.expressions;
  * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionBooleanBinary()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface TemplateExpressionBooleanBinary extends TemplateExpressionBoolean {

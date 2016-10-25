@@ -16,7 +16,7 @@ package tmdl.expressions;
  * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionRealUnary()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface TemplateExpressionRealUnary extends TemplateExpressionReal {

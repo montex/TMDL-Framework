@@ -5,6 +5,7 @@ package tmdl.expressions.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -375,6 +376,15 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getTemplateExpressionInteger__Evaluate__EList() {
+		return templateExpressionIntegerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTemplateExpressionReal() {
 		return templateExpressionRealEClass;
 	}
@@ -384,8 +394,26 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getTemplateExpressionReal__Evaluate__EList() {
+		return templateExpressionRealEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTemplateExpressionBoolean() {
 		return templateExpressionBooleanEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTemplateExpressionBoolean__Evaluate__EList() {
+		return templateExpressionBooleanEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -842,10 +870,13 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		templateExpressionEClass = createEClass(TEMPLATE_EXPRESSION);
 
 		templateExpressionIntegerEClass = createEClass(TEMPLATE_EXPRESSION_INTEGER);
+		createEOperation(templateExpressionIntegerEClass, TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST);
 
 		templateExpressionRealEClass = createEClass(TEMPLATE_EXPRESSION_REAL);
+		createEOperation(templateExpressionRealEClass, TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST);
 
 		templateExpressionBooleanEClass = createEClass(TEMPLATE_EXPRESSION_BOOLEAN);
+		createEOperation(templateExpressionBooleanEClass, TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST);
 
 		templateExpressionIntegerLiteralEClass = createEClass(TEMPLATE_EXPRESSION_INTEGER_LITERAL);
 		createEAttribute(templateExpressionIntegerLiteralEClass, TEMPLATE_EXPRESSION_INTEGER_LITERAL__VALUE);
@@ -989,9 +1020,18 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 
 		initEClass(templateExpressionIntegerEClass, TemplateExpressionInteger.class, "TemplateExpressionInteger", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		EOperation op = initEOperation(getTemplateExpressionInteger__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(templateExpressionRealEClass, TemplateExpressionReal.class, "TemplateExpressionReal", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		op = initEOperation(getTemplateExpressionReal__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(templateExpressionBooleanEClass, TemplateExpressionBoolean.class, "TemplateExpressionBoolean", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getTemplateExpressionBoolean__Evaluate__EList(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(templateExpressionIntegerLiteralEClass, TemplateExpressionIntegerLiteral.class, "TemplateExpressionIntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTemplateExpressionIntegerLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, TemplateExpressionIntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1022,7 +1062,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		initEReference(getTemplateExpressionArrayAggregate_Parameter(), theCorePackage.getParameterArray(), null, "parameter", null, 1, 1, TemplateExpressionArrayAggregate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTemplateExpressionArrayAggregate_Function(), this.getArrayAggregateKind(), "function", null, 0, 1, TemplateExpressionArrayAggregate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(templateExpressionRealBinaryEClass, TemplateExpressionRealBinary.class, "TemplateExpressionRealBinary", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(templateExpressionRealBinaryEClass, TemplateExpressionRealBinary.class, "TemplateExpressionRealBinary", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionRealBinary_Exp1(), this.getTemplateExpressionReal(), null, "exp1", null, 1, 1, TemplateExpressionRealBinary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTemplateExpressionRealBinary_Exp2(), this.getTemplateExpressionReal(), null, "exp2", null, 1, 1, TemplateExpressionRealBinary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1036,7 +1076,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 
 		initEClass(templateExpressionRealModuloEClass, TemplateExpressionRealModulo.class, "TemplateExpressionRealModulo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(templateExpressionRealUnaryEClass, TemplateExpressionRealUnary.class, "TemplateExpressionRealUnary", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(templateExpressionRealUnaryEClass, TemplateExpressionRealUnary.class, "TemplateExpressionRealUnary", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionRealUnary_Exp(), this.getTemplateExpressionReal(), null, "exp", null, 1, 1, TemplateExpressionRealUnary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(templateExpressionRealFloorEClass, TemplateExpressionRealFloor.class, "TemplateExpressionRealFloor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1050,14 +1090,14 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		initEReference(getTemplateExpressionRealIfThenElse_IfTrue(), this.getTemplateExpressionReal(), null, "ifTrue", null, 1, 1, TemplateExpressionRealIfThenElse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTemplateExpressionRealIfThenElse_IfFalse(), this.getTemplateExpressionReal(), null, "ifFalse", null, 0, 1, TemplateExpressionRealIfThenElse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(templateExpressionBooleanUnaryEClass, TemplateExpressionBooleanUnary.class, "TemplateExpressionBooleanUnary", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(templateExpressionBooleanUnaryEClass, TemplateExpressionBooleanUnary.class, "TemplateExpressionBooleanUnary", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionBooleanUnary_Exp(), this.getTemplateExpressionBoolean(), null, "exp", null, 1, 1, TemplateExpressionBooleanUnary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(templateExpressionBooleanNotEClass, TemplateExpressionBooleanNot.class, "TemplateExpressionBooleanNot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(templateExpressionBooleanToIntegerEClass, TemplateExpressionBooleanToInteger.class, "TemplateExpressionBooleanToInteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(templateExpressionBooleanBinaryEClass, TemplateExpressionBooleanBinary.class, "TemplateExpressionBooleanBinary", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(templateExpressionBooleanBinaryEClass, TemplateExpressionBooleanBinary.class, "TemplateExpressionBooleanBinary", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionBooleanBinary_Exp1(), this.getTemplateExpressionBoolean(), null, "exp1", null, 1, 1, TemplateExpressionBooleanBinary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTemplateExpressionBooleanBinary_Exp2(), this.getTemplateExpressionBoolean(), null, "exp2", null, 1, 1, TemplateExpressionBooleanBinary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

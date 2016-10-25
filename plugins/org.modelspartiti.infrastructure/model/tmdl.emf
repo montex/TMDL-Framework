@@ -146,13 +146,17 @@ package expressions {
   }
 
   abstract interface TemplateExpressionInteger extends TemplateExpression {
+    op int[1] evaluate(core.Assignment[*] assignments);
   }
-
+ 
   abstract interface TemplateExpressionReal extends TemplateExpression {
+    op double[1] evaluate(core.Assignment[*] assignments);
+  }
+ 
+  abstract interface TemplateExpressionBoolean extends TemplateExpression {
+    op boolean[1] evaluate(core.Assignment[*] assignments);
   }
 
-  abstract interface TemplateExpressionBoolean extends TemplateExpression {
-  }
 
   class TemplateExpressionIntegerLiteral extends TemplateExpressionInteger {
     attr int[1] value;
@@ -199,7 +203,7 @@ package expressions {
     sum = 4;
   }
 
-  abstract class TemplateExpressionRealBinary extends TemplateExpressionReal {
+  abstract interface TemplateExpressionRealBinary extends TemplateExpressionReal {
     val TemplateExpressionReal[1] exp1;
     val TemplateExpressionReal[1] exp2;
   }
@@ -219,7 +223,7 @@ package expressions {
   class TemplateExpressionRealModulo extends TemplateExpressionRealBinary {
   }
 
-  abstract class TemplateExpressionRealUnary extends TemplateExpressionReal {
+  abstract interface TemplateExpressionRealUnary extends TemplateExpressionReal {
     val TemplateExpressionReal[1] exp;
   }
 
@@ -238,7 +242,7 @@ package expressions {
     val TemplateExpressionReal ifFalse;
   }
 
-  abstract class TemplateExpressionBooleanUnary extends TemplateExpressionBoolean {
+  abstract interface TemplateExpressionBooleanUnary extends TemplateExpressionBoolean {
     val TemplateExpressionBoolean[1] exp;
   }
 
@@ -248,7 +252,7 @@ package expressions {
   class TemplateExpressionBooleanToInteger extends TemplateExpressionBooleanUnary {
   }
 
-  abstract class TemplateExpressionBooleanBinary extends TemplateExpressionBoolean {
+  abstract interface TemplateExpressionBooleanBinary extends TemplateExpressionBoolean {
     val TemplateExpressionBoolean[1] exp1;
     val TemplateExpressionBoolean[1] exp2;
   }
