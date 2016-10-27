@@ -2,6 +2,8 @@
  */
 package tmdl.core;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -45,5 +47,14 @@ public interface MultiplicityValue extends Multiplicity {
 	 * @generated
 	 */
 	void setValue(double value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model assignmentsMany="true" assignmentsOrdered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\t\tif value = 0 then Sequence{}\n\t\t\t\telse Sequence{1..value} endif'"
+	 * @generated
+	 */
+	EList<Integer> asSequence(EList<Assignment> assignments);
 
 } // MultiplicityValue

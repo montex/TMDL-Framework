@@ -58,7 +58,7 @@ public interface AssignmentSimple extends Assignment {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(double)
 	 * @see tmdl.core.CorePackage#getAssignmentSimple_Value()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	double getValue();

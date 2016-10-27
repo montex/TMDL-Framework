@@ -1603,7 +1603,16 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE__ELIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 1;
+	int EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE = EXPRESSION_SEGMENT_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE__ELIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Expression Activity Cases Number</em>' class.
@@ -1612,7 +1621,7 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_ACTIVITY_CASES_NUMBER_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
+	int EXPRESSION_ACTIVITY_CASES_NUMBER_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link sant.impl.ExpressionPlaceTemplateSizeImpl <em>Expression Place Template Size</em>}' class.
@@ -1649,7 +1658,16 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 1;
+	int EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE = EXPRESSION_SEGMENT_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Expression Place Template Size</em>' class.
@@ -1658,7 +1676,7 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_PLACE_TEMPLATE_SIZE_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
+	int EXPRESSION_PLACE_TEMPLATE_SIZE_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link sant.impl.ExpressionIfThenElseImpl <em>Expression If Then Else</em>}' class.

@@ -189,6 +189,30 @@ public class TemplateExpressionBooleanOrImpl extends MinimalEObjectImpl.Containe
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #evaluate() <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #evaluate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate EVALUATE__EINVOCATION_DELEGATE = ((EOperation.Internal)ExpressionsPackage.Literals.TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int evaluate() {
+		try {
+			return (Integer)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -283,6 +307,8 @@ public class TemplateExpressionBooleanOrImpl extends MinimalEObjectImpl.Containe
 		switch (operationID) {
 			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_OR___EVALUATE__ELIST:
 				return evaluate((EList<Assignment>)arguments.get(0));
+			case ExpressionsPackage.TEMPLATE_EXPRESSION_BOOLEAN_OR___EVALUATE:
+				return evaluate();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

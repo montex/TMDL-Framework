@@ -114,6 +114,11 @@
   </eSubpackages>
   <eSubpackages name="core" nsURI="http://www.modelspartiti.org/infrastructure/tmdl/core"
       nsPrefix="core">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="ConcreteModel" abstract="true" interface="true">
       <eOperations name="templatize" lowerBound="1" eType="#//core/TemplateModel"/>
     </eClassifiers>
@@ -132,7 +137,8 @@
     <eClassifiers xsi:type="ecore:EClass" name="AssignmentSimple" eSuperTypes="#//core/Assignment">
       <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
           eType="#//core/ParameterSimple"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AssignmentArray" eSuperTypes="#//core/Assignment">
       <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
@@ -140,16 +146,43 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" upperBound="-1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Multiplicity" abstract="true" interface="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Multiplicity" abstract="true" interface="true">
+      <eOperations name="asSequence" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="body" value="asSequence(Assignment.allInstances())"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="asSequence" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
+      </eOperations>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MultiplicityValue" eSuperTypes="#//core/Multiplicity">
+      <eOperations name="asSequence" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="body" value="&#xA;&#x9;&#x9;&#x9;&#x9;if value = 0 then Sequence{}&#xA;&#x9;&#x9;&#x9;&#x9;else Sequence{1..value} endif"/>
+        </eAnnotations>
+        <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MultiplicityArray" eSuperTypes="#//core/Multiplicity">
+      <eOperations name="asSequence" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="body" value="values"/>
+        </eAnnotations>
+        <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" lowerBound="1"
-          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MultiplicityParametric" eSuperTypes="#//core/Multiplicity">
+      <eOperations name="asSequence" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="body" value="&#xA;&#x9;&#x9;&#x9;&#x9;if parameter.oclIsTypeOf(AssignmentSimple) then&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let v =&#x9;assignments->selectByType(AssignmentSimple)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->select(a | a.oclAsType(AssignmentSimple).parameter = self.parameter)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->asSequence()->first().oclAsType(AssignmentSimple).value&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if v = 0 then Sequence{} else Sequence{1..v} endif&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;assignments->selectByType(AssignmentArray)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->select(a | a.oclAsType(AssignmentArray).parameter = self.parameter)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->asSequence()->first().oclAsType(AssignmentArray).values&#xA;&#x9;&#x9;&#x9;&#x9;endif"/>
+        </eAnnotations>
+        <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
           eType="#//core/Parameter"/>
     </eClassifiers>
@@ -168,17 +201,32 @@
       <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
         <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
       </eOperations>
+      <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="body" value="evaluate(core::Assignment.allInstances())"/>
+        </eAnnotations>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionReal" abstract="true"
         interface="true" eSuperTypes="#//expressions/TemplateExpression">
       <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
         <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
       </eOperations>
+      <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="body" value="evaluate(core::Assignment.allInstances())"/>
+        </eAnnotations>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionBoolean" abstract="true"
         interface="true" eSuperTypes="#//expressions/TemplateExpression">
       <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
+      </eOperations>
+      <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="body" value="evaluate(core::Assignment.allInstances())"/>
+        </eAnnotations>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TemplateExpressionIntegerLiteral"

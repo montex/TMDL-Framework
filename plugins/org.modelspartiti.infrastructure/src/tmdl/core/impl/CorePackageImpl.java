@@ -349,6 +349,24 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getMultiplicity__AsSequence() {
+		return multiplicityEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMultiplicity__AsSequence__EList() {
+		return multiplicityEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMultiplicityValue() {
 		return multiplicityValueEClass;
 	}
@@ -360,6 +378,15 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 */
 	public EAttribute getMultiplicityValue_Value() {
 		return (EAttribute)multiplicityValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMultiplicityValue__AsSequence__EList() {
+		return multiplicityValueEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -385,6 +412,15 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getMultiplicityArray__AsSequence__EList() {
+		return multiplicityArrayEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMultiplicityParametric() {
 		return multiplicityParametricEClass;
 	}
@@ -396,6 +432,15 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 */
 	public EReference getMultiplicityParametric_Parameter() {
 		return (EReference)multiplicityParametricEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMultiplicityParametric__AsSequence__EList() {
+		return multiplicityParametricEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -450,15 +495,20 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		createEAttribute(assignmentArrayEClass, ASSIGNMENT_ARRAY__VALUES);
 
 		multiplicityEClass = createEClass(MULTIPLICITY);
+		createEOperation(multiplicityEClass, MULTIPLICITY___AS_SEQUENCE);
+		createEOperation(multiplicityEClass, MULTIPLICITY___AS_SEQUENCE__ELIST);
 
 		multiplicityValueEClass = createEClass(MULTIPLICITY_VALUE);
 		createEAttribute(multiplicityValueEClass, MULTIPLICITY_VALUE__VALUE);
+		createEOperation(multiplicityValueEClass, MULTIPLICITY_VALUE___AS_SEQUENCE__ELIST);
 
 		multiplicityArrayEClass = createEClass(MULTIPLICITY_ARRAY);
 		createEAttribute(multiplicityArrayEClass, MULTIPLICITY_ARRAY__VALUES);
+		createEOperation(multiplicityArrayEClass, MULTIPLICITY_ARRAY___AS_SEQUENCE__ELIST);
 
 		multiplicityParametricEClass = createEClass(MULTIPLICITY_PARAMETRIC);
 		createEReference(multiplicityParametricEClass, MULTIPLICITY_PARAMETRIC__PARAMETER);
+		createEOperation(multiplicityParametricEClass, MULTIPLICITY_PARAMETRIC___AS_SEQUENCE__ELIST);
 	}
 
 	/**
@@ -518,7 +568,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		initEClass(assignmentSimpleEClass, AssignmentSimple.class, "AssignmentSimple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssignmentSimple_Parameter(), this.getParameterSimple(), null, "parameter", null, 1, 1, AssignmentSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssignmentSimple_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, AssignmentSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssignmentSimple_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, AssignmentSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assignmentArrayEClass, AssignmentArray.class, "AssignmentArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssignmentArray_Parameter(), this.getParameterArray(), null, "parameter", null, 1, 1, AssignmentArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -526,17 +576,89 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		initEClass(multiplicityEClass, Multiplicity.class, "Multiplicity", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEOperation(getMultiplicity__AsSequence(), ecorePackage.getEInt(), "asSequence", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getMultiplicity__AsSequence__EList(), ecorePackage.getEInt(), "asSequence", 0, -1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(multiplicityValueEClass, MultiplicityValue.class, "MultiplicityValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMultiplicityValue_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, MultiplicityValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getMultiplicityValue__AsSequence__EList(), ecorePackage.getEInt(), "asSequence", 0, -1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(multiplicityArrayEClass, MultiplicityArray.class, "MultiplicityArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMultiplicityArray_Values(), ecorePackage.getEDouble(), "values", null, 1, -1, MultiplicityArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMultiplicityArray_Values(), ecorePackage.getEInt(), "values", null, 1, -1, MultiplicityArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getMultiplicityArray__AsSequence__EList(), ecorePackage.getEInt(), "asSequence", 0, -1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(multiplicityParametricEClass, MultiplicityParametric.class, "MultiplicityParametric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMultiplicityParametric_Parameter(), this.getParameter(), null, "parameter", null, 1, 1, MultiplicityParametric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getMultiplicityParametric__AsSequence__EList(), ecorePackage.getEInt(), "asSequence", 0, -1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (getMultiplicity__AsSequence(), 
+		   source, 
+		   new String[] {
+			 "body", "asSequence(Assignment.allInstances())"
+		   });	
+		addAnnotation
+		  (getMultiplicityValue__AsSequence__EList(), 
+		   source, 
+		   new String[] {
+			 "body", "\n\t\t\t\tif value = 0 then Sequence{}\n\t\t\t\telse Sequence{1..value} endif"
+		   });	
+		addAnnotation
+		  (getMultiplicityArray__AsSequence__EList(), 
+		   source, 
+		   new String[] {
+			 "body", "values"
+		   });	
+		addAnnotation
+		  (getMultiplicityParametric__AsSequence__EList(), 
+		   source, 
+		   new String[] {
+			 "body", "\n\t\t\t\tif parameter.oclIsTypeOf(AssignmentSimple) then\n\t\t\t\t\tlet v =\tassignments->selectByType(AssignmentSimple)\n\t\t\t\t\t\t\t\t->select(a | a.oclAsType(AssignmentSimple).parameter = self.parameter)\n\t\t\t\t\t\t\t\t->asSequence()->first().oclAsType(AssignmentSimple).value\n\t\t\t\t\tin\n\t\t\t\t\tif v = 0 then Sequence{} else Sequence{1..v} endif\n\t\t\t\telse\n\t\t\t\t\tassignments->selectByType(AssignmentArray)\n\t\t\t\t\t\t\t\t->select(a | a.oclAsType(AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t\t\t->asSequence()->first().oclAsType(AssignmentArray).values\n\t\t\t\tendif"
+		   });
 	}
 
 } //CorePackageImpl

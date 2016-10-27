@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see tmdl.core.CoreFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface CorePackage extends EPackage {
@@ -382,13 +383,31 @@ public interface CorePackage extends EPackage {
 	int MULTIPLICITY_FEATURE_COUNT = 0;
 
 	/**
+	 * The operation id for the '<em>As Sequence</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLICITY___AS_SEQUENCE = 0;
+
+	/**
+	 * The operation id for the '<em>As Sequence</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLICITY___AS_SEQUENCE__ELIST = 1;
+
+	/**
 	 * The number of operations of the '<em>Multiplicity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLICITY_OPERATION_COUNT = 0;
+	int MULTIPLICITY_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link tmdl.core.impl.MultiplicityValueImpl <em>Multiplicity Value</em>}' class.
@@ -419,13 +438,31 @@ public interface CorePackage extends EPackage {
 	int MULTIPLICITY_VALUE_FEATURE_COUNT = MULTIPLICITY_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>As Sequence</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLICITY_VALUE___AS_SEQUENCE = MULTIPLICITY___AS_SEQUENCE;
+
+	/**
+	 * The operation id for the '<em>As Sequence</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLICITY_VALUE___AS_SEQUENCE__ELIST = MULTIPLICITY_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Multiplicity Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLICITY_VALUE_OPERATION_COUNT = MULTIPLICITY_OPERATION_COUNT + 0;
+	int MULTIPLICITY_VALUE_OPERATION_COUNT = MULTIPLICITY_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.core.impl.MultiplicityArrayImpl <em>Multiplicity Array</em>}' class.
@@ -456,13 +493,31 @@ public interface CorePackage extends EPackage {
 	int MULTIPLICITY_ARRAY_FEATURE_COUNT = MULTIPLICITY_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>As Sequence</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLICITY_ARRAY___AS_SEQUENCE = MULTIPLICITY___AS_SEQUENCE;
+
+	/**
+	 * The operation id for the '<em>As Sequence</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLICITY_ARRAY___AS_SEQUENCE__ELIST = MULTIPLICITY_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Multiplicity Array</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLICITY_ARRAY_OPERATION_COUNT = MULTIPLICITY_OPERATION_COUNT + 0;
+	int MULTIPLICITY_ARRAY_OPERATION_COUNT = MULTIPLICITY_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link tmdl.core.impl.MultiplicityParametricImpl <em>Multiplicity Parametric</em>}' class.
@@ -493,13 +548,31 @@ public interface CorePackage extends EPackage {
 	int MULTIPLICITY_PARAMETRIC_FEATURE_COUNT = MULTIPLICITY_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>As Sequence</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLICITY_PARAMETRIC___AS_SEQUENCE = MULTIPLICITY___AS_SEQUENCE;
+
+	/**
+	 * The operation id for the '<em>As Sequence</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTIPLICITY_PARAMETRIC___AS_SEQUENCE__ELIST = MULTIPLICITY_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Multiplicity Parametric</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MULTIPLICITY_PARAMETRIC_OPERATION_COUNT = MULTIPLICITY_OPERATION_COUNT + 0;
+	int MULTIPLICITY_PARAMETRIC_OPERATION_COUNT = MULTIPLICITY_OPERATION_COUNT + 1;
 
 
 	/**
@@ -668,6 +741,26 @@ public interface CorePackage extends EPackage {
 	EClass getMultiplicity();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.core.Multiplicity#asSequence() <em>As Sequence</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>As Sequence</em>' operation.
+	 * @see tmdl.core.Multiplicity#asSequence()
+	 * @generated
+	 */
+	EOperation getMultiplicity__AsSequence();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.core.Multiplicity#asSequence(org.eclipse.emf.common.util.EList) <em>As Sequence</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>As Sequence</em>' operation.
+	 * @see tmdl.core.Multiplicity#asSequence(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getMultiplicity__AsSequence__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.core.MultiplicityValue <em>Multiplicity Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -687,6 +780,16 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMultiplicityValue_Value();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.core.MultiplicityValue#asSequence(org.eclipse.emf.common.util.EList) <em>As Sequence</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>As Sequence</em>' operation.
+	 * @see tmdl.core.MultiplicityValue#asSequence(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getMultiplicityValue__AsSequence__EList();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.core.MultiplicityArray <em>Multiplicity Array</em>}'.
@@ -710,6 +813,16 @@ public interface CorePackage extends EPackage {
 	EAttribute getMultiplicityArray_Values();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.core.MultiplicityArray#asSequence(org.eclipse.emf.common.util.EList) <em>As Sequence</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>As Sequence</em>' operation.
+	 * @see tmdl.core.MultiplicityArray#asSequence(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getMultiplicityArray__AsSequence__EList();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.core.MultiplicityParametric <em>Multiplicity Parametric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -729,6 +842,16 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMultiplicityParametric_Parameter();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.core.MultiplicityParametric#asSequence(org.eclipse.emf.common.util.EList) <em>As Sequence</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>As Sequence</em>' operation.
+	 * @see tmdl.core.MultiplicityParametric#asSequence(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getMultiplicityParametric__AsSequence__EList();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -900,6 +1023,22 @@ public interface CorePackage extends EPackage {
 		EClass MULTIPLICITY = eINSTANCE.getMultiplicity();
 
 		/**
+		 * The meta object literal for the '<em><b>As Sequence</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MULTIPLICITY___AS_SEQUENCE = eINSTANCE.getMultiplicity__AsSequence();
+
+		/**
+		 * The meta object literal for the '<em><b>As Sequence</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MULTIPLICITY___AS_SEQUENCE__ELIST = eINSTANCE.getMultiplicity__AsSequence__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.core.impl.MultiplicityValueImpl <em>Multiplicity Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -916,6 +1055,14 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MULTIPLICITY_VALUE__VALUE = eINSTANCE.getMultiplicityValue_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>As Sequence</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MULTIPLICITY_VALUE___AS_SEQUENCE__ELIST = eINSTANCE.getMultiplicityValue__AsSequence__EList();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.core.impl.MultiplicityArrayImpl <em>Multiplicity Array</em>}' class.
@@ -936,6 +1083,14 @@ public interface CorePackage extends EPackage {
 		EAttribute MULTIPLICITY_ARRAY__VALUES = eINSTANCE.getMultiplicityArray_Values();
 
 		/**
+		 * The meta object literal for the '<em><b>As Sequence</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MULTIPLICITY_ARRAY___AS_SEQUENCE__ELIST = eINSTANCE.getMultiplicityArray__AsSequence__EList();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.core.impl.MultiplicityParametricImpl <em>Multiplicity Parametric</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -952,6 +1107,14 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference MULTIPLICITY_PARAMETRIC__PARAMETER = eINSTANCE.getMultiplicityParametric_Parameter();
+
+		/**
+		 * The meta object literal for the '<em><b>As Sequence</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MULTIPLICITY_PARAMETRIC___AS_SEQUENCE__ELIST = eINSTANCE.getMultiplicityParametric__AsSequence__EList();
 
 	}
 

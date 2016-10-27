@@ -25,4 +25,13 @@ public interface TemplateExpressionBoolean extends TemplateExpression {
 	 */
 	boolean evaluate(EList<Assignment> assignments);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='evaluate(core::Assignment.allInstances())'"
+	 * @generated
+	 */
+	int evaluate();
+
 } // TemplateExpressionBoolean

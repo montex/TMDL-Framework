@@ -116,13 +116,22 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST = TEMPLATE_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_INTEGER___EVALUATE = TEMPLATE_EXPRESSION_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Template Expression Integer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT = TEMPLATE_EXPRESSION_OPERATION_COUNT + 1;
+	int TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT = TEMPLATE_EXPRESSION_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionReal <em>Template Expression Real</em>}' class.
@@ -153,13 +162,22 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_REAL___EVALUATE = TEMPLATE_EXPRESSION_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Template Expression Real</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_OPERATION_COUNT + 1;
+	int TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT = TEMPLATE_EXPRESSION_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.TemplateExpressionBoolean <em>Template Expression Boolean</em>}' class.
@@ -190,13 +208,22 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST = TEMPLATE_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE = TEMPLATE_EXPRESSION_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Template Expression Boolean</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_EXPRESSION_BOOLEAN_OPERATION_COUNT = TEMPLATE_EXPRESSION_OPERATION_COUNT + 1;
+	int TEMPLATE_EXPRESSION_BOOLEAN_OPERATION_COUNT = TEMPLATE_EXPRESSION_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link tmdl.expressions.impl.TemplateExpressionIntegerLiteralImpl <em>Template Expression Integer Literal</em>}' class.
@@ -225,6 +252,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_INTEGER_LITERAL_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_INTEGER_LITERAL___EVALUATE = TEMPLATE_EXPRESSION_INTEGER___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -279,6 +315,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TEMPLATE_EXPRESSION_REAL_LITERAL___EVALUATE = TEMPLATE_EXPRESSION_REAL___EVALUATE;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TEMPLATE_EXPRESSION_REAL_LITERAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
@@ -317,6 +362,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_BOOLAEN_LITERAL_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_BOOLAEN_LITERAL___EVALUATE = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -371,6 +425,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TEMPLATE_EXPRESSION_INTEGER_FROM_REAL___EVALUATE = TEMPLATE_EXPRESSION_INTEGER___EVALUATE;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TEMPLATE_EXPRESSION_INTEGER_FROM_REAL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
@@ -417,6 +480,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TEMPLATE_EXPRESSION_REAL_FROM_INTEGER___EVALUATE = TEMPLATE_EXPRESSION_REAL___EVALUATE;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TEMPLATE_EXPRESSION_REAL_FROM_INTEGER___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
@@ -455,6 +527,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_PARAMETER_SIMPLE_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_PARAMETER_SIMPLE___EVALUATE = TEMPLATE_EXPRESSION_REAL___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -518,6 +599,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT___EVALUATE = TEMPLATE_EXPRESSION_REAL___EVALUATE;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
@@ -556,6 +646,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE___EVALUATE = TEMPLATE_EXPRESSION_INTEGER___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -611,6 +710,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_ARRAY_AGGREGATE_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_ARRAY_AGGREGATE___EVALUATE = TEMPLATE_EXPRESSION_REAL___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -677,6 +785,15 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION___EVALUATE = TEMPLATE_EXPRESSION_REAL___EVALUATE;
+
+	/**
 	 * The number of operations of the '<em>Template Expression Real Binary Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -721,6 +838,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_REAL_SUM_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_REAL_SUM___EVALUATE = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -784,6 +910,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TEMPLATE_EXPRESSION_REAL_SUBTRACT___EVALUATE = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION___EVALUATE;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TEMPLATE_EXPRESSION_REAL_SUBTRACT___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
@@ -831,6 +966,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_REAL_MULTIPLY_FEATURE_COUNT = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_REAL_MULTIPLY___EVALUATE = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -894,6 +1038,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TEMPLATE_EXPRESSION_REAL_DIVIDE___EVALUATE = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION___EVALUATE;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TEMPLATE_EXPRESSION_REAL_DIVIDE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
@@ -941,6 +1094,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_REAL_MODULO_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_REAL_MODULO___EVALUATE = TEMPLATE_EXPRESSION_INTEGER___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -998,6 +1160,15 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_REAL_UNARY___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_REAL_UNARY___EVALUATE = TEMPLATE_EXPRESSION_REAL___EVALUATE;
+
+	/**
 	 * The number of operations of the '<em>Template Expression Real Unary</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1033,6 +1204,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_REAL_FLOOR_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_REAL_FLOOR___EVALUATE = TEMPLATE_EXPRESSION_INTEGER___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1087,6 +1267,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TEMPLATE_EXPRESSION_REAL_CEIL___EVALUATE = TEMPLATE_EXPRESSION_INTEGER___EVALUATE;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TEMPLATE_EXPRESSION_REAL_CEIL___EVALUATE__ELIST = TEMPLATE_EXPRESSION_INTEGER_OPERATION_COUNT + 0;
 
 	/**
@@ -1125,6 +1314,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_REAL_ROUND_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_REAL_ROUND___EVALUATE = TEMPLATE_EXPRESSION_INTEGER___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1197,6 +1395,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE___EVALUATE = TEMPLATE_EXPRESSION_REAL___EVALUATE;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE___EVALUATE__ELIST = TEMPLATE_EXPRESSION_REAL_OPERATION_COUNT + 0;
 
 	/**
@@ -1246,6 +1453,15 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION___EVALUATE = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE;
+
+	/**
 	 * The number of operations of the '<em>Template Expression Boolean Unary Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1281,6 +1497,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_BOOLEAN_NOT_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_BOOLEAN_NOT___EVALUATE = TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1327,6 +1552,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER_FEATURE_COUNT = TEMPLATE_EXPRESSION_INTEGER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER___EVALUATE = TEMPLATE_EXPRESSION_INTEGER___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1393,6 +1627,15 @@ public interface ExpressionsPackage extends EPackage {
 	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION___EVALUATE = TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE;
+
+	/**
 	 * The number of operations of the '<em>Template Expression Boolean Binary Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1437,6 +1680,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEMPLATE_EXPRESSION_BOOLEAN_AND_FEATURE_COUNT = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPLATE_EXPRESSION_BOOLEAN_AND___EVALUATE = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION___EVALUATE;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -1500,6 +1752,15 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
+	int TEMPLATE_EXPRESSION_BOOLEAN_OR___EVALUATE = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION___EVALUATE;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
 	int TEMPLATE_EXPRESSION_BOOLEAN_OR___EVALUATE__ELIST = TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION_OPERATION_COUNT + 0;
 
 	/**
@@ -1553,6 +1814,16 @@ public interface ExpressionsPackage extends EPackage {
 	EOperation getTemplateExpressionInteger__Evaluate__EList();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionInteger#evaluate() <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionInteger#evaluate()
+	 * @generated
+	 */
+	EOperation getTemplateExpressionInteger__Evaluate();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionReal <em>Template Expression Real</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1573,6 +1844,16 @@ public interface ExpressionsPackage extends EPackage {
 	EOperation getTemplateExpressionReal__Evaluate__EList();
 
 	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionReal#evaluate() <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionReal#evaluate()
+	 * @generated
+	 */
+	EOperation getTemplateExpressionReal__Evaluate();
+
+	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionBoolean <em>Template Expression Boolean</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1591,6 +1872,16 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getTemplateExpressionBoolean__Evaluate__EList();
+
+	/**
+	 * Returns the meta object for the '{@link tmdl.expressions.TemplateExpressionBoolean#evaluate() <em>Evaluate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Evaluate</em>' operation.
+	 * @see tmdl.expressions.TemplateExpressionBoolean#evaluate()
+	 * @generated
+	 */
+	EOperation getTemplateExpressionBoolean__Evaluate();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.expressions.TemplateExpressionIntegerLiteral <em>Template Expression Integer Literal</em>}'.
@@ -2420,6 +2711,14 @@ public interface ExpressionsPackage extends EPackage {
 		EOperation TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionInteger__Evaluate__EList();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_INTEGER___EVALUATE = eINSTANCE.getTemplateExpressionInteger__Evaluate();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionReal <em>Template Expression Real</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2438,6 +2737,14 @@ public interface ExpressionsPackage extends EPackage {
 		EOperation TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionReal__Evaluate__EList();
 
 		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_REAL___EVALUATE = eINSTANCE.getTemplateExpressionReal__Evaluate();
+
+		/**
 		 * The meta object literal for the '{@link tmdl.expressions.TemplateExpressionBoolean <em>Template Expression Boolean</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2454,6 +2761,14 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST = eINSTANCE.getTemplateExpressionBoolean__Evaluate__EList();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluate</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE = eINSTANCE.getTemplateExpressionBoolean__Evaluate();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.expressions.impl.TemplateExpressionIntegerLiteralImpl <em>Template Expression Integer Literal</em>}' class.

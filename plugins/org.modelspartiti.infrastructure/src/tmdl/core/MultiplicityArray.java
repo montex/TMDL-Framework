@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
 public interface MultiplicityArray extends Multiplicity {
 	/**
 	 * Returns the value of the '<em><b>Values</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Double}.
+	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Values</em>' attribute list isn't clear,
@@ -35,6 +35,15 @@ public interface MultiplicityArray extends Multiplicity {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Double> getValues();
+	EList<Integer> getValues();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model assignmentsMany="true" assignmentsOrdered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='values'"
+	 * @generated
+	 */
+	EList<Integer> asSequence(EList<Assignment> assignments);
 
 } // MultiplicityArray

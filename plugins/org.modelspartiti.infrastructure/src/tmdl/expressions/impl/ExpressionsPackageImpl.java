@@ -385,6 +385,15 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getTemplateExpressionInteger__Evaluate() {
+		return templateExpressionIntegerEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTemplateExpressionReal() {
 		return templateExpressionRealEClass;
 	}
@@ -403,6 +412,15 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getTemplateExpressionReal__Evaluate() {
+		return templateExpressionRealEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTemplateExpressionBoolean() {
 		return templateExpressionBooleanEClass;
 	}
@@ -414,6 +432,15 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 */
 	public EOperation getTemplateExpressionBoolean__Evaluate__EList() {
 		return templateExpressionBooleanEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getTemplateExpressionBoolean__Evaluate() {
+		return templateExpressionBooleanEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1123,12 +1150,15 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 
 		templateExpressionIntegerEClass = createEClass(TEMPLATE_EXPRESSION_INTEGER);
 		createEOperation(templateExpressionIntegerEClass, TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST);
+		createEOperation(templateExpressionIntegerEClass, TEMPLATE_EXPRESSION_INTEGER___EVALUATE);
 
 		templateExpressionRealEClass = createEClass(TEMPLATE_EXPRESSION_REAL);
 		createEOperation(templateExpressionRealEClass, TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealEClass, TEMPLATE_EXPRESSION_REAL___EVALUATE);
 
 		templateExpressionBooleanEClass = createEClass(TEMPLATE_EXPRESSION_BOOLEAN);
 		createEOperation(templateExpressionBooleanEClass, TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST);
+		createEOperation(templateExpressionBooleanEClass, TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE);
 
 		templateExpressionIntegerLiteralEClass = createEClass(TEMPLATE_EXPRESSION_INTEGER_LITERAL);
 		createEAttribute(templateExpressionIntegerLiteralEClass, TEMPLATE_EXPRESSION_INTEGER_LITERAL__VALUE);
@@ -1303,15 +1333,21 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		EOperation op = initEOperation(getTemplateExpressionInteger__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
+		initEOperation(getTemplateExpressionInteger__Evaluate(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(templateExpressionRealEClass, TemplateExpressionReal.class, "TemplateExpressionReal", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getTemplateExpressionReal__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
+		initEOperation(getTemplateExpressionReal__Evaluate(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(templateExpressionBooleanEClass, TemplateExpressionBoolean.class, "TemplateExpressionBoolean", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getTemplateExpressionBoolean__Evaluate__EList(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getTemplateExpressionBoolean__Evaluate(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(templateExpressionIntegerLiteralEClass, TemplateExpressionIntegerLiteral.class, "TemplateExpressionIntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTemplateExpressionIntegerLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, TemplateExpressionIntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1500,6 +1536,24 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 */
 	protected void createPivotAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (getTemplateExpressionInteger__Evaluate(), 
+		   source, 
+		   new String[] {
+			 "body", "evaluate(core::Assignment.allInstances())"
+		   });	
+		addAnnotation
+		  (getTemplateExpressionReal__Evaluate(), 
+		   source, 
+		   new String[] {
+			 "body", "evaluate(core::Assignment.allInstances())"
+		   });	
+		addAnnotation
+		  (getTemplateExpressionBoolean__Evaluate(), 
+		   source, 
+		   new String[] {
+			 "body", "evaluate(core::Assignment.allInstances())"
+		   });	
 		addAnnotation
 		  (getTemplateExpressionIntegerLiteral__Evaluate__EList(), 
 		   source, 
