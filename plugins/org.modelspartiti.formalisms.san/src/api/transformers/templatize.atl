@@ -212,7 +212,8 @@ rule OutputGate {
 		tog : SANT!OutputGateConcrete (
 			name <- og.name,
 			places <- og.places,
-			function <- og.function
+			function <- og.function,
+			activityCase <- og.activityCase
 		)
 }
 
