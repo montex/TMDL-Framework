@@ -1,4 +1,4 @@
-@"http://www.eclipse.org/OCL/Import"(core="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core", ecore="http://www.eclipse.org/emf/2002/Ecore", exp_0="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions")
+@"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore")
 @Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
 @namespace(uri="http://www.modelspartiti.org/templates/san/sant", prefix="sant")
 package sant;
@@ -166,22 +166,22 @@ class ExpressionPlaceTemplateSize extends ExpressionSegment, tmdl.expressions.Te
   @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="
 			let mult = place.multiplicity 
 			in
-				if mult.oclIsTypeOf(core::MultiplicityValue) then
-					mult.oclAsType(core::MultiplicityValue).value.floor()
+				if mult.oclIsTypeOf(tmdl::core::MultiplicityValue) then
+					mult.oclAsType(tmdl::core::MultiplicityValue).value.floor()
 				else
-					if mult.oclIsTypeOf(core::MultiplicityArray) then
-						mult.oclAsType(core::MultiplicityArray).values->size()
+					if mult.oclIsTypeOf(tmdl::core::MultiplicityArray) then
+						mult.oclAsType(tmdl::core::MultiplicityArray).values->size()
 					else
-						let par = mult.oclAsType(core::MultiplicityParametric).parameter
+						let par = mult.oclAsType(tmdl::core::MultiplicityParametric).parameter
 						in
-							if par.oclIsTypeOf(core::ParameterSimple) then
-								assignments->select(a | a.oclIsTypeOf(core::AssignmentSimple))
-									->collect(as | as.oclAsType(core::AssignmentSimple))
+							if par.oclIsTypeOf(tmdl::core::ParameterSimple) then
+								assignments->select(a | a.oclIsTypeOf(tmdl::core::AssignmentSimple))
+									->collect(as | as.oclAsType(tmdl::core::AssignmentSimple))
 									->select(i | i.parameter = par)
 									->asSequence()->first().value
 							else
-								assignments->select(a | a.oclIsTypeOf(core::AssignmentArray))
-									->collect(as | as.oclAsType(core::AssignmentArray))
+								assignments->select(a | a.oclIsTypeOf(tmdl::core::AssignmentArray))
+									->collect(as | as.oclAsType(tmdl::core::AssignmentArray))
 									->select(i | i.parameter = par)
 									->asSequence()->first().values->size()
 							endif

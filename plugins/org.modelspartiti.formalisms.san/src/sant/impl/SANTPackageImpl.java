@@ -9,7 +9,9 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import sant.Activity;
 import sant.Arc;
 import sant.Beta;
@@ -74,9 +76,13 @@ import sant.Uniform;
 import sant.VariabilityIterator;
 import sant.VariableType;
 import sant.Weibull;
+
 import tmdl.core.CorePackage;
+
 import tmdl.expressions.ExpressionsPackage;
+
 import tmdl.library.LibraryPackage;
+
 import tmdl.scenario.ScenarioPackage;
 
 /**
@@ -2586,9 +2592,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		  (this, 
 		   source, 
 		   new String[] {
-			 "core", "../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core",
-			 "ecore", "http://www.eclipse.org/emf/2002/Ecore",
-			 "exp_0", "../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions"
+			 "ecore", "http://www.eclipse.org/emf/2002/Ecore"
 		   });
 	}
 
@@ -2673,7 +2677,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		  (getExpressionPlaceTemplateSize__Evaluate__EList(), 
 		   source, 
 		   new String[] {
-			 "body", "\n\t\t\tlet mult = place.multiplicity \n\t\t\tin\n\t\t\t\tif mult.oclIsTypeOf(core::MultiplicityValue) then\n\t\t\t\t\tmult.oclAsType(core::MultiplicityValue).value.floor()\n\t\t\t\telse\n\t\t\t\t\tif mult.oclIsTypeOf(core::MultiplicityArray) then\n\t\t\t\t\t\tmult.oclAsType(core::MultiplicityArray).values->size()\n\t\t\t\t\telse\n\t\t\t\t\t\tlet par = mult.oclAsType(core::MultiplicityParametric).parameter\n\t\t\t\t\t\tin\n\t\t\t\t\t\t\tif par.oclIsTypeOf(core::ParameterSimple) then\n\t\t\t\t\t\t\t\tassignments->select(a | a.oclIsTypeOf(core::AssignmentSimple))\n\t\t\t\t\t\t\t\t\t->collect(as | as.oclAsType(core::AssignmentSimple))\n\t\t\t\t\t\t\t\t\t->select(i | i.parameter = par)\n\t\t\t\t\t\t\t\t\t->asSequence()->first().value\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\tassignments->select(a | a.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t\t\t\t->collect(as | as.oclAsType(core::AssignmentArray))\n\t\t\t\t\t\t\t\t\t->select(i | i.parameter = par)\n\t\t\t\t\t\t\t\t\t->asSequence()->first().values->size()\n\t\t\t\t\t\t\tendif\n\t\t\t\t\tendif\n\t\t\t\tendif"
+			 "body", "\n\t\t\tlet mult = place.multiplicity \n\t\t\tin\n\t\t\t\tif mult.oclIsTypeOf(tmdl::core::MultiplicityValue) then\n\t\t\t\t\tmult.oclAsType(tmdl::core::MultiplicityValue).value.floor()\n\t\t\t\telse\n\t\t\t\t\tif mult.oclIsTypeOf(tmdl::core::MultiplicityArray) then\n\t\t\t\t\t\tmult.oclAsType(tmdl::core::MultiplicityArray).values->size()\n\t\t\t\t\telse\n\t\t\t\t\t\tlet par = mult.oclAsType(tmdl::core::MultiplicityParametric).parameter\n\t\t\t\t\t\tin\n\t\t\t\t\t\t\tif par.oclIsTypeOf(tmdl::core::ParameterSimple) then\n\t\t\t\t\t\t\t\tassignments->select(a | a.oclIsTypeOf(tmdl::core::AssignmentSimple))\n\t\t\t\t\t\t\t\t\t->collect(as | as.oclAsType(tmdl::core::AssignmentSimple))\n\t\t\t\t\t\t\t\t\t->select(i | i.parameter = par)\n\t\t\t\t\t\t\t\t\t->asSequence()->first().value\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\tassignments->select(a | a.oclIsTypeOf(tmdl::core::AssignmentArray))\n\t\t\t\t\t\t\t\t\t->collect(as | as.oclAsType(tmdl::core::AssignmentArray))\n\t\t\t\t\t\t\t\t\t->select(i | i.parameter = par)\n\t\t\t\t\t\t\t\t\t->asSequence()->first().values->size()\n\t\t\t\t\t\t\tendif\n\t\t\t\t\tendif\n\t\t\t\tendif"
 		   });
 	}
 

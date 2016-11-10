@@ -6,6 +6,22 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>tmdl.ecore</foreignModel>
   <genPackages prefix="TMDL" disposableProviderFactory="true" ecorePackage="tmdl.ecore#/">
+    <genDataTypes ecoreDataType="tmdl.ecore#//File"/>
+    <genClasses image="false" ecoreClass="tmdl.ecore#//ExportFormat"/>
+    <genClasses image="false" ecoreClass="tmdl.ecore#//ModelManager">
+      <genOperations ecoreOperation="tmdl.ecore#//ModelManager/importModel">
+        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/importModel/file"/>
+      </genOperations>
+      <genOperations ecoreOperation="tmdl.ecore#//ModelManager/exportModel">
+        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel/model"/>
+        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel/file"/>
+        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel/format"/>
+      </genOperations>
+      <genOperations ecoreOperation="tmdl.ecore#//ModelManager/exportModel.1">
+        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel.1/model"/>
+        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel.1/file"/>
+      </genOperations>
+    </genClasses>
     <nestedGenPackages prefix="Scenario" basePackage="tmdl" disposableProviderFactory="true"
         ecorePackage="tmdl.ecore#//scenario">
       <genClasses ecoreClass="tmdl.ecore#//scenario/Scenario">
@@ -108,18 +124,32 @@
       <genClasses ecoreClass="tmdl.ecore#//core/AssignmentArray">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference tmdl.ecore#//core/AssignmentArray/parameter"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/AssignmentArray/value"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/AssignmentArray/values"/>
       </genClasses>
-      <genClasses image="false" ecoreClass="tmdl.ecore#//core/Multiplicity"/>
+      <genClasses image="false" ecoreClass="tmdl.ecore#//core/Multiplicity">
+        <genOperations ecoreOperation="tmdl.ecore#//core/Multiplicity/asSequence"/>
+        <genOperations ecoreOperation="tmdl.ecore#//core/Multiplicity/asSequence.1">
+          <genParameters ecoreParameter="tmdl.ecore#//core/Multiplicity/asSequence.1/assignments"/>
+        </genOperations>
+      </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//core/MultiplicityValue">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/MultiplicityValue/value"/>
+        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityValue/asSequence">
+          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityValue/asSequence/assignments"/>
+        </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//core/MultiplicityArray">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/MultiplicityArray/values"/>
+        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityArray/asSequence">
+          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityArray/asSequence/assignments"/>
+        </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//core/MultiplicityParametric">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference tmdl.ecore#//core/MultiplicityParametric/parameter"/>
+        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityParametric/asSequence">
+          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityParametric/asSequence/assignments"/>
+        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Expressions" basePackage="tmdl" disposableProviderFactory="true"
@@ -135,16 +165,19 @@
         <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionInteger/evaluate">
           <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionInteger/evaluate/assignments"/>
         </genOperations>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionInteger/evaluate.1"/>
       </genClasses>
       <genClasses image="false" ecoreClass="tmdl.ecore#//expressions/TemplateExpressionReal">
         <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionReal/evaluate">
           <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionReal/evaluate/assignments"/>
         </genOperations>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionReal/evaluate.1"/>
       </genClasses>
       <genClasses image="false" ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBoolean">
         <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionBoolean/evaluate">
           <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionBoolean/evaluate/assignments"/>
         </genOperations>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionBoolean/evaluate.1"/>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionIntegerLiteral">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//expressions/TemplateExpressionIntegerLiteral/value"/>
@@ -172,56 +205,128 @@
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealFromInteger">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealFromInteger/exp"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealFromInteger/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealFromInteger/evaluate/assignments"/>
+        </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionParameterSimple">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionParameterSimple/parameter"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionParameterSimple/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionParameterSimple/evaluate/assignments"/>
+        </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionParameterArrayValueAt">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionParameterArrayValueAt/parameter"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionParameterArrayValueAt/position"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionParameterArrayValueAt/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionParameterArrayValueAt/evaluate/assignments"/>
+        </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionParameterArraySize">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionParameterArraySize/parameter"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionParameterArraySize/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionParameterArraySize/evaluate/assignments"/>
+        </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionArrayAggregate">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionArrayAggregate/parameter"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//expressions/TemplateExpressionArrayAggregate/function"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionArrayAggregate/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionArrayAggregate/evaluate/assignments"/>
+        </genOperations>
       </genClasses>
-      <genClasses image="false" ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealBinary">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealBinary/exp1"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealBinary/exp2"/>
+      <genClasses image="false" ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealBinaryOperation">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealBinaryOperation/exp1"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealBinaryOperation/exp2"/>
       </genClasses>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealSum"/>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealSubtract"/>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealMultiply"/>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealDivide"/>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealModulo"/>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealSum">
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealSum/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealSum/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealSubtract">
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealSubtract/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealSubtract/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealMultiply">
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealMultiply/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealMultiply/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealDivide">
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealDivide/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealDivide/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealModulo">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealModulo/exp1"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealModulo/exp2"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealModulo/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealModulo/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
       <genClasses image="false" ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealUnary">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealUnary/exp"/>
       </genClasses>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealFloor"/>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealCeil"/>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealRound"/>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealFloor">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealFloor/exp"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealFloor/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealFloor/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealCeil">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealCeil/exp"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealCeil/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealCeil/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealRound">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealRound/exp"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealRound/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealRound/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionRealIfThenElse">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealIfThenElse/condition"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealIfThenElse/ifTrue"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionRealIfThenElse/ifFalse"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionRealIfThenElse/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionRealIfThenElse/evaluate/assignments"/>
+        </genOperations>
       </genClasses>
-      <genClasses image="false" ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanUnary">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionBooleanUnary/exp"/>
+      <genClasses image="false" ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanUnaryOperation">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionBooleanUnaryOperation/exp"/>
       </genClasses>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanNot"/>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanToInteger"/>
-      <genClasses image="false" ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanBinary">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionBooleanBinary/exp1"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionBooleanBinary/exp2"/>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanNot">
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionBooleanNot/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionBooleanNot/evaluate/assignments"/>
+        </genOperations>
       </genClasses>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanAnd"/>
-      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanOr"/>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanToInteger">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionBooleanToInteger/exp"/>
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionBooleanToInteger/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionBooleanToInteger/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanBinaryOperation">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionBooleanBinaryOperation/exp1"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//expressions/TemplateExpressionBooleanBinaryOperation/exp2"/>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanAnd">
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionBooleanAnd/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionBooleanAnd/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="tmdl.ecore#//expressions/TemplateExpressionBooleanOr">
+        <genOperations ecoreOperation="tmdl.ecore#//expressions/TemplateExpressionBooleanOr/evaluate">
+          <genParameters ecoreParameter="tmdl.ecore#//expressions/TemplateExpressionBooleanOr/evaluate/assignments"/>
+        </genOperations>
+      </genClasses>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

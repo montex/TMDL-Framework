@@ -26,7 +26,7 @@ import tmdl.core.CorePackage;
  * <!-- end-user-doc -->
  * @see sant.SANTFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/OCL/Import core='../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core' ecore='http://www.eclipse.org/emf/2002/Ecore' exp_0='../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions'"
+ *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore'"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */

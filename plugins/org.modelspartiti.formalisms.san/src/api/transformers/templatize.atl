@@ -13,10 +13,10 @@
 
 -- @nsURI SAN=http://www.modelspartiti.org/templates/san/san
 -- @nsURI SANT=http://www.modelspartiti.org/templates/san/sant
--- @path TMDL=/org.modelspartiti.infrastructure/model/tmdl.ecore
+-- @nsURI TMDL=http://www.modelspartiti.org/infrastructure/tmdl
 
 module templatize;
-create core : TMDL, template : SANT from concrete : SAN;
+create template : SANT from concrete : SAN;
 
 --The SAN/SANT element
 rule ModelRoot {
@@ -55,7 +55,7 @@ abstract rule Places {
 			name <- p.name,
 			multiplicity <- mult
 		),
-		mult : TMDL!MultiplicityValue ( value <- 1 )
+		mult : SANT!MultiplicityValue ( value <- 1.0 )
 }
 
 rule NormalPlaces extends Places {
@@ -91,7 +91,7 @@ rule MarkingInteger extends Marking {
 		tm : SANT!MarkingInteger (
 			value <- exp
 		),
-		exp : TMDL!TemplateExpressionIntegerLiteral (
+		exp : SANT!TemplateExpressionIntegerLiteral (
 			value <- m.value
 		)
 }
@@ -163,7 +163,7 @@ rule Case {
 			ID <- idexp,
 			p <- c.p
 		),
-		idexp : TMDL!TemplateExpressionIntegerLiteral (
+		idexp : SANT!TemplateExpressionIntegerLiteral (
 			value <- c.ID
 		)
 }
@@ -250,7 +250,7 @@ rule ExpressionMarking extends ExpressionSegment  {
 			place <- es.place,
 			index <- i
 		),
-		i : TMDL!TemplateExpressionIntegerLiteral (
+		i : SANT!TemplateExpressionIntegerLiteral (
 			value <- 1
 		)
 }

@@ -209,16 +209,16 @@
 		<constant value="tp"/>
 		<constant value="mult"/>
 		<constant value="MultiplicityValue"/>
-		<constant value="TMDL"/>
 		<constant value="75"/>
 		<constant value="ExtendedPlace"/>
 		<constant value="65:3-67:4"/>
-		<constant value="58:3-58:47"/>
+		<constant value="58:3-58:49"/>
 		<constant value="74:3-76:4"/>
 		<constant value="__applyNormalPlaces"/>
 		<constant value="4"/>
 		<constant value="marking"/>
 		<constant value="multiplicity"/>
+		<constant value="1.0"/>
 		<constant value="66:15-66:16"/>
 		<constant value="66:15-66:24"/>
 		<constant value="66:4-66:24"/>
@@ -227,8 +227,8 @@
 		<constant value="55:4-55:18"/>
 		<constant value="56:20-56:24"/>
 		<constant value="56:4-56:24"/>
-		<constant value="58:44-58:45"/>
-		<constant value="58:35-58:45"/>
+		<constant value="58:44-58:47"/>
+		<constant value="58:35-58:47"/>
 		<constant value="__applyExtendedPlaces"/>
 		<constant value="75:15-75:16"/>
 		<constant value="75:15-75:24"/>
@@ -1457,19 +1457,19 @@
 			<dup/>
 			<push arg="206"/>
 			<push arg="207"/>
-			<push arg="208"/>
+			<push arg="146"/>
 			<new/>
 			<pcall arg="147"/>
 			<pusht/>
 			<pcall arg="148"/>
-			<goto arg="209"/>
+			<goto arg="208"/>
 			<load arg="19"/>
-			<push arg="210"/>
+			<push arg="209"/>
 			<push arg="138"/>
 			<findme/>
 			<call arg="20"/>
 			<call arg="202"/>
-			<if arg="209"/>
+			<if arg="208"/>
 			<getasm/>
 			<get arg="1"/>
 			<push arg="141"/>
@@ -1484,33 +1484,33 @@
 			<pcall arg="144"/>
 			<dup/>
 			<push arg="205"/>
-			<push arg="210"/>
+			<push arg="209"/>
 			<push arg="146"/>
 			<new/>
 			<pcall arg="147"/>
 			<dup/>
 			<push arg="206"/>
 			<push arg="207"/>
-			<push arg="208"/>
+			<push arg="146"/>
 			<new/>
 			<pcall arg="147"/>
 			<pusht/>
 			<pcall arg="148"/>
-			<goto arg="209"/>
+			<goto arg="208"/>
 			<enditerate/>
 		</code>
 		<linenumbertable>
-			<lne id="211" begin="26" end="31"/>
-			<lne id="212" begin="32" end="37"/>
-			<lne id="213" begin="60" end="65"/>
-			<lne id="212" begin="66" end="71"/>
+			<lne id="210" begin="26" end="31"/>
+			<lne id="211" begin="32" end="37"/>
+			<lne id="212" begin="60" end="65"/>
+			<lne id="211" begin="66" end="71"/>
 		</linenumbertable>
 		<localvariabletable>
 			<lve slot="1" name="204" begin="6" end="74"/>
 			<lve slot="0" name="17" begin="0" end="75"/>
 		</localvariabletable>
 	</operation>
-	<operation name="214">
+	<operation name="213">
 		<context type="6"/>
 		<parameters>
 			<parameter name="19" type="151"/>
@@ -1527,14 +1527,14 @@
 			<load arg="19"/>
 			<push arg="206"/>
 			<call arg="153"/>
-			<store arg="215"/>
+			<store arg="214"/>
 			<load arg="154"/>
 			<dup/>
 			<getasm/>
 			<load arg="29"/>
-			<get arg="216"/>
+			<get arg="215"/>
 			<call arg="30"/>
-			<set arg="216"/>
+			<set arg="215"/>
 			<dup/>
 			<getasm/>
 			<load arg="29"/>
@@ -1543,14 +1543,14 @@
 			<set arg="38"/>
 			<dup/>
 			<getasm/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<call arg="30"/>
-			<set arg="217"/>
+			<set arg="216"/>
 			<pop/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<dup/>
 			<getasm/>
-			<pushi arg="19"/>
+			<pushd arg="217"/>
 			<call arg="30"/>
 			<set arg="34"/>
 			<pop/>
@@ -1564,10 +1564,10 @@
 			<lne id="223" begin="19" end="24"/>
 			<lne id="224" begin="27" end="27"/>
 			<lne id="225" begin="25" end="29"/>
-			<lne id="211" begin="12" end="30"/>
+			<lne id="210" begin="12" end="30"/>
 			<lne id="226" begin="34" end="34"/>
 			<lne id="227" begin="32" end="36"/>
-			<lne id="212" begin="31" end="37"/>
+			<lne id="211" begin="31" end="37"/>
 		</linenumbertable>
 		<localvariabletable>
 			<lve slot="3" name="205" begin="7" end="37"/>
@@ -1594,14 +1594,14 @@
 			<load arg="19"/>
 			<push arg="206"/>
 			<call arg="153"/>
-			<store arg="215"/>
+			<store arg="214"/>
 			<load arg="154"/>
 			<dup/>
 			<getasm/>
 			<load arg="29"/>
-			<get arg="216"/>
+			<get arg="215"/>
 			<call arg="30"/>
-			<set arg="216"/>
+			<set arg="215"/>
 			<dup/>
 			<getasm/>
 			<load arg="29"/>
@@ -1610,14 +1610,14 @@
 			<set arg="38"/>
 			<dup/>
 			<getasm/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<call arg="30"/>
-			<set arg="217"/>
+			<set arg="216"/>
 			<pop/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<dup/>
 			<getasm/>
-			<pushi arg="19"/>
+			<pushd arg="217"/>
 			<call arg="30"/>
 			<set arg="34"/>
 			<pop/>
@@ -1631,10 +1631,10 @@
 			<lne id="223" begin="19" end="24"/>
 			<lne id="224" begin="27" end="27"/>
 			<lne id="225" begin="25" end="29"/>
-			<lne id="213" begin="12" end="30"/>
+			<lne id="212" begin="12" end="30"/>
 			<lne id="226" begin="34" end="34"/>
 			<lne id="227" begin="32" end="36"/>
-			<lne id="212" begin="31" end="37"/>
+			<lne id="211" begin="31" end="37"/>
 		</linenumbertable>
 		<localvariabletable>
 			<lve slot="3" name="205" begin="7" end="37"/>
@@ -1684,7 +1684,7 @@
 			<dup/>
 			<push arg="235"/>
 			<push arg="236"/>
-			<push arg="208"/>
+			<push arg="146"/>
 			<new/>
 			<pcall arg="147"/>
 			<pusht/>
@@ -1805,15 +1805,15 @@
 			<load arg="19"/>
 			<push arg="235"/>
 			<call arg="153"/>
-			<store arg="215"/>
+			<store arg="214"/>
 			<load arg="154"/>
 			<dup/>
 			<getasm/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<call arg="30"/>
 			<set arg="34"/>
 			<pop/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<dup/>
 			<getasm/>
 			<load arg="29"/>
@@ -1992,14 +1992,14 @@
 			<pcall arg="147"/>
 			<pusht/>
 			<pcall arg="148"/>
-			<goto arg="209"/>
+			<goto arg="208"/>
 			<load arg="19"/>
 			<push arg="270"/>
 			<push arg="138"/>
 			<findme/>
 			<call arg="20"/>
 			<call arg="202"/>
-			<if arg="209"/>
+			<if arg="208"/>
 			<getasm/>
 			<get arg="1"/>
 			<push arg="141"/>
@@ -2026,7 +2026,7 @@
 			<pcall arg="147"/>
 			<pusht/>
 			<pcall arg="148"/>
-			<goto arg="209"/>
+			<goto arg="208"/>
 			<enditerate/>
 		</code>
 		<linenumbertable>
@@ -2057,7 +2057,7 @@
 			<load arg="19"/>
 			<push arg="268"/>
 			<call arg="153"/>
-			<store arg="215"/>
+			<store arg="214"/>
 			<load arg="154"/>
 			<dup/>
 			<getasm/>
@@ -2067,11 +2067,11 @@
 			<set arg="38"/>
 			<dup/>
 			<getasm/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<call arg="30"/>
 			<set arg="275"/>
 			<pop/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<dup/>
 			<getasm/>
 			<load arg="29"/>
@@ -2117,7 +2117,7 @@
 			<load arg="19"/>
 			<push arg="268"/>
 			<call arg="153"/>
-			<store arg="215"/>
+			<store arg="214"/>
 			<load arg="154"/>
 			<dup/>
 			<getasm/>
@@ -2145,11 +2145,11 @@
 			<set arg="38"/>
 			<dup/>
 			<getasm/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<call arg="30"/>
 			<set arg="275"/>
 			<pop/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<dup/>
 			<getasm/>
 			<load arg="29"/>
@@ -2220,7 +2220,7 @@
 			<dup/>
 			<push arg="300"/>
 			<push arg="236"/>
-			<push arg="208"/>
+			<push arg="146"/>
 			<new/>
 			<pcall arg="147"/>
 			<pusht/>
@@ -2253,11 +2253,11 @@
 			<load arg="19"/>
 			<push arg="300"/>
 			<call arg="153"/>
-			<store arg="215"/>
+			<store arg="214"/>
 			<load arg="154"/>
 			<dup/>
 			<getasm/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<call arg="30"/>
 			<set arg="304"/>
 			<dup/>
@@ -2267,7 +2267,7 @@
 			<call arg="30"/>
 			<set arg="204"/>
 			<pop/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<dup/>
 			<getasm/>
 			<load arg="29"/>
@@ -2826,7 +2826,7 @@
 			<dup/>
 			<push arg="387"/>
 			<push arg="236"/>
-			<push arg="208"/>
+			<push arg="146"/>
 			<new/>
 			<pcall arg="147"/>
 			<pusht/>
@@ -2926,7 +2926,7 @@
 			<load arg="19"/>
 			<push arg="387"/>
 			<call arg="153"/>
-			<store arg="215"/>
+			<store arg="214"/>
 			<load arg="154"/>
 			<dup/>
 			<getasm/>
@@ -2936,11 +2936,11 @@
 			<set arg="398"/>
 			<dup/>
 			<getasm/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<call arg="30"/>
 			<set arg="399"/>
 			<pop/>
-			<load arg="215"/>
+			<load arg="214"/>
 			<dup/>
 			<getasm/>
 			<pushi arg="19"/>

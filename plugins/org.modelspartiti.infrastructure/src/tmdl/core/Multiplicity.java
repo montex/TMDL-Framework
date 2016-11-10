@@ -3,6 +3,7 @@
 package tmdl.core;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Multiplicity extends EObject {
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -32,4 +32,5 @@ public interface Multiplicity extends EObject {
 	 * @generated
 	 */
 	EList<Integer> asSequence(EList<Assignment> assignments);
+
 } // Multiplicity
