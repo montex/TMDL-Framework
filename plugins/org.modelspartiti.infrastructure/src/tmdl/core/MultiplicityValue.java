@@ -2,7 +2,6 @@
  */
 package tmdl.core;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,12 +29,12 @@ public interface MultiplicityValue extends Multiplicity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(double)
+	 * @see #setValue(int)
 	 * @see tmdl.core.CorePackage#getMultiplicityValue_Value()
 	 * @model required="true"
 	 * @generated
 	 */
-	double getValue();
+	int getValue();
 
 	/**
 	 * Sets the value of the '{@link tmdl.core.MultiplicityValue#getValue <em>Value</em>}' attribute.
@@ -45,15 +44,6 @@ public interface MultiplicityValue extends Multiplicity {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(double value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model assignmentsMany="true" assignmentsOrdered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\t\tif value = 0 then Sequence{}\n\t\t\t\telse Sequence{1..value} endif'"
-	 * @generated
-	 */
-	EList<Integer> asSequence(EList<Assignment> assignments);
+	void setValue(int value);
 
 } // MultiplicityValue

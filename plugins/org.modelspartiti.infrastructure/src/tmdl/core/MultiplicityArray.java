@@ -37,13 +37,4 @@ public interface MultiplicityArray extends Multiplicity {
 	 */
 	EList<Integer> getValues();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model assignmentsMany="true" assignmentsOrdered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='values'"
-	 * @generated
-	 */
-	EList<Integer> asSequence(EList<Assignment> assignments);
-
 } // MultiplicityArray

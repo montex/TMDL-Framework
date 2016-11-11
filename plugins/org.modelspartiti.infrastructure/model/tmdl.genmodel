@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.modelspartiti.infrastructure/src" modelPluginID="org.modelspartiti.infrastructure"
-    modelName="TMDL" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    redirection="" modelName="TMDL" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>tmdl.ecore</foreignModel>
   <genPackages prefix="TMDL" disposableProviderFactory="true" ecorePackage="tmdl.ecore#/">
-    <genDataTypes ecoreDataType="tmdl.ecore#//File"/>
-    <genClasses image="false" ecoreClass="tmdl.ecore#//ExportFormat"/>
-    <genClasses image="false" ecoreClass="tmdl.ecore#//ModelManager">
-      <genOperations ecoreOperation="tmdl.ecore#//ModelManager/importModel">
-        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/importModel/file"/>
-      </genOperations>
-      <genOperations ecoreOperation="tmdl.ecore#//ModelManager/exportModel">
-        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel/model"/>
-        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel/file"/>
-        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel/format"/>
-      </genOperations>
-      <genOperations ecoreOperation="tmdl.ecore#//ModelManager/exportModel.1">
-        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel.1/model"/>
-        <genParameters ecoreParameter="tmdl.ecore#//ModelManager/exportModel.1/file"/>
-      </genOperations>
-    </genClasses>
     <nestedGenPackages prefix="Scenario" basePackage="tmdl" disposableProviderFactory="true"
         ecorePackage="tmdl.ecore#//scenario">
       <genClasses ecoreClass="tmdl.ecore#//scenario/Scenario">
@@ -127,28 +111,28 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/AssignmentArray/values"/>
       </genClasses>
       <genClasses image="false" ecoreClass="tmdl.ecore#//core/Multiplicity">
-        <genOperations ecoreOperation="tmdl.ecore#//core/Multiplicity/asSequence"/>
-        <genOperations ecoreOperation="tmdl.ecore#//core/Multiplicity/asSequence.1">
-          <genParameters ecoreParameter="tmdl.ecore#//core/Multiplicity/asSequence.1/assignments"/>
+        <genOperations ecoreOperation="tmdl.ecore#//core/Multiplicity/listValues">
+          <genParameters ecoreParameter="tmdl.ecore#//core/Multiplicity/listValues/assignments"/>
         </genOperations>
+        <genOperations ecoreOperation="tmdl.ecore#//core/Multiplicity/listValues.1"/>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//core/MultiplicityValue">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/MultiplicityValue/value"/>
-        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityValue/asSequence">
-          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityValue/asSequence/assignments"/>
+        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityValue/listValues">
+          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityValue/listValues/assignments"/>
         </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//core/MultiplicityArray">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/MultiplicityArray/values"/>
-        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityArray/asSequence">
-          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityArray/asSequence/assignments"/>
+        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityArray/listValues">
+          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityArray/listValues/assignments"/>
         </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//core/MultiplicityParametric">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference tmdl.ecore#//core/MultiplicityParametric/parameter"/>
-        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityParametric/asSequence">
-          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityParametric/asSequence/assignments"/>
+        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityParametric/listValues">
+          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityParametric/listValues/assignments"/>
         </genOperations>
       </genClasses>
     </nestedGenPackages>

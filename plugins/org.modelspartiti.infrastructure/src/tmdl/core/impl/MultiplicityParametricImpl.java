@@ -2,25 +2,23 @@
  */
 package tmdl.core.impl;
 
-import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.WrappedException;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import tmdl.core.Assignment;
+import tmdl.core.AssignmentArray;
+import tmdl.core.AssignmentSimple;
 import tmdl.core.CorePackage;
 import tmdl.core.MultiplicityParametric;
 import tmdl.core.Parameter;
+import tmdl.core.ParameterArray;
+import tmdl.core.ParameterSimple;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +33,7 @@ import tmdl.core.Parameter;
  *
  * @generated
  */
-public class MultiplicityParametricImpl extends MinimalEObjectImpl.Container implements MultiplicityParametric {
+public class MultiplicityParametricImpl extends MultiplicityImpl implements MultiplicityParametric {
 	/**
 	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -104,56 +102,6 @@ public class MultiplicityParametricImpl extends MinimalEObjectImpl.Container imp
 	}
 
 	/**
-	 * The cached invocation delegate for the '{@link #asSequence(org.eclipse.emf.common.util.EList) <em>As Sequence</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #asSequence(org.eclipse.emf.common.util.EList)
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate AS_SEQUENCE_ELIST__EINVOCATION_DELEGATE = ((EOperation.Internal)CorePackage.Literals.MULTIPLICITY_PARAMETRIC___AS_SEQUENCE__ELIST).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Integer> asSequence(EList<Assignment> assignments) {
-		try {
-			return (EList<Integer>)AS_SEQUENCE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
-	 * The cached invocation delegate for the '{@link #asSequence() <em>As Sequence</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #asSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate AS_SEQUENCE__EINVOCATION_DELEGATE = ((EOperation.Internal)CorePackage.Literals.MULTIPLICITY___AS_SEQUENCE).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Integer> asSequence() {
-		try {
-			return (EList<Integer>)AS_SEQUENCE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -215,18 +163,48 @@ public class MultiplicityParametricImpl extends MinimalEObjectImpl.Container imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case CorePackage.MULTIPLICITY_PARAMETRIC___AS_SEQUENCE__ELIST:
-				return asSequence((EList<Assignment>)arguments.get(0));
-			case CorePackage.MULTIPLICITY_PARAMETRIC___AS_SEQUENCE:
-				return asSequence();
+	public List<Integer> listValues(List<Assignment> assignments) {
+		ArrayList<Integer> retValues = new ArrayList<Integer>();
+		Iterator<Assignment> it = assignments.iterator();
+		boolean found = false;
+		Assignment ass = null;
+
+		if(getParameter() instanceof ParameterSimple) {
+			while(it.hasNext() && !found) {
+				ass = it.next();
+				if(ass instanceof AssignmentSimple) {
+					AssignmentSimple assSimple = ((AssignmentSimple)ass);
+					if(assSimple.getParameter().getName() == this.getParameter().getName()) {
+						found = true;
+						if(assSimple.getValue() > 0) {
+							for(int i = 1; i <= assSimple.getValue(); i++) {
+								retValues.add(i);
+							}
+						}
+					}
+				}
+			}
+		}else if(getParameter() instanceof ParameterArray) {
+			while(it.hasNext() && !found) {
+				ass = it.next();
+				if(ass instanceof AssignmentArray) {
+					AssignmentArray assArray = ((AssignmentArray)ass);
+					
+					if(assArray.getParameter().getName() == this.getParameter().getName()) {
+						found = true;
+						Iterator<Double> itArray = assArray.getValues().iterator();
+						while(itArray.hasNext()) {
+							retValues.add(itArray.next().intValue());
+						}
+					}
+				}
+			}
 		}
-		return super.eInvoke(operationID, arguments);
+
+		return retValues;
 	}
 
 } //MultiplicityParametricImpl

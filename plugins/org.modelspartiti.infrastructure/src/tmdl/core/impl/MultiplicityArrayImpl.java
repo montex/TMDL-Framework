@@ -2,19 +2,13 @@
  */
 package tmdl.core.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
 
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.WrappedException;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import tmdl.core.Assignment;
@@ -34,7 +28,7 @@ import tmdl.core.MultiplicityArray;
  *
  * @generated
  */
-public class MultiplicityArrayImpl extends MinimalEObjectImpl.Container implements MultiplicityArray {
+public class MultiplicityArrayImpl extends MultiplicityImpl implements MultiplicityArray {
 	/**
 	 * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -74,56 +68,6 @@ public class MultiplicityArrayImpl extends MinimalEObjectImpl.Container implemen
 			values = new EDataTypeUniqueEList<Integer>(Integer.class, this, CorePackage.MULTIPLICITY_ARRAY__VALUES);
 		}
 		return values;
-	}
-
-	/**
-	 * The cached invocation delegate for the '{@link #asSequence(org.eclipse.emf.common.util.EList) <em>As Sequence</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #asSequence(org.eclipse.emf.common.util.EList)
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate AS_SEQUENCE_ELIST__EINVOCATION_DELEGATE = ((EOperation.Internal)CorePackage.Literals.MULTIPLICITY_ARRAY___AS_SEQUENCE__ELIST).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Integer> asSequence(EList<Assignment> assignments) {
-		try {
-			return (EList<Integer>)AS_SEQUENCE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
-	 * The cached invocation delegate for the '{@link #asSequence() <em>As Sequence</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #asSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate AS_SEQUENCE__EINVOCATION_DELEGATE = ((EOperation.Internal)CorePackage.Literals.MULTIPLICITY___AS_SEQUENCE).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Integer> asSequence() {
-		try {
-			return (EList<Integer>)AS_SEQUENCE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
 	}
 
 	/**
@@ -192,23 +136,6 @@ public class MultiplicityArrayImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case CorePackage.MULTIPLICITY_ARRAY___AS_SEQUENCE__ELIST:
-				return asSequence((EList<Assignment>)arguments.get(0));
-			case CorePackage.MULTIPLICITY_ARRAY___AS_SEQUENCE:
-				return asSequence();
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
@@ -219,4 +146,18 @@ public class MultiplicityArrayImpl extends MinimalEObjectImpl.Container implemen
 		return result.toString();
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public List<Integer> listValues(List<Assignment> assignments) {
+		ArrayList<Integer> retValues = new ArrayList<Integer>();
+		Iterator<Integer> it = getValues().iterator();
+		while(it.hasNext()) {
+			retValues.add(it.next());
+		}
+		return retValues;
+	}
 } //MultiplicityArrayImpl

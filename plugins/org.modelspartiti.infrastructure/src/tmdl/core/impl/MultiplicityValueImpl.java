@@ -2,19 +2,12 @@
  */
 package tmdl.core.impl;
 
-import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.WrappedException;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import tmdl.core.Assignment;
 import tmdl.core.CorePackage;
@@ -33,7 +26,7 @@ import tmdl.core.MultiplicityValue;
  *
  * @generated
  */
-public class MultiplicityValueImpl extends MinimalEObjectImpl.Container implements MultiplicityValue {
+public class MultiplicityValueImpl extends MultiplicityImpl implements MultiplicityValue {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,7 +35,7 @@ public class MultiplicityValueImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VALUE_EDEFAULT = 0.0;
+	protected static final int VALUE_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -52,7 +45,7 @@ public class MultiplicityValueImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected double value = VALUE_EDEFAULT;
+	protected int value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,7 +71,7 @@ public class MultiplicityValueImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getValue() {
+	public int getValue() {
 		return value;
 	}
 
@@ -87,61 +80,11 @@ public class MultiplicityValueImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(double newValue) {
-		double oldValue = value;
+	public void setValue(int newValue) {
+		int oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.MULTIPLICITY_VALUE__VALUE, oldValue, value));
-	}
-
-	/**
-	 * The cached invocation delegate for the '{@link #asSequence(org.eclipse.emf.common.util.EList) <em>As Sequence</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #asSequence(org.eclipse.emf.common.util.EList)
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate AS_SEQUENCE_ELIST__EINVOCATION_DELEGATE = ((EOperation.Internal)CorePackage.Literals.MULTIPLICITY_VALUE___AS_SEQUENCE__ELIST).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Integer> asSequence(EList<Assignment> assignments) {
-		try {
-			return (EList<Integer>)AS_SEQUENCE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
-	}
-
-	/**
-	 * The cached invocation delegate for the '{@link #asSequence() <em>As Sequence</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #asSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate AS_SEQUENCE__EINVOCATION_DELEGATE = ((EOperation.Internal)CorePackage.Literals.MULTIPLICITY___AS_SEQUENCE).getInvocationDelegate();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Integer> asSequence() {
-		try {
-			return (EList<Integer>)AS_SEQUENCE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
 	}
 
 	/**
@@ -167,7 +110,7 @@ public class MultiplicityValueImpl extends MinimalEObjectImpl.Container implemen
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CorePackage.MULTIPLICITY_VALUE__VALUE:
-				setValue((Double)newValue);
+				setValue((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -208,23 +151,6 @@ public class MultiplicityValueImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case CorePackage.MULTIPLICITY_VALUE___AS_SEQUENCE__ELIST:
-				return asSequence((EList<Assignment>)arguments.get(0));
-			case CorePackage.MULTIPLICITY_VALUE___AS_SEQUENCE:
-				return asSequence();
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
@@ -233,6 +159,22 @@ public class MultiplicityValueImpl extends MinimalEObjectImpl.Container implemen
 		result.append(value);
 		result.append(')');
 		return result.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public List<Integer> listValues(List<Assignment> assignments) {
+		ArrayList<Integer> retValues = new ArrayList<Integer>();
+		if(getValue() > 0) {
+			for(int i = 1; i <= getValue(); i++) {
+				retValues.add(i);
+			}
+		}
+		return retValues;
 	}
 
 } //MultiplicityValueImpl

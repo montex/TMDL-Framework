@@ -1,3 +1,4 @@
+@"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore")
 @namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl", prefix="tmdl")
 package tmdl;
 
@@ -90,7 +91,6 @@ package library {
 
 }
 
-@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
 @namespace(uri="http://www.modelspartiti.org/infrastructure/tmdl/core", prefix="core")
 package core {
   abstract interface ConcreteModel {
@@ -102,7 +102,7 @@ package core {
   }
 
   abstract class Parameter {
-    attr String[1] name;
+    id attr String[1] name;
   }
 
   class ParameterSimple extends Parameter {
@@ -124,44 +124,18 @@ package core {
     attr double[*] values;
   }
 
-  abstract interface Multiplicity {
-
-    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="asSequence(Assignment.allInstances())")
-    op int[*] asSequence();
-    op int[*] asSequence(!ordered Assignment[*] assignments);
+  abstract class Multiplicity {
   }
 
   class MultiplicityValue extends Multiplicity {
-
-    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="
-				if value = 0 then Sequence{}
-				else Sequence{1..value} endif")
-    op int[*] asSequence(!ordered Assignment[*] assignments);
-    attr double[1] value;
+    attr int[1] value;
   }
 
   class MultiplicityArray extends Multiplicity {
-
-    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="values")
-    op int[*] asSequence(!ordered Assignment[*] assignments);
     attr int[+] values;
   }
 
   class MultiplicityParametric extends Multiplicity {
-
-    @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="
-				if parameter.oclIsTypeOf(AssignmentSimple) then
-					let v =	assignments->selectByType(AssignmentSimple)
-								->select(a | a.oclAsType(AssignmentSimple).parameter = self.parameter)
-								->asSequence()->first().oclAsType(AssignmentSimple).value
-					in
-					if v = 0 then Sequence{} else Sequence{1..v} endif
-				else
-					assignments->selectByType(AssignmentArray)
-								->select(a | a.oclAsType(AssignmentArray).parameter = self.parameter)
-								->asSequence()->first().oclAsType(AssignmentArray).values
-				endif")
-    op int[*] asSequence(!ordered Assignment[*] assignments);
     ref Parameter[1] parameter;
   }
 

@@ -2,8 +2,7 @@
  */
 package tmdl.core;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,24 +12,23 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see tmdl.core.CorePackage#getMultiplicity()
- * @model interface="true" abstract="true"
+ * @model abstract="true"
  * @generated
  */
 public interface Multiplicity extends EObject {
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='asSequence(Assignment.allInstances())'"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<Integer> asSequence();
-
+	public List<Integer> listValues();
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model assignmentsMany="true" assignmentsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<Integer> asSequence(EList<Assignment> assignments);
-
+	public List<Integer> listValues(List<Assignment> assignments);
+	
 } // Multiplicity

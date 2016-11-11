@@ -2,7 +2,6 @@
  */
 package tmdl.core;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,14 +45,5 @@ public interface MultiplicityParametric extends Multiplicity {
 	 * @generated
 	 */
 	void setParameter(Parameter value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model assignmentsMany="true" assignmentsOrdered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\t\tif parameter.oclIsTypeOf(AssignmentSimple) then\n\t\t\t\t\tlet v =\tassignments->selectByType(AssignmentSimple)\n\t\t\t\t\t\t\t\t->select(a | a.oclAsType(AssignmentSimple).parameter = self.parameter)\n\t\t\t\t\t\t\t\t->asSequence()->first().oclAsType(AssignmentSimple).value\n\t\t\t\t\tin\n\t\t\t\t\tif v = 0 then Sequence{} else Sequence{1..v} endif\n\t\t\t\telse\n\t\t\t\t\tassignments->selectByType(AssignmentArray)\n\t\t\t\t\t\t\t\t->select(a | a.oclAsType(AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t\t\t->asSequence()->first().oclAsType(AssignmentArray).values\n\t\t\t\tendif'"
-	 * @generated
-	 */
-	EList<Integer> asSequence(EList<Assignment> assignments);
 
 } // MultiplicityParametric
