@@ -1,0 +1,544 @@
+-----------------------------------------------------------------------
+-- Copyright (C) 2016                                                --
+-- University of Firenze, Italy                                      --
+--                                                                   --
+-- All rights reserved. This program and the accompanying materials  --
+-- are made available under the terms of the Eclipse Public License  --
+-- v1.0 which accompanies this distribution, and is available at     --
+-- http://www.eclipse.org/legal/epl-v10.html                         --
+--                                                                   --
+-- Contributors:                                                     --
+-- Leonardo Montecchi 	lmontecchi@unifi.it                          --
+-----------------------------------------------------------------------
+
+-- @nsURI SAN=http://www.modelspartiti.org/templates/san/san
+-- @nsURI SANT=http://www.modelspartiti.org/templates/san/sant
+-- @nsURI TMDL=http://www.modelspartiti.org/infrastructure/tmdl/core
+
+module concretize;
+create concrete : SAN from template : SANT, assignments : TMDL;
+
+helper def: mapPlaceExpansion : Map(SANT!Place, Map(Integer, SAN!Place)) = Map{};
+
+--The SAN/SANT element
+rule ModelRoot {
+	from
+		template : SANT!SANT
+	using {
+		placesExpanded : Set(SAN!Place) = Set{};
+	}
+	to
+		model : SAN!SAN (
+			name <- template.name,
+			globalVariables <- template.globalVariables,
+			activities <- template.activities,
+			gates <- template.gates,
+			initialization <- template.initialization,
+			arcs <- template.arcs
+		)
+	do {
+		placesExpanded <- template.places->collect(p | thisModule.ExpandPlace(p))->flatten();
+		model.places <- placesExpanded;
+	}
+}
+
+--Global Variables
+rule GlobalVariable {
+	from
+		tv : SANT!GlobalVariable
+	to
+		v : SAN!GlobalVariable (
+			name <- v.name,
+			type <- v.type
+		)
+}
+
+----Places
+rule ExpandPlace(tp : SANT!Place) {
+	using {
+		places : Set(SAN!Place) = Set{};
+		tmpPlace : SAN!Place = OclUndefined;
+		mapping : Map(Integer, SAN!Place) = Map{};
+	}
+	do {
+		if(tp.oclIsTypeOf(SANT!NormalPlace)) {
+			for(i in tp.getMultiplicity()) {
+				tmpPlace <- thisModule.CreateNormalPlace(tp);
+				tmpPlace.name <- tmpPlace.name + i;
+				places <- places.including(tmpPlace);
+				mapping <- mapping->including(i, tmpPlace);
+			}
+		}else{
+			for(i in tp.getMultiplicity()) {
+				tmpPlace <- thisModule.CreateExtendedPlace(tp);
+				tmpPlace.name <- tmpPlace.name + i;
+				places <- places.including(tmpPlace);
+				mapping <- mapping->including(i, tmpPlace);
+			}
+		}
+		
+		thisModule.mapPlaceExpansion <- thisModule.mapPlaceExpansion.including(tp,mapping);
+		places;
+	}
+}
+
+
+rule CreateNormalPlace(tp : SANT!NormalPlace) {
+	to
+		p : SAN!NormalPlace
+		(
+			name <- tp.name,
+			marking <- tp.marking
+		)
+	do {
+		p;
+	}
+}
+
+rule CreateExtendedPlace(tp : SANT!ExtendedPlace) {
+	to
+		p : SAN!ExtendedPlace
+		(
+			name <- tp.name,
+			marking <- tp.marking,
+			type <- tp.type
+		)
+	do {
+		p;
+	}
+}
+
+--Marking
+abstract rule Marking {
+	from
+		tm : SANT!Marking
+	to
+		m : SAN!Marking
+}
+
+rule MarkingInteger extends Marking {
+	from
+		tm : SANT!MarkingInteger
+	to
+		m : SAN!MarkingInteger
+		(
+			value <- tm.value.evaluate()
+		)
+}
+
+rule MarkingVariableSimple extends Marking {
+	from
+		tm : SANT!MarkingVariableSimple
+	to
+		m : SAN!MarkingVariableSimple
+		(
+			variable <- tm.variable
+		)
+}
+
+rule MarkingString extends Marking {
+	from
+		tm : SANT!MarkingString
+	to
+		m : SAN!MarkingString
+		(
+			value <- tm.value
+		)
+}
+
+rule MarkingVariableExtended extends Marking {
+	from
+		tm : SANT!MarkingVariableExtended
+	to
+		m : SAN!MarkingVariableExtended
+		(
+			variable <- tm.variable
+		)
+}
+
+--Activities
+abstract rule Activity {
+	from
+		ta : SANT!Activity
+	to
+		a : SAN!Activity (
+			name <- ta.name
+		)
+}
+
+rule ActivityInstantaneous extends Activity {
+	from
+		ta : SANT!InstantaneousActivity
+	to
+		a : SAN!InstantaneousActivity
+	do {
+		a.cases <- thisModule.CasesSpecification(ta.cases);
+	}
+}
+
+rule ActivityTimed extends Activity {
+	from
+		ta : SANT!TimedActivity
+	to
+		a : SAN!TimedActivity (
+			timeDistribution <- ta.timeDistribution,
+			activation <- ta.activation,
+			reactivation <- ta.reactivation
+		)
+	do {
+		a.cases <- thisModule.CasesSpecification(ta.cases);
+	}
+}
+
+--Cases
+rule Case {
+	from
+		tc : SANT!Case
+	to
+		c : SAN!Case (
+			ID <- tc.ID.evaluate(),
+			p <- tc.p
+		)
+}
+
+rule CasesSpecification(cs : SANT!CasesSpecification) {
+	using{
+		casesList : Sequence(SAN!Case) = Sequence{};	
+	}
+	do {
+		if(cs.oclIsTypeOf(SANT!CasesSpecificationCases)) {
+			casesList <- thisModule.CasesSpecificationCases(cs);
+		}
+		casesList;
+	}
+}
+
+rule CasesSpecificationCases(cs : SANT!CasesSpecificationCases) {
+	using {
+		casesList : Sequence(SAN!Case) = Sequence{};
+	}
+	do {
+		for(c in cs.cases) {
+			casesList <- casesList->append(
+				thisModule.resolveTemp(c, 'c')
+			);
+		}
+		casesList;
+	}
+}
+
+rule CasesSpecificationProbabilityArray(cs : SANT!CasesSpecificationProbabilityArray) {
+	using {
+		casesList : Sequence(SAN!Case) = Sequence{};
+		tmpCase : SAN!Case = OclUndefined;
+		i : Integer = 0;
+	}
+	do {
+		for(prob in cs.pValues) {
+			tmpCase <- SAN!Case.newInstance();
+			i <- i+1;
+			tmpCase.ID <- i;
+			tmpCase.p <- prob;
+			casesList <- casesList.append(tmpCase);
+		}
+		casesList;
+	}
+}
+
+rule CasesSpecificationParametric(cs : SANT!CasesSpecificationParametric) {
+	using {
+		casesList : Sequence(SAN!Case) = Sequence{};
+	}
+	do {
+		casesList;
+	}
+}
+
+
+----Arcs
+--rule InputArc {
+--	from
+--		ia : SAN!InputArc
+--	to
+--		tia : SANT!InputArc (
+--			source <- ia.source,
+--			target <- ia.target
+--		)
+--}
+--
+--rule OutputArc {
+--	from
+--		oa : SAN!OutputArc
+--	to
+--		toa : SANT!OutputArc (
+--			source <- oa.source,
+--			target <- oa.target
+--		)
+--
+--}
+--
+----Gates
+--rule InputGate {
+--	from
+--		ig : SAN!InputGate
+--	to
+--		tig : SANT!InputGate (
+--			name <- ig.name,
+--			activity <- ig.activity,
+--			places <- ig.places,
+--			predicate <- ig.predicate,
+--			function <- ig.function
+--		)
+--
+--}
+--
+--rule OutputGate {
+--	from
+--		og : SAN!OutputGate
+--	to
+--		tog : SANT!OutputGateConcrete (
+--			name <- og.name,
+--			places <- og.places,
+--			function <- og.function
+--		)
+--}
+--
+--Expressions
+rule Expression {
+	from
+		te : SANT!Expression
+	to
+		t : SAN!Expression (
+			segments <- te.segments
+		)
+}
+
+abstract rule ExpressionSegment {
+	from
+		tes : SANT!ExpressionSegment
+	to
+		es : SAN!ExpressionSegment
+}
+
+rule ExpressionText extends ExpressionSegment {
+	from
+		tes : SANT!ExpressionText
+	to
+		es : SAN!ExpressionText (
+			text <- tes.text
+		)
+}
+
+rule ExpressionMarking extends ExpressionSegment  {
+	from
+		tes : SANT!ExpressionMarking
+	to
+		es : SAN!ExpressionMarking (
+			place <- thisModule.mapPlaceExpansion->get(tes)->get(tes.index)
+		)
+}
+
+rule ExpressionVariable extends ExpressionSegment {
+	from
+		tes : SANT!ExpressionVariable
+	to
+		es : SAN!ExpressionVariable (
+			variable <- tes.variable
+		)
+}
+
+--Distributions
+abstract rule Distribution {
+	from
+		td : SANT!Distribution
+	to
+		d : SAN!Distribution
+}
+
+rule Exponential extends Distribution {
+	from
+		td : SANT!Exponential
+	to
+		d : SAN!Exponential (
+			rate <- td.rate
+		)
+}
+
+rule Normal extends Distribution {
+	from
+		td : SANT!Normal
+	to
+		d : SAN!Normal (
+			mean <- td.mean,
+			variance <- td.variance
+		)
+}
+
+rule Gamma extends Distribution {
+	from
+		td : SANT!Gamma
+	to
+		d : SAN!Gamma (
+			alpha <- td.alpha,
+			beta <- td.beta
+		)
+}
+
+rule Binomial extends Distribution {
+	from
+		td : SANT!Binomial
+	to
+		d : SAN!Binomial (
+			t <- td.t,
+			p <- td.p
+		)
+}
+
+rule Deterministic extends Distribution {
+	from
+		td : SANT!Deterministic
+	to
+		d : SAN!Deterministic (
+			value <- td.value
+		)
+}
+
+rule Lognormal extends Distribution {
+	from
+		td : SANT!Lognormal
+	to
+		d : SAN!Lognormal (
+			mu <- td.mu,
+			alphaSquared <- td.alphaSquared
+		)
+}
+
+rule Beta extends Distribution {
+	from
+		td : SANT!Beta
+	to
+		d : SAN!Beta (
+			alpha1 <- td.alpha1,
+			beta1 <- td.beta1
+		)
+}
+
+rule NegativeBinomial extends Distribution {
+	from
+		td : SANT!NegativeBinomial
+	to
+		d : SAN!NegativeBinomial (
+			s <- td.s,
+			p <- td.p
+		)
+}
+
+rule Geometric extends Distribution {
+	from
+		td : SANT!Geometric
+	to
+		d : SAN!Geometric (
+			p <- td.p
+		)
+}
+
+rule Erlang extends Distribution {
+	from
+		td : SANT!Erlang
+	to
+		d : SAN!Erlang (
+			m <- td.m,
+			beta <- td.beta
+		)
+}
+
+rule Uniform extends Distribution {
+	from
+		td : SANT!Uniform
+	to
+		d : SAN!Uniform (
+			lowerBound <- td.lowerBound,
+			upperBound <- td.upperBound
+		)
+}
+
+rule HyperExponential extends Distribution {
+	from
+		td : SANT!HyperExponential
+	to
+		t : SAN!HyperExponential (
+			rate0 <- td.rate0,
+			p0 <- td.p0
+		)
+}
+
+rule Weibull extends Distribution {
+	from
+		td : SANT!Weibull
+	to
+		t : SAN!Weibull (
+			alpha <- td.alpha,
+			beta <- td.beta
+		)
+}
+
+rule Triangular extends Distribution {
+	from
+		td : SANT!Triangular
+	to
+		t : SAN!Triangular (
+			min <- td.min,
+			middle <- td.middle,
+			max <- td.max
+		)
+}
+
+rule ConditionalWeibull extends Distribution {
+	from
+		td : SANT!ConditionalWeibull
+	to
+		t : SAN!ConditionalWeibull (
+			alpha <- td.alpha,
+			beta <- td.beta,
+			t <- td.t
+		)
+}
+
+rule HypoExponential extends Distribution {
+	from
+		td : SANT!HypoExponential
+	to
+		t : SAN!HypoExponential (
+			rate0 <- td.rate0
+		)
+}
+
+rule Pareto extends Distribution {
+	from
+		td : SANT!Pareto
+	to
+		t : SAN!Pareto (
+			lowerBound <- td.lowerBound,
+			shape <- td.shape
+		)
+}
+
+helper context SANT!Place def: getMultiplicity() : Set(Integer) =
+	self.multiplicity.listValues(TMDL!Assignment.allInstances().asSequence());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
