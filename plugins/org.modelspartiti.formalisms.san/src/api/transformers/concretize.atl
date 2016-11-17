@@ -13,10 +13,13 @@
 
 -- @nsURI SAN=http://www.modelspartiti.org/templates/san/san
 -- @nsURI SANT=http://www.modelspartiti.org/templates/san/sant
--- @nsURI TMDL=http://www.modelspartiti.org/infrastructure/tmdl/core
+-- @nsURI TMDLCO=http://www.modelspartiti.org/infrastructure/tmdl/core
+-- @nsURI TMDLEX=http://www.modelspartiti.org/infrastructure/tmdl/expressions
+-- @nsURI TMDLLI=http://www.modelspartiti.org/infrastructure/tmdl/library
+-- @nsURI TMDLSC=http://www.modelspartiti.org/infrastructure/tmdl/scenario
 
 module concretize;
-create concrete : SAN from template : SANT, assignments : TMDL;
+create concrete : SAN from template : SANT, assignments : TMDLCO, tmdlex : TMDLEX;
 
 helper def: mapPlaceExpansion : Map(SANT!Place, Map(Integer, SAN!Place)) = Map{};
 
@@ -33,12 +36,15 @@ rule ModelRoot {
 			globalVariables <- template.globalVariables,
 			activities <- template.activities,
 			gates <- template.gates,
-			initialization <- template.initialization,
-			arcs <- template.arcs
+			initialization <- template.initialization
 		)
 	do {
 		placesExpanded <- template.places->collect(p | thisModule.ExpandPlace(p))->flatten();
 		model.places <- placesExpanded;
+		model.arcs <- template.arcs->select(a | a.oclIsTypeOf(SANT!InputArc))
+						->collect(tia | thisModule.InputArc(tia))
+						->union(template.arcs->select(a | a.oclIsTypeOf(SANT!OutputArc))
+						->collect(toa | thisModule.OutputArc(toa)))->flatten();
 	}
 }
 
@@ -208,6 +214,14 @@ rule CasesSpecification(cs : SANT!CasesSpecification) {
 	do {
 		if(cs.oclIsTypeOf(SANT!CasesSpecificationCases)) {
 			casesList <- thisModule.CasesSpecificationCases(cs);
+		}else{
+			if(cs.oclIsTypeOf(SANT!CasesSpecificationProbabilityArray)) {
+				casesList <- thisModule.CasesSpecificationProbabilityArray(cs);
+			}else{
+				if(cs.oclIsTypeOf(SANT!CasesSpecificationParametric)) {
+					casesList <- thisModule.CasesSpecificationParametric(cs);
+				}
+			}
 		}
 		casesList;
 	}
@@ -248,61 +262,98 @@ rule CasesSpecificationProbabilityArray(cs : SANT!CasesSpecificationProbabilityA
 rule CasesSpecificationParametric(cs : SANT!CasesSpecificationParametric) {
 	using {
 		casesList : Sequence(SAN!Case) = Sequence{};
+		numCases : Integer = cs.numCases.evaluate();
+		seqCases : Sequence(Integer) = numCases.getSequenceFromOne();
+		tmpCase : SAN!Case = OclUndefined;
 	}
 	do {
+		for(i in seqCases) {
+			tmpCase = SAN!Case.newInstance();
+			tmpCase.ID = i;
+			---TODO: Check
+			tmpCase.p = cs.pExpression.evaluateWithContext(i);
+			casesList <- casesList.append(tmpCase);
+		}
 		casesList;
 	}
 }
 
+--Arcs
+rule InputArc(tia : SANT!InputArc) {
+	using {
+		ia : SAN!InputArc = OclUndefined;
+		output : Sequence(SAN!InputArc) = Sequence{};
+	}
+	do {
+		for(p in thisModule.mapPlaceExpansion->get(tia.source)->getValues()) {
+			ia <- SAN!InputArc.newInstance();
+			ia.source <- p;
+			ia.target <- thisModule.resolveTemp(tia.target, 'a');
+			output <- output.append(ia);
+		}
+		output;
+	}
+}
 
-----Arcs
---rule InputArc {
---	from
---		ia : SAN!InputArc
---	to
---		tia : SANT!InputArc (
---			source <- ia.source,
---			target <- ia.target
---		)
---}
---
---rule OutputArc {
---	from
---		oa : SAN!OutputArc
---	to
---		toa : SANT!OutputArc (
---			source <- oa.source,
---			target <- oa.target
---		)
---
---}
---
-----Gates
---rule InputGate {
---	from
---		ig : SAN!InputGate
---	to
---		tig : SANT!InputGate (
---			name <- ig.name,
---			activity <- ig.activity,
---			places <- ig.places,
---			predicate <- ig.predicate,
---			function <- ig.function
---		)
---
---}
---
---rule OutputGate {
---	from
---		og : SAN!OutputGate
---	to
---		tog : SANT!OutputGateConcrete (
---			name <- og.name,
---			places <- og.places,
---			function <- og.function
---		)
---}
---
+rule OutputArc(toa : SANT!OutputArc) {
+	using {
+		oa : SAN!OutputArc = OclUndefined;
+		output : Sequence(SAN!OutputArc) = Sequence{};
+	}
+	do {
+		for(p in thisModule.mapPlaceExpansion->get(toa.target)->getValues()) {
+			oa <- SAN!OutputArc.newInstance();
+			oa.source <- thisModule.resolveTemp(toa.source, 'a');
+			oa.target <- p;
+			output <- output.append(oa);
+		}
+		output;
+	}
+}
+
+--Gates
+rule InputGate {
+	from
+		tig : SANT!InputGate
+	to
+		ig : SAN!InputGate (
+			name <- tig.name,
+			activity <- tig.activity,
+			predicate <- tig.predicate,
+			function <- tig.function
+		)
+	do {
+		ig.places <- tig.places->collect(tp | thisModule.mapPlaceExpansion->get(tp)->getValues())->flatten();
+	}
+}
+
+rule OutputGateConcrete {
+	from
+		tog : SANT!OutputGateConcrete
+	to
+		og : SAN!OutputGate (
+			name <- tog.name,
+			activityCase <- tog.activityCase,
+			function <- tog.function
+		)
+}
+
+rule OutputGateTemplate(ogt : SANT!OutputGateTemplate) {
+	using {
+		act : SAN!Activity = thisModule.resolveTemp(ogt.activity, 'a');
+		tmpOG : SAN!OutputGate = OclUndefined;
+	}
+	do {
+		for(c in act.cases) {
+			tmpOG <- SAN!OutputGate.newInstance();
+			tmpOG.name <- ogt.name + c.ID;
+			tmpOG.places <- ogt.places->collect(tp | thisModule.mapPlaceExpansion.get(tp)->getValues())->flatten();
+			tmpOG.activityCase <- c;
+			---TODO: Expression
+		}
+	}
+}
+
 --Expressions
 rule Expression {
 	from
@@ -524,12 +575,26 @@ rule Pareto extends Distribution {
 }
 
 helper context SANT!Place def: getMultiplicity() : Set(Integer) =
-	self.multiplicity.listValues(TMDL!Assignment.allInstances().asSequence());
+	self.multiplicity.listValues(TMDLCO!Assignment.allInstances().asSequence());
 
+helper context TMDLEX!TemplateExpressionInteger def: evaluateWithContext(i : Integer) : Integer =
+	if self.oclIsTypeOf(TMDLEX!TemplateExpressionContext) then i
+	else self.evaluate() endif;
+helper context TMDLEX!TemplateExpressionInteger def: evaluateWithContext(assignments : Sequence(TMDLCO!Assignment), i : Integer) : Integer =
+	if self.oclIsTypeOf(TMDLEX!TemplateExpressionContext) then i
+	else self.evaluate(assignments) endif;
+helper context TMDLEX!TemplateExpressionBoolean def: evaluateWithContext(i : Integer) : Boolean =
+	self.evaluate();
+helper context TMDLEX!TemplateExpressionBoolean def: evaluateWithContext(assignments : Sequence(TMDLCO!Assignment), i : Integer) : Boolean =
+	self.evaluate(assignments);
+helper context TMDLEX!TemplateExpressionReal def: evaluateWithContext(i : Integer) : Real = 
+	self.evaluate();
+helper context TMDLEX!TemplateExpressionReal def: evaluateWithContext(assignments : Sequence(TMDLCO!Assignment), i : Integer) : Real = 
+	self.evaluate(assignments);
 
-
-
-
+helper context Integer def: getSequenceFromOne() : Sequence(Integer) = 
+	if self = 1 then Sequence{1}
+	else (self-1).getSequenceFromOne()->union(Sequence{self}) endif;
 
 
 
