@@ -68,16 +68,21 @@ rule ExpandPlace(tp : SANT!Place) {
 		mapping : Map(Integer, SAN!Place) = Map{};
 	}
 	do {
-		if(tp.oclIsTypeOf(SANT!NormalPlace)) {
-			for(i in tp.getMultiplicity()) {
+		if(tp.isRegularPlace()) {
+			if(tp.oclIsTypeOf(SANT!NormalPlace)) {
 				tmpPlace <- thisModule.CreateNormalPlace(tp);
-				tmpPlace.name <- tmpPlace.name + i;
-				places <- places.including(tmpPlace);
-				mapping <- mapping->including(i, tmpPlace);
+			}else{
+				tmpPlace <- thisModule.CreateExtendedPlace(tp);
 			}
+			places <- places.including(tmpPlace);
+			mapping <- mapping->including(1, tmpPlace);
 		}else{
 			for(i in tp.getMultiplicity()) {
-				tmpPlace <- thisModule.CreateExtendedPlace(tp);
+				if(tp.oclIsTypeOf(SANT!NormalPlace)) {
+					tmpPlace <- thisModule.CreateNormalPlace(tp);
+				}else{
+					tmpPlace <- thisModule.CreateExtendedPlace(tp);
+				}
 				tmpPlace.name <- tmpPlace.name + i;
 				places <- places.including(tmpPlace);
 				mapping <- mapping->including(i, tmpPlace);
@@ -724,6 +729,14 @@ rule Pareto extends Distribution {
 		t.shape <- thisModule.Expression(td.shape);
 	}
 }
+
+helper context SANT!Place def: isRegularPlace() : Boolean = 
+	if self.multiplicity.oclIsTypeOf(SANT!MultiplicityValue) then
+		let m : SANT!MultiplicityValue = self.multiplicity in
+		m.value = 1
+	else
+		false
+	endif;
 
 helper context SANT!Place def: getMultiplicity() : Set(Integer) =
 	self.multiplicity.listValues(TMDLCO!Assignment.allInstances().asSequence());
