@@ -35,8 +35,7 @@ rule ModelRoot {
 			name <- template.name,
 			globalVariables <- template.globalVariables,
 			activities <- template.activities,
-			gates <- template.gates,
-			initialization <- template.initialization
+			gates <- template.gates 
 		)
 	do {
 		placesExpanded <- template.places->collect(p | thisModule.ExpandPlace(p))->flatten();
@@ -45,6 +44,7 @@ rule ModelRoot {
 						->collect(tia | thisModule.InputArc(tia))
 						->union(template.arcs->select(a | a.oclIsTypeOf(SANT!OutputArc))
 						->collect(toa | thisModule.OutputArc(toa)))->flatten();
+		model.initialization <- template.initialization->collect(e | thisModule.Expression(e));
 	}
 }
 
@@ -202,9 +202,11 @@ rule Case {
 		tc : SANT!Case
 	to
 		c : SAN!Case (
-			ID <- tc.ID.evaluate(),
-			p <- tc.p
+			ID <- tc.ID.evaluate()
 		)
+	do {
+		c.p <- thisModule.ExpressionWithContext(tc.p, c.ID);	
+	}
 }
 
 rule CasesSpecification(cs : SANT!CasesSpecification) {
@@ -214,15 +216,11 @@ rule CasesSpecification(cs : SANT!CasesSpecification) {
 	do {
 		if(cs.oclIsTypeOf(SANT!CasesSpecificationCases)) {
 			casesList <- thisModule.CasesSpecificationCases(cs);
-		}else{
-			if(cs.oclIsTypeOf(SANT!CasesSpecificationProbabilityArray)) {
-				casesList <- thisModule.CasesSpecificationProbabilityArray(cs);
-			}else{
-				if(cs.oclIsTypeOf(SANT!CasesSpecificationParametric)) {
-					casesList <- thisModule.CasesSpecificationParametric(cs);
-				}
-			}
-		}
+		}else{ if(cs.oclIsTypeOf(SANT!CasesSpecificationProbabilityArray)) {
+			casesList <- thisModule.CasesSpecificationProbabilityArray(cs);
+		}else{ if(cs.oclIsTypeOf(SANT!CasesSpecificationParametric)) {
+			casesList <- thisModule.CasesSpecificationParametric(cs);
+		}}}
 		casesList;
 	}
 }
@@ -252,7 +250,9 @@ rule CasesSpecificationProbabilityArray(cs : SANT!CasesSpecificationProbabilityA
 			tmpCase <- SAN!Case.newInstance();
 			i <- i+1;
 			tmpCase.ID <- i;
-			tmpCase.p <- prob;
+			tmpCase.p <- SAN!Expression.newInstance();
+			tmpCase.p.segments <- Sequence{SAN!ExpressionText.newInstance()};
+			tmpCase.p.segments->first().text <- prob.toString();
 			casesList <- casesList.append(tmpCase);
 		}
 		casesList;
@@ -270,8 +270,7 @@ rule CasesSpecificationParametric(cs : SANT!CasesSpecificationParametric) {
 		for(i in seqCases) {
 			tmpCase = SAN!Case.newInstance();
 			tmpCase.ID = i;
-			---TODO: Check
-			tmpCase.p = cs.pExpression.evaluateWithContext(i);
+			tmpCase.p <- thisModule.ExpressionWithContext(cs.pExpression, i);
 			casesList <- casesList.append(tmpCase);
 		}
 		casesList;
@@ -318,11 +317,11 @@ rule InputGate {
 	to
 		ig : SAN!InputGate (
 			name <- tig.name,
-			activity <- tig.activity,
-			predicate <- tig.predicate,
-			function <- tig.function
+			activity <- tig.activity
 		)
 	do {
+		ig.predicate <- thisModule.Expression(tig.predicate);
+		ig.function <- thisModule.Expression(tig.function);
 		ig.places <- tig.places->collect(tp | thisModule.mapPlaceExpansion->get(tp)->getValues())->flatten();
 	}
 }
@@ -333,9 +332,11 @@ rule OutputGateConcrete {
 	to
 		og : SAN!OutputGate (
 			name <- tog.name,
-			activityCase <- tog.activityCase,
-			function <- tog.function
+			activityCase <- tog.activityCase
 		)
+	do {
+		og.function <- thisModule.Expression(tog.function);	
+	}
 }
 
 rule OutputGateTemplate(ogt : SANT!OutputGateTemplate) {
@@ -349,53 +350,186 @@ rule OutputGateTemplate(ogt : SANT!OutputGateTemplate) {
 			tmpOG.name <- ogt.name + c.ID;
 			tmpOG.places <- ogt.places->collect(tp | thisModule.mapPlaceExpansion.get(tp)->getValues())->flatten();
 			tmpOG.activityCase <- c;
-			---TODO: Expression
+			tmpOG.function <- thisModule.ExpressionWithContext(ogt.function, c.ID);
 		}
 	}
 }
 
 --Expressions
-rule Expression {
-	from
-		te : SANT!Expression
-	to
-		t : SAN!Expression (
-			segments <- te.segments
-		)
+rule Expression(te : SANT!Expression) {
+	using {
+		exp : SAN!Expression = OclUndefined;	
+	}	
+	do {
+		exp <- thisModule.ExpressionWithContext(te, 1);
+		exp;
+	}
 }
 
-abstract rule ExpressionSegment {
-	from
-		tes : SANT!ExpressionSegment
-	to
-		es : SAN!ExpressionSegment
+rule ExpressionWithContext(te : SANT!Expression, iContext : Integer) {
+	using {
+		exp : SAN!Expression = SAN!Expression.newInstance();	
+	}	
+	do {
+		exp.segments <- te.segments->collect(s | thisModule.ExpressionSegment(s,iContext))->flatten();
+		exp;
+	}
 }
 
-rule ExpressionText extends ExpressionSegment {
-	from
-		tes : SANT!ExpressionText
-	to
-		es : SAN!ExpressionText (
-			text <- tes.text
-		)
+rule ExpressionSegment(tes : SANT!ExpressionSegment, iContext : Integer) {
+	using {
+		segments : Sequence(SAN!ExpressionSegment) = Sequence{};
+	}
+	do {
+		if(tes.oclIsTypeOf(SANT!ExpressionText)) {
+			segments <- thisModule.ExpressionText(tes, iContext);
+		}else{ if(tes.oclIsTypeOf(SANT!ExpressionMarking)) {
+			segments <- thisModule.ExpressionMarking(tes, iContext);
+		}else{ if(tes.oclIsTypeOf(SANT!ExpressionVariable)) {
+			segments <- thisModule.ExpressionVariable(tes, iContext);
+		}else{ if(tes.oclIsTypeOf(SANT!ExpressionTemplateExpression)) {
+			segments <- thisModule.ExpressionTemplateExpression(tes, iContext);
+		}else{ if(tes.oclIsTypeOf(SANT!ExpressionIterationElement)) {
+			segments <- thisModule.ExpressionIterationElement(tes, iContext);
+		}else{ if(tes.oclIsTypeOf(SANT!ExpressionActivityCasesNumber)) {
+			segments <- thisModule.ExpressionActivityCasesNumber(tes, iContext);
+		}else{ if(tes.oclIsTypeOf(SANT!ExpressionPlaceTemplateSize)) {
+			segments <- thisModule.ExpressionPlaceTemplateSize(tes, iContext);
+		}else{ if(tes.oclIsTypeOf(SANT!ExpressionIfThenElse)) {
+			segments <- thisModule.ExpressionIfThenElse(tes, iContext);
+		}else{ if(tes.oclIsTypeOf(SANT!ExpressionLoop)) {
+			segments <- thisModule.ExpressionLoop(tes, iContext);
+		}else{ if(tes.oclIsTypeOf(SANT!ExpressionContext)) {
+			segments <- thisModule.ExpressionContext(tes, iContext);
+		}}}}}}}}}}
+		segments;
+	}
 }
 
-rule ExpressionMarking extends ExpressionSegment  {
-	from
-		tes : SANT!ExpressionMarking
-	to
-		es : SAN!ExpressionMarking (
-			place <- thisModule.mapPlaceExpansion->get(tes)->get(tes.index)
-		)
+rule ExpressionText(tes : SANT!ExpressionText, iContext : Integer) {
+	using {
+		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
+	}	
+	do {
+		seg.text <- tes.text;
+		Sequence{seg};
+	}
 }
 
-rule ExpressionVariable extends ExpressionSegment {
-	from
-		tes : SANT!ExpressionVariable
-	to
-		es : SAN!ExpressionVariable (
-			variable <- tes.variable
-		)
+rule ExpressionMarking(tes : SANT!ExpressionMarking, iContext : Integer) {
+	using {
+		seg : SAN!ExpressionMarking = SAN!ExpressionMarking.newInstance();
+	}	
+	do {
+		seg.place <- thisModule.mapPlaceExpansion->get(tes)->get(tes.index);
+		Sequence{seg};
+	}
+}
+
+rule ExpressionVariable(tes : SANT!ExpressionVariable, iContext : Integer) {
+	using {
+		seg : SAN!ExpressionVariable = SAN!ExpressionVariable.newInstance();	
+	}
+	do {
+		seg.variable <- seg.variable;
+		Sequence{seg};
+	}
+}
+
+rule ExpressionTemplateExpression(tes : SANT!ExpressionTemplateExpression, iContext : Integer) {
+	using {
+		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
+	}
+	do {
+		seg.text <- tes.exp.evaluate().toString();
+		Sequence{seg};
+	}
+}
+
+--ExpressionIterationElement
+rule ExpressionIterationElement(tes : SANT!ExpressionIterationElement, iContext : Integer) {
+	using {
+		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
+	}
+	do {
+		seg.text <- iContext.toString();
+		Sequence{seg};
+	}
+}
+
+rule ExpressionActivityCasesNumber(tes : SANT!ExpressionActivityCasesNumber, iContext : Integer) {
+	using {
+		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
+		act : SAN!Activity = OclUndefined;
+	}
+	do {
+		act <- thisModule.resolveTemp(act, 'a');
+		seg.text <- act.cases.size().toString();
+		Sequence{seg};
+	}
+}
+
+rule ExpressionPlaceTemplateSize(tes : SANT!ExpressionPlaceTemplateSize, iContext : Integer) {
+	using {
+		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
+	}
+	do {
+		seg.text <- thisModule.mapPlaceExpansion->get(tes.place)->getValues()->size().toString();
+		Sequence{seg};
+	}
+}
+
+rule ExpressionIfThenElse(tes : SANT!ExpressionIfThenElse, iContext : Integer) {
+	using {
+		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
+	}
+	do {
+		if(tes.condition.evaluate()) {
+			seg <- thisModule.ExpressionSegment(tes.ifTrue, iContext);	
+		}else{
+			seg <- thisModule.ExpressionSegment(tes.ifFalse, iContext);	
+		}
+		Sequence{seg};
+	}
+}
+
+rule ExpressionLoop(tes : SANT!ExpressionLoop, iContext : Integer) {
+	using {
+		segments : Sequence(SAN!ExpressionText) = Sequence{};
+		iBegin : Integer = tes.begin.evaluate();
+		iEnd : Integer = tes.end.evaluate();
+		values : Sequence(Integer) = (iEnd - iBegin + 1).getSequenceFromOne();
+		itSegment : SANT!ExpressionIterationElement = OclUndefined;
+		iterator : SANT!LoopIterator = OclUndefined;
+	}
+	do {
+		for(i in values) {
+			for(tseg in tes.do) {
+				if(tseg.oclIsTypeOf(SANT!ExpressionIterationElement)) {
+					itSegment <- tseg;
+					if(itSegment.iterator.oclIsTypeOf(SANT!LoopIterator)) {
+						iterator <- itSegment.iterator;
+						if(iterator.loop = tes) {
+							segments <- segments->union(thisModule.ExpressionIterationElement(tes, i+iBegin-1));
+						}
+					}
+				}else{
+					segments <- segments->union(thisModule.ExpressionSegment(tseg, iContext));	
+				}
+			}
+		}
+		segments;
+	}
+}
+
+rule ExpressionContext(tes : SANT!ExpressionContext, iContext : Integer) {
+	using {
+		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
+	}
+	do {
+		seg.text <- iContext.toString();
+		Sequence{seg};
+	}
 }
 
 --Distributions
@@ -410,187 +544,189 @@ rule Exponential extends Distribution {
 	from
 		td : SANT!Exponential
 	to
-		d : SAN!Exponential (
-			rate <- td.rate
-		)
+		d : SAN!Exponential
+	do {
+		d.rate <- thisModule.Expression(td.rate);
+	}
 }
 
 rule Normal extends Distribution {
 	from
 		td : SANT!Normal
 	to
-		d : SAN!Normal (
-			mean <- td.mean,
-			variance <- td.variance
-		)
+		d : SAN!Normal
+	do {
+		d.mean <- thisModule.Expression(td.mean);
+		d.variance <- thisModule.Expression(td.variance);
+	}
 }
 
 rule Gamma extends Distribution {
 	from
 		td : SANT!Gamma
 	to
-		d : SAN!Gamma (
-			alpha <- td.alpha,
-			beta <- td.beta
-		)
+		d : SAN!Gamma
+	do {
+		d.alpha <- thisModule.Expression(td.alpha);
+		d.beta <- thisModule.Expression(td.beta);
+	}
 }
 
 rule Binomial extends Distribution {
 	from
 		td : SANT!Binomial
 	to
-		d : SAN!Binomial (
-			t <- td.t,
-			p <- td.p
-		)
+		d : SAN!Binomial
+	do {
+		d.t <- thisModule.Expression(td.t);
+		d.p <- thisModule.Expression(td.p);
+	}
 }
 
 rule Deterministic extends Distribution {
 	from
 		td : SANT!Deterministic
 	to
-		d : SAN!Deterministic (
-			value <- td.value
-		)
+		d : SAN!Deterministic
+	do {
+		d.value <- thisModule.Expression(td.value);
+	}
 }
 
 rule Lognormal extends Distribution {
 	from
 		td : SANT!Lognormal
 	to
-		d : SAN!Lognormal (
-			mu <- td.mu,
-			alphaSquared <- td.alphaSquared
-		)
+		d : SAN!Lognormal
+	do {
+		d.mu <- thisModule.Expression(td.mu);
+		d.alphaSquared <- thisModule.Expression(td.alphaSquared);
+	}
 }
 
 rule Beta extends Distribution {
 	from
 		td : SANT!Beta
 	to
-		d : SAN!Beta (
-			alpha1 <- td.alpha1,
-			beta1 <- td.beta1
-		)
+		d : SAN!Beta
+	do {
+		d.alpha1 <- thisModule.Expression(td.alpha1);
+		d.beta1 <- thisModule.Expression(td.beta1);
+	}
 }
 
 rule NegativeBinomial extends Distribution {
 	from
 		td : SANT!NegativeBinomial
 	to
-		d : SAN!NegativeBinomial (
-			s <- td.s,
-			p <- td.p
-		)
+		d : SAN!NegativeBinomial
+	do {
+		d.s <- thisModule.Expression(td.s);
+		d.p <- thisModule.Expression(td.p);
+	}
 }
 
 rule Geometric extends Distribution {
 	from
 		td : SANT!Geometric
 	to
-		d : SAN!Geometric (
-			p <- td.p
-		)
+		d : SAN!Geometric
+	do {
+		d.p <- thisModule.Expression(td.p);	
+	}
 }
 
 rule Erlang extends Distribution {
 	from
 		td : SANT!Erlang
 	to
-		d : SAN!Erlang (
-			m <- td.m,
-			beta <- td.beta
-		)
+		d : SAN!Erlang
+	do {
+		d.m <- thisModule.Expression(td.m);
+		d.beta <- thisModule.Expression(td.beta);
+	}
 }
 
 rule Uniform extends Distribution {
 	from
 		td : SANT!Uniform
 	to
-		d : SAN!Uniform (
-			lowerBound <- td.lowerBound,
-			upperBound <- td.upperBound
-		)
+		d : SAN!Uniform
+	do {
+		d.lowerBound <- thisModule.Expression(td.lowerBound);
+		d.upperBound <- thisModule.Expression(td.upperBound);
+	}
 }
 
 rule HyperExponential extends Distribution {
 	from
 		td : SANT!HyperExponential
 	to
-		t : SAN!HyperExponential (
-			rate0 <- td.rate0,
-			p0 <- td.p0
-		)
+		t : SAN!HyperExponential
+	do {
+		t.rate0 <- thisModule.Expression(td.rate0);
+		t.p0 <- thisModule.Expression(td.p0);
+	}
 }
 
 rule Weibull extends Distribution {
 	from
 		td : SANT!Weibull
 	to
-		t : SAN!Weibull (
-			alpha <- td.alpha,
-			beta <- td.beta
-		)
+		t : SAN!Weibull
+	do {
+		t.alpha <- thisModule.Expression(td.alpha);
+		t.beta <- thisModule.Expression(td.beta);
+	}
 }
 
 rule Triangular extends Distribution {
 	from
 		td : SANT!Triangular
 	to
-		t : SAN!Triangular (
-			min <- td.min,
-			middle <- td.middle,
-			max <- td.max
-		)
+		t : SAN!Triangular
+	do {
+		t.min <- thisModule.Expression(td.min);
+		t.middle <- thisModule.Expression(td.middle);
+		t.max <- thisModule.Expression(td.max);
+	}
 }
 
 rule ConditionalWeibull extends Distribution {
 	from
 		td : SANT!ConditionalWeibull
 	to
-		t : SAN!ConditionalWeibull (
-			alpha <- td.alpha,
-			beta <- td.beta,
-			t <- td.t
-		)
+		t : SAN!ConditionalWeibull
+	do {
+		t.alpha <- thisModule.Expression(td.alpha);
+		t.beta <- thisModule.Expression(td.beta);
+		t.t <- thisModule.Expression(td.t);
+	}
 }
 
 rule HypoExponential extends Distribution {
 	from
 		td : SANT!HypoExponential
 	to
-		t : SAN!HypoExponential (
-			rate0 <- td.rate0
-		)
+		t : SAN!HypoExponential
+	do {
+		t.rate0 <- thisModule.Expression(td.rate0);	
+	}
 }
 
 rule Pareto extends Distribution {
 	from
 		td : SANT!Pareto
 	to
-		t : SAN!Pareto (
-			lowerBound <- td.lowerBound,
-			shape <- td.shape
-		)
+		t : SAN!Pareto
+	do {
+		t.lowerBound <- thisModule.Expression(td.lowerBound);
+		t.shape <- thisModule.Expression(td.shape);
+	}
 }
 
 helper context SANT!Place def: getMultiplicity() : Set(Integer) =
 	self.multiplicity.listValues(TMDLCO!Assignment.allInstances().asSequence());
-
-helper context TMDLEX!TemplateExpressionInteger def: evaluateWithContext(i : Integer) : Integer =
-	if self.oclIsTypeOf(TMDLEX!TemplateExpressionContext) then i
-	else self.evaluate() endif;
-helper context TMDLEX!TemplateExpressionInteger def: evaluateWithContext(assignments : Sequence(TMDLCO!Assignment), i : Integer) : Integer =
-	if self.oclIsTypeOf(TMDLEX!TemplateExpressionContext) then i
-	else self.evaluate(assignments) endif;
-helper context TMDLEX!TemplateExpressionBoolean def: evaluateWithContext(i : Integer) : Boolean =
-	self.evaluate();
-helper context TMDLEX!TemplateExpressionBoolean def: evaluateWithContext(assignments : Sequence(TMDLCO!Assignment), i : Integer) : Boolean =
-	self.evaluate(assignments);
-helper context TMDLEX!TemplateExpressionReal def: evaluateWithContext(i : Integer) : Real = 
-	self.evaluate();
-helper context TMDLEX!TemplateExpressionReal def: evaluateWithContext(assignments : Sequence(TMDLCO!Assignment), i : Integer) : Real = 
-	self.evaluate(assignments);
 
 helper context Integer def: getSequenceFromOne() : Sequence(Integer) = 
 	if self = 1 then Sequence{1}
