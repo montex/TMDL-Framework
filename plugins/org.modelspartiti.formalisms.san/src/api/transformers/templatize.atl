@@ -55,7 +55,7 @@ abstract rule Places {
 			name <- p.name,
 			multiplicity <- mult
 		),
-		mult : SANT!MultiplicityValue ( value <- 1.0 )
+		mult : SANT!MultiplicityValue ( value <- 1 )
 }
 
 rule NormalPlaces extends Places {

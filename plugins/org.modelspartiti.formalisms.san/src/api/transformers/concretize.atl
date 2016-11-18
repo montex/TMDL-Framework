@@ -35,7 +35,7 @@ rule ModelRoot {
 			name <- template.name,
 			globalVariables <- template.globalVariables,
 			activities <- template.activities,
-			gates <- template.gates 
+			gates <- template.gates->select(g | g.oclIsTypeOf(SANT!InputGate) or g.oclIsTypeOf(SANT!OutputGateConcrete))
 		)
 	do {
 		placesExpanded <- template.places->collect(p | thisModule.ExpandPlace(p))->flatten();
@@ -44,6 +44,7 @@ rule ModelRoot {
 						->collect(tia | thisModule.InputArc(tia))
 						->union(template.arcs->select(a | a.oclIsTypeOf(SANT!OutputArc))
 						->collect(toa | thisModule.OutputArc(toa)))->flatten();
+		model.gates <- model.gates.union(template.gates->select(g | g.oclIsTypeOf(SANT!OutputGateTemplate))->collect(ogt | thisModule.OutputGateTemplate(ogt))->flatten());
 		model.initialization <- template.initialization->collect(e | thisModule.Expression(e));
 	}
 }
@@ -59,7 +60,7 @@ rule GlobalVariable {
 		)
 }
 
-----Places
+--Places
 rule ExpandPlace(tp : SANT!Place) {
 	using {
 		places : Set(SAN!Place) = Set{};
@@ -87,7 +88,6 @@ rule ExpandPlace(tp : SANT!Place) {
 		places;
 	}
 }
-
 
 rule CreateNormalPlace(tp : SANT!NormalPlace) {
 	to
@@ -731,10 +731,6 @@ helper context SANT!Place def: getMultiplicity() : Set(Integer) =
 helper context Integer def: getSequenceFromOne() : Sequence(Integer) = 
 	if self = 1 then Sequence{1}
 	else (self-1).getSequenceFromOne()->union(Sequence{self}) endif;
-
-
-
-
 
 
 
