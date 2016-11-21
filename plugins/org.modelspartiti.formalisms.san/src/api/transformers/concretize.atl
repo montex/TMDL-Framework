@@ -426,7 +426,11 @@ rule ExpressionMarking(tes : SANT!ExpressionMarking, iContext : Integer) {
 		seg : SAN!ExpressionMarking = SAN!ExpressionMarking.newInstance();
 	}	
 	do {
-		seg.place <- thisModule.mapPlaceExpansion->get(tes)->get(tes.index);
+		if(tes.index.oclIsTypeOf(SANT!ThisContextIterator)) {
+			seg.place <- thisModule.mapPlaceExpansion->get(tes)->get(iContext);	
+		}else{
+			seg.place <- thisModule.mapPlaceExpansion->get(tes)->get(tes.index.evaluate());
+		}
 		Sequence{seg};
 	}
 }

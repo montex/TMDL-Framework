@@ -2,6 +2,8 @@
  */
 package sant;
 
+import tmdl.expressions.TemplateExpressionInteger;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,5 +15,5 @@ package sant;
  * @model
  * @generated
  */
-public interface ThisContextIterator extends VariabilityIterator {
+public interface ThisContextIterator extends VariabilityIterator, TemplateExpressionInteger {
 } // ThisContextIterator

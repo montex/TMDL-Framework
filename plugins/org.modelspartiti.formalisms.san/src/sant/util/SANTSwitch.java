@@ -319,6 +319,8 @@ public class SANTSwitch<T> extends Switch<T> {
 				ThisContextIterator thisContextIterator = (ThisContextIterator)theEObject;
 				T result = caseThisContextIterator(thisContextIterator);
 				if (result == null) result = caseVariabilityIterator(thisContextIterator);
+				if (result == null) result = caseTemplateExpressionInteger(thisContextIterator);
+				if (result == null) result = caseTemplateExpression(thisContextIterator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

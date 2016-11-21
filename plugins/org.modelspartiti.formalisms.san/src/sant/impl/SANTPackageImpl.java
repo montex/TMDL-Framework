@@ -2302,6 +2302,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		expressionIfThenElseEClass.getESuperTypes().add(this.getExpressionSegment());
 		expressionLoopEClass.getESuperTypes().add(this.getExpressionSegment());
 		thisContextIteratorEClass.getESuperTypes().add(this.getVariabilityIterator());
+		thisContextIteratorEClass.getESuperTypes().add(theExpressionsPackage.getTemplateExpressionInteger());
 		loopIteratorEClass.getESuperTypes().add(this.getVariabilityIterator());
 		markingIntegerEClass.getESuperTypes().add(this.getMarkingSimple());
 		markingExtendedEClass.getESuperTypes().add(this.getMarking());

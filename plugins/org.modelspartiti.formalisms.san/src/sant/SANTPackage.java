@@ -1836,13 +1836,31 @@ public interface SANTPackage extends EPackage {
 	int THIS_CONTEXT_ITERATOR_FEATURE_COUNT = VARIABILITY_ITERATOR_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THIS_CONTEXT_ITERATOR___EVALUATE__ELIST = VARIABILITY_ITERATOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Evaluate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THIS_CONTEXT_ITERATOR___EVALUATE = VARIABILITY_ITERATOR_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>This Context Iterator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int THIS_CONTEXT_ITERATOR_OPERATION_COUNT = VARIABILITY_ITERATOR_OPERATION_COUNT + 0;
+	int THIS_CONTEXT_ITERATOR_OPERATION_COUNT = VARIABILITY_ITERATOR_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link sant.impl.LoopIteratorImpl <em>Loop Iterator</em>}' class.

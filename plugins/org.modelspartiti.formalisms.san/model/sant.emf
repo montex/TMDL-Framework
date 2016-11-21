@@ -206,7 +206,7 @@ class ExpressionLoop extends ExpressionSegment {
 abstract interface VariabilityIterator {
 }
 
-class ThisContextIterator extends VariabilityIterator {
+class ThisContextIterator extends VariabilityIterator, tmdl.expressions.TemplateExpressionInteger {
 }
 
 class LoopIterator extends VariabilityIterator {
