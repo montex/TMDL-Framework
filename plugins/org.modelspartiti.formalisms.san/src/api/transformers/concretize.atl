@@ -29,6 +29,7 @@ rule ModelRoot {
 		template : SANT!SANT
 	using {
 		placesExpanded : Set(SAN!Place) = Set{};
+		tmpGates : Sequence(SAN!Gate) = Sequence{};
 	}
 	to
 		model : SAN!SAN (
@@ -39,12 +40,17 @@ rule ModelRoot {
 		)
 	do {
 		placesExpanded <- template.places->collect(p | thisModule.ExpandPlace(p))->flatten();
+		for(ta in template.activities) {
+			thisModule.ExpandActivityCases(ta);
+		}
+		
 		model.places <- placesExpanded;
 		model.arcs <- template.arcs->select(a | a.oclIsTypeOf(SANT!InputArc))
 						->collect(tia | thisModule.InputArc(tia))
 						->union(template.arcs->select(a | a.oclIsTypeOf(SANT!OutputArc))
 						->collect(toa | thisModule.OutputArc(toa)))->flatten();
-		model.gates <- model.gates.union(template.gates->select(g | g.oclIsTypeOf(SANT!OutputGateTemplate))->collect(ogt | thisModule.OutputGateTemplate(ogt))->flatten());
+		model.gates <- model.gates->union(template.gates->select(g | g.oclIsTypeOf(SANT!OutputGateTemplate))
+										->collect(ogt | thisModule.OutputGateTemplate(ogt))->flatten());
 		model.initialization <- template.initialization->collect(e | thisModule.Expression(e));
 	}
 }
@@ -55,8 +61,8 @@ rule GlobalVariable {
 		tv : SANT!GlobalVariable
 	to
 		v : SAN!GlobalVariable (
-			name <- v.name,
-			type <- v.type
+			name <- tv.name,
+			type <- tv.type
 		)
 }
 
@@ -99,7 +105,7 @@ rule CreateNormalPlace(tp : SANT!NormalPlace) {
 		p : SAN!NormalPlace
 		(
 			name <- tp.name,
-			marking <- tp.marking
+			marking <- thisModule.Marking(tp.marking)
 		)
 	do {
 		p;
@@ -111,7 +117,7 @@ rule CreateExtendedPlace(tp : SANT!ExtendedPlace) {
 		p : SAN!ExtendedPlace
 		(
 			name <- tp.name,
-			marking <- tp.marking,
+			marking <- thisModule.Marking(tp.marking),
 			type <- tp.type
 		)
 	do {
@@ -120,14 +126,14 @@ rule CreateExtendedPlace(tp : SANT!ExtendedPlace) {
 }
 
 --Marking
-abstract rule Marking {
+lazy abstract rule Marking {
 	from
 		tm : SANT!Marking
 	to
 		m : SAN!Marking
 }
 
-rule MarkingInteger extends Marking {
+lazy rule MarkingInteger extends Marking {
 	from
 		tm : SANT!MarkingInteger
 	to
@@ -137,7 +143,7 @@ rule MarkingInteger extends Marking {
 		)
 }
 
-rule MarkingVariableSimple extends Marking {
+lazy rule MarkingVariableSimple extends Marking {
 	from
 		tm : SANT!MarkingVariableSimple
 	to
@@ -147,7 +153,7 @@ rule MarkingVariableSimple extends Marking {
 		)
 }
 
-rule MarkingString extends Marking {
+lazy rule MarkingString extends Marking {
 	from
 		tm : SANT!MarkingString
 	to
@@ -157,7 +163,7 @@ rule MarkingString extends Marking {
 		)
 }
 
-rule MarkingVariableExtended extends Marking {
+lazy rule MarkingVariableExtended extends Marking {
 	from
 		tm : SANT!MarkingVariableExtended
 	to
@@ -182,9 +188,6 @@ rule ActivityInstantaneous extends Activity {
 		ta : SANT!InstantaneousActivity
 	to
 		a : SAN!InstantaneousActivity
-	do {
-		a.cases <- thisModule.CasesSpecification(ta.cases);
-	}
 }
 
 rule ActivityTimed extends Activity {
@@ -196,9 +199,15 @@ rule ActivityTimed extends Activity {
 			activation <- ta.activation,
 			reactivation <- ta.reactivation
 		)
+}
+
+rule ExpandActivityCases(ta : SANT!Activity) {
+	using {
+		a : SAN!Activity = thisModule.resolveTemp(ta, 'a');	
+	}
 	do {
 		a.cases <- thisModule.CasesSpecification(ta.cases);
-	}
+	}	
 }
 
 --Cases
@@ -249,9 +258,10 @@ rule CasesSpecificationProbabilityArray(cs : SANT!CasesSpecificationProbabilityA
 		casesList : Sequence(SAN!Case) = Sequence{};
 		tmpCase : SAN!Case = OclUndefined;
 		i : Integer = 0;
+		pSet : Sequence(Real) = TMDLCO!AssignmentArray.allInstances()->select(a | a.parameter = cs.pValues)->first().values;
 	}
 	do {
-		for(prob in cs.pValues) {
+		for(prob in pSet) {
 			tmpCase <- SAN!Case.newInstance();
 			i <- i+1;
 			tmpCase.ID <- i;
@@ -307,7 +317,7 @@ rule OutputArc(toa : SANT!OutputArc) {
 	do {
 		for(p in thisModule.mapPlaceExpansion->get(toa.target)->getValues()) {
 			oa <- SAN!OutputArc.newInstance();
-			oa.source <- thisModule.resolveTemp(toa.source, 'a');
+			oa.source <- thisModule.resolveTemp(toa.source, 'c');
 			oa.target <- p;
 			output <- output.append(oa);
 		}
@@ -348,6 +358,7 @@ rule OutputGateTemplate(ogt : SANT!OutputGateTemplate) {
 	using {
 		act : SAN!Activity = thisModule.resolveTemp(ogt.activity, 'a');
 		tmpOG : SAN!OutputGate = OclUndefined;
+		gates : Sequence(SAN!OutputGate) = Sequence{};
 	}
 	do {
 		for(c in act.cases) {
@@ -356,7 +367,9 @@ rule OutputGateTemplate(ogt : SANT!OutputGateTemplate) {
 			tmpOG.places <- ogt.places->collect(tp | thisModule.mapPlaceExpansion.get(tp)->getValues())->flatten();
 			tmpOG.activityCase <- c;
 			tmpOG.function <- thisModule.ExpressionWithContext(ogt.function, c.ID);
+			gates <- gates.append(tmpOG);
 		}
+		gates;
 	}
 }
 
@@ -427,9 +440,9 @@ rule ExpressionMarking(tes : SANT!ExpressionMarking, iContext : Integer) {
 	}	
 	do {
 		if(tes.index.oclIsTypeOf(SANT!ThisContextIterator)) {
-			seg.place <- thisModule.mapPlaceExpansion->get(tes)->get(iContext);	
+			seg.place <- thisModule.mapPlaceExpansion->get(tes.place)->get(iContext);	
 		}else{
-			seg.place <- thisModule.mapPlaceExpansion->get(tes)->get(tes.index.evaluate());
+			seg.place <- thisModule.mapPlaceExpansion->get(tes.place)->get(tes.index.evaluate());
 		}
 		Sequence{seg};
 	}
@@ -440,7 +453,7 @@ rule ExpressionVariable(tes : SANT!ExpressionVariable, iContext : Integer) {
 		seg : SAN!ExpressionVariable = SAN!ExpressionVariable.newInstance();	
 	}
 	do {
-		seg.variable <- seg.variable;
+		seg.variable <- thisModule.resolveTemp(tes.variable,'v');
 		Sequence{seg};
 	}
 }
@@ -748,8 +761,6 @@ helper context SANT!Place def: getMultiplicity() : Set(Integer) =
 helper context Integer def: getSequenceFromOne() : Sequence(Integer) = 
 	if self = 1 then Sequence{1}
 	else (self-1).getSequenceFromOne()->union(Sequence{self}) endif;
-
-
 
 
 
