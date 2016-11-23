@@ -32,6 +32,6 @@ public interface TemplateExpressionReal extends TemplateExpression {
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='evaluate(core::Assignment.allInstances())'"
 	 * @generated
 	 */
-	int evaluate();
+	double evaluate();
 
 } // TemplateExpressionReal

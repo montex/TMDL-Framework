@@ -32,6 +32,6 @@ public interface TemplateExpressionBoolean extends TemplateExpression {
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='evaluate(core::Assignment.allInstances())'"
 	 * @generated
 	 */
-	int evaluate();
+	boolean evaluate();
 
 } // TemplateExpressionBoolean

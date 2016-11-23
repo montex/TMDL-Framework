@@ -203,9 +203,9 @@ public class TemplateExpressionBooleanOrImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int evaluate() {
+	public boolean evaluate() {
 		try {
-			return (Integer)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+			return (Boolean)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
 		}
 		catch (InvocationTargetException ite) {
 			throw new WrappedException(ite);

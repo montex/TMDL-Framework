@@ -158,14 +158,14 @@ package expressions {
     op double[1] evaluate(!ordered core.Assignment[*] assignments);
 
     @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="evaluate(core::Assignment.allInstances())")
-    op int[1] evaluate();
+    op double[1] evaluate();
   }
 
   abstract interface TemplateExpressionBoolean extends TemplateExpression {
     op boolean[1] evaluate(!ordered core.Assignment[*] assignments);
 
     @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(body="evaluate(core::Assignment.allInstances())")
-    op int[1] evaluate();
+    op boolean[1] evaluate();
   }
 
   class TemplateExpressionIntegerLiteral extends TemplateExpressionInteger {

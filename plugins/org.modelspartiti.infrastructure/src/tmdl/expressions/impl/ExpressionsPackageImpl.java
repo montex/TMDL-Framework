@@ -1340,14 +1340,14 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		op = initEOperation(getTemplateExpressionReal__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getTemplateExpressionReal__Evaluate(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getTemplateExpressionReal__Evaluate(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(templateExpressionBooleanEClass, TemplateExpressionBoolean.class, "TemplateExpressionBoolean", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getTemplateExpressionBoolean__Evaluate__EList(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getTemplateExpressionBoolean__Evaluate(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getTemplateExpressionBoolean__Evaluate(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(templateExpressionIntegerLiteralEClass, TemplateExpressionIntegerLiteral.class, "TemplateExpressionIntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTemplateExpressionIntegerLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, TemplateExpressionIntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

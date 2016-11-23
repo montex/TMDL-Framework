@@ -110,30 +110,16 @@
             ecoreFeature="ecore:EReference tmdl.ecore#//core/AssignmentArray/parameter"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/AssignmentArray/values"/>
       </genClasses>
-      <genClasses image="false" ecoreClass="tmdl.ecore#//core/Multiplicity">
-        <genOperations ecoreOperation="tmdl.ecore#//core/Multiplicity/listValues">
-          <genParameters ecoreParameter="tmdl.ecore#//core/Multiplicity/listValues/assignments"/>
-        </genOperations>
-        <genOperations ecoreOperation="tmdl.ecore#//core/Multiplicity/listValues.1"/>
-      </genClasses>
+      <genClasses image="false" ecoreClass="tmdl.ecore#//core/Multiplicity"/>
       <genClasses ecoreClass="tmdl.ecore#//core/MultiplicityValue">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/MultiplicityValue/value"/>
-        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityValue/listValues">
-          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityValue/listValues/assignments"/>
-        </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//core/MultiplicityArray">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//core/MultiplicityArray/values"/>
-        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityArray/listValues">
-          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityArray/listValues/assignments"/>
-        </genOperations>
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//core/MultiplicityParametric">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference tmdl.ecore#//core/MultiplicityParametric/parameter"/>
-        <genOperations ecoreOperation="tmdl.ecore#//core/MultiplicityParametric/listValues">
-          <genParameters ecoreParameter="tmdl.ecore#//core/MultiplicityParametric/listValues/assignments"/>
-        </genOperations>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Expressions" basePackage="tmdl" disposableProviderFactory="true"

@@ -203,9 +203,9 @@ public class TemplateExpressionRealMultiplyImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int evaluate() {
+	public double evaluate() {
 		try {
-			return (Integer)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+			return (Double)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
 		}
 		catch (InvocationTargetException ite) {
 			throw new WrappedException(ite);

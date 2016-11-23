@@ -3,10 +3,11 @@
 package sant.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -27,6 +28,9 @@ import tmdl.expressions.TemplateExpressionInteger;
  * @generated
  */
 public class ThisContextIteratorImpl extends MinimalEObjectImpl.Container implements ThisContextIterator {
+
+	private int iCurrentContext = 1;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,15 +74,10 @@ public class ThisContextIteratorImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int evaluate() {
-		try {
-			return (Integer)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
+		return iCurrentContext;
 	}
 
 	/**
@@ -118,6 +117,11 @@ public class ThisContextIteratorImpl extends MinimalEObjectImpl.Container implem
 				return evaluate();
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	@Override
+	public void setContext(int iContext) {
+		this.iCurrentContext = iContext;
 	}
 
 } //ThisContextIteratorImpl

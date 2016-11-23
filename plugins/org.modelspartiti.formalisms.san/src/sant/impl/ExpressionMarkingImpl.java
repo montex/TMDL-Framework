@@ -4,18 +4,14 @@ package sant.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import sant.ExpressionMarking;
+import sant.ExpressionTemplateExpression;
 import sant.Place;
 import sant.SANTPackage;
-
-import tmdl.expressions.TemplateExpressionInteger;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +46,7 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected TemplateExpressionInteger index;
+	protected ExpressionTemplateExpression index;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +110,7 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TemplateExpressionInteger getIndex() {
+	public ExpressionTemplateExpression getIndex() {
 		return index;
 	}
 
@@ -123,8 +119,8 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIndex(TemplateExpressionInteger newIndex, NotificationChain msgs) {
-		TemplateExpressionInteger oldIndex = index;
+	public NotificationChain basicSetIndex(ExpressionTemplateExpression newIndex, NotificationChain msgs) {
+		ExpressionTemplateExpression oldIndex = index;
 		index = newIndex;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SANTPackage.EXPRESSION_MARKING__INDEX, oldIndex, newIndex);
@@ -138,7 +134,7 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIndex(TemplateExpressionInteger newIndex) {
+	public void setIndex(ExpressionTemplateExpression newIndex) {
 		if (newIndex != index) {
 			NotificationChain msgs = null;
 			if (index != null)
@@ -195,7 +191,7 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 				setPlace((Place)newValue);
 				return;
 			case SANTPackage.EXPRESSION_MARKING__INDEX:
-				setIndex((TemplateExpressionInteger)newValue);
+				setIndex((ExpressionTemplateExpression)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -213,7 +209,7 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 				setPlace((Place)null);
 				return;
 			case SANTPackage.EXPRESSION_MARKING__INDEX:
-				setIndex((TemplateExpressionInteger)null);
+				setIndex((ExpressionTemplateExpression)null);
 				return;
 		}
 		super.eUnset(featureID);

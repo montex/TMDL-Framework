@@ -2,7 +2,6 @@
  */
 package sant;
 
-import tmdl.expressions.TemplateExpressionInteger;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,12 +56,12 @@ public interface ExpressionMarking extends ExpressionSegment {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Index</em>' containment reference.
-	 * @see #setIndex(TemplateExpressionInteger)
+	 * @see #setIndex(ExpressionTemplateExpression)
 	 * @see sant.SANTPackage#getExpressionMarking_Index()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	TemplateExpressionInteger getIndex();
+	ExpressionTemplateExpression getIndex();
 
 	/**
 	 * Sets the value of the '{@link sant.ExpressionMarking#getIndex <em>Index</em>}' containment reference.
@@ -72,6 +71,6 @@ public interface ExpressionMarking extends ExpressionSegment {
 	 * @see #getIndex()
 	 * @generated
 	 */
-	void setIndex(TemplateExpressionInteger value);
+	void setIndex(ExpressionTemplateExpression value);
 
 } // ExpressionMarking

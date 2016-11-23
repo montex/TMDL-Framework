@@ -127,7 +127,7 @@ class ExpressionText extends ExpressionSegment {
 
 class ExpressionMarking extends ExpressionSegment {
   ref Place[1] place;
-  val tmdl.expressions.TemplateExpressionInteger[1] index;
+  val ExpressionTemplateExpression[1] index;
 }
 
 class ExpressionVariable extends ExpressionSegment {
