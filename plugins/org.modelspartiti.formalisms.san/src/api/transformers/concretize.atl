@@ -139,7 +139,7 @@ lazy rule MarkingInteger extends Marking {
 	to
 		m : SAN!MarkingInteger
 		(
-			value <- tm.value.evaluate()
+			value <- tm.value.evaluate(TMDLEX!Assignment.allInstances())
 		)
 }
 
@@ -216,7 +216,7 @@ rule Case {
 		tc : SANT!Case
 	to
 		c : SAN!Case (
-			ID <- tc.ID.evaluate()
+			ID <- tc.ID.evaluate(TMDLCO!Assignment.allInstances())
 		)
 	do {
 		c.p <- thisModule.ExpressionWithContext(tc.p, c.ID);	
@@ -277,7 +277,7 @@ rule CasesSpecificationProbabilityArray(cs : SANT!CasesSpecificationProbabilityA
 rule CasesSpecificationParametric(cs : SANT!CasesSpecificationParametric) {
 	using {
 		casesList : Sequence(SAN!Case) = Sequence{};
-		numCases : Integer = cs.numCases.evaluate();
+		numCases : Integer = cs.numCases.evaluate(TMDLCO!Assignment.allInstances());
 		seqCases : Sequence(Integer) = numCases.getSequenceFromOne();
 		tmpCase : SAN!Case = OclUndefined;
 	}
@@ -439,11 +439,11 @@ rule ExpressionMarking(tes : SANT!ExpressionMarking, iContext : Integer) {
 		seg : SAN!ExpressionMarking = SAN!ExpressionMarking.newInstance();
 	}	
 	do {
-		if(tes.index.oclIsTypeOf(SANT!ThisContextIterator)) {
-			seg.place <- thisModule.mapPlaceExpansion->get(tes.place)->get(iContext);	
-		}else{
-			seg.place <- thisModule.mapPlaceExpansion->get(tes.place)->get(tes.index.evaluate());
+		for(i in SANT!ThisContextIterator.allInstances()) {
+			i.setContext(iContext);	
 		}
+
+		seg.place <- thisModule.mapPlaceExpansion->get(tes.place)->get(tes.index.exp.evaluate(TMDLCO!Assignment.allInstances()));
 		Sequence{seg};
 	}
 }
@@ -463,7 +463,7 @@ rule ExpressionTemplateExpression(tes : SANT!ExpressionTemplateExpression, iCont
 		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
 	}
 	do {
-		seg.text <- tes.exp.evaluate().toString();
+		seg.text <- tes.exp.evaluate(TMDLCO!Assignment.allInstances()).toString();
 		Sequence{seg};
 	}
 }
@@ -506,7 +506,7 @@ rule ExpressionIfThenElse(tes : SANT!ExpressionIfThenElse, iContext : Integer) {
 		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
 	}
 	do {
-		if(tes.condition.evaluate()) {
+		if(tes.condition.evaluate(TMDLCO!Assignment.allInstances())) {
 			seg <- thisModule.ExpressionSegment(tes.ifTrue, iContext);	
 		}else{
 			seg <- thisModule.ExpressionSegment(tes.ifFalse, iContext);	
@@ -518,8 +518,8 @@ rule ExpressionIfThenElse(tes : SANT!ExpressionIfThenElse, iContext : Integer) {
 rule ExpressionLoop(tes : SANT!ExpressionLoop, iContext : Integer) {
 	using {
 		segments : Sequence(SAN!ExpressionText) = Sequence{};
-		iBegin : Integer = tes.begin.evaluate();
-		iEnd : Integer = tes.end.evaluate();
+		iBegin : Integer = tes.begin.evaluate(TMDLCO!Assignment.allInstances());
+		iEnd : Integer = tes.end.evaluate(TMDLCO!Assignment.allInstances());
 		values : Sequence(Integer) = (iEnd - iBegin + 1).getSequenceFromOne();
 		itSegment : SANT!ExpressionIterationElement = OclUndefined;
 		iterator : SANT!LoopIterator = OclUndefined;
@@ -763,7 +763,4 @@ helper context Integer def: getSequenceFromOne() : Sequence(Integer) =
 	else (self-1).getSequenceFromOne()->union(Sequence{self}) endif;
 
 
-
-
-
-
+	
