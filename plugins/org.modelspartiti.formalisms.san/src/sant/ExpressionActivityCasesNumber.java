@@ -2,7 +2,7 @@
  */
 package sant;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 import tmdl.core.Assignment;
 import tmdl.expressions.TemplateExpressionInteger;
 
@@ -56,6 +56,6 @@ public interface ExpressionActivityCasesNumber extends ExpressionSegment, Templa
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\tlet c = activity.cases\n\t\t\tin\n\t\t\t\tif c.oclIsTypeOf(CasesSpecificationCases) then\n\t\t\t\t\tc.oclAsType(CasesSpecificationCases).cases->size()\n\t\t\t\telse\n\t\t\t\t\tif c.oclIsTypeOf(CasesSpecificationProbabilityArray) then\n\t\t\t\t\t\tc.oclAsType(CasesSpecificationProbabilityArray).pValues->size()\n\t\t\t\t\telse\n\t\t\t\t\t\tc.oclAsType(CasesSpecificationParametric).pExpression.evaluate(assignments)\n\t\t\t\t\tendif\n\t\t\t\tendif'"
 	 * @generated
 	 */
-	int evaluate(EList<Assignment> assignments);
+	int evaluate(List<Assignment> assignments);
 
 } // ExpressionActivityCasesNumber

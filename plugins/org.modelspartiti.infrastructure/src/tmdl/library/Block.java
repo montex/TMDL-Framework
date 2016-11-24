@@ -2,10 +2,8 @@
  */
 package tmdl.library;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
-
 import tmdl.core.Multiplicity;
 
 /**
@@ -41,7 +39,7 @@ public interface Block extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<String> getLabels();
+	List<String> getLabels();
 
 	/**
 	 * Returns the value of the '<em><b>Multiplicity</b></em>' containment reference.
@@ -83,6 +81,6 @@ public interface Block extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<ModelInterface> getRequiredInterfaces();
+	List<ModelInterface> getRequiredInterfaces();
 
 } // Block

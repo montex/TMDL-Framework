@@ -161,7 +161,7 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SANT___CONCRETIZE__ELIST = CorePackage.TEMPLATE_MODEL___CONCRETIZE__ELIST;
+	int SANT___CONCRETIZE__LIST = CorePackage.TEMPLATE_MODEL___CONCRETIZE__LIST;
 
 	/**
 	 * The number of operations of the '<em>SANT</em>' class.
@@ -1612,7 +1612,7 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE__ELIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
+	int EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE__LIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Expression Activity Cases Number</em>' class.
@@ -1667,7 +1667,7 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
+	int EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__LIST = EXPRESSION_SEGMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Expression Place Template Size</em>' class.
@@ -1842,7 +1842,7 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int THIS_CONTEXT_ITERATOR___EVALUATE__ELIST = VARIABILITY_ITERATOR_OPERATION_COUNT + 0;
+	int THIS_CONTEXT_ITERATOR___EVALUATE__LIST = VARIABILITY_ITERATOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Evaluate</em>' operation.
@@ -3754,14 +3754,14 @@ public interface SANTPackage extends EPackage {
 	EReference getExpressionActivityCasesNumber_Activity();
 
 	/**
-	 * Returns the meta object for the '{@link sant.ExpressionActivityCasesNumber#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * Returns the meta object for the '{@link sant.ExpressionActivityCasesNumber#evaluate(java.util.List) <em>Evaluate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Evaluate</em>' operation.
-	 * @see sant.ExpressionActivityCasesNumber#evaluate(org.eclipse.emf.common.util.EList)
+	 * @see sant.ExpressionActivityCasesNumber#evaluate(java.util.List)
 	 * @generated
 	 */
-	EOperation getExpressionActivityCasesNumber__Evaluate__EList();
+	EOperation getExpressionActivityCasesNumber__Evaluate__List();
 
 	/**
 	 * Returns the meta object for class '{@link sant.ExpressionPlaceTemplateSize <em>Expression Place Template Size</em>}'.
@@ -3785,14 +3785,14 @@ public interface SANTPackage extends EPackage {
 	EReference getExpressionPlaceTemplateSize_Place();
 
 	/**
-	 * Returns the meta object for the '{@link sant.ExpressionPlaceTemplateSize#evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * Returns the meta object for the '{@link sant.ExpressionPlaceTemplateSize#evaluate(java.util.List) <em>Evaluate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Evaluate</em>' operation.
-	 * @see sant.ExpressionPlaceTemplateSize#evaluate(org.eclipse.emf.common.util.EList)
+	 * @see sant.ExpressionPlaceTemplateSize#evaluate(java.util.List)
 	 * @generated
 	 */
-	EOperation getExpressionPlaceTemplateSize__Evaluate__EList();
+	EOperation getExpressionPlaceTemplateSize__Evaluate__List();
 
 	/**
 	 * Returns the meta object for class '{@link sant.ExpressionIfThenElse <em>Expression If Then Else</em>}'.
@@ -5282,7 +5282,7 @@ public interface SANTPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE__ELIST = eINSTANCE.getExpressionActivityCasesNumber__Evaluate__EList();
+		EOperation EXPRESSION_ACTIVITY_CASES_NUMBER___EVALUATE__LIST = eINSTANCE.getExpressionActivityCasesNumber__Evaluate__List();
 
 		/**
 		 * The meta object literal for the '{@link sant.impl.ExpressionPlaceTemplateSizeImpl <em>Expression Place Template Size</em>}' class.
@@ -5308,7 +5308,7 @@ public interface SANTPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST = eINSTANCE.getExpressionPlaceTemplateSize__Evaluate__EList();
+		EOperation EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__LIST = eINSTANCE.getExpressionPlaceTemplateSize__Evaluate__List();
 
 		/**
 		 * The meta object literal for the '{@link sant.impl.ExpressionIfThenElseImpl <em>Expression If Then Else</em>}' class.

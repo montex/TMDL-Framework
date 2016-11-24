@@ -4,6 +4,7 @@ package tmdl.scenario.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -120,7 +121,7 @@ public class VariantCompositeImpl extends VariantImpl implements VariantComposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BlockRealization> getRealizations() {
+	public List<BlockRealization> getRealizations() {
 		if (realizations == null) {
 			realizations = new EObjectContainmentEList<BlockRealization>(BlockRealization.class, this, ScenarioPackage.VARIANT_COMPOSITE__REALIZATIONS);
 		}

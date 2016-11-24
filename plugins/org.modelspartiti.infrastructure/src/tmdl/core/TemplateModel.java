@@ -2,8 +2,7 @@
  */
 package tmdl.core;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -23,6 +22,6 @@ public interface TemplateModel extends EObject {
 	 * @model required="true" parameterValuesMany="true"
 	 * @generated
 	 */
-	ConcreteModel concretize(EList<Assignment> parameterValues);
+	ConcreteModel concretize(List<Assignment> parameterValues);
 
 } // TemplateModel

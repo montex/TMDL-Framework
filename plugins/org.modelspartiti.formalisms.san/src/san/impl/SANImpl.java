@@ -4,6 +4,7 @@ package san.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -147,7 +148,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Place> getPlaces() {
+	public List<Place> getPlaces() {
 		if (places == null) {
 			places = new EObjectContainmentEList<Place>(Place.class, this, SANPackage.SAN__PLACES);
 		}
@@ -180,7 +181,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Activity> getActivities() {
+	public List<Activity> getActivities() {
 		if (activities == null) {
 			activities = new EObjectContainmentEList<Activity>(Activity.class, this, SANPackage.SAN__ACTIVITIES);
 		}
@@ -192,7 +193,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GlobalVariable> getGlobalVariables() {
+	public List<GlobalVariable> getGlobalVariables() {
 		if (globalVariables == null) {
 			globalVariables = new EObjectContainmentEList<GlobalVariable>(GlobalVariable.class, this, SANPackage.SAN__GLOBAL_VARIABLES);
 		}
@@ -204,7 +205,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Arc> getArcs() {
+	public List<Arc> getArcs() {
 		if (arcs == null) {
 			arcs = new EObjectContainmentEList<Arc>(Arc.class, this, SANPackage.SAN__ARCS);
 		}
@@ -216,7 +217,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Gate> getGates() {
+	public List<Gate> getGates() {
 		if (gates == null) {
 			gates = new EObjectContainmentEList<Gate>(Gate.class, this, SANPackage.SAN__GATES);
 		}
@@ -228,7 +229,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Expression> getInitialization() {
+	public List<Expression> getInitialization() {
 		if (initialization == null) {
 			initialization = new EObjectContainmentEList<Expression>(Expression.class, this, SANPackage.SAN__INITIALIZATION);
 		}

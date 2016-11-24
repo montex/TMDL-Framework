@@ -2,8 +2,7 @@
  */
 package tmdl.expressions;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import tmdl.core.Assignment;
 
 /**
@@ -23,7 +22,7 @@ public interface TemplateExpressionBoolean extends TemplateExpression {
 	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
 	 * @generated
 	 */
-	boolean evaluate(EList<Assignment> assignments);
+	boolean evaluate(List<Assignment> assignments);
 
 	/**
 	 * <!-- begin-user-doc -->

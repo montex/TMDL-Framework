@@ -2,10 +2,8 @@
  */
 package tmdl.scenario;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
-
 import tmdl.core.Assignment;
 
 /**
@@ -66,6 +64,6 @@ public interface Variant extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Assignment> getAssignments();
+	List<Assignment> getAssignments();
 
 } // Variant

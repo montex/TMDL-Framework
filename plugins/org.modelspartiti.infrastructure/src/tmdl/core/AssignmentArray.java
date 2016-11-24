@@ -2,7 +2,7 @@
  */
 package tmdl.core;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,6 +62,6 @@ public interface AssignmentArray extends Assignment {
 	 * @model
 	 * @generated
 	 */
-	EList<Double> getValues();
+	List<Double> getValues();
 
 } // AssignmentArray

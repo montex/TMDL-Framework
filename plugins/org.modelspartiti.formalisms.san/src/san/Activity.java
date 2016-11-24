@@ -2,7 +2,7 @@
  */
 package san;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +35,6 @@ public interface Activity extends NamedElement {
 	 * @model containment="true" keys="ID" required="true"
 	 * @generated
 	 */
-	EList<Case> getCases();
+	List<Case> getCases();
 
 } // Activity

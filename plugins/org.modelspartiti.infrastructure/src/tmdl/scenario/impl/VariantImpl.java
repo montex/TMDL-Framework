@@ -4,6 +4,7 @@ package tmdl.scenario.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -113,7 +114,7 @@ public abstract class VariantImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Assignment> getAssignments() {
+	public List<Assignment> getAssignments() {
 		if (assignments == null) {
 			assignments = new EObjectContainmentEList<Assignment>(Assignment.class, this, ScenarioPackage.VARIANT__ASSIGNMENTS);
 		}

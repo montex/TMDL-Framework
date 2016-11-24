@@ -4,6 +4,7 @@ package tmdl.library.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -109,7 +110,7 @@ public abstract class CompositionRuleImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InterfaceVariable> getVariables() {
+	public List<InterfaceVariable> getVariables() {
 		if (variables == null) {
 			variables = new EObjectResolvingEList<InterfaceVariable>(InterfaceVariable.class, this, LibraryPackage.COMPOSITION_RULE__VARIABLES);
 		}

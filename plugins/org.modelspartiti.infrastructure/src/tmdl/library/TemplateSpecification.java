@@ -2,10 +2,8 @@
  */
 package tmdl.library;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
-
 import tmdl.core.Parameter;
 
 /**
@@ -67,7 +65,7 @@ public interface TemplateSpecification extends EObject {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<ModelInterface> getInterfaces();
+	List<ModelInterface> getInterfaces();
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' reference.

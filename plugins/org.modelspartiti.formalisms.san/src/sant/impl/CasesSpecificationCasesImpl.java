@@ -4,6 +4,7 @@ package sant.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -66,7 +67,7 @@ public class CasesSpecificationCasesImpl extends CasesSpecificationImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Case> getCases() {
+	public List<Case> getCases() {
 		if (cases == null) {
 			cases = new EObjectContainmentEList<Case>(Case.class, this, SANTPackage.CASES_SPECIFICATION_CASES__CASES);
 		}

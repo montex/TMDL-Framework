@@ -2,8 +2,7 @@
  */
 package tmdl.expressions;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import tmdl.core.Assignment;
 
 /**
@@ -24,6 +23,6 @@ public interface TemplateExpressionRealDivide extends TemplateExpressionRealBina
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='exp1.evaluate(assignments) / exp2.evaluate(assignments)'"
 	 * @generated
 	 */
-	double evaluate(EList<Assignment> assignments);
+	double evaluate(List<Assignment> assignments);
 
 } // TemplateExpressionRealDivide

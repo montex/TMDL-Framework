@@ -2,8 +2,7 @@
  */
 package tmdl.expressions;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import tmdl.core.Assignment;
 
 /**
@@ -56,6 +55,6 @@ public interface TemplateExpressionIntegerFromReal extends TemplateExpressionInt
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='exp.evaluate(assignments).floor()'"
 	 * @generated
 	 */
-	int evaluate(EList<Assignment> assignments);
+	int evaluate(List<Assignment> assignments);
 
 } // TemplateExpressionIntegerFromReal

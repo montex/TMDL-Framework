@@ -4,6 +4,7 @@ package sant.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.BasicEList;
@@ -109,23 +110,23 @@ public class ExpressionPlaceTemplateSizeImpl extends MinimalEObjectImpl.Containe
 	}
 
 	/**
-	 * The cached invocation delegate for the '{@link #evaluate(org.eclipse.emf.common.util.EList) <em>Evaluate</em>}' operation.
+	 * The cached invocation delegate for the '{@link #evaluate(java.util.List) <em>Evaluate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #evaluate(org.eclipse.emf.common.util.EList)
+	 * @see #evaluate(java.util.List)
 	 * @generated
 	 * @ordered
 	 */
-	protected static final EOperation.Internal.InvocationDelegate EVALUATE_ELIST__EINVOCATION_DELEGATE = ((EOperation.Internal)SANTPackage.Literals.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST).getInvocationDelegate();
+	protected static final EOperation.Internal.InvocationDelegate EVALUATE_LIST__EINVOCATION_DELEGATE = ((EOperation.Internal)SANTPackage.Literals.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__LIST).getInvocationDelegate();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int evaluate(EList<Assignment> assignments) {
+	public int evaluate(List<Assignment> assignments) {
 		try {
-			return (Integer)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
+			return (Integer)EVALUATE_LIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
 		}
 		catch (InvocationTargetException ite) {
 			throw new WrappedException(ite);
@@ -229,7 +230,7 @@ public class ExpressionPlaceTemplateSizeImpl extends MinimalEObjectImpl.Containe
 		}
 		if (baseClass == TemplateExpressionInteger.class) {
 			switch (baseOperationID) {
-				case ExpressionsPackage.TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST: return SANTPackage.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST;
+				case ExpressionsPackage.TEMPLATE_EXPRESSION_INTEGER___EVALUATE__LIST: return SANTPackage.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__LIST;
 				case ExpressionsPackage.TEMPLATE_EXPRESSION_INTEGER___EVALUATE: return SANTPackage.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE;
 				default: return -1;
 			}
@@ -246,8 +247,8 @@ public class ExpressionPlaceTemplateSizeImpl extends MinimalEObjectImpl.Containe
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SANTPackage.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__ELIST:
-				return evaluate((EList<Assignment>)arguments.get(0));
+			case SANTPackage.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE__LIST:
+				return evaluate((List<Assignment>)arguments.get(0));
 			case SANTPackage.EXPRESSION_PLACE_TEMPLATE_SIZE___EVALUATE:
 				return evaluate();
 		}

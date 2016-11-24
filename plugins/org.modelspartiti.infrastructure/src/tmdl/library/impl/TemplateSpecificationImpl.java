@@ -4,6 +4,7 @@ package tmdl.library.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -123,7 +124,7 @@ public abstract class TemplateSpecificationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModelInterface> getInterfaces() {
+	public List<ModelInterface> getInterfaces() {
 		if (interfaces == null) {
 			interfaces = new EObjectResolvingEList<ModelInterface>(ModelInterface.class, this, LibraryPackage.TEMPLATE_SPECIFICATION__INTERFACES);
 		}

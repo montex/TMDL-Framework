@@ -4,6 +4,7 @@ package tmdl.core.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -116,7 +117,7 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Double> getValues() {
+	public List<Double> getValues() {
 		if (values == null) {
 			values = new EDataTypeUniqueEList<Double>(Double.class, this, CorePackage.ASSIGNMENT_ARRAY__VALUES);
 		}

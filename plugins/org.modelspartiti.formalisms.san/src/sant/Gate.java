@@ -2,7 +2,7 @@
  */
 package sant;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,6 +63,6 @@ public interface Gate extends NamedElement {
 	 * @model
 	 * @generated
 	 */
-	EList<Place> getPlaces();
+	List<Place> getPlaces();
 
 } // Gate

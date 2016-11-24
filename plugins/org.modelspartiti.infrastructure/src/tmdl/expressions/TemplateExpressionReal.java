@@ -2,8 +2,7 @@
  */
 package tmdl.expressions;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import tmdl.core.Assignment;
 
 /**
@@ -23,7 +22,7 @@ public interface TemplateExpressionReal extends TemplateExpression {
 	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
 	 * @generated
 	 */
-	double evaluate(EList<Assignment> assignments);
+	double evaluate(List<Assignment> assignments);
 
 	/**
 	 * <!-- begin-user-doc -->

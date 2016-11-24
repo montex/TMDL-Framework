@@ -4,6 +4,7 @@ package san.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -123,7 +124,7 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Place> getPlaces() {
+	public List<Place> getPlaces() {
 		if (places == null) {
 			places = new EObjectResolvingEList<Place>(Place.class, this, SANPackage.GATE__PLACES);
 		}

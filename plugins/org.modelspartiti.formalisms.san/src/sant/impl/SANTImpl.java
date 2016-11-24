@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -189,7 +190,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parameter> getParameters() {
+	public List<Parameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, SANTPackage.SANT__PARAMETERS);
 		}
@@ -201,7 +202,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Place> getPlaces() {
+	public List<Place> getPlaces() {
 		if (places == null) {
 			places = new EObjectContainmentEList<Place>(Place.class, this, SANTPackage.SANT__PLACES);
 		}
@@ -213,7 +214,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Activity> getActivities() {
+	public List<Activity> getActivities() {
 		if (activities == null) {
 			activities = new EObjectContainmentEList<Activity>(Activity.class, this, SANTPackage.SANT__ACTIVITIES);
 		}
@@ -225,7 +226,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GlobalVariable> getGlobalVariables() {
+	public List<GlobalVariable> getGlobalVariables() {
 		if (globalVariables == null) {
 			globalVariables = new EObjectContainmentEList<GlobalVariable>(GlobalVariable.class, this, SANTPackage.SANT__GLOBAL_VARIABLES);
 		}
@@ -237,7 +238,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Arc> getArcs() {
+	public List<Arc> getArcs() {
 		if (arcs == null) {
 			arcs = new EObjectContainmentEList<Arc>(Arc.class, this, SANTPackage.SANT__ARCS);
 		}
@@ -249,7 +250,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Gate> getGates() {
+	public List<Gate> getGates() {
 		if (gates == null) {
 			gates = new EObjectContainmentEList<Gate>(Gate.class, this, SANTPackage.SANT__GATES);
 		}
@@ -261,7 +262,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Expression> getInitialization() {
+	public List<Expression> getInitialization() {
 		if (initialization == null) {
 			initialization = new EObjectContainmentEList<Expression>(Expression.class, this, SANTPackage.SANT__INITIALIZATION);
 		}
@@ -273,7 +274,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConcreteModel concretize(EList<Assignment> parameterValues) {
+	public ConcreteModel concretize(List<Assignment> parameterValues) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -450,8 +451,8 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SANTPackage.SANT___CONCRETIZE__ELIST:
-				return concretize((EList<Assignment>)arguments.get(0));
+			case SANTPackage.SANT___CONCRETIZE__LIST:
+				return concretize((List<Assignment>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

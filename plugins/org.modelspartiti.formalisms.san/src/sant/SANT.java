@@ -2,8 +2,7 @@
  */
 package sant;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import tmdl.core.Parameter;
 import tmdl.core.TemplateModel;
 
@@ -71,7 +70,7 @@ public interface SANT extends TemplateModel {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Parameter> getParameters();
+	List<Parameter> getParameters();
 
 	/**
 	 * Returns the value of the '<em><b>Places</b></em>' containment reference list.
@@ -87,7 +86,7 @@ public interface SANT extends TemplateModel {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Place> getPlaces();
+	List<Place> getPlaces();
 
 	/**
 	 * Returns the value of the '<em><b>Activities</b></em>' containment reference list.
@@ -103,7 +102,7 @@ public interface SANT extends TemplateModel {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activity> getActivities();
+	List<Activity> getActivities();
 
 	/**
 	 * Returns the value of the '<em><b>Global Variables</b></em>' containment reference list.
@@ -119,7 +118,7 @@ public interface SANT extends TemplateModel {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GlobalVariable> getGlobalVariables();
+	List<GlobalVariable> getGlobalVariables();
 
 	/**
 	 * Returns the value of the '<em><b>Arcs</b></em>' containment reference list.
@@ -135,7 +134,7 @@ public interface SANT extends TemplateModel {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Arc> getArcs();
+	List<Arc> getArcs();
 
 	/**
 	 * Returns the value of the '<em><b>Gates</b></em>' containment reference list.
@@ -151,7 +150,7 @@ public interface SANT extends TemplateModel {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Gate> getGates();
+	List<Gate> getGates();
 
 	/**
 	 * Returns the value of the '<em><b>Initialization</b></em>' containment reference list.
@@ -167,6 +166,6 @@ public interface SANT extends TemplateModel {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Expression> getInitialization();
+	List<Expression> getInitialization();
 
 } // SANT

@@ -2,8 +2,7 @@
  */
 package tmdl.library;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -65,7 +64,7 @@ public interface Library extends EObject {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<ModelInterface> getInterfaces();
+	List<ModelInterface> getInterfaces();
 
 	/**
 	 * Returns the value of the '<em><b>Templates</b></em>' containment reference list.
@@ -81,6 +80,6 @@ public interface Library extends EObject {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<TemplateSpecification> getTemplates();
+	List<TemplateSpecification> getTemplates();
 
 } // Library

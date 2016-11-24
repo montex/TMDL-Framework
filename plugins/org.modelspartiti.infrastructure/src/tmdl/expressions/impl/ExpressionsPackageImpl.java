@@ -376,7 +376,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionInteger__Evaluate__EList() {
+	public EOperation getTemplateExpressionInteger__Evaluate__List() {
 		return templateExpressionIntegerEClass.getEOperations().get(0);
 	}
 
@@ -403,7 +403,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionReal__Evaluate__EList() {
+	public EOperation getTemplateExpressionReal__Evaluate__List() {
 		return templateExpressionRealEClass.getEOperations().get(0);
 	}
 
@@ -430,7 +430,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionBoolean__Evaluate__EList() {
+	public EOperation getTemplateExpressionBoolean__Evaluate__List() {
 		return templateExpressionBooleanEClass.getEOperations().get(0);
 	}
 
@@ -466,7 +466,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionIntegerLiteral__Evaluate__EList() {
+	public EOperation getTemplateExpressionIntegerLiteral__Evaluate__List() {
 		return templateExpressionIntegerLiteralEClass.getEOperations().get(0);
 	}
 
@@ -493,7 +493,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealLiteral__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealLiteral__Evaluate__List() {
 		return templateExpressionRealLiteralEClass.getEOperations().get(0);
 	}
 
@@ -520,7 +520,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionBoolaenLiteral__Evaluate__EList() {
+	public EOperation getTemplateExpressionBoolaenLiteral__Evaluate__List() {
 		return templateExpressionBoolaenLiteralEClass.getEOperations().get(0);
 	}
 
@@ -547,7 +547,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionIntegerFromReal__Evaluate__EList() {
+	public EOperation getTemplateExpressionIntegerFromReal__Evaluate__List() {
 		return templateExpressionIntegerFromRealEClass.getEOperations().get(0);
 	}
 
@@ -574,7 +574,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealFromInteger__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealFromInteger__Evaluate__List() {
 		return templateExpressionRealFromIntegerEClass.getEOperations().get(0);
 	}
 
@@ -601,7 +601,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionParameterSimple__Evaluate__EList() {
+	public EOperation getTemplateExpressionParameterSimple__Evaluate__List() {
 		return templateExpressionParameterSimpleEClass.getEOperations().get(0);
 	}
 
@@ -637,7 +637,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionParameterArrayValueAt__Evaluate__EList() {
+	public EOperation getTemplateExpressionParameterArrayValueAt__Evaluate__List() {
 		return templateExpressionParameterArrayValueAtEClass.getEOperations().get(0);
 	}
 
@@ -664,7 +664,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionParameterArraySize__Evaluate__EList() {
+	public EOperation getTemplateExpressionParameterArraySize__Evaluate__List() {
 		return templateExpressionParameterArraySizeEClass.getEOperations().get(0);
 	}
 
@@ -700,7 +700,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionArrayAggregate__Evaluate__EList() {
+	public EOperation getTemplateExpressionArrayAggregate__Evaluate__List() {
 		return templateExpressionArrayAggregateEClass.getEOperations().get(0);
 	}
 
@@ -745,7 +745,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealSum__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealSum__Evaluate__List() {
 		return templateExpressionRealSumEClass.getEOperations().get(0);
 	}
 
@@ -763,7 +763,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealSubtract__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealSubtract__Evaluate__List() {
 		return templateExpressionRealSubtractEClass.getEOperations().get(0);
 	}
 
@@ -781,7 +781,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealMultiply__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealMultiply__Evaluate__List() {
 		return templateExpressionRealMultiplyEClass.getEOperations().get(0);
 	}
 
@@ -799,7 +799,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealDivide__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealDivide__Evaluate__List() {
 		return templateExpressionRealDivideEClass.getEOperations().get(0);
 	}
 
@@ -835,7 +835,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealModulo__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealModulo__Evaluate__List() {
 		return templateExpressionRealModuloEClass.getEOperations().get(0);
 	}
 
@@ -880,7 +880,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealFloor__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealFloor__Evaluate__List() {
 		return templateExpressionRealFloorEClass.getEOperations().get(0);
 	}
 
@@ -907,7 +907,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealCeil__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealCeil__Evaluate__List() {
 		return templateExpressionRealCeilEClass.getEOperations().get(0);
 	}
 
@@ -934,7 +934,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealRound__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealRound__Evaluate__List() {
 		return templateExpressionRealRoundEClass.getEOperations().get(0);
 	}
 
@@ -979,7 +979,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionRealIfThenElse__Evaluate__EList() {
+	public EOperation getTemplateExpressionRealIfThenElse__Evaluate__List() {
 		return templateExpressionRealIfThenElseEClass.getEOperations().get(0);
 	}
 
@@ -1015,7 +1015,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionBooleanNot__Evaluate__EList() {
+	public EOperation getTemplateExpressionBooleanNot__Evaluate__List() {
 		return templateExpressionBooleanNotEClass.getEOperations().get(0);
 	}
 
@@ -1042,7 +1042,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionBooleanToInteger__Evaluate__EList() {
+	public EOperation getTemplateExpressionBooleanToInteger__Evaluate__List() {
 		return templateExpressionBooleanToIntegerEClass.getEOperations().get(0);
 	}
 
@@ -1087,7 +1087,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionBooleanAnd__Evaluate__EList() {
+	public EOperation getTemplateExpressionBooleanAnd__Evaluate__List() {
 		return templateExpressionBooleanAndEClass.getEOperations().get(0);
 	}
 
@@ -1105,7 +1105,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateExpressionBooleanOr__Evaluate__EList() {
+	public EOperation getTemplateExpressionBooleanOr__Evaluate__List() {
 		return templateExpressionBooleanOrEClass.getEOperations().get(0);
 	}
 
@@ -1149,116 +1149,116 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		templateExpressionEClass = createEClass(TEMPLATE_EXPRESSION);
 
 		templateExpressionIntegerEClass = createEClass(TEMPLATE_EXPRESSION_INTEGER);
-		createEOperation(templateExpressionIntegerEClass, TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST);
+		createEOperation(templateExpressionIntegerEClass, TEMPLATE_EXPRESSION_INTEGER___EVALUATE__LIST);
 		createEOperation(templateExpressionIntegerEClass, TEMPLATE_EXPRESSION_INTEGER___EVALUATE);
 
 		templateExpressionRealEClass = createEClass(TEMPLATE_EXPRESSION_REAL);
-		createEOperation(templateExpressionRealEClass, TEMPLATE_EXPRESSION_REAL___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealEClass, TEMPLATE_EXPRESSION_REAL___EVALUATE__LIST);
 		createEOperation(templateExpressionRealEClass, TEMPLATE_EXPRESSION_REAL___EVALUATE);
 
 		templateExpressionBooleanEClass = createEClass(TEMPLATE_EXPRESSION_BOOLEAN);
-		createEOperation(templateExpressionBooleanEClass, TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__ELIST);
+		createEOperation(templateExpressionBooleanEClass, TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE__LIST);
 		createEOperation(templateExpressionBooleanEClass, TEMPLATE_EXPRESSION_BOOLEAN___EVALUATE);
 
 		templateExpressionIntegerLiteralEClass = createEClass(TEMPLATE_EXPRESSION_INTEGER_LITERAL);
 		createEAttribute(templateExpressionIntegerLiteralEClass, TEMPLATE_EXPRESSION_INTEGER_LITERAL__VALUE);
-		createEOperation(templateExpressionIntegerLiteralEClass, TEMPLATE_EXPRESSION_INTEGER_LITERAL___EVALUATE__ELIST);
+		createEOperation(templateExpressionIntegerLiteralEClass, TEMPLATE_EXPRESSION_INTEGER_LITERAL___EVALUATE__LIST);
 
 		templateExpressionRealLiteralEClass = createEClass(TEMPLATE_EXPRESSION_REAL_LITERAL);
 		createEAttribute(templateExpressionRealLiteralEClass, TEMPLATE_EXPRESSION_REAL_LITERAL__VALUE);
-		createEOperation(templateExpressionRealLiteralEClass, TEMPLATE_EXPRESSION_REAL_LITERAL___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealLiteralEClass, TEMPLATE_EXPRESSION_REAL_LITERAL___EVALUATE__LIST);
 
 		templateExpressionBoolaenLiteralEClass = createEClass(TEMPLATE_EXPRESSION_BOOLAEN_LITERAL);
 		createEAttribute(templateExpressionBoolaenLiteralEClass, TEMPLATE_EXPRESSION_BOOLAEN_LITERAL__VALUE);
-		createEOperation(templateExpressionBoolaenLiteralEClass, TEMPLATE_EXPRESSION_BOOLAEN_LITERAL___EVALUATE__ELIST);
+		createEOperation(templateExpressionBoolaenLiteralEClass, TEMPLATE_EXPRESSION_BOOLAEN_LITERAL___EVALUATE__LIST);
 
 		templateExpressionIntegerFromRealEClass = createEClass(TEMPLATE_EXPRESSION_INTEGER_FROM_REAL);
 		createEReference(templateExpressionIntegerFromRealEClass, TEMPLATE_EXPRESSION_INTEGER_FROM_REAL__EXP);
-		createEOperation(templateExpressionIntegerFromRealEClass, TEMPLATE_EXPRESSION_INTEGER_FROM_REAL___EVALUATE__ELIST);
+		createEOperation(templateExpressionIntegerFromRealEClass, TEMPLATE_EXPRESSION_INTEGER_FROM_REAL___EVALUATE__LIST);
 
 		templateExpressionRealFromIntegerEClass = createEClass(TEMPLATE_EXPRESSION_REAL_FROM_INTEGER);
 		createEReference(templateExpressionRealFromIntegerEClass, TEMPLATE_EXPRESSION_REAL_FROM_INTEGER__EXP);
-		createEOperation(templateExpressionRealFromIntegerEClass, TEMPLATE_EXPRESSION_REAL_FROM_INTEGER___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealFromIntegerEClass, TEMPLATE_EXPRESSION_REAL_FROM_INTEGER___EVALUATE__LIST);
 
 		templateExpressionParameterSimpleEClass = createEClass(TEMPLATE_EXPRESSION_PARAMETER_SIMPLE);
 		createEReference(templateExpressionParameterSimpleEClass, TEMPLATE_EXPRESSION_PARAMETER_SIMPLE__PARAMETER);
-		createEOperation(templateExpressionParameterSimpleEClass, TEMPLATE_EXPRESSION_PARAMETER_SIMPLE___EVALUATE__ELIST);
+		createEOperation(templateExpressionParameterSimpleEClass, TEMPLATE_EXPRESSION_PARAMETER_SIMPLE___EVALUATE__LIST);
 
 		templateExpressionParameterArrayValueAtEClass = createEClass(TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT);
 		createEReference(templateExpressionParameterArrayValueAtEClass, TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT__PARAMETER);
 		createEReference(templateExpressionParameterArrayValueAtEClass, TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT__POSITION);
-		createEOperation(templateExpressionParameterArrayValueAtEClass, TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT___EVALUATE__ELIST);
+		createEOperation(templateExpressionParameterArrayValueAtEClass, TEMPLATE_EXPRESSION_PARAMETER_ARRAY_VALUE_AT___EVALUATE__LIST);
 
 		templateExpressionParameterArraySizeEClass = createEClass(TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE);
 		createEReference(templateExpressionParameterArraySizeEClass, TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE__PARAMETER);
-		createEOperation(templateExpressionParameterArraySizeEClass, TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE___EVALUATE__ELIST);
+		createEOperation(templateExpressionParameterArraySizeEClass, TEMPLATE_EXPRESSION_PARAMETER_ARRAY_SIZE___EVALUATE__LIST);
 
 		templateExpressionArrayAggregateEClass = createEClass(TEMPLATE_EXPRESSION_ARRAY_AGGREGATE);
 		createEReference(templateExpressionArrayAggregateEClass, TEMPLATE_EXPRESSION_ARRAY_AGGREGATE__PARAMETER);
 		createEAttribute(templateExpressionArrayAggregateEClass, TEMPLATE_EXPRESSION_ARRAY_AGGREGATE__FUNCTION);
-		createEOperation(templateExpressionArrayAggregateEClass, TEMPLATE_EXPRESSION_ARRAY_AGGREGATE___EVALUATE__ELIST);
+		createEOperation(templateExpressionArrayAggregateEClass, TEMPLATE_EXPRESSION_ARRAY_AGGREGATE___EVALUATE__LIST);
 
 		templateExpressionRealBinaryOperationEClass = createEClass(TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION);
 		createEReference(templateExpressionRealBinaryOperationEClass, TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP1);
 		createEReference(templateExpressionRealBinaryOperationEClass, TEMPLATE_EXPRESSION_REAL_BINARY_OPERATION__EXP2);
 
 		templateExpressionRealSumEClass = createEClass(TEMPLATE_EXPRESSION_REAL_SUM);
-		createEOperation(templateExpressionRealSumEClass, TEMPLATE_EXPRESSION_REAL_SUM___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealSumEClass, TEMPLATE_EXPRESSION_REAL_SUM___EVALUATE__LIST);
 
 		templateExpressionRealSubtractEClass = createEClass(TEMPLATE_EXPRESSION_REAL_SUBTRACT);
-		createEOperation(templateExpressionRealSubtractEClass, TEMPLATE_EXPRESSION_REAL_SUBTRACT___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealSubtractEClass, TEMPLATE_EXPRESSION_REAL_SUBTRACT___EVALUATE__LIST);
 
 		templateExpressionRealMultiplyEClass = createEClass(TEMPLATE_EXPRESSION_REAL_MULTIPLY);
-		createEOperation(templateExpressionRealMultiplyEClass, TEMPLATE_EXPRESSION_REAL_MULTIPLY___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealMultiplyEClass, TEMPLATE_EXPRESSION_REAL_MULTIPLY___EVALUATE__LIST);
 
 		templateExpressionRealDivideEClass = createEClass(TEMPLATE_EXPRESSION_REAL_DIVIDE);
-		createEOperation(templateExpressionRealDivideEClass, TEMPLATE_EXPRESSION_REAL_DIVIDE___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealDivideEClass, TEMPLATE_EXPRESSION_REAL_DIVIDE___EVALUATE__LIST);
 
 		templateExpressionRealModuloEClass = createEClass(TEMPLATE_EXPRESSION_REAL_MODULO);
 		createEReference(templateExpressionRealModuloEClass, TEMPLATE_EXPRESSION_REAL_MODULO__EXP1);
 		createEReference(templateExpressionRealModuloEClass, TEMPLATE_EXPRESSION_REAL_MODULO__EXP2);
-		createEOperation(templateExpressionRealModuloEClass, TEMPLATE_EXPRESSION_REAL_MODULO___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealModuloEClass, TEMPLATE_EXPRESSION_REAL_MODULO___EVALUATE__LIST);
 
 		templateExpressionRealUnaryEClass = createEClass(TEMPLATE_EXPRESSION_REAL_UNARY);
 		createEReference(templateExpressionRealUnaryEClass, TEMPLATE_EXPRESSION_REAL_UNARY__EXP);
 
 		templateExpressionRealFloorEClass = createEClass(TEMPLATE_EXPRESSION_REAL_FLOOR);
 		createEReference(templateExpressionRealFloorEClass, TEMPLATE_EXPRESSION_REAL_FLOOR__EXP);
-		createEOperation(templateExpressionRealFloorEClass, TEMPLATE_EXPRESSION_REAL_FLOOR___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealFloorEClass, TEMPLATE_EXPRESSION_REAL_FLOOR___EVALUATE__LIST);
 
 		templateExpressionRealCeilEClass = createEClass(TEMPLATE_EXPRESSION_REAL_CEIL);
 		createEReference(templateExpressionRealCeilEClass, TEMPLATE_EXPRESSION_REAL_CEIL__EXP);
-		createEOperation(templateExpressionRealCeilEClass, TEMPLATE_EXPRESSION_REAL_CEIL___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealCeilEClass, TEMPLATE_EXPRESSION_REAL_CEIL___EVALUATE__LIST);
 
 		templateExpressionRealRoundEClass = createEClass(TEMPLATE_EXPRESSION_REAL_ROUND);
 		createEReference(templateExpressionRealRoundEClass, TEMPLATE_EXPRESSION_REAL_ROUND__EXP);
-		createEOperation(templateExpressionRealRoundEClass, TEMPLATE_EXPRESSION_REAL_ROUND___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealRoundEClass, TEMPLATE_EXPRESSION_REAL_ROUND___EVALUATE__LIST);
 
 		templateExpressionRealIfThenElseEClass = createEClass(TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE);
 		createEReference(templateExpressionRealIfThenElseEClass, TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE__CONDITION);
 		createEReference(templateExpressionRealIfThenElseEClass, TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE__IF_TRUE);
 		createEReference(templateExpressionRealIfThenElseEClass, TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE__IF_FALSE);
-		createEOperation(templateExpressionRealIfThenElseEClass, TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE___EVALUATE__ELIST);
+		createEOperation(templateExpressionRealIfThenElseEClass, TEMPLATE_EXPRESSION_REAL_IF_THEN_ELSE___EVALUATE__LIST);
 
 		templateExpressionBooleanUnaryOperationEClass = createEClass(TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION);
 		createEReference(templateExpressionBooleanUnaryOperationEClass, TEMPLATE_EXPRESSION_BOOLEAN_UNARY_OPERATION__EXP);
 
 		templateExpressionBooleanNotEClass = createEClass(TEMPLATE_EXPRESSION_BOOLEAN_NOT);
-		createEOperation(templateExpressionBooleanNotEClass, TEMPLATE_EXPRESSION_BOOLEAN_NOT___EVALUATE__ELIST);
+		createEOperation(templateExpressionBooleanNotEClass, TEMPLATE_EXPRESSION_BOOLEAN_NOT___EVALUATE__LIST);
 
 		templateExpressionBooleanToIntegerEClass = createEClass(TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER);
 		createEReference(templateExpressionBooleanToIntegerEClass, TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER__EXP);
-		createEOperation(templateExpressionBooleanToIntegerEClass, TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER___EVALUATE__ELIST);
+		createEOperation(templateExpressionBooleanToIntegerEClass, TEMPLATE_EXPRESSION_BOOLEAN_TO_INTEGER___EVALUATE__LIST);
 
 		templateExpressionBooleanBinaryOperationEClass = createEClass(TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION);
 		createEReference(templateExpressionBooleanBinaryOperationEClass, TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP1);
 		createEReference(templateExpressionBooleanBinaryOperationEClass, TEMPLATE_EXPRESSION_BOOLEAN_BINARY_OPERATION__EXP2);
 
 		templateExpressionBooleanAndEClass = createEClass(TEMPLATE_EXPRESSION_BOOLEAN_AND);
-		createEOperation(templateExpressionBooleanAndEClass, TEMPLATE_EXPRESSION_BOOLEAN_AND___EVALUATE__ELIST);
+		createEOperation(templateExpressionBooleanAndEClass, TEMPLATE_EXPRESSION_BOOLEAN_AND___EVALUATE__LIST);
 
 		templateExpressionBooleanOrEClass = createEClass(TEMPLATE_EXPRESSION_BOOLEAN_OR);
-		createEOperation(templateExpressionBooleanOrEClass, TEMPLATE_EXPRESSION_BOOLEAN_OR___EVALUATE__ELIST);
+		createEOperation(templateExpressionBooleanOrEClass, TEMPLATE_EXPRESSION_BOOLEAN_OR___EVALUATE__LIST);
 
 		// Create enums
 		arrayAggregateKindEEnum = createEEnum(ARRAY_AGGREGATE_KIND);
@@ -1330,21 +1330,21 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 
 		initEClass(templateExpressionIntegerEClass, TemplateExpressionInteger.class, "TemplateExpressionInteger", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getTemplateExpressionInteger__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getTemplateExpressionInteger__Evaluate__List(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getTemplateExpressionInteger__Evaluate(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(templateExpressionRealEClass, TemplateExpressionReal.class, "TemplateExpressionReal", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTemplateExpressionReal__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionReal__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getTemplateExpressionReal__Evaluate(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(templateExpressionBooleanEClass, TemplateExpressionBoolean.class, "TemplateExpressionBoolean", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTemplateExpressionBoolean__Evaluate__EList(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionBoolean__Evaluate__List(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getTemplateExpressionBoolean__Evaluate(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
@@ -1352,57 +1352,57 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		initEClass(templateExpressionIntegerLiteralEClass, TemplateExpressionIntegerLiteral.class, "TemplateExpressionIntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTemplateExpressionIntegerLiteral_Value(), ecorePackage.getEInt(), "value", null, 1, 1, TemplateExpressionIntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionIntegerLiteral__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionIntegerLiteral__Evaluate__List(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealLiteralEClass, TemplateExpressionRealLiteral.class, "TemplateExpressionRealLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTemplateExpressionRealLiteral_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, TemplateExpressionRealLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionRealLiteral__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealLiteral__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionBoolaenLiteralEClass, TemplateExpressionBoolaenLiteral.class, "TemplateExpressionBoolaenLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTemplateExpressionBoolaenLiteral_Value(), ecorePackage.getEBoolean(), "value", null, 1, 1, TemplateExpressionBoolaenLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionBoolaenLiteral__Evaluate__EList(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionBoolaenLiteral__Evaluate__List(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionIntegerFromRealEClass, TemplateExpressionIntegerFromReal.class, "TemplateExpressionIntegerFromReal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionIntegerFromReal_Exp(), this.getTemplateExpressionReal(), null, "exp", null, 1, 1, TemplateExpressionIntegerFromReal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionIntegerFromReal__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionIntegerFromReal__Evaluate__List(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealFromIntegerEClass, TemplateExpressionRealFromInteger.class, "TemplateExpressionRealFromInteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionRealFromInteger_Exp(), this.getTemplateExpressionInteger(), null, "exp", null, 1, 1, TemplateExpressionRealFromInteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionRealFromInteger__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealFromInteger__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionParameterSimpleEClass, TemplateExpressionParameterSimple.class, "TemplateExpressionParameterSimple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionParameterSimple_Parameter(), theCorePackage.getParameterSimple(), null, "parameter", null, 1, 1, TemplateExpressionParameterSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionParameterSimple__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionParameterSimple__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionParameterArrayValueAtEClass, TemplateExpressionParameterArrayValueAt.class, "TemplateExpressionParameterArrayValueAt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionParameterArrayValueAt_Parameter(), theCorePackage.getParameterArray(), null, "parameter", null, 1, 1, TemplateExpressionParameterArrayValueAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTemplateExpressionParameterArrayValueAt_Position(), this.getTemplateExpressionInteger(), null, "position", null, 1, 1, TemplateExpressionParameterArrayValueAt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionParameterArrayValueAt__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionParameterArrayValueAt__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionParameterArraySizeEClass, TemplateExpressionParameterArraySize.class, "TemplateExpressionParameterArraySize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionParameterArraySize_Parameter(), theCorePackage.getParameterArray(), null, "parameter", null, 1, 1, TemplateExpressionParameterArraySize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionParameterArraySize__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionParameterArraySize__Evaluate__List(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionArrayAggregateEClass, TemplateExpressionArrayAggregate.class, "TemplateExpressionArrayAggregate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionArrayAggregate_Parameter(), theCorePackage.getParameterArray(), null, "parameter", null, 1, 1, TemplateExpressionArrayAggregate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTemplateExpressionArrayAggregate_Function(), this.getArrayAggregateKind(), "function", null, 1, 1, TemplateExpressionArrayAggregate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionArrayAggregate__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionArrayAggregate__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealBinaryOperationEClass, TemplateExpressionRealBinaryOperation.class, "TemplateExpressionRealBinaryOperation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1411,29 +1411,29 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 
 		initEClass(templateExpressionRealSumEClass, TemplateExpressionRealSum.class, "TemplateExpressionRealSum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTemplateExpressionRealSum__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealSum__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealSubtractEClass, TemplateExpressionRealSubtract.class, "TemplateExpressionRealSubtract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTemplateExpressionRealSubtract__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealSubtract__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealMultiplyEClass, TemplateExpressionRealMultiply.class, "TemplateExpressionRealMultiply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTemplateExpressionRealMultiply__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealMultiply__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealDivideEClass, TemplateExpressionRealDivide.class, "TemplateExpressionRealDivide", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTemplateExpressionRealDivide__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealDivide__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealModuloEClass, TemplateExpressionRealModulo.class, "TemplateExpressionRealModulo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionRealModulo_Exp1(), this.getTemplateExpressionInteger(), null, "exp1", null, 1, 1, TemplateExpressionRealModulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTemplateExpressionRealModulo_Exp2(), this.getTemplateExpressionInteger(), null, "exp2", null, 1, 1, TemplateExpressionRealModulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionRealModulo__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealModulo__Evaluate__List(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealUnaryEClass, TemplateExpressionRealUnary.class, "TemplateExpressionRealUnary", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1442,19 +1442,19 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		initEClass(templateExpressionRealFloorEClass, TemplateExpressionRealFloor.class, "TemplateExpressionRealFloor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionRealFloor_Exp(), this.getTemplateExpressionReal(), null, "exp", null, 1, 1, TemplateExpressionRealFloor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionRealFloor__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealFloor__Evaluate__List(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealCeilEClass, TemplateExpressionRealCeil.class, "TemplateExpressionRealCeil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionRealCeil_Exp(), this.getTemplateExpressionReal(), null, "exp", null, 1, 1, TemplateExpressionRealCeil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionRealCeil__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealCeil__Evaluate__List(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealRoundEClass, TemplateExpressionRealRound.class, "TemplateExpressionRealRound", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionRealRound_Exp(), this.getTemplateExpressionReal(), null, "exp", null, 1, 1, TemplateExpressionRealRound.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionRealRound__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealRound__Evaluate__List(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionRealIfThenElseEClass, TemplateExpressionRealIfThenElse.class, "TemplateExpressionRealIfThenElse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1462,7 +1462,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		initEReference(getTemplateExpressionRealIfThenElse_IfTrue(), this.getTemplateExpressionReal(), null, "ifTrue", null, 1, 1, TemplateExpressionRealIfThenElse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTemplateExpressionRealIfThenElse_IfFalse(), this.getTemplateExpressionReal(), null, "ifFalse", null, 1, 1, TemplateExpressionRealIfThenElse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionRealIfThenElse__Evaluate__EList(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionRealIfThenElse__Evaluate__List(), ecorePackage.getEDouble(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionBooleanUnaryOperationEClass, TemplateExpressionBooleanUnaryOperation.class, "TemplateExpressionBooleanUnaryOperation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1470,13 +1470,13 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 
 		initEClass(templateExpressionBooleanNotEClass, TemplateExpressionBooleanNot.class, "TemplateExpressionBooleanNot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTemplateExpressionBooleanNot__Evaluate__EList(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionBooleanNot__Evaluate__List(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionBooleanToIntegerEClass, TemplateExpressionBooleanToInteger.class, "TemplateExpressionBooleanToInteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTemplateExpressionBooleanToInteger_Exp(), this.getTemplateExpressionBoolean(), null, "exp", null, 1, 1, TemplateExpressionBooleanToInteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getTemplateExpressionBooleanToInteger__Evaluate__EList(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionBooleanToInteger__Evaluate__List(), ecorePackage.getEInt(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionBooleanBinaryOperationEClass, TemplateExpressionBooleanBinaryOperation.class, "TemplateExpressionBooleanBinaryOperation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1485,12 +1485,12 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 
 		initEClass(templateExpressionBooleanAndEClass, TemplateExpressionBooleanAnd.class, "TemplateExpressionBooleanAnd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTemplateExpressionBooleanAnd__Evaluate__EList(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionBooleanAnd__Evaluate__List(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(templateExpressionBooleanOrEClass, TemplateExpressionBooleanOr.class, "TemplateExpressionBooleanOr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTemplateExpressionBooleanOr__Evaluate__EList(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getTemplateExpressionBooleanOr__Evaluate__List(), ecorePackage.getEBoolean(), "evaluate", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theCorePackage.getAssignment(), "assignments", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
@@ -1555,133 +1555,133 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 			 "body", "evaluate(core::Assignment.allInstances())"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionIntegerLiteral__Evaluate__EList(), 
+		  (getTemplateExpressionIntegerLiteral__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "value"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealLiteral__Evaluate__EList(), 
+		  (getTemplateExpressionRealLiteral__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "value"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionBoolaenLiteral__Evaluate__EList(), 
+		  (getTemplateExpressionBoolaenLiteral__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "value"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionIntegerFromReal__Evaluate__EList(), 
+		  (getTemplateExpressionIntegerFromReal__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp.evaluate(assignments).floor()"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealFromInteger__Evaluate__EList(), 
+		  (getTemplateExpressionRealFromInteger__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp.evaluate(assignments)"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionParameterSimple__Evaluate__EList(), 
+		  (getTemplateExpressionParameterSimple__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "assignments->select(as | as.oclIsTypeOf(core::AssignmentSimple))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentSimple).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentSimple).value"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionParameterArrayValueAt__Evaluate__EList(), 
+		  (getTemplateExpressionParameterArrayValueAt__Evaluate__List(), 
 		   source, 
 		   new String[] {
-			 "body", "assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\t\t\t->at(position.evaluate(assignments))"
+			 "body", "assignments->size()"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionParameterArraySize__Evaluate__EList(), 
+		  (getTemplateExpressionParameterArraySize__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\t\t\t->size()"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionArrayAggregate__Evaluate__EList(), 
+		  (getTemplateExpressionArrayAggregate__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "\n\t\t\t\tlet array = assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\tin\n\t\t\t\t\tif function = ArrayAggregateKind::sum then array->sum()\n\t\t\t\t\telse if function = ArrayAggregateKind::min then array->min()\n\t\t\t\t\telse if function = ArrayAggregateKind::max then array->max()\n\t\t\t\t\telse\n\t\t\t\t\t\tarray->sum()/array->size()\n\t\t\t\t\tendif endif endif"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealSum__Evaluate__EList(), 
+		  (getTemplateExpressionRealSum__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp1.evaluate(assignments) + exp2.evaluate(assignments)"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealSubtract__Evaluate__EList(), 
+		  (getTemplateExpressionRealSubtract__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp1.evaluate(assignments) - exp2.evaluate(assignments)"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealMultiply__Evaluate__EList(), 
+		  (getTemplateExpressionRealMultiply__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp1.evaluate(assignments) * exp2.evaluate(assignments)"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealDivide__Evaluate__EList(), 
+		  (getTemplateExpressionRealDivide__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp1.evaluate(assignments) / exp2.evaluate(assignments)"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealModulo__Evaluate__EList(), 
+		  (getTemplateExpressionRealModulo__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp1.evaluate(assignments).mod(exp2.evaluate(assignments))"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealFloor__Evaluate__EList(), 
+		  (getTemplateExpressionRealFloor__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp.evaluate(assignments).floor()"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealCeil__Evaluate__EList(), 
+		  (getTemplateExpressionRealCeil__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "\n\t\t\t\tlet n = exp.evaluate(assignments) in\n\t\t\t\tif n.floor() = n.round() then n.floor()+1\n\t\t\t\telse n.round() endif"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealRound__Evaluate__EList(), 
+		  (getTemplateExpressionRealRound__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp.evaluate(assignments).round()"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionRealIfThenElse__Evaluate__EList(), 
+		  (getTemplateExpressionRealIfThenElse__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "\n\t\t\t\tif condition.evaluate(assignments)\n\t\t\t\tthen ifTrue.evaluate(assignments)\n\t\t\t\telse ifFalse.evaluate(assignments)\n\t\t\t\tendif"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionBooleanNot__Evaluate__EList(), 
+		  (getTemplateExpressionBooleanNot__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "not exp.evaluate(assignments)"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionBooleanToInteger__Evaluate__EList(), 
+		  (getTemplateExpressionBooleanToInteger__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp.evaluate(assignments)"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionBooleanAnd__Evaluate__EList(), 
+		  (getTemplateExpressionBooleanAnd__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp1.evaluate(assignments) and exp2.evaluate(assignments)"
 		   });	
 		addAnnotation
-		  (getTemplateExpressionBooleanOr__Evaluate__EList(), 
+		  (getTemplateExpressionBooleanOr__Evaluate__List(), 
 		   source, 
 		   new String[] {
 			 "body", "exp1.evaluate(assignments) or exp2.evaluate(assignments)"

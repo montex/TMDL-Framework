@@ -4,6 +4,7 @@ package sant.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -68,7 +69,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ExpressionSegment> getSegments() {
+	public List<ExpressionSegment> getSegments() {
 		if (segments == null) {
 			segments = new EObjectContainmentEList<ExpressionSegment>(ExpressionSegment.class, this, SANTPackage.EXPRESSION__SEGMENTS);
 		}

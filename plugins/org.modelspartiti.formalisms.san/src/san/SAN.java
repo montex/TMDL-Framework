@@ -2,7 +2,7 @@
  */
 package san;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 import tmdl.core.ConcreteModel;
 
 /**
@@ -42,7 +42,7 @@ public interface SAN extends ConcreteModel {
 	 * @model containment="true" keys="name" required="true"
 	 * @generated
 	 */
-	EList<Place> getPlaces();
+	List<Place> getPlaces();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -84,7 +84,7 @@ public interface SAN extends ConcreteModel {
 	 * @model containment="true" keys="name"
 	 * @generated
 	 */
-	EList<Activity> getActivities();
+	List<Activity> getActivities();
 
 	/**
 	 * Returns the value of the '<em><b>Global Variables</b></em>' containment reference list.
@@ -100,7 +100,7 @@ public interface SAN extends ConcreteModel {
 	 * @model containment="true" keys="name"
 	 * @generated
 	 */
-	EList<GlobalVariable> getGlobalVariables();
+	List<GlobalVariable> getGlobalVariables();
 
 	/**
 	 * Returns the value of the '<em><b>Arcs</b></em>' containment reference list.
@@ -116,7 +116,7 @@ public interface SAN extends ConcreteModel {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Arc> getArcs();
+	List<Arc> getArcs();
 
 	/**
 	 * Returns the value of the '<em><b>Gates</b></em>' containment reference list.
@@ -132,7 +132,7 @@ public interface SAN extends ConcreteModel {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Gate> getGates();
+	List<Gate> getGates();
 
 	/**
 	 * Returns the value of the '<em><b>Initialization</b></em>' containment reference list.
@@ -148,6 +148,6 @@ public interface SAN extends ConcreteModel {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Expression> getInitialization();
+	List<Expression> getInitialization();
 
 } // SAN

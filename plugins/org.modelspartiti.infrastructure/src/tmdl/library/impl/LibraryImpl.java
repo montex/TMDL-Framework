@@ -4,6 +4,7 @@ package tmdl.library.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -124,7 +125,7 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModelInterface> getInterfaces() {
+	public List<ModelInterface> getInterfaces() {
 		if (interfaces == null) {
 			interfaces = new EObjectContainmentEList<ModelInterface>(ModelInterface.class, this, LibraryPackage.LIBRARY__INTERFACES);
 		}
@@ -136,7 +137,7 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TemplateSpecification> getTemplates() {
+	public List<TemplateSpecification> getTemplates() {
 		if (templates == null) {
 			templates = new EObjectContainmentEList<TemplateSpecification>(TemplateSpecification.class, this, LibraryPackage.LIBRARY__TEMPLATES);
 		}

@@ -5,6 +5,7 @@ package san.impl;
 import java.util.Collection;
 import java.util.Iterator;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -65,7 +66,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ExpressionSegment> getSegments() {
+	public List<ExpressionSegment> getSegments() {
 		if (segments == null) {
 			segments = new EObjectContainmentEList<ExpressionSegment>(ExpressionSegment.class, this, SANPackage.EXPRESSION__SEGMENTS);
 		}

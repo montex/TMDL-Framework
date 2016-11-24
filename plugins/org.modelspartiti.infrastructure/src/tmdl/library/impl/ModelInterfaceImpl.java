@@ -4,6 +4,7 @@ package tmdl.library.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -125,7 +126,7 @@ public class ModelInterfaceImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InterfaceVariable> getVariables() {
+	public List<InterfaceVariable> getVariables() {
 		if (variables == null) {
 			variables = new EObjectContainmentEList<InterfaceVariable>(InterfaceVariable.class, this, LibraryPackage.MODEL_INTERFACE__VARIABLES);
 		}
@@ -137,7 +138,7 @@ public class ModelInterfaceImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parameter> getParameters() {
+	public List<Parameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, LibraryPackage.MODEL_INTERFACE__PARAMETERS);
 		}

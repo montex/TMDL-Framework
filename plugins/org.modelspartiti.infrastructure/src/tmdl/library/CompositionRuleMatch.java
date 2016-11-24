@@ -2,7 +2,7 @@
  */
 package tmdl.library;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +35,6 @@ public interface CompositionRuleMatch extends CompositionRule {
 	 * @model
 	 * @generated
 	 */
-	EList<String> getLabels();
+	List<String> getLabels();
 
 } // CompositionRuleMatch

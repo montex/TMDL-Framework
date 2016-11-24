@@ -2,8 +2,7 @@
  */
 package tmdl.scenario;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import tmdl.library.TemplateComposite;
 
 /**
@@ -64,6 +63,6 @@ public interface VariantComposite extends Variant {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<BlockRealization> getRealizations();
+	List<BlockRealization> getRealizations();
 
 } // VariantComposite

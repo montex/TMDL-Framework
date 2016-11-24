@@ -4,6 +4,7 @@ package tmdl.library.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -78,7 +79,7 @@ public class TemplateCompositeImpl extends TemplateSpecificationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<CompositionRule> getRules() {
+	public List<CompositionRule> getRules() {
 		if (rules == null) {
 			rules = new EObjectContainmentEList<CompositionRule>(CompositionRule.class, this, LibraryPackage.TEMPLATE_COMPOSITE__RULES);
 		}
@@ -90,7 +91,7 @@ public class TemplateCompositeImpl extends TemplateSpecificationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Block> getBlocks() {
+	public List<Block> getBlocks() {
 		if (blocks == null) {
 			blocks = new EObjectContainmentEList<Block>(Block.class, this, LibraryPackage.TEMPLATE_COMPOSITE__BLOCKS);
 		}

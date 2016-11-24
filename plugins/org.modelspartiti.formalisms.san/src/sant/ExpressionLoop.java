@@ -2,7 +2,7 @@
  */
 package sant;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 import tmdl.expressions.TemplateExpressionInteger;
 
 /**
@@ -90,6 +90,6 @@ public interface ExpressionLoop extends ExpressionSegment {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<ExpressionSegment> getDo();
+	List<ExpressionSegment> getDo();
 
 } // ExpressionLoop

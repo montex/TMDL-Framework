@@ -4,13 +4,10 @@ package sant.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import sant.SANTPackage;
 import sant.ThisContextIterator;
 import tmdl.core.Assignment;
@@ -55,7 +52,7 @@ public class ThisContextIteratorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int evaluate(EList<Assignment> assignments) {
+	public int evaluate(List<Assignment> assignments) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -94,7 +91,7 @@ public class ThisContextIteratorImpl extends MinimalEObjectImpl.Container implem
 		}
 		if (baseClass == TemplateExpressionInteger.class) {
 			switch (baseOperationID) {
-				case ExpressionsPackage.TEMPLATE_EXPRESSION_INTEGER___EVALUATE__ELIST: return SANTPackage.THIS_CONTEXT_ITERATOR___EVALUATE__ELIST;
+				case ExpressionsPackage.TEMPLATE_EXPRESSION_INTEGER___EVALUATE__LIST: return SANTPackage.THIS_CONTEXT_ITERATOR___EVALUATE__LIST;
 				case ExpressionsPackage.TEMPLATE_EXPRESSION_INTEGER___EVALUATE: return SANTPackage.THIS_CONTEXT_ITERATOR___EVALUATE;
 				default: return -1;
 			}
@@ -111,8 +108,8 @@ public class ThisContextIteratorImpl extends MinimalEObjectImpl.Container implem
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SANTPackage.THIS_CONTEXT_ITERATOR___EVALUATE__ELIST:
-				return evaluate((EList<Assignment>)arguments.get(0));
+			case SANTPackage.THIS_CONTEXT_ITERATOR___EVALUATE__LIST:
+				return evaluate((List<Assignment>)arguments.get(0));
 			case SANTPackage.THIS_CONTEXT_ITERATOR___EVALUATE:
 				return evaluate();
 		}

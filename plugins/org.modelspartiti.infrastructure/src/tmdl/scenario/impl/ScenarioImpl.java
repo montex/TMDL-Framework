@@ -4,6 +4,7 @@ package tmdl.scenario.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -123,7 +124,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Variant> getVariants() {
+	public List<Variant> getVariants() {
 		if (variants == null) {
 			variants = new EObjectContainmentEList<Variant>(Variant.class, this, ScenarioPackage.SCENARIO__VARIANTS);
 		}

@@ -2,8 +2,7 @@
  */
 package tmdl.scenario;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -65,7 +64,7 @@ public interface Scenario extends EObject {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Variant> getVariants();
+	List<Variant> getVariants();
 
 	/**
 	 * Returns the value of the '<em><b>Root</b></em>' reference.

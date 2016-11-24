@@ -2,8 +2,7 @@
  */
 package tmdl.scenario;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import tmdl.library.TemplateAtomic;
 
 /**
@@ -64,6 +63,6 @@ public interface VariantAtomic extends Variant {
 	 * @model
 	 * @generated
 	 */
-	EList<String> getLabels();
+	List<String> getLabels();
 
 } // VariantAtomic

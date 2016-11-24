@@ -2,7 +2,7 @@
  */
 package tmdl.library;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +36,7 @@ public interface TemplateComposite extends TemplateSpecification {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<CompositionRule> getRules();
+	List<CompositionRule> getRules();
 
 	/**
 	 * Returns the value of the '<em><b>Blocks</b></em>' containment reference list.
@@ -52,6 +52,6 @@ public interface TemplateComposite extends TemplateSpecification {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Block> getBlocks();
+	List<Block> getBlocks();
 
 } // TemplateComposite

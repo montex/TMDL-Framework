@@ -2,10 +2,8 @@
  */
 package tmdl.library;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
-
 import tmdl.core.Parameter;
 
 /**
@@ -67,7 +65,7 @@ public interface ModelInterface extends EObject {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<InterfaceVariable> getVariables();
+	List<InterfaceVariable> getVariables();
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
@@ -83,6 +81,6 @@ public interface ModelInterface extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Parameter> getParameters();
+	List<Parameter> getParameters();
 
 } // ModelInterface

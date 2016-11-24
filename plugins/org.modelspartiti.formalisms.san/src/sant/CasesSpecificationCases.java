@@ -2,7 +2,7 @@
  */
 package sant;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +35,6 @@ public interface CasesSpecificationCases extends CasesSpecification {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Case> getCases();
+	List<Case> getCases();
 
 } // CasesSpecificationCases

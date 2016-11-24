@@ -3,6 +3,7 @@
 package sant.impl;
 
 import java.util.Collection;
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -177,7 +178,7 @@ public class ExpressionLoopImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ExpressionSegment> getDo() {
+	public List<ExpressionSegment> getDo() {
 		if (do_ == null) {
 			do_ = new EObjectContainmentEList<ExpressionSegment>(ExpressionSegment.class, this, SANTPackage.EXPRESSION_LOOP__DO);
 		}

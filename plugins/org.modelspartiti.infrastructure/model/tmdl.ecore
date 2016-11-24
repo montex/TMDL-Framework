@@ -267,7 +267,7 @@
         eSuperTypes="#//expressions/TemplateExpressionReal">
       <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
         <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-          <details key="body" value="assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->asSequence()->first().oclAsType(core::AssignmentArray).values&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->at(position.evaluate(assignments))"/>
+          <details key="body" value="assignments->size()"/>
         </eAnnotations>
         <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
       </eOperations>

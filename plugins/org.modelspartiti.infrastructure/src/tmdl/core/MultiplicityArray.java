@@ -2,7 +2,7 @@
  */
 package tmdl.core;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +35,6 @@ public interface MultiplicityArray extends Multiplicity {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Integer> getValues();
+	List<Integer> getValues();
 
 } // MultiplicityArray

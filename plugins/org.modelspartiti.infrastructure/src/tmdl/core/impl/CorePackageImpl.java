@@ -232,7 +232,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTemplateModel__Concretize__EList() {
+	public EOperation getTemplateModel__Concretize__List() {
 		return templateModelEClass.getEOperations().get(0);
 	}
 
@@ -430,7 +430,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		createEOperation(concreteModelEClass, CONCRETE_MODEL___TEMPLATIZE);
 
 		templateModelEClass = createEClass(TEMPLATE_MODEL);
-		createEOperation(templateModelEClass, TEMPLATE_MODEL___CONCRETIZE__ELIST);
+		createEOperation(templateModelEClass, TEMPLATE_MODEL___CONCRETIZE__LIST);
 
 		parameterEClass = createEClass(PARAMETER);
 		createEAttribute(parameterEClass, PARAMETER__NAME);
@@ -504,7 +504,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		initEClass(templateModelEClass, TemplateModel.class, "TemplateModel", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getTemplateModel__Concretize__EList(), this.getConcreteModel(), "concretize", 1, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getTemplateModel__Concretize__List(), this.getConcreteModel(), "concretize", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAssignment(), "parameterValues", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(parameterEClass, Parameter.class, "Parameter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

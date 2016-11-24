@@ -2,8 +2,7 @@
  */
 package tmdl.expressions;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import tmdl.core.Assignment;
 
 /**
@@ -24,6 +23,6 @@ public interface TemplateExpressionBooleanAnd extends TemplateExpressionBooleanB
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='exp1.evaluate(assignments) and exp2.evaluate(assignments)'"
 	 * @generated
 	 */
-	boolean evaluate(EList<Assignment> assignments);
+	boolean evaluate(List<Assignment> assignments);
 
 } // TemplateExpressionBooleanAnd

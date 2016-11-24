@@ -139,7 +139,7 @@ lazy rule MarkingInteger extends Marking {
 	to
 		m : SAN!MarkingInteger
 		(
-			value <- tm.value.evaluate(TMDLEX!Assignment.allInstances())
+			value <- tm.value.evaluate(TMDLEX!Assignment.allInstances()->asSequence())
 		)
 }
 
@@ -443,7 +443,7 @@ rule ExpressionMarking(tes : SANT!ExpressionMarking, iContext : Integer) {
 			i.setContext(iContext);	
 		}
 
-		seg.place <- thisModule.mapPlaceExpansion->get(tes.place)->get(tes.index.exp.evaluate(TMDLCO!Assignment.allInstances()));
+		seg.place <- thisModule.mapPlaceExpansion->get(tes.place)->get(tes.index.exp.evaluate(TMDLCO!Assignment.allInstances()->asSequence()));
 		Sequence{seg};
 	}
 }

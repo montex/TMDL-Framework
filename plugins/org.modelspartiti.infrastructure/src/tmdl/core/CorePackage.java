@@ -120,7 +120,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPLATE_MODEL___CONCRETIZE__ELIST = 0;
+	int TEMPLATE_MODEL___CONCRETIZE__LIST = 0;
 
 	/**
 	 * The number of operations of the '<em>Template Model</em>' class.
@@ -533,14 +533,14 @@ public interface CorePackage extends EPackage {
 	EClass getTemplateModel();
 
 	/**
-	 * Returns the meta object for the '{@link tmdl.core.TemplateModel#concretize(org.eclipse.emf.common.util.EList) <em>Concretize</em>}' operation.
+	 * Returns the meta object for the '{@link tmdl.core.TemplateModel#concretize(java.util.List) <em>Concretize</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Concretize</em>' operation.
-	 * @see tmdl.core.TemplateModel#concretize(org.eclipse.emf.common.util.EList)
+	 * @see tmdl.core.TemplateModel#concretize(java.util.List)
 	 * @generated
 	 */
-	EOperation getTemplateModel__Concretize__EList();
+	EOperation getTemplateModel__Concretize__List();
 
 	/**
 	 * Returns the meta object for class '{@link tmdl.core.Parameter <em>Parameter</em>}'.
@@ -787,7 +787,7 @@ public interface CorePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TEMPLATE_MODEL___CONCRETIZE__ELIST = eINSTANCE.getTemplateModel__Concretize__EList();
+		EOperation TEMPLATE_MODEL___CONCRETIZE__LIST = eINSTANCE.getTemplateModel__Concretize__List();
 
 		/**
 		 * The meta object literal for the '{@link tmdl.core.impl.ParameterImpl <em>Parameter</em>}' class.

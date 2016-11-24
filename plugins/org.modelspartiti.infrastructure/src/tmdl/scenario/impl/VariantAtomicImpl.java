@@ -4,6 +4,7 @@ package tmdl.scenario.impl;
 
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -117,7 +118,7 @@ public class VariantAtomicImpl extends VariantImpl implements VariantAtomic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getLabels() {
+	public List<String> getLabels() {
 		if (labels == null) {
 			labels = new EDataTypeUniqueEList<String>(String.class, this, ScenarioPackage.VARIANT_ATOMIC__LABELS);
 		}

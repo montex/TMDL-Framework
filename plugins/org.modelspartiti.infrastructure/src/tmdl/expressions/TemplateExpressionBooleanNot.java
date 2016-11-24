@@ -2,8 +2,7 @@
  */
 package tmdl.expressions;
 
-import org.eclipse.emf.common.util.EList;
-
+import java.util.List;
 import tmdl.core.Assignment;
 
 /**
@@ -24,6 +23,6 @@ public interface TemplateExpressionBooleanNot extends TemplateExpressionBooleanU
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='not exp.evaluate(assignments)'"
 	 * @generated
 	 */
-	boolean evaluate(EList<Assignment> assignments);
+	boolean evaluate(List<Assignment> assignments);
 
 } // TemplateExpressionBooleanNot
