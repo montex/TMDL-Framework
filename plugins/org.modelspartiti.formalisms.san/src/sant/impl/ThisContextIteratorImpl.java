@@ -3,14 +3,11 @@
 package sant.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.List;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import sant.SANTPackage;
 import sant.ThisContextIterator;
 import tmdl.core.Assignment;
@@ -53,12 +50,10 @@ public class ThisContextIteratorImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int evaluate(EList<Assignment> assignments) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return iCurrentContext;
 	}
 
 	/**
@@ -74,10 +69,15 @@ public class ThisContextIteratorImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public int evaluate() {
-		return iCurrentContext;
+		try {
+			return (Integer)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
 	}
 
 	/**
