@@ -11,6 +11,8 @@
 -- Leonardo Montecchi 	lmontecchi@unifi.it                          --
 -----------------------------------------------------------------------
 
+-- @atlcompiler emftvm
+
 -- @nsURI SAN=http://www.modelspartiti.org/templates/san/san
 -- @nsURI SANT=http://www.modelspartiti.org/templates/san/sant
 -- @nsURI TMDLCO=http://www.modelspartiti.org/infrastructure/tmdl/core
@@ -49,8 +51,9 @@ rule ModelRoot {
 						->collect(tia | thisModule.InputArc(tia))
 						->union(template.arcs->select(a | a.oclIsTypeOf(SANT!OutputArc))
 						->collect(toa | thisModule.OutputArc(toa)))->flatten();
-		model.gates <- model.gates->union(template.gates->select(g | g.oclIsTypeOf(SANT!OutputGateTemplate))
-										->collect(ogt | thisModule.OutputGateTemplate(ogt))->flatten());
+		model.gates <- model.getGates()
+						->union(template.gates->select(g | g.oclIsTypeOf(SANT!OutputGateTemplate))
+						->collect(ogt | thisModule.OutputGateTemplate(ogt))->flatten());
 		model.initialization <- template.initialization->collect(e | thisModule.Expression(e));
 	}
 }
@@ -83,13 +86,13 @@ rule ExpandPlace(tp : SANT!Place) {
 			places <- places.including(tmpPlace);
 			mapping <- mapping->including(1, tmpPlace);
 		}else{
-			for(i in tp.getMultiplicity()) {
+			for(i in tp.getMultiplicityValues()) {
 				if(tp.oclIsTypeOf(SANT!NormalPlace)) {
 					tmpPlace <- thisModule.CreateNormalPlace(tp);
 				}else{
 					tmpPlace <- thisModule.CreateExtendedPlace(tp);
 				}
-				tmpPlace.name <- tmpPlace.name + i;
+				tmpPlace.name <- tp.name + i.toString();
 				places <- places.including(tmpPlace);
 				mapping <- mapping->including(i, tmpPlace);
 			}
@@ -139,7 +142,7 @@ lazy rule MarkingInteger extends Marking {
 	to
 		m : SAN!MarkingInteger
 		(
-			value <- tm.value.evaluate(TMDLEX!Assignment.allInstances())
+			value <- tm.value.evaluate(TMDLCO!Assignment.allInstances()->asSequence())
 		)
 }
 
@@ -219,7 +222,7 @@ rule Case {
 			ID <- tc.ID.evaluate(TMDLCO!Assignment.allInstances())
 		)
 	do {
-		c.p <- thisModule.ExpressionWithContext(tc.p, c.ID);	
+		c.p <- thisModule.ExpressionWithContext(tc.p, c.getID());	
 	}
 }
 
@@ -235,6 +238,7 @@ rule CasesSpecification(cs : SANT!CasesSpecification) {
 		}else{ if(cs.oclIsTypeOf(SANT!CasesSpecificationParametric)) {
 			casesList <- thisModule.CasesSpecificationParametric(cs);
 		}}}
+
 		casesList;
 	}
 }
@@ -257,20 +261,33 @@ rule CasesSpecificationProbabilityArray(cs : SANT!CasesSpecificationProbabilityA
 	using {
 		casesList : Sequence(SAN!Case) = Sequence{};
 		tmpCase : SAN!Case = OclUndefined;
+		tmpExpression : SAN!Expression = OclUndefined;
 		i : Integer = 0;
 		pSet : Sequence(Real) = TMDLCO!AssignmentArray.allInstances()->select(a | a.parameter = cs.pValues)->first().values;
 	}
 	do {
 		for(prob in pSet) {
-			tmpCase <- SAN!Case.newInstance();
-			i <- i+1;
-			tmpCase.ID <- i;
-			tmpCase.p <- SAN!Expression.newInstance();
-			tmpCase.p.segments <- Sequence{SAN!ExpressionText.newInstance()};
-			tmpCase.p.segments->first().text <- prob.toString();
-			casesList <- casesList.append(tmpCase);
+			i <- i + 1;
+			casesList <- casesList.append(thisModule.CaseFromProbability(i, prob));
 		}
 		casesList;
+	}
+}
+
+rule CaseFromProbability(id : Integer, p : Real) {
+	to
+		c : SAN!Case (
+			ID <- id,
+			p <- exp
+		),
+		exp : SAN!Expression (
+			segments <- Sequence{seg}
+		),
+		seg : SAN!ExpressionText (
+			text <- p.toString()	
+		)
+	do {
+		c;	
 	}
 }
 
@@ -361,12 +378,12 @@ rule OutputGateTemplate(ogt : SANT!OutputGateTemplate) {
 		gates : Sequence(SAN!OutputGate) = Sequence{};
 	}
 	do {
-		for(c in act.cases) {
+		for(c in act.getCases()) {
 			tmpOG <- SAN!OutputGate.newInstance();
-			tmpOG.name <- ogt.name + c.ID;
+			tmpOG.name <- ogt.name + c.getID().toString();
 			tmpOG.places <- ogt.places->collect(tp | thisModule.mapPlaceExpansion.get(tp)->getValues())->flatten();
 			tmpOG.activityCase <- c;
-			tmpOG.function <- thisModule.ExpressionWithContext(ogt.function, c.ID);
+			tmpOG.function <- thisModule.ExpressionWithContext(ogt.function, c.getID());
 			gates <- gates.append(tmpOG);
 		}
 		gates;
@@ -375,22 +392,30 @@ rule OutputGateTemplate(ogt : SANT!OutputGateTemplate) {
 
 --Expressions
 rule Expression(te : SANT!Expression) {
-	using {
-		exp : SAN!Expression = OclUndefined;	
-	}	
 	do {
-		exp <- thisModule.ExpressionWithContext(te, 1);
-		exp;
+		thisModule.ExpressionWithContext(te, 1);
 	}
 }
 
 rule ExpressionWithContext(te : SANT!Expression, iContext : Integer) {
 	using {
-		exp : SAN!Expression = SAN!Expression.newInstance();	
+		seg : Sequence(SAN!ExpressionSegment) = Sequence{};
 	}	
 	do {
-		exp.segments <- te.segments->collect(s | thisModule.ExpressionSegment(s,iContext))->flatten();
-		exp;
+		for(s in te.segments) {
+			seg <- seg->union(thisModule.ExpressionSegment(s,iContext));	
+		}
+		thisModule.BuildExpressionFromSegments(seg);
+	}
+}
+
+rule BuildExpressionFromSegments(seg : Sequence(SAN!ExpressionSegment)) {
+	to 
+		exp : SAN!Expression (
+			segments <- seg
+		)
+	do {
+		exp;	
 	}
 }
 
@@ -417,9 +442,7 @@ rule ExpressionSegment(tes : SANT!ExpressionSegment, iContext : Integer) {
 			segments <- thisModule.ExpressionIfThenElse(tes, iContext);
 		}else{ if(tes.oclIsTypeOf(SANT!ExpressionLoop)) {
 			segments <- thisModule.ExpressionLoop(tes, iContext);
-		}else{ if(tes.oclIsTypeOf(SANT!ExpressionContext)) {
-			segments <- thisModule.ExpressionContext(tes, iContext);
-		}}}}}}}}}}
+		}}}}}}}}}
 		segments;
 	}
 }
@@ -544,15 +567,15 @@ rule ExpressionLoop(tes : SANT!ExpressionLoop, iContext : Integer) {
 	}
 }
 
-rule ExpressionContext(tes : SANT!ExpressionContext, iContext : Integer) {
-	using {
-		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
-	}
-	do {
-		seg.text <- iContext.toString();
-		Sequence{seg};
-	}
-}
+--rule ExpressionContext(tes : SANT!ExpressionContext, iContext : Integer) {
+--	using {
+--		seg : SAN!ExpressionText = SAN!ExpressionText.newInstance();
+--	}
+--	do {
+--		seg.text <- iContext.toString();
+--		Sequence{seg};
+--	}
+--}
 
 --Distributions
 abstract rule Distribution {
@@ -755,8 +778,8 @@ helper context SANT!Place def: isRegularPlace() : Boolean =
 		false
 	endif;
 
-helper context SANT!Place def: getMultiplicity() : Set(Integer) =
-	self.multiplicity.listValues(TMDLCO!Assignment.allInstances().asSequence());
+helper context SANT!Place def: getMultiplicityValues() : Set(Integer) =
+	self.multiplicity.listValues(TMDLCO!Assignment.allInstances()->asSequence());
 
 helper context Integer def: getSequenceFromOne() : Sequence(Integer) = 
 	if self = 1 then Sequence{1}
