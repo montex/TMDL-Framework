@@ -10,10 +10,10 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.NormalPlace#getMarking <em>Marking</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getNormalPlace()
  * @model

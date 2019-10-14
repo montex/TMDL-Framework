@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Gate#getFunction <em>Function</em>}</li>
  *   <li>{@link san.Gate#getPlaces <em>Places</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getGate()
  * @model abstract="true"

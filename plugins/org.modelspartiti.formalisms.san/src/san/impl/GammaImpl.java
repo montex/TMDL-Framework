@@ -20,11 +20,11 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.GammaImpl#getAlpha <em>Alpha</em>}</li>
  *   <li>{@link san.impl.GammaImpl#getBeta <em>Beta</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

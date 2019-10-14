@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Uniform#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link san.Uniform#getUpperBound <em>Upper Bound</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getUniform()
  * @model

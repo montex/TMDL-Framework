@@ -157,8 +157,8 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createGlobalVariableAdapter();
 			}
 			@Override
-			public Adapter caseMarkingVariableSimple(MarkingVariableSimple object) {
-				return createMarkingVariableSimpleAdapter();
+			public Adapter caseMarkingGlobalVariableSimple(MarkingGlobalVariableSimple object) {
+				return createMarkingGlobalVariableSimpleAdapter();
 			}
 			@Override
 			public Adapter caseExponential(Exponential object) {
@@ -249,8 +249,8 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createMarkingStringAdapter();
 			}
 			@Override
-			public Adapter caseMarkingVariableExtended(MarkingVariableExtended object) {
-				return createMarkingVariableExtendedAdapter();
+			public Adapter caseMarkingGlobalVariableExtended(MarkingGlobalVariableExtended object) {
+				return createMarkingGlobalVariableExtendedAdapter();
 			}
 			@Override
 			public Adapter caseConcreteModel(ConcreteModel object) {
@@ -585,16 +585,16 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingVariableSimple <em>Marking Variable Simple</em>}'.
+	 * Creates a new adapter for an object of class '{@link san.MarkingGlobalVariableSimple <em>Marking Global Variable Simple</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see san.MarkingVariableSimple
+	 * @see san.MarkingGlobalVariableSimple
 	 * @generated
 	 */
-	public Adapter createMarkingVariableSimpleAdapter() {
+	public Adapter createMarkingGlobalVariableSimpleAdapter() {
 		return null;
 	}
 
@@ -907,16 +907,16 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingVariableExtended <em>Marking Variable Extended</em>}'.
+	 * Creates a new adapter for an object of class '{@link san.MarkingGlobalVariableExtended <em>Marking Global Variable Extended</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see san.MarkingVariableExtended
+	 * @see san.MarkingGlobalVariableExtended
 	 * @generated
 	 */
-	public Adapter createMarkingVariableExtendedAdapter() {
+	public Adapter createMarkingGlobalVariableExtendedAdapter() {
 		return null;
 	}
 

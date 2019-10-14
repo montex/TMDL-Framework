@@ -15,10 +15,10 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.ExpressionTextImpl#getText <em>Text</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -13,8 +13,6 @@ import san.SANPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Marking</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

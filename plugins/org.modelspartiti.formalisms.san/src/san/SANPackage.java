@@ -538,7 +538,7 @@ public interface SANPackage extends EPackage {
 	int OUTPUT_GATE__PLACES = GATE__PLACES;
 
 	/**
-	 * The feature id for the '<em><b>Activity Case</b></em>' reference.
+	 * The feature id for the '<em><b>Activity Case</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -611,7 +611,7 @@ public interface SANPackage extends EPackage {
 	int INPUT_GATE__PREDICATE = GATE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Activity</b></em>' reference.
+	 * The feature id for the '<em><b>Activity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1128,14 +1128,14 @@ public interface SANPackage extends EPackage {
 	int GLOBAL_VARIABLE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.MarkingVariableSimpleImpl <em>Marking Variable Simple</em>}' class.
+	 * The meta object id for the '{@link san.impl.MarkingGlobalVariableSimpleImpl <em>Marking Global Variable Simple</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingVariableSimpleImpl
-	 * @see san.impl.SANPackageImpl#getMarkingVariableSimple()
+	 * @see san.impl.MarkingGlobalVariableSimpleImpl
+	 * @see san.impl.SANPackageImpl#getMarkingGlobalVariableSimple()
 	 * @generated
 	 */
-	int MARKING_VARIABLE_SIMPLE = 22;
+	int MARKING_GLOBAL_VARIABLE_SIMPLE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -1144,25 +1144,25 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_SIMPLE__VARIABLE = MARKING_SIMPLE_FEATURE_COUNT + 0;
+	int MARKING_GLOBAL_VARIABLE_SIMPLE__VARIABLE = MARKING_SIMPLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Marking Variable Simple</em>' class.
+	 * The number of structural features of the '<em>Marking Global Variable Simple</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_SIMPLE_FEATURE_COUNT = MARKING_SIMPLE_FEATURE_COUNT + 1;
+	int MARKING_GLOBAL_VARIABLE_SIMPLE_FEATURE_COUNT = MARKING_SIMPLE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Marking Variable Simple</em>' class.
+	 * The number of operations of the '<em>Marking Global Variable Simple</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_SIMPLE_OPERATION_COUNT = MARKING_SIMPLE_OPERATION_COUNT + 0;
+	int MARKING_GLOBAL_VARIABLE_SIMPLE_OPERATION_COUNT = MARKING_SIMPLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.impl.ExponentialImpl <em>Exponential</em>}' class.
@@ -2067,14 +2067,14 @@ public interface SANPackage extends EPackage {
 	int MARKING_STRING_OPERATION_COUNT = MARKING_EXTENDED_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.MarkingVariableExtendedImpl <em>Marking Variable Extended</em>}' class.
+	 * The meta object id for the '{@link san.impl.MarkingGlobalVariableExtendedImpl <em>Marking Global Variable Extended</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingVariableExtendedImpl
-	 * @see san.impl.SANPackageImpl#getMarkingVariableExtended()
+	 * @see san.impl.MarkingGlobalVariableExtendedImpl
+	 * @see san.impl.SANPackageImpl#getMarkingGlobalVariableExtended()
 	 * @generated
 	 */
-	int MARKING_VARIABLE_EXTENDED = 45;
+	int MARKING_GLOBAL_VARIABLE_EXTENDED = 45;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -2083,25 +2083,25 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_EXTENDED__VARIABLE = MARKING_EXTENDED_FEATURE_COUNT + 0;
+	int MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE = MARKING_EXTENDED_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Marking Variable Extended</em>' class.
+	 * The number of structural features of the '<em>Marking Global Variable Extended</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_EXTENDED_FEATURE_COUNT = MARKING_EXTENDED_FEATURE_COUNT + 1;
+	int MARKING_GLOBAL_VARIABLE_EXTENDED_FEATURE_COUNT = MARKING_EXTENDED_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Marking Variable Extended</em>' class.
+	 * The number of operations of the '<em>Marking Global Variable Extended</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_EXTENDED_OPERATION_COUNT = MARKING_EXTENDED_OPERATION_COUNT + 0;
+	int MARKING_GLOBAL_VARIABLE_EXTENDED_OPERATION_COUNT = MARKING_EXTENDED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.VariableType <em>Variable Type</em>}' enum.
@@ -2422,10 +2422,10 @@ public interface SANPackage extends EPackage {
 	EClass getOutputGate();
 
 	/**
-	 * Returns the meta object for the reference '{@link san.OutputGate#getActivityCase <em>Activity Case</em>}'.
+	 * Returns the meta object for the reference list '{@link san.OutputGate#getActivityCase <em>Activity Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Activity Case</em>'.
+	 * @return the meta object for the reference list '<em>Activity Case</em>'.
 	 * @see san.OutputGate#getActivityCase()
 	 * @see #getOutputGate()
 	 * @generated
@@ -2454,10 +2454,10 @@ public interface SANPackage extends EPackage {
 	EReference getInputGate_Predicate();
 
 	/**
-	 * Returns the meta object for the reference '{@link san.InputGate#getActivity <em>Activity</em>}'.
+	 * Returns the meta object for the reference list '{@link san.InputGate#getActivity <em>Activity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Activity</em>'.
+	 * @return the meta object for the reference list '<em>Activity</em>'.
 	 * @see san.InputGate#getActivity()
 	 * @see #getInputGate()
 	 * @generated
@@ -2674,25 +2674,25 @@ public interface SANPackage extends EPackage {
 	EAttribute getGlobalVariable_Type();
 
 	/**
-	 * Returns the meta object for class '{@link san.MarkingVariableSimple <em>Marking Variable Simple</em>}'.
+	 * Returns the meta object for class '{@link san.MarkingGlobalVariableSimple <em>Marking Global Variable Simple</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking Variable Simple</em>'.
-	 * @see san.MarkingVariableSimple
+	 * @return the meta object for class '<em>Marking Global Variable Simple</em>'.
+	 * @see san.MarkingGlobalVariableSimple
 	 * @generated
 	 */
-	EClass getMarkingVariableSimple();
+	EClass getMarkingGlobalVariableSimple();
 
 	/**
-	 * Returns the meta object for the reference '{@link san.MarkingVariableSimple#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link san.MarkingGlobalVariableSimple#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see san.MarkingVariableSimple#getVariable()
-	 * @see #getMarkingVariableSimple()
+	 * @see san.MarkingGlobalVariableSimple#getVariable()
+	 * @see #getMarkingGlobalVariableSimple()
 	 * @generated
 	 */
-	EReference getMarkingVariableSimple_Variable();
+	EReference getMarkingGlobalVariableSimple_Variable();
 
 	/**
 	 * Returns the meta object for class '{@link san.Exponential <em>Exponential</em>}'.
@@ -3311,25 +3311,25 @@ public interface SANPackage extends EPackage {
 	EAttribute getMarkingString_Value();
 
 	/**
-	 * Returns the meta object for class '{@link san.MarkingVariableExtended <em>Marking Variable Extended</em>}'.
+	 * Returns the meta object for class '{@link san.MarkingGlobalVariableExtended <em>Marking Global Variable Extended</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking Variable Extended</em>'.
-	 * @see san.MarkingVariableExtended
+	 * @return the meta object for class '<em>Marking Global Variable Extended</em>'.
+	 * @see san.MarkingGlobalVariableExtended
 	 * @generated
 	 */
-	EClass getMarkingVariableExtended();
+	EClass getMarkingGlobalVariableExtended();
 
 	/**
-	 * Returns the meta object for the reference '{@link san.MarkingVariableExtended#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link san.MarkingGlobalVariableExtended#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see san.MarkingVariableExtended#getVariable()
-	 * @see #getMarkingVariableExtended()
+	 * @see san.MarkingGlobalVariableExtended#getVariable()
+	 * @see #getMarkingGlobalVariableExtended()
 	 * @generated
 	 */
-	EReference getMarkingVariableExtended_Variable();
+	EReference getMarkingGlobalVariableExtended_Variable();
 
 	/**
 	 * Returns the meta object for enum '{@link san.VariableType <em>Variable Type</em>}'.
@@ -3622,7 +3622,7 @@ public interface SANPackage extends EPackage {
 		EClass OUTPUT_GATE = eINSTANCE.getOutputGate();
 
 		/**
-		 * The meta object literal for the '<em><b>Activity Case</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Activity Case</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3648,7 +3648,7 @@ public interface SANPackage extends EPackage {
 		EReference INPUT_GATE__PREDICATE = eINSTANCE.getInputGate_Predicate();
 
 		/**
-		 * The meta object literal for the '<em><b>Activity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Activity</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3838,14 +3838,14 @@ public interface SANPackage extends EPackage {
 		EAttribute GLOBAL_VARIABLE__TYPE = eINSTANCE.getGlobalVariable_Type();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.MarkingVariableSimpleImpl <em>Marking Variable Simple</em>}' class.
+		 * The meta object literal for the '{@link san.impl.MarkingGlobalVariableSimpleImpl <em>Marking Global Variable Simple</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingVariableSimpleImpl
-		 * @see san.impl.SANPackageImpl#getMarkingVariableSimple()
+		 * @see san.impl.MarkingGlobalVariableSimpleImpl
+		 * @see san.impl.SANPackageImpl#getMarkingGlobalVariableSimple()
 		 * @generated
 		 */
-		EClass MARKING_VARIABLE_SIMPLE = eINSTANCE.getMarkingVariableSimple();
+		EClass MARKING_GLOBAL_VARIABLE_SIMPLE = eINSTANCE.getMarkingGlobalVariableSimple();
 
 		/**
 		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
@@ -3853,7 +3853,7 @@ public interface SANPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MARKING_VARIABLE_SIMPLE__VARIABLE = eINSTANCE.getMarkingVariableSimple_Variable();
+		EReference MARKING_GLOBAL_VARIABLE_SIMPLE__VARIABLE = eINSTANCE.getMarkingGlobalVariableSimple_Variable();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.ExponentialImpl <em>Exponential</em>}' class.
@@ -4364,14 +4364,14 @@ public interface SANPackage extends EPackage {
 		EAttribute MARKING_STRING__VALUE = eINSTANCE.getMarkingString_Value();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.MarkingVariableExtendedImpl <em>Marking Variable Extended</em>}' class.
+		 * The meta object literal for the '{@link san.impl.MarkingGlobalVariableExtendedImpl <em>Marking Global Variable Extended</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingVariableExtendedImpl
-		 * @see san.impl.SANPackageImpl#getMarkingVariableExtended()
+		 * @see san.impl.MarkingGlobalVariableExtendedImpl
+		 * @see san.impl.SANPackageImpl#getMarkingGlobalVariableExtended()
 		 * @generated
 		 */
-		EClass MARKING_VARIABLE_EXTENDED = eINSTANCE.getMarkingVariableExtended();
+		EClass MARKING_GLOBAL_VARIABLE_EXTENDED = eINSTANCE.getMarkingGlobalVariableExtended();
 
 		/**
 		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
@@ -4379,7 +4379,7 @@ public interface SANPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MARKING_VARIABLE_EXTENDED__VARIABLE = eINSTANCE.getMarkingVariableExtended_Variable();
+		EReference MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE = eINSTANCE.getMarkingGlobalVariableExtended_Variable();
 
 		/**
 		 * The meta object literal for the '{@link san.VariableType <em>Variable Type</em>}' enum.

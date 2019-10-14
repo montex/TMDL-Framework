@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Beta#getAlpha1 <em>Alpha1</em>}</li>
  *   <li>{@link san.Beta#getBeta1 <em>Beta1</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getBeta()
  * @model

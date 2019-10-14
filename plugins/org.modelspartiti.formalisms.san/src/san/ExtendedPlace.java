@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.ExtendedPlace#getMarking <em>Marking</em>}</li>
  *   <li>{@link san.ExtendedPlace#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getExtendedPlace()
  * @model

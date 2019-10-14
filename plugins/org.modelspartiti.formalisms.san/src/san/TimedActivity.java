@@ -10,12 +10,12 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.TimedActivity#getTimeDistribution <em>Time Distribution</em>}</li>
  *   <li>{@link san.TimedActivity#getActivation <em>Activation</em>}</li>
  *   <li>{@link san.TimedActivity#getReactivation <em>Reactivation</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getTimedActivity()
  * @model

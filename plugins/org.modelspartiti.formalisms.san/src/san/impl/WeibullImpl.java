@@ -20,11 +20,11 @@ import san.Weibull;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.WeibullImpl#getAlpha <em>Alpha</em>}</li>
  *   <li>{@link san.impl.WeibullImpl#getBeta <em>Beta</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

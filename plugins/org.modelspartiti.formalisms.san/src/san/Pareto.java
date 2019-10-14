@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Pareto#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link san.Pareto#getShape <em>Shape</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getPareto()
  * @model

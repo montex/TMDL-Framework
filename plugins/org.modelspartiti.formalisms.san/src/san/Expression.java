@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Expression#getSegments <em>Segments</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getExpression()
  * @model

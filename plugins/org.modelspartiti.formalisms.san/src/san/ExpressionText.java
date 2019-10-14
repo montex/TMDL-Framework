@@ -10,10 +10,10 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.ExpressionText#getText <em>Text</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getExpressionText()
  * @model

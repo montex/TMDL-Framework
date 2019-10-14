@@ -10,10 +10,10 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.ExpressionVariable#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getExpressionVariable()
  * @model

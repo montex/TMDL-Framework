@@ -10,12 +10,12 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Triangular#getMin <em>Min</em>}</li>
  *   <li>{@link san.Triangular#getMiddle <em>Middle</em>}</li>
  *   <li>{@link san.Triangular#getMax <em>Max</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getTriangular()
  * @model

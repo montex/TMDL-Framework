@@ -11,8 +11,6 @@ import san.SANPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Marking Extended</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

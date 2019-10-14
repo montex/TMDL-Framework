@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Weibull#getAlpha <em>Alpha</em>}</li>
  *   <li>{@link san.Weibull#getBeta <em>Beta</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getWeibull()
  * @model

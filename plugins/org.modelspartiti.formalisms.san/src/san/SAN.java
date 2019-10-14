@@ -12,6 +12,7 @@ import tmdl.core.ConcreteModel;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.SAN#getPlaces <em>Places</em>}</li>
  *   <li>{@link san.SAN#getName <em>Name</em>}</li>
@@ -21,7 +22,6 @@ import tmdl.core.ConcreteModel;
  *   <li>{@link san.SAN#getGates <em>Gates</em>}</li>
  *   <li>{@link san.SAN#getInitialization <em>Initialization</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getSAN()
  * @model

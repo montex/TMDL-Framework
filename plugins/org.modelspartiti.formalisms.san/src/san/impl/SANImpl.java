@@ -29,6 +29,7 @@ import tmdl.core.TemplateModel;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.SANImpl#getPlaces <em>Places</em>}</li>
  *   <li>{@link san.impl.SANImpl#getName <em>Name</em>}</li>
@@ -38,7 +39,6 @@ import tmdl.core.TemplateModel;
  *   <li>{@link san.impl.SANImpl#getGates <em>Gates</em>}</li>
  *   <li>{@link san.impl.SANImpl#getInitialization <em>Initialization</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -418,7 +418,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

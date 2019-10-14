@@ -71,7 +71,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.EXPRESSION_VARIABLE: return createExpressionVariable();
 			case SANPackage.MARKING_INTEGER: return createMarkingInteger();
 			case SANPackage.GLOBAL_VARIABLE: return createGlobalVariable();
-			case SANPackage.MARKING_VARIABLE_SIMPLE: return createMarkingVariableSimple();
+			case SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE: return createMarkingGlobalVariableSimple();
 			case SANPackage.EXPONENTIAL: return createExponential();
 			case SANPackage.NORMAL: return createNormal();
 			case SANPackage.GAMMA: return createGamma();
@@ -92,7 +92,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.NORMAL_PLACE: return createNormalPlace();
 			case SANPackage.EXTENDED_PLACE: return createExtendedPlace();
 			case SANPackage.MARKING_STRING: return createMarkingString();
-			case SANPackage.MARKING_VARIABLE_EXTENDED: return createMarkingVariableExtended();
+			case SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED: return createMarkingGlobalVariableExtended();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -281,9 +281,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingVariableSimple createMarkingVariableSimple() {
-		MarkingVariableSimpleImpl markingVariableSimple = new MarkingVariableSimpleImpl();
-		return markingVariableSimple;
+	public MarkingGlobalVariableSimple createMarkingGlobalVariableSimple() {
+		MarkingGlobalVariableSimpleImpl markingGlobalVariableSimple = new MarkingGlobalVariableSimpleImpl();
+		return markingGlobalVariableSimple;
 	}
 
 	/**
@@ -491,9 +491,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingVariableExtended createMarkingVariableExtended() {
-		MarkingVariableExtendedImpl markingVariableExtended = new MarkingVariableExtendedImpl();
-		return markingVariableExtended;
+	public MarkingGlobalVariableExtended createMarkingGlobalVariableExtended() {
+		MarkingGlobalVariableExtendedImpl markingGlobalVariableExtended = new MarkingGlobalVariableExtendedImpl();
+		return markingGlobalVariableExtended;
 	}
 
 	/**

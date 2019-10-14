@@ -10,10 +10,10 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Geometric#getP <em>P</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getGeometric()
  * @model

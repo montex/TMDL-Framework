@@ -10,10 +10,10 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.MarkingInteger#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getMarkingInteger()
  * @model

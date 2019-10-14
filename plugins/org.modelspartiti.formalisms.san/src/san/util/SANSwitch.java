@@ -48,7 +48,7 @@ public class SANSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -220,11 +220,11 @@ public class SANSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANPackage.MARKING_VARIABLE_SIMPLE: {
-				MarkingVariableSimple markingVariableSimple = (MarkingVariableSimple)theEObject;
-				T result = caseMarkingVariableSimple(markingVariableSimple);
-				if (result == null) result = caseMarkingSimple(markingVariableSimple);
-				if (result == null) result = caseMarking(markingVariableSimple);
+			case SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE: {
+				MarkingGlobalVariableSimple markingGlobalVariableSimple = (MarkingGlobalVariableSimple)theEObject;
+				T result = caseMarkingGlobalVariableSimple(markingGlobalVariableSimple);
+				if (result == null) result = caseMarkingSimple(markingGlobalVariableSimple);
+				if (result == null) result = caseMarking(markingGlobalVariableSimple);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -384,11 +384,11 @@ public class SANSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANPackage.MARKING_VARIABLE_EXTENDED: {
-				MarkingVariableExtended markingVariableExtended = (MarkingVariableExtended)theEObject;
-				T result = caseMarkingVariableExtended(markingVariableExtended);
-				if (result == null) result = caseMarkingExtended(markingVariableExtended);
-				if (result == null) result = caseMarking(markingVariableExtended);
+			case SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED: {
+				MarkingGlobalVariableExtended markingGlobalVariableExtended = (MarkingGlobalVariableExtended)theEObject;
+				T result = caseMarkingGlobalVariableExtended(markingGlobalVariableExtended);
+				if (result == null) result = caseMarkingExtended(markingGlobalVariableExtended);
+				if (result == null) result = caseMarking(markingGlobalVariableExtended);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -727,17 +727,17 @@ public class SANSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marking Variable Simple</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Marking Global Variable Simple</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marking Variable Simple</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Marking Global Variable Simple</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMarkingVariableSimple(MarkingVariableSimple object) {
+	public T caseMarkingGlobalVariableSimple(MarkingGlobalVariableSimple object) {
 		return null;
 	}
 
@@ -1072,17 +1072,17 @@ public class SANSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marking Variable Extended</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Marking Global Variable Extended</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marking Variable Extended</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Marking Global Variable Extended</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMarkingVariableExtended(MarkingVariableExtended object) {
+	public T caseMarkingGlobalVariableExtended(MarkingGlobalVariableExtended object) {
 		return null;
 	}
 

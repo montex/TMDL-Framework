@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Lognormal#getMu <em>Mu</em>}</li>
  *   <li>{@link san.Lognormal#getAlphaSquared <em>Alpha Squared</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getLognormal()
  * @model

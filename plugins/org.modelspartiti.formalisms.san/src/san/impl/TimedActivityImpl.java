@@ -21,12 +21,12 @@ import san.TimedActivity;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.TimedActivityImpl#getTimeDistribution <em>Time Distribution</em>}</li>
  *   <li>{@link san.impl.TimedActivityImpl#getActivation <em>Activation</em>}</li>
  *   <li>{@link san.impl.TimedActivityImpl#getReactivation <em>Reactivation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

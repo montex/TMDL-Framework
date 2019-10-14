@@ -2,14 +2,17 @@
  */
 package san.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import san.Activity;
 import san.Expression;
 import san.InputGate;
@@ -21,11 +24,11 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.InputGateImpl#getPredicate <em>Predicate</em>}</li>
  *   <li>{@link san.impl.InputGateImpl#getActivity <em>Activity</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -41,14 +44,14 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	protected Expression predicate;
 
 	/**
-	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference.
+	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getActivity()
 	 * @generated
 	 * @ordered
 	 */
-	protected Activity activity;
+	protected EList<Activity> activity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,37 +120,11 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activity getActivity() {
-		if (activity != null && activity.eIsProxy()) {
-			InternalEObject oldActivity = (InternalEObject)activity;
-			activity = (Activity)eResolveProxy(oldActivity);
-			if (activity != oldActivity) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.INPUT_GATE__ACTIVITY, oldActivity, activity));
-			}
+	public EList<Activity> getActivity() {
+		if (activity == null) {
+			activity = new EObjectResolvingEList<Activity>(Activity.class, this, SANPackage.INPUT_GATE__ACTIVITY);
 		}
 		return activity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activity basicGetActivity() {
-		return activity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setActivity(Activity newActivity) {
-		Activity oldActivity = activity;
-		activity = newActivity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.INPUT_GATE__ACTIVITY, oldActivity, activity));
 	}
 
 	/**
@@ -175,8 +152,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 			case SANPackage.INPUT_GATE__PREDICATE:
 				return getPredicate();
 			case SANPackage.INPUT_GATE__ACTIVITY:
-				if (resolve) return getActivity();
-				return basicGetActivity();
+				return getActivity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -186,6 +162,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -193,7 +170,8 @@ public class InputGateImpl extends GateImpl implements InputGate {
 				setPredicate((Expression)newValue);
 				return;
 			case SANPackage.INPUT_GATE__ACTIVITY:
-				setActivity((Activity)newValue);
+				getActivity().clear();
+				getActivity().addAll((Collection<? extends Activity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -211,7 +189,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 				setPredicate((Expression)null);
 				return;
 			case SANPackage.INPUT_GATE__ACTIVITY:
-				setActivity((Activity)null);
+				getActivity().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -228,7 +206,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 			case SANPackage.INPUT_GATE__PREDICATE:
 				return predicate != null;
 			case SANPackage.INPUT_GATE__ACTIVITY:
-				return activity != null;
+				return activity != null && !activity.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -21,11 +21,11 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.ExtendedPlaceImpl#getMarking <em>Marking</em>}</li>
  *   <li>{@link san.impl.ExtendedPlaceImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -234,7 +234,7 @@ public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");
 		result.append(type);
 		result.append(')');

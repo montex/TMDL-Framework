@@ -17,10 +17,10 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.ExpressionMarkingImpl#getPlace <em>Place</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
