@@ -18,8 +18,8 @@
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/char"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="san.ecore#//ExtendedPlaceType">
-      <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/int"/>
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/short"/>
+      <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/int"/>
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/float"/>
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/double"/>
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/char"/>
@@ -92,8 +92,8 @@
     <genClasses ecoreClass="san.ecore#//GlobalVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//GlobalVariable/type"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingVariableSimple">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingVariableSimple/variable"/>
+    <genClasses ecoreClass="san.ecore#//MarkingGlobalVariableSimple">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingGlobalVariableSimple/variable"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//Exponential">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Exponential/rate"/>
@@ -173,8 +173,8 @@
     <genClasses ecoreClass="san.ecore#//MarkingString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingString/value"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingVariableExtended">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingVariableExtended/variable"/>
+    <genClasses ecoreClass="san.ecore#//MarkingGlobalVariableExtended">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingGlobalVariableExtended/variable"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
