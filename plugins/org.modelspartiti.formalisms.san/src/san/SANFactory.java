@@ -325,7 +325,7 @@ public interface SANFactory extends EFactory {
 	 * @return a new object of class '<em>Extended Place</em>'.
 	 * @generated
 	 */
-	ExtendedPlace createExtendedPlace();
+	<T extends ExtendedTypeDefinition> ExtendedPlace<T> createExtendedPlace();
 
 	/**
 	 * Returns a new object of class '<em>Marking String</em>'.
@@ -344,6 +344,24 @@ public interface SANFactory extends EFactory {
 	 * @generated
 	 */
 	MarkingGlobalVariableExtended createMarkingGlobalVariableExtended();
+
+	/**
+	 * Returns a new object of class '<em>Array Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Array Type</em>'.
+	 * @generated
+	 */
+	ArrayType createArrayType();
+
+	/**
+	 * Returns a new object of class '<em>Normal Extended Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Normal Extended Type</em>'.
+	 * @generated
+	 */
+	NormalExtendedType createNormalExtendedType();
 
 	/**
 	 * Returns the package supported by this factory.

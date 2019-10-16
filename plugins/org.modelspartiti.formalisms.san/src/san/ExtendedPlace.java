@@ -20,7 +20,7 @@ package san;
  * @model
  * @generated
  */
-public interface ExtendedPlace extends Place {
+public interface ExtendedPlace<T extends ExtendedTypeDefinition> extends Place {
 	/**
 	 * Returns the value of the '<em><b>Marking</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -48,33 +48,29 @@ public interface ExtendedPlace extends Place {
 	void setMarking(MarkingExtended value);
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The default value is <code>"double"</code>.
-	 * The literals are from the enumeration {@link san.ExtendedPlaceType}.
+	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see san.ExtendedPlaceType
-	 * @see #setType(ExtendedPlaceType)
+	 * @return the value of the '<em>Type</em>' reference.
+	 * @see #setType(ExtendedTypeDefinition)
 	 * @see san.SANPackage#getExtendedPlace_Type()
-	 * @model default="double" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	ExtendedPlaceType getType();
+	T getType();
 
 	/**
-	 * Sets the value of the '{@link san.ExtendedPlace#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link san.ExtendedPlace#getType <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see san.ExtendedPlaceType
+	 * @param value the new value of the '<em>Type</em>' reference.
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(ExtendedPlaceType value);
+	void setType(T value);
 
 } // ExtendedPlace

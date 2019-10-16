@@ -17,6 +17,8 @@
         eType="#//Gate" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="initialization" upperBound="-1"
         eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeDefinition" upperBound="-1"
+        eType="#//ExtendedTypeDefinition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Place" abstract="true" eSuperTypes="#//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//NamedElement">
@@ -228,14 +230,18 @@
         eType="#//MarkingSimple" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExtendedPlace" eSuperTypes="#//Place">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//ExtendedTypeDefinition"/>
+    </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"
         eType="#//MarkingExtended" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//ExtendedPlaceType"
-        defaultValueLiteral="double"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1">
+      <eGenericType eTypeParameter="#//ExtendedPlace/T"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MarkingString" eSuperTypes="#//MarkingExtended">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="0" derived="true"/>
+        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MarkingGlobalVariableExtended" eSuperTypes="#//MarkingExtended">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
@@ -248,4 +254,12 @@
     <eLiterals name="double" value="4"/>
     <eLiterals name="char" value="6"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedTypeDefinition" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//ExtendedPlaceType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArrayType" eSuperTypes="#//ExtendedTypeDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NormalExtendedType" eSuperTypes="#//ExtendedTypeDefinition"/>
 </ecore:EPackage>

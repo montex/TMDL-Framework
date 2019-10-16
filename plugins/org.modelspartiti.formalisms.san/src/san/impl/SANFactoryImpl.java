@@ -93,6 +93,8 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.EXTENDED_PLACE: return createExtendedPlace();
 			case SANPackage.MARKING_STRING: return createMarkingString();
 			case SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED: return createMarkingGlobalVariableExtended();
+			case SANPackage.ARRAY_TYPE: return createArrayType();
+			case SANPackage.NORMAL_EXTENDED_TYPE: return createNormalExtendedType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -471,8 +473,8 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExtendedPlace createExtendedPlace() {
-		ExtendedPlaceImpl extendedPlace = new ExtendedPlaceImpl();
+	public <T extends ExtendedTypeDefinition> ExtendedPlace<T> createExtendedPlace() {
+		ExtendedPlaceImpl<T> extendedPlace = new ExtendedPlaceImpl<T>();
 		return extendedPlace;
 	}
 
@@ -494,6 +496,26 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public MarkingGlobalVariableExtended createMarkingGlobalVariableExtended() {
 		MarkingGlobalVariableExtendedImpl markingGlobalVariableExtended = new MarkingGlobalVariableExtendedImpl();
 		return markingGlobalVariableExtended;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArrayType createArrayType() {
+		ArrayTypeImpl arrayType = new ArrayTypeImpl();
+		return arrayType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NormalExtendedType createNormalExtendedType() {
+		NormalExtendedTypeImpl normalExtendedType = new NormalExtendedTypeImpl();
+		return normalExtendedType;
 	}
 
 	/**

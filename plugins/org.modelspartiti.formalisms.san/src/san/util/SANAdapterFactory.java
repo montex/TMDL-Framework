@@ -241,7 +241,7 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createNormalPlaceAdapter();
 			}
 			@Override
-			public Adapter caseExtendedPlace(ExtendedPlace object) {
+			public <T extends ExtendedTypeDefinition> Adapter caseExtendedPlace(ExtendedPlace<T> object) {
 				return createExtendedPlaceAdapter();
 			}
 			@Override
@@ -251,6 +251,18 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMarkingGlobalVariableExtended(MarkingGlobalVariableExtended object) {
 				return createMarkingGlobalVariableExtendedAdapter();
+			}
+			@Override
+			public Adapter caseExtendedTypeDefinition(ExtendedTypeDefinition object) {
+				return createExtendedTypeDefinitionAdapter();
+			}
+			@Override
+			public Adapter caseArrayType(ArrayType object) {
+				return createArrayTypeAdapter();
+			}
+			@Override
+			public Adapter caseNormalExtendedType(NormalExtendedType object) {
+				return createNormalExtendedTypeAdapter();
 			}
 			@Override
 			public Adapter caseConcreteModel(ConcreteModel object) {
@@ -917,6 +929,48 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMarkingGlobalVariableExtendedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.ExtendedTypeDefinition <em>Extended Type Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.ExtendedTypeDefinition
+	 * @generated
+	 */
+	public Adapter createExtendedTypeDefinitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.ArrayType <em>Array Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.ArrayType
+	 * @generated
+	 */
+	public Adapter createArrayTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.NormalExtendedType <em>Normal Extended Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.NormalExtendedType
+	 * @generated
+	 */
+	public Adapter createNormalExtendedTypeAdapter() {
 		return null;
 	}
 

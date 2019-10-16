@@ -133,13 +133,22 @@ public interface SANPackage extends EPackage {
 	int SAN__INITIALIZATION = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Type Definition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAN__TYPE_DEFINITION = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>SAN</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SAN_FEATURE_COUNT = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 7;
+	int SAN_FEATURE_COUNT = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Templatize</em>' operation.
@@ -2003,7 +2012,7 @@ public interface SANPackage extends EPackage {
 	int EXTENDED_PLACE__MARKING = PLACE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2104,6 +2113,135 @@ public interface SANPackage extends EPackage {
 	int MARKING_GLOBAL_VARIABLE_EXTENDED_OPERATION_COUNT = MARKING_EXTENDED_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.ExtendedTypeDefinitionImpl <em>Extended Type Definition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.ExtendedTypeDefinitionImpl
+	 * @see san.impl.SANPackageImpl#getExtendedTypeDefinition()
+	 * @generated
+	 */
+	int EXTENDED_TYPE_DEFINITION = 46;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENDED_TYPE_DEFINITION__TYPE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Extended Type Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENDED_TYPE_DEFINITION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Extended Type Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENDED_TYPE_DEFINITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.ArrayTypeImpl <em>Array Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.ArrayTypeImpl
+	 * @see san.impl.SANPackageImpl#getArrayType()
+	 * @generated
+	 */
+	int ARRAY_TYPE = 47;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__TYPE = EXTENDED_TYPE_DEFINITION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__NAME = EXTENDED_TYPE_DEFINITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE__SIZE = EXTENDED_TYPE_DEFINITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Array Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE_FEATURE_COUNT = EXTENDED_TYPE_DEFINITION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Array Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_TYPE_OPERATION_COUNT = EXTENDED_TYPE_DEFINITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.NormalExtendedTypeImpl <em>Normal Extended Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.NormalExtendedTypeImpl
+	 * @see san.impl.SANPackageImpl#getNormalExtendedType()
+	 * @generated
+	 */
+	int NORMAL_EXTENDED_TYPE = 48;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NORMAL_EXTENDED_TYPE__TYPE = EXTENDED_TYPE_DEFINITION__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Normal Extended Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NORMAL_EXTENDED_TYPE_FEATURE_COUNT = EXTENDED_TYPE_DEFINITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Normal Extended Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NORMAL_EXTENDED_TYPE_OPERATION_COUNT = EXTENDED_TYPE_DEFINITION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link san.VariableType <em>Variable Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2111,7 +2249,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getVariableType()
 	 * @generated
 	 */
-	int VARIABLE_TYPE = 46;
+	int VARIABLE_TYPE = 49;
 
 	/**
 	 * The meta object id for the '{@link san.ExtendedPlaceType <em>Extended Place Type</em>}' enum.
@@ -2121,7 +2259,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExtendedPlaceType()
 	 * @generated
 	 */
-	int EXTENDED_PLACE_TYPE = 47;
+	int EXTENDED_PLACE_TYPE = 50;
 
 	/**
 	 * The meta object id for the '<em>Code Fragment</em>' data type.
@@ -2131,7 +2269,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getCodeFragment()
 	 * @generated
 	 */
-	int CODE_FRAGMENT = 48;
+	int CODE_FRAGMENT = 51;
 
 
 	/**
@@ -2220,6 +2358,17 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSAN_Initialization();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link san.SAN#getTypeDefinition <em>Type Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Type Definition</em>'.
+	 * @see san.SAN#getTypeDefinition()
+	 * @see #getSAN()
+	 * @generated
+	 */
+	EReference getSAN_TypeDefinition();
 
 	/**
 	 * Returns the meta object for class '{@link san.Place <em>Place</em>}'.
@@ -3279,15 +3428,15 @@ public interface SANPackage extends EPackage {
 	EReference getExtendedPlace_Marking();
 
 	/**
-	 * Returns the meta object for the attribute '{@link san.ExtendedPlace#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link san.ExtendedPlace#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @return the meta object for the reference '<em>Type</em>'.
 	 * @see san.ExtendedPlace#getType()
 	 * @see #getExtendedPlace()
 	 * @generated
 	 */
-	EAttribute getExtendedPlace_Type();
+	EReference getExtendedPlace_Type();
 
 	/**
 	 * Returns the meta object for class '{@link san.MarkingString <em>Marking String</em>}'.
@@ -3330,6 +3479,69 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMarkingGlobalVariableExtended_Variable();
+
+	/**
+	 * Returns the meta object for class '{@link san.ExtendedTypeDefinition <em>Extended Type Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Extended Type Definition</em>'.
+	 * @see san.ExtendedTypeDefinition
+	 * @generated
+	 */
+	EClass getExtendedTypeDefinition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.ExtendedTypeDefinition#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see san.ExtendedTypeDefinition#getType()
+	 * @see #getExtendedTypeDefinition()
+	 * @generated
+	 */
+	EAttribute getExtendedTypeDefinition_Type();
+
+	/**
+	 * Returns the meta object for class '{@link san.ArrayType <em>Array Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Array Type</em>'.
+	 * @see san.ArrayType
+	 * @generated
+	 */
+	EClass getArrayType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.ArrayType#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see san.ArrayType#getName()
+	 * @see #getArrayType()
+	 * @generated
+	 */
+	EAttribute getArrayType_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.ArrayType#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see san.ArrayType#getSize()
+	 * @see #getArrayType()
+	 * @generated
+	 */
+	EAttribute getArrayType_Size();
+
+	/**
+	 * Returns the meta object for class '{@link san.NormalExtendedType <em>Normal Extended Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Normal Extended Type</em>'.
+	 * @see san.NormalExtendedType
+	 * @generated
+	 */
+	EClass getNormalExtendedType();
 
 	/**
 	 * Returns the meta object for enum '{@link san.VariableType <em>Variable Type</em>}'.
@@ -3450,6 +3662,14 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SAN__INITIALIZATION = eINSTANCE.getSAN_Initialization();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Definition</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SAN__TYPE_DEFINITION = eINSTANCE.getSAN_TypeDefinition();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.PlaceImpl <em>Place</em>}' class.
@@ -4338,12 +4558,12 @@ public interface SANPackage extends EPackage {
 		EReference EXTENDED_PLACE__MARKING = eINSTANCE.getExtendedPlace_Marking();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENDED_PLACE__TYPE = eINSTANCE.getExtendedPlace_Type();
+		EReference EXTENDED_PLACE__TYPE = eINSTANCE.getExtendedPlace_Type();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.MarkingStringImpl <em>Marking String</em>}' class.
@@ -4380,6 +4600,60 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE = eINSTANCE.getMarkingGlobalVariableExtended_Variable();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.ExtendedTypeDefinitionImpl <em>Extended Type Definition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.ExtendedTypeDefinitionImpl
+		 * @see san.impl.SANPackageImpl#getExtendedTypeDefinition()
+		 * @generated
+		 */
+		EClass EXTENDED_TYPE_DEFINITION = eINSTANCE.getExtendedTypeDefinition();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXTENDED_TYPE_DEFINITION__TYPE = eINSTANCE.getExtendedTypeDefinition_Type();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.ArrayTypeImpl <em>Array Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.ArrayTypeImpl
+		 * @see san.impl.SANPackageImpl#getArrayType()
+		 * @generated
+		 */
+		EClass ARRAY_TYPE = eINSTANCE.getArrayType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARRAY_TYPE__NAME = eINSTANCE.getArrayType_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARRAY_TYPE__SIZE = eINSTANCE.getArrayType_Size();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.NormalExtendedTypeImpl <em>Normal Extended Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.NormalExtendedTypeImpl
+		 * @see san.impl.SANPackageImpl#getNormalExtendedType()
+		 * @generated
+		 */
+		EClass NORMAL_EXTENDED_TYPE = eINSTANCE.getNormalExtendedType();
 
 		/**
 		 * The meta object literal for the '{@link san.VariableType <em>Variable Type</em>}' enum.

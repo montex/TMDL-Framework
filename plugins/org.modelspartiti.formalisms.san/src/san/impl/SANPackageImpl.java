@@ -6,13 +6,16 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import san.Activity;
 import san.Arc;
+import san.ArrayType;
 import san.Beta;
 import san.Binomial;
 import san.Case;
@@ -28,6 +31,7 @@ import san.ExpressionText;
 import san.ExpressionVariable;
 import san.ExtendedPlace;
 import san.ExtendedPlaceType;
+import san.ExtendedTypeDefinition;
 import san.Gamma;
 import san.Gate;
 import san.Geometric;
@@ -48,6 +52,7 @@ import san.MarkingString;
 import san.NamedElement;
 import san.NegativeBinomial;
 import san.Normal;
+import san.NormalExtendedType;
 import san.NormalPlace;
 import san.OutputArc;
 import san.OutputGate;
@@ -399,6 +404,27 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass extendedTypeDefinitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arrayTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass normalExtendedTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum variableTypeEEnum = null;
 
 	/**
@@ -552,6 +578,15 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 */
 	public EReference getSAN_Initialization() {
 		return (EReference)sanEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSAN_TypeDefinition() {
+		return (EReference)sanEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1459,8 +1494,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExtendedPlace_Type() {
-		return (EAttribute)extendedPlaceEClass.getEStructuralFeatures().get(1);
+	public EReference getExtendedPlace_Type() {
+		return (EReference)extendedPlaceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1497,6 +1532,60 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 */
 	public EReference getMarkingGlobalVariableExtended_Variable() {
 		return (EReference)markingGlobalVariableExtendedEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExtendedTypeDefinition() {
+		return extendedTypeDefinitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExtendedTypeDefinition_Type() {
+		return (EAttribute)extendedTypeDefinitionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArrayType() {
+		return arrayTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArrayType_Name() {
+		return (EAttribute)arrayTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArrayType_Size() {
+		return (EAttribute)arrayTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNormalExtendedType() {
+		return normalExtendedTypeEClass;
 	}
 
 	/**
@@ -1562,6 +1651,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		createEReference(sanEClass, SAN__ARCS);
 		createEReference(sanEClass, SAN__GATES);
 		createEReference(sanEClass, SAN__INITIALIZATION);
+		createEReference(sanEClass, SAN__TYPE_DEFINITION);
 
 		placeEClass = createEClass(PLACE);
 
@@ -1705,13 +1795,22 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		extendedPlaceEClass = createEClass(EXTENDED_PLACE);
 		createEReference(extendedPlaceEClass, EXTENDED_PLACE__MARKING);
-		createEAttribute(extendedPlaceEClass, EXTENDED_PLACE__TYPE);
+		createEReference(extendedPlaceEClass, EXTENDED_PLACE__TYPE);
 
 		markingStringEClass = createEClass(MARKING_STRING);
 		createEAttribute(markingStringEClass, MARKING_STRING__VALUE);
 
 		markingGlobalVariableExtendedEClass = createEClass(MARKING_GLOBAL_VARIABLE_EXTENDED);
 		createEReference(markingGlobalVariableExtendedEClass, MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE);
+
+		extendedTypeDefinitionEClass = createEClass(EXTENDED_TYPE_DEFINITION);
+		createEAttribute(extendedTypeDefinitionEClass, EXTENDED_TYPE_DEFINITION__TYPE);
+
+		arrayTypeEClass = createEClass(ARRAY_TYPE);
+		createEAttribute(arrayTypeEClass, ARRAY_TYPE__NAME);
+		createEAttribute(arrayTypeEClass, ARRAY_TYPE__SIZE);
+
+		normalExtendedTypeEClass = createEClass(NORMAL_EXTENDED_TYPE);
 
 		// Create enums
 		variableTypeEEnum = createEEnum(VARIABLE_TYPE);
@@ -1748,8 +1847,11 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 
 		// Create type parameters
+		ETypeParameter extendedPlaceEClass_T = addETypeParameter(extendedPlaceEClass, "T");
 
 		// Set bounds for type parameters
+		EGenericType g1 = createEGenericType(this.getExtendedTypeDefinition());
+		extendedPlaceEClass_T.getEBounds().add(g1);
 
 		// Add supertypes to classes
 		sanEClass.getESuperTypes().add(theCorePackage.getConcreteModel());
@@ -1791,6 +1893,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		extendedPlaceEClass.getESuperTypes().add(this.getPlace());
 		markingStringEClass.getESuperTypes().add(this.getMarkingExtended());
 		markingGlobalVariableExtendedEClass.getESuperTypes().add(this.getMarkingExtended());
+		arrayTypeEClass.getESuperTypes().add(this.getExtendedTypeDefinition());
+		normalExtendedTypeEClass.getESuperTypes().add(this.getExtendedTypeDefinition());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(sanEClass, san.SAN.class, "SAN", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1804,6 +1908,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEReference(getSAN_Arcs(), this.getArc(), null, "arcs", null, 0, -1, san.SAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSAN_Gates(), this.getGate(), null, "gates", null, 0, -1, san.SAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSAN_Initialization(), this.getExpression(), null, "initialization", null, 0, -1, san.SAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSAN_TypeDefinition(), this.getExtendedTypeDefinition(), null, "typeDefinition", null, 0, -1, san.SAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placeEClass, Place.class, "Place", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1948,13 +2053,23 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		initEClass(extendedPlaceEClass, ExtendedPlace.class, "ExtendedPlace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExtendedPlace_Marking(), this.getMarkingExtended(), null, "marking", null, 1, 1, ExtendedPlace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExtendedPlace_Type(), this.getExtendedPlaceType(), "type", "double", 1, 1, ExtendedPlace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(extendedPlaceEClass_T);
+		initEReference(getExtendedPlace_Type(), g1, null, "type", null, 1, 1, ExtendedPlace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(markingStringEClass, MarkingString.class, "MarkingString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMarkingString_Value(), ecorePackage.getEString(), "value", "0", 1, 1, MarkingString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(markingGlobalVariableExtendedEClass, MarkingGlobalVariableExtended.class, "MarkingGlobalVariableExtended", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMarkingGlobalVariableExtended_Variable(), this.getGlobalVariable(), null, "variable", null, 1, 1, MarkingGlobalVariableExtended.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(extendedTypeDefinitionEClass, ExtendedTypeDefinition.class, "ExtendedTypeDefinition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExtendedTypeDefinition_Type(), this.getExtendedPlaceType(), "type", null, 1, 1, ExtendedTypeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arrayTypeEClass, ArrayType.class, "ArrayType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArrayType_Name(), ecorePackage.getEString(), "name", null, 1, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArrayType_Size(), ecorePackage.getEInt(), "size", null, 1, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(normalExtendedTypeEClass, NormalExtendedType.class, "NormalExtendedType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(variableTypeEEnum, VariableType.class, "VariableType");

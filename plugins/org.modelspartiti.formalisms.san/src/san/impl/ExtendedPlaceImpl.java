@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import san.ExtendedPlace;
-import san.ExtendedPlaceType;
+import san.ExtendedTypeDefinition;
 import san.MarkingExtended;
 import san.SANPackage;
 
@@ -29,7 +29,7 @@ import san.SANPackage;
  *
  * @generated
  */
-public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
+public class ExtendedPlaceImpl<T extends ExtendedTypeDefinition> extends PlaceImpl implements ExtendedPlace<T> {
 	/**
 	 * The cached value of the '{@link #getMarking() <em>Marking</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -41,24 +41,14 @@ public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
 	protected MarkingExtended marking;
 
 	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ExtendedPlaceType TYPE_EDEFAULT = ExtendedPlaceType.DOUBLE;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected ExtendedPlaceType type = TYPE_EDEFAULT;
+	protected T type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,7 +117,16 @@ public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExtendedPlaceType getType() {
+	@SuppressWarnings("unchecked")
+	public T getType() {
+		if (type != null && type.eIsProxy()) {
+			InternalEObject oldType = (InternalEObject)type;
+			type = (T)eResolveProxy(oldType);
+			if (type != oldType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.EXTENDED_PLACE__TYPE, oldType, type));
+			}
+		}
 		return type;
 	}
 
@@ -136,9 +135,18 @@ public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(ExtendedPlaceType newType) {
-		ExtendedPlaceType oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
+	public T basicGetType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(T newType) {
+		T oldType = type;
+		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.EXTENDED_PLACE__TYPE, oldType, type));
 	}
@@ -168,7 +176,8 @@ public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
 			case SANPackage.EXTENDED_PLACE__MARKING:
 				return getMarking();
 			case SANPackage.EXTENDED_PLACE__TYPE:
-				return getType();
+				if (resolve) return getType();
+				return basicGetType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -178,6 +187,7 @@ public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -185,7 +195,7 @@ public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
 				setMarking((MarkingExtended)newValue);
 				return;
 			case SANPackage.EXTENDED_PLACE__TYPE:
-				setType((ExtendedPlaceType)newValue);
+				setType((T)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -203,7 +213,7 @@ public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
 				setMarking((MarkingExtended)null);
 				return;
 			case SANPackage.EXTENDED_PLACE__TYPE:
-				setType(TYPE_EDEFAULT);
+				setType((T)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -220,25 +230,9 @@ public class ExtendedPlaceImpl extends PlaceImpl implements ExtendedPlace {
 			case SANPackage.EXTENDED_PLACE__MARKING:
 				return marking != null;
 			case SANPackage.EXTENDED_PLACE__TYPE:
-				return type != TYPE_EDEFAULT;
+				return type != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (type: ");
-		result.append(type);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ExtendedPlaceImpl

@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import san.Activity;
 import san.Arc;
 import san.Expression;
+import san.ExtendedTypeDefinition;
 import san.Gate;
 import san.GlobalVariable;
 import san.Place;
@@ -38,6 +39,7 @@ import tmdl.core.TemplateModel;
  *   <li>{@link san.impl.SANImpl#getArcs <em>Arcs</em>}</li>
  *   <li>{@link san.impl.SANImpl#getGates <em>Gates</em>}</li>
  *   <li>{@link san.impl.SANImpl#getInitialization <em>Initialization</em>}</li>
+ *   <li>{@link san.impl.SANImpl#getTypeDefinition <em>Type Definition</em>}</li>
  * </ul>
  *
  * @generated
@@ -122,6 +124,16 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * @ordered
 	 */
 	protected EList<Expression> initialization;
+
+	/**
+	 * The cached value of the '{@link #getTypeDefinition() <em>Type Definition</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeDefinition()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ExtendedTypeDefinition> typeDefinition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,6 +252,18 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ExtendedTypeDefinition> getTypeDefinition() {
+		if (typeDefinition == null) {
+			typeDefinition = new EObjectContainmentEList<ExtendedTypeDefinition>(ExtendedTypeDefinition.class, this, SANPackage.SAN__TYPE_DEFINITION);
+		}
+		return typeDefinition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TemplateModel templatize() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -266,6 +290,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return ((InternalEList<?>)getGates()).basicRemove(otherEnd, msgs);
 			case SANPackage.SAN__INITIALIZATION:
 				return ((InternalEList<?>)getInitialization()).basicRemove(otherEnd, msgs);
+			case SANPackage.SAN__TYPE_DEFINITION:
+				return ((InternalEList<?>)getTypeDefinition()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -292,6 +318,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return getGates();
 			case SANPackage.SAN__INITIALIZATION:
 				return getInitialization();
+			case SANPackage.SAN__TYPE_DEFINITION:
+				return getTypeDefinition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -332,6 +360,10 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				getInitialization().clear();
 				getInitialization().addAll((Collection<? extends Expression>)newValue);
 				return;
+			case SANPackage.SAN__TYPE_DEFINITION:
+				getTypeDefinition().clear();
+				getTypeDefinition().addAll((Collection<? extends ExtendedTypeDefinition>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -365,6 +397,9 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 			case SANPackage.SAN__INITIALIZATION:
 				getInitialization().clear();
 				return;
+			case SANPackage.SAN__TYPE_DEFINITION:
+				getTypeDefinition().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -391,6 +426,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return gates != null && !gates.isEmpty();
 			case SANPackage.SAN__INITIALIZATION:
 				return initialization != null && !initialization.isEmpty();
+			case SANPackage.SAN__TYPE_DEFINITION:
+				return typeDefinition != null && !typeDefinition.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
