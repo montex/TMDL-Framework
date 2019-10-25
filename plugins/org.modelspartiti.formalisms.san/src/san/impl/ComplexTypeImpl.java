@@ -9,40 +9,40 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import san.GlobalVariable;
-import san.MarkingGlobalVariableExtended;
+import san.ComplexType;
+import san.CustomTypeDefinition;
 import san.SANPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Marking Global Variable Extended</b></em>'.
+ * An implementation of the model object '<em><b>Complex Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link san.impl.MarkingGlobalVariableExtendedImpl#getVariable <em>Variable</em>}</li>
+ *   <li>{@link san.impl.ComplexTypeImpl#getDefinition <em>Definition</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MarkingGlobalVariableExtendedImpl extends MarkingExtendedImpl implements MarkingGlobalVariableExtended {
+public class ComplexTypeImpl extends TypeImpl implements ComplexType {
 	/**
-	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
+	 * The cached value of the '{@link #getDefinition() <em>Definition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVariable()
+	 * @see #getDefinition()
 	 * @generated
 	 * @ordered
 	 */
-	protected GlobalVariable variable;
+	protected CustomTypeDefinition definition;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MarkingGlobalVariableExtendedImpl() {
+	protected ComplexTypeImpl() {
 		super();
 	}
 
@@ -53,7 +53,7 @@ public class MarkingGlobalVariableExtendedImpl extends MarkingExtendedImpl imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.MARKING_GLOBAL_VARIABLE_EXTENDED;
+		return SANPackage.Literals.COMPLEX_TYPE;
 	}
 
 	/**
@@ -61,16 +61,16 @@ public class MarkingGlobalVariableExtendedImpl extends MarkingExtendedImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalVariable getVariable() {
-		if (variable != null && variable.eIsProxy()) {
-			InternalEObject oldVariable = (InternalEObject)variable;
-			variable = (GlobalVariable)eResolveProxy(oldVariable);
-			if (variable != oldVariable) {
+	public CustomTypeDefinition getDefinition() {
+		if (definition != null && definition.eIsProxy()) {
+			InternalEObject oldDefinition = (InternalEObject)definition;
+			definition = (CustomTypeDefinition)eResolveProxy(oldDefinition);
+			if (definition != oldDefinition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.COMPLEX_TYPE__DEFINITION, oldDefinition, definition));
 			}
 		}
-		return variable;
+		return definition;
 	}
 
 	/**
@@ -78,8 +78,8 @@ public class MarkingGlobalVariableExtendedImpl extends MarkingExtendedImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalVariable basicGetVariable() {
-		return variable;
+	public CustomTypeDefinition basicGetDefinition() {
+		return definition;
 	}
 
 	/**
@@ -87,11 +87,11 @@ public class MarkingGlobalVariableExtendedImpl extends MarkingExtendedImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVariable(GlobalVariable newVariable) {
-		GlobalVariable oldVariable = variable;
-		variable = newVariable;
+	public void setDefinition(CustomTypeDefinition newDefinition) {
+		CustomTypeDefinition oldDefinition = definition;
+		definition = newDefinition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.COMPLEX_TYPE__DEFINITION, oldDefinition, definition));
 	}
 
 	/**
@@ -102,9 +102,9 @@ public class MarkingGlobalVariableExtendedImpl extends MarkingExtendedImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE:
-				if (resolve) return getVariable();
-				return basicGetVariable();
+			case SANPackage.COMPLEX_TYPE__DEFINITION:
+				if (resolve) return getDefinition();
+				return basicGetDefinition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,8 +117,8 @@ public class MarkingGlobalVariableExtendedImpl extends MarkingExtendedImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE:
-				setVariable((GlobalVariable)newValue);
+			case SANPackage.COMPLEX_TYPE__DEFINITION:
+				setDefinition((CustomTypeDefinition)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,8 +132,8 @@ public class MarkingGlobalVariableExtendedImpl extends MarkingExtendedImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE:
-				setVariable((GlobalVariable)null);
+			case SANPackage.COMPLEX_TYPE__DEFINITION:
+				setDefinition((CustomTypeDefinition)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,10 +147,10 @@ public class MarkingGlobalVariableExtendedImpl extends MarkingExtendedImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED__VARIABLE:
-				return variable != null;
+			case SANPackage.COMPLEX_TYPE__DEFINITION:
+				return definition != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //MarkingGlobalVariableExtendedImpl
+} //ComplexTypeImpl

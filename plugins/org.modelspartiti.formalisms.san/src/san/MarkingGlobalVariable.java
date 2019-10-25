@@ -5,21 +5,21 @@ package san;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Marking Global Variable Simple</b></em>'.
+ * A representation of the model object '<em><b>Marking Global Variable</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link san.MarkingGlobalVariableSimple#getVariable <em>Variable</em>}</li>
+ *   <li>{@link san.MarkingGlobalVariable#getVariable <em>Variable</em>}</li>
  * </ul>
  *
- * @see san.SANPackage#getMarkingGlobalVariableSimple()
+ * @see san.SANPackage#getMarkingGlobalVariable()
  * @model
  * @generated
  */
-public interface MarkingGlobalVariableSimple extends MarkingSimple {
+public interface MarkingGlobalVariable extends Marking {
 	/**
 	 * Returns the value of the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -30,14 +30,14 @@ public interface MarkingGlobalVariableSimple extends MarkingSimple {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(GlobalVariable)
-	 * @see san.SANPackage#getMarkingGlobalVariableSimple_Variable()
+	 * @see san.SANPackage#getMarkingGlobalVariable_Variable()
 	 * @model required="true"
 	 * @generated
 	 */
 	GlobalVariable getVariable();
 
 	/**
-	 * Sets the value of the '{@link san.MarkingGlobalVariableSimple#getVariable <em>Variable</em>}' reference.
+	 * Sets the value of the '{@link san.MarkingGlobalVariable#getVariable <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Variable</em>' reference.
@@ -46,4 +46,4 @@ public interface MarkingGlobalVariableSimple extends MarkingSimple {
 	 */
 	void setVariable(GlobalVariable value);
 
-} // MarkingGlobalVariableSimple
+} // MarkingGlobalVariable

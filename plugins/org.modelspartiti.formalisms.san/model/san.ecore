@@ -2,6 +2,14 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="san" nsURI="http://www.modelspartiti.org/templates/san/san"
     nsPrefix="san">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="SAN" eSuperTypes="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/ConcreteModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="places" lowerBound="1"
         upperBound="-1" eType="#//Place" containment="true" eKeys="#//NamedElement/name"/>
@@ -14,13 +22,24 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="arcs" upperBound="-1" eType="#//Arc"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="gates" upperBound="-1"
-        eType="#//Gate" containment="true"/>
+        eType="#//Gate" containment="true" eKeys="#//NamedElement/name"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="initialization" upperBound="-1"
         eType="#//Expression" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="typeDefinition" upperBound="-1"
-        eType="#//ExtendedTypeDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customtype" upperBound="-1"
+        eType="#//CustomTypeDefinition" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Place" abstract="true" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isExtended" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="derivation" value="type.oclIsTypeOf(PrimitiveType) and type.oclAsType(PrimitiveType).type &lt;> ExtendedPlaceType::short"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"
+        eType="#//Marking" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cases" lowerBound="1" upperBound="-1"
         eType="#//Case" containment="true" eKeys="#//Case/ID"/>
@@ -104,10 +123,6 @@
         eType="#//GlobalVariable"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Marking" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MarkingInteger" eSuperTypes="#//MarkingSimple">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MarkingExtended" abstract="true" eSuperTypes="#//Marking"/>
   <eClassifiers xsi:type="ecore:EEnum" name="VariableType">
     <eLiterals name="short"/>
     <eLiterals name="int" value="1"/>
@@ -120,10 +135,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="GlobalVariable" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//VariableType"
         defaultValueLiteral="int"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MarkingGlobalVariableSimple" eSuperTypes="#//MarkingSimple">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
-        eType="#//GlobalVariable"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Exponential" eSuperTypes="#//Distribution">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rate" lowerBound="1" eType="#//Expression"
@@ -224,29 +235,6 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpressionSegment" abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MarkingSimple" abstract="true" eSuperTypes="#//Marking"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NormalPlace" eSuperTypes="#//Place">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"
-        eType="#//MarkingSimple" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExtendedPlace" eSuperTypes="#//Place">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="#//ExtendedTypeDefinition"/>
-    </eTypeParameters>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" lowerBound="1"
-        eType="#//MarkingExtended" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1">
-      <eGenericType eTypeParameter="#//ExtendedPlace/T"/>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MarkingString" eSuperTypes="#//MarkingExtended">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="0"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MarkingGlobalVariableExtended" eSuperTypes="#//MarkingExtended">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
-        eType="#//GlobalVariable"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ExtendedPlaceType">
     <eLiterals name="short"/>
     <eLiterals name="int" value="1"/>
@@ -254,12 +242,49 @@
     <eLiterals name="double" value="4"/>
     <eLiterals name="char" value="6"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExtendedTypeDefinition" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//ExtendedPlaceType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArrayType" eSuperTypes="#//ExtendedTypeDefinition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexType" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definition" lowerBound="1"
+        eType="#//CustomTypeDefinition"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NormalExtendedType" eSuperTypes="#//ExtendedTypeDefinition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomTypeDefinition" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomTypeArray" eSuperTypes="#//CustomTypeDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeArray" lowerBound="1"
+        eType="#//Type" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomTypeStruct" eSuperTypes="#//CustomTypeDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1" upperBound="-1"
+        eType="#//Field" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Field">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeStruct" lowerBound="1"
+        eType="#//Type" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingExtended" abstract="true" eSuperTypes="#//Marking"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingIntermediateNode" eSuperTypes="#//MarkingExtended">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intermediatenode" upperBound="-1"
+        eType="#//MarkingIntermediateNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definition" lowerBound="1"
+        eType="#//CustomTypeDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leafnode" upperBound="-1"
+        eType="#//MarkingLeafNode" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingLeafNode" eSuperTypes="#//MarkingExtended">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingSimple" eSuperTypes="#//Marking">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingGlobalVariable" eSuperTypes="#//Marking">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="#//GlobalVariable"/>
+  </eClassifiers>
 </ecore:EPackage>

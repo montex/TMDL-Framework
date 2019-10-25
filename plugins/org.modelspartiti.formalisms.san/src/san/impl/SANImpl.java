@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import san.Activity;
 import san.Arc;
+import san.CustomTypeDefinition;
 import san.Expression;
-import san.ExtendedTypeDefinition;
 import san.Gate;
 import san.GlobalVariable;
 import san.Place;
@@ -39,7 +39,7 @@ import tmdl.core.TemplateModel;
  *   <li>{@link san.impl.SANImpl#getArcs <em>Arcs</em>}</li>
  *   <li>{@link san.impl.SANImpl#getGates <em>Gates</em>}</li>
  *   <li>{@link san.impl.SANImpl#getInitialization <em>Initialization</em>}</li>
- *   <li>{@link san.impl.SANImpl#getTypeDefinition <em>Type Definition</em>}</li>
+ *   <li>{@link san.impl.SANImpl#getCustomtype <em>Customtype</em>}</li>
  * </ul>
  *
  * @generated
@@ -126,14 +126,14 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	protected EList<Expression> initialization;
 
 	/**
-	 * The cached value of the '{@link #getTypeDefinition() <em>Type Definition</em>}' containment reference list.
+	 * The cached value of the '{@link #getCustomtype() <em>Customtype</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypeDefinition()
+	 * @see #getCustomtype()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ExtendedTypeDefinition> typeDefinition;
+	protected EList<CustomTypeDefinition> customtype;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -252,11 +252,11 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ExtendedTypeDefinition> getTypeDefinition() {
-		if (typeDefinition == null) {
-			typeDefinition = new EObjectContainmentEList<ExtendedTypeDefinition>(ExtendedTypeDefinition.class, this, SANPackage.SAN__TYPE_DEFINITION);
+	public EList<CustomTypeDefinition> getCustomtype() {
+		if (customtype == null) {
+			customtype = new EObjectContainmentEList<CustomTypeDefinition>(CustomTypeDefinition.class, this, SANPackage.SAN__CUSTOMTYPE);
 		}
-		return typeDefinition;
+		return customtype;
 	}
 
 	/**
@@ -290,8 +290,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return ((InternalEList<?>)getGates()).basicRemove(otherEnd, msgs);
 			case SANPackage.SAN__INITIALIZATION:
 				return ((InternalEList<?>)getInitialization()).basicRemove(otherEnd, msgs);
-			case SANPackage.SAN__TYPE_DEFINITION:
-				return ((InternalEList<?>)getTypeDefinition()).basicRemove(otherEnd, msgs);
+			case SANPackage.SAN__CUSTOMTYPE:
+				return ((InternalEList<?>)getCustomtype()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -318,8 +318,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return getGates();
 			case SANPackage.SAN__INITIALIZATION:
 				return getInitialization();
-			case SANPackage.SAN__TYPE_DEFINITION:
-				return getTypeDefinition();
+			case SANPackage.SAN__CUSTOMTYPE:
+				return getCustomtype();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -360,9 +360,9 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				getInitialization().clear();
 				getInitialization().addAll((Collection<? extends Expression>)newValue);
 				return;
-			case SANPackage.SAN__TYPE_DEFINITION:
-				getTypeDefinition().clear();
-				getTypeDefinition().addAll((Collection<? extends ExtendedTypeDefinition>)newValue);
+			case SANPackage.SAN__CUSTOMTYPE:
+				getCustomtype().clear();
+				getCustomtype().addAll((Collection<? extends CustomTypeDefinition>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -397,8 +397,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 			case SANPackage.SAN__INITIALIZATION:
 				getInitialization().clear();
 				return;
-			case SANPackage.SAN__TYPE_DEFINITION:
-				getTypeDefinition().clear();
+			case SANPackage.SAN__CUSTOMTYPE:
+				getCustomtype().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -426,8 +426,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return gates != null && !gates.isEmpty();
 			case SANPackage.SAN__INITIALIZATION:
 				return initialization != null && !initialization.isEmpty();
-			case SANPackage.SAN__TYPE_DEFINITION:
-				return typeDefinition != null && !typeDefinition.isEmpty();
+			case SANPackage.SAN__CUSTOMTYPE:
+				return customtype != null && !customtype.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

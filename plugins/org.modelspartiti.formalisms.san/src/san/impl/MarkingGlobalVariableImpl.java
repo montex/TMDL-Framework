@@ -10,23 +10,23 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import san.GlobalVariable;
-import san.MarkingGlobalVariableSimple;
+import san.MarkingGlobalVariable;
 import san.SANPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Marking Global Variable Simple</b></em>'.
+ * An implementation of the model object '<em><b>Marking Global Variable</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link san.impl.MarkingGlobalVariableSimpleImpl#getVariable <em>Variable</em>}</li>
+ *   <li>{@link san.impl.MarkingGlobalVariableImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MarkingGlobalVariableSimpleImpl extends MarkingSimpleImpl implements MarkingGlobalVariableSimple {
+public class MarkingGlobalVariableImpl extends MarkingImpl implements MarkingGlobalVariable {
 	/**
 	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class MarkingGlobalVariableSimpleImpl extends MarkingSimpleImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MarkingGlobalVariableSimpleImpl() {
+	protected MarkingGlobalVariableImpl() {
 		super();
 	}
 
@@ -53,7 +53,7 @@ public class MarkingGlobalVariableSimpleImpl extends MarkingSimpleImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.MARKING_GLOBAL_VARIABLE_SIMPLE;
+		return SANPackage.Literals.MARKING_GLOBAL_VARIABLE;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class MarkingGlobalVariableSimpleImpl extends MarkingSimpleImpl implement
 			variable = (GlobalVariable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.MARKING_GLOBAL_VARIABLE__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -91,7 +91,7 @@ public class MarkingGlobalVariableSimpleImpl extends MarkingSimpleImpl implement
 		GlobalVariable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_GLOBAL_VARIABLE__VARIABLE, oldVariable, variable));
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class MarkingGlobalVariableSimpleImpl extends MarkingSimpleImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE__VARIABLE:
+			case SANPackage.MARKING_GLOBAL_VARIABLE__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
 		}
@@ -117,7 +117,7 @@ public class MarkingGlobalVariableSimpleImpl extends MarkingSimpleImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE__VARIABLE:
+			case SANPackage.MARKING_GLOBAL_VARIABLE__VARIABLE:
 				setVariable((GlobalVariable)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class MarkingGlobalVariableSimpleImpl extends MarkingSimpleImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE__VARIABLE:
+			case SANPackage.MARKING_GLOBAL_VARIABLE__VARIABLE:
 				setVariable((GlobalVariable)null);
 				return;
 		}
@@ -147,10 +147,10 @@ public class MarkingGlobalVariableSimpleImpl extends MarkingSimpleImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE__VARIABLE:
+			case SANPackage.MARKING_GLOBAL_VARIABLE__VARIABLE:
 				return variable != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //MarkingGlobalVariableSimpleImpl
+} //MarkingGlobalVariableImpl

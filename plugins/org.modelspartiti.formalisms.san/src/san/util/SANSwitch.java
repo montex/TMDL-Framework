@@ -23,7 +23,7 @@ import tmdl.core.ConcreteModel;
  * @see san.SANPackage
  * @generated
  */
-public class SANSwitch<T1> extends Switch<T1> {
+public class SANSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -65,71 +65,71 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	@Override
-	protected T1 doSwitch(int classifierID, EObject theEObject) {
+	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case SANPackage.SAN: {
 				SAN san = (SAN)theEObject;
-				T1 result = caseSAN(san);
+				T result = caseSAN(san);
 				if (result == null) result = caseConcreteModel(san);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.PLACE: {
 				Place place = (Place)theEObject;
-				T1 result = casePlace(place);
+				T result = casePlace(place);
 				if (result == null) result = caseNamedElement(place);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.ACTIVITY: {
 				Activity activity = (Activity)theEObject;
-				T1 result = caseActivity(activity);
+				T result = caseActivity(activity);
 				if (result == null) result = caseNamedElement(activity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.NAMED_ELEMENT: {
 				NamedElement namedElement = (NamedElement)theEObject;
-				T1 result = caseNamedElement(namedElement);
+				T result = caseNamedElement(namedElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.CASE: {
 				Case case_ = (Case)theEObject;
-				T1 result = caseCase(case_);
+				T result = caseCase(case_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.ARC: {
 				Arc arc = (Arc)theEObject;
-				T1 result = caseArc(arc);
+				T result = caseArc(arc);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.INPUT_ARC: {
 				InputArc inputArc = (InputArc)theEObject;
-				T1 result = caseInputArc(inputArc);
+				T result = caseInputArc(inputArc);
 				if (result == null) result = caseArc(inputArc);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.OUTPUT_ARC: {
 				OutputArc outputArc = (OutputArc)theEObject;
-				T1 result = caseOutputArc(outputArc);
+				T result = caseOutputArc(outputArc);
 				if (result == null) result = caseArc(outputArc);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.GATE: {
 				Gate gate = (Gate)theEObject;
-				T1 result = caseGate(gate);
+				T result = caseGate(gate);
 				if (result == null) result = caseNamedElement(gate);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.OUTPUT_GATE: {
 				OutputGate outputGate = (OutputGate)theEObject;
-				T1 result = caseOutputGate(outputGate);
+				T result = caseOutputGate(outputGate);
 				if (result == null) result = caseGate(outputGate);
 				if (result == null) result = caseNamedElement(outputGate);
 				if (result == null) result = defaultCase(theEObject);
@@ -137,7 +137,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 			}
 			case SANPackage.INPUT_GATE: {
 				InputGate inputGate = (InputGate)theEObject;
-				T1 result = caseInputGate(inputGate);
+				T result = caseInputGate(inputGate);
 				if (result == null) result = caseGate(inputGate);
 				if (result == null) result = caseNamedElement(inputGate);
 				if (result == null) result = defaultCase(theEObject);
@@ -145,7 +145,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 			}
 			case SANPackage.INSTANTANEOUS_ACTIVITY: {
 				InstantaneousActivity instantaneousActivity = (InstantaneousActivity)theEObject;
-				T1 result = caseInstantaneousActivity(instantaneousActivity);
+				T result = caseInstantaneousActivity(instantaneousActivity);
 				if (result == null) result = caseActivity(instantaneousActivity);
 				if (result == null) result = caseNamedElement(instantaneousActivity);
 				if (result == null) result = defaultCase(theEObject);
@@ -153,7 +153,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 			}
 			case SANPackage.TIMED_ACTIVITY: {
 				TimedActivity timedActivity = (TimedActivity)theEObject;
-				T1 result = caseTimedActivity(timedActivity);
+				T result = caseTimedActivity(timedActivity);
 				if (result == null) result = caseActivity(timedActivity);
 				if (result == null) result = caseNamedElement(timedActivity);
 				if (result == null) result = defaultCase(theEObject);
@@ -161,254 +161,255 @@ public class SANSwitch<T1> extends Switch<T1> {
 			}
 			case SANPackage.DISTRIBUTION: {
 				Distribution distribution = (Distribution)theEObject;
-				T1 result = caseDistribution(distribution);
+				T result = caseDistribution(distribution);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.EXPRESSION: {
 				Expression expression = (Expression)theEObject;
-				T1 result = caseExpression(expression);
+				T result = caseExpression(expression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.EXPRESSION_TEXT: {
 				ExpressionText expressionText = (ExpressionText)theEObject;
-				T1 result = caseExpressionText(expressionText);
+				T result = caseExpressionText(expressionText);
 				if (result == null) result = caseExpressionSegment(expressionText);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.EXPRESSION_MARKING: {
 				ExpressionMarking expressionMarking = (ExpressionMarking)theEObject;
-				T1 result = caseExpressionMarking(expressionMarking);
+				T result = caseExpressionMarking(expressionMarking);
 				if (result == null) result = caseExpressionSegment(expressionMarking);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.EXPRESSION_VARIABLE: {
 				ExpressionVariable expressionVariable = (ExpressionVariable)theEObject;
-				T1 result = caseExpressionVariable(expressionVariable);
+				T result = caseExpressionVariable(expressionVariable);
 				if (result == null) result = caseExpressionSegment(expressionVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.MARKING: {
 				Marking marking = (Marking)theEObject;
-				T1 result = caseMarking(marking);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.MARKING_INTEGER: {
-				MarkingInteger markingInteger = (MarkingInteger)theEObject;
-				T1 result = caseMarkingInteger(markingInteger);
-				if (result == null) result = caseMarkingSimple(markingInteger);
-				if (result == null) result = caseMarking(markingInteger);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.MARKING_EXTENDED: {
-				MarkingExtended markingExtended = (MarkingExtended)theEObject;
-				T1 result = caseMarkingExtended(markingExtended);
-				if (result == null) result = caseMarking(markingExtended);
+				T result = caseMarking(marking);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.GLOBAL_VARIABLE: {
 				GlobalVariable globalVariable = (GlobalVariable)theEObject;
-				T1 result = caseGlobalVariable(globalVariable);
+				T result = caseGlobalVariable(globalVariable);
 				if (result == null) result = caseNamedElement(globalVariable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE: {
-				MarkingGlobalVariableSimple markingGlobalVariableSimple = (MarkingGlobalVariableSimple)theEObject;
-				T1 result = caseMarkingGlobalVariableSimple(markingGlobalVariableSimple);
-				if (result == null) result = caseMarkingSimple(markingGlobalVariableSimple);
-				if (result == null) result = caseMarking(markingGlobalVariableSimple);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.EXPONENTIAL: {
 				Exponential exponential = (Exponential)theEObject;
-				T1 result = caseExponential(exponential);
+				T result = caseExponential(exponential);
 				if (result == null) result = caseDistribution(exponential);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.NORMAL: {
 				Normal normal = (Normal)theEObject;
-				T1 result = caseNormal(normal);
+				T result = caseNormal(normal);
 				if (result == null) result = caseDistribution(normal);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.GAMMA: {
 				Gamma gamma = (Gamma)theEObject;
-				T1 result = caseGamma(gamma);
+				T result = caseGamma(gamma);
 				if (result == null) result = caseDistribution(gamma);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.BINOMIAL: {
 				Binomial binomial = (Binomial)theEObject;
-				T1 result = caseBinomial(binomial);
+				T result = caseBinomial(binomial);
 				if (result == null) result = caseDistribution(binomial);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.DETERMINISTIC: {
 				Deterministic deterministic = (Deterministic)theEObject;
-				T1 result = caseDeterministic(deterministic);
+				T result = caseDeterministic(deterministic);
 				if (result == null) result = caseDistribution(deterministic);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.LOGNORMAL: {
 				Lognormal lognormal = (Lognormal)theEObject;
-				T1 result = caseLognormal(lognormal);
+				T result = caseLognormal(lognormal);
 				if (result == null) result = caseDistribution(lognormal);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.BETA: {
 				Beta beta = (Beta)theEObject;
-				T1 result = caseBeta(beta);
+				T result = caseBeta(beta);
 				if (result == null) result = caseDistribution(beta);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.NEGATIVE_BINOMIAL: {
 				NegativeBinomial negativeBinomial = (NegativeBinomial)theEObject;
-				T1 result = caseNegativeBinomial(negativeBinomial);
+				T result = caseNegativeBinomial(negativeBinomial);
 				if (result == null) result = caseDistribution(negativeBinomial);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.GEOMETRIC: {
 				Geometric geometric = (Geometric)theEObject;
-				T1 result = caseGeometric(geometric);
+				T result = caseGeometric(geometric);
 				if (result == null) result = caseDistribution(geometric);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.ERLANG: {
 				Erlang erlang = (Erlang)theEObject;
-				T1 result = caseErlang(erlang);
+				T result = caseErlang(erlang);
 				if (result == null) result = caseDistribution(erlang);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.UNIFORM: {
 				Uniform uniform = (Uniform)theEObject;
-				T1 result = caseUniform(uniform);
+				T result = caseUniform(uniform);
 				if (result == null) result = caseDistribution(uniform);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.HYPER_EXPONENTIAL: {
 				HyperExponential hyperExponential = (HyperExponential)theEObject;
-				T1 result = caseHyperExponential(hyperExponential);
+				T result = caseHyperExponential(hyperExponential);
 				if (result == null) result = caseDistribution(hyperExponential);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.WEIBULL: {
 				Weibull weibull = (Weibull)theEObject;
-				T1 result = caseWeibull(weibull);
+				T result = caseWeibull(weibull);
 				if (result == null) result = caseDistribution(weibull);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.TRIANGULAR: {
 				Triangular triangular = (Triangular)theEObject;
-				T1 result = caseTriangular(triangular);
+				T result = caseTriangular(triangular);
 				if (result == null) result = caseDistribution(triangular);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.CONDITIONAL_WEIBULL: {
 				ConditionalWeibull conditionalWeibull = (ConditionalWeibull)theEObject;
-				T1 result = caseConditionalWeibull(conditionalWeibull);
+				T result = caseConditionalWeibull(conditionalWeibull);
 				if (result == null) result = caseDistribution(conditionalWeibull);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.HYPO_EXPONENTIAL: {
 				HypoExponential hypoExponential = (HypoExponential)theEObject;
-				T1 result = caseHypoExponential(hypoExponential);
+				T result = caseHypoExponential(hypoExponential);
 				if (result == null) result = caseDistribution(hypoExponential);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.PARETO: {
 				Pareto pareto = (Pareto)theEObject;
-				T1 result = casePareto(pareto);
+				T result = casePareto(pareto);
 				if (result == null) result = caseDistribution(pareto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.EXPRESSION_SEGMENT: {
 				ExpressionSegment expressionSegment = (ExpressionSegment)theEObject;
-				T1 result = caseExpressionSegment(expressionSegment);
+				T result = caseExpressionSegment(expressionSegment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.TYPE: {
+				Type type = (Type)theEObject;
+				T result = caseType(type);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.PRIMITIVE_TYPE: {
+				PrimitiveType primitiveType = (PrimitiveType)theEObject;
+				T result = casePrimitiveType(primitiveType);
+				if (result == null) result = caseType(primitiveType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.COMPLEX_TYPE: {
+				ComplexType complexType = (ComplexType)theEObject;
+				T result = caseComplexType(complexType);
+				if (result == null) result = caseType(complexType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.CUSTOM_TYPE_DEFINITION: {
+				CustomTypeDefinition customTypeDefinition = (CustomTypeDefinition)theEObject;
+				T result = caseCustomTypeDefinition(customTypeDefinition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.CUSTOM_TYPE_ARRAY: {
+				CustomTypeArray customTypeArray = (CustomTypeArray)theEObject;
+				T result = caseCustomTypeArray(customTypeArray);
+				if (result == null) result = caseCustomTypeDefinition(customTypeArray);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.CUSTOM_TYPE_STRUCT: {
+				CustomTypeStruct customTypeStruct = (CustomTypeStruct)theEObject;
+				T result = caseCustomTypeStruct(customTypeStruct);
+				if (result == null) result = caseCustomTypeDefinition(customTypeStruct);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.FIELD: {
+				Field field = (Field)theEObject;
+				T result = caseField(field);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.MARKING_EXTENDED: {
+				MarkingExtended markingExtended = (MarkingExtended)theEObject;
+				T result = caseMarkingExtended(markingExtended);
+				if (result == null) result = caseMarking(markingExtended);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.MARKING_INTERMEDIATE_NODE: {
+				MarkingIntermediateNode markingIntermediateNode = (MarkingIntermediateNode)theEObject;
+				T result = caseMarkingIntermediateNode(markingIntermediateNode);
+				if (result == null) result = caseMarkingExtended(markingIntermediateNode);
+				if (result == null) result = caseMarking(markingIntermediateNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.MARKING_LEAF_NODE: {
+				MarkingLeafNode markingLeafNode = (MarkingLeafNode)theEObject;
+				T result = caseMarkingLeafNode(markingLeafNode);
+				if (result == null) result = caseMarkingExtended(markingLeafNode);
+				if (result == null) result = caseMarking(markingLeafNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SANPackage.MARKING_SIMPLE: {
 				MarkingSimple markingSimple = (MarkingSimple)theEObject;
-				T1 result = caseMarkingSimple(markingSimple);
+				T result = caseMarkingSimple(markingSimple);
 				if (result == null) result = caseMarking(markingSimple);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANPackage.NORMAL_PLACE: {
-				NormalPlace normalPlace = (NormalPlace)theEObject;
-				T1 result = caseNormalPlace(normalPlace);
-				if (result == null) result = casePlace(normalPlace);
-				if (result == null) result = caseNamedElement(normalPlace);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.EXTENDED_PLACE: {
-				ExtendedPlace<?> extendedPlace = (ExtendedPlace<?>)theEObject;
-				T1 result = caseExtendedPlace(extendedPlace);
-				if (result == null) result = casePlace(extendedPlace);
-				if (result == null) result = caseNamedElement(extendedPlace);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.MARKING_STRING: {
-				MarkingString markingString = (MarkingString)theEObject;
-				T1 result = caseMarkingString(markingString);
-				if (result == null) result = caseMarkingExtended(markingString);
-				if (result == null) result = caseMarking(markingString);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED: {
-				MarkingGlobalVariableExtended markingGlobalVariableExtended = (MarkingGlobalVariableExtended)theEObject;
-				T1 result = caseMarkingGlobalVariableExtended(markingGlobalVariableExtended);
-				if (result == null) result = caseMarkingExtended(markingGlobalVariableExtended);
-				if (result == null) result = caseMarking(markingGlobalVariableExtended);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.EXTENDED_TYPE_DEFINITION: {
-				ExtendedTypeDefinition extendedTypeDefinition = (ExtendedTypeDefinition)theEObject;
-				T1 result = caseExtendedTypeDefinition(extendedTypeDefinition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.ARRAY_TYPE: {
-				ArrayType arrayType = (ArrayType)theEObject;
-				T1 result = caseArrayType(arrayType);
-				if (result == null) result = caseExtendedTypeDefinition(arrayType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.NORMAL_EXTENDED_TYPE: {
-				NormalExtendedType normalExtendedType = (NormalExtendedType)theEObject;
-				T1 result = caseNormalExtendedType(normalExtendedType);
-				if (result == null) result = caseExtendedTypeDefinition(normalExtendedType);
+			case SANPackage.MARKING_GLOBAL_VARIABLE: {
+				MarkingGlobalVariable markingGlobalVariable = (MarkingGlobalVariable)theEObject;
+				T result = caseMarkingGlobalVariable(markingGlobalVariable);
+				if (result == null) result = caseMarking(markingGlobalVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -427,7 +428,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseSAN(SAN object) {
+	public T caseSAN(SAN object) {
 		return null;
 	}
 
@@ -442,7 +443,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 casePlace(Place object) {
+	public T casePlace(Place object) {
 		return null;
 	}
 
@@ -457,7 +458,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseActivity(Activity object) {
+	public T caseActivity(Activity object) {
 		return null;
 	}
 
@@ -472,7 +473,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseNamedElement(NamedElement object) {
+	public T caseNamedElement(NamedElement object) {
 		return null;
 	}
 
@@ -487,7 +488,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseCase(Case object) {
+	public T caseCase(Case object) {
 		return null;
 	}
 
@@ -502,7 +503,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseArc(Arc object) {
+	public T caseArc(Arc object) {
 		return null;
 	}
 
@@ -517,7 +518,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseInputArc(InputArc object) {
+	public T caseInputArc(InputArc object) {
 		return null;
 	}
 
@@ -532,7 +533,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseOutputArc(OutputArc object) {
+	public T caseOutputArc(OutputArc object) {
 		return null;
 	}
 
@@ -547,7 +548,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseGate(Gate object) {
+	public T caseGate(Gate object) {
 		return null;
 	}
 
@@ -562,7 +563,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseOutputGate(OutputGate object) {
+	public T caseOutputGate(OutputGate object) {
 		return null;
 	}
 
@@ -577,7 +578,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseInputGate(InputGate object) {
+	public T caseInputGate(InputGate object) {
 		return null;
 	}
 
@@ -592,7 +593,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseInstantaneousActivity(InstantaneousActivity object) {
+	public T caseInstantaneousActivity(InstantaneousActivity object) {
 		return null;
 	}
 
@@ -607,7 +608,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseTimedActivity(TimedActivity object) {
+	public T caseTimedActivity(TimedActivity object) {
 		return null;
 	}
 
@@ -622,7 +623,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseDistribution(Distribution object) {
+	public T caseDistribution(Distribution object) {
 		return null;
 	}
 
@@ -637,7 +638,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseExpression(Expression object) {
+	public T caseExpression(Expression object) {
 		return null;
 	}
 
@@ -652,7 +653,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseExpressionText(ExpressionText object) {
+	public T caseExpressionText(ExpressionText object) {
 		return null;
 	}
 
@@ -667,7 +668,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseExpressionMarking(ExpressionMarking object) {
+	public T caseExpressionMarking(ExpressionMarking object) {
 		return null;
 	}
 
@@ -682,7 +683,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseExpressionVariable(ExpressionVariable object) {
+	public T caseExpressionVariable(ExpressionVariable object) {
 		return null;
 	}
 
@@ -697,22 +698,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseMarking(Marking object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marking Integer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marking Integer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseMarkingInteger(MarkingInteger object) {
+	public T caseMarking(Marking object) {
 		return null;
 	}
 
@@ -727,7 +713,37 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseMarkingExtended(MarkingExtended object) {
+	public T caseMarkingExtended(MarkingExtended object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Marking Intermediate Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Marking Intermediate Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMarkingIntermediateNode(MarkingIntermediateNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Marking Leaf Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Marking Leaf Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMarkingLeafNode(MarkingLeafNode object) {
 		return null;
 	}
 
@@ -742,22 +758,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseGlobalVariable(GlobalVariable object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marking Global Variable Simple</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marking Global Variable Simple</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseMarkingGlobalVariableSimple(MarkingGlobalVariableSimple object) {
+	public T caseGlobalVariable(GlobalVariable object) {
 		return null;
 	}
 
@@ -772,7 +773,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseExponential(Exponential object) {
+	public T caseExponential(Exponential object) {
 		return null;
 	}
 
@@ -787,7 +788,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseNormal(Normal object) {
+	public T caseNormal(Normal object) {
 		return null;
 	}
 
@@ -802,7 +803,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseGamma(Gamma object) {
+	public T caseGamma(Gamma object) {
 		return null;
 	}
 
@@ -817,7 +818,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseBinomial(Binomial object) {
+	public T caseBinomial(Binomial object) {
 		return null;
 	}
 
@@ -832,7 +833,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseDeterministic(Deterministic object) {
+	public T caseDeterministic(Deterministic object) {
 		return null;
 	}
 
@@ -847,7 +848,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseLognormal(Lognormal object) {
+	public T caseLognormal(Lognormal object) {
 		return null;
 	}
 
@@ -862,7 +863,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseBeta(Beta object) {
+	public T caseBeta(Beta object) {
 		return null;
 	}
 
@@ -877,7 +878,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseNegativeBinomial(NegativeBinomial object) {
+	public T caseNegativeBinomial(NegativeBinomial object) {
 		return null;
 	}
 
@@ -892,7 +893,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseGeometric(Geometric object) {
+	public T caseGeometric(Geometric object) {
 		return null;
 	}
 
@@ -907,7 +908,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseErlang(Erlang object) {
+	public T caseErlang(Erlang object) {
 		return null;
 	}
 
@@ -922,7 +923,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseUniform(Uniform object) {
+	public T caseUniform(Uniform object) {
 		return null;
 	}
 
@@ -937,7 +938,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseHyperExponential(HyperExponential object) {
+	public T caseHyperExponential(HyperExponential object) {
 		return null;
 	}
 
@@ -952,7 +953,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseWeibull(Weibull object) {
+	public T caseWeibull(Weibull object) {
 		return null;
 	}
 
@@ -967,7 +968,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseTriangular(Triangular object) {
+	public T caseTriangular(Triangular object) {
 		return null;
 	}
 
@@ -982,7 +983,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseConditionalWeibull(ConditionalWeibull object) {
+	public T caseConditionalWeibull(ConditionalWeibull object) {
 		return null;
 	}
 
@@ -997,7 +998,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseHypoExponential(HypoExponential object) {
+	public T caseHypoExponential(HypoExponential object) {
 		return null;
 	}
 
@@ -1012,7 +1013,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 casePareto(Pareto object) {
+	public T casePareto(Pareto object) {
 		return null;
 	}
 
@@ -1027,7 +1028,112 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseExpressionSegment(ExpressionSegment object) {
+	public T caseExpressionSegment(ExpressionSegment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseType(Type object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrimitiveType(PrimitiveType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complex Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complex Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComplexType(ComplexType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Custom Type Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Custom Type Definition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomTypeDefinition(CustomTypeDefinition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Custom Type Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Custom Type Array</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomTypeArray(CustomTypeArray object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Custom Type Struct</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Custom Type Struct</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomTypeStruct(CustomTypeStruct object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseField(Field object) {
 		return null;
 	}
 
@@ -1042,112 +1148,22 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseMarkingSimple(MarkingSimple object) {
+	public T caseMarkingSimple(MarkingSimple object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Normal Place</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Marking Global Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Normal Place</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Marking Global Variable</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseNormalPlace(NormalPlace object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Extended Place</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Extended Place</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public <T extends ExtendedTypeDefinition> T1 caseExtendedPlace(ExtendedPlace<T> object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marking String</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marking String</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseMarkingString(MarkingString object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marking Global Variable Extended</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marking Global Variable Extended</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseMarkingGlobalVariableExtended(MarkingGlobalVariableExtended object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Extended Type Definition</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Extended Type Definition</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseExtendedTypeDefinition(ExtendedTypeDefinition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Array Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Array Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseArrayType(ArrayType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Normal Extended Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Normal Extended Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseNormalExtendedType(NormalExtendedType object) {
+	public T caseMarkingGlobalVariable(MarkingGlobalVariable object) {
 		return null;
 	}
 
@@ -1162,7 +1178,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseConcreteModel(ConcreteModel object) {
+	public T caseConcreteModel(ConcreteModel object) {
 		return null;
 	}
 
@@ -1178,7 +1194,7 @@ public class SANSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	@Override
-	public T1 defaultCase(EObject object) {
+	public T defaultCase(EObject object) {
 		return null;
 	}
 

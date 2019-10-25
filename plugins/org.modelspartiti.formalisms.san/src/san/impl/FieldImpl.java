@@ -3,29 +3,33 @@
 package san.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import san.ArrayType;
+import san.Field;
 import san.SANPackage;
+import san.Type;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Array Type</b></em>'.
+ * An implementation of the model object '<em><b>Field</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link san.impl.ArrayTypeImpl#getName <em>Name</em>}</li>
- *   <li>{@link san.impl.ArrayTypeImpl#getSize <em>Size</em>}</li>
+ *   <li>{@link san.impl.FieldImpl#getName <em>Name</em>}</li>
+ *   <li>{@link san.impl.FieldImpl#getTypeStruct <em>Type Struct</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayType {
+public class FieldImpl extends MinimalEObjectImpl.Container implements Field {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,31 +51,21 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * The cached value of the '{@link #getTypeStruct() <em>Type Struct</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSize()
+	 * @see #getTypeStruct()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int SIZE_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSize()
-	 * @generated
-	 * @ordered
-	 */
-	protected int size = SIZE_EDEFAULT;
+	protected Type typeStruct;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ArrayTypeImpl() {
+	protected FieldImpl() {
 		super();
 	}
 
@@ -82,7 +76,7 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.ARRAY_TYPE;
+		return SANPackage.Literals.FIELD;
 	}
 
 	/**
@@ -103,7 +97,7 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.ARRAY_TYPE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.FIELD__NAME, oldName, name));
 	}
 
 	/**
@@ -111,8 +105,8 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getSize() {
-		return size;
+	public Type getTypeStruct() {
+		return typeStruct;
 	}
 
 	/**
@@ -120,11 +114,47 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSize(int newSize) {
-		int oldSize = size;
-		size = newSize;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.ARRAY_TYPE__SIZE, oldSize, size));
+	public NotificationChain basicSetTypeStruct(Type newTypeStruct, NotificationChain msgs) {
+		Type oldTypeStruct = typeStruct;
+		typeStruct = newTypeStruct;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SANPackage.FIELD__TYPE_STRUCT, oldTypeStruct, newTypeStruct);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTypeStruct(Type newTypeStruct) {
+		if (newTypeStruct != typeStruct) {
+			NotificationChain msgs = null;
+			if (typeStruct != null)
+				msgs = ((InternalEObject)typeStruct).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SANPackage.FIELD__TYPE_STRUCT, null, msgs);
+			if (newTypeStruct != null)
+				msgs = ((InternalEObject)newTypeStruct).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SANPackage.FIELD__TYPE_STRUCT, null, msgs);
+			msgs = basicSetTypeStruct(newTypeStruct, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.FIELD__TYPE_STRUCT, newTypeStruct, newTypeStruct));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SANPackage.FIELD__TYPE_STRUCT:
+				return basicSetTypeStruct(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -135,10 +165,10 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANPackage.ARRAY_TYPE__NAME:
+			case SANPackage.FIELD__NAME:
 				return getName();
-			case SANPackage.ARRAY_TYPE__SIZE:
-				return getSize();
+			case SANPackage.FIELD__TYPE_STRUCT:
+				return getTypeStruct();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -151,11 +181,11 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANPackage.ARRAY_TYPE__NAME:
+			case SANPackage.FIELD__NAME:
 				setName((String)newValue);
 				return;
-			case SANPackage.ARRAY_TYPE__SIZE:
-				setSize((Integer)newValue);
+			case SANPackage.FIELD__TYPE_STRUCT:
+				setTypeStruct((Type)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -169,11 +199,11 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANPackage.ARRAY_TYPE__NAME:
+			case SANPackage.FIELD__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SANPackage.ARRAY_TYPE__SIZE:
-				setSize(SIZE_EDEFAULT);
+			case SANPackage.FIELD__TYPE_STRUCT:
+				setTypeStruct((Type)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -187,10 +217,10 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANPackage.ARRAY_TYPE__NAME:
+			case SANPackage.FIELD__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SANPackage.ARRAY_TYPE__SIZE:
-				return size != SIZE_EDEFAULT;
+			case SANPackage.FIELD__TYPE_STRUCT:
+				return typeStruct != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -207,10 +237,8 @@ public class ArrayTypeImpl extends ExtendedTypeDefinitionImpl implements ArrayTy
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", size: ");
-		result.append(size);
 		result.append(')');
 		return result.toString();
 	}
 
-} //ArrayTypeImpl
+} //FieldImpl

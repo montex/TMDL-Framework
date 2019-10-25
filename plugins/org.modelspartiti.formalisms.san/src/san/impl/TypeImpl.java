@@ -4,23 +4,25 @@ package san.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import san.NormalExtendedType;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import san.SANPackage;
+import san.Type;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Normal Extended Type</b></em>'.
+ * An implementation of the model object '<em><b>Type</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class NormalExtendedTypeImpl extends ExtendedTypeDefinitionImpl implements NormalExtendedType {
+public abstract class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NormalExtendedTypeImpl() {
+	protected TypeImpl() {
 		super();
 	}
 
@@ -31,7 +33,7 @@ public class NormalExtendedTypeImpl extends ExtendedTypeDefinitionImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.NORMAL_EXTENDED_TYPE;
+		return SANPackage.Literals.TYPE;
 	}
 
-} //NormalExtendedTypeImpl
+} //TypeImpl

@@ -145,20 +145,8 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createMarkingAdapter();
 			}
 			@Override
-			public Adapter caseMarkingInteger(MarkingInteger object) {
-				return createMarkingIntegerAdapter();
-			}
-			@Override
-			public Adapter caseMarkingExtended(MarkingExtended object) {
-				return createMarkingExtendedAdapter();
-			}
-			@Override
 			public Adapter caseGlobalVariable(GlobalVariable object) {
 				return createGlobalVariableAdapter();
-			}
-			@Override
-			public Adapter caseMarkingGlobalVariableSimple(MarkingGlobalVariableSimple object) {
-				return createMarkingGlobalVariableSimpleAdapter();
 			}
 			@Override
 			public Adapter caseExponential(Exponential object) {
@@ -233,36 +221,52 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createExpressionSegmentAdapter();
 			}
 			@Override
+			public Adapter caseType(Type object) {
+				return createTypeAdapter();
+			}
+			@Override
+			public Adapter casePrimitiveType(PrimitiveType object) {
+				return createPrimitiveTypeAdapter();
+			}
+			@Override
+			public Adapter caseComplexType(ComplexType object) {
+				return createComplexTypeAdapter();
+			}
+			@Override
+			public Adapter caseCustomTypeDefinition(CustomTypeDefinition object) {
+				return createCustomTypeDefinitionAdapter();
+			}
+			@Override
+			public Adapter caseCustomTypeArray(CustomTypeArray object) {
+				return createCustomTypeArrayAdapter();
+			}
+			@Override
+			public Adapter caseCustomTypeStruct(CustomTypeStruct object) {
+				return createCustomTypeStructAdapter();
+			}
+			@Override
+			public Adapter caseField(Field object) {
+				return createFieldAdapter();
+			}
+			@Override
+			public Adapter caseMarkingExtended(MarkingExtended object) {
+				return createMarkingExtendedAdapter();
+			}
+			@Override
+			public Adapter caseMarkingIntermediateNode(MarkingIntermediateNode object) {
+				return createMarkingIntermediateNodeAdapter();
+			}
+			@Override
+			public Adapter caseMarkingLeafNode(MarkingLeafNode object) {
+				return createMarkingLeafNodeAdapter();
+			}
+			@Override
 			public Adapter caseMarkingSimple(MarkingSimple object) {
 				return createMarkingSimpleAdapter();
 			}
 			@Override
-			public Adapter caseNormalPlace(NormalPlace object) {
-				return createNormalPlaceAdapter();
-			}
-			@Override
-			public <T extends ExtendedTypeDefinition> Adapter caseExtendedPlace(ExtendedPlace<T> object) {
-				return createExtendedPlaceAdapter();
-			}
-			@Override
-			public Adapter caseMarkingString(MarkingString object) {
-				return createMarkingStringAdapter();
-			}
-			@Override
-			public Adapter caseMarkingGlobalVariableExtended(MarkingGlobalVariableExtended object) {
-				return createMarkingGlobalVariableExtendedAdapter();
-			}
-			@Override
-			public Adapter caseExtendedTypeDefinition(ExtendedTypeDefinition object) {
-				return createExtendedTypeDefinitionAdapter();
-			}
-			@Override
-			public Adapter caseArrayType(ArrayType object) {
-				return createArrayTypeAdapter();
-			}
-			@Override
-			public Adapter caseNormalExtendedType(NormalExtendedType object) {
-				return createNormalExtendedTypeAdapter();
+			public Adapter caseMarkingGlobalVariable(MarkingGlobalVariable object) {
+				return createMarkingGlobalVariableAdapter();
 			}
 			@Override
 			public Adapter caseConcreteModel(ConcreteModel object) {
@@ -555,20 +559,6 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingInteger <em>Marking Integer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.MarkingInteger
-	 * @generated
-	 */
-	public Adapter createMarkingIntegerAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link san.MarkingExtended <em>Marking Extended</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -583,6 +573,34 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link san.MarkingIntermediateNode <em>Marking Intermediate Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.MarkingIntermediateNode
+	 * @generated
+	 */
+	public Adapter createMarkingIntermediateNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.MarkingLeafNode <em>Marking Leaf Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.MarkingLeafNode
+	 * @generated
+	 */
+	public Adapter createMarkingLeafNodeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link san.GlobalVariable <em>Global Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -593,20 +611,6 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGlobalVariableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingGlobalVariableSimple <em>Marking Global Variable Simple</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.MarkingGlobalVariableSimple
-	 * @generated
-	 */
-	public Adapter createMarkingGlobalVariableSimpleAdapter() {
 		return null;
 	}
 
@@ -863,6 +867,104 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link san.Type <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.Type
+	 * @generated
+	 */
+	public Adapter createTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.PrimitiveType <em>Primitive Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.PrimitiveType
+	 * @generated
+	 */
+	public Adapter createPrimitiveTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.ComplexType <em>Complex Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.ComplexType
+	 * @generated
+	 */
+	public Adapter createComplexTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.CustomTypeDefinition <em>Custom Type Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.CustomTypeDefinition
+	 * @generated
+	 */
+	public Adapter createCustomTypeDefinitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.CustomTypeArray <em>Custom Type Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.CustomTypeArray
+	 * @generated
+	 */
+	public Adapter createCustomTypeArrayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.CustomTypeStruct <em>Custom Type Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.CustomTypeStruct
+	 * @generated
+	 */
+	public Adapter createCustomTypeStructAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.Field <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.Field
+	 * @generated
+	 */
+	public Adapter createFieldAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link san.MarkingSimple <em>Marking Simple</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -877,100 +979,16 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link san.NormalPlace <em>Normal Place</em>}'.
+	 * Creates a new adapter for an object of class '{@link san.MarkingGlobalVariable <em>Marking Global Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see san.NormalPlace
+	 * @see san.MarkingGlobalVariable
 	 * @generated
 	 */
-	public Adapter createNormalPlaceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.ExtendedPlace <em>Extended Place</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.ExtendedPlace
-	 * @generated
-	 */
-	public Adapter createExtendedPlaceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingString <em>Marking String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.MarkingString
-	 * @generated
-	 */
-	public Adapter createMarkingStringAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingGlobalVariableExtended <em>Marking Global Variable Extended</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.MarkingGlobalVariableExtended
-	 * @generated
-	 */
-	public Adapter createMarkingGlobalVariableExtendedAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.ExtendedTypeDefinition <em>Extended Type Definition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.ExtendedTypeDefinition
-	 * @generated
-	 */
-	public Adapter createExtendedTypeDefinitionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.ArrayType <em>Array Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.ArrayType
-	 * @generated
-	 */
-	public Adapter createArrayTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.NormalExtendedType <em>Normal Extended Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.NormalExtendedType
-	 * @generated
-	 */
-	public Adapter createNormalExtendedTypeAdapter() {
+	public Adapter createMarkingGlobalVariableAdapter() {
 		return null;
 	}
 

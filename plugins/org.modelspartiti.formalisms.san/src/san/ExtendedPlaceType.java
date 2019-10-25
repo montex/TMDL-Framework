@@ -26,7 +26,9 @@ public enum ExtendedPlaceType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SHORT(0, "short", "short"), /**
+	SHORT(0, "short", "short"),
+
+	/**
 	 * The '<em><b>Int</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

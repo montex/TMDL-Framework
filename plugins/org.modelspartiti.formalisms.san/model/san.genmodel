@@ -33,9 +33,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/arcs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/gates"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/initialization"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/typeDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/customtype"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//Place"/>
+    <genClasses ecoreClass="san.ecore#//Place">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Place/isExtended"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Place/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Place/marking"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="san.ecore#//Activity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Activity/cases"/>
     </genClasses>
@@ -86,15 +90,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionVariable/variable"/>
     </genClasses>
     <genClasses image="false" ecoreClass="san.ecore#//Marking"/>
-    <genClasses ecoreClass="san.ecore#//MarkingInteger">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingInteger/value"/>
-    </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingExtended"/>
     <genClasses ecoreClass="san.ecore#//GlobalVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//GlobalVariable/type"/>
-    </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingGlobalVariableSimple">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingGlobalVariableSimple/variable"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//Exponential">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Exponential/rate"/>
@@ -163,28 +160,42 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Pareto/shape"/>
     </genClasses>
     <genClasses image="false" ecoreClass="san.ecore#//ExpressionSegment"/>
-    <genClasses image="false" ecoreClass="san.ecore#//MarkingSimple"/>
-    <genClasses ecoreClass="san.ecore#//NormalPlace">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//NormalPlace/marking"/>
+    <genClasses image="false" ecoreClass="san.ecore#//Type"/>
+    <genClasses ecoreClass="san.ecore#//PrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//PrimitiveType/type"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//ExtendedPlace">
-      <genTypeParameters ecoreTypeParameter="san.ecore#//ExtendedPlace/T"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExtendedPlace/marking"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference san.ecore#//ExtendedPlace/type"/>
+    <genClasses ecoreClass="san.ecore#//ComplexType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//ComplexType/definition"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingString">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingString/value"/>
+    <genClasses image="false" ecoreClass="san.ecore#//CustomTypeDefinition"/>
+    <genClasses ecoreClass="san.ecore#//CustomTypeArray">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//CustomTypeArray/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//CustomTypeArray/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//CustomTypeArray/typeArray"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingGlobalVariableExtended">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingGlobalVariableExtended/variable"/>
+    <genClasses ecoreClass="san.ecore#//CustomTypeStruct">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//CustomTypeStruct/field"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="san.ecore#//ExtendedTypeDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//ExtendedTypeDefinition/type"/>
+    <genClasses ecoreClass="san.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Field/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Field/typeStruct"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//ArrayType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//ArrayType/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//ArrayType/size"/>
+    <genClasses ecoreClass="san.ecore#//MarkingExtended"/>
+    <genClasses ecoreClass="san.ecore#//MarkingIntermediateNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//MarkingIntermediateNode/intermediatenode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingIntermediateNode/index"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingIntermediateNode/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//MarkingIntermediateNode/leafnode"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//NormalExtendedType"/>
+    <genClasses ecoreClass="san.ecore#//MarkingLeafNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingLeafNode/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingLeafNode/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//MarkingSimple">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingSimple/value"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//MarkingGlobalVariable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingGlobalVariable/variable"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

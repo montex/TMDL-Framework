@@ -21,7 +21,7 @@ import tmdl.core.ConcreteModel;
  *   <li>{@link san.SAN#getArcs <em>Arcs</em>}</li>
  *   <li>{@link san.SAN#getGates <em>Gates</em>}</li>
  *   <li>{@link san.SAN#getInitialization <em>Initialization</em>}</li>
- *   <li>{@link san.SAN#getTypeDefinition <em>Type Definition</em>}</li>
+ *   <li>{@link san.SAN#getCustomtype <em>Customtype</em>}</li>
  * </ul>
  *
  * @see san.SANPackage#getSAN()
@@ -130,7 +130,7 @@ public interface SAN extends ConcreteModel {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gates</em>' containment reference list.
 	 * @see san.SANPackage#getSAN_Gates()
-	 * @model containment="true"
+	 * @model containment="true" keys="name"
 	 * @generated
 	 */
 	EList<Gate> getGates();
@@ -152,19 +152,19 @@ public interface SAN extends ConcreteModel {
 	EList<Expression> getInitialization();
 
 	/**
-	 * Returns the value of the '<em><b>Type Definition</b></em>' containment reference list.
-	 * The list contents are of type {@link san.ExtendedTypeDefinition}.
+	 * Returns the value of the '<em><b>Customtype</b></em>' containment reference list.
+	 * The list contents are of type {@link san.CustomTypeDefinition}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type Definition</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Customtype</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type Definition</em>' containment reference list.
-	 * @see san.SANPackage#getSAN_TypeDefinition()
+	 * @return the value of the '<em>Customtype</em>' containment reference list.
+	 * @see san.SANPackage#getSAN_Customtype()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ExtendedTypeDefinition> getTypeDefinition();
+	EList<CustomTypeDefinition> getCustomtype();
 
 } // SAN

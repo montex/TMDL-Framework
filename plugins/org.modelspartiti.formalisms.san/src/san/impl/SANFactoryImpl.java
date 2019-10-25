@@ -58,6 +58,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case SANPackage.SAN: return createSAN();
+			case SANPackage.PLACE: return createPlace();
 			case SANPackage.CASE: return createCase();
 			case SANPackage.INPUT_ARC: return createInputArc();
 			case SANPackage.OUTPUT_ARC: return createOutputArc();
@@ -69,9 +70,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.EXPRESSION_TEXT: return createExpressionText();
 			case SANPackage.EXPRESSION_MARKING: return createExpressionMarking();
 			case SANPackage.EXPRESSION_VARIABLE: return createExpressionVariable();
-			case SANPackage.MARKING_INTEGER: return createMarkingInteger();
 			case SANPackage.GLOBAL_VARIABLE: return createGlobalVariable();
-			case SANPackage.MARKING_GLOBAL_VARIABLE_SIMPLE: return createMarkingGlobalVariableSimple();
 			case SANPackage.EXPONENTIAL: return createExponential();
 			case SANPackage.NORMAL: return createNormal();
 			case SANPackage.GAMMA: return createGamma();
@@ -89,12 +88,15 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.CONDITIONAL_WEIBULL: return createConditionalWeibull();
 			case SANPackage.HYPO_EXPONENTIAL: return createHypoExponential();
 			case SANPackage.PARETO: return createPareto();
-			case SANPackage.NORMAL_PLACE: return createNormalPlace();
-			case SANPackage.EXTENDED_PLACE: return createExtendedPlace();
-			case SANPackage.MARKING_STRING: return createMarkingString();
-			case SANPackage.MARKING_GLOBAL_VARIABLE_EXTENDED: return createMarkingGlobalVariableExtended();
-			case SANPackage.ARRAY_TYPE: return createArrayType();
-			case SANPackage.NORMAL_EXTENDED_TYPE: return createNormalExtendedType();
+			case SANPackage.PRIMITIVE_TYPE: return createPrimitiveType();
+			case SANPackage.COMPLEX_TYPE: return createComplexType();
+			case SANPackage.CUSTOM_TYPE_ARRAY: return createCustomTypeArray();
+			case SANPackage.CUSTOM_TYPE_STRUCT: return createCustomTypeStruct();
+			case SANPackage.FIELD: return createField();
+			case SANPackage.MARKING_INTERMEDIATE_NODE: return createMarkingIntermediateNode();
+			case SANPackage.MARKING_LEAF_NODE: return createMarkingLeafNode();
+			case SANPackage.MARKING_SIMPLE: return createMarkingSimple();
+			case SANPackage.MARKING_GLOBAL_VARIABLE: return createMarkingGlobalVariable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -146,6 +148,16 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public SAN createSAN() {
 		SANImpl san = new SANImpl();
 		return san;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Place createPlace() {
+		PlaceImpl place = new PlaceImpl();
+		return place;
 	}
 
 	/**
@@ -263,29 +275,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingInteger createMarkingInteger() {
-		MarkingIntegerImpl markingInteger = new MarkingIntegerImpl();
-		return markingInteger;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public GlobalVariable createGlobalVariable() {
 		GlobalVariableImpl globalVariable = new GlobalVariableImpl();
 		return globalVariable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MarkingGlobalVariableSimple createMarkingGlobalVariableSimple() {
-		MarkingGlobalVariableSimpleImpl markingGlobalVariableSimple = new MarkingGlobalVariableSimpleImpl();
-		return markingGlobalVariableSimple;
 	}
 
 	/**
@@ -463,9 +455,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NormalPlace createNormalPlace() {
-		NormalPlaceImpl normalPlace = new NormalPlaceImpl();
-		return normalPlace;
+	public PrimitiveType createPrimitiveType() {
+		PrimitiveTypeImpl primitiveType = new PrimitiveTypeImpl();
+		return primitiveType;
 	}
 
 	/**
@@ -473,9 +465,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public <T extends ExtendedTypeDefinition> ExtendedPlace<T> createExtendedPlace() {
-		ExtendedPlaceImpl<T> extendedPlace = new ExtendedPlaceImpl<T>();
-		return extendedPlace;
+	public ComplexType createComplexType() {
+		ComplexTypeImpl complexType = new ComplexTypeImpl();
+		return complexType;
 	}
 
 	/**
@@ -483,9 +475,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingString createMarkingString() {
-		MarkingStringImpl markingString = new MarkingStringImpl();
-		return markingString;
+	public CustomTypeArray createCustomTypeArray() {
+		CustomTypeArrayImpl customTypeArray = new CustomTypeArrayImpl();
+		return customTypeArray;
 	}
 
 	/**
@@ -493,9 +485,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingGlobalVariableExtended createMarkingGlobalVariableExtended() {
-		MarkingGlobalVariableExtendedImpl markingGlobalVariableExtended = new MarkingGlobalVariableExtendedImpl();
-		return markingGlobalVariableExtended;
+	public CustomTypeStruct createCustomTypeStruct() {
+		CustomTypeStructImpl customTypeStruct = new CustomTypeStructImpl();
+		return customTypeStruct;
 	}
 
 	/**
@@ -503,9 +495,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArrayType createArrayType() {
-		ArrayTypeImpl arrayType = new ArrayTypeImpl();
-		return arrayType;
+	public Field createField() {
+		FieldImpl field = new FieldImpl();
+		return field;
 	}
 
 	/**
@@ -513,9 +505,39 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NormalExtendedType createNormalExtendedType() {
-		NormalExtendedTypeImpl normalExtendedType = new NormalExtendedTypeImpl();
-		return normalExtendedType;
+	public MarkingIntermediateNode createMarkingIntermediateNode() {
+		MarkingIntermediateNodeImpl markingIntermediateNode = new MarkingIntermediateNodeImpl();
+		return markingIntermediateNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MarkingLeafNode createMarkingLeafNode() {
+		MarkingLeafNodeImpl markingLeafNode = new MarkingLeafNodeImpl();
+		return markingLeafNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MarkingSimple createMarkingSimple() {
+		MarkingSimpleImpl markingSimple = new MarkingSimpleImpl();
+		return markingSimple;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MarkingGlobalVariable createMarkingGlobalVariable() {
+		MarkingGlobalVariableImpl markingGlobalVariable = new MarkingGlobalVariableImpl();
+		return markingGlobalVariable;
 	}
 
 	/**
