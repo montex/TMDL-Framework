@@ -6,40 +6,23 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Marking Intermediate Node</b></em>'.
+ * A representation of the model object '<em><b>Intermediate Node</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link san.MarkingIntermediateNode#getIntermediatenode <em>Intermediatenode</em>}</li>
- *   <li>{@link san.MarkingIntermediateNode#getIndex <em>Index</em>}</li>
- *   <li>{@link san.MarkingIntermediateNode#getDefinition <em>Definition</em>}</li>
- *   <li>{@link san.MarkingIntermediateNode#getLeafnode <em>Leafnode</em>}</li>
+ *   <li>{@link san.IntermediateNode#getIndex <em>Index</em>}</li>
+ *   <li>{@link san.IntermediateNode#getDefinition <em>Definition</em>}</li>
+ *   <li>{@link san.IntermediateNode#getLeafnode <em>Leafnode</em>}</li>
  * </ul>
  *
- * @see san.SANPackage#getMarkingIntermediateNode()
+ * @see san.SANPackage#getIntermediateNode()
  * @model
  * @generated
  */
-public interface MarkingIntermediateNode extends MarkingExtended {
-	/**
-	 * Returns the value of the '<em><b>Intermediatenode</b></em>' containment reference list.
-	 * The list contents are of type {@link san.MarkingIntermediateNode}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Intermediatenode</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Intermediatenode</em>' containment reference list.
-	 * @see san.SANPackage#getMarkingIntermediateNode_Intermediatenode()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<MarkingIntermediateNode> getIntermediatenode();
-
+public interface IntermediateNode extends Node {
 	/**
 	 * Returns the value of the '<em><b>Index</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,14 +33,14 @@ public interface MarkingIntermediateNode extends MarkingExtended {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Index</em>' attribute.
 	 * @see #setIndex(int)
-	 * @see san.SANPackage#getMarkingIntermediateNode_Index()
+	 * @see san.SANPackage#getIntermediateNode_Index()
 	 * @model
 	 * @generated
 	 */
 	int getIndex();
 
 	/**
-	 * Sets the value of the '{@link san.MarkingIntermediateNode#getIndex <em>Index</em>}' attribute.
+	 * Sets the value of the '{@link san.IntermediateNode#getIndex <em>Index</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Index</em>' attribute.
@@ -76,14 +59,14 @@ public interface MarkingIntermediateNode extends MarkingExtended {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Definition</em>' reference.
 	 * @see #setDefinition(CustomTypeDefinition)
-	 * @see san.SANPackage#getMarkingIntermediateNode_Definition()
+	 * @see san.SANPackage#getIntermediateNode_Definition()
 	 * @model required="true"
 	 * @generated
 	 */
 	CustomTypeDefinition getDefinition();
 
 	/**
-	 * Sets the value of the '{@link san.MarkingIntermediateNode#getDefinition <em>Definition</em>}' reference.
+	 * Sets the value of the '{@link san.IntermediateNode#getDefinition <em>Definition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Definition</em>' reference.
@@ -94,7 +77,7 @@ public interface MarkingIntermediateNode extends MarkingExtended {
 
 	/**
 	 * Returns the value of the '<em><b>Leafnode</b></em>' containment reference list.
-	 * The list contents are of type {@link san.MarkingLeafNode}.
+	 * The list contents are of type {@link san.Node}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Leafnode</em>' containment reference list isn't clear,
@@ -102,10 +85,10 @@ public interface MarkingIntermediateNode extends MarkingExtended {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Leafnode</em>' containment reference list.
-	 * @see san.SANPackage#getMarkingIntermediateNode_Leafnode()
-	 * @model containment="true"
+	 * @see san.SANPackage#getIntermediateNode_Leafnode()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<MarkingLeafNode> getLeafnode();
+	EList<Node> getLeafnode();
 
-} // MarkingIntermediateNode
+} // IntermediateNode

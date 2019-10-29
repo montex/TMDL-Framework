@@ -5,47 +5,47 @@ package san;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Marking Leaf Node</b></em>'.
+ * A representation of the model object '<em><b>Leaf Node Struct</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link san.MarkingLeafNode#getIndex <em>Index</em>}</li>
- *   <li>{@link san.MarkingLeafNode#getValue <em>Value</em>}</li>
+ *   <li>{@link san.LeafNodeStruct#getDefinitionField <em>Definition Field</em>}</li>
+ *   <li>{@link san.LeafNodeStruct#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see san.SANPackage#getMarkingLeafNode()
+ * @see san.SANPackage#getLeafNodeStruct()
  * @model
  * @generated
  */
-public interface MarkingLeafNode extends MarkingExtended {
+public interface LeafNodeStruct extends Node {
 	/**
-	 * Returns the value of the '<em><b>Index</b></em>' attribute.
+	 * Returns the value of the '<em><b>Definition Field</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Index</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Definition Field</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Index</em>' attribute.
-	 * @see #setIndex(int)
-	 * @see san.SANPackage#getMarkingLeafNode_Index()
+	 * @return the value of the '<em>Definition Field</em>' reference.
+	 * @see #setDefinitionField(Field)
+	 * @see san.SANPackage#getLeafNodeStruct_DefinitionField()
 	 * @model required="true"
 	 * @generated
 	 */
-	int getIndex();
+	Field getDefinitionField();
 
 	/**
-	 * Sets the value of the '{@link san.MarkingLeafNode#getIndex <em>Index</em>}' attribute.
+	 * Sets the value of the '{@link san.LeafNodeStruct#getDefinitionField <em>Definition Field</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Index</em>' attribute.
-	 * @see #getIndex()
+	 * @param value the new value of the '<em>Definition Field</em>' reference.
+	 * @see #getDefinitionField()
 	 * @generated
 	 */
-	void setIndex(int value);
+	void setDefinitionField(Field value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
@@ -57,14 +57,14 @@ public interface MarkingLeafNode extends MarkingExtended {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see san.SANPackage#getMarkingLeafNode_Value()
+	 * @see san.SANPackage#getLeafNodeStruct_Value()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getValue();
 
 	/**
-	 * Sets the value of the '{@link san.MarkingLeafNode#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link san.LeafNodeStruct#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
@@ -73,4 +73,4 @@ public interface MarkingLeafNode extends MarkingExtended {
 	 */
 	void setValue(String value);
 
-} // MarkingLeafNode
+} // LeafNodeStruct

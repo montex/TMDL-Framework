@@ -9,25 +9,25 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
-import san.ExtendedPlaceType;
-import san.NormalExtendedType;
+import san.SANPackage;
 
 /**
- * This is the item provider adapter for a {@link san.NormalExtendedType} object.
+ * This is the item provider adapter for a {@link san.MarkingGlobalVariable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class NormalExtendedTypeItemProvider extends ExtendedTypeDefinitionItemProvider {
+public class MarkingGlobalVariableItemProvider extends MarkingItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NormalExtendedTypeItemProvider(AdapterFactory adapterFactory) {
+	public MarkingGlobalVariableItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -42,19 +42,42 @@ public class NormalExtendedTypeItemProvider extends ExtendedTypeDefinitionItemPr
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This returns NormalExtendedType.gif.
+	 * This adds a property descriptor for the Variable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVariablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MarkingGlobalVariable_variable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MarkingGlobalVariable_variable_feature", "_UI_MarkingGlobalVariable_type"),
+				 SANPackage.Literals.MARKING_GLOBAL_VARIABLE__VARIABLE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns MarkingGlobalVariable.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/NormalExtendedType"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MarkingGlobalVariable"));
 	}
 
 	/**
@@ -65,11 +88,7 @@ public class NormalExtendedTypeItemProvider extends ExtendedTypeDefinitionItemPr
 	 */
 	@Override
 	public String getText(Object object) {
-		ExtendedPlaceType labelValue = ((NormalExtendedType)object).getType();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_NormalExtendedType_type") :
-			getString("_UI_NormalExtendedType_type") + " " + label;
+		return getString("_UI_MarkingGlobalVariable_type");
 	}
 
 

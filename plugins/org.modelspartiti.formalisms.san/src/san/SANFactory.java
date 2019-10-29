@@ -346,22 +346,22 @@ public interface SANFactory extends EFactory {
 	Field createField();
 
 	/**
-	 * Returns a new object of class '<em>Marking Intermediate Node</em>'.
+	 * Returns a new object of class '<em>Marking Extended</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Intermediate Node</em>'.
+	 * @return a new object of class '<em>Marking Extended</em>'.
 	 * @generated
 	 */
-	MarkingIntermediateNode createMarkingIntermediateNode();
+	MarkingExtended createMarkingExtended();
 
 	/**
-	 * Returns a new object of class '<em>Marking Leaf Node</em>'.
+	 * Returns a new object of class '<em>Intermediate Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Leaf Node</em>'.
+	 * @return a new object of class '<em>Intermediate Node</em>'.
 	 * @generated
 	 */
-	MarkingLeafNode createMarkingLeafNode();
+	IntermediateNode createIntermediateNode();
 
 	/**
 	 * Returns a new object of class '<em>Marking Simple</em>'.
@@ -380,6 +380,33 @@ public interface SANFactory extends EFactory {
 	 * @generated
 	 */
 	MarkingGlobalVariable createMarkingGlobalVariable();
+
+	/**
+	 * Returns a new object of class '<em>Leaf Node Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leaf Node Array</em>'.
+	 * @generated
+	 */
+	LeafNodeArray createLeafNodeArray();
+
+	/**
+	 * Returns a new object of class '<em>Leaf Node Struct</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leaf Node Struct</em>'.
+	 * @generated
+	 */
+	LeafNodeStruct createLeafNodeStruct();
+
+	/**
+	 * Returns a new object of class '<em>Leaf Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leaf Node</em>'.
+	 * @generated
+	 */
+	LeafNode createLeafNode();
 
 	/**
 	 * Returns the package supported by this factory.

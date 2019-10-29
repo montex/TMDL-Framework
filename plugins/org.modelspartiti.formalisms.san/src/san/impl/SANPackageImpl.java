@@ -40,15 +40,18 @@ import san.HypoExponential;
 import san.InputArc;
 import san.InputGate;
 import san.InstantaneousActivity;
+import san.IntermediateNode;
+import san.LeafNode;
+import san.LeafNodeArray;
+import san.LeafNodeStruct;
 import san.Lognormal;
 import san.Marking;
 import san.MarkingExtended;
 import san.MarkingGlobalVariable;
-import san.MarkingIntermediateNode;
-import san.MarkingLeafNode;
 import san.MarkingSimple;
 import san.NamedElement;
 import san.NegativeBinomial;
+import san.Node;
 import san.Normal;
 import san.OutputArc;
 import san.OutputGate;
@@ -220,14 +223,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass markingIntermediateNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markingLeafNodeEClass = null;
+	private EClass intermediateNodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -424,6 +420,34 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * @generated
 	 */
 	private EClass markingGlobalVariableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass leafNodeArrayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass leafNodeStructEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass leafNodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -977,8 +1001,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMarkingIntermediateNode() {
-		return markingIntermediateNodeEClass;
+	public EReference getMarkingExtended_Node() {
+		return (EReference)markingExtendedEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -986,8 +1010,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMarkingIntermediateNode_Intermediatenode() {
-		return (EReference)markingIntermediateNodeEClass.getEStructuralFeatures().get(0);
+	public EReference getMarkingExtended_Leafnode() {
+		return (EReference)markingExtendedEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -995,8 +1019,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMarkingIntermediateNode_Index() {
-		return (EAttribute)markingIntermediateNodeEClass.getEStructuralFeatures().get(1);
+	public EClass getIntermediateNode() {
+		return intermediateNodeEClass;
 	}
 
 	/**
@@ -1004,8 +1028,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMarkingIntermediateNode_Definition() {
-		return (EReference)markingIntermediateNodeEClass.getEStructuralFeatures().get(2);
+	public EAttribute getIntermediateNode_Index() {
+		return (EAttribute)intermediateNodeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1013,8 +1037,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMarkingIntermediateNode_Leafnode() {
-		return (EReference)markingIntermediateNodeEClass.getEStructuralFeatures().get(3);
+	public EReference getIntermediateNode_Definition() {
+		return (EReference)intermediateNodeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1022,26 +1046,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMarkingLeafNode() {
-		return markingLeafNodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMarkingLeafNode_Index() {
-		return (EAttribute)markingLeafNodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMarkingLeafNode_Value() {
-		return (EAttribute)markingLeafNodeEClass.getEStructuralFeatures().get(1);
+	public EReference getIntermediateNode_Leafnode() {
+		return (EReference)intermediateNodeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1688,6 +1694,87 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getNode() {
+		return nodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLeafNodeArray() {
+		return leafNodeArrayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLeafNodeArray_Index() {
+		return (EAttribute)leafNodeArrayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLeafNodeArray_Value() {
+		return (EAttribute)leafNodeArrayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLeafNodeStruct() {
+		return leafNodeStructEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLeafNodeStruct_DefinitionField() {
+		return (EReference)leafNodeStructEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLeafNodeStruct_Value() {
+		return (EAttribute)leafNodeStructEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLeafNode() {
+		return leafNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLeafNode_Value() {
+		return (EAttribute)leafNodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVariableType() {
 		return variableTypeEEnum;
 	}
@@ -1901,22 +1988,32 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		createEReference(fieldEClass, FIELD__TYPE_STRUCT);
 
 		markingExtendedEClass = createEClass(MARKING_EXTENDED);
+		createEReference(markingExtendedEClass, MARKING_EXTENDED__NODE);
+		createEReference(markingExtendedEClass, MARKING_EXTENDED__LEAFNODE);
 
-		markingIntermediateNodeEClass = createEClass(MARKING_INTERMEDIATE_NODE);
-		createEReference(markingIntermediateNodeEClass, MARKING_INTERMEDIATE_NODE__INTERMEDIATENODE);
-		createEAttribute(markingIntermediateNodeEClass, MARKING_INTERMEDIATE_NODE__INDEX);
-		createEReference(markingIntermediateNodeEClass, MARKING_INTERMEDIATE_NODE__DEFINITION);
-		createEReference(markingIntermediateNodeEClass, MARKING_INTERMEDIATE_NODE__LEAFNODE);
-
-		markingLeafNodeEClass = createEClass(MARKING_LEAF_NODE);
-		createEAttribute(markingLeafNodeEClass, MARKING_LEAF_NODE__INDEX);
-		createEAttribute(markingLeafNodeEClass, MARKING_LEAF_NODE__VALUE);
+		intermediateNodeEClass = createEClass(INTERMEDIATE_NODE);
+		createEAttribute(intermediateNodeEClass, INTERMEDIATE_NODE__INDEX);
+		createEReference(intermediateNodeEClass, INTERMEDIATE_NODE__DEFINITION);
+		createEReference(intermediateNodeEClass, INTERMEDIATE_NODE__LEAFNODE);
 
 		markingSimpleEClass = createEClass(MARKING_SIMPLE);
 		createEAttribute(markingSimpleEClass, MARKING_SIMPLE__VALUE);
 
 		markingGlobalVariableEClass = createEClass(MARKING_GLOBAL_VARIABLE);
 		createEReference(markingGlobalVariableEClass, MARKING_GLOBAL_VARIABLE__VARIABLE);
+
+		nodeEClass = createEClass(NODE);
+
+		leafNodeArrayEClass = createEClass(LEAF_NODE_ARRAY);
+		createEAttribute(leafNodeArrayEClass, LEAF_NODE_ARRAY__INDEX);
+		createEAttribute(leafNodeArrayEClass, LEAF_NODE_ARRAY__VALUE);
+
+		leafNodeStructEClass = createEClass(LEAF_NODE_STRUCT);
+		createEReference(leafNodeStructEClass, LEAF_NODE_STRUCT__DEFINITION_FIELD);
+		createEAttribute(leafNodeStructEClass, LEAF_NODE_STRUCT__VALUE);
+
+		leafNodeEClass = createEClass(LEAF_NODE);
+		createEAttribute(leafNodeEClass, LEAF_NODE__VALUE);
 
 		// Create enums
 		variableTypeEEnum = createEEnum(VARIABLE_TYPE);
@@ -1993,10 +2090,11 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		customTypeArrayEClass.getESuperTypes().add(this.getCustomTypeDefinition());
 		customTypeStructEClass.getESuperTypes().add(this.getCustomTypeDefinition());
 		markingExtendedEClass.getESuperTypes().add(this.getMarking());
-		markingIntermediateNodeEClass.getESuperTypes().add(this.getMarkingExtended());
-		markingLeafNodeEClass.getESuperTypes().add(this.getMarkingExtended());
+		intermediateNodeEClass.getESuperTypes().add(this.getNode());
 		markingSimpleEClass.getESuperTypes().add(this.getMarking());
 		markingGlobalVariableEClass.getESuperTypes().add(this.getMarking());
+		leafNodeArrayEClass.getESuperTypes().add(this.getNode());
+		leafNodeStructEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(sanEClass, san.SAN.class, "SAN", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2166,23 +2264,33 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEAttribute(getField_Name(), ecorePackage.getEString(), "name", null, 1, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getField_TypeStruct(), this.getType(), null, "typeStruct", null, 1, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(markingExtendedEClass, MarkingExtended.class, "MarkingExtended", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(markingExtendedEClass, MarkingExtended.class, "MarkingExtended", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMarkingExtended_Node(), this.getNode(), null, "node", null, 0, -1, MarkingExtended.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMarkingExtended_Leafnode(), this.getLeafNode(), null, "leafnode", null, 0, 1, MarkingExtended.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(markingIntermediateNodeEClass, MarkingIntermediateNode.class, "MarkingIntermediateNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMarkingIntermediateNode_Intermediatenode(), this.getMarkingIntermediateNode(), null, "intermediatenode", null, 0, -1, MarkingIntermediateNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMarkingIntermediateNode_Index(), ecorePackage.getEInt(), "index", null, 0, 1, MarkingIntermediateNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMarkingIntermediateNode_Definition(), this.getCustomTypeDefinition(), null, "definition", null, 1, 1, MarkingIntermediateNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMarkingIntermediateNode_Leafnode(), this.getMarkingLeafNode(), null, "leafnode", null, 0, -1, MarkingIntermediateNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(markingLeafNodeEClass, MarkingLeafNode.class, "MarkingLeafNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMarkingLeafNode_Index(), ecorePackage.getEInt(), "index", null, 1, 1, MarkingLeafNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMarkingLeafNode_Value(), ecorePackage.getEString(), "value", null, 1, 1, MarkingLeafNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(intermediateNodeEClass, IntermediateNode.class, "IntermediateNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIntermediateNode_Index(), ecorePackage.getEInt(), "index", null, 0, 1, IntermediateNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIntermediateNode_Definition(), this.getCustomTypeDefinition(), null, "definition", null, 1, 1, IntermediateNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIntermediateNode_Leafnode(), this.getNode(), null, "leafnode", null, 1, -1, IntermediateNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(markingSimpleEClass, MarkingSimple.class, "MarkingSimple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMarkingSimple_Value(), ecorePackage.getEShort(), "value", null, 1, 1, MarkingSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(markingGlobalVariableEClass, MarkingGlobalVariable.class, "MarkingGlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMarkingGlobalVariable_Variable(), this.getGlobalVariable(), null, "variable", null, 1, 1, MarkingGlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(leafNodeArrayEClass, LeafNodeArray.class, "LeafNodeArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLeafNodeArray_Index(), ecorePackage.getEInt(), "index", null, 1, 1, LeafNodeArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLeafNodeArray_Value(), ecorePackage.getEString(), "value", null, 1, 1, LeafNodeArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(leafNodeStructEClass, LeafNodeStruct.class, "LeafNodeStruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLeafNodeStruct_DefinitionField(), this.getField(), null, "definitionField", null, 1, 1, LeafNodeStruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLeafNodeStruct_Value(), ecorePackage.getEString(), "value", null, 1, 1, LeafNodeStruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(leafNodeEClass, LeafNode.class, "LeafNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLeafNode_Value(), ecorePackage.getEString(), "value", null, 1, 1, LeafNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(variableTypeEEnum, VariableType.class, "VariableType");

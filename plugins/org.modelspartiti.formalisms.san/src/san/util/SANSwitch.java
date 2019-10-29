@@ -383,19 +383,10 @@ public class SANSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANPackage.MARKING_INTERMEDIATE_NODE: {
-				MarkingIntermediateNode markingIntermediateNode = (MarkingIntermediateNode)theEObject;
-				T result = caseMarkingIntermediateNode(markingIntermediateNode);
-				if (result == null) result = caseMarkingExtended(markingIntermediateNode);
-				if (result == null) result = caseMarking(markingIntermediateNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.MARKING_LEAF_NODE: {
-				MarkingLeafNode markingLeafNode = (MarkingLeafNode)theEObject;
-				T result = caseMarkingLeafNode(markingLeafNode);
-				if (result == null) result = caseMarkingExtended(markingLeafNode);
-				if (result == null) result = caseMarking(markingLeafNode);
+			case SANPackage.INTERMEDIATE_NODE: {
+				IntermediateNode intermediateNode = (IntermediateNode)theEObject;
+				T result = caseIntermediateNode(intermediateNode);
+				if (result == null) result = caseNode(intermediateNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -410,6 +401,32 @@ public class SANSwitch<T> extends Switch<T> {
 				MarkingGlobalVariable markingGlobalVariable = (MarkingGlobalVariable)theEObject;
 				T result = caseMarkingGlobalVariable(markingGlobalVariable);
 				if (result == null) result = caseMarking(markingGlobalVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.NODE: {
+				Node node = (Node)theEObject;
+				T result = caseNode(node);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.LEAF_NODE_ARRAY: {
+				LeafNodeArray leafNodeArray = (LeafNodeArray)theEObject;
+				T result = caseLeafNodeArray(leafNodeArray);
+				if (result == null) result = caseNode(leafNodeArray);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.LEAF_NODE_STRUCT: {
+				LeafNodeStruct leafNodeStruct = (LeafNodeStruct)theEObject;
+				T result = caseLeafNodeStruct(leafNodeStruct);
+				if (result == null) result = caseNode(leafNodeStruct);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.LEAF_NODE: {
+				LeafNode leafNode = (LeafNode)theEObject;
+				T result = caseLeafNode(leafNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -718,32 +735,17 @@ public class SANSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marking Intermediate Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Intermediate Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marking Intermediate Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Intermediate Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMarkingIntermediateNode(MarkingIntermediateNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Marking Leaf Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Marking Leaf Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkingLeafNode(MarkingLeafNode object) {
+	public T caseIntermediateNode(IntermediateNode object) {
 		return null;
 	}
 
@@ -1164,6 +1166,66 @@ public class SANSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMarkingGlobalVariable(MarkingGlobalVariable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNode(Node object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Leaf Node Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Leaf Node Array</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLeafNodeArray(LeafNodeArray object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Leaf Node Struct</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Leaf Node Struct</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLeafNodeStruct(LeafNodeStruct object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Leaf Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Leaf Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLeafNode(LeafNode object) {
 		return null;
 	}
 

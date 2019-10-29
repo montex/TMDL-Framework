@@ -93,10 +93,13 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.CUSTOM_TYPE_ARRAY: return createCustomTypeArray();
 			case SANPackage.CUSTOM_TYPE_STRUCT: return createCustomTypeStruct();
 			case SANPackage.FIELD: return createField();
-			case SANPackage.MARKING_INTERMEDIATE_NODE: return createMarkingIntermediateNode();
-			case SANPackage.MARKING_LEAF_NODE: return createMarkingLeafNode();
+			case SANPackage.MARKING_EXTENDED: return createMarkingExtended();
+			case SANPackage.INTERMEDIATE_NODE: return createIntermediateNode();
 			case SANPackage.MARKING_SIMPLE: return createMarkingSimple();
 			case SANPackage.MARKING_GLOBAL_VARIABLE: return createMarkingGlobalVariable();
+			case SANPackage.LEAF_NODE_ARRAY: return createLeafNodeArray();
+			case SANPackage.LEAF_NODE_STRUCT: return createLeafNodeStruct();
+			case SANPackage.LEAF_NODE: return createLeafNode();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -505,9 +508,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingIntermediateNode createMarkingIntermediateNode() {
-		MarkingIntermediateNodeImpl markingIntermediateNode = new MarkingIntermediateNodeImpl();
-		return markingIntermediateNode;
+	public MarkingExtended createMarkingExtended() {
+		MarkingExtendedImpl markingExtended = new MarkingExtendedImpl();
+		return markingExtended;
 	}
 
 	/**
@@ -515,9 +518,9 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingLeafNode createMarkingLeafNode() {
-		MarkingLeafNodeImpl markingLeafNode = new MarkingLeafNodeImpl();
-		return markingLeafNode;
+	public IntermediateNode createIntermediateNode() {
+		IntermediateNodeImpl intermediateNode = new IntermediateNodeImpl();
+		return intermediateNode;
 	}
 
 	/**
@@ -538,6 +541,36 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public MarkingGlobalVariable createMarkingGlobalVariable() {
 		MarkingGlobalVariableImpl markingGlobalVariable = new MarkingGlobalVariableImpl();
 		return markingGlobalVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LeafNodeArray createLeafNodeArray() {
+		LeafNodeArrayImpl leafNodeArray = new LeafNodeArrayImpl();
+		return leafNodeArray;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LeafNodeStruct createLeafNodeStruct() {
+		LeafNodeStructImpl leafNodeStruct = new LeafNodeStructImpl();
+		return leafNodeStruct;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LeafNode createLeafNode() {
+		LeafNodeImpl leafNode = new LeafNodeImpl();
+		return leafNode;
 	}
 
 	/**

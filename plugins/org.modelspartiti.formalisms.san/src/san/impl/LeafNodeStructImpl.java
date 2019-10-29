@@ -5,46 +5,38 @@ package san.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import san.MarkingLeafNode;
+import san.Field;
+import san.LeafNodeStruct;
 import san.SANPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Marking Leaf Node</b></em>'.
+ * An implementation of the model object '<em><b>Leaf Node Struct</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link san.impl.MarkingLeafNodeImpl#getIndex <em>Index</em>}</li>
- *   <li>{@link san.impl.MarkingLeafNodeImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link san.impl.LeafNodeStructImpl#getDefinitionField <em>Definition Field</em>}</li>
+ *   <li>{@link san.impl.LeafNodeStructImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingLeafNode {
+public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	/**
-	 * The default value of the '{@link #getIndex() <em>Index</em>}' attribute.
+	 * The cached value of the '{@link #getDefinitionField() <em>Definition Field</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIndex()
+	 * @see #getDefinitionField()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int INDEX_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIndex() <em>Index</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIndex()
-	 * @generated
-	 * @ordered
-	 */
-	protected int index = INDEX_EDEFAULT;
+	protected Field definitionField;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -71,7 +63,7 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MarkingLeafNodeImpl() {
+	protected LeafNodeStructImpl() {
 		super();
 	}
 
@@ -82,7 +74,7 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.MARKING_LEAF_NODE;
+		return SANPackage.Literals.LEAF_NODE_STRUCT;
 	}
 
 	/**
@@ -90,8 +82,16 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIndex() {
-		return index;
+	public Field getDefinitionField() {
+		if (definitionField != null && definitionField.eIsProxy()) {
+			InternalEObject oldDefinitionField = (InternalEObject)definitionField;
+			definitionField = (Field)eResolveProxy(oldDefinitionField);
+			if (definitionField != oldDefinitionField) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD, oldDefinitionField, definitionField));
+			}
+		}
+		return definitionField;
 	}
 
 	/**
@@ -99,11 +99,20 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIndex(int newIndex) {
-		int oldIndex = index;
-		index = newIndex;
+	public Field basicGetDefinitionField() {
+		return definitionField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDefinitionField(Field newDefinitionField) {
+		Field oldDefinitionField = definitionField;
+		definitionField = newDefinitionField;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_LEAF_NODE__INDEX, oldIndex, index));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD, oldDefinitionField, definitionField));
 	}
 
 	/**
@@ -124,7 +133,7 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_LEAF_NODE__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.LEAF_NODE_STRUCT__VALUE, oldValue, value));
 	}
 
 	/**
@@ -135,9 +144,10 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANPackage.MARKING_LEAF_NODE__INDEX:
-				return getIndex();
-			case SANPackage.MARKING_LEAF_NODE__VALUE:
+			case SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD:
+				if (resolve) return getDefinitionField();
+				return basicGetDefinitionField();
+			case SANPackage.LEAF_NODE_STRUCT__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -151,10 +161,10 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANPackage.MARKING_LEAF_NODE__INDEX:
-				setIndex((Integer)newValue);
+			case SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD:
+				setDefinitionField((Field)newValue);
 				return;
-			case SANPackage.MARKING_LEAF_NODE__VALUE:
+			case SANPackage.LEAF_NODE_STRUCT__VALUE:
 				setValue((String)newValue);
 				return;
 		}
@@ -169,10 +179,10 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_LEAF_NODE__INDEX:
-				setIndex(INDEX_EDEFAULT);
+			case SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD:
+				setDefinitionField((Field)null);
 				return;
-			case SANPackage.MARKING_LEAF_NODE__VALUE:
+			case SANPackage.LEAF_NODE_STRUCT__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -187,9 +197,9 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_LEAF_NODE__INDEX:
-				return index != INDEX_EDEFAULT;
-			case SANPackage.MARKING_LEAF_NODE__VALUE:
+			case SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD:
+				return definitionField != null;
+			case SANPackage.LEAF_NODE_STRUCT__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
@@ -205,12 +215,10 @@ public class MarkingLeafNodeImpl extends MarkingExtendedImpl implements MarkingL
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (index: ");
-		result.append(index);
-		result.append(", value: ");
+		result.append(" (value: ");
 		result.append(value);
 		result.append(')');
 		return result.toString();
 	}
 
-} //MarkingLeafNodeImpl
+} //LeafNodeStructImpl

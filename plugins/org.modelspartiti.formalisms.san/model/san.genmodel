@@ -180,22 +180,32 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Field/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Field/typeStruct"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingExtended"/>
-    <genClasses ecoreClass="san.ecore#//MarkingIntermediateNode">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//MarkingIntermediateNode/intermediatenode"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingIntermediateNode/index"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingIntermediateNode/definition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//MarkingIntermediateNode/leafnode"/>
+    <genClasses ecoreClass="san.ecore#//MarkingExtended">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//MarkingExtended/node"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//MarkingExtended/leafnode"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//MarkingLeafNode">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingLeafNode/index"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingLeafNode/value"/>
+    <genClasses ecoreClass="san.ecore#//IntermediateNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//IntermediateNode/index"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//IntermediateNode/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//IntermediateNode/leafnode"/>
     </genClasses>
     <genClasses image="false" ecoreClass="san.ecore#//MarkingSimple">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//MarkingSimple/value"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//MarkingGlobalVariable">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//MarkingGlobalVariable/variable"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//Node"/>
+    <genClasses ecoreClass="san.ecore#//LeafNodeArray">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//LeafNodeArray/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//LeafNodeArray/value"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//LeafNodeStruct">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//LeafNodeStruct/definitionField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//LeafNodeStruct/value"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//LeafNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//LeafNode/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

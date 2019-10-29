@@ -253,12 +253,8 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createMarkingExtendedAdapter();
 			}
 			@Override
-			public Adapter caseMarkingIntermediateNode(MarkingIntermediateNode object) {
-				return createMarkingIntermediateNodeAdapter();
-			}
-			@Override
-			public Adapter caseMarkingLeafNode(MarkingLeafNode object) {
-				return createMarkingLeafNodeAdapter();
+			public Adapter caseIntermediateNode(IntermediateNode object) {
+				return createIntermediateNodeAdapter();
 			}
 			@Override
 			public Adapter caseMarkingSimple(MarkingSimple object) {
@@ -267,6 +263,22 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMarkingGlobalVariable(MarkingGlobalVariable object) {
 				return createMarkingGlobalVariableAdapter();
+			}
+			@Override
+			public Adapter caseNode(Node object) {
+				return createNodeAdapter();
+			}
+			@Override
+			public Adapter caseLeafNodeArray(LeafNodeArray object) {
+				return createLeafNodeArrayAdapter();
+			}
+			@Override
+			public Adapter caseLeafNodeStruct(LeafNodeStruct object) {
+				return createLeafNodeStructAdapter();
+			}
+			@Override
+			public Adapter caseLeafNode(LeafNode object) {
+				return createLeafNodeAdapter();
 			}
 			@Override
 			public Adapter caseConcreteModel(ConcreteModel object) {
@@ -573,30 +585,16 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingIntermediateNode <em>Marking Intermediate Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link san.IntermediateNode <em>Intermediate Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see san.MarkingIntermediateNode
+	 * @see san.IntermediateNode
 	 * @generated
 	 */
-	public Adapter createMarkingIntermediateNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.MarkingLeafNode <em>Marking Leaf Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.MarkingLeafNode
-	 * @generated
-	 */
-	public Adapter createMarkingLeafNodeAdapter() {
+	public Adapter createIntermediateNodeAdapter() {
 		return null;
 	}
 
@@ -989,6 +987,62 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMarkingGlobalVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.Node
+	 * @generated
+	 */
+	public Adapter createNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.LeafNodeArray <em>Leaf Node Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.LeafNodeArray
+	 * @generated
+	 */
+	public Adapter createLeafNodeArrayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.LeafNodeStruct <em>Leaf Node Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.LeafNodeStruct
+	 * @generated
+	 */
+	public Adapter createLeafNodeStructAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.LeafNode <em>Leaf Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.LeafNode
+	 * @generated
+	 */
+	public Adapter createLeafNodeAdapter() {
 		return null;
 	}
 

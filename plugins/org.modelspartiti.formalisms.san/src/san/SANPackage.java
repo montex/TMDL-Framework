@@ -1034,7 +1034,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getMarkingSimple()
 	 * @generated
 	 */
-	int MARKING_SIMPLE = 48;
+	int MARKING_SIMPLE = 47;
 
 	/**
 	 * The meta object id for the '{@link san.impl.MarkingGlobalVariableImpl <em>Marking Global Variable</em>}' class.
@@ -1044,7 +1044,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getMarkingGlobalVariable()
 	 * @generated
 	 */
-	int MARKING_GLOBAL_VARIABLE = 49;
+	int MARKING_GLOBAL_VARIABLE = 48;
 
 	/**
 	 * The meta object id for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
@@ -1055,26 +1055,6 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	int MARKING_EXTENDED = 45;
-
-	/**
-	 * The meta object id for the '{@link san.impl.MarkingIntermediateNodeImpl <em>Marking Intermediate Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingIntermediateNodeImpl
-	 * @see san.impl.SANPackageImpl#getMarkingIntermediateNode()
-	 * @generated
-	 */
-	int MARKING_INTERMEDIATE_NODE = 46;
-
-	/**
-	 * The meta object id for the '{@link san.impl.MarkingLeafNodeImpl <em>Marking Leaf Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingLeafNodeImpl
-	 * @see san.impl.SANPackageImpl#getMarkingLeafNode()
-	 * @generated
-	 */
-	int MARKING_LEAF_NODE = 47;
 
 	/**
 	 * The meta object id for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -2155,13 +2135,31 @@ public interface SANPackage extends EPackage {
 	int FIELD_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Node</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_EXTENDED__NODE = MARKING_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Leafnode</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_EXTENDED__LEAFNODE = MARKING_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Marking Extended</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_EXTENDED_FEATURE_COUNT = MARKING_FEATURE_COUNT + 0;
+	int MARKING_EXTENDED_FEATURE_COUNT = MARKING_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Marking Extended</em>' class.
@@ -2173,13 +2171,42 @@ public interface SANPackage extends EPackage {
 	int MARKING_EXTENDED_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Intermediatenode</b></em>' containment reference list.
+	 * The meta object id for the '{@link san.impl.NodeImpl <em>Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.NodeImpl
+	 * @see san.impl.SANPackageImpl#getNode()
+	 * @generated
+	 */
+	int NODE = 49;
+
+	/**
+	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_INTERMEDIATE_NODE__INTERMEDIATENODE = MARKING_EXTENDED_FEATURE_COUNT + 0;
+	int NODE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.IntermediateNodeImpl <em>Intermediate Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.IntermediateNodeImpl
+	 * @see san.impl.SANPackageImpl#getIntermediateNode()
+	 * @generated
+	 */
+	int INTERMEDIATE_NODE = 46;
 
 	/**
 	 * The feature id for the '<em><b>Index</b></em>' attribute.
@@ -2188,7 +2215,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_INTERMEDIATE_NODE__INDEX = MARKING_EXTENDED_FEATURE_COUNT + 1;
+	int INTERMEDIATE_NODE__INDEX = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Definition</b></em>' reference.
@@ -2197,7 +2224,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_INTERMEDIATE_NODE__DEFINITION = MARKING_EXTENDED_FEATURE_COUNT + 2;
+	int INTERMEDIATE_NODE__DEFINITION = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Leafnode</b></em>' containment reference list.
@@ -2206,61 +2233,25 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_INTERMEDIATE_NODE__LEAFNODE = MARKING_EXTENDED_FEATURE_COUNT + 3;
+	int INTERMEDIATE_NODE__LEAFNODE = NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Marking Intermediate Node</em>' class.
+	 * The number of structural features of the '<em>Intermediate Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_INTERMEDIATE_NODE_FEATURE_COUNT = MARKING_EXTENDED_FEATURE_COUNT + 4;
+	int INTERMEDIATE_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Marking Intermediate Node</em>' class.
+	 * The number of operations of the '<em>Intermediate Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_INTERMEDIATE_NODE_OPERATION_COUNT = MARKING_EXTENDED_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Index</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_LEAF_NODE__INDEX = MARKING_EXTENDED_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_LEAF_NODE__VALUE = MARKING_EXTENDED_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Marking Leaf Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_LEAF_NODE_FEATURE_COUNT = MARKING_EXTENDED_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Marking Leaf Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_LEAF_NODE_OPERATION_COUNT = MARKING_EXTENDED_OPERATION_COUNT + 0;
+	int INTERMEDIATE_NODE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2317,6 +2308,135 @@ public interface SANPackage extends EPackage {
 	int MARKING_GLOBAL_VARIABLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.LeafNodeArrayImpl <em>Leaf Node Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.LeafNodeArrayImpl
+	 * @see san.impl.SANPackageImpl#getLeafNodeArray()
+	 * @generated
+	 */
+	int LEAF_NODE_ARRAY = 50;
+
+	/**
+	 * The feature id for the '<em><b>Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_ARRAY__INDEX = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_ARRAY__VALUE = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Leaf Node Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_ARRAY_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Leaf Node Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_ARRAY_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.LeafNodeStructImpl <em>Leaf Node Struct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.LeafNodeStructImpl
+	 * @see san.impl.SANPackageImpl#getLeafNodeStruct()
+	 * @generated
+	 */
+	int LEAF_NODE_STRUCT = 51;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRUCT__DEFINITION_FIELD = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRUCT__VALUE = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Leaf Node Struct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRUCT_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Leaf Node Struct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRUCT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.LeafNodeImpl <em>Leaf Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.LeafNodeImpl
+	 * @see san.impl.SANPackageImpl#getLeafNode()
+	 * @generated
+	 */
+	int LEAF_NODE = 52;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE__VALUE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Leaf Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Leaf Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link san.VariableType <em>Variable Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2324,7 +2444,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getVariableType()
 	 * @generated
 	 */
-	int VARIABLE_TYPE = 50;
+	int VARIABLE_TYPE = 53;
 
 	/**
 	 * The meta object id for the '{@link san.ExtendedPlaceType <em>Extended Place Type</em>}' enum.
@@ -2334,7 +2454,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExtendedPlaceType()
 	 * @generated
 	 */
-	int EXTENDED_PLACE_TYPE = 51;
+	int EXTENDED_PLACE_TYPE = 54;
 
 	/**
 	 * The meta object id for the '<em>Code Fragment</em>' data type.
@@ -2344,7 +2464,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getCodeFragment()
 	 * @generated
 	 */
-	int CODE_FRAGMENT = 52;
+	int CODE_FRAGMENT = 55;
 
 
 	/**
@@ -2889,90 +3009,69 @@ public interface SANPackage extends EPackage {
 	EClass getMarkingExtended();
 
 	/**
-	 * Returns the meta object for class '{@link san.MarkingIntermediateNode <em>Marking Intermediate Node</em>}'.
+	 * Returns the meta object for the containment reference list '{@link san.MarkingExtended#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking Intermediate Node</em>'.
-	 * @see san.MarkingIntermediateNode
+	 * @return the meta object for the containment reference list '<em>Node</em>'.
+	 * @see san.MarkingExtended#getNode()
+	 * @see #getMarkingExtended()
 	 * @generated
 	 */
-	EClass getMarkingIntermediateNode();
+	EReference getMarkingExtended_Node();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link san.MarkingIntermediateNode#getIntermediatenode <em>Intermediatenode</em>}'.
+	 * Returns the meta object for the containment reference '{@link san.MarkingExtended#getLeafnode <em>Leafnode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Intermediatenode</em>'.
-	 * @see san.MarkingIntermediateNode#getIntermediatenode()
-	 * @see #getMarkingIntermediateNode()
+	 * @return the meta object for the containment reference '<em>Leafnode</em>'.
+	 * @see san.MarkingExtended#getLeafnode()
+	 * @see #getMarkingExtended()
 	 * @generated
 	 */
-	EReference getMarkingIntermediateNode_Intermediatenode();
+	EReference getMarkingExtended_Leafnode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link san.MarkingIntermediateNode#getIndex <em>Index</em>}'.
+	 * Returns the meta object for class '{@link san.IntermediateNode <em>Intermediate Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Intermediate Node</em>'.
+	 * @see san.IntermediateNode
+	 * @generated
+	 */
+	EClass getIntermediateNode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.IntermediateNode#getIndex <em>Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Index</em>'.
-	 * @see san.MarkingIntermediateNode#getIndex()
-	 * @see #getMarkingIntermediateNode()
+	 * @see san.IntermediateNode#getIndex()
+	 * @see #getIntermediateNode()
 	 * @generated
 	 */
-	EAttribute getMarkingIntermediateNode_Index();
+	EAttribute getIntermediateNode_Index();
 
 	/**
-	 * Returns the meta object for the reference '{@link san.MarkingIntermediateNode#getDefinition <em>Definition</em>}'.
+	 * Returns the meta object for the reference '{@link san.IntermediateNode#getDefinition <em>Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Definition</em>'.
-	 * @see san.MarkingIntermediateNode#getDefinition()
-	 * @see #getMarkingIntermediateNode()
+	 * @see san.IntermediateNode#getDefinition()
+	 * @see #getIntermediateNode()
 	 * @generated
 	 */
-	EReference getMarkingIntermediateNode_Definition();
+	EReference getIntermediateNode_Definition();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link san.MarkingIntermediateNode#getLeafnode <em>Leafnode</em>}'.
+	 * Returns the meta object for the containment reference list '{@link san.IntermediateNode#getLeafnode <em>Leafnode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Leafnode</em>'.
-	 * @see san.MarkingIntermediateNode#getLeafnode()
-	 * @see #getMarkingIntermediateNode()
+	 * @see san.IntermediateNode#getLeafnode()
+	 * @see #getIntermediateNode()
 	 * @generated
 	 */
-	EReference getMarkingIntermediateNode_Leafnode();
-
-	/**
-	 * Returns the meta object for class '{@link san.MarkingLeafNode <em>Marking Leaf Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking Leaf Node</em>'.
-	 * @see san.MarkingLeafNode
-	 * @generated
-	 */
-	EClass getMarkingLeafNode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link san.MarkingLeafNode#getIndex <em>Index</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Index</em>'.
-	 * @see san.MarkingLeafNode#getIndex()
-	 * @see #getMarkingLeafNode()
-	 * @generated
-	 */
-	EAttribute getMarkingLeafNode_Index();
-
-	/**
-	 * Returns the meta object for the attribute '{@link san.MarkingLeafNode#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see san.MarkingLeafNode#getValue()
-	 * @see #getMarkingLeafNode()
-	 * @generated
-	 */
-	EAttribute getMarkingLeafNode_Value();
+	EReference getIntermediateNode_Leafnode();
 
 	/**
 	 * Returns the meta object for class '{@link san.GlobalVariable <em>Global Variable</em>}'.
@@ -3728,6 +3827,101 @@ public interface SANPackage extends EPackage {
 	EReference getMarkingGlobalVariable_Variable();
 
 	/**
+	 * Returns the meta object for class '{@link san.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node</em>'.
+	 * @see san.Node
+	 * @generated
+	 */
+	EClass getNode();
+
+	/**
+	 * Returns the meta object for class '{@link san.LeafNodeArray <em>Leaf Node Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf Node Array</em>'.
+	 * @see san.LeafNodeArray
+	 * @generated
+	 */
+	EClass getLeafNodeArray();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.LeafNodeArray#getIndex <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Index</em>'.
+	 * @see san.LeafNodeArray#getIndex()
+	 * @see #getLeafNodeArray()
+	 * @generated
+	 */
+	EAttribute getLeafNodeArray_Index();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.LeafNodeArray#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see san.LeafNodeArray#getValue()
+	 * @see #getLeafNodeArray()
+	 * @generated
+	 */
+	EAttribute getLeafNodeArray_Value();
+
+	/**
+	 * Returns the meta object for class '{@link san.LeafNodeStruct <em>Leaf Node Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf Node Struct</em>'.
+	 * @see san.LeafNodeStruct
+	 * @generated
+	 */
+	EClass getLeafNodeStruct();
+
+	/**
+	 * Returns the meta object for the reference '{@link san.LeafNodeStruct#getDefinitionField <em>Definition Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Definition Field</em>'.
+	 * @see san.LeafNodeStruct#getDefinitionField()
+	 * @see #getLeafNodeStruct()
+	 * @generated
+	 */
+	EReference getLeafNodeStruct_DefinitionField();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.LeafNodeStruct#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see san.LeafNodeStruct#getValue()
+	 * @see #getLeafNodeStruct()
+	 * @generated
+	 */
+	EAttribute getLeafNodeStruct_Value();
+
+	/**
+	 * Returns the meta object for class '{@link san.LeafNode <em>Leaf Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf Node</em>'.
+	 * @see san.LeafNode
+	 * @generated
+	 */
+	EClass getLeafNode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.LeafNode#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see san.LeafNode#getValue()
+	 * @see #getLeafNode()
+	 * @generated
+	 */
+	EAttribute getLeafNode_Value();
+
+	/**
 	 * Returns the meta object for enum '{@link san.VariableType <em>Variable Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4230,22 +4424,30 @@ public interface SANPackage extends EPackage {
 		EClass MARKING_EXTENDED = eINSTANCE.getMarkingExtended();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.MarkingIntermediateNodeImpl <em>Marking Intermediate Node</em>}' class.
+		 * The meta object literal for the '<em><b>Node</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingIntermediateNodeImpl
-		 * @see san.impl.SANPackageImpl#getMarkingIntermediateNode()
 		 * @generated
 		 */
-		EClass MARKING_INTERMEDIATE_NODE = eINSTANCE.getMarkingIntermediateNode();
+		EReference MARKING_EXTENDED__NODE = eINSTANCE.getMarkingExtended_Node();
 
 		/**
-		 * The meta object literal for the '<em><b>Intermediatenode</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Leafnode</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MARKING_INTERMEDIATE_NODE__INTERMEDIATENODE = eINSTANCE.getMarkingIntermediateNode_Intermediatenode();
+		EReference MARKING_EXTENDED__LEAFNODE = eINSTANCE.getMarkingExtended_Leafnode();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.IntermediateNodeImpl <em>Intermediate Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.IntermediateNodeImpl
+		 * @see san.impl.SANPackageImpl#getIntermediateNode()
+		 * @generated
+		 */
+		EClass INTERMEDIATE_NODE = eINSTANCE.getIntermediateNode();
 
 		/**
 		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
@@ -4253,7 +4455,7 @@ public interface SANPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MARKING_INTERMEDIATE_NODE__INDEX = eINSTANCE.getMarkingIntermediateNode_Index();
+		EAttribute INTERMEDIATE_NODE__INDEX = eINSTANCE.getIntermediateNode_Index();
 
 		/**
 		 * The meta object literal for the '<em><b>Definition</b></em>' reference feature.
@@ -4261,7 +4463,7 @@ public interface SANPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MARKING_INTERMEDIATE_NODE__DEFINITION = eINSTANCE.getMarkingIntermediateNode_Definition();
+		EReference INTERMEDIATE_NODE__DEFINITION = eINSTANCE.getIntermediateNode_Definition();
 
 		/**
 		 * The meta object literal for the '<em><b>Leafnode</b></em>' containment reference list feature.
@@ -4269,33 +4471,7 @@ public interface SANPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MARKING_INTERMEDIATE_NODE__LEAFNODE = eINSTANCE.getMarkingIntermediateNode_Leafnode();
-
-		/**
-		 * The meta object literal for the '{@link san.impl.MarkingLeafNodeImpl <em>Marking Leaf Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingLeafNodeImpl
-		 * @see san.impl.SANPackageImpl#getMarkingLeafNode()
-		 * @generated
-		 */
-		EClass MARKING_LEAF_NODE = eINSTANCE.getMarkingLeafNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MARKING_LEAF_NODE__INDEX = eINSTANCE.getMarkingLeafNode_Index();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MARKING_LEAF_NODE__VALUE = eINSTANCE.getMarkingLeafNode_Value();
+		EReference INTERMEDIATE_NODE__LEAFNODE = eINSTANCE.getIntermediateNode_Leafnode();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -4920,6 +5096,86 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MARKING_GLOBAL_VARIABLE__VARIABLE = eINSTANCE.getMarkingGlobalVariable_Variable();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.NodeImpl <em>Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.NodeImpl
+		 * @see san.impl.SANPackageImpl#getNode()
+		 * @generated
+		 */
+		EClass NODE = eINSTANCE.getNode();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.LeafNodeArrayImpl <em>Leaf Node Array</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.LeafNodeArrayImpl
+		 * @see san.impl.SANPackageImpl#getLeafNodeArray()
+		 * @generated
+		 */
+		EClass LEAF_NODE_ARRAY = eINSTANCE.getLeafNodeArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEAF_NODE_ARRAY__INDEX = eINSTANCE.getLeafNodeArray_Index();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEAF_NODE_ARRAY__VALUE = eINSTANCE.getLeafNodeArray_Value();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.LeafNodeStructImpl <em>Leaf Node Struct</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.LeafNodeStructImpl
+		 * @see san.impl.SANPackageImpl#getLeafNodeStruct()
+		 * @generated
+		 */
+		EClass LEAF_NODE_STRUCT = eINSTANCE.getLeafNodeStruct();
+
+		/**
+		 * The meta object literal for the '<em><b>Definition Field</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEAF_NODE_STRUCT__DEFINITION_FIELD = eINSTANCE.getLeafNodeStruct_DefinitionField();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEAF_NODE_STRUCT__VALUE = eINSTANCE.getLeafNodeStruct_Value();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.LeafNodeImpl <em>Leaf Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.LeafNodeImpl
+		 * @see san.impl.SANPackageImpl#getLeafNode()
+		 * @generated
+		 */
+		EClass LEAF_NODE = eINSTANCE.getLeafNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEAF_NODE__VALUE = eINSTANCE.getLeafNode_Value();
 
 		/**
 		 * The meta object literal for the '{@link san.VariableType <em>Variable Type</em>}' enum.

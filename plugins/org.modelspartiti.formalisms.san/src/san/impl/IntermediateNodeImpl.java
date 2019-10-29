@@ -18,37 +18,26 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import san.CustomTypeDefinition;
-import san.MarkingIntermediateNode;
-import san.MarkingLeafNode;
+import san.IntermediateNode;
+import san.Node;
 import san.SANPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Marking Intermediate Node</b></em>'.
+ * An implementation of the model object '<em><b>Intermediate Node</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link san.impl.MarkingIntermediateNodeImpl#getIntermediatenode <em>Intermediatenode</em>}</li>
- *   <li>{@link san.impl.MarkingIntermediateNodeImpl#getIndex <em>Index</em>}</li>
- *   <li>{@link san.impl.MarkingIntermediateNodeImpl#getDefinition <em>Definition</em>}</li>
- *   <li>{@link san.impl.MarkingIntermediateNodeImpl#getLeafnode <em>Leafnode</em>}</li>
+ *   <li>{@link san.impl.IntermediateNodeImpl#getIndex <em>Index</em>}</li>
+ *   <li>{@link san.impl.IntermediateNodeImpl#getDefinition <em>Definition</em>}</li>
+ *   <li>{@link san.impl.IntermediateNodeImpl#getLeafnode <em>Leafnode</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements MarkingIntermediateNode {
-	/**
-	 * The cached value of the '{@link #getIntermediatenode() <em>Intermediatenode</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIntermediatenode()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MarkingIntermediateNode> intermediatenode;
-
+public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 	/**
 	 * The default value of the '{@link #getIndex() <em>Index</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -87,14 +76,14 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MarkingLeafNode> leafnode;
+	protected EList<Node> leafnode;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MarkingIntermediateNodeImpl() {
+	protected IntermediateNodeImpl() {
 		super();
 	}
 
@@ -105,19 +94,7 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.MARKING_INTERMEDIATE_NODE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MarkingIntermediateNode> getIntermediatenode() {
-		if (intermediatenode == null) {
-			intermediatenode = new EObjectContainmentEList<MarkingIntermediateNode>(MarkingIntermediateNode.class, this, SANPackage.MARKING_INTERMEDIATE_NODE__INTERMEDIATENODE);
-		}
-		return intermediatenode;
+		return SANPackage.Literals.INTERMEDIATE_NODE;
 	}
 
 	/**
@@ -138,7 +115,7 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 		int oldIndex = index;
 		index = newIndex;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_INTERMEDIATE_NODE__INDEX, oldIndex, index));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.INTERMEDIATE_NODE__INDEX, oldIndex, index));
 	}
 
 	/**
@@ -152,7 +129,7 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 			definition = (CustomTypeDefinition)eResolveProxy(oldDefinition);
 			if (definition != oldDefinition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.MARKING_INTERMEDIATE_NODE__DEFINITION, oldDefinition, definition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.INTERMEDIATE_NODE__DEFINITION, oldDefinition, definition));
 			}
 		}
 		return definition;
@@ -176,7 +153,7 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 		CustomTypeDefinition oldDefinition = definition;
 		definition = newDefinition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_INTERMEDIATE_NODE__DEFINITION, oldDefinition, definition));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.INTERMEDIATE_NODE__DEFINITION, oldDefinition, definition));
 	}
 
 	/**
@@ -184,9 +161,9 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MarkingLeafNode> getLeafnode() {
+	public EList<Node> getLeafnode() {
 		if (leafnode == null) {
-			leafnode = new EObjectContainmentEList<MarkingLeafNode>(MarkingLeafNode.class, this, SANPackage.MARKING_INTERMEDIATE_NODE__LEAFNODE);
+			leafnode = new EObjectContainmentEList<Node>(Node.class, this, SANPackage.INTERMEDIATE_NODE__LEAFNODE);
 		}
 		return leafnode;
 	}
@@ -199,9 +176,7 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SANPackage.MARKING_INTERMEDIATE_NODE__INTERMEDIATENODE:
-				return ((InternalEList<?>)getIntermediatenode()).basicRemove(otherEnd, msgs);
-			case SANPackage.MARKING_INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
 				return ((InternalEList<?>)getLeafnode()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -215,14 +190,12 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANPackage.MARKING_INTERMEDIATE_NODE__INTERMEDIATENODE:
-				return getIntermediatenode();
-			case SANPackage.MARKING_INTERMEDIATE_NODE__INDEX:
+			case SANPackage.INTERMEDIATE_NODE__INDEX:
 				return getIndex();
-			case SANPackage.MARKING_INTERMEDIATE_NODE__DEFINITION:
+			case SANPackage.INTERMEDIATE_NODE__DEFINITION:
 				if (resolve) return getDefinition();
 				return basicGetDefinition();
-			case SANPackage.MARKING_INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
 				return getLeafnode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -237,19 +210,15 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANPackage.MARKING_INTERMEDIATE_NODE__INTERMEDIATENODE:
-				getIntermediatenode().clear();
-				getIntermediatenode().addAll((Collection<? extends MarkingIntermediateNode>)newValue);
-				return;
-			case SANPackage.MARKING_INTERMEDIATE_NODE__INDEX:
+			case SANPackage.INTERMEDIATE_NODE__INDEX:
 				setIndex((Integer)newValue);
 				return;
-			case SANPackage.MARKING_INTERMEDIATE_NODE__DEFINITION:
+			case SANPackage.INTERMEDIATE_NODE__DEFINITION:
 				setDefinition((CustomTypeDefinition)newValue);
 				return;
-			case SANPackage.MARKING_INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
 				getLeafnode().clear();
-				getLeafnode().addAll((Collection<? extends MarkingLeafNode>)newValue);
+				getLeafnode().addAll((Collection<? extends Node>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -263,16 +232,13 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_INTERMEDIATE_NODE__INTERMEDIATENODE:
-				getIntermediatenode().clear();
-				return;
-			case SANPackage.MARKING_INTERMEDIATE_NODE__INDEX:
+			case SANPackage.INTERMEDIATE_NODE__INDEX:
 				setIndex(INDEX_EDEFAULT);
 				return;
-			case SANPackage.MARKING_INTERMEDIATE_NODE__DEFINITION:
+			case SANPackage.INTERMEDIATE_NODE__DEFINITION:
 				setDefinition((CustomTypeDefinition)null);
 				return;
-			case SANPackage.MARKING_INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
 				getLeafnode().clear();
 				return;
 		}
@@ -287,13 +253,11 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANPackage.MARKING_INTERMEDIATE_NODE__INTERMEDIATENODE:
-				return intermediatenode != null && !intermediatenode.isEmpty();
-			case SANPackage.MARKING_INTERMEDIATE_NODE__INDEX:
+			case SANPackage.INTERMEDIATE_NODE__INDEX:
 				return index != INDEX_EDEFAULT;
-			case SANPackage.MARKING_INTERMEDIATE_NODE__DEFINITION:
+			case SANPackage.INTERMEDIATE_NODE__DEFINITION:
 				return definition != null;
-			case SANPackage.MARKING_INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
 				return leafnode != null && !leafnode.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -315,4 +279,4 @@ public class MarkingIntermediateNodeImpl extends MarkingExtendedImpl implements 
 		return result.toString();
 	}
 
-} //MarkingIntermediateNodeImpl
+} //IntermediateNodeImpl
