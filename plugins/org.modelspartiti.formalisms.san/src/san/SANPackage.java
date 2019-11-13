@@ -944,13 +944,22 @@ public interface SANPackage extends EPackage {
 	int EXPRESSION_MARKING__PLACE = EXPRESSION_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_MARKING__INDEX = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Expression Marking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_MARKING_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
+	int EXPRESSION_MARKING_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Expression Marking</em>' class.
@@ -1034,7 +1043,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getMarkingSimple()
 	 * @generated
 	 */
-	int MARKING_SIMPLE = 47;
+	int MARKING_SIMPLE = 45;
 
 	/**
 	 * The meta object id for the '{@link san.impl.MarkingGlobalVariableImpl <em>Marking Global Variable</em>}' class.
@@ -1044,7 +1053,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getMarkingGlobalVariable()
 	 * @generated
 	 */
-	int MARKING_GLOBAL_VARIABLE = 48;
+	int MARKING_GLOBAL_VARIABLE = 46;
 
 	/**
 	 * The meta object id for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
@@ -1054,7 +1063,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getMarkingExtended()
 	 * @generated
 	 */
-	int MARKING_EXTENDED = 45;
+	int MARKING_EXTENDED = 47;
 
 	/**
 	 * The meta object id for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -2135,42 +2144,6 @@ public interface SANPackage extends EPackage {
 	int FIELD_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Node</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_EXTENDED__NODE = MARKING_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Leafnode</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_EXTENDED__LEAFNODE = MARKING_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Marking Extended</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_EXTENDED_FEATURE_COUNT = MARKING_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Marking Extended</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_EXTENDED_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link san.impl.NodeImpl <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2178,80 +2151,17 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getNode()
 	 * @generated
 	 */
-	int NODE = 49;
+	int NODE = 48;
 
 	/**
-	 * The number of structural features of the '<em>Node</em>' class.
+	 * The meta object id for the '{@link san.impl.ArrayImpl <em>Array</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link san.impl.IntermediateNodeImpl <em>Intermediate Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.IntermediateNodeImpl
-	 * @see san.impl.SANPackageImpl#getIntermediateNode()
+	 * @see san.impl.ArrayImpl
+	 * @see san.impl.SANPackageImpl#getArray()
 	 * @generated
 	 */
-	int INTERMEDIATE_NODE = 46;
-
-	/**
-	 * The feature id for the '<em><b>Index</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIATE_NODE__INDEX = NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Definition</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIATE_NODE__DEFINITION = NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Leafnode</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIATE_NODE__LEAFNODE = NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Intermediate Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIATE_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Intermediate Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERMEDIATE_NODE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int ARRAY = 49;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2308,6 +2218,87 @@ public interface SANPackage extends EPackage {
 	int MARKING_GLOBAL_VARIABLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Node</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_EXTENDED__NODE = MARKING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Marking Extended</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_EXTENDED_FEATURE_COUNT = MARKING_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Marking Extended</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_EXTENDED_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Definition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__DEFINITION = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Leafnode</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__LEAFNODE = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link san.impl.LeafNodeArrayImpl <em>Leaf Node Array</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2318,22 +2309,13 @@ public interface SANPackage extends EPackage {
 	int LEAF_NODE_ARRAY = 50;
 
 	/**
-	 * The feature id for the '<em><b>Index</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEAF_NODE_ARRAY__INDEX = NODE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE_ARRAY__VALUE = NODE_FEATURE_COUNT + 1;
+	int LEAF_NODE_ARRAY__VALUE = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Leaf Node Array</em>' class.
@@ -2342,7 +2324,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE_ARRAY_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+	int LEAF_NODE_ARRAY_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Leaf Node Array</em>' class.
@@ -2400,41 +2382,169 @@ public interface SANPackage extends EPackage {
 	int LEAF_NODE_STRUCT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.LeafNodeImpl <em>Leaf Node</em>}' class.
+	 * The meta object id for the '{@link san.impl.ExpressionIfThenElseImpl <em>Expression If Then Else</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see san.impl.LeafNodeImpl
-	 * @see san.impl.SANPackageImpl#getLeafNode()
+	 * @see san.impl.ExpressionIfThenElseImpl
+	 * @see san.impl.SANPackageImpl#getExpressionIfThenElse()
 	 * @generated
 	 */
-	int LEAF_NODE = 52;
+	int EXPRESSION_IF_THEN_ELSE = 52;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE__VALUE = 0;
+	int EXPRESSION_IF_THEN_ELSE__CONDITION = EXPRESSION_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Leaf Node</em>' class.
+	 * The feature id for the '<em><b>If True</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE_FEATURE_COUNT = 1;
+	int EXPRESSION_IF_THEN_ELSE__IF_TRUE = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Leaf Node</em>' class.
+	 * The feature id for the '<em><b>If False</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE_OPERATION_COUNT = 0;
+	int EXPRESSION_IF_THEN_ELSE__IF_FALSE = EXPRESSION_SEGMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Expression If Then Else</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_IF_THEN_ELSE_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Expression If Then Else</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_IF_THEN_ELSE_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.ExpressionBinaryOperatorImpl <em>Expression Binary Operator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.ExpressionBinaryOperatorImpl
+	 * @see san.impl.SANPackageImpl#getExpressionBinaryOperator()
+	 * @generated
+	 */
+	int EXPRESSION_BINARY_OPERATOR = 53;
+
+	/**
+	 * The feature id for the '<em><b>Op1</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_BINARY_OPERATOR__OP1 = EXPRESSION_SEGMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Op2</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_BINARY_OPERATOR__OP2 = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Operator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_BINARY_OPERATOR__OPERATOR = EXPRESSION_SEGMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Expression Binary Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_BINARY_OPERATOR_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Expression Binary Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_BINARY_OPERATOR_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.ExpressionLoopImpl <em>Expression Loop</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.ExpressionLoopImpl
+	 * @see san.impl.SANPackageImpl#getExpressionLoop()
+	 * @generated
+	 */
+	int EXPRESSION_LOOP = 54;
+
+	/**
+	 * The feature id for the '<em><b>Do</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_LOOP__DO = EXPRESSION_SEGMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Begin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_LOOP__BEGIN = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_LOOP__END = EXPRESSION_SEGMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Expression Loop</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_LOOP_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Expression Loop</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_LOOP_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.VariableType <em>Variable Type</em>}' enum.
@@ -2444,7 +2554,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getVariableType()
 	 * @generated
 	 */
-	int VARIABLE_TYPE = 53;
+	int VARIABLE_TYPE = 55;
 
 	/**
 	 * The meta object id for the '{@link san.ExtendedPlaceType <em>Extended Place Type</em>}' enum.
@@ -2454,7 +2564,17 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExtendedPlaceType()
 	 * @generated
 	 */
-	int EXTENDED_PLACE_TYPE = 54;
+	int EXTENDED_PLACE_TYPE = 56;
+
+	/**
+	 * The meta object id for the '{@link san.BinaryOperatorType <em>Binary Operator Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.BinaryOperatorType
+	 * @see san.impl.SANPackageImpl#getBinaryOperatorType()
+	 * @generated
+	 */
+	int BINARY_OPERATOR_TYPE = 57;
 
 	/**
 	 * The meta object id for the '<em>Code Fragment</em>' data type.
@@ -2464,7 +2584,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getCodeFragment()
 	 * @generated
 	 */
-	int CODE_FRAGMENT = 55;
+	int CODE_FRAGMENT = 58;
 
 
 	/**
@@ -2968,6 +3088,17 @@ public interface SANPackage extends EPackage {
 	EReference getExpressionMarking_Place();
 
 	/**
+	 * Returns the meta object for the attribute '{@link san.ExpressionMarking#getIndex <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Index</em>'.
+	 * @see san.ExpressionMarking#getIndex()
+	 * @see #getExpressionMarking()
+	 * @generated
+	 */
+	EAttribute getExpressionMarking_Index();
+
+	/**
 	 * Returns the meta object for class '{@link san.ExpressionVariable <em>Expression Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3009,69 +3140,15 @@ public interface SANPackage extends EPackage {
 	EClass getMarkingExtended();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link san.MarkingExtended#getNode <em>Node</em>}'.
+	 * Returns the meta object for the containment reference '{@link san.MarkingExtended#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Node</em>'.
+	 * @return the meta object for the containment reference '<em>Node</em>'.
 	 * @see san.MarkingExtended#getNode()
 	 * @see #getMarkingExtended()
 	 * @generated
 	 */
 	EReference getMarkingExtended_Node();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.MarkingExtended#getLeafnode <em>Leafnode</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Leafnode</em>'.
-	 * @see san.MarkingExtended#getLeafnode()
-	 * @see #getMarkingExtended()
-	 * @generated
-	 */
-	EReference getMarkingExtended_Leafnode();
-
-	/**
-	 * Returns the meta object for class '{@link san.IntermediateNode <em>Intermediate Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Intermediate Node</em>'.
-	 * @see san.IntermediateNode
-	 * @generated
-	 */
-	EClass getIntermediateNode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link san.IntermediateNode#getIndex <em>Index</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Index</em>'.
-	 * @see san.IntermediateNode#getIndex()
-	 * @see #getIntermediateNode()
-	 * @generated
-	 */
-	EAttribute getIntermediateNode_Index();
-
-	/**
-	 * Returns the meta object for the reference '{@link san.IntermediateNode#getDefinition <em>Definition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Definition</em>'.
-	 * @see san.IntermediateNode#getDefinition()
-	 * @see #getIntermediateNode()
-	 * @generated
-	 */
-	EReference getIntermediateNode_Definition();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link san.IntermediateNode#getLeafnode <em>Leafnode</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Leafnode</em>'.
-	 * @see san.IntermediateNode#getLeafnode()
-	 * @see #getIntermediateNode()
-	 * @generated
-	 */
-	EReference getIntermediateNode_Leafnode();
 
 	/**
 	 * Returns the meta object for class '{@link san.GlobalVariable <em>Global Variable</em>}'.
@@ -3837,6 +3914,38 @@ public interface SANPackage extends EPackage {
 	EClass getNode();
 
 	/**
+	 * Returns the meta object for class '{@link san.Array <em>Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Array</em>'.
+	 * @see san.Array
+	 * @generated
+	 */
+	EClass getArray();
+
+	/**
+	 * Returns the meta object for the reference '{@link san.Array#getDefinition <em>Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Definition</em>'.
+	 * @see san.Array#getDefinition()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_Definition();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link san.Array#getLeafnode <em>Leafnode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Leafnode</em>'.
+	 * @see san.Array#getLeafnode()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_Leafnode();
+
+	/**
 	 * Returns the meta object for class '{@link san.LeafNodeArray <em>Leaf Node Array</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3845,17 +3954,6 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getLeafNodeArray();
-
-	/**
-	 * Returns the meta object for the attribute '{@link san.LeafNodeArray#getIndex <em>Index</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Index</em>'.
-	 * @see san.LeafNodeArray#getIndex()
-	 * @see #getLeafNodeArray()
-	 * @generated
-	 */
-	EAttribute getLeafNodeArray_Index();
 
 	/**
 	 * Returns the meta object for the attribute '{@link san.LeafNodeArray#getValue <em>Value</em>}'.
@@ -3901,25 +3999,133 @@ public interface SANPackage extends EPackage {
 	EAttribute getLeafNodeStruct_Value();
 
 	/**
-	 * Returns the meta object for class '{@link san.LeafNode <em>Leaf Node</em>}'.
+	 * Returns the meta object for class '{@link san.ExpressionIfThenElse <em>Expression If Then Else</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Leaf Node</em>'.
-	 * @see san.LeafNode
+	 * @return the meta object for class '<em>Expression If Then Else</em>'.
+	 * @see san.ExpressionIfThenElse
 	 * @generated
 	 */
-	EClass getLeafNode();
+	EClass getExpressionIfThenElse();
 
 	/**
-	 * Returns the meta object for the attribute '{@link san.LeafNode#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link san.ExpressionIfThenElse#getCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see san.LeafNode#getValue()
-	 * @see #getLeafNode()
+	 * @return the meta object for the containment reference '<em>Condition</em>'.
+	 * @see san.ExpressionIfThenElse#getCondition()
+	 * @see #getExpressionIfThenElse()
 	 * @generated
 	 */
-	EAttribute getLeafNode_Value();
+	EReference getExpressionIfThenElse_Condition();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.ExpressionIfThenElse#getIfTrue <em>If True</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>If True</em>'.
+	 * @see san.ExpressionIfThenElse#getIfTrue()
+	 * @see #getExpressionIfThenElse()
+	 * @generated
+	 */
+	EReference getExpressionIfThenElse_IfTrue();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.ExpressionIfThenElse#getIfFalse <em>If False</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>If False</em>'.
+	 * @see san.ExpressionIfThenElse#getIfFalse()
+	 * @see #getExpressionIfThenElse()
+	 * @generated
+	 */
+	EReference getExpressionIfThenElse_IfFalse();
+
+	/**
+	 * Returns the meta object for class '{@link san.ExpressionBinaryOperator <em>Expression Binary Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expression Binary Operator</em>'.
+	 * @see san.ExpressionBinaryOperator
+	 * @generated
+	 */
+	EClass getExpressionBinaryOperator();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.ExpressionBinaryOperator#getOp1 <em>Op1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Op1</em>'.
+	 * @see san.ExpressionBinaryOperator#getOp1()
+	 * @see #getExpressionBinaryOperator()
+	 * @generated
+	 */
+	EReference getExpressionBinaryOperator_Op1();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.ExpressionBinaryOperator#getOp2 <em>Op2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Op2</em>'.
+	 * @see san.ExpressionBinaryOperator#getOp2()
+	 * @see #getExpressionBinaryOperator()
+	 * @generated
+	 */
+	EReference getExpressionBinaryOperator_Op2();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.ExpressionBinaryOperator#getOperator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Operator</em>'.
+	 * @see san.ExpressionBinaryOperator#getOperator()
+	 * @see #getExpressionBinaryOperator()
+	 * @generated
+	 */
+	EAttribute getExpressionBinaryOperator_Operator();
+
+	/**
+	 * Returns the meta object for class '{@link san.ExpressionLoop <em>Expression Loop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expression Loop</em>'.
+	 * @see san.ExpressionLoop
+	 * @generated
+	 */
+	EClass getExpressionLoop();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link san.ExpressionLoop#getDo <em>Do</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Do</em>'.
+	 * @see san.ExpressionLoop#getDo()
+	 * @see #getExpressionLoop()
+	 * @generated
+	 */
+	EReference getExpressionLoop_Do();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.ExpressionLoop#getBegin <em>Begin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Begin</em>'.
+	 * @see san.ExpressionLoop#getBegin()
+	 * @see #getExpressionLoop()
+	 * @generated
+	 */
+	EReference getExpressionLoop_Begin();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.ExpressionLoop#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>End</em>'.
+	 * @see san.ExpressionLoop#getEnd()
+	 * @see #getExpressionLoop()
+	 * @generated
+	 */
+	EReference getExpressionLoop_End();
 
 	/**
 	 * Returns the meta object for enum '{@link san.VariableType <em>Variable Type</em>}'.
@@ -3940,6 +4146,16 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getExtendedPlaceType();
+
+	/**
+	 * Returns the meta object for enum '{@link san.BinaryOperatorType <em>Binary Operator Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Binary Operator Type</em>'.
+	 * @see san.BinaryOperatorType
+	 * @generated
+	 */
+	EEnum getBinaryOperatorType();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Code Fragment</em>}'.
@@ -4386,6 +4602,14 @@ public interface SANPackage extends EPackage {
 		EReference EXPRESSION_MARKING__PLACE = eINSTANCE.getExpressionMarking_Place();
 
 		/**
+		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION_MARKING__INDEX = eINSTANCE.getExpressionMarking_Index();
+
+		/**
 		 * The meta object literal for the '{@link san.impl.ExpressionVariableImpl <em>Expression Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4424,54 +4648,12 @@ public interface SANPackage extends EPackage {
 		EClass MARKING_EXTENDED = eINSTANCE.getMarkingExtended();
 
 		/**
-		 * The meta object literal for the '<em><b>Node</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Node</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference MARKING_EXTENDED__NODE = eINSTANCE.getMarkingExtended_Node();
-
-		/**
-		 * The meta object literal for the '<em><b>Leafnode</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MARKING_EXTENDED__LEAFNODE = eINSTANCE.getMarkingExtended_Leafnode();
-
-		/**
-		 * The meta object literal for the '{@link san.impl.IntermediateNodeImpl <em>Intermediate Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.IntermediateNodeImpl
-		 * @see san.impl.SANPackageImpl#getIntermediateNode()
-		 * @generated
-		 */
-		EClass INTERMEDIATE_NODE = eINSTANCE.getIntermediateNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INTERMEDIATE_NODE__INDEX = eINSTANCE.getIntermediateNode_Index();
-
-		/**
-		 * The meta object literal for the '<em><b>Definition</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INTERMEDIATE_NODE__DEFINITION = eINSTANCE.getIntermediateNode_Definition();
-
-		/**
-		 * The meta object literal for the '<em><b>Leafnode</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INTERMEDIATE_NODE__LEAFNODE = eINSTANCE.getIntermediateNode_Leafnode();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -5108,6 +5290,32 @@ public interface SANPackage extends EPackage {
 		EClass NODE = eINSTANCE.getNode();
 
 		/**
+		 * The meta object literal for the '{@link san.impl.ArrayImpl <em>Array</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.ArrayImpl
+		 * @see san.impl.SANPackageImpl#getArray()
+		 * @generated
+		 */
+		EClass ARRAY = eINSTANCE.getArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Definition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARRAY__DEFINITION = eINSTANCE.getArray_Definition();
+
+		/**
+		 * The meta object literal for the '<em><b>Leafnode</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARRAY__LEAFNODE = eINSTANCE.getArray_Leafnode();
+
+		/**
 		 * The meta object literal for the '{@link san.impl.LeafNodeArrayImpl <em>Leaf Node Array</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5116,14 +5324,6 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EClass LEAF_NODE_ARRAY = eINSTANCE.getLeafNodeArray();
-
-		/**
-		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LEAF_NODE_ARRAY__INDEX = eINSTANCE.getLeafNodeArray_Index();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -5160,22 +5360,106 @@ public interface SANPackage extends EPackage {
 		EAttribute LEAF_NODE_STRUCT__VALUE = eINSTANCE.getLeafNodeStruct_Value();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.LeafNodeImpl <em>Leaf Node</em>}' class.
+		 * The meta object literal for the '{@link san.impl.ExpressionIfThenElseImpl <em>Expression If Then Else</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see san.impl.LeafNodeImpl
-		 * @see san.impl.SANPackageImpl#getLeafNode()
+		 * @see san.impl.ExpressionIfThenElseImpl
+		 * @see san.impl.SANPackageImpl#getExpressionIfThenElse()
 		 * @generated
 		 */
-		EClass LEAF_NODE = eINSTANCE.getLeafNode();
+		EClass EXPRESSION_IF_THEN_ELSE = eINSTANCE.getExpressionIfThenElse();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LEAF_NODE__VALUE = eINSTANCE.getLeafNode_Value();
+		EReference EXPRESSION_IF_THEN_ELSE__CONDITION = eINSTANCE.getExpressionIfThenElse_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>If True</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION_IF_THEN_ELSE__IF_TRUE = eINSTANCE.getExpressionIfThenElse_IfTrue();
+
+		/**
+		 * The meta object literal for the '<em><b>If False</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION_IF_THEN_ELSE__IF_FALSE = eINSTANCE.getExpressionIfThenElse_IfFalse();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.ExpressionBinaryOperatorImpl <em>Expression Binary Operator</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.ExpressionBinaryOperatorImpl
+		 * @see san.impl.SANPackageImpl#getExpressionBinaryOperator()
+		 * @generated
+		 */
+		EClass EXPRESSION_BINARY_OPERATOR = eINSTANCE.getExpressionBinaryOperator();
+
+		/**
+		 * The meta object literal for the '<em><b>Op1</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION_BINARY_OPERATOR__OP1 = eINSTANCE.getExpressionBinaryOperator_Op1();
+
+		/**
+		 * The meta object literal for the '<em><b>Op2</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION_BINARY_OPERATOR__OP2 = eINSTANCE.getExpressionBinaryOperator_Op2();
+
+		/**
+		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION_BINARY_OPERATOR__OPERATOR = eINSTANCE.getExpressionBinaryOperator_Operator();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.ExpressionLoopImpl <em>Expression Loop</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.ExpressionLoopImpl
+		 * @see san.impl.SANPackageImpl#getExpressionLoop()
+		 * @generated
+		 */
+		EClass EXPRESSION_LOOP = eINSTANCE.getExpressionLoop();
+
+		/**
+		 * The meta object literal for the '<em><b>Do</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION_LOOP__DO = eINSTANCE.getExpressionLoop_Do();
+
+		/**
+		 * The meta object literal for the '<em><b>Begin</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION_LOOP__BEGIN = eINSTANCE.getExpressionLoop_Begin();
+
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION_LOOP__END = eINSTANCE.getExpressionLoop_End();
 
 		/**
 		 * The meta object literal for the '{@link san.VariableType <em>Variable Type</em>}' enum.
@@ -5196,6 +5480,16 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum EXTENDED_PLACE_TYPE = eINSTANCE.getExtendedPlaceType();
+
+		/**
+		 * The meta object literal for the '{@link san.BinaryOperatorType <em>Binary Operator Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.BinaryOperatorType
+		 * @see san.impl.SANPackageImpl#getBinaryOperatorType()
+		 * @generated
+		 */
+		EEnum BINARY_OPERATOR_TYPE = eINSTANCE.getBinaryOperatorType();
 
 		/**
 		 * The meta object literal for the '<em>Code Fragment</em>' data type.

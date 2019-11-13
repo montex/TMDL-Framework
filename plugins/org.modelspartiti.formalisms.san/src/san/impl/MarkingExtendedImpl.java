@@ -2,17 +2,12 @@
  */
 package san.impl;
 
-import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-import san.LeafNode;
 import san.MarkingExtended;
 import san.Node;
 import san.SANPackage;
@@ -26,31 +21,20 @@ import san.SANPackage;
  * </p>
  * <ul>
  *   <li>{@link san.impl.MarkingExtendedImpl#getNode <em>Node</em>}</li>
- *   <li>{@link san.impl.MarkingExtendedImpl#getLeafnode <em>Leafnode</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended {
 	/**
-	 * The cached value of the '{@link #getNode() <em>Node</em>}' containment reference list.
+	 * The cached value of the '{@link #getNode() <em>Node</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getNode()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Node> node;
-	/**
-	 * The cached value of the '{@link #getLeafnode() <em>Leafnode</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLeafnode()
-	 * @generated
-	 * @ordered
-	 */
-	protected LeafNode leafnode;
-
+	protected Node node;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,10 +59,7 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Node> getNode() {
-		if (node == null) {
-			node = new EObjectContainmentEList<Node>(Node.class, this, SANPackage.MARKING_EXTENDED__NODE);
-		}
+	public Node getNode() {
 		return node;
 	}
 
@@ -87,20 +68,11 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LeafNode getLeafnode() {
-		return leafnode;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetLeafnode(LeafNode newLeafnode, NotificationChain msgs) {
-		LeafNode oldLeafnode = leafnode;
-		leafnode = newLeafnode;
+	public NotificationChain basicSetNode(Node newNode, NotificationChain msgs) {
+		Node oldNode = node;
+		node = newNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_EXTENDED__LEAFNODE, oldLeafnode, newLeafnode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_EXTENDED__NODE, oldNode, newNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -111,18 +83,18 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLeafnode(LeafNode newLeafnode) {
-		if (newLeafnode != leafnode) {
+	public void setNode(Node newNode) {
+		if (newNode != node) {
 			NotificationChain msgs = null;
-			if (leafnode != null)
-				msgs = ((InternalEObject)leafnode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SANPackage.MARKING_EXTENDED__LEAFNODE, null, msgs);
-			if (newLeafnode != null)
-				msgs = ((InternalEObject)newLeafnode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SANPackage.MARKING_EXTENDED__LEAFNODE, null, msgs);
-			msgs = basicSetLeafnode(newLeafnode, msgs);
+			if (node != null)
+				msgs = ((InternalEObject)node).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SANPackage.MARKING_EXTENDED__NODE, null, msgs);
+			if (newNode != null)
+				msgs = ((InternalEObject)newNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SANPackage.MARKING_EXTENDED__NODE, null, msgs);
+			msgs = basicSetNode(newNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_EXTENDED__LEAFNODE, newLeafnode, newLeafnode));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.MARKING_EXTENDED__NODE, newNode, newNode));
 	}
 
 	/**
@@ -134,9 +106,7 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case SANPackage.MARKING_EXTENDED__NODE:
-				return ((InternalEList<?>)getNode()).basicRemove(otherEnd, msgs);
-			case SANPackage.MARKING_EXTENDED__LEAFNODE:
-				return basicSetLeafnode(null, msgs);
+				return basicSetNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -151,8 +121,6 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 		switch (featureID) {
 			case SANPackage.MARKING_EXTENDED__NODE:
 				return getNode();
-			case SANPackage.MARKING_EXTENDED__LEAFNODE:
-				return getLeafnode();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,11 +135,7 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case SANPackage.MARKING_EXTENDED__NODE:
-				getNode().clear();
-				getNode().addAll((Collection<? extends Node>)newValue);
-				return;
-			case SANPackage.MARKING_EXTENDED__LEAFNODE:
-				setLeafnode((LeafNode)newValue);
+				setNode((Node)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,10 +150,7 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case SANPackage.MARKING_EXTENDED__NODE:
-				getNode().clear();
-				return;
-			case SANPackage.MARKING_EXTENDED__LEAFNODE:
-				setLeafnode((LeafNode)null);
+				setNode((Node)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -204,9 +165,7 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case SANPackage.MARKING_EXTENDED__NODE:
-				return node != null && !node.isEmpty();
-			case SANPackage.MARKING_EXTENDED__LEAFNODE:
-				return leafnode != null;
+				return node != null;
 		}
 		return super.eIsSet(featureID);
 	}

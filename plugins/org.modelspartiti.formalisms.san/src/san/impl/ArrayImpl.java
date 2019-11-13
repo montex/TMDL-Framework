@@ -17,47 +17,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import san.Array;
 import san.CustomTypeDefinition;
-import san.IntermediateNode;
 import san.Node;
 import san.SANPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Intermediate Node</b></em>'.
+ * An implementation of the model object '<em><b>Array</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link san.impl.IntermediateNodeImpl#getIndex <em>Index</em>}</li>
- *   <li>{@link san.impl.IntermediateNodeImpl#getDefinition <em>Definition</em>}</li>
- *   <li>{@link san.impl.IntermediateNodeImpl#getLeafnode <em>Leafnode</em>}</li>
+ *   <li>{@link san.impl.ArrayImpl#getDefinition <em>Definition</em>}</li>
+ *   <li>{@link san.impl.ArrayImpl#getLeafnode <em>Leafnode</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
-	/**
-	 * The default value of the '{@link #getIndex() <em>Index</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIndex()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int INDEX_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIndex() <em>Index</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIndex()
-	 * @generated
-	 * @ordered
-	 */
-	protected int index = INDEX_EDEFAULT;
-
+public class ArrayImpl extends NodeImpl implements Array {
 	/**
 	 * The cached value of the '{@link #getDefinition() <em>Definition</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -83,7 +62,7 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntermediateNodeImpl() {
+	protected ArrayImpl() {
 		super();
 	}
 
@@ -94,28 +73,7 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANPackage.Literals.INTERMEDIATE_NODE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getIndex() {
-		return index;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIndex(int newIndex) {
-		int oldIndex = index;
-		index = newIndex;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.INTERMEDIATE_NODE__INDEX, oldIndex, index));
+		return SANPackage.Literals.ARRAY;
 	}
 
 	/**
@@ -129,7 +87,7 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 			definition = (CustomTypeDefinition)eResolveProxy(oldDefinition);
 			if (definition != oldDefinition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.INTERMEDIATE_NODE__DEFINITION, oldDefinition, definition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.ARRAY__DEFINITION, oldDefinition, definition));
 			}
 		}
 		return definition;
@@ -153,7 +111,7 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 		CustomTypeDefinition oldDefinition = definition;
 		definition = newDefinition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.INTERMEDIATE_NODE__DEFINITION, oldDefinition, definition));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.ARRAY__DEFINITION, oldDefinition, definition));
 	}
 
 	/**
@@ -163,7 +121,7 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 	 */
 	public EList<Node> getLeafnode() {
 		if (leafnode == null) {
-			leafnode = new EObjectContainmentEList<Node>(Node.class, this, SANPackage.INTERMEDIATE_NODE__LEAFNODE);
+			leafnode = new EObjectContainmentEList<Node>(Node.class, this, SANPackage.ARRAY__LEAFNODE);
 		}
 		return leafnode;
 	}
@@ -176,7 +134,7 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.ARRAY__LEAFNODE:
 				return ((InternalEList<?>)getLeafnode()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -190,12 +148,10 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANPackage.INTERMEDIATE_NODE__INDEX:
-				return getIndex();
-			case SANPackage.INTERMEDIATE_NODE__DEFINITION:
+			case SANPackage.ARRAY__DEFINITION:
 				if (resolve) return getDefinition();
 				return basicGetDefinition();
-			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.ARRAY__LEAFNODE:
 				return getLeafnode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -210,13 +166,10 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANPackage.INTERMEDIATE_NODE__INDEX:
-				setIndex((Integer)newValue);
-				return;
-			case SANPackage.INTERMEDIATE_NODE__DEFINITION:
+			case SANPackage.ARRAY__DEFINITION:
 				setDefinition((CustomTypeDefinition)newValue);
 				return;
-			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.ARRAY__LEAFNODE:
 				getLeafnode().clear();
 				getLeafnode().addAll((Collection<? extends Node>)newValue);
 				return;
@@ -232,13 +185,10 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANPackage.INTERMEDIATE_NODE__INDEX:
-				setIndex(INDEX_EDEFAULT);
-				return;
-			case SANPackage.INTERMEDIATE_NODE__DEFINITION:
+			case SANPackage.ARRAY__DEFINITION:
 				setDefinition((CustomTypeDefinition)null);
 				return;
-			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.ARRAY__LEAFNODE:
 				getLeafnode().clear();
 				return;
 		}
@@ -253,30 +203,12 @@ public class IntermediateNodeImpl extends NodeImpl implements IntermediateNode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANPackage.INTERMEDIATE_NODE__INDEX:
-				return index != INDEX_EDEFAULT;
-			case SANPackage.INTERMEDIATE_NODE__DEFINITION:
+			case SANPackage.ARRAY__DEFINITION:
 				return definition != null;
-			case SANPackage.INTERMEDIATE_NODE__LEAFNODE:
+			case SANPackage.ARRAY__LEAFNODE:
 				return leafnode != null && !leafnode.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (index: ");
-		result.append(index);
-		result.append(')');
-		return result.toString();
-	}
-
-} //IntermediateNodeImpl
+} //ArrayImpl

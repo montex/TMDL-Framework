@@ -376,20 +376,6 @@ public class SANSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANPackage.MARKING_EXTENDED: {
-				MarkingExtended markingExtended = (MarkingExtended)theEObject;
-				T result = caseMarkingExtended(markingExtended);
-				if (result == null) result = caseMarking(markingExtended);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.INTERMEDIATE_NODE: {
-				IntermediateNode intermediateNode = (IntermediateNode)theEObject;
-				T result = caseIntermediateNode(intermediateNode);
-				if (result == null) result = caseNode(intermediateNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case SANPackage.MARKING_SIMPLE: {
 				MarkingSimple markingSimple = (MarkingSimple)theEObject;
 				T result = caseMarkingSimple(markingSimple);
@@ -404,9 +390,23 @@ public class SANSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SANPackage.MARKING_EXTENDED: {
+				MarkingExtended markingExtended = (MarkingExtended)theEObject;
+				T result = caseMarkingExtended(markingExtended);
+				if (result == null) result = caseMarking(markingExtended);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SANPackage.NODE: {
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.ARRAY: {
+				Array array = (Array)theEObject;
+				T result = caseArray(array);
+				if (result == null) result = caseNode(array);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -424,9 +424,24 @@ public class SANSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANPackage.LEAF_NODE: {
-				LeafNode leafNode = (LeafNode)theEObject;
-				T result = caseLeafNode(leafNode);
+			case SANPackage.EXPRESSION_IF_THEN_ELSE: {
+				ExpressionIfThenElse expressionIfThenElse = (ExpressionIfThenElse)theEObject;
+				T result = caseExpressionIfThenElse(expressionIfThenElse);
+				if (result == null) result = caseExpressionSegment(expressionIfThenElse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.EXPRESSION_BINARY_OPERATOR: {
+				ExpressionBinaryOperator expressionBinaryOperator = (ExpressionBinaryOperator)theEObject;
+				T result = caseExpressionBinaryOperator(expressionBinaryOperator);
+				if (result == null) result = caseExpressionSegment(expressionBinaryOperator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.EXPRESSION_LOOP: {
+				ExpressionLoop expressionLoop = (ExpressionLoop)theEObject;
+				T result = caseExpressionLoop(expressionLoop);
+				if (result == null) result = caseExpressionSegment(expressionLoop);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -731,21 +746,6 @@ public class SANSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMarkingExtended(MarkingExtended object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Intermediate Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Intermediate Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIntermediateNode(IntermediateNode object) {
 		return null;
 	}
 
@@ -1185,6 +1185,21 @@ public class SANSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Array</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArray(Array object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Leaf Node Array</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1215,17 +1230,47 @@ public class SANSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Leaf Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Expression If Then Else</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Leaf Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Expression If Then Else</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLeafNode(LeafNode object) {
+	public T caseExpressionIfThenElse(ExpressionIfThenElse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expression Binary Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expression Binary Operator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpressionBinaryOperator(ExpressionBinaryOperator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Expression Loop</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Expression Loop</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExpressionLoop(ExpressionLoop object) {
 		return null;
 	}
 

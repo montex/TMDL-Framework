@@ -14,23 +14,23 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import san.MarkingLeafNode;
+import san.LeafNodeStruct;
 import san.SANPackage;
 
 /**
- * This is the item provider adapter for a {@link san.MarkingLeafNode} object.
+ * This is the item provider adapter for a {@link san.LeafNodeStruct} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MarkingLeafNodeItemProvider extends MarkingExtendedItemProvider {
+public class LeafNodeStructItemProvider extends NodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MarkingLeafNodeItemProvider(AdapterFactory adapterFactory) {
+	public LeafNodeStructItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,30 +45,30 @@ public class MarkingLeafNodeItemProvider extends MarkingExtendedItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIndexPropertyDescriptor(object);
+			addDefinitionFieldPropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Index feature.
+	 * This adds a property descriptor for the Definition Field feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIndexPropertyDescriptor(Object object) {
+	protected void addDefinitionFieldPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MarkingLeafNode_index_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MarkingLeafNode_index_feature", "_UI_MarkingLeafNode_type"),
-				 SANPackage.Literals.MARKING_LEAF_NODE__INDEX,
+				 getString("_UI_LeafNodeStruct_definitionField_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LeafNodeStruct_definitionField_feature", "_UI_LeafNodeStruct_type"),
+				 SANPackage.Literals.LEAF_NODE_STRUCT__DEFINITION_FIELD,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -84,9 +84,9 @@ public class MarkingLeafNodeItemProvider extends MarkingExtendedItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MarkingLeafNode_value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MarkingLeafNode_value_feature", "_UI_MarkingLeafNode_type"),
-				 SANPackage.Literals.MARKING_LEAF_NODE__VALUE,
+				 getString("_UI_LeafNodeStruct_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LeafNodeStruct_value_feature", "_UI_LeafNodeStruct_type"),
+				 SANPackage.Literals.LEAF_NODE_STRUCT__VALUE,
 				 true,
 				 false,
 				 false,
@@ -96,14 +96,14 @@ public class MarkingLeafNodeItemProvider extends MarkingExtendedItemProvider {
 	}
 
 	/**
-	 * This returns MarkingLeafNode.gif.
+	 * This returns LeafNodeStruct.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MarkingLeafNode"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/LeafNodeStruct"));
 	}
 
 	/**
@@ -114,8 +114,10 @@ public class MarkingLeafNodeItemProvider extends MarkingExtendedItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		MarkingLeafNode markingLeafNode = (MarkingLeafNode)object;
-		return getString("_UI_MarkingLeafNode_type") + " " + markingLeafNode.getIndex();
+		String label = ((LeafNodeStruct)object).getValue();
+		return label == null || label.length() == 0 ?
+			getString("_UI_LeafNodeStruct_type") :
+			getString("_UI_LeafNodeStruct_type") + " " + label;
 	}
 
 
@@ -130,9 +132,8 @@ public class MarkingLeafNodeItemProvider extends MarkingExtendedItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(MarkingLeafNode.class)) {
-			case SANPackage.MARKING_LEAF_NODE__INDEX:
-			case SANPackage.MARKING_LEAF_NODE__VALUE:
+		switch (notification.getFeatureID(LeafNodeStruct.class)) {
+			case SANPackage.LEAF_NODE_STRUCT__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

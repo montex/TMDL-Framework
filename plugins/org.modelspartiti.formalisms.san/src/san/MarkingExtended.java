@@ -2,9 +2,6 @@
  */
 package san;
 
-import org.eclipse.emf.common.util.EList;
-
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Marking Extended</b></em>'.
@@ -15,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link san.MarkingExtended#getNode <em>Node</em>}</li>
- *   <li>{@link san.MarkingExtended#getLeafnode <em>Leafnode</em>}</li>
  * </ul>
  *
  * @see san.SANPackage#getMarkingExtended()
@@ -25,44 +21,28 @@ import org.eclipse.emf.common.util.EList;
 public interface MarkingExtended extends Marking {
 
 	/**
-	 * Returns the value of the '<em><b>Node</b></em>' containment reference list.
-	 * The list contents are of type {@link san.Node}.
+	 * Returns the value of the '<em><b>Node</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Node</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Node</em>' containment reference list.
+	 * @return the value of the '<em>Node</em>' containment reference.
+	 * @see #setNode(Node)
 	 * @see san.SANPackage#getMarkingExtended_Node()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Node> getNode();
+	Node getNode();
 
 	/**
-	 * Returns the value of the '<em><b>Leafnode</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Leafnode</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Leafnode</em>' containment reference.
-	 * @see #setLeafnode(LeafNode)
-	 * @see san.SANPackage#getMarkingExtended_Leafnode()
-	 * @model containment="true"
-	 * @generated
-	 */
-	LeafNode getLeafnode();
-
-	/**
-	 * Sets the value of the '{@link san.MarkingExtended#getLeafnode <em>Leafnode</em>}' containment reference.
+	 * Sets the value of the '{@link san.MarkingExtended#getNode <em>Node</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Leafnode</em>' containment reference.
-	 * @see #getLeafnode()
+	 * @param value the new value of the '<em>Node</em>' containment reference.
+	 * @see #getNode()
 	 * @generated
 	 */
-	void setLeafnode(LeafNode value);
+	void setNode(Node value);
 } // MarkingExtended

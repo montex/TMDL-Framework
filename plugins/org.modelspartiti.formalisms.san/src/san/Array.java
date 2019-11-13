@@ -6,49 +6,22 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Intermediate Node</b></em>'.
+ * A representation of the model object '<em><b>Array</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link san.IntermediateNode#getIndex <em>Index</em>}</li>
- *   <li>{@link san.IntermediateNode#getDefinition <em>Definition</em>}</li>
- *   <li>{@link san.IntermediateNode#getLeafnode <em>Leafnode</em>}</li>
+ *   <li>{@link san.Array#getDefinition <em>Definition</em>}</li>
+ *   <li>{@link san.Array#getLeafnode <em>Leafnode</em>}</li>
  * </ul>
  *
- * @see san.SANPackage#getIntermediateNode()
+ * @see san.SANPackage#getArray()
  * @model
  * @generated
  */
-public interface IntermediateNode extends Node {
-	/**
-	 * Returns the value of the '<em><b>Index</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Index</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Index</em>' attribute.
-	 * @see #setIndex(int)
-	 * @see san.SANPackage#getIntermediateNode_Index()
-	 * @model
-	 * @generated
-	 */
-	int getIndex();
-
-	/**
-	 * Sets the value of the '{@link san.IntermediateNode#getIndex <em>Index</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Index</em>' attribute.
-	 * @see #getIndex()
-	 * @generated
-	 */
-	void setIndex(int value);
-
+public interface Array extends Node {
 	/**
 	 * Returns the value of the '<em><b>Definition</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -59,14 +32,14 @@ public interface IntermediateNode extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Definition</em>' reference.
 	 * @see #setDefinition(CustomTypeDefinition)
-	 * @see san.SANPackage#getIntermediateNode_Definition()
+	 * @see san.SANPackage#getArray_Definition()
 	 * @model required="true"
 	 * @generated
 	 */
 	CustomTypeDefinition getDefinition();
 
 	/**
-	 * Sets the value of the '{@link san.IntermediateNode#getDefinition <em>Definition</em>}' reference.
+	 * Sets the value of the '{@link san.Array#getDefinition <em>Definition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Definition</em>' reference.
@@ -85,10 +58,10 @@ public interface IntermediateNode extends Node {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Leafnode</em>' containment reference list.
-	 * @see san.SANPackage#getIntermediateNode_Leafnode()
+	 * @see san.SANPackage#getArray_Leafnode()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Node> getLeafnode();
 
-} // IntermediateNode
+} // Array

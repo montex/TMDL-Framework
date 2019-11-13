@@ -249,14 +249,6 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createFieldAdapter();
 			}
 			@Override
-			public Adapter caseMarkingExtended(MarkingExtended object) {
-				return createMarkingExtendedAdapter();
-			}
-			@Override
-			public Adapter caseIntermediateNode(IntermediateNode object) {
-				return createIntermediateNodeAdapter();
-			}
-			@Override
 			public Adapter caseMarkingSimple(MarkingSimple object) {
 				return createMarkingSimpleAdapter();
 			}
@@ -265,8 +257,16 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createMarkingGlobalVariableAdapter();
 			}
 			@Override
+			public Adapter caseMarkingExtended(MarkingExtended object) {
+				return createMarkingExtendedAdapter();
+			}
+			@Override
 			public Adapter caseNode(Node object) {
 				return createNodeAdapter();
+			}
+			@Override
+			public Adapter caseArray(Array object) {
+				return createArrayAdapter();
 			}
 			@Override
 			public Adapter caseLeafNodeArray(LeafNodeArray object) {
@@ -277,8 +277,16 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createLeafNodeStructAdapter();
 			}
 			@Override
-			public Adapter caseLeafNode(LeafNode object) {
-				return createLeafNodeAdapter();
+			public Adapter caseExpressionIfThenElse(ExpressionIfThenElse object) {
+				return createExpressionIfThenElseAdapter();
+			}
+			@Override
+			public Adapter caseExpressionBinaryOperator(ExpressionBinaryOperator object) {
+				return createExpressionBinaryOperatorAdapter();
+			}
+			@Override
+			public Adapter caseExpressionLoop(ExpressionLoop object) {
+				return createExpressionLoopAdapter();
 			}
 			@Override
 			public Adapter caseConcreteModel(ConcreteModel object) {
@@ -581,20 +589,6 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMarkingExtendedAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.IntermediateNode <em>Intermediate Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.IntermediateNode
-	 * @generated
-	 */
-	public Adapter createIntermediateNodeAdapter() {
 		return null;
 	}
 
@@ -1005,6 +999,20 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link san.Array <em>Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.Array
+	 * @generated
+	 */
+	public Adapter createArrayAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link san.LeafNodeArray <em>Leaf Node Array</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1033,16 +1041,44 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link san.LeafNode <em>Leaf Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link san.ExpressionIfThenElse <em>Expression If Then Else</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see san.LeafNode
+	 * @see san.ExpressionIfThenElse
 	 * @generated
 	 */
-	public Adapter createLeafNodeAdapter() {
+	public Adapter createExpressionIfThenElseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.ExpressionBinaryOperator <em>Expression Binary Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.ExpressionBinaryOperator
+	 * @generated
+	 */
+	public Adapter createExpressionBinaryOperatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.ExpressionLoop <em>Expression Loop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.ExpressionLoop
+	 * @generated
+	 */
+	public Adapter createExpressionLoopAdapter() {
 		return null;
 	}
 

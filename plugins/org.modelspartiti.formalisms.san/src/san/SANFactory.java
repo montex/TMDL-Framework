@@ -355,13 +355,13 @@ public interface SANFactory extends EFactory {
 	MarkingExtended createMarkingExtended();
 
 	/**
-	 * Returns a new object of class '<em>Intermediate Node</em>'.
+	 * Returns a new object of class '<em>Array</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Intermediate Node</em>'.
+	 * @return a new object of class '<em>Array</em>'.
 	 * @generated
 	 */
-	IntermediateNode createIntermediateNode();
+	Array createArray();
 
 	/**
 	 * Returns a new object of class '<em>Marking Simple</em>'.
@@ -400,13 +400,31 @@ public interface SANFactory extends EFactory {
 	LeafNodeStruct createLeafNodeStruct();
 
 	/**
-	 * Returns a new object of class '<em>Leaf Node</em>'.
+	 * Returns a new object of class '<em>Expression If Then Else</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Leaf Node</em>'.
+	 * @return a new object of class '<em>Expression If Then Else</em>'.
 	 * @generated
 	 */
-	LeafNode createLeafNode();
+	ExpressionIfThenElse createExpressionIfThenElse();
+
+	/**
+	 * Returns a new object of class '<em>Expression Binary Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expression Binary Operator</em>'.
+	 * @generated
+	 */
+	ExpressionBinaryOperator createExpressionBinaryOperator();
+
+	/**
+	 * Returns a new object of class '<em>Expression Loop</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Expression Loop</em>'.
+	 * @generated
+	 */
+	ExpressionLoop createExpressionLoop();
 
 	/**
 	 * Returns the package supported by this factory.
