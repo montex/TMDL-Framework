@@ -34,7 +34,7 @@ public interface Place extends NamedElement {
 	 * @return the value of the '<em>Is Extended</em>' attribute.
 	 * @see san.SANPackage#getPlace_IsExtended()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='type.oclIsTypeOf(PrimitiveType) and type.oclAsType(PrimitiveType).type &lt;&gt; ExtendedPlaceType::short'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='type.oclIsTypeOf(ComplexType) or (type.oclIsTypeOf(PrimitiveType) and type.oclAsType(PrimitiveType).type &lt;&gt; ExtendedPlaceType::short)'"
 	 * @generated
 	 */
 	boolean isIsExtended();

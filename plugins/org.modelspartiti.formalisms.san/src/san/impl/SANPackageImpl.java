@@ -2563,7 +2563,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		  (getPlace_IsExtended(),
 		   source,
 		   new String[] {
-			   "derivation", "type.oclIsTypeOf(PrimitiveType) and type.oclAsType(PrimitiveType).type <> ExtendedPlaceType::short"
+			   "derivation", "type.oclIsTypeOf(ComplexType) or (type.oclIsTypeOf(PrimitiveType) and type.oclAsType(PrimitiveType).type <> ExtendedPlaceType::short)"
 		   });
 	}
 
