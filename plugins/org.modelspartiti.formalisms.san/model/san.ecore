@@ -326,6 +326,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LeafNodeGlobalVariable" eSuperTypes="#//LeafNode">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//GlobalVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="#//GlobalVariable"/>
   </eClassifiers>
 </ecore:EPackage>

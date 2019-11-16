@@ -31,7 +31,7 @@ public interface LeafNodeGlobalVariable extends LeafNode {
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(GlobalVariable)
 	 * @see san.SANPackage#getLeafNodeGlobalVariable_Variable()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	GlobalVariable getVariable();
