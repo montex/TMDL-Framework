@@ -97,11 +97,12 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.MARKING_GLOBAL_VARIABLE: return createMarkingGlobalVariable();
 			case SANPackage.MARKING_EXTENDED: return createMarkingExtended();
 			case SANPackage.ARRAY: return createArray();
-			case SANPackage.LEAF_NODE_ARRAY: return createLeafNodeArray();
+			case SANPackage.LEAF_NODE_STRING: return createLeafNodeString();
 			case SANPackage.LEAF_NODE_STRUCT: return createLeafNodeStruct();
 			case SANPackage.EXPRESSION_IF_THEN_ELSE: return createExpressionIfThenElse();
 			case SANPackage.EXPRESSION_BINARY_OPERATOR: return createExpressionBinaryOperator();
 			case SANPackage.EXPRESSION_LOOP: return createExpressionLoop();
+			case SANPackage.LEAF_NODE_GLOBAL_VARIABLE: return createLeafNodeGlobalVariable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -534,6 +535,16 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public LeafNodeString createLeafNodeString() {
+		LeafNodeStringImpl leafNodeString = new LeafNodeStringImpl();
+		return leafNodeString;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MarkingSimple createMarkingSimple() {
 		MarkingSimpleImpl markingSimple = new MarkingSimpleImpl();
 		return markingSimple;
@@ -547,16 +558,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public MarkingGlobalVariable createMarkingGlobalVariable() {
 		MarkingGlobalVariableImpl markingGlobalVariable = new MarkingGlobalVariableImpl();
 		return markingGlobalVariable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LeafNodeArray createLeafNodeArray() {
-		LeafNodeArrayImpl leafNodeArray = new LeafNodeArrayImpl();
-		return leafNodeArray;
 	}
 
 	/**
@@ -597,6 +598,16 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public ExpressionLoop createExpressionLoop() {
 		ExpressionLoopImpl expressionLoop = new ExpressionLoopImpl();
 		return expressionLoop;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LeafNodeGlobalVariable createLeafNodeGlobalVariable() {
+		LeafNodeGlobalVariableImpl leafNodeGlobalVariable = new LeafNodeGlobalVariableImpl();
+		return leafNodeGlobalVariable;
 	}
 
 	/**

@@ -5,21 +5,21 @@ package san;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Leaf Node Array</b></em>'.
+ * A representation of the model object '<em><b>Leaf Node String</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link san.LeafNodeArray#getValue <em>Value</em>}</li>
+ *   <li>{@link san.LeafNodeString#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see san.SANPackage#getLeafNodeArray()
+ * @see san.SANPackage#getLeafNodeString()
  * @model
  * @generated
  */
-public interface LeafNodeArray extends Node {
+public interface LeafNodeString extends LeafNode {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -30,14 +30,14 @@ public interface LeafNodeArray extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see san.SANPackage#getLeafNodeArray_Value()
+	 * @see san.SANPackage#getLeafNodeString_Value()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getValue();
 
 	/**
-	 * Sets the value of the '{@link san.LeafNodeArray#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link san.LeafNodeString#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
@@ -46,4 +46,4 @@ public interface LeafNodeArray extends Node {
 	 */
 	void setValue(String value);
 
-} // LeafNodeArray
+} // LeafNodeString

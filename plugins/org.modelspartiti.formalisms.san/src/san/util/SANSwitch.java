@@ -410,10 +410,18 @@ public class SANSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANPackage.LEAF_NODE_ARRAY: {
-				LeafNodeArray leafNodeArray = (LeafNodeArray)theEObject;
-				T result = caseLeafNodeArray(leafNodeArray);
-				if (result == null) result = caseNode(leafNodeArray);
+			case SANPackage.LEAF_NODE: {
+				LeafNode leafNode = (LeafNode)theEObject;
+				T result = caseLeafNode(leafNode);
+				if (result == null) result = caseNode(leafNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.LEAF_NODE_STRING: {
+				LeafNodeString leafNodeString = (LeafNodeString)theEObject;
+				T result = caseLeafNodeString(leafNodeString);
+				if (result == null) result = caseLeafNode(leafNodeString);
+				if (result == null) result = caseNode(leafNodeString);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -442,6 +450,14 @@ public class SANSwitch<T> extends Switch<T> {
 				ExpressionLoop expressionLoop = (ExpressionLoop)theEObject;
 				T result = caseExpressionLoop(expressionLoop);
 				if (result == null) result = caseExpressionSegment(expressionLoop);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.LEAF_NODE_GLOBAL_VARIABLE: {
+				LeafNodeGlobalVariable leafNodeGlobalVariable = (LeafNodeGlobalVariable)theEObject;
+				T result = caseLeafNodeGlobalVariable(leafNodeGlobalVariable);
+				if (result == null) result = caseLeafNode(leafNodeGlobalVariable);
+				if (result == null) result = caseNode(leafNodeGlobalVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1200,17 +1216,32 @@ public class SANSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Leaf Node Array</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Leaf Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Leaf Node Array</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Leaf Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLeafNodeArray(LeafNodeArray object) {
+	public T caseLeafNode(LeafNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Leaf Node String</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Leaf Node String</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLeafNodeString(LeafNodeString object) {
 		return null;
 	}
 
@@ -1271,6 +1302,21 @@ public class SANSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExpressionLoop(ExpressionLoop object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Leaf Node Global Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Leaf Node Global Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLeafNodeGlobalVariable(LeafNodeGlobalVariable object) {
 		return null;
 	}
 

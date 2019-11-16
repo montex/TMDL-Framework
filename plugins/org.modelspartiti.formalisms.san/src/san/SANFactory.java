@@ -364,6 +364,15 @@ public interface SANFactory extends EFactory {
 	Array createArray();
 
 	/**
+	 * Returns a new object of class '<em>Leaf Node String</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leaf Node String</em>'.
+	 * @generated
+	 */
+	LeafNodeString createLeafNodeString();
+
+	/**
 	 * Returns a new object of class '<em>Marking Simple</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -380,15 +389,6 @@ public interface SANFactory extends EFactory {
 	 * @generated
 	 */
 	MarkingGlobalVariable createMarkingGlobalVariable();
-
-	/**
-	 * Returns a new object of class '<em>Leaf Node Array</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Leaf Node Array</em>'.
-	 * @generated
-	 */
-	LeafNodeArray createLeafNodeArray();
 
 	/**
 	 * Returns a new object of class '<em>Leaf Node Struct</em>'.
@@ -425,6 +425,15 @@ public interface SANFactory extends EFactory {
 	 * @generated
 	 */
 	ExpressionLoop createExpressionLoop();
+
+	/**
+	 * Returns a new object of class '<em>Leaf Node Global Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leaf Node Global Variable</em>'.
+	 * @generated
+	 */
+	LeafNodeGlobalVariable createLeafNodeGlobalVariable();
 
 	/**
 	 * Returns the package supported by this factory.

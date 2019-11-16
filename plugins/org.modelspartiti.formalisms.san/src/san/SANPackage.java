@@ -2299,14 +2299,42 @@ public interface SANPackage extends EPackage {
 	int ARRAY_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.LeafNodeArrayImpl <em>Leaf Node Array</em>}' class.
+	 * The meta object id for the '{@link san.impl.LeafNodeImpl <em>Leaf Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see san.impl.LeafNodeArrayImpl
-	 * @see san.impl.SANPackageImpl#getLeafNodeArray()
+	 * @see san.impl.LeafNodeImpl
+	 * @see san.impl.SANPackageImpl#getLeafNode()
 	 * @generated
 	 */
-	int LEAF_NODE_ARRAY = 50;
+	int LEAF_NODE = 50;
+
+	/**
+	 * The number of structural features of the '<em>Leaf Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Leaf Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.LeafNodeStringImpl <em>Leaf Node String</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.LeafNodeStringImpl
+	 * @see san.impl.SANPackageImpl#getLeafNodeString()
+	 * @generated
+	 */
+	int LEAF_NODE_STRING = 51;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2315,25 +2343,25 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE_ARRAY__VALUE = NODE_FEATURE_COUNT + 0;
+	int LEAF_NODE_STRING__VALUE = LEAF_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Leaf Node Array</em>' class.
+	 * The number of structural features of the '<em>Leaf Node String</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE_ARRAY_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
+	int LEAF_NODE_STRING_FEATURE_COUNT = LEAF_NODE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Leaf Node Array</em>' class.
+	 * The number of operations of the '<em>Leaf Node String</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE_ARRAY_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int LEAF_NODE_STRING_OPERATION_COUNT = LEAF_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.impl.LeafNodeStructImpl <em>Leaf Node Struct</em>}' class.
@@ -2343,7 +2371,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getLeafNodeStruct()
 	 * @generated
 	 */
-	int LEAF_NODE_STRUCT = 51;
+	int LEAF_NODE_STRUCT = 52;
 
 	/**
 	 * The feature id for the '<em><b>Definition Field</b></em>' reference.
@@ -2389,7 +2417,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExpressionIfThenElse()
 	 * @generated
 	 */
-	int EXPRESSION_IF_THEN_ELSE = 52;
+	int EXPRESSION_IF_THEN_ELSE = 53;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -2444,7 +2472,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExpressionBinaryOperator()
 	 * @generated
 	 */
-	int EXPRESSION_BINARY_OPERATOR = 53;
+	int EXPRESSION_BINARY_OPERATOR = 54;
 
 	/**
 	 * The feature id for the '<em><b>Op1</b></em>' containment reference.
@@ -2499,7 +2527,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExpressionLoop()
 	 * @generated
 	 */
-	int EXPRESSION_LOOP = 54;
+	int EXPRESSION_LOOP = 55;
 
 	/**
 	 * The feature id for the '<em><b>Do</b></em>' containment reference list.
@@ -2547,6 +2575,43 @@ public interface SANPackage extends EPackage {
 	int EXPRESSION_LOOP_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.LeafNodeGlobalVariableImpl <em>Leaf Node Global Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.LeafNodeGlobalVariableImpl
+	 * @see san.impl.SANPackageImpl#getLeafNodeGlobalVariable()
+	 * @generated
+	 */
+	int LEAF_NODE_GLOBAL_VARIABLE = 56;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_GLOBAL_VARIABLE__VARIABLE = LEAF_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Leaf Node Global Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_GLOBAL_VARIABLE_FEATURE_COUNT = LEAF_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Leaf Node Global Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_GLOBAL_VARIABLE_OPERATION_COUNT = LEAF_NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link san.VariableType <em>Variable Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2554,7 +2619,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getVariableType()
 	 * @generated
 	 */
-	int VARIABLE_TYPE = 55;
+	int VARIABLE_TYPE = 57;
 
 	/**
 	 * The meta object id for the '{@link san.ExtendedPlaceType <em>Extended Place Type</em>}' enum.
@@ -2564,7 +2629,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExtendedPlaceType()
 	 * @generated
 	 */
-	int EXTENDED_PLACE_TYPE = 56;
+	int EXTENDED_PLACE_TYPE = 58;
 
 	/**
 	 * The meta object id for the '{@link san.BinaryOperatorType <em>Binary Operator Type</em>}' enum.
@@ -2574,7 +2639,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getBinaryOperatorType()
 	 * @generated
 	 */
-	int BINARY_OPERATOR_TYPE = 57;
+	int BINARY_OPERATOR_TYPE = 59;
 
 	/**
 	 * The meta object id for the '<em>Code Fragment</em>' data type.
@@ -2584,7 +2649,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getCodeFragment()
 	 * @generated
 	 */
-	int CODE_FRAGMENT = 58;
+	int CODE_FRAGMENT = 60;
 
 
 	/**
@@ -3946,25 +4011,35 @@ public interface SANPackage extends EPackage {
 	EReference getArray_Leafnode();
 
 	/**
-	 * Returns the meta object for class '{@link san.LeafNodeArray <em>Leaf Node Array</em>}'.
+	 * Returns the meta object for class '{@link san.LeafNode <em>Leaf Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Leaf Node Array</em>'.
-	 * @see san.LeafNodeArray
+	 * @return the meta object for class '<em>Leaf Node</em>'.
+	 * @see san.LeafNode
 	 * @generated
 	 */
-	EClass getLeafNodeArray();
+	EClass getLeafNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link san.LeafNodeArray#getValue <em>Value</em>}'.
+	 * Returns the meta object for class '{@link san.LeafNodeString <em>Leaf Node String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf Node String</em>'.
+	 * @see san.LeafNodeString
+	 * @generated
+	 */
+	EClass getLeafNodeString();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.LeafNodeString#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see san.LeafNodeArray#getValue()
-	 * @see #getLeafNodeArray()
+	 * @see san.LeafNodeString#getValue()
+	 * @see #getLeafNodeString()
 	 * @generated
 	 */
-	EAttribute getLeafNodeArray_Value();
+	EAttribute getLeafNodeString_Value();
 
 	/**
 	 * Returns the meta object for class '{@link san.LeafNodeStruct <em>Leaf Node Struct</em>}'.
@@ -4126,6 +4201,27 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getExpressionLoop_End();
+
+	/**
+	 * Returns the meta object for class '{@link san.LeafNodeGlobalVariable <em>Leaf Node Global Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf Node Global Variable</em>'.
+	 * @see san.LeafNodeGlobalVariable
+	 * @generated
+	 */
+	EClass getLeafNodeGlobalVariable();
+
+	/**
+	 * Returns the meta object for the reference '{@link san.LeafNodeGlobalVariable#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see san.LeafNodeGlobalVariable#getVariable()
+	 * @see #getLeafNodeGlobalVariable()
+	 * @generated
+	 */
+	EReference getLeafNodeGlobalVariable_Variable();
 
 	/**
 	 * Returns the meta object for enum '{@link san.VariableType <em>Variable Type</em>}'.
@@ -5316,14 +5412,24 @@ public interface SANPackage extends EPackage {
 		EReference ARRAY__LEAFNODE = eINSTANCE.getArray_Leafnode();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.LeafNodeArrayImpl <em>Leaf Node Array</em>}' class.
+		 * The meta object literal for the '{@link san.impl.LeafNodeImpl <em>Leaf Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see san.impl.LeafNodeArrayImpl
-		 * @see san.impl.SANPackageImpl#getLeafNodeArray()
+		 * @see san.impl.LeafNodeImpl
+		 * @see san.impl.SANPackageImpl#getLeafNode()
 		 * @generated
 		 */
-		EClass LEAF_NODE_ARRAY = eINSTANCE.getLeafNodeArray();
+		EClass LEAF_NODE = eINSTANCE.getLeafNode();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.LeafNodeStringImpl <em>Leaf Node String</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.LeafNodeStringImpl
+		 * @see san.impl.SANPackageImpl#getLeafNodeString()
+		 * @generated
+		 */
+		EClass LEAF_NODE_STRING = eINSTANCE.getLeafNodeString();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -5331,7 +5437,7 @@ public interface SANPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LEAF_NODE_ARRAY__VALUE = eINSTANCE.getLeafNodeArray_Value();
+		EAttribute LEAF_NODE_STRING__VALUE = eINSTANCE.getLeafNodeString_Value();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.LeafNodeStructImpl <em>Leaf Node Struct</em>}' class.
@@ -5460,6 +5566,24 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EXPRESSION_LOOP__END = eINSTANCE.getExpressionLoop_End();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.LeafNodeGlobalVariableImpl <em>Leaf Node Global Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.LeafNodeGlobalVariableImpl
+		 * @see san.impl.SANPackageImpl#getLeafNodeGlobalVariable()
+		 * @generated
+		 */
+		EClass LEAF_NODE_GLOBAL_VARIABLE = eINSTANCE.getLeafNodeGlobalVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEAF_NODE_GLOBAL_VARIABLE__VARIABLE = eINSTANCE.getLeafNodeGlobalVariable_Variable();
 
 		/**
 		 * The meta object literal for the '{@link san.VariableType <em>Variable Type</em>}' enum.

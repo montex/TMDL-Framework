@@ -45,7 +45,9 @@ import san.HypoExponential;
 import san.InputArc;
 import san.InputGate;
 import san.InstantaneousActivity;
-import san.LeafNodeArray;
+import san.LeafNode;
+import san.LeafNodeGlobalVariable;
+import san.LeafNodeString;
 import san.LeafNodeStruct;
 import san.Lognormal;
 import san.Marking;
@@ -436,7 +438,14 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass leafNodeArrayEClass = null;
+	private EClass leafNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass leafNodeStringEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -465,6 +474,13 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * @generated
 	 */
 	private EClass expressionLoopEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass leafNodeGlobalVariableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1718,8 +1734,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLeafNodeArray() {
-		return leafNodeArrayEClass;
+	public EClass getLeafNode() {
+		return leafNodeEClass;
 	}
 
 	/**
@@ -1727,8 +1743,17 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLeafNodeArray_Value() {
-		return (EAttribute)leafNodeArrayEClass.getEStructuralFeatures().get(0);
+	public EClass getLeafNodeString() {
+		return leafNodeStringEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLeafNodeString_Value() {
+		return (EAttribute)leafNodeStringEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1864,6 +1889,24 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 */
 	public EReference getExpressionLoop_End() {
 		return (EReference)expressionLoopEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLeafNodeGlobalVariable() {
+		return leafNodeGlobalVariableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLeafNodeGlobalVariable_Variable() {
+		return (EReference)leafNodeGlobalVariableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2108,8 +2151,10 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		createEReference(arrayEClass, ARRAY__DEFINITION);
 		createEReference(arrayEClass, ARRAY__LEAFNODE);
 
-		leafNodeArrayEClass = createEClass(LEAF_NODE_ARRAY);
-		createEAttribute(leafNodeArrayEClass, LEAF_NODE_ARRAY__VALUE);
+		leafNodeEClass = createEClass(LEAF_NODE);
+
+		leafNodeStringEClass = createEClass(LEAF_NODE_STRING);
+		createEAttribute(leafNodeStringEClass, LEAF_NODE_STRING__VALUE);
 
 		leafNodeStructEClass = createEClass(LEAF_NODE_STRUCT);
 		createEReference(leafNodeStructEClass, LEAF_NODE_STRUCT__DEFINITION_FIELD);
@@ -2129,6 +2174,9 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		createEReference(expressionLoopEClass, EXPRESSION_LOOP__DO);
 		createEReference(expressionLoopEClass, EXPRESSION_LOOP__BEGIN);
 		createEReference(expressionLoopEClass, EXPRESSION_LOOP__END);
+
+		leafNodeGlobalVariableEClass = createEClass(LEAF_NODE_GLOBAL_VARIABLE);
+		createEReference(leafNodeGlobalVariableEClass, LEAF_NODE_GLOBAL_VARIABLE__VARIABLE);
 
 		// Create enums
 		variableTypeEEnum = createEEnum(VARIABLE_TYPE);
@@ -2210,11 +2258,13 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		markingGlobalVariableEClass.getESuperTypes().add(this.getMarking());
 		markingExtendedEClass.getESuperTypes().add(this.getMarking());
 		arrayEClass.getESuperTypes().add(this.getNode());
-		leafNodeArrayEClass.getESuperTypes().add(this.getNode());
+		leafNodeEClass.getESuperTypes().add(this.getNode());
+		leafNodeStringEClass.getESuperTypes().add(this.getLeafNode());
 		leafNodeStructEClass.getESuperTypes().add(this.getNode());
 		expressionIfThenElseEClass.getESuperTypes().add(this.getExpressionSegment());
 		expressionBinaryOperatorEClass.getESuperTypes().add(this.getExpressionSegment());
 		expressionLoopEClass.getESuperTypes().add(this.getExpressionSegment());
+		leafNodeGlobalVariableEClass.getESuperTypes().add(this.getLeafNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(sanEClass, san.SAN.class, "SAN", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2400,8 +2450,10 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEReference(getArray_Definition(), this.getCustomTypeDefinition(), null, "definition", null, 1, 1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArray_Leafnode(), this.getNode(), null, "leafnode", null, 1, -1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(leafNodeArrayEClass, LeafNodeArray.class, "LeafNodeArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLeafNodeArray_Value(), ecorePackage.getEString(), "value", null, 1, 1, LeafNodeArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(leafNodeEClass, LeafNode.class, "LeafNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(leafNodeStringEClass, LeafNodeString.class, "LeafNodeString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLeafNodeString_Value(), ecorePackage.getEString(), "value", null, 1, 1, LeafNodeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(leafNodeStructEClass, LeafNodeStruct.class, "LeafNodeStruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLeafNodeStruct_DefinitionField(), this.getField(), null, "definitionField", null, 1, 1, LeafNodeStruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2421,6 +2473,9 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEReference(getExpressionLoop_Do(), this.getExpressionSegment(), null, "do", null, 1, -1, ExpressionLoop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getExpressionLoop_Begin(), theExpressionsPackage.getTemplateExpressionInteger(), null, "begin", null, 1, 1, ExpressionLoop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getExpressionLoop_End(), theExpressionsPackage.getTemplateExpressionInteger(), null, "end", null, 1, 1, ExpressionLoop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(leafNodeGlobalVariableEClass, LeafNodeGlobalVariable.class, "LeafNodeGlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLeafNodeGlobalVariable_Variable(), this.getGlobalVariable(), null, "variable", null, 0, 1, LeafNodeGlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(variableTypeEEnum, VariableType.class, "VariableType");

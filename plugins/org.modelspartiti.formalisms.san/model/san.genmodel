@@ -201,8 +201,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//Array/definition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Array/leafnode"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//LeafNodeArray">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//LeafNodeArray/value"/>
+    <genClasses image="false" ecoreClass="san.ecore#//LeafNode"/>
+    <genClasses ecoreClass="san.ecore#//LeafNodeString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//LeafNodeString/value"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//LeafNodeStruct">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//LeafNodeStruct/definitionField"/>
@@ -222,6 +223,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionLoop/do"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionLoop/begin"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionLoop/end"/>
+    </genClasses>
+    <genClasses ecoreClass="san.ecore#//LeafNodeGlobalVariable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//LeafNodeGlobalVariable/variable"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

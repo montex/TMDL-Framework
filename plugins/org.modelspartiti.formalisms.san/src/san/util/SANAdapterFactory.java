@@ -269,8 +269,12 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createArrayAdapter();
 			}
 			@Override
-			public Adapter caseLeafNodeArray(LeafNodeArray object) {
-				return createLeafNodeArrayAdapter();
+			public Adapter caseLeafNode(LeafNode object) {
+				return createLeafNodeAdapter();
+			}
+			@Override
+			public Adapter caseLeafNodeString(LeafNodeString object) {
+				return createLeafNodeStringAdapter();
 			}
 			@Override
 			public Adapter caseLeafNodeStruct(LeafNodeStruct object) {
@@ -287,6 +291,10 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseExpressionLoop(ExpressionLoop object) {
 				return createExpressionLoopAdapter();
+			}
+			@Override
+			public Adapter caseLeafNodeGlobalVariable(LeafNodeGlobalVariable object) {
+				return createLeafNodeGlobalVariableAdapter();
 			}
 			@Override
 			public Adapter caseConcreteModel(ConcreteModel object) {
@@ -1013,16 +1021,30 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link san.LeafNodeArray <em>Leaf Node Array</em>}'.
+	 * Creates a new adapter for an object of class '{@link san.LeafNode <em>Leaf Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see san.LeafNodeArray
+	 * @see san.LeafNode
 	 * @generated
 	 */
-	public Adapter createLeafNodeArrayAdapter() {
+	public Adapter createLeafNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.LeafNodeString <em>Leaf Node String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.LeafNodeString
+	 * @generated
+	 */
+	public Adapter createLeafNodeStringAdapter() {
 		return null;
 	}
 
@@ -1079,6 +1101,20 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExpressionLoopAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link san.LeafNodeGlobalVariable <em>Leaf Node Global Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see san.LeafNodeGlobalVariable
+	 * @generated
+	 */
+	public Adapter createLeafNodeGlobalVariableAdapter() {
 		return null;
 	}
 
