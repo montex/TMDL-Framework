@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import san.Array;
-import san.CustomTypeDefinition;
+import san.CustomTypeArray;
 import san.Node;
 import san.SANPackage;
 
@@ -45,7 +45,7 @@ public class ArrayImpl extends NodeImpl implements Array {
 	 * @generated
 	 * @ordered
 	 */
-	protected CustomTypeDefinition definition;
+	protected CustomTypeArray definition;
 
 	/**
 	 * The cached value of the '{@link #getLeafnode() <em>Leafnode</em>}' containment reference list.
@@ -81,10 +81,10 @@ public class ArrayImpl extends NodeImpl implements Array {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CustomTypeDefinition getDefinition() {
+	public CustomTypeArray getDefinition() {
 		if (definition != null && definition.eIsProxy()) {
 			InternalEObject oldDefinition = (InternalEObject)definition;
-			definition = (CustomTypeDefinition)eResolveProxy(oldDefinition);
+			definition = (CustomTypeArray)eResolveProxy(oldDefinition);
 			if (definition != oldDefinition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.ARRAY__DEFINITION, oldDefinition, definition));
@@ -98,7 +98,7 @@ public class ArrayImpl extends NodeImpl implements Array {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CustomTypeDefinition basicGetDefinition() {
+	public CustomTypeArray basicGetDefinition() {
 		return definition;
 	}
 
@@ -107,8 +107,8 @@ public class ArrayImpl extends NodeImpl implements Array {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefinition(CustomTypeDefinition newDefinition) {
-		CustomTypeDefinition oldDefinition = definition;
+	public void setDefinition(CustomTypeArray newDefinition) {
+		CustomTypeArray oldDefinition = definition;
 		definition = newDefinition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.ARRAY__DEFINITION, oldDefinition, definition));
@@ -167,7 +167,7 @@ public class ArrayImpl extends NodeImpl implements Array {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case SANPackage.ARRAY__DEFINITION:
-				setDefinition((CustomTypeDefinition)newValue);
+				setDefinition((CustomTypeArray)newValue);
 				return;
 			case SANPackage.ARRAY__LEAFNODE:
 				getLeafnode().clear();
@@ -186,7 +186,7 @@ public class ArrayImpl extends NodeImpl implements Array {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case SANPackage.ARRAY__DEFINITION:
-				setDefinition((CustomTypeDefinition)null);
+				setDefinition((CustomTypeArray)null);
 				return;
 			case SANPackage.ARRAY__LEAFNODE:
 				getLeafnode().clear();

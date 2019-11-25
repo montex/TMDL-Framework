@@ -31,12 +31,12 @@ public interface Array extends Node {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Definition</em>' reference.
-	 * @see #setDefinition(CustomTypeDefinition)
+	 * @see #setDefinition(CustomTypeArray)
 	 * @see san.SANPackage#getArray_Definition()
 	 * @model required="true"
 	 * @generated
 	 */
-	CustomTypeDefinition getDefinition();
+	CustomTypeArray getDefinition();
 
 	/**
 	 * Sets the value of the '{@link san.Array#getDefinition <em>Definition</em>}' reference.
@@ -46,7 +46,7 @@ public interface Array extends Node {
 	 * @see #getDefinition()
 	 * @generated
 	 */
-	void setDefinition(CustomTypeDefinition value);
+	void setDefinition(CustomTypeArray value);
 
 	/**
 	 * Returns the value of the '<em><b>Leafnode</b></em>' containment reference list.

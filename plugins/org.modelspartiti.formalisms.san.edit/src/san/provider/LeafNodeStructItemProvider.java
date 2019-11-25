@@ -11,10 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import san.LeafNodeStruct;
 import san.SANPackage;
 
 /**
@@ -45,52 +41,29 @@ public class LeafNodeStructItemProvider extends NodeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDefinitionFieldPropertyDescriptor(object);
-			addValuePropertyDescriptor(object);
+			addDefinitionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Definition Field feature.
+	 * This adds a property descriptor for the Definition feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefinitionFieldPropertyDescriptor(Object object) {
+	protected void addDefinitionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LeafNodeStruct_definitionField_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LeafNodeStruct_definitionField_feature", "_UI_LeafNodeStruct_type"),
-				 SANPackage.Literals.LEAF_NODE_STRUCT__DEFINITION_FIELD,
+				 getString("_UI_LeafNodeStruct_definition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LeafNodeStruct_definition_feature", "_UI_LeafNodeStruct_type"),
+				 SANPackage.Literals.LEAF_NODE_STRUCT__DEFINITION,
 				 true,
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Value feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_LeafNodeStruct_value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LeafNodeStruct_value_feature", "_UI_LeafNodeStruct_type"),
-				 SANPackage.Literals.LEAF_NODE_STRUCT__VALUE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -114,10 +87,7 @@ public class LeafNodeStructItemProvider extends NodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LeafNodeStruct)object).getValue();
-		return label == null || label.length() == 0 ?
-			getString("_UI_LeafNodeStruct_type") :
-			getString("_UI_LeafNodeStruct_type") + " " + label;
+		return getString("_UI_LeafNodeStruct_type");
 	}
 
 
@@ -131,12 +101,6 @@ public class LeafNodeStructItemProvider extends NodeItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(LeafNodeStruct.class)) {
-			case SANPackage.LEAF_NODE_STRUCT__VALUE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

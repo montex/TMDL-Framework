@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import san.Field;
+import san.CustomTypeStruct;
 import san.LeafNodeStruct;
 import san.SANPackage;
 
@@ -21,42 +21,21 @@ import san.SANPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link san.impl.LeafNodeStructImpl#getDefinitionField <em>Definition Field</em>}</li>
- *   <li>{@link san.impl.LeafNodeStructImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link san.impl.LeafNodeStructImpl#getDefinition <em>Definition</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	/**
-	 * The cached value of the '{@link #getDefinitionField() <em>Definition Field</em>}' reference.
+	 * The cached value of the '{@link #getDefinition() <em>Definition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefinitionField()
+	 * @see #getDefinition()
 	 * @generated
 	 * @ordered
 	 */
-	protected Field definitionField;
-
-	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String VALUE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected String value = VALUE_EDEFAULT;
+	protected CustomTypeStruct definition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,16 +61,16 @@ public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Field getDefinitionField() {
-		if (definitionField != null && definitionField.eIsProxy()) {
-			InternalEObject oldDefinitionField = (InternalEObject)definitionField;
-			definitionField = (Field)eResolveProxy(oldDefinitionField);
-			if (definitionField != oldDefinitionField) {
+	public CustomTypeStruct getDefinition() {
+		if (definition != null && definition.eIsProxy()) {
+			InternalEObject oldDefinition = (InternalEObject)definition;
+			definition = (CustomTypeStruct)eResolveProxy(oldDefinition);
+			if (definition != oldDefinition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD, oldDefinitionField, definitionField));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANPackage.LEAF_NODE_STRUCT__DEFINITION, oldDefinition, definition));
 			}
 		}
-		return definitionField;
+		return definition;
 	}
 
 	/**
@@ -99,8 +78,8 @@ public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Field basicGetDefinitionField() {
-		return definitionField;
+	public CustomTypeStruct basicGetDefinition() {
+		return definition;
 	}
 
 	/**
@@ -108,32 +87,11 @@ public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefinitionField(Field newDefinitionField) {
-		Field oldDefinitionField = definitionField;
-		definitionField = newDefinitionField;
+	public void setDefinition(CustomTypeStruct newDefinition) {
+		CustomTypeStruct oldDefinition = definition;
+		definition = newDefinition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD, oldDefinitionField, definitionField));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getValue() {
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.LEAF_NODE_STRUCT__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.LEAF_NODE_STRUCT__DEFINITION, oldDefinition, definition));
 	}
 
 	/**
@@ -144,11 +102,9 @@ public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD:
-				if (resolve) return getDefinitionField();
-				return basicGetDefinitionField();
-			case SANPackage.LEAF_NODE_STRUCT__VALUE:
-				return getValue();
+			case SANPackage.LEAF_NODE_STRUCT__DEFINITION:
+				if (resolve) return getDefinition();
+				return basicGetDefinition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,11 +117,8 @@ public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD:
-				setDefinitionField((Field)newValue);
-				return;
-			case SANPackage.LEAF_NODE_STRUCT__VALUE:
-				setValue((String)newValue);
+			case SANPackage.LEAF_NODE_STRUCT__DEFINITION:
+				setDefinition((CustomTypeStruct)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,11 +132,8 @@ public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD:
-				setDefinitionField((Field)null);
-				return;
-			case SANPackage.LEAF_NODE_STRUCT__VALUE:
-				setValue(VALUE_EDEFAULT);
+			case SANPackage.LEAF_NODE_STRUCT__DEFINITION:
+				setDefinition((CustomTypeStruct)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -197,28 +147,10 @@ public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANPackage.LEAF_NODE_STRUCT__DEFINITION_FIELD:
-				return definitionField != null;
-			case SANPackage.LEAF_NODE_STRUCT__VALUE:
-				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case SANPackage.LEAF_NODE_STRUCT__DEFINITION:
+				return definition != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (value: ");
-		result.append(value);
-		result.append(')');
-		return result.toString();
 	}
 
 } //LeafNodeStructImpl

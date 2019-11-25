@@ -2374,22 +2374,13 @@ public interface SANPackage extends EPackage {
 	int LEAF_NODE_STRUCT = 52;
 
 	/**
-	 * The feature id for the '<em><b>Definition Field</b></em>' reference.
+	 * The feature id for the '<em><b>Definition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE_STRUCT__DEFINITION_FIELD = NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEAF_NODE_STRUCT__VALUE = NODE_FEATURE_COUNT + 1;
+	int LEAF_NODE_STRUCT__DEFINITION = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Leaf Node Struct</em>' class.
@@ -2398,7 +2389,7 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LEAF_NODE_STRUCT_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+	int LEAF_NODE_STRUCT_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Leaf Node Struct</em>' class.
@@ -4052,26 +4043,15 @@ public interface SANPackage extends EPackage {
 	EClass getLeafNodeStruct();
 
 	/**
-	 * Returns the meta object for the reference '{@link san.LeafNodeStruct#getDefinitionField <em>Definition Field</em>}'.
+	 * Returns the meta object for the reference '{@link san.LeafNodeStruct#getDefinition <em>Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Definition Field</em>'.
-	 * @see san.LeafNodeStruct#getDefinitionField()
+	 * @return the meta object for the reference '<em>Definition</em>'.
+	 * @see san.LeafNodeStruct#getDefinition()
 	 * @see #getLeafNodeStruct()
 	 * @generated
 	 */
-	EReference getLeafNodeStruct_DefinitionField();
-
-	/**
-	 * Returns the meta object for the attribute '{@link san.LeafNodeStruct#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see san.LeafNodeStruct#getValue()
-	 * @see #getLeafNodeStruct()
-	 * @generated
-	 */
-	EAttribute getLeafNodeStruct_Value();
+	EReference getLeafNodeStruct_Definition();
 
 	/**
 	 * Returns the meta object for class '{@link san.ExpressionIfThenElse <em>Expression If Then Else</em>}'.
@@ -5450,20 +5430,12 @@ public interface SANPackage extends EPackage {
 		EClass LEAF_NODE_STRUCT = eINSTANCE.getLeafNodeStruct();
 
 		/**
-		 * The meta object literal for the '<em><b>Definition Field</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Definition</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LEAF_NODE_STRUCT__DEFINITION_FIELD = eINSTANCE.getLeafNodeStruct_DefinitionField();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LEAF_NODE_STRUCT__VALUE = eINSTANCE.getLeafNodeStruct_Value();
+		EReference LEAF_NODE_STRUCT__DEFINITION = eINSTANCE.getLeafNodeStruct_Definition();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.ExpressionIfThenElseImpl <em>Expression If Then Else</em>}' class.

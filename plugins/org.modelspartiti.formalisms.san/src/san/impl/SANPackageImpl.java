@@ -1770,17 +1770,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLeafNodeStruct_DefinitionField() {
+	public EReference getLeafNodeStruct_Definition() {
 		return (EReference)leafNodeStructEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLeafNodeStruct_Value() {
-		return (EAttribute)leafNodeStructEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2157,8 +2148,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		createEAttribute(leafNodeStringEClass, LEAF_NODE_STRING__VALUE);
 
 		leafNodeStructEClass = createEClass(LEAF_NODE_STRUCT);
-		createEReference(leafNodeStructEClass, LEAF_NODE_STRUCT__DEFINITION_FIELD);
-		createEAttribute(leafNodeStructEClass, LEAF_NODE_STRUCT__VALUE);
+		createEReference(leafNodeStructEClass, LEAF_NODE_STRUCT__DEFINITION);
 
 		expressionIfThenElseEClass = createEClass(EXPRESSION_IF_THEN_ELSE);
 		createEReference(expressionIfThenElseEClass, EXPRESSION_IF_THEN_ELSE__CONDITION);
@@ -2447,7 +2437,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(arrayEClass, Array.class, "Array", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArray_Definition(), this.getCustomTypeDefinition(), null, "definition", null, 1, 1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArray_Definition(), this.getCustomTypeArray(), null, "definition", null, 1, 1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArray_Leafnode(), this.getNode(), null, "leafnode", null, 1, -1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(leafNodeEClass, LeafNode.class, "LeafNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2456,8 +2446,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEAttribute(getLeafNodeString_Value(), ecorePackage.getEString(), "value", null, 1, 1, LeafNodeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(leafNodeStructEClass, LeafNodeStruct.class, "LeafNodeStruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLeafNodeStruct_DefinitionField(), this.getField(), null, "definitionField", null, 1, 1, LeafNodeStruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLeafNodeStruct_Value(), ecorePackage.getEString(), "value", null, 1, 1, LeafNodeStruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLeafNodeStruct_Definition(), this.getCustomTypeStruct(), null, "definition", null, 1, 1, LeafNodeStruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressionIfThenElseEClass, ExpressionIfThenElse.class, "ExpressionIfThenElse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExpressionIfThenElse_Condition(), theExpressionsPackage.getTemplateExpressionBoolean(), null, "condition", null, 1, 1, ExpressionIfThenElse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

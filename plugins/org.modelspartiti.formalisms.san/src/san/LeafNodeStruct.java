@@ -12,8 +12,7 @@ package san;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link san.LeafNodeStruct#getDefinitionField <em>Definition Field</em>}</li>
- *   <li>{@link san.LeafNodeStruct#getValue <em>Value</em>}</li>
+ *   <li>{@link san.LeafNodeStruct#getDefinition <em>Definition</em>}</li>
  * </ul>
  *
  * @see san.SANPackage#getLeafNodeStruct()
@@ -22,55 +21,29 @@ package san;
  */
 public interface LeafNodeStruct extends Node {
 	/**
-	 * Returns the value of the '<em><b>Definition Field</b></em>' reference.
+	 * Returns the value of the '<em><b>Definition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Definition Field</em>' reference isn't clear,
+	 * If the meaning of the '<em>Definition</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Definition Field</em>' reference.
-	 * @see #setDefinitionField(Field)
-	 * @see san.SANPackage#getLeafNodeStruct_DefinitionField()
+	 * @return the value of the '<em>Definition</em>' reference.
+	 * @see #setDefinition(CustomTypeStruct)
+	 * @see san.SANPackage#getLeafNodeStruct_Definition()
 	 * @model required="true"
 	 * @generated
 	 */
-	Field getDefinitionField();
+	CustomTypeStruct getDefinition();
 
 	/**
-	 * Sets the value of the '{@link san.LeafNodeStruct#getDefinitionField <em>Definition Field</em>}' reference.
+	 * Sets the value of the '{@link san.LeafNodeStruct#getDefinition <em>Definition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Definition Field</em>' reference.
-	 * @see #getDefinitionField()
+	 * @param value the new value of the '<em>Definition</em>' reference.
+	 * @see #getDefinition()
 	 * @generated
 	 */
-	void setDefinitionField(Field value);
-
-	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(String)
-	 * @see san.SANPackage#getLeafNodeStruct_Value()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getValue();
-
-	/**
-	 * Sets the value of the '{@link san.LeafNodeStruct#getValue <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #getValue()
-	 * @generated
-	 */
-	void setValue(String value);
+	void setDefinition(CustomTypeStruct value);
 
 } // LeafNodeStruct

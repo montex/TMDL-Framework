@@ -206,8 +206,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//LeafNodeString/value"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//LeafNodeStruct">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//LeafNodeStruct/definitionField"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//LeafNodeStruct/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//LeafNodeStruct/definition"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//ExpressionIfThenElse">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionIfThenElse/condition"/>
