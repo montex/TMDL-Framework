@@ -1635,6 +1635,15 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCustomTypeStruct_Name() {
+		return (EAttribute)customTypeStructEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getField() {
 		return fieldEClass;
 	}
@@ -2122,6 +2131,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		customTypeStructEClass = createEClass(CUSTOM_TYPE_STRUCT);
 		createEReference(customTypeStructEClass, CUSTOM_TYPE_STRUCT__FIELD);
+		createEAttribute(customTypeStructEClass, CUSTOM_TYPE_STRUCT__NAME);
 
 		fieldEClass = createEClass(FIELD);
 		createEAttribute(fieldEClass, FIELD__NAME);
@@ -2420,6 +2430,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		initEClass(customTypeStructEClass, CustomTypeStruct.class, "CustomTypeStruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomTypeStruct_Field(), this.getField(), null, "field", null, 1, -1, CustomTypeStruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCustomTypeStruct_Name(), ecorePackage.getEString(), "name", null, 1, 1, CustomTypeStruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fieldEClass, Field.class, "Field", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getField_Name(), ecorePackage.getEString(), "name", null, 1, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

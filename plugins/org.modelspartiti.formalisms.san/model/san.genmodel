@@ -182,6 +182,7 @@
     </genClasses>
     <genClasses ecoreClass="san.ecore#//CustomTypeStruct">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//CustomTypeStruct/field"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//CustomTypeStruct/name"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//Field">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Field/name"/>

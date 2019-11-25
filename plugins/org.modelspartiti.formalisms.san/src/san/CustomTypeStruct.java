@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link san.CustomTypeStruct#getField <em>Field</em>}</li>
+ *   <li>{@link san.CustomTypeStruct#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see san.SANPackage#getCustomTypeStruct()
@@ -36,5 +37,31 @@ public interface CustomTypeStruct extends CustomTypeDefinition {
 	 * @generated
 	 */
 	EList<Field> getField();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see san.SANPackage#getCustomTypeStruct_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link san.CustomTypeStruct#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // CustomTypeStruct

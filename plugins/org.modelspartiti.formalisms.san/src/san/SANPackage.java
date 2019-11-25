@@ -2080,13 +2080,22 @@ public interface SANPackage extends EPackage {
 	int CUSTOM_TYPE_STRUCT__FIELD = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_STRUCT__NAME = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Custom Type Struct</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOM_TYPE_STRUCT_FEATURE_COUNT = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 1;
+	int CUSTOM_TYPE_STRUCT_FEATURE_COUNT = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Custom Type Struct</em>' class.
@@ -3886,6 +3895,17 @@ public interface SANPackage extends EPackage {
 	EReference getCustomTypeStruct_Field();
 
 	/**
+	 * Returns the meta object for the attribute '{@link san.CustomTypeStruct#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see san.CustomTypeStruct#getName()
+	 * @see #getCustomTypeStruct()
+	 * @generated
+	 */
+	EAttribute getCustomTypeStruct_Name();
+
+	/**
 	 * Returns the meta object for class '{@link san.Field <em>Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5292,6 +5312,14 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CUSTOM_TYPE_STRUCT__FIELD = eINSTANCE.getCustomTypeStruct_Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOM_TYPE_STRUCT__NAME = eINSTANCE.getCustomTypeStruct_Name();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.FieldImpl <em>Field</em>}' class.
