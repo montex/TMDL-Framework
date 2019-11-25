@@ -16,7 +16,7 @@
             </style>
           </borderedNodeMappings>
           <borderedNodeMappings name="ComplexType" semanticCandidatesExpression="feature:type" domainClass="san::ComplexType">
-            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="Complex Type" labelPosition="node" resizeKind="NSEW" width="6" height="2">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="Complex Type" labelPosition="node" resizeKind="NSEW" width="8" height="2">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <forbiddenSides>WEST</forbiddenSides>
@@ -62,7 +62,7 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <nodeMappings name="MarkingNode" domainClass="san::Node">
+        <nodeMappings name="MarkingNodeStruct" domainClass="san::LeafNodeStruct">
           <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.eClass().name" labelPosition="node" resizeKind="NSEW" width="5" height="3">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -125,6 +125,33 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
           </style>
         </nodeMappings>
+        <nodeMappings name="CustomTypeArray" semanticCandidatesExpression="feature:customtype" domainClass="san::CustomTypeArray">
+          <borderedNodeMappings name="PrimitiveType" semanticCandidatesExpression="feature:typeArray" domainClass="san::PrimitiveType">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="feature:type" labelPosition="node" resizeKind="NSEW" width="6" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="ComplexType" semanticCandidatesExpression="feature:typeArray" domainClass="san::ComplexType">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="Complex Type" labelPosition="node" resizeKind="NSEW" width="8" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="5" verticalDiameterComputationExpression="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
         <edgeMappings name="sourceInputGate" deletionDescription="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='unsetSourceOrTarget']" sourceMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InputGate']" targetMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']" targetFinderExpression="feature:places">
           <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -173,7 +200,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="NodeArc" sourceMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingExtended']" targetMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='MarkingNode']" targetFinderExpression="feature:node">
+        <edgeMappings name="NodeArc" sourceMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingExtended']" targetMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='MarkingNodeStruct'] //@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@containerMappings[name='NodeArray']" targetFinderExpression="feature:node">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -181,7 +208,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="LeafNodeArc" sourceMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='MarkingNode']" targetMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='MarkingNode']" targetFinderExpression="feature:leafnode">
+        <edgeMappings name="LeafNodeArc" sourceMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@containerMappings[name='NodeArray']" targetMapping="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@containerMappings[name='NodeArray']" targetFinderExpression="feature:leafnode">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -189,6 +216,57 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <containerMappings name="CustomTypeStruct" semanticCandidatesExpression="feature:customtype" domainClass="san::CustomTypeStruct">
+          <subNodeMappings name="Field" semanticCandidatesExpression="feature:field" domainClass="san::Field">
+            <borderedNodeMappings name="PrimitiveType" semanticCandidatesExpression="feature:typeStruct" domainClass="san::PrimitiveType">
+              <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="" hideLabelByDefault="true" sizeComputationExpression="1" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </borderedNodeMappings>
+            <borderedNodeMappings name="ComplexType" semanticCandidatesExpression="feature:typeStruct" domainClass="san::ComplexType">
+              <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="" hideLabelByDefault="true" sizeComputationExpression="1" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <forbiddenSides>WEST</forbiddenSides>
+                <forbiddenSides>SOUTH</forbiddenSides>
+                <forbiddenSides>NORTH</forbiddenSides>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </borderedNodeMappings>
+            <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="" hideLabelByDefault="true" sizeComputationExpression="2" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" widthComputationExpression="8" heightComputationExpression="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="NodeArray" domainClass="san::Array" childrenPresentation="List">
+          <subNodeMappings name="MarkingNode" semanticCandidatesExpression="feature:leafnode" domainClass="san::Node">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.eClass().name" labelPosition="node" resizeKind="NSEW" width="5" height="3">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="Array">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
         <toolSections name="Tools">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Place" nodeMappings="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']">
             <variable name="container"/>
@@ -220,9 +298,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::TimedActivity" referenceName="activities">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'IA'+container.activities->filter(san::InstantaneousActivity)->size()">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'TA'+container.activities->filter(san::timedActivity)->size()"/>
-                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'TA'+container.activities->filter(san::TimedActivity)->size()"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -282,7 +358,7 @@
                     <subModelOperations xsi:type="tool_1:Unset" featureName="places" elementExpression="aql:elementView.targetNode.target"/>
                   </cases>
                   <cases conditionExpression="feature:activity">
-                    <subModelOperations xsi:type="tool_1:Unset" featureName="activity" elementExpression="aql:elementView.targetNode.target"/>
+                    <subModelOperations xsi:type="tool_1:Unset" featureName="activity" elementExpression="aql:elementView.sourceNode.source"/>
                   </cases>
                   <default/>
                 </subModelOperations>
@@ -369,7 +445,7 @@
   <extensions xsi:type="properties:ViewExtensionDescription" name="SanProperties">
     <metamodels href="http://www.modelspartiti.org/templates/san/san#/"/>
     <categories name="Category">
-      <pages name="PageSAN" labelExpression="Properties" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.5">
+      <pages name="PageSAN" labelExpression="Properties" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.5 //@extensions.0/@categories.0/@groups.6 //@extensions.0/@categories.0/@groups.7">
         <extends href="platform:/plugin/org.eclipse.sirius.properties.defaultrules/model/properties.odesign#//@extensions.0/@categories.0/@pages.0"/>
       </pages>
       <pages name="PageMarkingNodeArray" labelExpression="LeafNode" domainClass="san::Array" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.4"/>
@@ -428,7 +504,16 @@
         <controls xsi:type="properties:ButtonDescription" name="Array" labelExpression="Node Array" isEnabledExpression="aql:self.eContainer().type.oclIsTypeOf(san::ComplexType)" buttonLabelExpression="Create Node Array">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="node"/>
               <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Array" referenceName="node"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:ButtonDescription" name="LeafNodeStruct" labelExpression="Node Struct" isEnabledExpression="aql:self.eContainer().type.oclIsTypeOf(san::ComplexType)" buttonLabelExpression="Create Node Struct">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="node"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::LeafNodeStruct" referenceName="node"/>
             </firstModelOperations>
           </initialOperation>
         </controls>
@@ -452,9 +537,16 @@
       <groups name="GroupNodeArray" labelExpression="Create LeafNode" domainClass="san::Array" semanticCandidateExpression="var:self">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="LeafNodeRef" labelExpression="LeafNode" referenceNameExpression="leafnode" referenceOwnerExpression="var:self"/>
       </groups>
-      <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="san::TimedActivity">
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>
+      <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="san::Activity">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" isEnabledExpression="aql:self.oclIsTypeOf(san::TimedActivity)" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Cases" labelExpression="Case quantity" referenceNameExpression="cases" referenceOwnerExpression="var:self"/>
+      </groups>
+      <groups name="GroupCustomTypeDefinition" labelExpression="Type" domainClass="san::CustomTypeDefinition" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TypeArray" labelExpression="Type" isEnabledExpression="aql:self.oclIsTypeOf(san::CustomTypeArray)" referenceNameExpression="typeArray" referenceOwnerExpression="var:self"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Field" labelExpression="Field" isEnabledExpression="aql:self.oclIsTypeOf(san::CustomTypeStruct)" referenceNameExpression="field" referenceOwnerExpression="var:self"/>
+      </groups>
+      <groups name="GroupField" labelExpression="Type" domainClass="san::Field" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Type" labelExpression="Type" referenceNameExpression="typeStruct" referenceOwnerExpression="var:self"/>
       </groups>
     </categories>
   </extensions>
