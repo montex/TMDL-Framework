@@ -515,7 +515,7 @@
         </controls>
       </groups>
       <groups name="GroupNodeArray" labelExpression="Create LeafNode" domainClass="san::Array" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="LeafNodeRef" labelExpression="LeafNode" referenceNameExpression="leafnode" referenceOwnerExpression="var:self"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="LeafNodeRef" labelExpression="LeafNode" isEnabledExpression="aql:self.oclAsType(san::Array).leafnode->size() &lt; self.oclAsType(san::Array).definition.size" referenceNameExpression="leafnode" referenceOwnerExpression="var:self"/>
       </groups>
       <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="san::Activity">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" isEnabledExpression="aql:self.oclIsTypeOf(san::TimedActivity)" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>

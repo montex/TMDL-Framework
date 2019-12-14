@@ -35,4 +35,12 @@
             type="tsan"
             class="sant.util.SANTResourceFactoryImpl"/>
    </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sant_dev -->
+      <package
+            uri="http://www.modelspartiti.org/templates/san/sant_dev"
+            class="sant_dev.SANT_DEVPackage"
+            genModel="model/sant_dev.genmodel"/>
+   </extension>
+
 </plugin>

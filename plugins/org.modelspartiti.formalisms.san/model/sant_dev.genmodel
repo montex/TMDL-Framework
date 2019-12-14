@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.modelspartiti.formalisms.san/src" modelPluginID="org.modelspartiti.formalisms.san"
+    modelName="SANT_DEV" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="san.genmodel#//san ../../org.modelspartiti.infrastructure/model/tmdl.genmodel#//tmdl"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>sant_dev.ecore</foreignModel>
+  <genPackages prefix="SANT_DEV" disposableProviderFactory="true" ecorePackage="sant_dev.ecore#/">
+    <genClasses ecoreClass="sant_dev.ecore#//SANT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//SANT/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/templatePlaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/place"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/globalVariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/customType"/>
+    </genClasses>
+    <genClasses ecoreClass="sant_dev.ecore#//PlaceTemplate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//PlaceTemplate/multiplicity"/>
+      <genOperations ecoreOperation="sant_dev.ecore#//PlaceTemplate/generatedPlace">
+        <genParameters ecoreParameter="sant_dev.ecore#//PlaceTemplate/generatedPlace/multiplicity"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

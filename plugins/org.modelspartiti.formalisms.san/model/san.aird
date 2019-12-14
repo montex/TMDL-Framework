@@ -2360,7 +2360,7 @@
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_8A2t9vcwEem14sRddfBVcw" name=" definition : CustomTypeDefinition" tooltipText="">
         <target xmi:type="ecore:EReference" href="san.ecore#//ComplexType/definition"/>
         <semanticElements xmi:type="ecore:EReference" href="san.ecore#//ComplexType/definition"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_8A2t-PcwEem14sRddfBVcw" labelAlignment="LEFT" description="_8A2t9_cwEem14sRddfBVcw" color="114,159,207">
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_HfZHXReFEeqGGbKKSqAu_Q" labelAlignment="LEFT" description="_8A2t9_cwEem14sRddfBVcw" color="114,159,207">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>

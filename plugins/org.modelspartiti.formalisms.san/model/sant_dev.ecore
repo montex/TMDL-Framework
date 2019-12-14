@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sant_dev" nsURI="http://www.modelspartiti.org/templates/san/sant_dev"
+    nsPrefix="sant_dev">
+  <eClassifiers xsi:type="ecore:EClass" name="SANT" eSuperTypes="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/TemplateModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="templatePlaces" upperBound="-1"
+        eType="#//PlaceTemplate" containment="true" eKeys="san.ecore#//NamedElement/name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="place" upperBound="-1"
+        eType="ecore:EClass san.ecore#//Place" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activityTemplates" upperBound="-1"
+        eType="#//ActivityTemplate" containment="true" eKeys="san.ecore#//NamedElement/name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Parameter"
+        containment="true" eKeys="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Parameter/name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalVariables" upperBound="-1"
+        eType="ecore:EClass san.ecore#//GlobalVariable" containment="true" eKeys="san.ecore#//NamedElement/name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customType" upperBound="-1"
+        eType="ecore:EClass san.ecore#//CustomTypeDefinition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlaceTemplate" eSuperTypes="san.ecore#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicity" lowerBound="1"
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Multiplicity"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" upperBound="-1"
+        eType="#//MarkingTemplate" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiplicityRangeOperator" eSuperTypes="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Multiplicity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiplicityArrayIntegerFromReal" eSuperTypes="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Multiplicity">
+    <eOperations name="convertDoubleToInt" lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActivityTemplate" abstract="true" eSuperTypes="san.ecore#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="casesTemplate" lowerBound="1"
+        eType="#//CasesSpecification" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecification" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationValue" eSuperTypes="#//CasesSpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" eType="ecore:EClass san.ecore#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationArray" eSuperTypes="#//CasesSpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" upperBound="-1"
+        eType="ecore:EClass san.ecore#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationParametric" eSuperTypes="#//CasesSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Parameter"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" eType="ecore:EClass san.ecore#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationRangeOperator" eSuperTypes="#//CasesSpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" upperBound="-1"
+        eType="ecore:EClass san.ecore#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedActivity" eSuperTypes="#//ActivityTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeDistribution" lowerBound="1"
+        eType="ecore:EClass san.ecore#//Distribution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activation" eType="ecore:EClass san.ecore#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reactivation" eType="ecore:EClass san.ecore#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InstantaneousActivity" eSuperTypes="#//ActivityTemplate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingTemplate" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPlace" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingTemplateSimple" eSuperTypes="#//MarkingTemplate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkingTemplateGlobalVariable" eSuperTypes="#//MarkingTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="ecore:EClass san.ecore#//GlobalVariable"/>
+  </eClassifiers>
+</ecore:EPackage>
