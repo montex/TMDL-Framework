@@ -30,11 +30,11 @@ import tmdl.expressions.TemplateExpressionBooleanOr;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionBooleanOrImpl#getExp1 <em>Exp1</em>}</li>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionBooleanOrImpl#getExp2 <em>Exp2</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

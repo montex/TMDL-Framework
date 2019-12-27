@@ -30,10 +30,10 @@ import tmdl.expressions.TemplateExpressionRealFromInteger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionRealFromIntegerImpl#getExp <em>Exp</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

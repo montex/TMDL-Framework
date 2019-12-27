@@ -4,7 +4,6 @@ package sant_dev;
 
 import org.eclipse.emf.common.util.EList;
 import san.NamedElement;
-import san.Place;
 import tmdl.core.Multiplicity;
 
 /**
@@ -17,6 +16,7 @@ import tmdl.core.Multiplicity;
  * </p>
  * <ul>
  *   <li>{@link sant_dev.PlaceTemplate#getMultiplicity <em>Multiplicity</em>}</li>
+ *   <li>{@link sant_dev.PlaceTemplate#getMarking <em>Marking</em>}</li>
  * </ul>
  *
  * @see sant_dev.SANT_DEVPackage#getPlaceTemplate()
@@ -35,7 +35,7 @@ public interface PlaceTemplate extends NamedElement {
 	 * @return the value of the '<em>Multiplicity</em>' containment reference.
 	 * @see #setMultiplicity(Multiplicity)
 	 * @see sant_dev.SANT_DEVPackage#getPlaceTemplate_Multiplicity()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Multiplicity getMultiplicity();
@@ -51,11 +51,19 @@ public interface PlaceTemplate extends NamedElement {
 	void setMultiplicity(Multiplicity value);
 
 	/**
+	 * Returns the value of the '<em><b>Marking</b></em>' containment reference list.
+	 * The list contents are of type {@link sant_dev.MarkingTemplate}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Marking</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @model required="true"
+	 * @return the value of the '<em>Marking</em>' containment reference list.
+	 * @see sant_dev.SANT_DEVPackage#getPlaceTemplate_Marking()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Place> generatedPlace(Multiplicity multiplicity);
+	EList<MarkingTemplate> getMarking();
 
 } // PlaceTemplate

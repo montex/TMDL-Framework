@@ -13,11 +13,11 @@ import tmdl.library.TemplateComposite;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.VariantComposite#getTemplate <em>Template</em>}</li>
  *   <li>{@link tmdl.scenario.VariantComposite#getRealizations <em>Realizations</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.scenario.ScenarioPackage#getVariantComposite()
  * @model

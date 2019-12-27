@@ -2,7 +2,7 @@
  */
 package sant_dev.impl;
 
-import java.lang.reflect.InvocationTargetException;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -11,9 +11,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import san.Place;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import san.impl.NamedElementImpl;
 
+import sant_dev.MarkingTemplate;
 import sant_dev.PlaceTemplate;
 import sant_dev.SANT_DEVPackage;
 
@@ -28,6 +30,7 @@ import tmdl.core.Multiplicity;
  * </p>
  * <ul>
  *   <li>{@link sant_dev.impl.PlaceTemplateImpl#getMultiplicity <em>Multiplicity</em>}</li>
+ *   <li>{@link sant_dev.impl.PlaceTemplateImpl#getMarking <em>Marking</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,6 +45,16 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 	 * @ordered
 	 */
 	protected Multiplicity multiplicity;
+
+	/**
+	 * The cached value of the '{@link #getMarking() <em>Marking</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMarking()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MarkingTemplate> marking;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,10 +123,11 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Place> generatedPlace(Multiplicity multiplicity) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<MarkingTemplate> getMarking() {
+		if (marking == null) {
+			marking = new EObjectContainmentEList<MarkingTemplate>(MarkingTemplate.class, this, SANT_DEVPackage.PLACE_TEMPLATE__MARKING);
+		}
+		return marking;
 	}
 
 	/**
@@ -126,6 +140,8 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 		switch (featureID) {
 			case SANT_DEVPackage.PLACE_TEMPLATE__MULTIPLICITY:
 				return basicSetMultiplicity(null, msgs);
+			case SANT_DEVPackage.PLACE_TEMPLATE__MARKING:
+				return ((InternalEList<?>)getMarking()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -140,6 +156,8 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 		switch (featureID) {
 			case SANT_DEVPackage.PLACE_TEMPLATE__MULTIPLICITY:
 				return getMultiplicity();
+			case SANT_DEVPackage.PLACE_TEMPLATE__MARKING:
+				return getMarking();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -149,11 +167,16 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case SANT_DEVPackage.PLACE_TEMPLATE__MULTIPLICITY:
 				setMultiplicity((Multiplicity)newValue);
+				return;
+			case SANT_DEVPackage.PLACE_TEMPLATE__MARKING:
+				getMarking().clear();
+				getMarking().addAll((Collection<? extends MarkingTemplate>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -170,6 +193,9 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 			case SANT_DEVPackage.PLACE_TEMPLATE__MULTIPLICITY:
 				setMultiplicity((Multiplicity)null);
 				return;
+			case SANT_DEVPackage.PLACE_TEMPLATE__MARKING:
+				getMarking().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -184,22 +210,10 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 		switch (featureID) {
 			case SANT_DEVPackage.PLACE_TEMPLATE__MULTIPLICITY:
 				return multiplicity != null;
+			case SANT_DEVPackage.PLACE_TEMPLATE__MARKING:
+				return marking != null && !marking.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case SANT_DEVPackage.PLACE_TEMPLATE___GENERATED_PLACE__MULTIPLICITY:
-				return generatedPlace((Multiplicity)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //PlaceTemplateImpl

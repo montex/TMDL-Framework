@@ -22,11 +22,11 @@ import tmdl.scenario.Variant;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.impl.BlockRealizationImpl#getBlock <em>Block</em>}</li>
  *   <li>{@link tmdl.scenario.impl.BlockRealizationImpl#getVariant <em>Variant</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

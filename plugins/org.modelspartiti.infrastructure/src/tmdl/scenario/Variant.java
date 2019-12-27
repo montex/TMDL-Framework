@@ -15,11 +15,11 @@ import tmdl.core.Assignment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.Variant#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.scenario.Variant#getAssignments <em>Assignments</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.scenario.ScenarioPackage#getVariant()
  * @model abstract="true"

@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.TemplateComposite#getRules <em>Rules</em>}</li>
  *   <li>{@link tmdl.library.TemplateComposite#getBlocks <em>Blocks</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.library.LibraryPackage#getTemplateComposite()
  * @model

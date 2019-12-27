@@ -4,7 +4,9 @@ package sant_dev;
 
 import org.eclipse.emf.common.util.EList;
 
+import san.Activity;
 import san.CustomTypeDefinition;
+import san.Gate;
 import san.GlobalVariable;
 import san.Place;
 import tmdl.core.Parameter;
@@ -21,10 +23,13 @@ import tmdl.core.TemplateModel;
  * <ul>
  *   <li>{@link sant_dev.SANT#getName <em>Name</em>}</li>
  *   <li>{@link sant_dev.SANT#getTemplatePlaces <em>Template Places</em>}</li>
- *   <li>{@link sant_dev.SANT#getPlace <em>Place</em>}</li>
+ *   <li>{@link sant_dev.SANT#getPlaces <em>Places</em>}</li>
+ *   <li>{@link sant_dev.SANT#getActivities <em>Activities</em>}</li>
+ *   <li>{@link sant_dev.SANT#getActivityTemplates <em>Activity Templates</em>}</li>
  *   <li>{@link sant_dev.SANT#getParameters <em>Parameters</em>}</li>
  *   <li>{@link sant_dev.SANT#getGlobalVariables <em>Global Variables</em>}</li>
  *   <li>{@link sant_dev.SANT#getCustomType <em>Custom Type</em>}</li>
+ *   <li>{@link sant_dev.SANT#getGates <em>Gates</em>}</li>
  * </ul>
  *
  * @see sant_dev.SANT_DEVPackage#getSANT()
@@ -75,20 +80,52 @@ public interface SANT extends TemplateModel {
 	EList<PlaceTemplate> getTemplatePlaces();
 
 	/**
-	 * Returns the value of the '<em><b>Place</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Places</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Place}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Place</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Places</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Place</em>' containment reference list.
-	 * @see sant_dev.SANT_DEVPackage#getSANT_Place()
+	 * @return the value of the '<em>Places</em>' containment reference list.
+	 * @see sant_dev.SANT_DEVPackage#getSANT_Places()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Place> getPlace();
+	EList<Place> getPlaces();
+
+	/**
+	 * Returns the value of the '<em><b>Activities</b></em>' reference list.
+	 * The list contents are of type {@link san.Activity}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activities</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activities</em>' reference list.
+	 * @see sant_dev.SANT_DEVPackage#getSANT_Activities()
+	 * @model
+	 * @generated
+	 */
+	EList<Activity> getActivities();
+
+	/**
+	 * Returns the value of the '<em><b>Activity Templates</b></em>' containment reference list.
+	 * The list contents are of type {@link sant_dev.ActivityTemplate}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activity Templates</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activity Templates</em>' containment reference list.
+	 * @see sant_dev.SANT_DEVPackage#getSANT_ActivityTemplates()
+	 * @model containment="true" keys="name"
+	 * @generated
+	 */
+	EList<ActivityTemplate> getActivityTemplates();
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
@@ -137,5 +174,21 @@ public interface SANT extends TemplateModel {
 	 * @generated
 	 */
 	EList<CustomTypeDefinition> getCustomType();
+
+	/**
+	 * Returns the value of the '<em><b>Gates</b></em>' reference list.
+	 * The list contents are of type {@link san.Gate}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Gates</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gates</em>' reference list.
+	 * @see sant_dev.SANT_DEVPackage#getSANT_Gates()
+	 * @model
+	 * @generated
+	 */
+	EList<Gate> getGates();
 
 } // SANT

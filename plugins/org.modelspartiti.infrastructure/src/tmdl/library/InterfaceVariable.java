@@ -15,12 +15,12 @@ import tmdl.core.Multiplicity;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.InterfaceVariable#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.library.InterfaceVariable#getLabels <em>Labels</em>}</li>
  *   <li>{@link tmdl.library.InterfaceVariable#getMultiplicity <em>Multiplicity</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.library.LibraryPackage#getInterfaceVariable()
  * @model

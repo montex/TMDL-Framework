@@ -10,10 +10,10 @@ package tmdl.core;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.core.MultiplicityValue#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.core.CorePackage#getMultiplicityValue()
  * @model

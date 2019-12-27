@@ -27,10 +27,10 @@ import tmdl.expressions.TemplateExpressionBoolaenLiteral;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionBoolaenLiteralImpl#isValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -227,7 +227,7 @@ public class TemplateExpressionBoolaenLiteralImpl extends MinimalEObjectImpl.Con
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(')');

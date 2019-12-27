@@ -309,7 +309,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ExpressionsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -323,14 +323,18 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		if (isInited) return (ExpressionsPackage)EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ExpressionsPackageImpl theExpressionsPackage = (ExpressionsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ExpressionsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ExpressionsPackageImpl());
+		Object registeredExpressionsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ExpressionsPackageImpl theExpressionsPackage = registeredExpressionsPackage instanceof ExpressionsPackageImpl ? (ExpressionsPackageImpl)registeredExpressionsPackage : new ExpressionsPackageImpl();
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) instanceof ScenarioPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI) : ScenarioPackage.eINSTANCE);
-		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) instanceof LibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) : LibraryPackage.eINSTANCE);
-		CorePackageImpl theCorePackage = (CorePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) instanceof CorePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI) : CorePackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
+		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(registeredPackage instanceof ScenarioPackageImpl ? registeredPackage : ScenarioPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI);
+		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(registeredPackage instanceof LibraryPackageImpl ? registeredPackage : LibraryPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theExpressionsPackage.createPackageContents();
@@ -347,7 +351,6 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		// Mark meta-data to indicate it can't be changed
 		theExpressionsPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ExpressionsPackage.eNS_URI, theExpressionsPackage);
 		return theExpressionsPackage;
@@ -1517,14 +1520,14 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
 		   });
 	}
 
@@ -1535,156 +1538,156 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * @generated
 	 */
 	protected void createPivotAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
 		addAnnotation
-		  (getTemplateExpressionInteger__Evaluate(), 
-		   source, 
+		  (getTemplateExpressionInteger__Evaluate(),
+		   source,
 		   new String[] {
-			 "body", "evaluate(core::Assignment.allInstances())"
-		   });	
+			   "body", "evaluate(core::Assignment.allInstances())"
+		   });
 		addAnnotation
-		  (getTemplateExpressionReal__Evaluate(), 
-		   source, 
+		  (getTemplateExpressionReal__Evaluate(),
+		   source,
 		   new String[] {
-			 "body", "evaluate(core::Assignment.allInstances())"
-		   });	
+			   "body", "evaluate(core::Assignment.allInstances())"
+		   });
 		addAnnotation
-		  (getTemplateExpressionBoolean__Evaluate(), 
-		   source, 
+		  (getTemplateExpressionBoolean__Evaluate(),
+		   source,
 		   new String[] {
-			 "body", "evaluate(core::Assignment.allInstances())"
-		   });	
+			   "body", "evaluate(core::Assignment.allInstances())"
+		   });
 		addAnnotation
-		  (getTemplateExpressionIntegerLiteral__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionIntegerLiteral__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "value"
-		   });	
+			   "body", "value"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealLiteral__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealLiteral__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "value"
-		   });	
+			   "body", "value"
+		   });
 		addAnnotation
-		  (getTemplateExpressionBoolaenLiteral__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionBoolaenLiteral__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "value"
-		   });	
+			   "body", "value"
+		   });
 		addAnnotation
-		  (getTemplateExpressionIntegerFromReal__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionIntegerFromReal__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp.evaluate(assignments).floor()"
-		   });	
+			   "body", "exp.evaluate(assignments).floor()"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealFromInteger__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealFromInteger__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp.evaluate(assignments)"
-		   });	
+			   "body", "exp.evaluate(assignments)"
+		   });
 		addAnnotation
-		  (getTemplateExpressionParameterSimple__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionParameterSimple__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "assignments->select(as | as.oclIsTypeOf(core::AssignmentSimple))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentSimple).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentSimple).value"
-		   });	
+			   "body", "assignments->select(as | as.oclIsTypeOf(core::AssignmentSimple))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentSimple).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentSimple).value"
+		   });
 		addAnnotation
-		  (getTemplateExpressionParameterArrayValueAt__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionParameterArrayValueAt__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\t\t\t->at(position.evaluate(assignments))"
-		   });	
+			   "body", "assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\t\t\t->at(position.evaluate(assignments))"
+		   });
 		addAnnotation
-		  (getTemplateExpressionParameterArraySize__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionParameterArraySize__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\t\t\t->size()"
-		   });	
+			   "body", "assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\t\t\t->size()"
+		   });
 		addAnnotation
-		  (getTemplateExpressionArrayAggregate__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionArrayAggregate__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "\n\t\t\t\tlet array = assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\tin\n\t\t\t\t\tif function = ArrayAggregateKind::sum then array->sum()\n\t\t\t\t\telse if function = ArrayAggregateKind::min then array->min()\n\t\t\t\t\telse if function = ArrayAggregateKind::max then array->max()\n\t\t\t\t\telse\n\t\t\t\t\t\tarray->sum()/array->size()\n\t\t\t\t\tendif endif endif"
-		   });	
+			   "body", "\n\t\t\t\tlet array = assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\tin\n\t\t\t\t\tif function = ArrayAggregateKind::sum then array->sum()\n\t\t\t\t\telse if function = ArrayAggregateKind::min then array->min()\n\t\t\t\t\telse if function = ArrayAggregateKind::max then array->max()\n\t\t\t\t\telse\n\t\t\t\t\t\tarray->sum()/array->size()\n\t\t\t\t\tendif endif endif"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealSum__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealSum__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp1.evaluate(assignments) + exp2.evaluate(assignments)"
-		   });	
+			   "body", "exp1.evaluate(assignments) + exp2.evaluate(assignments)"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealSubtract__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealSubtract__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp1.evaluate(assignments) - exp2.evaluate(assignments)"
-		   });	
+			   "body", "exp1.evaluate(assignments) - exp2.evaluate(assignments)"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealMultiply__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealMultiply__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp1.evaluate(assignments) * exp2.evaluate(assignments)"
-		   });	
+			   "body", "exp1.evaluate(assignments) * exp2.evaluate(assignments)"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealDivide__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealDivide__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp1.evaluate(assignments) / exp2.evaluate(assignments)"
-		   });	
+			   "body", "exp1.evaluate(assignments) / exp2.evaluate(assignments)"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealModulo__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealModulo__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp1.evaluate(assignments).mod(exp2.evaluate(assignments))"
-		   });	
+			   "body", "exp1.evaluate(assignments).mod(exp2.evaluate(assignments))"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealFloor__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealFloor__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp.evaluate(assignments).floor()"
-		   });	
+			   "body", "exp.evaluate(assignments).floor()"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealCeil__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealCeil__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "\n\t\t\t\tlet n = exp.evaluate(assignments) in\n\t\t\t\tif n.floor() = n.round() then n.floor()+1\n\t\t\t\telse n.round() endif"
-		   });	
+			   "body", "\n\t\t\t\tlet n = exp.evaluate(assignments) in\n\t\t\t\tif n.floor() = n.round() then n.floor()+1\n\t\t\t\telse n.round() endif"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealRound__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealRound__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp.evaluate(assignments).round()"
-		   });	
+			   "body", "exp.evaluate(assignments).round()"
+		   });
 		addAnnotation
-		  (getTemplateExpressionRealIfThenElse__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionRealIfThenElse__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "\n\t\t\t\tif condition.evaluate(assignments)\n\t\t\t\tthen ifTrue.evaluate(assignments)\n\t\t\t\telse ifFalse.evaluate(assignments)\n\t\t\t\tendif"
-		   });	
+			   "body", "\n\t\t\t\tif condition.evaluate(assignments)\n\t\t\t\tthen ifTrue.evaluate(assignments)\n\t\t\t\telse ifFalse.evaluate(assignments)\n\t\t\t\tendif"
+		   });
 		addAnnotation
-		  (getTemplateExpressionBooleanNot__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionBooleanNot__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "not exp.evaluate(assignments)"
-		   });	
+			   "body", "not exp.evaluate(assignments)"
+		   });
 		addAnnotation
-		  (getTemplateExpressionBooleanToInteger__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionBooleanToInteger__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp.evaluate(assignments)"
-		   });	
+			   "body", "exp.evaluate(assignments)"
+		   });
 		addAnnotation
-		  (getTemplateExpressionBooleanAnd__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionBooleanAnd__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp1.evaluate(assignments) and exp2.evaluate(assignments)"
-		   });	
+			   "body", "exp1.evaluate(assignments) and exp2.evaluate(assignments)"
+		   });
 		addAnnotation
-		  (getTemplateExpressionBooleanOr__Evaluate__EList(), 
-		   source, 
+		  (getTemplateExpressionBooleanOr__Evaluate__EList(),
+		   source,
 		   new String[] {
-			 "body", "exp1.evaluate(assignments) or exp2.evaluate(assignments)"
+			   "body", "exp1.evaluate(assignments) or exp2.evaluate(assignments)"
 		   });
 	}
 

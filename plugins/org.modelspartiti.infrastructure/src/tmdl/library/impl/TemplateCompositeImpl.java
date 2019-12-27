@@ -25,11 +25,11 @@ import tmdl.library.TemplateComposite;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.impl.TemplateCompositeImpl#getRules <em>Rules</em>}</li>
  *   <li>{@link tmdl.library.impl.TemplateCompositeImpl#getBlocks <em>Blocks</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

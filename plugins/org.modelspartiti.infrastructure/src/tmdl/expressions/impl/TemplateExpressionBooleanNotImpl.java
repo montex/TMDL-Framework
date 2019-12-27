@@ -30,10 +30,10 @@ import tmdl.expressions.TemplateExpressionBooleanNot;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionBooleanNotImpl#getExp <em>Exp</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

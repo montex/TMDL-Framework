@@ -28,12 +28,12 @@ import tmdl.library.LibraryPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.impl.InterfaceVariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.library.impl.InterfaceVariableImpl#getLabels <em>Labels</em>}</li>
  *   <li>{@link tmdl.library.impl.InterfaceVariableImpl#getMultiplicity <em>Multiplicity</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -276,7 +276,7 @@ public class InterfaceVariableImpl extends MinimalEObjectImpl.Container implemen
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", labels: ");

@@ -10,10 +10,10 @@ package tmdl.core;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.core.MultiplicityParametric#getParameter <em>Parameter</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.core.CorePackage#getMultiplicityParametric()
  * @model

@@ -40,6 +40,114 @@ public interface SANT_DEVFactory extends EFactory {
 	PlaceTemplate createPlaceTemplate();
 
 	/**
+	 * Returns a new object of class '<em>Multiplicity Range Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multiplicity Range Operator</em>'.
+	 * @generated
+	 */
+	MultiplicityRangeOperator createMultiplicityRangeOperator();
+
+	/**
+	 * Returns a new object of class '<em>Multiplicity Array Integer From Real</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multiplicity Array Integer From Real</em>'.
+	 * @generated
+	 */
+	MultiplicityArrayIntegerFromReal createMultiplicityArrayIntegerFromReal();
+
+	/**
+	 * Returns a new object of class '<em>Cases Specification Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cases Specification Value</em>'.
+	 * @generated
+	 */
+	CasesSpecificationValue createCasesSpecificationValue();
+
+	/**
+	 * Returns a new object of class '<em>Cases Specification Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cases Specification Array</em>'.
+	 * @generated
+	 */
+	CasesSpecificationArray createCasesSpecificationArray();
+
+	/**
+	 * Returns a new object of class '<em>Cases Specification Parametric</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cases Specification Parametric</em>'.
+	 * @generated
+	 */
+	CasesSpecificationParametric createCasesSpecificationParametric();
+
+	/**
+	 * Returns a new object of class '<em>Cases Specification Range Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cases Specification Range Operator</em>'.
+	 * @generated
+	 */
+	CasesSpecificationRangeOperator createCasesSpecificationRangeOperator();
+
+	/**
+	 * Returns a new object of class '<em>Timed Activity Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Timed Activity Template</em>'.
+	 * @generated
+	 */
+	TimedActivityTemplate createTimedActivityTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Instantaneous Activity Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Instantaneous Activity Template</em>'.
+	 * @generated
+	 */
+	InstantaneousActivityTemplate createInstantaneousActivityTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Marking Template Simple</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Template Simple</em>'.
+	 * @generated
+	 */
+	MarkingTemplateSimple createMarkingTemplateSimple();
+
+	/**
+	 * Returns a new object of class '<em>Marking Template Global Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Template Global Variable</em>'.
+	 * @generated
+	 */
+	MarkingTemplateGlobalVariable createMarkingTemplateGlobalVariable();
+
+	/**
+	 * Returns a new object of class '<em>Output Gate Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Output Gate Template</em>'.
+	 * @generated
+	 */
+	OutputGateTemplate createOutputGateTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Input Gate Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Input Gate Template</em>'.
+	 * @generated
+	 */
+	InputGateTemplate createInputGateTemplate();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

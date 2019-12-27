@@ -14,11 +14,11 @@ import tmdl.core.ParameterArray;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.TemplateExpressionParameterArrayValueAt#getParameter <em>Parameter</em>}</li>
  *   <li>{@link tmdl.expressions.TemplateExpressionParameterArrayValueAt#getPosition <em>Position</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionParameterArrayValueAt()
  * @model
@@ -81,7 +81,7 @@ public interface TemplateExpressionParameterArrayValueAt extends TemplateExpress
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\t\t\t->at(position.evaluate(assignments))'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='assignments-&gt;select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t\t-&gt;select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t\t-&gt;asSequence()-&gt;first().oclAsType(core::AssignmentArray).values\n\t\t\t\t\t\t-&gt;at(position.evaluate(assignments))'"
 	 * @generated
 	 */
 	double evaluate(EList<Assignment> assignments);

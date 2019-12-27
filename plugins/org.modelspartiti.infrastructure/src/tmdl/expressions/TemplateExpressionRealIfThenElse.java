@@ -13,12 +13,12 @@ import tmdl.core.Assignment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.TemplateExpressionRealIfThenElse#getCondition <em>Condition</em>}</li>
  *   <li>{@link tmdl.expressions.TemplateExpressionRealIfThenElse#getIfTrue <em>If True</em>}</li>
  *   <li>{@link tmdl.expressions.TemplateExpressionRealIfThenElse#getIfFalse <em>If False</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionRealIfThenElse()
  * @model

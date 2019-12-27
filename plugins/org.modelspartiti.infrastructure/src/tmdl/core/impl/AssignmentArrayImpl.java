@@ -25,11 +25,11 @@ import tmdl.core.ParameterArray;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.core.impl.AssignmentArrayImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link tmdl.core.impl.AssignmentArrayImpl#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -203,7 +203,7 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (values: ");
 		result.append(values);
 		result.append(')');

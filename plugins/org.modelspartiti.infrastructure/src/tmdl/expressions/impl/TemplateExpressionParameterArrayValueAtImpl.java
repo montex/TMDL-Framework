@@ -31,11 +31,11 @@ import tmdl.expressions.TemplateExpressionParameterArrayValueAt;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionParameterArrayValueAtImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionParameterArrayValueAtImpl#getPosition <em>Position</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.core.AssignmentArray#getParameter <em>Parameter</em>}</li>
  *   <li>{@link tmdl.core.AssignmentArray#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.core.CorePackage#getAssignmentArray()
  * @model

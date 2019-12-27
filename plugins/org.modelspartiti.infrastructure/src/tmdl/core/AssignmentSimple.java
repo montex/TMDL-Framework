@@ -10,11 +10,11 @@ package tmdl.core;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.core.AssignmentSimple#getParameter <em>Parameter</em>}</li>
  *   <li>{@link tmdl.core.AssignmentSimple#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.core.CorePackage#getAssignmentSimple()
  * @model

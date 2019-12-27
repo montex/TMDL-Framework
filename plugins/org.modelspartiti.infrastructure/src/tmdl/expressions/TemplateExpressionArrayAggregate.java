@@ -14,11 +14,11 @@ import tmdl.core.ParameterArray;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.TemplateExpressionArrayAggregate#getParameter <em>Parameter</em>}</li>
  *   <li>{@link tmdl.expressions.TemplateExpressionArrayAggregate#getFunction <em>Function</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionArrayAggregate()
  * @model
@@ -84,7 +84,7 @@ public interface TemplateExpressionArrayAggregate extends TemplateExpressionReal
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\t\tlet array = assignments->select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentArray).values\n\t\t\t\tin\n\t\t\t\t\tif function = ArrayAggregateKind::sum then array->sum()\n\t\t\t\t\telse if function = ArrayAggregateKind::min then array->min()\n\t\t\t\t\telse if function = ArrayAggregateKind::max then array->max()\n\t\t\t\t\telse\n\t\t\t\t\t\tarray->sum()/array->size()\n\t\t\t\t\tendif endif endif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='\n\t\t\t\tlet array = assignments-&gt;select(as | as.oclIsTypeOf(core::AssignmentArray))\n\t\t\t\t\t-&gt;select(a | a.oclAsType(core::AssignmentArray).parameter = self.parameter)\n\t\t\t\t\t-&gt;asSequence()-&gt;first().oclAsType(core::AssignmentArray).values\n\t\t\t\tin\n\t\t\t\t\tif function = ArrayAggregateKind::sum then array-&gt;sum()\n\t\t\t\t\telse if function = ArrayAggregateKind::min then array-&gt;min()\n\t\t\t\t\telse if function = ArrayAggregateKind::max then array-&gt;max()\n\t\t\t\t\telse\n\t\t\t\t\t\tarray-&gt;sum()/array-&gt;size()\n\t\t\t\t\tendif endif endif'"
 	 * @generated
 	 */
 	double evaluate(EList<Assignment> assignments);

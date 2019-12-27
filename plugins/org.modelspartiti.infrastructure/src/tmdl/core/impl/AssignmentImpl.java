@@ -13,8 +13,6 @@ import tmdl.core.CorePackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Assignment</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

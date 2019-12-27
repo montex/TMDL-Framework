@@ -29,11 +29,11 @@ import tmdl.scenario.Variant;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.impl.VariantImpl#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.scenario.impl.VariantImpl#getAssignments <em>Assignments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -213,7 +213,7 @@ public abstract class VariantImpl extends MinimalEObjectImpl.Container implement
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

@@ -10,10 +10,10 @@ package tmdl.expressions;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.TemplateExpressionBooleanUnaryOperation#getExp <em>Exp</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionBooleanUnaryOperation()
  * @model interface="true" abstract="true"

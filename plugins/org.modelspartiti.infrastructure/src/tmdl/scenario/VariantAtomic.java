@@ -13,11 +13,11 @@ import tmdl.library.TemplateAtomic;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.VariantAtomic#getTemplate <em>Template</em>}</li>
  *   <li>{@link tmdl.scenario.VariantAtomic#getLabels <em>Labels</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.scenario.ScenarioPackage#getVariantAtomic()
  * @model

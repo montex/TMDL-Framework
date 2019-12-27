@@ -19,10 +19,10 @@ import tmdl.library.LibraryPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.impl.CompositionRuleMatchImpl#getLabels <em>Labels</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -137,7 +137,7 @@ public class CompositionRuleMatchImpl extends CompositionRuleImpl implements Com
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (labels: ");
 		result.append(labels);
 		result.append(')');

@@ -30,11 +30,11 @@ import tmdl.expressions.TemplateExpressionRealMultiply;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionRealMultiplyImpl#getExp1 <em>Exp1</em>}</li>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionRealMultiplyImpl#getExp2 <em>Exp2</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

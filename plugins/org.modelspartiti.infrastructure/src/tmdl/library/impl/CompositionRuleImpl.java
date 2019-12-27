@@ -25,11 +25,11 @@ import tmdl.library.LibraryPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.impl.CompositionRuleImpl#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.library.impl.CompositionRuleImpl#getVariables <em>Variables</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -195,7 +195,7 @@ public abstract class CompositionRuleImpl extends MinimalEObjectImpl.Container i
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

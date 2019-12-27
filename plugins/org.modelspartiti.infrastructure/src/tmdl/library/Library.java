@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.Library#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.library.Library#getInterfaces <em>Interfaces</em>}</li>
  *   <li>{@link tmdl.library.Library#getTemplates <em>Templates</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.library.LibraryPackage#getLibrary()
  * @model

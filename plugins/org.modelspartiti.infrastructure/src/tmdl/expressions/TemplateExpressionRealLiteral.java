@@ -13,10 +13,10 @@ import tmdl.core.Assignment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.TemplateExpressionRealLiteral#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionRealLiteral()
  * @model

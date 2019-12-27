@@ -13,11 +13,11 @@ import tmdl.library.Block;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.BlockRealization#getBlock <em>Block</em>}</li>
  *   <li>{@link tmdl.scenario.BlockRealization#getVariant <em>Variant</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.scenario.ScenarioPackage#getBlockRealization()
  * @model

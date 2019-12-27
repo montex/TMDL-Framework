@@ -29,12 +29,12 @@ import tmdl.library.TemplateSpecification;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.impl.LibraryImpl#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.library.impl.LibraryImpl#getInterfaces <em>Interfaces</em>}</li>
  *   <li>{@link tmdl.library.impl.LibraryImpl#getTemplates <em>Templates</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -249,7 +249,7 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

@@ -18,11 +18,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import san.Activity;
 import san.CustomTypeDefinition;
+import san.Gate;
 import san.GlobalVariable;
 import san.Place;
+import sant_dev.ActivityTemplate;
 import sant_dev.PlaceTemplate;
 import sant_dev.SANT;
 import sant_dev.SANT_DEVPackage;
@@ -41,10 +45,13 @@ import tmdl.core.Parameter;
  * <ul>
  *   <li>{@link sant_dev.impl.SANTImpl#getName <em>Name</em>}</li>
  *   <li>{@link sant_dev.impl.SANTImpl#getTemplatePlaces <em>Template Places</em>}</li>
- *   <li>{@link sant_dev.impl.SANTImpl#getPlace <em>Place</em>}</li>
+ *   <li>{@link sant_dev.impl.SANTImpl#getPlaces <em>Places</em>}</li>
+ *   <li>{@link sant_dev.impl.SANTImpl#getActivities <em>Activities</em>}</li>
+ *   <li>{@link sant_dev.impl.SANTImpl#getActivityTemplates <em>Activity Templates</em>}</li>
  *   <li>{@link sant_dev.impl.SANTImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link sant_dev.impl.SANTImpl#getGlobalVariables <em>Global Variables</em>}</li>
  *   <li>{@link sant_dev.impl.SANTImpl#getCustomType <em>Custom Type</em>}</li>
+ *   <li>{@link sant_dev.impl.SANTImpl#getGates <em>Gates</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,14 +88,34 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	protected EList<PlaceTemplate> templatePlaces;
 
 	/**
-	 * The cached value of the '{@link #getPlace() <em>Place</em>}' containment reference list.
+	 * The cached value of the '{@link #getPlaces() <em>Places</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPlace()
+	 * @see #getPlaces()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Place> place;
+	protected EList<Place> places;
+
+	/**
+	 * The cached value of the '{@link #getActivities() <em>Activities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Activity> activities;
+
+	/**
+	 * The cached value of the '{@link #getActivityTemplates() <em>Activity Templates</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivityTemplates()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ActivityTemplate> activityTemplates;
 
 	/**
 	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
@@ -119,6 +146,16 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * @ordered
 	 */
 	protected EList<CustomTypeDefinition> customType;
+
+	/**
+	 * The cached value of the '{@link #getGates() <em>Gates</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGates()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Gate> gates;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,11 +214,35 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Place> getPlace() {
-		if (place == null) {
-			place = new EObjectContainmentEList<Place>(Place.class, this, SANT_DEVPackage.SANT__PLACE);
+	public EList<Place> getPlaces() {
+		if (places == null) {
+			places = new EObjectContainmentEList<Place>(Place.class, this, SANT_DEVPackage.SANT__PLACES);
 		}
-		return place;
+		return places;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Activity> getActivities() {
+		if (activities == null) {
+			activities = new EObjectResolvingEList<Activity>(Activity.class, this, SANT_DEVPackage.SANT__ACTIVITIES);
+		}
+		return activities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ActivityTemplate> getActivityTemplates() {
+		if (activityTemplates == null) {
+			activityTemplates = new EObjectContainmentEList<ActivityTemplate>(ActivityTemplate.class, this, SANT_DEVPackage.SANT__ACTIVITY_TEMPLATES);
+		}
+		return activityTemplates;
 	}
 
 	/**
@@ -225,6 +286,18 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Gate> getGates() {
+		if (gates == null) {
+			gates = new EObjectResolvingEList<Gate>(Gate.class, this, SANT_DEVPackage.SANT__GATES);
+		}
+		return gates;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ConcreteModel concretize(EList<Assignment> parameterValues) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -241,8 +314,10 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 		switch (featureID) {
 			case SANT_DEVPackage.SANT__TEMPLATE_PLACES:
 				return ((InternalEList<?>)getTemplatePlaces()).basicRemove(otherEnd, msgs);
-			case SANT_DEVPackage.SANT__PLACE:
-				return ((InternalEList<?>)getPlace()).basicRemove(otherEnd, msgs);
+			case SANT_DEVPackage.SANT__PLACES:
+				return ((InternalEList<?>)getPlaces()).basicRemove(otherEnd, msgs);
+			case SANT_DEVPackage.SANT__ACTIVITY_TEMPLATES:
+				return ((InternalEList<?>)getActivityTemplates()).basicRemove(otherEnd, msgs);
 			case SANT_DEVPackage.SANT__PARAMETERS:
 				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 			case SANT_DEVPackage.SANT__GLOBAL_VARIABLES:
@@ -265,14 +340,20 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 				return getName();
 			case SANT_DEVPackage.SANT__TEMPLATE_PLACES:
 				return getTemplatePlaces();
-			case SANT_DEVPackage.SANT__PLACE:
-				return getPlace();
+			case SANT_DEVPackage.SANT__PLACES:
+				return getPlaces();
+			case SANT_DEVPackage.SANT__ACTIVITIES:
+				return getActivities();
+			case SANT_DEVPackage.SANT__ACTIVITY_TEMPLATES:
+				return getActivityTemplates();
 			case SANT_DEVPackage.SANT__PARAMETERS:
 				return getParameters();
 			case SANT_DEVPackage.SANT__GLOBAL_VARIABLES:
 				return getGlobalVariables();
 			case SANT_DEVPackage.SANT__CUSTOM_TYPE:
 				return getCustomType();
+			case SANT_DEVPackage.SANT__GATES:
+				return getGates();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -293,9 +374,17 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 				getTemplatePlaces().clear();
 				getTemplatePlaces().addAll((Collection<? extends PlaceTemplate>)newValue);
 				return;
-			case SANT_DEVPackage.SANT__PLACE:
-				getPlace().clear();
-				getPlace().addAll((Collection<? extends Place>)newValue);
+			case SANT_DEVPackage.SANT__PLACES:
+				getPlaces().clear();
+				getPlaces().addAll((Collection<? extends Place>)newValue);
+				return;
+			case SANT_DEVPackage.SANT__ACTIVITIES:
+				getActivities().clear();
+				getActivities().addAll((Collection<? extends Activity>)newValue);
+				return;
+			case SANT_DEVPackage.SANT__ACTIVITY_TEMPLATES:
+				getActivityTemplates().clear();
+				getActivityTemplates().addAll((Collection<? extends ActivityTemplate>)newValue);
 				return;
 			case SANT_DEVPackage.SANT__PARAMETERS:
 				getParameters().clear();
@@ -308,6 +397,10 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 			case SANT_DEVPackage.SANT__CUSTOM_TYPE:
 				getCustomType().clear();
 				getCustomType().addAll((Collection<? extends CustomTypeDefinition>)newValue);
+				return;
+			case SANT_DEVPackage.SANT__GATES:
+				getGates().clear();
+				getGates().addAll((Collection<? extends Gate>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -327,8 +420,14 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 			case SANT_DEVPackage.SANT__TEMPLATE_PLACES:
 				getTemplatePlaces().clear();
 				return;
-			case SANT_DEVPackage.SANT__PLACE:
-				getPlace().clear();
+			case SANT_DEVPackage.SANT__PLACES:
+				getPlaces().clear();
+				return;
+			case SANT_DEVPackage.SANT__ACTIVITIES:
+				getActivities().clear();
+				return;
+			case SANT_DEVPackage.SANT__ACTIVITY_TEMPLATES:
+				getActivityTemplates().clear();
 				return;
 			case SANT_DEVPackage.SANT__PARAMETERS:
 				getParameters().clear();
@@ -338,6 +437,9 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 				return;
 			case SANT_DEVPackage.SANT__CUSTOM_TYPE:
 				getCustomType().clear();
+				return;
+			case SANT_DEVPackage.SANT__GATES:
+				getGates().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -355,14 +457,20 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SANT_DEVPackage.SANT__TEMPLATE_PLACES:
 				return templatePlaces != null && !templatePlaces.isEmpty();
-			case SANT_DEVPackage.SANT__PLACE:
-				return place != null && !place.isEmpty();
+			case SANT_DEVPackage.SANT__PLACES:
+				return places != null && !places.isEmpty();
+			case SANT_DEVPackage.SANT__ACTIVITIES:
+				return activities != null && !activities.isEmpty();
+			case SANT_DEVPackage.SANT__ACTIVITY_TEMPLATES:
+				return activityTemplates != null && !activityTemplates.isEmpty();
 			case SANT_DEVPackage.SANT__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
 			case SANT_DEVPackage.SANT__GLOBAL_VARIABLES:
 				return globalVariables != null && !globalVariables.isEmpty();
 			case SANT_DEVPackage.SANT__CUSTOM_TYPE:
 				return customType != null && !customType.isEmpty();
+			case SANT_DEVPackage.SANT__GATES:
+				return gates != null && !gates.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

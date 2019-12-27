@@ -12,10 +12,25 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import san.SANPackage;
 
+import sant_dev.ActivityTemplate;
+import sant_dev.CasesSpecification;
+import sant_dev.CasesSpecificationArray;
+import sant_dev.CasesSpecificationParametric;
+import sant_dev.CasesSpecificationRangeOperator;
+import sant_dev.CasesSpecificationValue;
+import sant_dev.InputGateTemplate;
+import sant_dev.InstantaneousActivityTemplate;
+import sant_dev.MarkingTemplate;
+import sant_dev.MarkingTemplateGlobalVariable;
+import sant_dev.MarkingTemplateSimple;
+import sant_dev.MultiplicityArrayIntegerFromReal;
+import sant_dev.MultiplicityRangeOperator;
+import sant_dev.OutputGateTemplate;
 import sant_dev.PlaceTemplate;
 import sant_dev.SANT_DEVFactory;
 import sant_dev.SANT_DEVPackage;
 
+import sant_dev.TimedActivityTemplate;
 import tmdl.core.CorePackage;
 
 import tmdl.expressions.ExpressionsPackage;
@@ -44,6 +59,111 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * @generated
 	 */
 	private EClass placeTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multiplicityRangeOperatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multiplicityArrayIntegerFromRealEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activityTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass casesSpecificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass casesSpecificationValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass casesSpecificationArrayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass casesSpecificationParametricEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass casesSpecificationRangeOperatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timedActivityTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass instantaneousActivityTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass markingTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass markingTemplateSimpleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass markingTemplateGlobalVariableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass outputGateTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass inputGateTemplateEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -145,7 +265,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSANT_Place() {
+	public EReference getSANT_Places() {
 		return (EReference)santEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -154,7 +274,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSANT_Parameters() {
+	public EReference getSANT_Activities() {
 		return (EReference)santEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -163,7 +283,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSANT_GlobalVariables() {
+	public EReference getSANT_ActivityTemplates() {
 		return (EReference)santEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -172,8 +292,35 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSANT_CustomType() {
+	public EReference getSANT_Parameters() {
 		return (EReference)santEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSANT_GlobalVariables() {
+		return (EReference)santEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSANT_CustomType() {
+		return (EReference)santEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSANT_Gates() {
+		return (EReference)santEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -199,8 +346,377 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPlaceTemplate__GeneratedPlace__Multiplicity() {
-		return placeTemplateEClass.getEOperations().get(0);
+	public EReference getPlaceTemplate_Marking() {
+		return (EReference)placeTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultiplicityRangeOperator() {
+		return multiplicityRangeOperatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMultiplicityRangeOperator_Min() {
+		return (EAttribute)multiplicityRangeOperatorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMultiplicityRangeOperator_Max() {
+		return (EAttribute)multiplicityRangeOperatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMultiplicityRangeOperator_Step() {
+		return (EAttribute)multiplicityRangeOperatorEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultiplicityArrayIntegerFromReal() {
+		return multiplicityArrayIntegerFromRealEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMultiplicityArrayIntegerFromReal_Values() {
+		return (EAttribute)multiplicityArrayIntegerFromRealEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMultiplicityArrayIntegerFromReal__ConvertDoubleToInt() {
+		return multiplicityArrayIntegerFromRealEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getActivityTemplate() {
+		return activityTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivityTemplate_CasesTemplate() {
+		return (EReference)activityTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCasesSpecification() {
+		return casesSpecificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCasesSpecificationValue() {
+		return casesSpecificationValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCasesSpecificationValue_Id() {
+		return (EAttribute)casesSpecificationValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCasesSpecificationValue_P() {
+		return (EReference)casesSpecificationValueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCasesSpecificationArray() {
+		return casesSpecificationArrayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCasesSpecificationArray_Id() {
+		return (EAttribute)casesSpecificationArrayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCasesSpecificationArray_P() {
+		return (EReference)casesSpecificationArrayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCasesSpecificationParametric() {
+		return casesSpecificationParametricEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCasesSpecificationParametric_Parameter() {
+		return (EReference)casesSpecificationParametricEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCasesSpecificationParametric_P() {
+		return (EReference)casesSpecificationParametricEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCasesSpecificationRangeOperator() {
+		return casesSpecificationRangeOperatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCasesSpecificationRangeOperator_Min() {
+		return (EAttribute)casesSpecificationRangeOperatorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCasesSpecificationRangeOperator_Max() {
+		return (EAttribute)casesSpecificationRangeOperatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCasesSpecificationRangeOperator_Step() {
+		return (EAttribute)casesSpecificationRangeOperatorEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCasesSpecificationRangeOperator_P() {
+		return (EReference)casesSpecificationRangeOperatorEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTimedActivityTemplate() {
+		return timedActivityTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTimedActivityTemplate_TimeDistribution() {
+		return (EReference)timedActivityTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTimedActivityTemplate_Activation() {
+		return (EReference)timedActivityTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTimedActivityTemplate_Reactivation() {
+		return (EReference)timedActivityTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInstantaneousActivityTemplate() {
+		return instantaneousActivityTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMarkingTemplate() {
+		return markingTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMarkingTemplate_IdPlace() {
+		return (EAttribute)markingTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMarkingTemplateSimple() {
+		return markingTemplateSimpleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMarkingTemplateSimple_Value() {
+		return (EAttribute)markingTemplateSimpleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMarkingTemplateGlobalVariable() {
+		return markingTemplateGlobalVariableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMarkingTemplateGlobalVariable_Variable() {
+		return (EReference)markingTemplateGlobalVariableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOutputGateTemplate() {
+		return outputGateTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutputGateTemplate_Activity() {
+		return (EReference)outputGateTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutputGateTemplate_PlaceTemplate() {
+		return (EReference)outputGateTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInputGateTemplate() {
+		return inputGateTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInputGateTemplate_Predicate() {
+		return (EReference)inputGateTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInputGateTemplate_Activity() {
+		return (EReference)inputGateTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -234,14 +750,73 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		santEClass = createEClass(SANT);
 		createEAttribute(santEClass, SANT__NAME);
 		createEReference(santEClass, SANT__TEMPLATE_PLACES);
-		createEReference(santEClass, SANT__PLACE);
+		createEReference(santEClass, SANT__PLACES);
+		createEReference(santEClass, SANT__ACTIVITIES);
+		createEReference(santEClass, SANT__ACTIVITY_TEMPLATES);
 		createEReference(santEClass, SANT__PARAMETERS);
 		createEReference(santEClass, SANT__GLOBAL_VARIABLES);
 		createEReference(santEClass, SANT__CUSTOM_TYPE);
+		createEReference(santEClass, SANT__GATES);
 
 		placeTemplateEClass = createEClass(PLACE_TEMPLATE);
 		createEReference(placeTemplateEClass, PLACE_TEMPLATE__MULTIPLICITY);
-		createEOperation(placeTemplateEClass, PLACE_TEMPLATE___GENERATED_PLACE__MULTIPLICITY);
+		createEReference(placeTemplateEClass, PLACE_TEMPLATE__MARKING);
+
+		multiplicityRangeOperatorEClass = createEClass(MULTIPLICITY_RANGE_OPERATOR);
+		createEAttribute(multiplicityRangeOperatorEClass, MULTIPLICITY_RANGE_OPERATOR__MIN);
+		createEAttribute(multiplicityRangeOperatorEClass, MULTIPLICITY_RANGE_OPERATOR__MAX);
+		createEAttribute(multiplicityRangeOperatorEClass, MULTIPLICITY_RANGE_OPERATOR__STEP);
+
+		multiplicityArrayIntegerFromRealEClass = createEClass(MULTIPLICITY_ARRAY_INTEGER_FROM_REAL);
+		createEAttribute(multiplicityArrayIntegerFromRealEClass, MULTIPLICITY_ARRAY_INTEGER_FROM_REAL__VALUES);
+		createEOperation(multiplicityArrayIntegerFromRealEClass, MULTIPLICITY_ARRAY_INTEGER_FROM_REAL___CONVERT_DOUBLE_TO_INT);
+
+		activityTemplateEClass = createEClass(ACTIVITY_TEMPLATE);
+		createEReference(activityTemplateEClass, ACTIVITY_TEMPLATE__CASES_TEMPLATE);
+
+		casesSpecificationEClass = createEClass(CASES_SPECIFICATION);
+
+		casesSpecificationValueEClass = createEClass(CASES_SPECIFICATION_VALUE);
+		createEAttribute(casesSpecificationValueEClass, CASES_SPECIFICATION_VALUE__ID);
+		createEReference(casesSpecificationValueEClass, CASES_SPECIFICATION_VALUE__P);
+
+		casesSpecificationArrayEClass = createEClass(CASES_SPECIFICATION_ARRAY);
+		createEAttribute(casesSpecificationArrayEClass, CASES_SPECIFICATION_ARRAY__ID);
+		createEReference(casesSpecificationArrayEClass, CASES_SPECIFICATION_ARRAY__P);
+
+		casesSpecificationParametricEClass = createEClass(CASES_SPECIFICATION_PARAMETRIC);
+		createEReference(casesSpecificationParametricEClass, CASES_SPECIFICATION_PARAMETRIC__PARAMETER);
+		createEReference(casesSpecificationParametricEClass, CASES_SPECIFICATION_PARAMETRIC__P);
+
+		casesSpecificationRangeOperatorEClass = createEClass(CASES_SPECIFICATION_RANGE_OPERATOR);
+		createEAttribute(casesSpecificationRangeOperatorEClass, CASES_SPECIFICATION_RANGE_OPERATOR__MIN);
+		createEAttribute(casesSpecificationRangeOperatorEClass, CASES_SPECIFICATION_RANGE_OPERATOR__MAX);
+		createEAttribute(casesSpecificationRangeOperatorEClass, CASES_SPECIFICATION_RANGE_OPERATOR__STEP);
+		createEReference(casesSpecificationRangeOperatorEClass, CASES_SPECIFICATION_RANGE_OPERATOR__P);
+
+		timedActivityTemplateEClass = createEClass(TIMED_ACTIVITY_TEMPLATE);
+		createEReference(timedActivityTemplateEClass, TIMED_ACTIVITY_TEMPLATE__TIME_DISTRIBUTION);
+		createEReference(timedActivityTemplateEClass, TIMED_ACTIVITY_TEMPLATE__ACTIVATION);
+		createEReference(timedActivityTemplateEClass, TIMED_ACTIVITY_TEMPLATE__REACTIVATION);
+
+		instantaneousActivityTemplateEClass = createEClass(INSTANTANEOUS_ACTIVITY_TEMPLATE);
+
+		markingTemplateEClass = createEClass(MARKING_TEMPLATE);
+		createEAttribute(markingTemplateEClass, MARKING_TEMPLATE__ID_PLACE);
+
+		markingTemplateSimpleEClass = createEClass(MARKING_TEMPLATE_SIMPLE);
+		createEAttribute(markingTemplateSimpleEClass, MARKING_TEMPLATE_SIMPLE__VALUE);
+
+		markingTemplateGlobalVariableEClass = createEClass(MARKING_TEMPLATE_GLOBAL_VARIABLE);
+		createEReference(markingTemplateGlobalVariableEClass, MARKING_TEMPLATE_GLOBAL_VARIABLE__VARIABLE);
+
+		outputGateTemplateEClass = createEClass(OUTPUT_GATE_TEMPLATE);
+		createEReference(outputGateTemplateEClass, OUTPUT_GATE_TEMPLATE__ACTIVITY);
+		createEReference(outputGateTemplateEClass, OUTPUT_GATE_TEMPLATE__PLACE_TEMPLATE);
+
+		inputGateTemplateEClass = createEClass(INPUT_GATE_TEMPLATE);
+		createEReference(inputGateTemplateEClass, INPUT_GATE_TEMPLATE__PREDICATE);
+		createEReference(inputGateTemplateEClass, INPUT_GATE_TEMPLATE__ACTIVITY);
 	}
 
 	/**
@@ -278,24 +853,96 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		// Add supertypes to classes
 		santEClass.getESuperTypes().add(theCorePackage.getTemplateModel());
 		placeTemplateEClass.getESuperTypes().add(theSANPackage.getNamedElement());
+		multiplicityRangeOperatorEClass.getESuperTypes().add(theCorePackage.getMultiplicity());
+		multiplicityArrayIntegerFromRealEClass.getESuperTypes().add(theCorePackage.getMultiplicity());
+		activityTemplateEClass.getESuperTypes().add(theSANPackage.getNamedElement());
+		casesSpecificationValueEClass.getESuperTypes().add(this.getCasesSpecification());
+		casesSpecificationArrayEClass.getESuperTypes().add(this.getCasesSpecification());
+		casesSpecificationParametricEClass.getESuperTypes().add(this.getCasesSpecification());
+		casesSpecificationRangeOperatorEClass.getESuperTypes().add(this.getCasesSpecification());
+		timedActivityTemplateEClass.getESuperTypes().add(this.getActivityTemplate());
+		instantaneousActivityTemplateEClass.getESuperTypes().add(this.getActivityTemplate());
+		markingTemplateSimpleEClass.getESuperTypes().add(this.getMarkingTemplate());
+		markingTemplateGlobalVariableEClass.getESuperTypes().add(this.getMarkingTemplate());
+		outputGateTemplateEClass.getESuperTypes().add(theSANPackage.getGate());
+		inputGateTemplateEClass.getESuperTypes().add(theSANPackage.getGate());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(santEClass, sant_dev.SANT.class, "SANT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSANT_Name(), ecorePackage.getEString(), "name", null, 1, 1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSANT_TemplatePlaces(), this.getPlaceTemplate(), null, "templatePlaces", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_TemplatePlaces().getEKeys().add(theSANPackage.getNamedElement_Name());
-		initEReference(getSANT_Place(), theSANPackage.getPlace(), null, "place", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSANT_Places(), theSANPackage.getPlace(), null, "places", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSANT_Activities(), theSANPackage.getActivity(), null, "activities", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSANT_ActivityTemplates(), this.getActivityTemplate(), null, "activityTemplates", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getSANT_ActivityTemplates().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_Parameters(), theCorePackage.getParameter(), null, "parameters", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_Parameters().getEKeys().add(theCorePackage.getParameter_Name());
 		initEReference(getSANT_GlobalVariables(), theSANPackage.getGlobalVariable(), null, "globalVariables", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_GlobalVariables().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_CustomType(), theSANPackage.getCustomTypeDefinition(), null, "customType", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSANT_Gates(), theSANPackage.getGate(), null, "gates", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placeTemplateEClass, PlaceTemplate.class, "PlaceTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlaceTemplate_Multiplicity(), theCorePackage.getMultiplicity(), null, "multiplicity", null, 0, 1, PlaceTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlaceTemplate_Multiplicity(), theCorePackage.getMultiplicity(), null, "multiplicity", null, 1, 1, PlaceTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlaceTemplate_Marking(), this.getMarkingTemplate(), null, "marking", null, 0, -1, PlaceTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getPlaceTemplate__GeneratedPlace__Multiplicity(), theSANPackage.getPlace(), "generatedPlace", 1, -1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theCorePackage.getMultiplicity(), "multiplicity", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEClass(multiplicityRangeOperatorEClass, MultiplicityRangeOperator.class, "MultiplicityRangeOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMultiplicityRangeOperator_Min(), ecorePackage.getEInt(), "min", null, 1, 1, MultiplicityRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMultiplicityRangeOperator_Max(), ecorePackage.getEInt(), "max", null, 1, 1, MultiplicityRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMultiplicityRangeOperator_Step(), ecorePackage.getEInt(), "step", null, 0, 1, MultiplicityRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(multiplicityArrayIntegerFromRealEClass, MultiplicityArrayIntegerFromReal.class, "MultiplicityArrayIntegerFromReal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMultiplicityArrayIntegerFromReal_Values(), ecorePackage.getEDouble(), "values", null, 1, -1, MultiplicityArrayIntegerFromReal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getMultiplicityArrayIntegerFromReal__ConvertDoubleToInt(), ecorePackage.getEInt(), "convertDoubleToInt", 1, -1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(activityTemplateEClass, ActivityTemplate.class, "ActivityTemplate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getActivityTemplate_CasesTemplate(), this.getCasesSpecification(), null, "casesTemplate", null, 1, 1, ActivityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(casesSpecificationEClass, CasesSpecification.class, "CasesSpecification", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(casesSpecificationValueEClass, CasesSpecificationValue.class, "CasesSpecificationValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCasesSpecificationValue_Id(), ecorePackage.getEInt(), "id", null, 1, 1, CasesSpecificationValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCasesSpecificationValue_P(), theSANPackage.getExpression(), null, "p", null, 1, 1, CasesSpecificationValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(casesSpecificationArrayEClass, CasesSpecificationArray.class, "CasesSpecificationArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCasesSpecificationArray_Id(), ecorePackage.getEInt(), "id", null, 1, -1, CasesSpecificationArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCasesSpecificationArray_P(), theSANPackage.getExpression(), null, "p", null, 1, -1, CasesSpecificationArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(casesSpecificationParametricEClass, CasesSpecificationParametric.class, "CasesSpecificationParametric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCasesSpecificationParametric_Parameter(), theCorePackage.getParameter(), null, "parameter", null, 1, 1, CasesSpecificationParametric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCasesSpecificationParametric_P(), theSANPackage.getExpression(), null, "p", null, 1, -1, CasesSpecificationParametric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(casesSpecificationRangeOperatorEClass, CasesSpecificationRangeOperator.class, "CasesSpecificationRangeOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCasesSpecificationRangeOperator_Min(), ecorePackage.getEInt(), "min", null, 1, 1, CasesSpecificationRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCasesSpecificationRangeOperator_Max(), ecorePackage.getEInt(), "max", null, 1, 1, CasesSpecificationRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCasesSpecificationRangeOperator_Step(), ecorePackage.getEInt(), "step", null, 0, 1, CasesSpecificationRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCasesSpecificationRangeOperator_P(), theSANPackage.getExpression(), null, "p", null, 1, -1, CasesSpecificationRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(timedActivityTemplateEClass, TimedActivityTemplate.class, "TimedActivityTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTimedActivityTemplate_TimeDistribution(), theSANPackage.getDistribution(), null, "timeDistribution", null, 1, 1, TimedActivityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTimedActivityTemplate_Activation(), theSANPackage.getExpression(), null, "activation", null, 0, 1, TimedActivityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTimedActivityTemplate_Reactivation(), theSANPackage.getExpression(), null, "reactivation", null, 0, 1, TimedActivityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(instantaneousActivityTemplateEClass, InstantaneousActivityTemplate.class, "InstantaneousActivityTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(markingTemplateEClass, MarkingTemplate.class, "MarkingTemplate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMarkingTemplate_IdPlace(), ecorePackage.getEInt(), "idPlace", null, 1, 1, MarkingTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(markingTemplateSimpleEClass, MarkingTemplateSimple.class, "MarkingTemplateSimple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMarkingTemplateSimple_Value(), ecorePackage.getEShort(), "value", null, 1, 1, MarkingTemplateSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(markingTemplateGlobalVariableEClass, MarkingTemplateGlobalVariable.class, "MarkingTemplateGlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMarkingTemplateGlobalVariable_Variable(), theSANPackage.getGlobalVariable(), null, "variable", null, 1, 1, MarkingTemplateGlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(outputGateTemplateEClass, OutputGateTemplate.class, "OutputGateTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOutputGateTemplate_Activity(), this.getActivityTemplate(), null, "activity", null, 1, -1, OutputGateTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutputGateTemplate_PlaceTemplate(), this.getPlaceTemplate(), null, "placeTemplate", null, 1, -1, OutputGateTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputGateTemplateEClass, InputGateTemplate.class, "InputGateTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInputGateTemplate_Predicate(), theSANPackage.getExpression(), null, "predicate", null, 1, 1, InputGateTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInputGateTemplate_Activity(), this.getActivityTemplate(), null, "activity", null, 1, -1, InputGateTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
