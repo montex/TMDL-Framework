@@ -99,22 +99,13 @@ public interface SANT_DEVPackage extends EPackage {
 	int SANT__PLACES = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Activities</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SANT__ACTIVITIES = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Activity Templates</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SANT__ACTIVITY_TEMPLATES = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 4;
+	int SANT__ACTIVITY_TEMPLATES = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -123,7 +114,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SANT__PARAMETERS = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 5;
+	int SANT__PARAMETERS = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Global Variables</b></em>' containment reference list.
@@ -132,7 +123,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SANT__GLOBAL_VARIABLES = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 6;
+	int SANT__GLOBAL_VARIABLES = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Custom Type</b></em>' containment reference list.
@@ -141,16 +132,16 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SANT__CUSTOM_TYPE = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 7;
+	int SANT__CUSTOM_TYPE = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Gates</b></em>' reference list.
+	 * The feature id for the '<em><b>Gates</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SANT__GATES = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 8;
+	int SANT__GATES = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>SANT</em>' class.
@@ -159,7 +150,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SANT_FEATURE_COUNT = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 9;
+	int SANT_FEATURE_COUNT = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Concretize</em>' operation.
@@ -411,50 +402,41 @@ public interface SANT_DEVPackage extends EPackage {
 	int CASES_SPECIFICATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link sant_dev.impl.CasesSpecificationValueImpl <em>Cases Specification Value</em>}' class.
+	 * The meta object id for the '{@link sant_dev.impl.CasesSpecificationConcreteImpl <em>Cases Specification Concrete</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see sant_dev.impl.CasesSpecificationValueImpl
-	 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecificationValue()
+	 * @see sant_dev.impl.CasesSpecificationConcreteImpl
+	 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecificationConcrete()
 	 * @generated
 	 */
-	int CASES_SPECIFICATION_VALUE = 6;
+	int CASES_SPECIFICATION_CONCRETE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASES_SPECIFICATION_VALUE__ID = CASES_SPECIFICATION_FEATURE_COUNT + 0;
+	int CASES_SPECIFICATION_CONCRETE__CASES = CASES_SPECIFICATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * The number of structural features of the '<em>Cases Specification Concrete</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASES_SPECIFICATION_VALUE__P = CASES_SPECIFICATION_FEATURE_COUNT + 1;
+	int CASES_SPECIFICATION_CONCRETE_FEATURE_COUNT = CASES_SPECIFICATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Cases Specification Value</em>' class.
+	 * The number of operations of the '<em>Cases Specification Concrete</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASES_SPECIFICATION_VALUE_FEATURE_COUNT = CASES_SPECIFICATION_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Cases Specification Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASES_SPECIFICATION_VALUE_OPERATION_COUNT = CASES_SPECIFICATION_OPERATION_COUNT + 0;
+	int CASES_SPECIFICATION_CONCRETE_OPERATION_COUNT = CASES_SPECIFICATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link sant_dev.impl.CasesSpecificationArrayImpl <em>Cases Specification Array</em>}' class.
@@ -861,14 +843,14 @@ public interface SANT_DEVPackage extends EPackage {
 	int MARKING_TEMPLATE_GLOBAL_VARIABLE_OPERATION_COUNT = MARKING_TEMPLATE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link sant_dev.impl.OutputGateTemplateImpl <em>Output Gate Template</em>}' class.
+	 * The meta object id for the '{@link sant_dev.impl.GateTemplateImpl <em>Gate Template</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see sant_dev.impl.OutputGateTemplateImpl
-	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGateTemplate()
+	 * @see sant_dev.impl.GateTemplateImpl
+	 * @see sant_dev.impl.SANT_DEVPackageImpl#getGateTemplate()
 	 * @generated
 	 */
-	int OUTPUT_GATE_TEMPLATE = 15;
+	int GATE_TEMPLATE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -877,7 +859,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_GATE_TEMPLATE__NAME = SANPackage.GATE__NAME;
+	int GATE_TEMPLATE__NAME = SANPackage.GATE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Function</b></em>' containment reference.
@@ -886,7 +868,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_GATE_TEMPLATE__FUNCTION = SANPackage.GATE__FUNCTION;
+	int GATE_TEMPLATE__FUNCTION = SANPackage.GATE__FUNCTION;
 
 	/**
 	 * The feature id for the '<em><b>Places</b></em>' reference list.
@@ -895,16 +877,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_GATE_TEMPLATE__PLACES = SANPackage.GATE__PLACES;
-
-	/**
-	 * The feature id for the '<em><b>Activity</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE_TEMPLATE__ACTIVITY = SANPackage.GATE_FEATURE_COUNT + 0;
+	int GATE_TEMPLATE__PLACES = SANPackage.GATE__PLACES;
 
 	/**
 	 * The feature id for the '<em><b>Place Template</b></em>' reference list.
@@ -913,7 +886,217 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_GATE_TEMPLATE__PLACE_TEMPLATE = SANPackage.GATE_FEATURE_COUNT + 1;
+	int GATE_TEMPLATE__PLACE_TEMPLATE = SANPackage.GATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Gate Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE_TEMPLATE_FEATURE_COUNT = SANPackage.GATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Gate Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE_TEMPLATE_OPERATION_COUNT = SANPackage.GATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link sant_dev.impl.OutputGateImpl <em>Output Gate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see sant_dev.impl.OutputGateImpl
+	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGate()
+	 * @generated
+	 */
+	int OUTPUT_GATE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__NAME = GATE_TEMPLATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__FUNCTION = GATE_TEMPLATE__FUNCTION;
+
+	/**
+	 * The feature id for the '<em><b>Places</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__PLACES = GATE_TEMPLATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Place Template</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__PLACE_TEMPLATE = GATE_TEMPLATE__PLACE_TEMPLATE;
+
+	/**
+	 * The number of structural features of the '<em>Output Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_FEATURE_COUNT = GATE_TEMPLATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Output Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_OPERATION_COUNT = GATE_TEMPLATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link sant_dev.impl.OutputGateConcreteImpl <em>Output Gate Concrete</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see sant_dev.impl.OutputGateConcreteImpl
+	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGateConcrete()
+	 * @generated
+	 */
+	int OUTPUT_GATE_CONCRETE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_CONCRETE__NAME = OUTPUT_GATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_CONCRETE__FUNCTION = OUTPUT_GATE__FUNCTION;
+
+	/**
+	 * The feature id for the '<em><b>Places</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_CONCRETE__PLACES = OUTPUT_GATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Place Template</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_CONCRETE__PLACE_TEMPLATE = OUTPUT_GATE__PLACE_TEMPLATE;
+
+	/**
+	 * The feature id for the '<em><b>Case</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_CONCRETE__CASE = OUTPUT_GATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Output Gate Concrete</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_CONCRETE_FEATURE_COUNT = OUTPUT_GATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Output Gate Concrete</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_CONCRETE_OPERATION_COUNT = OUTPUT_GATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link sant_dev.impl.OutputGateTemplateImpl <em>Output Gate Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see sant_dev.impl.OutputGateTemplateImpl
+	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGateTemplate()
+	 * @generated
+	 */
+	int OUTPUT_GATE_TEMPLATE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_TEMPLATE__NAME = OUTPUT_GATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_TEMPLATE__FUNCTION = OUTPUT_GATE__FUNCTION;
+
+	/**
+	 * The feature id for the '<em><b>Places</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_TEMPLATE__PLACES = OUTPUT_GATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Place Template</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_TEMPLATE__PLACE_TEMPLATE = OUTPUT_GATE__PLACE_TEMPLATE;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_TEMPLATE__ACTIVITY = OUTPUT_GATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Output Gate Template</em>' class.
@@ -922,7 +1105,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_GATE_TEMPLATE_FEATURE_COUNT = SANPackage.GATE_FEATURE_COUNT + 2;
+	int OUTPUT_GATE_TEMPLATE_FEATURE_COUNT = OUTPUT_GATE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Output Gate Template</em>' class.
@@ -931,7 +1114,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_GATE_TEMPLATE_OPERATION_COUNT = SANPackage.GATE_OPERATION_COUNT + 0;
+	int OUTPUT_GATE_TEMPLATE_OPERATION_COUNT = OUTPUT_GATE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link sant_dev.impl.InputGateTemplateImpl <em>Input Gate Template</em>}' class.
@@ -941,7 +1124,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getInputGateTemplate()
 	 * @generated
 	 */
-	int INPUT_GATE_TEMPLATE = 16;
+	int INPUT_GATE_TEMPLATE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -950,7 +1133,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_GATE_TEMPLATE__NAME = SANPackage.GATE__NAME;
+	int INPUT_GATE_TEMPLATE__NAME = GATE_TEMPLATE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Function</b></em>' containment reference.
@@ -959,7 +1142,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_GATE_TEMPLATE__FUNCTION = SANPackage.GATE__FUNCTION;
+	int INPUT_GATE_TEMPLATE__FUNCTION = GATE_TEMPLATE__FUNCTION;
 
 	/**
 	 * The feature id for the '<em><b>Places</b></em>' reference list.
@@ -968,7 +1151,16 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_GATE_TEMPLATE__PLACES = SANPackage.GATE__PLACES;
+	int INPUT_GATE_TEMPLATE__PLACES = GATE_TEMPLATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Place Template</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE_TEMPLATE__PLACE_TEMPLATE = GATE_TEMPLATE__PLACE_TEMPLATE;
 
 	/**
 	 * The feature id for the '<em><b>Predicate</b></em>' containment reference.
@@ -977,7 +1169,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_GATE_TEMPLATE__PREDICATE = SANPackage.GATE_FEATURE_COUNT + 0;
+	int INPUT_GATE_TEMPLATE__PREDICATE = GATE_TEMPLATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Activity</b></em>' reference list.
@@ -986,7 +1178,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_GATE_TEMPLATE__ACTIVITY = SANPackage.GATE_FEATURE_COUNT + 1;
+	int INPUT_GATE_TEMPLATE__ACTIVITY = GATE_TEMPLATE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Input Gate Template</em>' class.
@@ -995,7 +1187,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_GATE_TEMPLATE_FEATURE_COUNT = SANPackage.GATE_FEATURE_COUNT + 2;
+	int INPUT_GATE_TEMPLATE_FEATURE_COUNT = GATE_TEMPLATE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Input Gate Template</em>' class.
@@ -1004,7 +1196,128 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_GATE_TEMPLATE_OPERATION_COUNT = SANPackage.GATE_OPERATION_COUNT + 0;
+	int INPUT_GATE_TEMPLATE_OPERATION_COUNT = GATE_TEMPLATE_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link sant_dev.impl.ArcTemplateImpl <em>Arc Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see sant_dev.impl.ArcTemplateImpl
+	 * @see sant_dev.impl.SANT_DEVPackageImpl#getArcTemplate()
+	 * @generated
+	 */
+	int ARC_TEMPLATE = 20;
+
+	/**
+	 * The number of structural features of the '<em>Arc Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_TEMPLATE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Arc Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_TEMPLATE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link sant_dev.impl.InputArcImpl <em>Input Arc</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see sant_dev.impl.InputArcImpl
+	 * @see sant_dev.impl.SANT_DEVPackageImpl#getInputArc()
+	 * @generated
+	 */
+	int INPUT_ARC = 21;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC__SOURCE = ARC_TEMPLATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC__TARGET = ARC_TEMPLATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Input Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC_FEATURE_COUNT = ARC_TEMPLATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Input Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC_OPERATION_COUNT = ARC_TEMPLATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link sant_dev.impl.OutputArcImpl <em>Output Arc</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see sant_dev.impl.OutputArcImpl
+	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputArc()
+	 * @generated
+	 */
+	int OUTPUT_ARC = 22;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC__SOURCE = ARC_TEMPLATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC__TARGET = ARC_TEMPLATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Output Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC_FEATURE_COUNT = ARC_TEMPLATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Output Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC_OPERATION_COUNT = ARC_TEMPLATE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1051,17 +1364,6 @@ public interface SANT_DEVPackage extends EPackage {
 	EReference getSANT_Places();
 
 	/**
-	 * Returns the meta object for the reference list '{@link sant_dev.SANT#getActivities <em>Activities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Activities</em>'.
-	 * @see sant_dev.SANT#getActivities()
-	 * @see #getSANT()
-	 * @generated
-	 */
-	EReference getSANT_Activities();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link sant_dev.SANT#getActivityTemplates <em>Activity Templates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1106,10 +1408,10 @@ public interface SANT_DEVPackage extends EPackage {
 	EReference getSANT_CustomType();
 
 	/**
-	 * Returns the meta object for the reference list '{@link sant_dev.SANT#getGates <em>Gates</em>}'.
+	 * Returns the meta object for the containment reference list '{@link sant_dev.SANT#getGates <em>Gates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Gates</em>'.
+	 * @return the meta object for the containment reference list '<em>Gates</em>'.
 	 * @see sant_dev.SANT#getGates()
 	 * @see #getSANT()
 	 * @generated
@@ -1254,36 +1556,25 @@ public interface SANT_DEVPackage extends EPackage {
 	EClass getCasesSpecification();
 
 	/**
-	 * Returns the meta object for class '{@link sant_dev.CasesSpecificationValue <em>Cases Specification Value</em>}'.
+	 * Returns the meta object for class '{@link sant_dev.CasesSpecificationConcrete <em>Cases Specification Concrete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Cases Specification Value</em>'.
-	 * @see sant_dev.CasesSpecificationValue
+	 * @return the meta object for class '<em>Cases Specification Concrete</em>'.
+	 * @see sant_dev.CasesSpecificationConcrete
 	 * @generated
 	 */
-	EClass getCasesSpecificationValue();
+	EClass getCasesSpecificationConcrete();
 
 	/**
-	 * Returns the meta object for the attribute '{@link sant_dev.CasesSpecificationValue#getId <em>Id</em>}'.
+	 * Returns the meta object for the containment reference list '{@link sant_dev.CasesSpecificationConcrete#getCases <em>Cases</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see sant_dev.CasesSpecificationValue#getId()
-	 * @see #getCasesSpecificationValue()
+	 * @return the meta object for the containment reference list '<em>Cases</em>'.
+	 * @see sant_dev.CasesSpecificationConcrete#getCases()
+	 * @see #getCasesSpecificationConcrete()
 	 * @generated
 	 */
-	EAttribute getCasesSpecificationValue_Id();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link sant_dev.CasesSpecificationValue#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>P</em>'.
-	 * @see sant_dev.CasesSpecificationValue#getP()
-	 * @see #getCasesSpecificationValue()
-	 * @generated
-	 */
-	EReference getCasesSpecificationValue_P();
+	EReference getCasesSpecificationConcrete_Cases();
 
 	/**
 	 * Returns the meta object for class '{@link sant_dev.CasesSpecificationArray <em>Cases Specification Array</em>}'.
@@ -1520,6 +1811,58 @@ public interface SANT_DEVPackage extends EPackage {
 	EReference getMarkingTemplateGlobalVariable_Variable();
 
 	/**
+	 * Returns the meta object for class '{@link sant_dev.GateTemplate <em>Gate Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Gate Template</em>'.
+	 * @see sant_dev.GateTemplate
+	 * @generated
+	 */
+	EClass getGateTemplate();
+
+	/**
+	 * Returns the meta object for the reference list '{@link sant_dev.GateTemplate#getPlaceTemplate <em>Place Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Place Template</em>'.
+	 * @see sant_dev.GateTemplate#getPlaceTemplate()
+	 * @see #getGateTemplate()
+	 * @generated
+	 */
+	EReference getGateTemplate_PlaceTemplate();
+
+	/**
+	 * Returns the meta object for class '{@link sant_dev.OutputGate <em>Output Gate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output Gate</em>'.
+	 * @see sant_dev.OutputGate
+	 * @generated
+	 */
+	EClass getOutputGate();
+
+	/**
+	 * Returns the meta object for class '{@link sant_dev.OutputGateConcrete <em>Output Gate Concrete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output Gate Concrete</em>'.
+	 * @see sant_dev.OutputGateConcrete
+	 * @generated
+	 */
+	EClass getOutputGateConcrete();
+
+	/**
+	 * Returns the meta object for the reference '{@link sant_dev.OutputGateConcrete#getCase <em>Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Case</em>'.
+	 * @see sant_dev.OutputGateConcrete#getCase()
+	 * @see #getOutputGateConcrete()
+	 * @generated
+	 */
+	EReference getOutputGateConcrete_Case();
+
+	/**
 	 * Returns the meta object for class '{@link sant_dev.OutputGateTemplate <em>Output Gate Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1539,17 +1882,6 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOutputGateTemplate_Activity();
-
-	/**
-	 * Returns the meta object for the reference list '{@link sant_dev.OutputGateTemplate#getPlaceTemplate <em>Place Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Place Template</em>'.
-	 * @see sant_dev.OutputGateTemplate#getPlaceTemplate()
-	 * @see #getOutputGateTemplate()
-	 * @generated
-	 */
-	EReference getOutputGateTemplate_PlaceTemplate();
 
 	/**
 	 * Returns the meta object for class '{@link sant_dev.InputGateTemplate <em>Input Gate Template</em>}'.
@@ -1582,6 +1914,80 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInputGateTemplate_Activity();
+
+	/**
+	 * Returns the meta object for class '{@link sant_dev.ArcTemplate <em>Arc Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arc Template</em>'.
+	 * @see sant_dev.ArcTemplate
+	 * @generated
+	 */
+	EClass getArcTemplate();
+
+	/**
+	 * Returns the meta object for class '{@link sant_dev.InputArc <em>Input Arc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Input Arc</em>'.
+	 * @see sant_dev.InputArc
+	 * @generated
+	 */
+	EClass getInputArc();
+
+	/**
+	 * Returns the meta object for the reference '{@link sant_dev.InputArc#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see sant_dev.InputArc#getSource()
+	 * @see #getInputArc()
+	 * @generated
+	 */
+	EReference getInputArc_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link sant_dev.InputArc#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see sant_dev.InputArc#getTarget()
+	 * @see #getInputArc()
+	 * @generated
+	 */
+	EReference getInputArc_Target();
+
+	/**
+	 * Returns the meta object for class '{@link sant_dev.OutputArc <em>Output Arc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output Arc</em>'.
+	 * @see sant_dev.OutputArc
+	 * @generated
+	 */
+	EClass getOutputArc();
+
+	/**
+	 * Returns the meta object for the reference '{@link sant_dev.OutputArc#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see sant_dev.OutputArc#getSource()
+	 * @see #getOutputArc()
+	 * @generated
+	 */
+	EReference getOutputArc_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link sant_dev.OutputArc#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see sant_dev.OutputArc#getTarget()
+	 * @see #getOutputArc()
+	 * @generated
+	 */
+	EReference getOutputArc_Target();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1641,14 +2047,6 @@ public interface SANT_DEVPackage extends EPackage {
 		EReference SANT__PLACES = eINSTANCE.getSANT_Places();
 
 		/**
-		 * The meta object literal for the '<em><b>Activities</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SANT__ACTIVITIES = eINSTANCE.getSANT_Activities();
-
-		/**
 		 * The meta object literal for the '<em><b>Activity Templates</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1681,7 +2079,7 @@ public interface SANT_DEVPackage extends EPackage {
 		EReference SANT__CUSTOM_TYPE = eINSTANCE.getSANT_CustomType();
 
 		/**
-		 * The meta object literal for the '<em><b>Gates</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Gates</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1803,30 +2201,22 @@ public interface SANT_DEVPackage extends EPackage {
 		EClass CASES_SPECIFICATION = eINSTANCE.getCasesSpecification();
 
 		/**
-		 * The meta object literal for the '{@link sant_dev.impl.CasesSpecificationValueImpl <em>Cases Specification Value</em>}' class.
+		 * The meta object literal for the '{@link sant_dev.impl.CasesSpecificationConcreteImpl <em>Cases Specification Concrete</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see sant_dev.impl.CasesSpecificationValueImpl
-		 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecificationValue()
+		 * @see sant_dev.impl.CasesSpecificationConcreteImpl
+		 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecificationConcrete()
 		 * @generated
 		 */
-		EClass CASES_SPECIFICATION_VALUE = eINSTANCE.getCasesSpecificationValue();
+		EClass CASES_SPECIFICATION_CONCRETE = eINSTANCE.getCasesSpecificationConcrete();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cases</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CASES_SPECIFICATION_VALUE__ID = eINSTANCE.getCasesSpecificationValue_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>P</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CASES_SPECIFICATION_VALUE__P = eINSTANCE.getCasesSpecificationValue_P();
+		EReference CASES_SPECIFICATION_CONCRETE__CASES = eINSTANCE.getCasesSpecificationConcrete_Cases();
 
 		/**
 		 * The meta object literal for the '{@link sant_dev.impl.CasesSpecificationArrayImpl <em>Cases Specification Array</em>}' class.
@@ -2021,6 +2411,52 @@ public interface SANT_DEVPackage extends EPackage {
 		EReference MARKING_TEMPLATE_GLOBAL_VARIABLE__VARIABLE = eINSTANCE.getMarkingTemplateGlobalVariable_Variable();
 
 		/**
+		 * The meta object literal for the '{@link sant_dev.impl.GateTemplateImpl <em>Gate Template</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see sant_dev.impl.GateTemplateImpl
+		 * @see sant_dev.impl.SANT_DEVPackageImpl#getGateTemplate()
+		 * @generated
+		 */
+		EClass GATE_TEMPLATE = eINSTANCE.getGateTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Place Template</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GATE_TEMPLATE__PLACE_TEMPLATE = eINSTANCE.getGateTemplate_PlaceTemplate();
+
+		/**
+		 * The meta object literal for the '{@link sant_dev.impl.OutputGateImpl <em>Output Gate</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see sant_dev.impl.OutputGateImpl
+		 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGate()
+		 * @generated
+		 */
+		EClass OUTPUT_GATE = eINSTANCE.getOutputGate();
+
+		/**
+		 * The meta object literal for the '{@link sant_dev.impl.OutputGateConcreteImpl <em>Output Gate Concrete</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see sant_dev.impl.OutputGateConcreteImpl
+		 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGateConcrete()
+		 * @generated
+		 */
+		EClass OUTPUT_GATE_CONCRETE = eINSTANCE.getOutputGateConcrete();
+
+		/**
+		 * The meta object literal for the '<em><b>Case</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT_GATE_CONCRETE__CASE = eINSTANCE.getOutputGateConcrete_Case();
+
+		/**
 		 * The meta object literal for the '{@link sant_dev.impl.OutputGateTemplateImpl <em>Output Gate Template</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2037,14 +2473,6 @@ public interface SANT_DEVPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OUTPUT_GATE_TEMPLATE__ACTIVITY = eINSTANCE.getOutputGateTemplate_Activity();
-
-		/**
-		 * The meta object literal for the '<em><b>Place Template</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OUTPUT_GATE_TEMPLATE__PLACE_TEMPLATE = eINSTANCE.getOutputGateTemplate_PlaceTemplate();
 
 		/**
 		 * The meta object literal for the '{@link sant_dev.impl.InputGateTemplateImpl <em>Input Gate Template</em>}' class.
@@ -2071,6 +2499,68 @@ public interface SANT_DEVPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INPUT_GATE_TEMPLATE__ACTIVITY = eINSTANCE.getInputGateTemplate_Activity();
+
+		/**
+		 * The meta object literal for the '{@link sant_dev.impl.ArcTemplateImpl <em>Arc Template</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see sant_dev.impl.ArcTemplateImpl
+		 * @see sant_dev.impl.SANT_DEVPackageImpl#getArcTemplate()
+		 * @generated
+		 */
+		EClass ARC_TEMPLATE = eINSTANCE.getArcTemplate();
+
+		/**
+		 * The meta object literal for the '{@link sant_dev.impl.InputArcImpl <em>Input Arc</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see sant_dev.impl.InputArcImpl
+		 * @see sant_dev.impl.SANT_DEVPackageImpl#getInputArc()
+		 * @generated
+		 */
+		EClass INPUT_ARC = eINSTANCE.getInputArc();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT_ARC__SOURCE = eINSTANCE.getInputArc_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT_ARC__TARGET = eINSTANCE.getInputArc_Target();
+
+		/**
+		 * The meta object literal for the '{@link sant_dev.impl.OutputArcImpl <em>Output Arc</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see sant_dev.impl.OutputArcImpl
+		 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputArc()
+		 * @generated
+		 */
+		EClass OUTPUT_ARC = eINSTANCE.getOutputArc();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT_ARC__SOURCE = eINSTANCE.getOutputArc_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT_ARC__TARGET = eINSTANCE.getOutputArc_Target();
 
 	}
 

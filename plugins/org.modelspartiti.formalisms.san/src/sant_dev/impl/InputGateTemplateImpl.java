@@ -17,9 +17,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import san.Expression;
-
-import san.impl.GateImpl;
-
 import sant_dev.ActivityTemplate;
 import sant_dev.InputGateTemplate;
 import sant_dev.SANT_DEVPackage;
@@ -38,7 +35,7 @@ import sant_dev.SANT_DEVPackage;
  *
  * @generated
  */
-public class InputGateTemplateImpl extends GateImpl implements InputGateTemplate {
+public class InputGateTemplateImpl extends GateTemplateImpl implements InputGateTemplate {
 	/**
 	 * The cached value of the '{@link #getPredicate() <em>Predicate</em>}' containment reference.
 	 * <!-- begin-user-doc -->

@@ -29,6 +29,7 @@ import san.SANFactory;
 import sant_dev.SANT;
 import sant_dev.SANT_DEVFactory;
 import sant_dev.SANT_DEVPackage;
+import tmdl.core.CoreFactory;
 
 /**
  * This is the item provider adapter for a {@link sant_dev.SANT} object.
@@ -66,9 +67,6 @@ public class SANTItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addActivitiesPropertyDescriptor(object);
-			addParametersPropertyDescriptor(object);
-			addGatesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -96,72 +94,6 @@ public class SANTItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Activities feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActivitiesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SANT_activities_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SANT_activities_feature", "_UI_SANT_type"),
-				 SANT_DEVPackage.Literals.SANT__ACTIVITIES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Parameters feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addParametersPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SANT_parameters_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SANT_parameters_feature", "_UI_SANT_type"),
-				 SANT_DEVPackage.Literals.SANT__PARAMETERS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Gates feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addGatesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SANT_gates_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SANT_gates_feature", "_UI_SANT_type"),
-				 SANT_DEVPackage.Literals.SANT__GATES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -176,8 +108,10 @@ public class SANTItemProvider
 			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__TEMPLATE_PLACES);
 			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__PLACES);
 			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__ACTIVITY_TEMPLATES);
+			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__PARAMETERS);
 			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__GLOBAL_VARIABLES);
 			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__CUSTOM_TYPE);
+			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__GATES);
 		}
 		return childrenFeatures;
 	}
@@ -239,8 +173,10 @@ public class SANTItemProvider
 			case SANT_DEVPackage.SANT__TEMPLATE_PLACES:
 			case SANT_DEVPackage.SANT__PLACES:
 			case SANT_DEVPackage.SANT__ACTIVITY_TEMPLATES:
+			case SANT_DEVPackage.SANT__PARAMETERS:
 			case SANT_DEVPackage.SANT__GLOBAL_VARIABLES:
 			case SANT_DEVPackage.SANT__CUSTOM_TYPE:
+			case SANT_DEVPackage.SANT__GATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -280,6 +216,16 @@ public class SANTItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(SANT_DEVPackage.Literals.SANT__PARAMETERS,
+				 CoreFactory.eINSTANCE.createParameterSimple()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SANT_DEVPackage.Literals.SANT__PARAMETERS,
+				 CoreFactory.eINSTANCE.createParameterArray()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(SANT_DEVPackage.Literals.SANT__GLOBAL_VARIABLES,
 				 SANFactory.eINSTANCE.createGlobalVariable()));
 
@@ -292,6 +238,21 @@ public class SANTItemProvider
 			(createChildParameter
 				(SANT_DEVPackage.Literals.SANT__CUSTOM_TYPE,
 				 SANFactory.eINSTANCE.createCustomTypeStruct()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SANT_DEVPackage.Literals.SANT__GATES,
+				 SANT_DEVFactory.eINSTANCE.createOutputGateConcrete()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SANT_DEVPackage.Literals.SANT__GATES,
+				 SANT_DEVFactory.eINSTANCE.createOutputGateTemplate()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SANT_DEVPackage.Literals.SANT__GATES,
+				 SANT_DEVFactory.eINSTANCE.createInputGateTemplate()));
 	}
 
 	/**

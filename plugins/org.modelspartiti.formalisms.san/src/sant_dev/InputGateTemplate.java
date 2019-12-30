@@ -5,7 +5,6 @@ package sant_dev;
 import org.eclipse.emf.common.util.EList;
 
 import san.Expression;
-import san.Gate;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import san.Gate;
  * @model
  * @generated
  */
-public interface InputGateTemplate extends Gate {
+public interface InputGateTemplate extends GateTemplate {
 	/**
 	 * Returns the value of the '<em><b>Predicate</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

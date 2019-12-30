@@ -8,8 +8,6 @@
         eType="#//PlaceTemplate" containment="true" eKeys="san.ecore#//NamedElement/name"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="places" upperBound="-1"
         eType="ecore:EClass san.ecore#//Place" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
-        eType="ecore:EClass san.ecore#//Activity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activityTemplates" upperBound="-1"
         eType="#//ActivityTemplate" containment="true" eKeys="san.ecore#//NamedElement/name"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
@@ -20,7 +18,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="customType" upperBound="-1"
         eType="ecore:EClass san.ecore#//CustomTypeDefinition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="gates" upperBound="-1"
-        eType="ecore:EClass san.ecore#//Gate"/>
+        eType="#//GateTemplate" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlaceTemplate" eSuperTypes="san.ecore#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicity" lowerBound="1"
@@ -44,10 +42,9 @@
         eType="#//CasesSpecification" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CasesSpecification" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationValue" eSuperTypes="#//CasesSpecification">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" eType="ecore:EClass san.ecore#//Expression"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationConcrete" eSuperTypes="#//CasesSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cases" lowerBound="1" upperBound="-1"
+        eType="ecore:EClass san.ecore#//Case" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationArray" eSuperTypes="#//CasesSpecification">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" upperBound="-1"
@@ -89,16 +86,35 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
         eType="ecore:EClass san.ecore#//GlobalVariable"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OutputGateTemplate" eSuperTypes="san.ecore#//Gate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
-        upperBound="-1" eType="#//ActivityTemplate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GateTemplate" abstract="true" eSuperTypes="san.ecore#//Gate">
     <eStructuralFeatures xsi:type="ecore:EReference" name="placeTemplate" lowerBound="1"
         upperBound="-1" eType="#//PlaceTemplate"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputGateTemplate" eSuperTypes="san.ecore#//Gate">
+  <eClassifiers xsi:type="ecore:EClass" name="OutputGate" abstract="true" eSuperTypes="#//GateTemplate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputGateConcrete" eSuperTypes="#//OutputGate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="case" lowerBound="1" eType="ecore:EClass san.ecore#//Case"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputGateTemplate" eSuperTypes="#//OutputGate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+        upperBound="-1" eType="#//ActivityTemplate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputGateTemplate" eSuperTypes="#//GateTemplate">
     <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" lowerBound="1"
         eType="ecore:EClass san.ecore#//Expression" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
         upperBound="-1" eType="#//ActivityTemplate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArcTemplate" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InputArc" eSuperTypes="#//ArcTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass san.ecore#//Place"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//ActivityTemplate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputArc" eSuperTypes="#//ArcTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//ActivityTemplate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass san.ecore#//Place"/>
   </eClassifiers>
 </ecore:EPackage>

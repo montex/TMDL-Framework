@@ -11,12 +11,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//SANT/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/templatePlaces"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/places"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/activities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/activityTemplates"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/parameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/globalVariables"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/customType"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/gates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/gates"/>
     </genClasses>
     <genClasses ecoreClass="sant_dev.ecore#//PlaceTemplate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//PlaceTemplate/multiplicity"/>
@@ -35,9 +35,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//ActivityTemplate/casesTemplate"/>
     </genClasses>
     <genClasses image="false" ecoreClass="sant_dev.ecore#//CasesSpecification"/>
-    <genClasses ecoreClass="sant_dev.ecore#//CasesSpecificationValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//CasesSpecificationValue/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//CasesSpecificationValue/p"/>
+    <genClasses ecoreClass="sant_dev.ecore#//CasesSpecificationConcrete">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//CasesSpecificationConcrete/cases"/>
     </genClasses>
     <genClasses ecoreClass="sant_dev.ecore#//CasesSpecificationArray">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//CasesSpecificationArray/id"/>
@@ -68,13 +67,28 @@
     <genClasses ecoreClass="sant_dev.ecore#//MarkingTemplateGlobalVariable">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//MarkingTemplateGlobalVariable/variable"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="sant_dev.ecore#//GateTemplate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//GateTemplate/placeTemplate"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="sant_dev.ecore#//OutputGate"/>
+    <genClasses ecoreClass="sant_dev.ecore#//OutputGateConcrete">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//OutputGateConcrete/case"/>
+    </genClasses>
     <genClasses ecoreClass="sant_dev.ecore#//OutputGateTemplate">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//OutputGateTemplate/activity"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//OutputGateTemplate/placeTemplate"/>
     </genClasses>
     <genClasses ecoreClass="sant_dev.ecore#//InputGateTemplate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//InputGateTemplate/predicate"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//InputGateTemplate/activity"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="sant_dev.ecore#//ArcTemplate"/>
+    <genClasses ecoreClass="sant_dev.ecore#//InputArc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//InputArc/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//InputArc/target"/>
+    </genClasses>
+    <genClasses ecoreClass="sant_dev.ecore#//OutputArc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//OutputArc/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant_dev.ecore#//OutputArc/target"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -97,8 +97,8 @@ public class SANT_DEVAdapterFactory extends AdapterFactoryImpl {
 				return createCasesSpecificationAdapter();
 			}
 			@Override
-			public Adapter caseCasesSpecificationValue(CasesSpecificationValue object) {
-				return createCasesSpecificationValueAdapter();
+			public Adapter caseCasesSpecificationConcrete(CasesSpecificationConcrete object) {
+				return createCasesSpecificationConcreteAdapter();
 			}
 			@Override
 			public Adapter caseCasesSpecificationArray(CasesSpecificationArray object) {
@@ -133,12 +133,36 @@ public class SANT_DEVAdapterFactory extends AdapterFactoryImpl {
 				return createMarkingTemplateGlobalVariableAdapter();
 			}
 			@Override
+			public Adapter caseGateTemplate(GateTemplate object) {
+				return createGateTemplateAdapter();
+			}
+			@Override
+			public Adapter caseOutputGate(OutputGate object) {
+				return createOutputGateAdapter();
+			}
+			@Override
+			public Adapter caseOutputGateConcrete(OutputGateConcrete object) {
+				return createOutputGateConcreteAdapter();
+			}
+			@Override
 			public Adapter caseOutputGateTemplate(OutputGateTemplate object) {
 				return createOutputGateTemplateAdapter();
 			}
 			@Override
 			public Adapter caseInputGateTemplate(InputGateTemplate object) {
 				return createInputGateTemplateAdapter();
+			}
+			@Override
+			public Adapter caseArcTemplate(ArcTemplate object) {
+				return createArcTemplateAdapter();
+			}
+			@Override
+			public Adapter caseInputArc(InputArc object) {
+				return createInputArcAdapter();
+			}
+			@Override
+			public Adapter caseOutputArc(OutputArc object) {
+				return createOutputArcAdapter();
 			}
 			@Override
 			public Adapter caseTemplateModel(TemplateModel object) {
@@ -261,16 +285,16 @@ public class SANT_DEVAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link sant_dev.CasesSpecificationValue <em>Cases Specification Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link sant_dev.CasesSpecificationConcrete <em>Cases Specification Concrete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see sant_dev.CasesSpecificationValue
+	 * @see sant_dev.CasesSpecificationConcrete
 	 * @generated
 	 */
-	public Adapter createCasesSpecificationValueAdapter() {
+	public Adapter createCasesSpecificationConcreteAdapter() {
 		return null;
 	}
 
@@ -387,6 +411,48 @@ public class SANT_DEVAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link sant_dev.GateTemplate <em>Gate Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sant_dev.GateTemplate
+	 * @generated
+	 */
+	public Adapter createGateTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sant_dev.OutputGate <em>Output Gate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sant_dev.OutputGate
+	 * @generated
+	 */
+	public Adapter createOutputGateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sant_dev.OutputGateConcrete <em>Output Gate Concrete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sant_dev.OutputGateConcrete
+	 * @generated
+	 */
+	public Adapter createOutputGateConcreteAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link sant_dev.OutputGateTemplate <em>Output Gate Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -411,6 +477,48 @@ public class SANT_DEVAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInputGateTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sant_dev.ArcTemplate <em>Arc Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sant_dev.ArcTemplate
+	 * @generated
+	 */
+	public Adapter createArcTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sant_dev.InputArc <em>Input Arc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sant_dev.InputArc
+	 * @generated
+	 */
+	public Adapter createInputArcAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sant_dev.OutputArc <em>Output Arc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sant_dev.OutputArc
+	 * @generated
+	 */
+	public Adapter createOutputArcAdapter() {
 		return null;
 	}
 

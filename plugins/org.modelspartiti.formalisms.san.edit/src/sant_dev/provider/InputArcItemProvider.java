@@ -8,25 +8,26 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import sant_dev.OutputGateTemplate;
+
 import sant_dev.SANT_DEVPackage;
 
 /**
- * This is the item provider adapter for a {@link sant_dev.OutputGateTemplate} object.
+ * This is the item provider adapter for a {@link sant_dev.InputArc} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class OutputGateTemplateItemProvider extends OutputGateItemProvider {
+public class InputArcItemProvider extends ArcTemplateItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OutputGateTemplateItemProvider(AdapterFactory adapterFactory) {
+	public InputArcItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -41,25 +42,26 @@ public class OutputGateTemplateItemProvider extends OutputGateItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addActivityPropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Activity feature.
+	 * This adds a property descriptor for the Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addActivityPropertyDescriptor(Object object) {
+	protected void addSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OutputGateTemplate_activity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OutputGateTemplate_activity_feature", "_UI_OutputGateTemplate_type"),
-				 SANT_DEVPackage.Literals.OUTPUT_GATE_TEMPLATE__ACTIVITY,
+				 getString("_UI_InputArc_source_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InputArc_source_feature", "_UI_InputArc_type"),
+				 SANT_DEVPackage.Literals.INPUT_ARC__SOURCE,
 				 true,
 				 false,
 				 true,
@@ -69,14 +71,36 @@ public class OutputGateTemplateItemProvider extends OutputGateItemProvider {
 	}
 
 	/**
-	 * This returns OutputGateTemplate.gif.
+	 * This adds a property descriptor for the Target feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTargetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InputArc_target_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InputArc_target_feature", "_UI_InputArc_type"),
+				 SANT_DEVPackage.Literals.INPUT_ARC__TARGET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns InputArc.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/OutputGateTemplate"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/InputArc"));
 	}
 
 	/**
@@ -87,10 +111,7 @@ public class OutputGateTemplateItemProvider extends OutputGateItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OutputGateTemplate)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_OutputGateTemplate_type") :
-			getString("_UI_OutputGateTemplate_type") + " " + label;
+		return getString("_UI_InputArc_type");
 	}
 
 

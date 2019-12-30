@@ -3,10 +3,7 @@
 package sant_dev;
 
 import org.eclipse.emf.common.util.EList;
-
-import san.Activity;
 import san.CustomTypeDefinition;
-import san.Gate;
 import san.GlobalVariable;
 import san.Place;
 import tmdl.core.Parameter;
@@ -24,7 +21,6 @@ import tmdl.core.TemplateModel;
  *   <li>{@link sant_dev.SANT#getName <em>Name</em>}</li>
  *   <li>{@link sant_dev.SANT#getTemplatePlaces <em>Template Places</em>}</li>
  *   <li>{@link sant_dev.SANT#getPlaces <em>Places</em>}</li>
- *   <li>{@link sant_dev.SANT#getActivities <em>Activities</em>}</li>
  *   <li>{@link sant_dev.SANT#getActivityTemplates <em>Activity Templates</em>}</li>
  *   <li>{@link sant_dev.SANT#getParameters <em>Parameters</em>}</li>
  *   <li>{@link sant_dev.SANT#getGlobalVariables <em>Global Variables</em>}</li>
@@ -96,22 +92,6 @@ public interface SANT extends TemplateModel {
 	EList<Place> getPlaces();
 
 	/**
-	 * Returns the value of the '<em><b>Activities</b></em>' reference list.
-	 * The list contents are of type {@link san.Activity}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activities</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activities</em>' reference list.
-	 * @see sant_dev.SANT_DEVPackage#getSANT_Activities()
-	 * @model
-	 * @generated
-	 */
-	EList<Activity> getActivities();
-
-	/**
 	 * Returns the value of the '<em><b>Activity Templates</b></em>' containment reference list.
 	 * The list contents are of type {@link sant_dev.ActivityTemplate}.
 	 * <!-- begin-user-doc -->
@@ -176,19 +156,19 @@ public interface SANT extends TemplateModel {
 	EList<CustomTypeDefinition> getCustomType();
 
 	/**
-	 * Returns the value of the '<em><b>Gates</b></em>' reference list.
-	 * The list contents are of type {@link san.Gate}.
+	 * Returns the value of the '<em><b>Gates</b></em>' containment reference list.
+	 * The list contents are of type {@link sant_dev.GateTemplate}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Gates</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gates</em>' reference list.
+	 * @return the value of the '<em>Gates</em>' containment reference list.
 	 * @see sant_dev.SANT_DEVPackage#getSANT_Gates()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Gate> getGates();
+	EList<GateTemplate> getGates();
 
 } // SANT

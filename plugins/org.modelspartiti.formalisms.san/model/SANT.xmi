@@ -8,4 +8,9 @@
     name="template1">
   <templatePlaces
       name="PT1"/>
+  <activityTemplates
+      xsi:type="sant_dev:TimedActivityTemplate">
+    <casesTemplate
+        xsi:type="sant_dev:CasesSpecificationArray"/>
+  </activityTemplates>
 </sant_dev:SANT>

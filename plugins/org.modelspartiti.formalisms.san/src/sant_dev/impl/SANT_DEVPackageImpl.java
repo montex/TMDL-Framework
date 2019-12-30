@@ -13,11 +13,14 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import san.SANPackage;
 
 import sant_dev.ActivityTemplate;
+import sant_dev.ArcTemplate;
 import sant_dev.CasesSpecification;
 import sant_dev.CasesSpecificationArray;
+import sant_dev.CasesSpecificationConcrete;
 import sant_dev.CasesSpecificationParametric;
 import sant_dev.CasesSpecificationRangeOperator;
-import sant_dev.CasesSpecificationValue;
+import sant_dev.GateTemplate;
+import sant_dev.InputArc;
 import sant_dev.InputGateTemplate;
 import sant_dev.InstantaneousActivityTemplate;
 import sant_dev.MarkingTemplate;
@@ -25,6 +28,9 @@ import sant_dev.MarkingTemplateGlobalVariable;
 import sant_dev.MarkingTemplateSimple;
 import sant_dev.MultiplicityArrayIntegerFromReal;
 import sant_dev.MultiplicityRangeOperator;
+import sant_dev.OutputArc;
+import sant_dev.OutputGate;
+import sant_dev.OutputGateConcrete;
 import sant_dev.OutputGateTemplate;
 import sant_dev.PlaceTemplate;
 import sant_dev.SANT_DEVFactory;
@@ -93,7 +99,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass casesSpecificationValueEClass = null;
+	private EClass casesSpecificationConcreteEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,6 +162,27 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass gateTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass outputGateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass outputGateConcreteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass outputGateTemplateEClass = null;
 
 	/**
@@ -164,6 +191,27 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * @generated
 	 */
 	private EClass inputGateTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arcTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass inputArcEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass outputArcEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -274,7 +322,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSANT_Activities() {
+	public EReference getSANT_ActivityTemplates() {
 		return (EReference)santEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -283,7 +331,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSANT_ActivityTemplates() {
+	public EReference getSANT_Parameters() {
 		return (EReference)santEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -292,7 +340,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSANT_Parameters() {
+	public EReference getSANT_GlobalVariables() {
 		return (EReference)santEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -301,7 +349,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSANT_GlobalVariables() {
+	public EReference getSANT_CustomType() {
 		return (EReference)santEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -310,17 +358,8 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSANT_CustomType() {
-		return (EReference)santEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getSANT_Gates() {
-		return (EReference)santEClass.getEStructuralFeatures().get(8);
+		return (EReference)santEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -445,8 +484,8 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCasesSpecificationValue() {
-		return casesSpecificationValueEClass;
+	public EClass getCasesSpecificationConcrete() {
+		return casesSpecificationConcreteEClass;
 	}
 
 	/**
@@ -454,17 +493,8 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCasesSpecificationValue_Id() {
-		return (EAttribute)casesSpecificationValueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCasesSpecificationValue_P() {
-		return (EReference)casesSpecificationValueEClass.getEStructuralFeatures().get(1);
+	public EReference getCasesSpecificationConcrete_Cases() {
+		return (EReference)casesSpecificationConcreteEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -670,6 +700,51 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGateTemplate() {
+		return gateTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGateTemplate_PlaceTemplate() {
+		return (EReference)gateTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOutputGate() {
+		return outputGateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOutputGateConcrete() {
+		return outputGateConcreteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutputGateConcrete_Case() {
+		return (EReference)outputGateConcreteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOutputGateTemplate() {
 		return outputGateTemplateEClass;
 	}
@@ -681,15 +756,6 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 */
 	public EReference getOutputGateTemplate_Activity() {
 		return (EReference)outputGateTemplateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getOutputGateTemplate_PlaceTemplate() {
-		return (EReference)outputGateTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -724,6 +790,69 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getArcTemplate() {
+		return arcTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInputArc() {
+		return inputArcEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInputArc_Source() {
+		return (EReference)inputArcEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInputArc_Target() {
+		return (EReference)inputArcEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOutputArc() {
+		return outputArcEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutputArc_Source() {
+		return (EReference)outputArcEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutputArc_Target() {
+		return (EReference)outputArcEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SANT_DEVFactory getSANT_DEVFactory() {
 		return (SANT_DEVFactory)getEFactoryInstance();
 	}
@@ -751,7 +880,6 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		createEAttribute(santEClass, SANT__NAME);
 		createEReference(santEClass, SANT__TEMPLATE_PLACES);
 		createEReference(santEClass, SANT__PLACES);
-		createEReference(santEClass, SANT__ACTIVITIES);
 		createEReference(santEClass, SANT__ACTIVITY_TEMPLATES);
 		createEReference(santEClass, SANT__PARAMETERS);
 		createEReference(santEClass, SANT__GLOBAL_VARIABLES);
@@ -776,9 +904,8 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 
 		casesSpecificationEClass = createEClass(CASES_SPECIFICATION);
 
-		casesSpecificationValueEClass = createEClass(CASES_SPECIFICATION_VALUE);
-		createEAttribute(casesSpecificationValueEClass, CASES_SPECIFICATION_VALUE__ID);
-		createEReference(casesSpecificationValueEClass, CASES_SPECIFICATION_VALUE__P);
+		casesSpecificationConcreteEClass = createEClass(CASES_SPECIFICATION_CONCRETE);
+		createEReference(casesSpecificationConcreteEClass, CASES_SPECIFICATION_CONCRETE__CASES);
 
 		casesSpecificationArrayEClass = createEClass(CASES_SPECIFICATION_ARRAY);
 		createEAttribute(casesSpecificationArrayEClass, CASES_SPECIFICATION_ARRAY__ID);
@@ -810,13 +937,30 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		markingTemplateGlobalVariableEClass = createEClass(MARKING_TEMPLATE_GLOBAL_VARIABLE);
 		createEReference(markingTemplateGlobalVariableEClass, MARKING_TEMPLATE_GLOBAL_VARIABLE__VARIABLE);
 
+		gateTemplateEClass = createEClass(GATE_TEMPLATE);
+		createEReference(gateTemplateEClass, GATE_TEMPLATE__PLACE_TEMPLATE);
+
+		outputGateEClass = createEClass(OUTPUT_GATE);
+
+		outputGateConcreteEClass = createEClass(OUTPUT_GATE_CONCRETE);
+		createEReference(outputGateConcreteEClass, OUTPUT_GATE_CONCRETE__CASE);
+
 		outputGateTemplateEClass = createEClass(OUTPUT_GATE_TEMPLATE);
 		createEReference(outputGateTemplateEClass, OUTPUT_GATE_TEMPLATE__ACTIVITY);
-		createEReference(outputGateTemplateEClass, OUTPUT_GATE_TEMPLATE__PLACE_TEMPLATE);
 
 		inputGateTemplateEClass = createEClass(INPUT_GATE_TEMPLATE);
 		createEReference(inputGateTemplateEClass, INPUT_GATE_TEMPLATE__PREDICATE);
 		createEReference(inputGateTemplateEClass, INPUT_GATE_TEMPLATE__ACTIVITY);
+
+		arcTemplateEClass = createEClass(ARC_TEMPLATE);
+
+		inputArcEClass = createEClass(INPUT_ARC);
+		createEReference(inputArcEClass, INPUT_ARC__SOURCE);
+		createEReference(inputArcEClass, INPUT_ARC__TARGET);
+
+		outputArcEClass = createEClass(OUTPUT_ARC);
+		createEReference(outputArcEClass, OUTPUT_ARC__SOURCE);
+		createEReference(outputArcEClass, OUTPUT_ARC__TARGET);
 	}
 
 	/**
@@ -856,7 +1000,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		multiplicityRangeOperatorEClass.getESuperTypes().add(theCorePackage.getMultiplicity());
 		multiplicityArrayIntegerFromRealEClass.getESuperTypes().add(theCorePackage.getMultiplicity());
 		activityTemplateEClass.getESuperTypes().add(theSANPackage.getNamedElement());
-		casesSpecificationValueEClass.getESuperTypes().add(this.getCasesSpecification());
+		casesSpecificationConcreteEClass.getESuperTypes().add(this.getCasesSpecification());
 		casesSpecificationArrayEClass.getESuperTypes().add(this.getCasesSpecification());
 		casesSpecificationParametricEClass.getESuperTypes().add(this.getCasesSpecification());
 		casesSpecificationRangeOperatorEClass.getESuperTypes().add(this.getCasesSpecification());
@@ -864,8 +1008,13 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		instantaneousActivityTemplateEClass.getESuperTypes().add(this.getActivityTemplate());
 		markingTemplateSimpleEClass.getESuperTypes().add(this.getMarkingTemplate());
 		markingTemplateGlobalVariableEClass.getESuperTypes().add(this.getMarkingTemplate());
-		outputGateTemplateEClass.getESuperTypes().add(theSANPackage.getGate());
-		inputGateTemplateEClass.getESuperTypes().add(theSANPackage.getGate());
+		gateTemplateEClass.getESuperTypes().add(theSANPackage.getGate());
+		outputGateEClass.getESuperTypes().add(this.getGateTemplate());
+		outputGateConcreteEClass.getESuperTypes().add(this.getOutputGate());
+		outputGateTemplateEClass.getESuperTypes().add(this.getOutputGate());
+		inputGateTemplateEClass.getESuperTypes().add(this.getGateTemplate());
+		inputArcEClass.getESuperTypes().add(this.getArcTemplate());
+		outputArcEClass.getESuperTypes().add(this.getArcTemplate());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(santEClass, sant_dev.SANT.class, "SANT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -873,7 +1022,6 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		initEReference(getSANT_TemplatePlaces(), this.getPlaceTemplate(), null, "templatePlaces", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_TemplatePlaces().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_Places(), theSANPackage.getPlace(), null, "places", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSANT_Activities(), theSANPackage.getActivity(), null, "activities", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSANT_ActivityTemplates(), this.getActivityTemplate(), null, "activityTemplates", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_ActivityTemplates().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_Parameters(), theCorePackage.getParameter(), null, "parameters", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -881,7 +1029,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		initEReference(getSANT_GlobalVariables(), theSANPackage.getGlobalVariable(), null, "globalVariables", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_GlobalVariables().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_CustomType(), theSANPackage.getCustomTypeDefinition(), null, "customType", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSANT_Gates(), theSANPackage.getGate(), null, "gates", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSANT_Gates(), this.getGateTemplate(), null, "gates", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placeTemplateEClass, PlaceTemplate.class, "PlaceTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlaceTemplate_Multiplicity(), theCorePackage.getMultiplicity(), null, "multiplicity", null, 1, 1, PlaceTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -902,9 +1050,8 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 
 		initEClass(casesSpecificationEClass, CasesSpecification.class, "CasesSpecification", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(casesSpecificationValueEClass, CasesSpecificationValue.class, "CasesSpecificationValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCasesSpecificationValue_Id(), ecorePackage.getEInt(), "id", null, 1, 1, CasesSpecificationValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCasesSpecificationValue_P(), theSANPackage.getExpression(), null, "p", null, 1, 1, CasesSpecificationValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(casesSpecificationConcreteEClass, CasesSpecificationConcrete.class, "CasesSpecificationConcrete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCasesSpecificationConcrete_Cases(), theSANPackage.getCase(), null, "cases", null, 1, -1, CasesSpecificationConcrete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(casesSpecificationArrayEClass, CasesSpecificationArray.class, "CasesSpecificationArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCasesSpecificationArray_Id(), ecorePackage.getEInt(), "id", null, 1, -1, CasesSpecificationArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -936,13 +1083,30 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		initEClass(markingTemplateGlobalVariableEClass, MarkingTemplateGlobalVariable.class, "MarkingTemplateGlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMarkingTemplateGlobalVariable_Variable(), theSANPackage.getGlobalVariable(), null, "variable", null, 1, 1, MarkingTemplateGlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(gateTemplateEClass, GateTemplate.class, "GateTemplate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGateTemplate_PlaceTemplate(), this.getPlaceTemplate(), null, "placeTemplate", null, 1, -1, GateTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(outputGateEClass, OutputGate.class, "OutputGate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(outputGateConcreteEClass, OutputGateConcrete.class, "OutputGateConcrete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOutputGateConcrete_Case(), theSANPackage.getCase(), null, "case", null, 1, 1, OutputGateConcrete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(outputGateTemplateEClass, OutputGateTemplate.class, "OutputGateTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOutputGateTemplate_Activity(), this.getActivityTemplate(), null, "activity", null, 1, -1, OutputGateTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOutputGateTemplate_PlaceTemplate(), this.getPlaceTemplate(), null, "placeTemplate", null, 1, -1, OutputGateTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputGateTemplateEClass, InputGateTemplate.class, "InputGateTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInputGateTemplate_Predicate(), theSANPackage.getExpression(), null, "predicate", null, 1, 1, InputGateTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInputGateTemplate_Activity(), this.getActivityTemplate(), null, "activity", null, 1, -1, InputGateTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arcTemplateEClass, ArcTemplate.class, "ArcTemplate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(inputArcEClass, InputArc.class, "InputArc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInputArc_Source(), theSANPackage.getPlace(), null, "source", null, 1, 1, InputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInputArc_Target(), this.getActivityTemplate(), null, "target", null, 1, 1, InputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(outputArcEClass, OutputArc.class, "OutputArc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOutputArc_Source(), this.getActivityTemplate(), null, "source", null, 1, 1, OutputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutputArc_Target(), theSANPackage.getPlace(), null, "target", null, 1, 1, OutputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

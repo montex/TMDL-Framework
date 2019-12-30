@@ -11,30 +11,28 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import san.SANFactory;
 
-import sant_dev.CasesSpecificationValue;
+import sant_dev.CasesSpecificationConcrete;
 import sant_dev.SANT_DEVPackage;
 
 /**
- * This is the item provider adapter for a {@link sant_dev.CasesSpecificationValue} object.
+ * This is the item provider adapter for a {@link sant_dev.CasesSpecificationConcrete} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class CasesSpecificationValueItemProvider extends CasesSpecificationItemProvider {
+public class CasesSpecificationConcreteItemProvider extends CasesSpecificationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CasesSpecificationValueItemProvider(AdapterFactory adapterFactory) {
+	public CasesSpecificationConcreteItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -49,31 +47,8 @@ public class CasesSpecificationValueItemProvider extends CasesSpecificationItemP
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Id feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CasesSpecificationValue_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CasesSpecificationValue_id_feature", "_UI_CasesSpecificationValue_type"),
-				 SANT_DEVPackage.Literals.CASES_SPECIFICATION_VALUE__ID,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -88,7 +63,7 @@ public class CasesSpecificationValueItemProvider extends CasesSpecificationItemP
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SANT_DEVPackage.Literals.CASES_SPECIFICATION_VALUE__P);
+			childrenFeatures.add(SANT_DEVPackage.Literals.CASES_SPECIFICATION_CONCRETE__CASES);
 		}
 		return childrenFeatures;
 	}
@@ -107,14 +82,14 @@ public class CasesSpecificationValueItemProvider extends CasesSpecificationItemP
 	}
 
 	/**
-	 * This returns CasesSpecificationValue.gif.
+	 * This returns CasesSpecificationConcrete.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/CasesSpecificationValue"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CasesSpecificationConcrete"));
 	}
 
 	/**
@@ -125,8 +100,7 @@ public class CasesSpecificationValueItemProvider extends CasesSpecificationItemP
 	 */
 	@Override
 	public String getText(Object object) {
-		CasesSpecificationValue casesSpecificationValue = (CasesSpecificationValue)object;
-		return getString("_UI_CasesSpecificationValue_type") + " " + casesSpecificationValue.getId();
+		return getString("_UI_CasesSpecificationConcrete_type");
 	}
 
 
@@ -141,11 +115,8 @@ public class CasesSpecificationValueItemProvider extends CasesSpecificationItemP
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(CasesSpecificationValue.class)) {
-			case SANT_DEVPackage.CASES_SPECIFICATION_VALUE__ID:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case SANT_DEVPackage.CASES_SPECIFICATION_VALUE__P:
+		switch (notification.getFeatureID(CasesSpecificationConcrete.class)) {
+			case SANT_DEVPackage.CASES_SPECIFICATION_CONCRETE__CASES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -165,8 +136,8 @@ public class CasesSpecificationValueItemProvider extends CasesSpecificationItemP
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SANT_DEVPackage.Literals.CASES_SPECIFICATION_VALUE__P,
-				 SANFactory.eINSTANCE.createExpression()));
+				(SANT_DEVPackage.Literals.CASES_SPECIFICATION_CONCRETE__CASES,
+				 SANFactory.eINSTANCE.createCase()));
 	}
 
 }

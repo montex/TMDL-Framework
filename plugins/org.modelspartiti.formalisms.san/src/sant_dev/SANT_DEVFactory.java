@@ -58,13 +58,13 @@ public interface SANT_DEVFactory extends EFactory {
 	MultiplicityArrayIntegerFromReal createMultiplicityArrayIntegerFromReal();
 
 	/**
-	 * Returns a new object of class '<em>Cases Specification Value</em>'.
+	 * Returns a new object of class '<em>Cases Specification Concrete</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cases Specification Value</em>'.
+	 * @return a new object of class '<em>Cases Specification Concrete</em>'.
 	 * @generated
 	 */
-	CasesSpecificationValue createCasesSpecificationValue();
+	CasesSpecificationConcrete createCasesSpecificationConcrete();
 
 	/**
 	 * Returns a new object of class '<em>Cases Specification Array</em>'.
@@ -130,6 +130,15 @@ public interface SANT_DEVFactory extends EFactory {
 	MarkingTemplateGlobalVariable createMarkingTemplateGlobalVariable();
 
 	/**
+	 * Returns a new object of class '<em>Output Gate Concrete</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Output Gate Concrete</em>'.
+	 * @generated
+	 */
+	OutputGateConcrete createOutputGateConcrete();
+
+	/**
 	 * Returns a new object of class '<em>Output Gate Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,6 +155,24 @@ public interface SANT_DEVFactory extends EFactory {
 	 * @generated
 	 */
 	InputGateTemplate createInputGateTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Input Arc</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Input Arc</em>'.
+	 * @generated
+	 */
+	InputArc createInputArc();
+
+	/**
+	 * Returns a new object of class '<em>Output Arc</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Output Arc</em>'.
+	 * @generated
+	 */
+	OutputArc createOutputArc();
 
 	/**
 	 * Returns the package supported by this factory.

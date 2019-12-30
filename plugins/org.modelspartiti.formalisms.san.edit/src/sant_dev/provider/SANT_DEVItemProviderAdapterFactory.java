@@ -164,26 +164,26 @@ public class SANT_DEVItemProviderAdapterFactory extends SANT_DEVAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link sant_dev.CasesSpecificationValue} instances.
+	 * This keeps track of the one adapter used for all {@link sant_dev.CasesSpecificationConcrete} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CasesSpecificationValueItemProvider casesSpecificationValueItemProvider;
+	protected CasesSpecificationConcreteItemProvider casesSpecificationConcreteItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link sant_dev.CasesSpecificationValue}.
+	 * This creates an adapter for a {@link sant_dev.CasesSpecificationConcrete}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCasesSpecificationValueAdapter() {
-		if (casesSpecificationValueItemProvider == null) {
-			casesSpecificationValueItemProvider = new CasesSpecificationValueItemProvider(this);
+	public Adapter createCasesSpecificationConcreteAdapter() {
+		if (casesSpecificationConcreteItemProvider == null) {
+			casesSpecificationConcreteItemProvider = new CasesSpecificationConcreteItemProvider(this);
 		}
 
-		return casesSpecificationValueItemProvider;
+		return casesSpecificationConcreteItemProvider;
 	}
 
 	/**
@@ -348,6 +348,29 @@ public class SANT_DEVItemProviderAdapterFactory extends SANT_DEVAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link sant_dev.OutputGateConcrete} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OutputGateConcreteItemProvider outputGateConcreteItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link sant_dev.OutputGateConcrete}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOutputGateConcreteAdapter() {
+		if (outputGateConcreteItemProvider == null) {
+			outputGateConcreteItemProvider = new OutputGateConcreteItemProvider(this);
+		}
+
+		return outputGateConcreteItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link sant_dev.OutputGateTemplate} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -391,6 +414,52 @@ public class SANT_DEVItemProviderAdapterFactory extends SANT_DEVAdapterFactory i
 		}
 
 		return inputGateTemplateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link sant_dev.InputArc} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InputArcItemProvider inputArcItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link sant_dev.InputArc}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInputArcAdapter() {
+		if (inputArcItemProvider == null) {
+			inputArcItemProvider = new InputArcItemProvider(this);
+		}
+
+		return inputArcItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link sant_dev.OutputArc} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OutputArcItemProvider outputArcItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link sant_dev.OutputArc}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOutputArcAdapter() {
+		if (outputArcItemProvider == null) {
+			outputArcItemProvider = new OutputArcItemProvider(this);
+		}
+
+		return outputArcItemProvider;
 	}
 
 	/**
@@ -496,7 +565,7 @@ public class SANT_DEVItemProviderAdapterFactory extends SANT_DEVAdapterFactory i
 		if (placeTemplateItemProvider != null) placeTemplateItemProvider.dispose();
 		if (multiplicityRangeOperatorItemProvider != null) multiplicityRangeOperatorItemProvider.dispose();
 		if (multiplicityArrayIntegerFromRealItemProvider != null) multiplicityArrayIntegerFromRealItemProvider.dispose();
-		if (casesSpecificationValueItemProvider != null) casesSpecificationValueItemProvider.dispose();
+		if (casesSpecificationConcreteItemProvider != null) casesSpecificationConcreteItemProvider.dispose();
 		if (casesSpecificationArrayItemProvider != null) casesSpecificationArrayItemProvider.dispose();
 		if (casesSpecificationParametricItemProvider != null) casesSpecificationParametricItemProvider.dispose();
 		if (casesSpecificationRangeOperatorItemProvider != null) casesSpecificationRangeOperatorItemProvider.dispose();
@@ -504,8 +573,11 @@ public class SANT_DEVItemProviderAdapterFactory extends SANT_DEVAdapterFactory i
 		if (instantaneousActivityTemplateItemProvider != null) instantaneousActivityTemplateItemProvider.dispose();
 		if (markingTemplateSimpleItemProvider != null) markingTemplateSimpleItemProvider.dispose();
 		if (markingTemplateGlobalVariableItemProvider != null) markingTemplateGlobalVariableItemProvider.dispose();
+		if (outputGateConcreteItemProvider != null) outputGateConcreteItemProvider.dispose();
 		if (outputGateTemplateItemProvider != null) outputGateTemplateItemProvider.dispose();
 		if (inputGateTemplateItemProvider != null) inputGateTemplateItemProvider.dispose();
+		if (inputArcItemProvider != null) inputArcItemProvider.dispose();
+		if (outputArcItemProvider != null) outputArcItemProvider.dispose();
 	}
 
 }

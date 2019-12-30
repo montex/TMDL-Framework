@@ -60,7 +60,7 @@ public class SANT_DEVFactoryImpl extends EFactoryImpl implements SANT_DEVFactory
 			case SANT_DEVPackage.PLACE_TEMPLATE: return createPlaceTemplate();
 			case SANT_DEVPackage.MULTIPLICITY_RANGE_OPERATOR: return createMultiplicityRangeOperator();
 			case SANT_DEVPackage.MULTIPLICITY_ARRAY_INTEGER_FROM_REAL: return createMultiplicityArrayIntegerFromReal();
-			case SANT_DEVPackage.CASES_SPECIFICATION_VALUE: return createCasesSpecificationValue();
+			case SANT_DEVPackage.CASES_SPECIFICATION_CONCRETE: return createCasesSpecificationConcrete();
 			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY: return createCasesSpecificationArray();
 			case SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC: return createCasesSpecificationParametric();
 			case SANT_DEVPackage.CASES_SPECIFICATION_RANGE_OPERATOR: return createCasesSpecificationRangeOperator();
@@ -68,8 +68,11 @@ public class SANT_DEVFactoryImpl extends EFactoryImpl implements SANT_DEVFactory
 			case SANT_DEVPackage.INSTANTANEOUS_ACTIVITY_TEMPLATE: return createInstantaneousActivityTemplate();
 			case SANT_DEVPackage.MARKING_TEMPLATE_SIMPLE: return createMarkingTemplateSimple();
 			case SANT_DEVPackage.MARKING_TEMPLATE_GLOBAL_VARIABLE: return createMarkingTemplateGlobalVariable();
+			case SANT_DEVPackage.OUTPUT_GATE_CONCRETE: return createOutputGateConcrete();
 			case SANT_DEVPackage.OUTPUT_GATE_TEMPLATE: return createOutputGateTemplate();
 			case SANT_DEVPackage.INPUT_GATE_TEMPLATE: return createInputGateTemplate();
+			case SANT_DEVPackage.INPUT_ARC: return createInputArc();
+			case SANT_DEVPackage.OUTPUT_ARC: return createOutputArc();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -120,9 +123,9 @@ public class SANT_DEVFactoryImpl extends EFactoryImpl implements SANT_DEVFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CasesSpecificationValue createCasesSpecificationValue() {
-		CasesSpecificationValueImpl casesSpecificationValue = new CasesSpecificationValueImpl();
-		return casesSpecificationValue;
+	public CasesSpecificationConcrete createCasesSpecificationConcrete() {
+		CasesSpecificationConcreteImpl casesSpecificationConcrete = new CasesSpecificationConcreteImpl();
+		return casesSpecificationConcrete;
 	}
 
 	/**
@@ -200,6 +203,16 @@ public class SANT_DEVFactoryImpl extends EFactoryImpl implements SANT_DEVFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OutputGateConcrete createOutputGateConcrete() {
+		OutputGateConcreteImpl outputGateConcrete = new OutputGateConcreteImpl();
+		return outputGateConcrete;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public OutputGateTemplate createOutputGateTemplate() {
 		OutputGateTemplateImpl outputGateTemplate = new OutputGateTemplateImpl();
 		return outputGateTemplate;
@@ -213,6 +226,26 @@ public class SANT_DEVFactoryImpl extends EFactoryImpl implements SANT_DEVFactory
 	public InputGateTemplate createInputGateTemplate() {
 		InputGateTemplateImpl inputGateTemplate = new InputGateTemplateImpl();
 		return inputGateTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputArc createInputArc() {
+		InputArcImpl inputArc = new InputArcImpl();
+		return inputArc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutputArc createOutputArc() {
+		OutputArcImpl outputArc = new OutputArcImpl();
+		return outputArc;
 	}
 
 	/**

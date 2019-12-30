@@ -112,10 +112,10 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANT_DEVPackage.CASES_SPECIFICATION_VALUE: {
-				CasesSpecificationValue casesSpecificationValue = (CasesSpecificationValue)theEObject;
-				T result = caseCasesSpecificationValue(casesSpecificationValue);
-				if (result == null) result = caseCasesSpecification(casesSpecificationValue);
+			case SANT_DEVPackage.CASES_SPECIFICATION_CONCRETE: {
+				CasesSpecificationConcrete casesSpecificationConcrete = (CasesSpecificationConcrete)theEObject;
+				T result = caseCasesSpecificationConcrete(casesSpecificationConcrete);
+				if (result == null) result = caseCasesSpecification(casesSpecificationConcrete);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -176,9 +176,38 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SANT_DEVPackage.GATE_TEMPLATE: {
+				GateTemplate gateTemplate = (GateTemplate)theEObject;
+				T result = caseGateTemplate(gateTemplate);
+				if (result == null) result = caseGate(gateTemplate);
+				if (result == null) result = caseNamedElement(gateTemplate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANT_DEVPackage.OUTPUT_GATE: {
+				OutputGate outputGate = (OutputGate)theEObject;
+				T result = caseOutputGate(outputGate);
+				if (result == null) result = caseGateTemplate(outputGate);
+				if (result == null) result = caseGate(outputGate);
+				if (result == null) result = caseNamedElement(outputGate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANT_DEVPackage.OUTPUT_GATE_CONCRETE: {
+				OutputGateConcrete outputGateConcrete = (OutputGateConcrete)theEObject;
+				T result = caseOutputGateConcrete(outputGateConcrete);
+				if (result == null) result = caseOutputGate(outputGateConcrete);
+				if (result == null) result = caseGateTemplate(outputGateConcrete);
+				if (result == null) result = caseGate(outputGateConcrete);
+				if (result == null) result = caseNamedElement(outputGateConcrete);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SANT_DEVPackage.OUTPUT_GATE_TEMPLATE: {
 				OutputGateTemplate outputGateTemplate = (OutputGateTemplate)theEObject;
 				T result = caseOutputGateTemplate(outputGateTemplate);
+				if (result == null) result = caseOutputGate(outputGateTemplate);
+				if (result == null) result = caseGateTemplate(outputGateTemplate);
 				if (result == null) result = caseGate(outputGateTemplate);
 				if (result == null) result = caseNamedElement(outputGateTemplate);
 				if (result == null) result = defaultCase(theEObject);
@@ -187,8 +216,29 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 			case SANT_DEVPackage.INPUT_GATE_TEMPLATE: {
 				InputGateTemplate inputGateTemplate = (InputGateTemplate)theEObject;
 				T result = caseInputGateTemplate(inputGateTemplate);
+				if (result == null) result = caseGateTemplate(inputGateTemplate);
 				if (result == null) result = caseGate(inputGateTemplate);
 				if (result == null) result = caseNamedElement(inputGateTemplate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANT_DEVPackage.ARC_TEMPLATE: {
+				ArcTemplate arcTemplate = (ArcTemplate)theEObject;
+				T result = caseArcTemplate(arcTemplate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANT_DEVPackage.INPUT_ARC: {
+				InputArc inputArc = (InputArc)theEObject;
+				T result = caseInputArc(inputArc);
+				if (result == null) result = caseArcTemplate(inputArc);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANT_DEVPackage.OUTPUT_ARC: {
+				OutputArc outputArc = (OutputArc)theEObject;
+				T result = caseOutputArc(outputArc);
+				if (result == null) result = caseArcTemplate(outputArc);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -287,17 +337,17 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cases Specification Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Cases Specification Concrete</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cases Specification Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Cases Specification Concrete</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCasesSpecificationValue(CasesSpecificationValue object) {
+	public T caseCasesSpecificationConcrete(CasesSpecificationConcrete object) {
 		return null;
 	}
 
@@ -422,6 +472,51 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Gate Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Gate Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGateTemplate(GateTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Output Gate</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Output Gate</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOutputGate(OutputGate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Output Gate Concrete</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Output Gate Concrete</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOutputGateConcrete(OutputGateConcrete object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Output Gate Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -448,6 +543,51 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInputGateTemplate(InputGateTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arc Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arc Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArcTemplate(ArcTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input Arc</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input Arc</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInputArc(InputArc object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Output Arc</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Output Arc</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOutputArc(OutputArc object) {
 		return null;
 	}
 

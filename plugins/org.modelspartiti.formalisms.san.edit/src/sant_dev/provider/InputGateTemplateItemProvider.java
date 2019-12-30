@@ -8,9 +8,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -19,9 +16,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import san.SANFactory;
 import san.SANPackage;
-
-import san.provider.GateItemProvider;
-
 import sant_dev.InputGateTemplate;
 import sant_dev.SANT_DEVPackage;
 
@@ -31,7 +25,7 @@ import sant_dev.SANT_DEVPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InputGateTemplateItemProvider extends GateItemProvider {
+public class InputGateTemplateItemProvider extends GateTemplateItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -193,17 +187,6 @@ public class InputGateTemplateItemProvider extends GateItemProvider {
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return SANT_DEVEditPlugin.INSTANCE;
 	}
 
 }

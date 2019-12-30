@@ -9,40 +9,43 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import sant_dev.ActivityTemplate;
-import sant_dev.OutputGateTemplate;
+
+import san.impl.GateImpl;
+
+import sant_dev.GateTemplate;
+import sant_dev.PlaceTemplate;
 import sant_dev.SANT_DEVPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Output Gate Template</b></em>'.
+ * An implementation of the model object '<em><b>Gate Template</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link sant_dev.impl.OutputGateTemplateImpl#getActivity <em>Activity</em>}</li>
+ *   <li>{@link sant_dev.impl.GateTemplateImpl#getPlaceTemplate <em>Place Template</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class OutputGateTemplateImpl extends OutputGateImpl implements OutputGateTemplate {
+public abstract class GateTemplateImpl extends GateImpl implements GateTemplate {
 	/**
-	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference list.
+	 * The cached value of the '{@link #getPlaceTemplate() <em>Place Template</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActivity()
+	 * @see #getPlaceTemplate()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ActivityTemplate> activity;
+	protected EList<PlaceTemplate> placeTemplate;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OutputGateTemplateImpl() {
+	protected GateTemplateImpl() {
 		super();
 	}
 
@@ -53,7 +56,7 @@ public class OutputGateTemplateImpl extends OutputGateImpl implements OutputGate
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SANT_DEVPackage.Literals.OUTPUT_GATE_TEMPLATE;
+		return SANT_DEVPackage.Literals.GATE_TEMPLATE;
 	}
 
 	/**
@@ -61,11 +64,11 @@ public class OutputGateTemplateImpl extends OutputGateImpl implements OutputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ActivityTemplate> getActivity() {
-		if (activity == null) {
-			activity = new EObjectResolvingEList<ActivityTemplate>(ActivityTemplate.class, this, SANT_DEVPackage.OUTPUT_GATE_TEMPLATE__ACTIVITY);
+	public EList<PlaceTemplate> getPlaceTemplate() {
+		if (placeTemplate == null) {
+			placeTemplate = new EObjectResolvingEList<PlaceTemplate>(PlaceTemplate.class, this, SANT_DEVPackage.GATE_TEMPLATE__PLACE_TEMPLATE);
 		}
-		return activity;
+		return placeTemplate;
 	}
 
 	/**
@@ -76,8 +79,8 @@ public class OutputGateTemplateImpl extends OutputGateImpl implements OutputGate
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANT_DEVPackage.OUTPUT_GATE_TEMPLATE__ACTIVITY:
-				return getActivity();
+			case SANT_DEVPackage.GATE_TEMPLATE__PLACE_TEMPLATE:
+				return getPlaceTemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -91,9 +94,9 @@ public class OutputGateTemplateImpl extends OutputGateImpl implements OutputGate
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANT_DEVPackage.OUTPUT_GATE_TEMPLATE__ACTIVITY:
-				getActivity().clear();
-				getActivity().addAll((Collection<? extends ActivityTemplate>)newValue);
+			case SANT_DEVPackage.GATE_TEMPLATE__PLACE_TEMPLATE:
+				getPlaceTemplate().clear();
+				getPlaceTemplate().addAll((Collection<? extends PlaceTemplate>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -107,8 +110,8 @@ public class OutputGateTemplateImpl extends OutputGateImpl implements OutputGate
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANT_DEVPackage.OUTPUT_GATE_TEMPLATE__ACTIVITY:
-				getActivity().clear();
+			case SANT_DEVPackage.GATE_TEMPLATE__PLACE_TEMPLATE:
+				getPlaceTemplate().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -122,10 +125,10 @@ public class OutputGateTemplateImpl extends OutputGateImpl implements OutputGate
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANT_DEVPackage.OUTPUT_GATE_TEMPLATE__ACTIVITY:
-				return activity != null && !activity.isEmpty();
+			case SANT_DEVPackage.GATE_TEMPLATE__PLACE_TEMPLATE:
+				return placeTemplate != null && !placeTemplate.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //OutputGateTemplateImpl
+} //GateTemplateImpl

@@ -132,7 +132,7 @@ public class ActivityTemplateItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(SANT_DEVPackage.Literals.ACTIVITY_TEMPLATE__CASES_TEMPLATE,
-				 SANT_DEVFactory.eINSTANCE.createCasesSpecificationValue()));
+				 SANT_DEVFactory.eINSTANCE.createCasesSpecificationConcrete()));
 
 		newChildDescriptors.add
 			(createChildParameter
