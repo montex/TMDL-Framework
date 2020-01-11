@@ -40,7 +40,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//CasesSpecificationConcrete/cases"/>
     </genClasses>
     <genClasses ecoreClass="sant_dev.ecore#//CasesSpecificationArray">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//CasesSpecificationArray/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//CasesSpecificationArray/numCases"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//CasesSpecificationArray/p"/>
     </genClasses>
     <genClasses ecoreClass="sant_dev.ecore#//CasesSpecificationParametric">

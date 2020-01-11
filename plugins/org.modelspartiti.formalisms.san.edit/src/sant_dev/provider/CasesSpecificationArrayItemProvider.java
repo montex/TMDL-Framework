@@ -49,25 +49,25 @@ public class CasesSpecificationArrayItemProvider extends CasesSpecificationItemP
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIdPropertyDescriptor(object);
+			addNumCasesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Id feature.
+	 * This adds a property descriptor for the Num Cases feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIdPropertyDescriptor(Object object) {
+	protected void addNumCasesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CasesSpecificationArray_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CasesSpecificationArray_id_feature", "_UI_CasesSpecificationArray_type"),
-				 SANT_DEVPackage.Literals.CASES_SPECIFICATION_ARRAY__ID,
+				 getString("_UI_CasesSpecificationArray_numCases_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CasesSpecificationArray_numCases_feature", "_UI_CasesSpecificationArray_type"),
+				 SANT_DEVPackage.Literals.CASES_SPECIFICATION_ARRAY__NUM_CASES,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,8 @@ public class CasesSpecificationArrayItemProvider extends CasesSpecificationItemP
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CasesSpecificationArray_type");
+		CasesSpecificationArray casesSpecificationArray = (CasesSpecificationArray)object;
+		return getString("_UI_CasesSpecificationArray_type") + " " + casesSpecificationArray.getNumCases();
 	}
 
 
@@ -141,7 +142,7 @@ public class CasesSpecificationArrayItemProvider extends CasesSpecificationItemP
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CasesSpecificationArray.class)) {
-			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__ID:
+			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__NUM_CASES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__P:

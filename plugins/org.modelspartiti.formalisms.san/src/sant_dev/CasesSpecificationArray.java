@@ -15,7 +15,7 @@ import san.Expression;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link sant_dev.CasesSpecificationArray#getId <em>Id</em>}</li>
+ *   <li>{@link sant_dev.CasesSpecificationArray#getNumCases <em>Num Cases</em>}</li>
  *   <li>{@link sant_dev.CasesSpecificationArray#getP <em>P</em>}</li>
  * </ul>
  *
@@ -25,20 +25,30 @@ import san.Expression;
  */
 public interface CasesSpecificationArray extends CasesSpecification {
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
+	 * Returns the value of the '<em><b>Num Cases</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Num Cases</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute list.
-	 * @see sant_dev.SANT_DEVPackage#getCasesSpecificationArray_Id()
+	 * @return the value of the '<em>Num Cases</em>' attribute.
+	 * @see #setNumCases(int)
+	 * @see sant_dev.SANT_DEVPackage#getCasesSpecificationArray_NumCases()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Integer> getId();
+	int getNumCases();
+
+	/**
+	 * Sets the value of the '{@link sant_dev.CasesSpecificationArray#getNumCases <em>Num Cases</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Num Cases</em>' attribute.
+	 * @see #getNumCases()
+	 * @generated
+	 */
+	void setNumCases(int value);
 
 	/**
 	 * Returns the value of the '<em><b>P</b></em>' containment reference list.

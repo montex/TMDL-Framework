@@ -49,7 +49,7 @@
         eType="ecore:EClass san.ecore#//Case" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationArray" eSuperTypes="#//CasesSpecification">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numCases" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" upperBound="-1"
         eType="ecore:EClass san.ecore#//Expression" containment="true"/>

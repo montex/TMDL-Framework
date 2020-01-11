@@ -4,6 +4,7 @@ package sant_dev.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -28,7 +29,7 @@ import sant_dev.SANT_DEVPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link sant_dev.impl.CasesSpecificationArrayImpl#getId <em>Id</em>}</li>
+ *   <li>{@link sant_dev.impl.CasesSpecificationArrayImpl#getNumCases <em>Num Cases</em>}</li>
  *   <li>{@link sant_dev.impl.CasesSpecificationArrayImpl#getP <em>P</em>}</li>
  * </ul>
  *
@@ -36,14 +37,24 @@ import sant_dev.SANT_DEVPackage;
  */
 public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implements CasesSpecificationArray {
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute list.
+	 * The default value of the '{@link #getNumCases() <em>Num Cases</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getNumCases()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Integer> id;
+	protected static final int NUM_CASES_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNumCases() <em>Num Cases</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumCases()
+	 * @generated
+	 * @ordered
+	 */
+	protected int numCases = NUM_CASES_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getP() <em>P</em>}' containment reference list.
@@ -79,11 +90,20 @@ public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Integer> getId() {
-		if (id == null) {
-			id = new EDataTypeUniqueEList<Integer>(Integer.class, this, SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__ID);
-		}
-		return id;
+	public int getNumCases() {
+		return numCases;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumCases(int newNumCases) {
+		int oldNumCases = numCases;
+		numCases = newNumCases;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__NUM_CASES, oldNumCases, numCases));
 	}
 
 	/**
@@ -120,8 +140,8 @@ public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__ID:
-				return getId();
+			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__NUM_CASES:
+				return getNumCases();
 			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__P:
 				return getP();
 		}
@@ -137,9 +157,8 @@ public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__ID:
-				getId().clear();
-				getId().addAll((Collection<? extends Integer>)newValue);
+			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__NUM_CASES:
+				setNumCases((Integer)newValue);
 				return;
 			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__P:
 				getP().clear();
@@ -157,8 +176,8 @@ public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__ID:
-				getId().clear();
+			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__NUM_CASES:
+				setNumCases(NUM_CASES_EDEFAULT);
 				return;
 			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__P:
 				getP().clear();
@@ -175,8 +194,8 @@ public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__ID:
-				return id != null && !id.isEmpty();
+			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__NUM_CASES:
+				return numCases != NUM_CASES_EDEFAULT;
 			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY__P:
 				return p != null && !p.isEmpty();
 		}
@@ -193,8 +212,8 @@ public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implemen
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (id: ");
-		result.append(id);
+		result.append(" (numCases: ");
+		result.append(numCases);
 		result.append(')');
 		return result.toString();
 	}

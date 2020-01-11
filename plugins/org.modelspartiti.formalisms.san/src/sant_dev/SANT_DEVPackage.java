@@ -458,13 +458,13 @@ public interface SANT_DEVPackage extends EPackage {
 	int CASES_SPECIFICATION_ARRAY = 7;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute list.
+	 * The feature id for the '<em><b>Num Cases</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASES_SPECIFICATION_ARRAY__ID = CASES_SPECIFICATION_FEATURE_COUNT + 0;
+	int CASES_SPECIFICATION_ARRAY__NUM_CASES = CASES_SPECIFICATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference list.
@@ -1607,15 +1607,15 @@ public interface SANT_DEVPackage extends EPackage {
 	EClass getCasesSpecificationArray();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link sant_dev.CasesSpecificationArray#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link sant_dev.CasesSpecificationArray#getNumCases <em>Num Cases</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Id</em>'.
-	 * @see sant_dev.CasesSpecificationArray#getId()
+	 * @return the meta object for the attribute '<em>Num Cases</em>'.
+	 * @see sant_dev.CasesSpecificationArray#getNumCases()
 	 * @see #getCasesSpecificationArray()
 	 * @generated
 	 */
-	EAttribute getCasesSpecificationArray_Id();
+	EAttribute getCasesSpecificationArray_NumCases();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link sant_dev.CasesSpecificationArray#getP <em>P</em>}'.
@@ -2257,12 +2257,12 @@ public interface SANT_DEVPackage extends EPackage {
 		EClass CASES_SPECIFICATION_ARRAY = eINSTANCE.getCasesSpecificationArray();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Num Cases</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CASES_SPECIFICATION_ARRAY__ID = eINSTANCE.getCasesSpecificationArray_Id();
+		EAttribute CASES_SPECIFICATION_ARRAY__NUM_CASES = eINSTANCE.getCasesSpecificationArray_NumCases();
 
 		/**
 		 * The meta object literal for the '<em><b>P</b></em>' containment reference list feature.

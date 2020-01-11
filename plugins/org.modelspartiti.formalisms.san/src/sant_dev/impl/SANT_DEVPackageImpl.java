@@ -520,7 +520,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCasesSpecificationArray_Id() {
+	public EAttribute getCasesSpecificationArray_NumCases() {
 		return (EAttribute)casesSpecificationArrayEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -918,7 +918,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		createEReference(casesSpecificationConcreteEClass, CASES_SPECIFICATION_CONCRETE__CASES);
 
 		casesSpecificationArrayEClass = createEClass(CASES_SPECIFICATION_ARRAY);
-		createEAttribute(casesSpecificationArrayEClass, CASES_SPECIFICATION_ARRAY__ID);
+		createEAttribute(casesSpecificationArrayEClass, CASES_SPECIFICATION_ARRAY__NUM_CASES);
 		createEReference(casesSpecificationArrayEClass, CASES_SPECIFICATION_ARRAY__P);
 
 		casesSpecificationParametricEClass = createEClass(CASES_SPECIFICATION_PARAMETRIC);
@@ -1065,7 +1065,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		initEReference(getCasesSpecificationConcrete_Cases(), theSANPackage.getCase(), null, "cases", null, 1, -1, CasesSpecificationConcrete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(casesSpecificationArrayEClass, CasesSpecificationArray.class, "CasesSpecificationArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCasesSpecificationArray_Id(), ecorePackage.getEInt(), "id", null, 1, -1, CasesSpecificationArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCasesSpecificationArray_NumCases(), ecorePackage.getEInt(), "numCases", null, 1, 1, CasesSpecificationArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCasesSpecificationArray_P(), theSANPackage.getExpression(), null, "p", null, 1, -1, CasesSpecificationArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(casesSpecificationParametricEClass, CasesSpecificationParametric.class, "CasesSpecificationParametric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
