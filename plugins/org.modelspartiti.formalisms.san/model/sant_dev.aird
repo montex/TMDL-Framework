@@ -98,6 +98,10 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_164vkSlUEeq-K5VY4-d1Vw" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_164vkilUEeq-K5VY4-d1Vw"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_lVdv0DOkEeq3Trk5ntr4Nw" type="3010" element="_lUuI-DOkEeq3Trk5ntr4Nw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_lVdv0TOkEeq3Trk5ntr4Nw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_lVdv0jOkEeq3Trk5ntr4Nw"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_emOULBdqEeqGGbKKSqAu_Q"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_emOULRdqEeqGGbKKSqAu_Q"/>
           </children>
@@ -452,6 +456,14 @@
         <target xmi:type="ecore:EReference" href="sant_dev.ecore#//SANT/gates"/>
         <semanticElements xmi:type="ecore:EReference" href="sant_dev.ecore#//SANT/gates"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_15zxgClUEeq-K5VY4-d1Vw" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_lUuI-DOkEeq3Trk5ntr4Nw" name=" arcs : ArcTemplate" tooltipText="">
+        <target xmi:type="ecore:EReference" href="sant_dev.ecore#//SANT/arcs"/>
+        <semanticElements xmi:type="ecore:EReference" href="sant_dev.ecore#//SANT/arcs"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_lUuI-TOkEeq3Trk5ntr4Nw" labelAlignment="LEFT" color="114,159,207">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>

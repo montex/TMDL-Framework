@@ -400,33 +400,6 @@ public interface SANFactory extends EFactory {
 	LeafNodeStruct createLeafNodeStruct();
 
 	/**
-	 * Returns a new object of class '<em>Expression If Then Else</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression If Then Else</em>'.
-	 * @generated
-	 */
-	ExpressionIfThenElse createExpressionIfThenElse();
-
-	/**
-	 * Returns a new object of class '<em>Expression Binary Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Binary Operator</em>'.
-	 * @generated
-	 */
-	ExpressionBinaryOperator createExpressionBinaryOperator();
-
-	/**
-	 * Returns a new object of class '<em>Expression Loop</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Loop</em>'.
-	 * @generated
-	 */
-	ExpressionLoop createExpressionLoop();
-
-	/**
 	 * Returns a new object of class '<em>Leaf Node Global Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

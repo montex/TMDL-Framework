@@ -99,9 +99,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 			case SANPackage.ARRAY: return createArray();
 			case SANPackage.LEAF_NODE_STRING: return createLeafNodeString();
 			case SANPackage.LEAF_NODE_STRUCT: return createLeafNodeStruct();
-			case SANPackage.EXPRESSION_IF_THEN_ELSE: return createExpressionIfThenElse();
-			case SANPackage.EXPRESSION_BINARY_OPERATOR: return createExpressionBinaryOperator();
-			case SANPackage.EXPRESSION_LOOP: return createExpressionLoop();
 			case SANPackage.LEAF_NODE_GLOBAL_VARIABLE: return createLeafNodeGlobalVariable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -120,8 +117,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 				return createVariableTypeFromString(eDataType, initialValue);
 			case SANPackage.EXTENDED_PLACE_TYPE:
 				return createExtendedPlaceTypeFromString(eDataType, initialValue);
-			case SANPackage.BINARY_OPERATOR_TYPE:
-				return createBinaryOperatorTypeFromString(eDataType, initialValue);
 			case SANPackage.CODE_FRAGMENT:
 				return createCodeFragmentFromString(eDataType, initialValue);
 			default:
@@ -141,8 +136,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 				return convertVariableTypeToString(eDataType, instanceValue);
 			case SANPackage.EXTENDED_PLACE_TYPE:
 				return convertExtendedPlaceTypeToString(eDataType, instanceValue);
-			case SANPackage.BINARY_OPERATOR_TYPE:
-				return convertBinaryOperatorTypeToString(eDataType, instanceValue);
 			case SANPackage.CODE_FRAGMENT:
 				return convertCodeFragmentToString(eDataType, instanceValue);
 			default:
@@ -575,36 +568,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExpressionIfThenElse createExpressionIfThenElse() {
-		ExpressionIfThenElseImpl expressionIfThenElse = new ExpressionIfThenElseImpl();
-		return expressionIfThenElse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExpressionBinaryOperator createExpressionBinaryOperator() {
-		ExpressionBinaryOperatorImpl expressionBinaryOperator = new ExpressionBinaryOperatorImpl();
-		return expressionBinaryOperator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExpressionLoop createExpressionLoop() {
-		ExpressionLoopImpl expressionLoop = new ExpressionLoopImpl();
-		return expressionLoop;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public LeafNodeGlobalVariable createLeafNodeGlobalVariable() {
 		LeafNodeGlobalVariableImpl leafNodeGlobalVariable = new LeafNodeGlobalVariableImpl();
 		return leafNodeGlobalVariable;
@@ -647,26 +610,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * @generated
 	 */
 	public String convertExtendedPlaceTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BinaryOperatorType createBinaryOperatorTypeFromString(EDataType eDataType, String initialValue) {
-		BinaryOperatorType result = BinaryOperatorType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertBinaryOperatorTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

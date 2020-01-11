@@ -294,37 +294,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="definition" lowerBound="1"
         eType="#//CustomTypeStruct"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpressionIfThenElse" eSuperTypes="#//ExpressionSegment">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
-        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionBoolean"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ifTrue" lowerBound="1"
-        eType="#//ExpressionSegment" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ifFalse" eType="#//ExpressionSegment"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="BinaryOperatorType">
-    <eLiterals name="sum"/>
-    <eLiterals name="subtract" value="1"/>
-    <eLiterals name="multiply" value="2"/>
-    <eLiterals name="divide" value="4"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpressionBinaryOperator" eSuperTypes="#//ExpressionSegment">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="op1" lowerBound="1" eType="#//ExpressionSegment"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="op2" lowerBound="1" eType="#//ExpressionSegment"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
-        eType="#//BinaryOperatorType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpressionLoop" eSuperTypes="#//ExpressionSegment">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="do" lowerBound="1" upperBound="-1"
-        eType="#//ExpressionSegment" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="begin" lowerBound="1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="end" lowerBound="1" eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//expressions/TemplateExpressionInteger"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LeafNodeGlobalVariable" eSuperTypes="#//LeafNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
         eType="#//GlobalVariable"/>

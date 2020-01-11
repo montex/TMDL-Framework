@@ -26,6 +26,7 @@ import tmdl.core.TemplateModel;
  *   <li>{@link sant_dev.SANT#getGlobalVariables <em>Global Variables</em>}</li>
  *   <li>{@link sant_dev.SANT#getCustomType <em>Custom Type</em>}</li>
  *   <li>{@link sant_dev.SANT#getGates <em>Gates</em>}</li>
+ *   <li>{@link sant_dev.SANT#getArcs <em>Arcs</em>}</li>
  * </ul>
  *
  * @see sant_dev.SANT_DEVPackage#getSANT()
@@ -170,5 +171,21 @@ public interface SANT extends TemplateModel {
 	 * @generated
 	 */
 	EList<GateTemplate> getGates();
+
+	/**
+	 * Returns the value of the '<em><b>Arcs</b></em>' containment reference list.
+	 * The list contents are of type {@link sant_dev.ArcTemplate}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Arcs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Arcs</em>' containment reference list.
+	 * @see sant_dev.SANT_DEVPackage#getSANT_Arcs()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ArcTemplate> getArcs();
 
 } // SANT

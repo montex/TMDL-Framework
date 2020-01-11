@@ -144,13 +144,22 @@ public interface SANT_DEVPackage extends EPackage {
 	int SANT__GATES = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Arcs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SANT__ARCS = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>SANT</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SANT_FEATURE_COUNT = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 8;
+	int SANT_FEATURE_COUNT = CorePackage.TEMPLATE_MODEL_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Concretize</em>' operation.
@@ -1419,6 +1428,17 @@ public interface SANT_DEVPackage extends EPackage {
 	EReference getSANT_Gates();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link sant_dev.SANT#getArcs <em>Arcs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Arcs</em>'.
+	 * @see sant_dev.SANT#getArcs()
+	 * @see #getSANT()
+	 * @generated
+	 */
+	EReference getSANT_Arcs();
+
+	/**
 	 * Returns the meta object for class '{@link sant_dev.PlaceTemplate <em>Place Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2085,6 +2105,14 @@ public interface SANT_DEVPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SANT__GATES = eINSTANCE.getSANT_Gates();
+
+		/**
+		 * The meta object literal for the '<em><b>Arcs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SANT__ARCS = eINSTANCE.getSANT_Arcs();
 
 		/**
 		 * The meta object literal for the '{@link sant_dev.impl.PlaceTemplateImpl <em>Place Template</em>}' class.

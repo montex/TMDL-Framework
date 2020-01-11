@@ -60,7 +60,7 @@ public interface Gate extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Places</em>' reference list.
 	 * @see san.SANPackage#getGate_Places()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	EList<Place> getPlaces();

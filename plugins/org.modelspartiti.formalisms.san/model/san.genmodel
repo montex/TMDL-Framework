@@ -24,12 +24,6 @@
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/double"/>
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//ExtendedPlaceType/char"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="san.ecore#//BinaryOperatorType">
-      <genEnumLiterals ecoreEnumLiteral="san.ecore#//BinaryOperatorType/sum"/>
-      <genEnumLiterals ecoreEnumLiteral="san.ecore#//BinaryOperatorType/subtract"/>
-      <genEnumLiterals ecoreEnumLiteral="san.ecore#//BinaryOperatorType/multiply"/>
-      <genEnumLiterals ecoreEnumLiteral="san.ecore#//BinaryOperatorType/divide"/>
-    </genEnums>
     <genDataTypes ecoreDataType="san.ecore#//CodeFragment"/>
     <genClasses ecoreClass="san.ecore#//SAN">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/places"/>
@@ -208,21 +202,6 @@
     </genClasses>
     <genClasses ecoreClass="san.ecore#//LeafNodeStruct">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//LeafNodeStruct/definition"/>
-    </genClasses>
-    <genClasses ecoreClass="san.ecore#//ExpressionIfThenElse">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionIfThenElse/condition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionIfThenElse/ifTrue"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionIfThenElse/ifFalse"/>
-    </genClasses>
-    <genClasses ecoreClass="san.ecore#//ExpressionBinaryOperator">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionBinaryOperator/op1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionBinaryOperator/op2"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//ExpressionBinaryOperator/operator"/>
-    </genClasses>
-    <genClasses ecoreClass="san.ecore#//ExpressionLoop">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionLoop/do"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionLoop/begin"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionLoop/end"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//LeafNodeGlobalVariable">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//LeafNodeGlobalVariable/variable"/>

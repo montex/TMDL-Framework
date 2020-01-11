@@ -17,6 +17,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/globalVariables"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/customType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/gates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//SANT/arcs"/>
     </genClasses>
     <genClasses ecoreClass="sant_dev.ecore#//PlaceTemplate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//PlaceTemplate/multiplicity"/>

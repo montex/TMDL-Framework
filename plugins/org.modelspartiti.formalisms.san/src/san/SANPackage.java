@@ -2410,171 +2410,6 @@ public interface SANPackage extends EPackage {
 	int LEAF_NODE_STRUCT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.ExpressionIfThenElseImpl <em>Expression If Then Else</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.ExpressionIfThenElseImpl
-	 * @see san.impl.SANPackageImpl#getExpressionIfThenElse()
-	 * @generated
-	 */
-	int EXPRESSION_IF_THEN_ELSE = 53;
-
-	/**
-	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_IF_THEN_ELSE__CONDITION = EXPRESSION_SEGMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>If True</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_IF_THEN_ELSE__IF_TRUE = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>If False</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_IF_THEN_ELSE__IF_FALSE = EXPRESSION_SEGMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Expression If Then Else</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_IF_THEN_ELSE_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Expression If Then Else</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_IF_THEN_ELSE_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link san.impl.ExpressionBinaryOperatorImpl <em>Expression Binary Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.ExpressionBinaryOperatorImpl
-	 * @see san.impl.SANPackageImpl#getExpressionBinaryOperator()
-	 * @generated
-	 */
-	int EXPRESSION_BINARY_OPERATOR = 54;
-
-	/**
-	 * The feature id for the '<em><b>Op1</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_BINARY_OPERATOR__OP1 = EXPRESSION_SEGMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Op2</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_BINARY_OPERATOR__OP2 = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Operator</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_BINARY_OPERATOR__OPERATOR = EXPRESSION_SEGMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Expression Binary Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_BINARY_OPERATOR_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Expression Binary Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_BINARY_OPERATOR_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link san.impl.ExpressionLoopImpl <em>Expression Loop</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.ExpressionLoopImpl
-	 * @see san.impl.SANPackageImpl#getExpressionLoop()
-	 * @generated
-	 */
-	int EXPRESSION_LOOP = 55;
-
-	/**
-	 * The feature id for the '<em><b>Do</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_LOOP__DO = EXPRESSION_SEGMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Begin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_LOOP__BEGIN = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_LOOP__END = EXPRESSION_SEGMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Expression Loop</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_LOOP_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Expression Loop</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_LOOP_OPERATION_COUNT = EXPRESSION_SEGMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link san.impl.LeafNodeGlobalVariableImpl <em>Leaf Node Global Variable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2582,7 +2417,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getLeafNodeGlobalVariable()
 	 * @generated
 	 */
-	int LEAF_NODE_GLOBAL_VARIABLE = 56;
+	int LEAF_NODE_GLOBAL_VARIABLE = 53;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -2619,7 +2454,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getVariableType()
 	 * @generated
 	 */
-	int VARIABLE_TYPE = 57;
+	int VARIABLE_TYPE = 54;
 
 	/**
 	 * The meta object id for the '{@link san.ExtendedPlaceType <em>Extended Place Type</em>}' enum.
@@ -2629,17 +2464,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExtendedPlaceType()
 	 * @generated
 	 */
-	int EXTENDED_PLACE_TYPE = 58;
-
-	/**
-	 * The meta object id for the '{@link san.BinaryOperatorType <em>Binary Operator Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.BinaryOperatorType
-	 * @see san.impl.SANPackageImpl#getBinaryOperatorType()
-	 * @generated
-	 */
-	int BINARY_OPERATOR_TYPE = 59;
+	int EXTENDED_PLACE_TYPE = 55;
 
 	/**
 	 * The meta object id for the '<em>Code Fragment</em>' data type.
@@ -2649,7 +2474,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getCodeFragment()
 	 * @generated
 	 */
-	int CODE_FRAGMENT = 60;
+	int CODE_FRAGMENT = 56;
 
 
 	/**
@@ -4074,135 +3899,6 @@ public interface SANPackage extends EPackage {
 	EReference getLeafNodeStruct_Definition();
 
 	/**
-	 * Returns the meta object for class '{@link san.ExpressionIfThenElse <em>Expression If Then Else</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Expression If Then Else</em>'.
-	 * @see san.ExpressionIfThenElse
-	 * @generated
-	 */
-	EClass getExpressionIfThenElse();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.ExpressionIfThenElse#getCondition <em>Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Condition</em>'.
-	 * @see san.ExpressionIfThenElse#getCondition()
-	 * @see #getExpressionIfThenElse()
-	 * @generated
-	 */
-	EReference getExpressionIfThenElse_Condition();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.ExpressionIfThenElse#getIfTrue <em>If True</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>If True</em>'.
-	 * @see san.ExpressionIfThenElse#getIfTrue()
-	 * @see #getExpressionIfThenElse()
-	 * @generated
-	 */
-	EReference getExpressionIfThenElse_IfTrue();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.ExpressionIfThenElse#getIfFalse <em>If False</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>If False</em>'.
-	 * @see san.ExpressionIfThenElse#getIfFalse()
-	 * @see #getExpressionIfThenElse()
-	 * @generated
-	 */
-	EReference getExpressionIfThenElse_IfFalse();
-
-	/**
-	 * Returns the meta object for class '{@link san.ExpressionBinaryOperator <em>Expression Binary Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Expression Binary Operator</em>'.
-	 * @see san.ExpressionBinaryOperator
-	 * @generated
-	 */
-	EClass getExpressionBinaryOperator();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.ExpressionBinaryOperator#getOp1 <em>Op1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Op1</em>'.
-	 * @see san.ExpressionBinaryOperator#getOp1()
-	 * @see #getExpressionBinaryOperator()
-	 * @generated
-	 */
-	EReference getExpressionBinaryOperator_Op1();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.ExpressionBinaryOperator#getOp2 <em>Op2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Op2</em>'.
-	 * @see san.ExpressionBinaryOperator#getOp2()
-	 * @see #getExpressionBinaryOperator()
-	 * @generated
-	 */
-	EReference getExpressionBinaryOperator_Op2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link san.ExpressionBinaryOperator#getOperator <em>Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Operator</em>'.
-	 * @see san.ExpressionBinaryOperator#getOperator()
-	 * @see #getExpressionBinaryOperator()
-	 * @generated
-	 */
-	EAttribute getExpressionBinaryOperator_Operator();
-
-	/**
-	 * Returns the meta object for class '{@link san.ExpressionLoop <em>Expression Loop</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Expression Loop</em>'.
-	 * @see san.ExpressionLoop
-	 * @generated
-	 */
-	EClass getExpressionLoop();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link san.ExpressionLoop#getDo <em>Do</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Do</em>'.
-	 * @see san.ExpressionLoop#getDo()
-	 * @see #getExpressionLoop()
-	 * @generated
-	 */
-	EReference getExpressionLoop_Do();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.ExpressionLoop#getBegin <em>Begin</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Begin</em>'.
-	 * @see san.ExpressionLoop#getBegin()
-	 * @see #getExpressionLoop()
-	 * @generated
-	 */
-	EReference getExpressionLoop_Begin();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.ExpressionLoop#getEnd <em>End</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>End</em>'.
-	 * @see san.ExpressionLoop#getEnd()
-	 * @see #getExpressionLoop()
-	 * @generated
-	 */
-	EReference getExpressionLoop_End();
-
-	/**
 	 * Returns the meta object for class '{@link san.LeafNodeGlobalVariable <em>Leaf Node Global Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4242,16 +3938,6 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getExtendedPlaceType();
-
-	/**
-	 * Returns the meta object for enum '{@link san.BinaryOperatorType <em>Binary Operator Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Binary Operator Type</em>'.
-	 * @see san.BinaryOperatorType
-	 * @generated
-	 */
-	EEnum getBinaryOperatorType();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Code Fragment</em>}'.
@@ -5466,108 +5152,6 @@ public interface SANPackage extends EPackage {
 		EReference LEAF_NODE_STRUCT__DEFINITION = eINSTANCE.getLeafNodeStruct_Definition();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.ExpressionIfThenElseImpl <em>Expression If Then Else</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.ExpressionIfThenElseImpl
-		 * @see san.impl.SANPackageImpl#getExpressionIfThenElse()
-		 * @generated
-		 */
-		EClass EXPRESSION_IF_THEN_ELSE = eINSTANCE.getExpressionIfThenElse();
-
-		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION_IF_THEN_ELSE__CONDITION = eINSTANCE.getExpressionIfThenElse_Condition();
-
-		/**
-		 * The meta object literal for the '<em><b>If True</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION_IF_THEN_ELSE__IF_TRUE = eINSTANCE.getExpressionIfThenElse_IfTrue();
-
-		/**
-		 * The meta object literal for the '<em><b>If False</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION_IF_THEN_ELSE__IF_FALSE = eINSTANCE.getExpressionIfThenElse_IfFalse();
-
-		/**
-		 * The meta object literal for the '{@link san.impl.ExpressionBinaryOperatorImpl <em>Expression Binary Operator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.ExpressionBinaryOperatorImpl
-		 * @see san.impl.SANPackageImpl#getExpressionBinaryOperator()
-		 * @generated
-		 */
-		EClass EXPRESSION_BINARY_OPERATOR = eINSTANCE.getExpressionBinaryOperator();
-
-		/**
-		 * The meta object literal for the '<em><b>Op1</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION_BINARY_OPERATOR__OP1 = eINSTANCE.getExpressionBinaryOperator_Op1();
-
-		/**
-		 * The meta object literal for the '<em><b>Op2</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION_BINARY_OPERATOR__OP2 = eINSTANCE.getExpressionBinaryOperator_Op2();
-
-		/**
-		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXPRESSION_BINARY_OPERATOR__OPERATOR = eINSTANCE.getExpressionBinaryOperator_Operator();
-
-		/**
-		 * The meta object literal for the '{@link san.impl.ExpressionLoopImpl <em>Expression Loop</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.ExpressionLoopImpl
-		 * @see san.impl.SANPackageImpl#getExpressionLoop()
-		 * @generated
-		 */
-		EClass EXPRESSION_LOOP = eINSTANCE.getExpressionLoop();
-
-		/**
-		 * The meta object literal for the '<em><b>Do</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION_LOOP__DO = eINSTANCE.getExpressionLoop_Do();
-
-		/**
-		 * The meta object literal for the '<em><b>Begin</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION_LOOP__BEGIN = eINSTANCE.getExpressionLoop_Begin();
-
-		/**
-		 * The meta object literal for the '<em><b>End</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION_LOOP__END = eINSTANCE.getExpressionLoop_End();
-
-		/**
 		 * The meta object literal for the '{@link san.impl.LeafNodeGlobalVariableImpl <em>Leaf Node Global Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5604,16 +5188,6 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum EXTENDED_PLACE_TYPE = eINSTANCE.getExtendedPlaceType();
-
-		/**
-		 * The meta object literal for the '{@link san.BinaryOperatorType <em>Binary Operator Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.BinaryOperatorType
-		 * @see san.impl.SANPackageImpl#getBinaryOperatorType()
-		 * @generated
-		 */
-		EEnum BINARY_OPERATOR_TYPE = eINSTANCE.getBinaryOperatorType();
 
 		/**
 		 * The meta object literal for the '<em>Code Fragment</em>' data type.

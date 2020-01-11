@@ -14,7 +14,6 @@ import san.Activity;
 import san.Arc;
 import san.Array;
 import san.Beta;
-import san.BinaryOperatorType;
 import san.Binomial;
 import san.Case;
 import san.ComplexType;
@@ -27,9 +26,6 @@ import san.Distribution;
 import san.Erlang;
 import san.Exponential;
 import san.Expression;
-import san.ExpressionBinaryOperator;
-import san.ExpressionIfThenElse;
-import san.ExpressionLoop;
 import san.ExpressionMarking;
 import san.ExpressionSegment;
 import san.ExpressionText;
@@ -459,27 +455,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass expressionIfThenElseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass expressionBinaryOperatorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass expressionLoopEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass leafNodeGlobalVariableEClass = null;
 
 	/**
@@ -495,13 +470,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * @generated
 	 */
 	private EEnum extendedPlaceTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum binaryOperatorTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1788,114 +1756,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExpressionIfThenElse() {
-		return expressionIfThenElseEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpressionIfThenElse_Condition() {
-		return (EReference)expressionIfThenElseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpressionIfThenElse_IfTrue() {
-		return (EReference)expressionIfThenElseEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpressionIfThenElse_IfFalse() {
-		return (EReference)expressionIfThenElseEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getExpressionBinaryOperator() {
-		return expressionBinaryOperatorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpressionBinaryOperator_Op1() {
-		return (EReference)expressionBinaryOperatorEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpressionBinaryOperator_Op2() {
-		return (EReference)expressionBinaryOperatorEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExpressionBinaryOperator_Operator() {
-		return (EAttribute)expressionBinaryOperatorEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getExpressionLoop() {
-		return expressionLoopEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpressionLoop_Do() {
-		return (EReference)expressionLoopEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpressionLoop_Begin() {
-		return (EReference)expressionLoopEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpressionLoop_End() {
-		return (EReference)expressionLoopEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getLeafNodeGlobalVariable() {
 		return leafNodeGlobalVariableEClass;
 	}
@@ -1925,15 +1785,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 */
 	public EEnum getExtendedPlaceType() {
 		return extendedPlaceTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getBinaryOperatorType() {
-		return binaryOperatorTypeEEnum;
 	}
 
 	/**
@@ -2160,28 +2011,12 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		leafNodeStructEClass = createEClass(LEAF_NODE_STRUCT);
 		createEReference(leafNodeStructEClass, LEAF_NODE_STRUCT__DEFINITION);
 
-		expressionIfThenElseEClass = createEClass(EXPRESSION_IF_THEN_ELSE);
-		createEReference(expressionIfThenElseEClass, EXPRESSION_IF_THEN_ELSE__CONDITION);
-		createEReference(expressionIfThenElseEClass, EXPRESSION_IF_THEN_ELSE__IF_TRUE);
-		createEReference(expressionIfThenElseEClass, EXPRESSION_IF_THEN_ELSE__IF_FALSE);
-
-		expressionBinaryOperatorEClass = createEClass(EXPRESSION_BINARY_OPERATOR);
-		createEReference(expressionBinaryOperatorEClass, EXPRESSION_BINARY_OPERATOR__OP1);
-		createEReference(expressionBinaryOperatorEClass, EXPRESSION_BINARY_OPERATOR__OP2);
-		createEAttribute(expressionBinaryOperatorEClass, EXPRESSION_BINARY_OPERATOR__OPERATOR);
-
-		expressionLoopEClass = createEClass(EXPRESSION_LOOP);
-		createEReference(expressionLoopEClass, EXPRESSION_LOOP__DO);
-		createEReference(expressionLoopEClass, EXPRESSION_LOOP__BEGIN);
-		createEReference(expressionLoopEClass, EXPRESSION_LOOP__END);
-
 		leafNodeGlobalVariableEClass = createEClass(LEAF_NODE_GLOBAL_VARIABLE);
 		createEReference(leafNodeGlobalVariableEClass, LEAF_NODE_GLOBAL_VARIABLE__VARIABLE);
 
 		// Create enums
 		variableTypeEEnum = createEEnum(VARIABLE_TYPE);
 		extendedPlaceTypeEEnum = createEEnum(EXTENDED_PLACE_TYPE);
-		binaryOperatorTypeEEnum = createEEnum(BINARY_OPERATOR_TYPE);
 
 		// Create data types
 		codeFragmentEDataType = createEDataType(CODE_FRAGMENT);
@@ -2212,7 +2047,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		// Obtain other dependent packages
 		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
-		ExpressionsPackage theExpressionsPackage = (ExpressionsPackage)EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -2261,9 +2095,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		leafNodeEClass.getESuperTypes().add(this.getNode());
 		leafNodeStringEClass.getESuperTypes().add(this.getLeafNode());
 		leafNodeStructEClass.getESuperTypes().add(this.getNode());
-		expressionIfThenElseEClass.getESuperTypes().add(this.getExpressionSegment());
-		expressionBinaryOperatorEClass.getESuperTypes().add(this.getExpressionSegment());
-		expressionLoopEClass.getESuperTypes().add(this.getExpressionSegment());
 		leafNodeGlobalVariableEClass.getESuperTypes().add(this.getLeafNode());
 
 		// Initialize classes, features, and operations; add parameters
@@ -2309,7 +2140,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		initEClass(gateEClass, Gate.class, "Gate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGate_Function(), this.getExpression(), null, "function", null, 1, 1, Gate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGate_Places(), this.getPlace(), null, "places", null, 0, -1, Gate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGate_Places(), this.getPlace(), null, "places", null, 1, -1, Gate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputGateEClass, OutputGate.class, "OutputGate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOutputGate_ActivityCase(), this.getCase(), null, "activityCase", null, 1, -1, OutputGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2459,21 +2290,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEClass(leafNodeStructEClass, LeafNodeStruct.class, "LeafNodeStruct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLeafNodeStruct_Definition(), this.getCustomTypeStruct(), null, "definition", null, 1, 1, LeafNodeStruct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(expressionIfThenElseEClass, ExpressionIfThenElse.class, "ExpressionIfThenElse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExpressionIfThenElse_Condition(), theExpressionsPackage.getTemplateExpressionBoolean(), null, "condition", null, 1, 1, ExpressionIfThenElse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpressionIfThenElse_IfTrue(), this.getExpressionSegment(), null, "ifTrue", null, 1, 1, ExpressionIfThenElse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpressionIfThenElse_IfFalse(), this.getExpressionSegment(), null, "ifFalse", null, 0, 1, ExpressionIfThenElse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(expressionBinaryOperatorEClass, ExpressionBinaryOperator.class, "ExpressionBinaryOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExpressionBinaryOperator_Op1(), this.getExpressionSegment(), null, "op1", null, 1, 1, ExpressionBinaryOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpressionBinaryOperator_Op2(), this.getExpressionSegment(), null, "op2", null, 1, 1, ExpressionBinaryOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExpressionBinaryOperator_Operator(), this.getBinaryOperatorType(), "operator", null, 1, 1, ExpressionBinaryOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(expressionLoopEClass, ExpressionLoop.class, "ExpressionLoop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExpressionLoop_Do(), this.getExpressionSegment(), null, "do", null, 1, -1, ExpressionLoop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpressionLoop_Begin(), theExpressionsPackage.getTemplateExpressionInteger(), null, "begin", null, 1, 1, ExpressionLoop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpressionLoop_End(), theExpressionsPackage.getTemplateExpressionInteger(), null, "end", null, 1, 1, ExpressionLoop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(leafNodeGlobalVariableEClass, LeafNodeGlobalVariable.class, "LeafNodeGlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLeafNodeGlobalVariable_Variable(), this.getGlobalVariable(), null, "variable", null, 1, 1, LeafNodeGlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2493,12 +2309,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		addEEnumLiteral(extendedPlaceTypeEEnum, ExtendedPlaceType.FLOAT);
 		addEEnumLiteral(extendedPlaceTypeEEnum, ExtendedPlaceType.DOUBLE);
 		addEEnumLiteral(extendedPlaceTypeEEnum, ExtendedPlaceType.CHAR);
-
-		initEEnum(binaryOperatorTypeEEnum, BinaryOperatorType.class, "BinaryOperatorType");
-		addEEnumLiteral(binaryOperatorTypeEEnum, BinaryOperatorType.SUM);
-		addEEnumLiteral(binaryOperatorTypeEEnum, BinaryOperatorType.SUBTRACT);
-		addEEnumLiteral(binaryOperatorTypeEEnum, BinaryOperatorType.MULTIPLY);
-		addEEnumLiteral(binaryOperatorTypeEEnum, BinaryOperatorType.DIVIDE);
 
 		// Initialize data types
 		initEDataType(codeFragmentEDataType, String.class, "CodeFragment", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

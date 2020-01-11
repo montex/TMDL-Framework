@@ -112,6 +112,7 @@ public class SANTItemProvider
 			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__GLOBAL_VARIABLES);
 			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__CUSTOM_TYPE);
 			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__GATES);
+			childrenFeatures.add(SANT_DEVPackage.Literals.SANT__ARCS);
 		}
 		return childrenFeatures;
 	}
@@ -177,6 +178,7 @@ public class SANTItemProvider
 			case SANT_DEVPackage.SANT__GLOBAL_VARIABLES:
 			case SANT_DEVPackage.SANT__CUSTOM_TYPE:
 			case SANT_DEVPackage.SANT__GATES:
+			case SANT_DEVPackage.SANT__ARCS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -253,6 +255,16 @@ public class SANTItemProvider
 			(createChildParameter
 				(SANT_DEVPackage.Literals.SANT__GATES,
 				 SANT_DEVFactory.eINSTANCE.createInputGateTemplate()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SANT_DEVPackage.Literals.SANT__ARCS,
+				 SANT_DEVFactory.eINSTANCE.createInputArc()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SANT_DEVPackage.Literals.SANT__ARCS,
+				 SANT_DEVFactory.eINSTANCE.createOutputArc()));
 	}
 
 	/**

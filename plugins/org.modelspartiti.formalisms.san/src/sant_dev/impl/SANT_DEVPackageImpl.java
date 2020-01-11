@@ -367,6 +367,15 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getSANT_Arcs() {
+		return (EReference)santEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPlaceTemplate() {
 		return placeTemplateEClass;
 	}
@@ -885,6 +894,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		createEReference(santEClass, SANT__GLOBAL_VARIABLES);
 		createEReference(santEClass, SANT__CUSTOM_TYPE);
 		createEReference(santEClass, SANT__GATES);
+		createEReference(santEClass, SANT__ARCS);
 
 		placeTemplateEClass = createEClass(PLACE_TEMPLATE);
 		createEReference(placeTemplateEClass, PLACE_TEMPLATE__MULTIPLICITY);
@@ -1030,6 +1040,7 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		getSANT_GlobalVariables().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_CustomType(), theSANPackage.getCustomTypeDefinition(), null, "customType", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSANT_Gates(), this.getGateTemplate(), null, "gates", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSANT_Arcs(), this.getArcTemplate(), null, "arcs", null, 0, -1, sant_dev.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placeTemplateEClass, PlaceTemplate.class, "PlaceTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlaceTemplate_Multiplicity(), theCorePackage.getMultiplicity(), null, "multiplicity", null, 1, 1, PlaceTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

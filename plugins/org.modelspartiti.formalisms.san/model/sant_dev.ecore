@@ -19,6 +19,8 @@
         eType="ecore:EClass san.ecore#//CustomTypeDefinition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="gates" upperBound="-1"
         eType="#//GateTemplate" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arcs" upperBound="-1" eType="#//ArcTemplate"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlaceTemplate" eSuperTypes="san.ecore#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="multiplicity" lowerBound="1"

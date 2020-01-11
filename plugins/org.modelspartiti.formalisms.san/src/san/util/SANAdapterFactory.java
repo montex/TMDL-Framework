@@ -281,18 +281,6 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createLeafNodeStructAdapter();
 			}
 			@Override
-			public Adapter caseExpressionIfThenElse(ExpressionIfThenElse object) {
-				return createExpressionIfThenElseAdapter();
-			}
-			@Override
-			public Adapter caseExpressionBinaryOperator(ExpressionBinaryOperator object) {
-				return createExpressionBinaryOperatorAdapter();
-			}
-			@Override
-			public Adapter caseExpressionLoop(ExpressionLoop object) {
-				return createExpressionLoopAdapter();
-			}
-			@Override
 			public Adapter caseLeafNodeGlobalVariable(LeafNodeGlobalVariable object) {
 				return createLeafNodeGlobalVariableAdapter();
 			}
@@ -1059,48 +1047,6 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLeafNodeStructAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.ExpressionIfThenElse <em>Expression If Then Else</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.ExpressionIfThenElse
-	 * @generated
-	 */
-	public Adapter createExpressionIfThenElseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.ExpressionBinaryOperator <em>Expression Binary Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.ExpressionBinaryOperator
-	 * @generated
-	 */
-	public Adapter createExpressionBinaryOperatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link san.ExpressionLoop <em>Expression Loop</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see san.ExpressionLoop
-	 * @generated
-	 */
-	public Adapter createExpressionLoopAdapter() {
 		return null;
 	}
 

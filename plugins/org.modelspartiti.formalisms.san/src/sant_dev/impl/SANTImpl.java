@@ -23,6 +23,7 @@ import san.CustomTypeDefinition;
 import san.GlobalVariable;
 import san.Place;
 import sant_dev.ActivityTemplate;
+import sant_dev.ArcTemplate;
 import sant_dev.GateTemplate;
 import sant_dev.PlaceTemplate;
 import sant_dev.SANT;
@@ -48,6 +49,7 @@ import tmdl.core.Parameter;
  *   <li>{@link sant_dev.impl.SANTImpl#getGlobalVariables <em>Global Variables</em>}</li>
  *   <li>{@link sant_dev.impl.SANTImpl#getCustomType <em>Custom Type</em>}</li>
  *   <li>{@link sant_dev.impl.SANTImpl#getGates <em>Gates</em>}</li>
+ *   <li>{@link sant_dev.impl.SANTImpl#getArcs <em>Arcs</em>}</li>
  * </ul>
  *
  * @generated
@@ -142,6 +144,16 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * @ordered
 	 */
 	protected EList<GateTemplate> gates;
+
+	/**
+	 * The cached value of the '{@link #getArcs() <em>Arcs</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArcs()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ArcTemplate> arcs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -272,6 +284,18 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ArcTemplate> getArcs() {
+		if (arcs == null) {
+			arcs = new EObjectContainmentEList<ArcTemplate>(ArcTemplate.class, this, SANT_DEVPackage.SANT__ARCS);
+		}
+		return arcs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ConcreteModel concretize(EList<Assignment> parameterValues) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -300,6 +324,8 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 				return ((InternalEList<?>)getCustomType()).basicRemove(otherEnd, msgs);
 			case SANT_DEVPackage.SANT__GATES:
 				return ((InternalEList<?>)getGates()).basicRemove(otherEnd, msgs);
+			case SANT_DEVPackage.SANT__ARCS:
+				return ((InternalEList<?>)getArcs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -328,6 +354,8 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 				return getCustomType();
 			case SANT_DEVPackage.SANT__GATES:
 				return getGates();
+			case SANT_DEVPackage.SANT__ARCS:
+				return getArcs();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -372,6 +400,10 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 				getGates().clear();
 				getGates().addAll((Collection<? extends GateTemplate>)newValue);
 				return;
+			case SANT_DEVPackage.SANT__ARCS:
+				getArcs().clear();
+				getArcs().addAll((Collection<? extends ArcTemplate>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -408,6 +440,9 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 			case SANT_DEVPackage.SANT__GATES:
 				getGates().clear();
 				return;
+			case SANT_DEVPackage.SANT__ARCS:
+				getArcs().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -436,6 +471,8 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 				return customType != null && !customType.isEmpty();
 			case SANT_DEVPackage.SANT__GATES:
 				return gates != null && !gates.isEmpty();
+			case SANT_DEVPackage.SANT__ARCS:
+				return arcs != null && !arcs.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
