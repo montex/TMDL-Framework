@@ -133,13 +133,6 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANT_DEVPackage.CASES_SPECIFICATION_RANGE_OPERATOR: {
-				CasesSpecificationRangeOperator casesSpecificationRangeOperator = (CasesSpecificationRangeOperator)theEObject;
-				T result = caseCasesSpecificationRangeOperator(casesSpecificationRangeOperator);
-				if (result == null) result = caseCasesSpecification(casesSpecificationRangeOperator);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case SANT_DEVPackage.TIMED_ACTIVITY_TEMPLATE: {
 				TimedActivityTemplate timedActivityTemplate = (TimedActivityTemplate)theEObject;
 				T result = caseTimedActivityTemplate(timedActivityTemplate);
@@ -378,21 +371,6 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCasesSpecificationParametric(CasesSpecificationParametric object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cases Specification Range Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cases Specification Range Operator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCasesSpecificationRangeOperator(CasesSpecificationRangeOperator object) {
 		return null;
 	}
 

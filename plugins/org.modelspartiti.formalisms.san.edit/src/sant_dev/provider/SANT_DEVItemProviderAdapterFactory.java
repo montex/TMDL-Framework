@@ -233,29 +233,6 @@ public class SANT_DEVItemProviderAdapterFactory extends SANT_DEVAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link sant_dev.CasesSpecificationRangeOperator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CasesSpecificationRangeOperatorItemProvider casesSpecificationRangeOperatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link sant_dev.CasesSpecificationRangeOperator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCasesSpecificationRangeOperatorAdapter() {
-		if (casesSpecificationRangeOperatorItemProvider == null) {
-			casesSpecificationRangeOperatorItemProvider = new CasesSpecificationRangeOperatorItemProvider(this);
-		}
-
-		return casesSpecificationRangeOperatorItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link sant_dev.TimedActivityTemplate} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -568,7 +545,6 @@ public class SANT_DEVItemProviderAdapterFactory extends SANT_DEVAdapterFactory i
 		if (casesSpecificationConcreteItemProvider != null) casesSpecificationConcreteItemProvider.dispose();
 		if (casesSpecificationArrayItemProvider != null) casesSpecificationArrayItemProvider.dispose();
 		if (casesSpecificationParametricItemProvider != null) casesSpecificationParametricItemProvider.dispose();
-		if (casesSpecificationRangeOperatorItemProvider != null) casesSpecificationRangeOperatorItemProvider.dispose();
 		if (timedActivityTemplateItemProvider != null) timedActivityTemplateItemProvider.dispose();
 		if (instantaneousActivityTemplateItemProvider != null) instantaneousActivityTemplateItemProvider.dispose();
 		if (markingTemplateSimpleItemProvider != null) markingTemplateSimpleItemProvider.dispose();

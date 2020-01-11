@@ -85,15 +85,6 @@ public interface SANT_DEVFactory extends EFactory {
 	CasesSpecificationParametric createCasesSpecificationParametric();
 
 	/**
-	 * Returns a new object of class '<em>Cases Specification Range Operator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cases Specification Range Operator</em>'.
-	 * @generated
-	 */
-	CasesSpecificationRangeOperator createCasesSpecificationRangeOperator();
-
-	/**
 	 * Returns a new object of class '<em>Timed Activity Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

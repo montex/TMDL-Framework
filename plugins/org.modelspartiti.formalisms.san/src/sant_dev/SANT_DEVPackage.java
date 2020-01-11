@@ -504,7 +504,7 @@ public interface SANT_DEVPackage extends EPackage {
 	int CASES_SPECIFICATION_PARAMETRIC = 8;
 
 	/**
-	 * The feature id for the '<em><b>Parameter</b></em>' containment reference.
+	 * The feature id for the '<em><b>Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -540,70 +540,6 @@ public interface SANT_DEVPackage extends EPackage {
 	int CASES_SPECIFICATION_PARAMETRIC_OPERATION_COUNT = CASES_SPECIFICATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link sant_dev.impl.CasesSpecificationRangeOperatorImpl <em>Cases Specification Range Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see sant_dev.impl.CasesSpecificationRangeOperatorImpl
-	 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecificationRangeOperator()
-	 * @generated
-	 */
-	int CASES_SPECIFICATION_RANGE_OPERATOR = 9;
-
-	/**
-	 * The feature id for the '<em><b>Min</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASES_SPECIFICATION_RANGE_OPERATOR__MIN = CASES_SPECIFICATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Max</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASES_SPECIFICATION_RANGE_OPERATOR__MAX = CASES_SPECIFICATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASES_SPECIFICATION_RANGE_OPERATOR__STEP = CASES_SPECIFICATION_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASES_SPECIFICATION_RANGE_OPERATOR__P = CASES_SPECIFICATION_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Cases Specification Range Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASES_SPECIFICATION_RANGE_OPERATOR_FEATURE_COUNT = CASES_SPECIFICATION_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Cases Specification Range Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASES_SPECIFICATION_RANGE_OPERATOR_OPERATION_COUNT = CASES_SPECIFICATION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link sant_dev.impl.TimedActivityTemplateImpl <em>Timed Activity Template</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -611,7 +547,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getTimedActivityTemplate()
 	 * @generated
 	 */
-	int TIMED_ACTIVITY_TEMPLATE = 10;
+	int TIMED_ACTIVITY_TEMPLATE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -684,7 +620,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getInstantaneousActivityTemplate()
 	 * @generated
 	 */
-	int INSTANTANEOUS_ACTIVITY_TEMPLATE = 11;
+	int INSTANTANEOUS_ACTIVITY_TEMPLATE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -730,7 +666,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getMarkingTemplate()
 	 * @generated
 	 */
-	int MARKING_TEMPLATE = 12;
+	int MARKING_TEMPLATE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id Place</b></em>' attribute.
@@ -767,7 +703,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getMarkingTemplateSimple()
 	 * @generated
 	 */
-	int MARKING_TEMPLATE_SIMPLE = 13;
+	int MARKING_TEMPLATE_SIMPLE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id Place</b></em>' attribute.
@@ -813,7 +749,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getMarkingTemplateGlobalVariable()
 	 * @generated
 	 */
-	int MARKING_TEMPLATE_GLOBAL_VARIABLE = 14;
+	int MARKING_TEMPLATE_GLOBAL_VARIABLE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id Place</b></em>' attribute.
@@ -859,7 +795,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getGateTemplate()
 	 * @generated
 	 */
-	int GATE_TEMPLATE = 15;
+	int GATE_TEMPLATE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -923,7 +859,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGate()
 	 * @generated
 	 */
-	int OUTPUT_GATE = 16;
+	int OUTPUT_GATE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -987,7 +923,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGateConcrete()
 	 * @generated
 	 */
-	int OUTPUT_GATE_CONCRETE = 17;
+	int OUTPUT_GATE_CONCRETE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1060,7 +996,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGateTemplate()
 	 * @generated
 	 */
-	int OUTPUT_GATE_TEMPLATE = 18;
+	int OUTPUT_GATE_TEMPLATE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1133,7 +1069,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getInputGateTemplate()
 	 * @generated
 	 */
-	int INPUT_GATE_TEMPLATE = 19;
+	int INPUT_GATE_TEMPLATE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1216,7 +1152,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getArcTemplate()
 	 * @generated
 	 */
-	int ARC_TEMPLATE = 20;
+	int ARC_TEMPLATE = 19;
 
 	/**
 	 * The number of structural features of the '<em>Arc Template</em>' class.
@@ -1244,7 +1180,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getInputArc()
 	 * @generated
 	 */
-	int INPUT_ARC = 21;
+	int INPUT_ARC = 20;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1290,7 +1226,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputArc()
 	 * @generated
 	 */
-	int OUTPUT_ARC = 22;
+	int OUTPUT_ARC = 21;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1639,10 +1575,10 @@ public interface SANT_DEVPackage extends EPackage {
 	EClass getCasesSpecificationParametric();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link sant_dev.CasesSpecificationParametric#getParameter <em>Parameter</em>}'.
+	 * Returns the meta object for the reference '{@link sant_dev.CasesSpecificationParametric#getParameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Parameter</em>'.
+	 * @return the meta object for the reference '<em>Parameter</em>'.
 	 * @see sant_dev.CasesSpecificationParametric#getParameter()
 	 * @see #getCasesSpecificationParametric()
 	 * @generated
@@ -1659,60 +1595,6 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCasesSpecificationParametric_P();
-
-	/**
-	 * Returns the meta object for class '{@link sant_dev.CasesSpecificationRangeOperator <em>Cases Specification Range Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Cases Specification Range Operator</em>'.
-	 * @see sant_dev.CasesSpecificationRangeOperator
-	 * @generated
-	 */
-	EClass getCasesSpecificationRangeOperator();
-
-	/**
-	 * Returns the meta object for the attribute '{@link sant_dev.CasesSpecificationRangeOperator#getMin <em>Min</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Min</em>'.
-	 * @see sant_dev.CasesSpecificationRangeOperator#getMin()
-	 * @see #getCasesSpecificationRangeOperator()
-	 * @generated
-	 */
-	EAttribute getCasesSpecificationRangeOperator_Min();
-
-	/**
-	 * Returns the meta object for the attribute '{@link sant_dev.CasesSpecificationRangeOperator#getMax <em>Max</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max</em>'.
-	 * @see sant_dev.CasesSpecificationRangeOperator#getMax()
-	 * @see #getCasesSpecificationRangeOperator()
-	 * @generated
-	 */
-	EAttribute getCasesSpecificationRangeOperator_Max();
-
-	/**
-	 * Returns the meta object for the attribute '{@link sant_dev.CasesSpecificationRangeOperator#getStep <em>Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Step</em>'.
-	 * @see sant_dev.CasesSpecificationRangeOperator#getStep()
-	 * @see #getCasesSpecificationRangeOperator()
-	 * @generated
-	 */
-	EAttribute getCasesSpecificationRangeOperator_Step();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link sant_dev.CasesSpecificationRangeOperator#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>P</em>'.
-	 * @see sant_dev.CasesSpecificationRangeOperator#getP()
-	 * @see #getCasesSpecificationRangeOperator()
-	 * @generated
-	 */
-	EReference getCasesSpecificationRangeOperator_P();
 
 	/**
 	 * Returns the meta object for class '{@link sant_dev.TimedActivityTemplate <em>Timed Activity Template</em>}'.
@@ -2283,7 +2165,7 @@ public interface SANT_DEVPackage extends EPackage {
 		EClass CASES_SPECIFICATION_PARAMETRIC = eINSTANCE.getCasesSpecificationParametric();
 
 		/**
-		 * The meta object literal for the '<em><b>Parameter</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Parameter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2297,48 +2179,6 @@ public interface SANT_DEVPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CASES_SPECIFICATION_PARAMETRIC__P = eINSTANCE.getCasesSpecificationParametric_P();
-
-		/**
-		 * The meta object literal for the '{@link sant_dev.impl.CasesSpecificationRangeOperatorImpl <em>Cases Specification Range Operator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see sant_dev.impl.CasesSpecificationRangeOperatorImpl
-		 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecificationRangeOperator()
-		 * @generated
-		 */
-		EClass CASES_SPECIFICATION_RANGE_OPERATOR = eINSTANCE.getCasesSpecificationRangeOperator();
-
-		/**
-		 * The meta object literal for the '<em><b>Min</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CASES_SPECIFICATION_RANGE_OPERATOR__MIN = eINSTANCE.getCasesSpecificationRangeOperator_Min();
-
-		/**
-		 * The meta object literal for the '<em><b>Max</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CASES_SPECIFICATION_RANGE_OPERATOR__MAX = eINSTANCE.getCasesSpecificationRangeOperator_Max();
-
-		/**
-		 * The meta object literal for the '<em><b>Step</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CASES_SPECIFICATION_RANGE_OPERATOR__STEP = eINSTANCE.getCasesSpecificationRangeOperator_Step();
-
-		/**
-		 * The meta object literal for the '<em><b>P</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CASES_SPECIFICATION_RANGE_OPERATOR__P = eINSTANCE.getCasesSpecificationRangeOperator_P();
 
 		/**
 		 * The meta object literal for the '{@link sant_dev.impl.TimedActivityTemplateImpl <em>Timed Activity Template</em>}' class.

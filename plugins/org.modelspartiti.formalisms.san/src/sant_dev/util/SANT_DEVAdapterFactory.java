@@ -109,10 +109,6 @@ public class SANT_DEVAdapterFactory extends AdapterFactoryImpl {
 				return createCasesSpecificationParametricAdapter();
 			}
 			@Override
-			public Adapter caseCasesSpecificationRangeOperator(CasesSpecificationRangeOperator object) {
-				return createCasesSpecificationRangeOperatorAdapter();
-			}
-			@Override
 			public Adapter caseTimedActivityTemplate(TimedActivityTemplate object) {
 				return createTimedActivityTemplateAdapter();
 			}
@@ -323,20 +319,6 @@ public class SANT_DEVAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCasesSpecificationParametricAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link sant_dev.CasesSpecificationRangeOperator <em>Cases Specification Range Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see sant_dev.CasesSpecificationRangeOperator
-	 * @generated
-	 */
-	public Adapter createCasesSpecificationRangeOperatorAdapter() {
 		return null;
 	}
 

@@ -47,12 +47,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//CasesSpecificationParametric/parameter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//CasesSpecificationParametric/p"/>
     </genClasses>
-    <genClasses ecoreClass="sant_dev.ecore#//CasesSpecificationRangeOperator">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//CasesSpecificationRangeOperator/min"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//CasesSpecificationRangeOperator/max"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//CasesSpecificationRangeOperator/step"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//CasesSpecificationRangeOperator/p"/>
-    </genClasses>
     <genClasses ecoreClass="sant_dev.ecore#//TimedActivityTemplate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//TimedActivityTemplate/timeDistribution"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//TimedActivityTemplate/activation"/>

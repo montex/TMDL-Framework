@@ -40,7 +40,7 @@ import tmdl.core.Parameter;
  */
 public class CasesSpecificationParametricImpl extends CasesSpecificationImpl implements CasesSpecificationParametric {
 	/**
-	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference.
+	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getParameter()
@@ -84,6 +84,14 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	 * @generated
 	 */
 	public Parameter getParameter() {
+		if (parameter != null && parameter.eIsProxy()) {
+			InternalEObject oldParameter = (InternalEObject)parameter;
+			parameter = (Parameter)eResolveProxy(oldParameter);
+			if (parameter != oldParameter) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER, oldParameter, parameter));
+			}
+		}
 		return parameter;
 	}
 
@@ -92,14 +100,8 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParameter(Parameter newParameter, NotificationChain msgs) {
-		Parameter oldParameter = parameter;
-		parameter = newParameter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER, oldParameter, newParameter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public Parameter basicGetParameter() {
+		return parameter;
 	}
 
 	/**
@@ -108,17 +110,10 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	 * @generated
 	 */
 	public void setParameter(Parameter newParameter) {
-		if (newParameter != parameter) {
-			NotificationChain msgs = null;
-			if (parameter != null)
-				msgs = ((InternalEObject)parameter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER, null, msgs);
-			if (newParameter != null)
-				msgs = ((InternalEObject)newParameter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER, null, msgs);
-			msgs = basicSetParameter(newParameter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER, newParameter, newParameter));
+		Parameter oldParameter = parameter;
+		parameter = newParameter;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER, oldParameter, parameter));
 	}
 
 	/**
@@ -141,8 +136,6 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER:
-				return basicSetParameter(null, msgs);
 			case SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__P:
 				return ((InternalEList<?>)getP()).basicRemove(otherEnd, msgs);
 		}
@@ -158,7 +151,8 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER:
-				return getParameter();
+				if (resolve) return getParameter();
+				return basicGetParameter();
 			case SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC__P:
 				return getP();
 		}

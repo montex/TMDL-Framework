@@ -56,15 +56,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationParametric" eSuperTypes="#//CasesSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
-        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Parameter"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" upperBound="-1"
-        eType="ecore:EClass san.ecore#//Expression" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationRangeOperator" eSuperTypes="#//CasesSpecification">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EClass ../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Parameter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" upperBound="-1"
         eType="ecore:EClass san.ecore#//Expression" containment="true"/>
   </eClassifiers>

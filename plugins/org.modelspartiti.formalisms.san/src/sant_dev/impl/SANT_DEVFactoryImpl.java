@@ -63,7 +63,6 @@ public class SANT_DEVFactoryImpl extends EFactoryImpl implements SANT_DEVFactory
 			case SANT_DEVPackage.CASES_SPECIFICATION_CONCRETE: return createCasesSpecificationConcrete();
 			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY: return createCasesSpecificationArray();
 			case SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC: return createCasesSpecificationParametric();
-			case SANT_DEVPackage.CASES_SPECIFICATION_RANGE_OPERATOR: return createCasesSpecificationRangeOperator();
 			case SANT_DEVPackage.TIMED_ACTIVITY_TEMPLATE: return createTimedActivityTemplate();
 			case SANT_DEVPackage.INSTANTANEOUS_ACTIVITY_TEMPLATE: return createInstantaneousActivityTemplate();
 			case SANT_DEVPackage.MARKING_TEMPLATE_SIMPLE: return createMarkingTemplateSimple();
@@ -146,16 +145,6 @@ public class SANT_DEVFactoryImpl extends EFactoryImpl implements SANT_DEVFactory
 	public CasesSpecificationParametric createCasesSpecificationParametric() {
 		CasesSpecificationParametricImpl casesSpecificationParametric = new CasesSpecificationParametricImpl();
 		return casesSpecificationParametric;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CasesSpecificationRangeOperator createCasesSpecificationRangeOperator() {
-		CasesSpecificationRangeOperatorImpl casesSpecificationRangeOperator = new CasesSpecificationRangeOperatorImpl();
-		return casesSpecificationRangeOperator;
 	}
 
 	/**
