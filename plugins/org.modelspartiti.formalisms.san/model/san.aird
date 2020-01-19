@@ -2469,6 +2469,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YL8AoDRbEeqlsJqYX6LQ1w" description="_rRzdYpWTEeajBtZg3-FKCw" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YL8AojRbEeqlsJqYX6LQ1w" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_YL8AoTRbEeqlsJqYX6LQ1w" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -2482,6 +2483,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YL9OwDRbEeqlsJqYX6LQ1w" description="_rRzdYpWTEeajBtZg3-FKCw" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YL9OwjRbEeqlsJqYX6LQ1w" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_YL9OwTRbEeqlsJqYX6LQ1w" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -2495,6 +2497,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YL910TRbEeqlsJqYX6LQ1w" description="_rRzdYpWTEeajBtZg3-FKCw" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YL910zRbEeqlsJqYX6LQ1w" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_YL910jRbEeqlsJqYX6LQ1w" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -2508,6 +2511,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YL_rADRbEeqlsJqYX6LQ1w" description="_rRzdYpWTEeajBtZg3-FKCw" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YL_rAjRbEeqlsJqYX6LQ1w" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_YL_rATRbEeqlsJqYX6LQ1w" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -2521,6 +2525,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YMA5IDRbEeqlsJqYX6LQ1w" description="_rRyPQpWTEeajBtZg3-FKCw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YMA5IjRbEeqlsJqYX6LQ1w" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_YMA5ITRbEeqlsJqYX6LQ1w" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -2534,6 +2539,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YMBgMDRbEeqlsJqYX6LQ1w" description="_rRyPQpWTEeajBtZg3-FKCw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YMBgMjRbEeqlsJqYX6LQ1w" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_YMBgMTRbEeqlsJqYX6LQ1w" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -2547,6 +2553,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YMEjgDRbEeqlsJqYX6LQ1w" description="_rRyPQpWTEeajBtZg3-FKCw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YMEjgjRbEeqlsJqYX6LQ1w" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_YMEjgTRbEeqlsJqYX6LQ1w" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>

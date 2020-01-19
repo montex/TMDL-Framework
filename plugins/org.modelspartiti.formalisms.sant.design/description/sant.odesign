@@ -108,6 +108,16 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
+        <nodeMappings name="Marking" semanticCandidatesExpression="feature:eAllContents" domainClass="sant_dev::MarkingTemplate">
+          <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="feature:idPlace" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <forbiddenSides>WEST</forbiddenSides>
+            <forbiddenSides>EAST</forbiddenSides>
+            <forbiddenSides>NORTH</forbiddenSides>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
         <edgeMappings name="sourceInputGate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']" targetFinderExpression="feature:places">
           <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -183,6 +193,14 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="MarkingTemplateArc" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Marking']" targetFinderExpression="feature:marking">
+          <style lineStyle="dash" sizeComputationExpression="2" endsCentering="Source">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="PlaceTemplate" semanticCandidatesExpression="feature:templatePlaces" domainClass="sant_dev::PlaceTemplate" childrenPresentation="List">
           <subNodeMappings name="MultiplicityValue" semanticCandidatesExpression="feature:multiplicity" domainClass="core::MultiplicityValue">
             <style xsi:type="style:DotDescription" labelSize="12" labelExpression="feature:value" labelPosition="node" resizeKind="NSEW">
@@ -197,6 +215,20 @@
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="MultiplicityParametric" semanticCandidatesExpression="feature:multiplicity" domainClass="core::MultiplicityParametric">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="aql:self.eClass().name" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="MultiplicityRangeOperator" semanticCandidatesExpression="feature:multiplicity" domainClass="sant_dev::MultiplicityRangeOperator">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="aql:self.eClass().name" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" roundedCorner="true">
@@ -218,11 +250,16 @@
   <extensions xsi:type="properties:ViewExtensionDescription" name="SantProperties">
     <metamodels href="http://www.modelspartiti.org/templates/san/sant#/"/>
     <categories name="Category">
-      <pages name="PageSANT" labelExpression="Distribution and cases" domainClass="sant_dev::ActivityTemplate" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <pages name="PageActivity" labelExpression="Distribution and cases" domainClass="sant_dev::ActivityTemplate" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <pages name="PagePlaceTemplate" labelExpression="Multiplicity" domainClass="sant_dev::PlaceTemplate" groups="//@extensions.0/@categories.0/@groups.1"/>
       <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="sant_dev::ActivityTemplate">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" isEnabledExpression="aql:self.oclIsTypeOf(sant_dev::TimedActivityTemplate)" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="CasesSpecification" labelExpression="CasesSpecification" referenceNameExpression="casesTemplate" referenceOwnerExpression="var:self"/>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Cases" labelExpression="Cases" isEnabledExpression="aql:self.oclAsType(sant_dev::ActivityTemplate).casesTemplate.oclIsTypeOf(sant_dev::CasesSpecificationConcrete)" referenceNameExpression="cases" referenceOwnerExpression="aql:self.oclAsType(sant_dev::ActivityTemplate).casesTemplate"/>
+      </groups>
+      <groups name="Group PlaceTemplate" labelExpression="Multiplicity and Marking" domainClass="sant_dev::PlaceTemplate">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Multiplicity" labelExpression="Multiplicity" referenceNameExpression="multiplicity" referenceOwnerExpression="var:self"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Marking" labelExpression="Marking" referenceNameExpression="marking" referenceOwnerExpression="var:self"/>
       </groups>
     </categories>
   </extensions>
