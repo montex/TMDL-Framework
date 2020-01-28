@@ -141,29 +141,6 @@ public class SANT_DEVItemProviderAdapterFactory extends SANT_DEVAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link sant_dev.MultiplicityArrayIntegerFromReal} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MultiplicityArrayIntegerFromRealItemProvider multiplicityArrayIntegerFromRealItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link sant_dev.MultiplicityArrayIntegerFromReal}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMultiplicityArrayIntegerFromRealAdapter() {
-		if (multiplicityArrayIntegerFromRealItemProvider == null) {
-			multiplicityArrayIntegerFromRealItemProvider = new MultiplicityArrayIntegerFromRealItemProvider(this);
-		}
-
-		return multiplicityArrayIntegerFromRealItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link sant_dev.CasesSpecificationConcrete} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -541,7 +518,6 @@ public class SANT_DEVItemProviderAdapterFactory extends SANT_DEVAdapterFactory i
 		if (santItemProvider != null) santItemProvider.dispose();
 		if (placeTemplateItemProvider != null) placeTemplateItemProvider.dispose();
 		if (multiplicityRangeOperatorItemProvider != null) multiplicityRangeOperatorItemProvider.dispose();
-		if (multiplicityArrayIntegerFromRealItemProvider != null) multiplicityArrayIntegerFromRealItemProvider.dispose();
 		if (casesSpecificationConcreteItemProvider != null) casesSpecificationConcreteItemProvider.dispose();
 		if (casesSpecificationArrayItemProvider != null) casesSpecificationArrayItemProvider.dispose();
 		if (casesSpecificationParametricItemProvider != null) casesSpecificationParametricItemProvider.dispose();

@@ -49,15 +49,6 @@ public interface SANT_DEVFactory extends EFactory {
 	MultiplicityRangeOperator createMultiplicityRangeOperator();
 
 	/**
-	 * Returns a new object of class '<em>Multiplicity Array Integer From Real</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Multiplicity Array Integer From Real</em>'.
-	 * @generated
-	 */
-	MultiplicityArrayIntegerFromReal createMultiplicityArrayIntegerFromReal();
-
-	/**
 	 * Returns a new object of class '<em>Cases Specification Concrete</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

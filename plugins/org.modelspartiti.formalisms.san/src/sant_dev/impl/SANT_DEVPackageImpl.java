@@ -4,7 +4,6 @@ package sant_dev.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -25,7 +24,6 @@ import sant_dev.InstantaneousActivityTemplate;
 import sant_dev.MarkingTemplate;
 import sant_dev.MarkingTemplateGlobalVariable;
 import sant_dev.MarkingTemplateSimple;
-import sant_dev.MultiplicityArrayIntegerFromReal;
 import sant_dev.MultiplicityRangeOperator;
 import sant_dev.OutputArc;
 import sant_dev.OutputGate;
@@ -71,13 +69,6 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 * @generated
 	 */
 	private EClass multiplicityRangeOperatorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass multiplicityArrayIntegerFromRealEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -424,33 +415,6 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 	 */
 	public EAttribute getMultiplicityRangeOperator_Step() {
 		return (EAttribute)multiplicityRangeOperatorEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMultiplicityArrayIntegerFromReal() {
-		return multiplicityArrayIntegerFromRealEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMultiplicityArrayIntegerFromReal_Values() {
-		return (EAttribute)multiplicityArrayIntegerFromRealEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMultiplicityArrayIntegerFromReal__ConvertDoubleToInt() {
-		return multiplicityArrayIntegerFromRealEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -852,10 +816,6 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		createEAttribute(multiplicityRangeOperatorEClass, MULTIPLICITY_RANGE_OPERATOR__MAX);
 		createEAttribute(multiplicityRangeOperatorEClass, MULTIPLICITY_RANGE_OPERATOR__STEP);
 
-		multiplicityArrayIntegerFromRealEClass = createEClass(MULTIPLICITY_ARRAY_INTEGER_FROM_REAL);
-		createEAttribute(multiplicityArrayIntegerFromRealEClass, MULTIPLICITY_ARRAY_INTEGER_FROM_REAL__VALUES);
-		createEOperation(multiplicityArrayIntegerFromRealEClass, MULTIPLICITY_ARRAY_INTEGER_FROM_REAL___CONVERT_DOUBLE_TO_INT);
-
 		activityTemplateEClass = createEClass(ACTIVITY_TEMPLATE);
 		createEReference(activityTemplateEClass, ACTIVITY_TEMPLATE__CASES_TEMPLATE);
 
@@ -949,7 +909,6 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		santEClass.getESuperTypes().add(theCorePackage.getTemplateModel());
 		placeTemplateEClass.getESuperTypes().add(theSANPackage.getNamedElement());
 		multiplicityRangeOperatorEClass.getESuperTypes().add(theCorePackage.getMultiplicity());
-		multiplicityArrayIntegerFromRealEClass.getESuperTypes().add(theCorePackage.getMultiplicity());
 		activityTemplateEClass.getESuperTypes().add(theSANPackage.getNamedElement());
 		casesSpecificationConcreteEClass.getESuperTypes().add(this.getCasesSpecification());
 		casesSpecificationArrayEClass.getESuperTypes().add(this.getCasesSpecification());
@@ -990,11 +949,6 @@ public class SANT_DEVPackageImpl extends EPackageImpl implements SANT_DEVPackage
 		initEAttribute(getMultiplicityRangeOperator_Min(), ecorePackage.getEInt(), "min", null, 1, 1, MultiplicityRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMultiplicityRangeOperator_Max(), ecorePackage.getEInt(), "max", null, 1, 1, MultiplicityRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMultiplicityRangeOperator_Step(), ecorePackage.getEInt(), "step", null, 0, 1, MultiplicityRangeOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(multiplicityArrayIntegerFromRealEClass, MultiplicityArrayIntegerFromReal.class, "MultiplicityArrayIntegerFromReal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMultiplicityArrayIntegerFromReal_Values(), ecorePackage.getEDouble(), "values", null, 1, -1, MultiplicityArrayIntegerFromReal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getMultiplicityArrayIntegerFromReal__ConvertDoubleToInt(), ecorePackage.getEInt(), "convertDoubleToInt", 1, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(activityTemplateEClass, ActivityTemplate.class, "ActivityTemplate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActivityTemplate_CasesTemplate(), this.getCasesSpecification(), null, "casesTemplate", null, 1, 1, ActivityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -85,10 +85,6 @@ public class SANT_DEVAdapterFactory extends AdapterFactoryImpl {
 				return createMultiplicityRangeOperatorAdapter();
 			}
 			@Override
-			public Adapter caseMultiplicityArrayIntegerFromReal(MultiplicityArrayIntegerFromReal object) {
-				return createMultiplicityArrayIntegerFromRealAdapter();
-			}
-			@Override
 			public Adapter caseActivityTemplate(ActivityTemplate object) {
 				return createActivityTemplateAdapter();
 			}
@@ -235,20 +231,6 @@ public class SANT_DEVAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMultiplicityRangeOperatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link sant_dev.MultiplicityArrayIntegerFromReal <em>Multiplicity Array Integer From Real</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see sant_dev.MultiplicityArrayIntegerFromReal
-	 * @generated
-	 */
-	public Adapter createMultiplicityArrayIntegerFromRealAdapter() {
 		return null;
 	}
 

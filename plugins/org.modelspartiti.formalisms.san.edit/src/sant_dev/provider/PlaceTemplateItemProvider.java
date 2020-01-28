@@ -152,11 +152,6 @@ public class PlaceTemplateItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(SANT_DEVPackage.Literals.PLACE_TEMPLATE__MULTIPLICITY,
-				 SANT_DEVFactory.eINSTANCE.createMultiplicityArrayIntegerFromReal()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SANT_DEVPackage.Literals.PLACE_TEMPLATE__MULTIPLICITY,
 				 CoreFactory.eINSTANCE.createMultiplicityValue()));
 
 		newChildDescriptors.add

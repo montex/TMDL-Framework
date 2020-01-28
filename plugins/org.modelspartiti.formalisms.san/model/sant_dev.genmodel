@@ -28,10 +28,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//MultiplicityRangeOperator/max"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//MultiplicityRangeOperator/step"/>
     </genClasses>
-    <genClasses ecoreClass="sant_dev.ecore#//MultiplicityArrayIntegerFromReal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant_dev.ecore#//MultiplicityArrayIntegerFromReal/values"/>
-      <genOperations ecoreOperation="sant_dev.ecore#//MultiplicityArrayIntegerFromReal/convertDoubleToInt"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="sant_dev.ecore#//ActivityTemplate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant_dev.ecore#//ActivityTemplate/casesTemplate"/>
     </genClasses>

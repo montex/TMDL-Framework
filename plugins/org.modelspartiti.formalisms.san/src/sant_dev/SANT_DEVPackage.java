@@ -4,7 +4,6 @@ package sant_dev;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -291,52 +290,6 @@ public interface SANT_DEVPackage extends EPackage {
 	int MULTIPLICITY_RANGE_OPERATOR_OPERATION_COUNT = CorePackage.MULTIPLICITY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link sant_dev.impl.MultiplicityArrayIntegerFromRealImpl <em>Multiplicity Array Integer From Real</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see sant_dev.impl.MultiplicityArrayIntegerFromRealImpl
-	 * @see sant_dev.impl.SANT_DEVPackageImpl#getMultiplicityArrayIntegerFromReal()
-	 * @generated
-	 */
-	int MULTIPLICITY_ARRAY_INTEGER_FROM_REAL = 3;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_ARRAY_INTEGER_FROM_REAL__VALUES = CorePackage.MULTIPLICITY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Multiplicity Array Integer From Real</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_ARRAY_INTEGER_FROM_REAL_FEATURE_COUNT = CorePackage.MULTIPLICITY_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Convert Double To Int</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_ARRAY_INTEGER_FROM_REAL___CONVERT_DOUBLE_TO_INT = CorePackage.MULTIPLICITY_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Multiplicity Array Integer From Real</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULTIPLICITY_ARRAY_INTEGER_FROM_REAL_OPERATION_COUNT = CorePackage.MULTIPLICITY_OPERATION_COUNT + 1;
-
-	/**
 	 * The meta object id for the '{@link sant_dev.impl.ActivityTemplateImpl <em>Activity Template</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -344,7 +297,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getActivityTemplate()
 	 * @generated
 	 */
-	int ACTIVITY_TEMPLATE = 4;
+	int ACTIVITY_TEMPLATE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -390,7 +343,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecification()
 	 * @generated
 	 */
-	int CASES_SPECIFICATION = 5;
+	int CASES_SPECIFICATION = 4;
 
 	/**
 	 * The number of structural features of the '<em>Cases Specification</em>' class.
@@ -418,7 +371,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecificationConcrete()
 	 * @generated
 	 */
-	int CASES_SPECIFICATION_CONCRETE = 6;
+	int CASES_SPECIFICATION_CONCRETE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
@@ -455,7 +408,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecificationArray()
 	 * @generated
 	 */
-	int CASES_SPECIFICATION_ARRAY = 7;
+	int CASES_SPECIFICATION_ARRAY = 6;
 
 	/**
 	 * The feature id for the '<em><b>Num Cases</b></em>' attribute.
@@ -501,7 +454,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getCasesSpecificationParametric()
 	 * @generated
 	 */
-	int CASES_SPECIFICATION_PARAMETRIC = 8;
+	int CASES_SPECIFICATION_PARAMETRIC = 7;
 
 	/**
 	 * The feature id for the '<em><b>Parameter</b></em>' reference.
@@ -547,7 +500,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getTimedActivityTemplate()
 	 * @generated
 	 */
-	int TIMED_ACTIVITY_TEMPLATE = 9;
+	int TIMED_ACTIVITY_TEMPLATE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -620,7 +573,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getInstantaneousActivityTemplate()
 	 * @generated
 	 */
-	int INSTANTANEOUS_ACTIVITY_TEMPLATE = 10;
+	int INSTANTANEOUS_ACTIVITY_TEMPLATE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -666,7 +619,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getMarkingTemplate()
 	 * @generated
 	 */
-	int MARKING_TEMPLATE = 11;
+	int MARKING_TEMPLATE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id Place</b></em>' attribute.
@@ -703,7 +656,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getMarkingTemplateSimple()
 	 * @generated
 	 */
-	int MARKING_TEMPLATE_SIMPLE = 12;
+	int MARKING_TEMPLATE_SIMPLE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id Place</b></em>' attribute.
@@ -749,7 +702,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getMarkingTemplateGlobalVariable()
 	 * @generated
 	 */
-	int MARKING_TEMPLATE_GLOBAL_VARIABLE = 13;
+	int MARKING_TEMPLATE_GLOBAL_VARIABLE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id Place</b></em>' attribute.
@@ -795,7 +748,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getGateTemplate()
 	 * @generated
 	 */
-	int GATE_TEMPLATE = 14;
+	int GATE_TEMPLATE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -859,7 +812,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGate()
 	 * @generated
 	 */
-	int OUTPUT_GATE = 15;
+	int OUTPUT_GATE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -923,7 +876,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGateConcrete()
 	 * @generated
 	 */
-	int OUTPUT_GATE_CONCRETE = 16;
+	int OUTPUT_GATE_CONCRETE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -996,7 +949,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputGateTemplate()
 	 * @generated
 	 */
-	int OUTPUT_GATE_TEMPLATE = 17;
+	int OUTPUT_GATE_TEMPLATE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1069,7 +1022,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getInputGateTemplate()
 	 * @generated
 	 */
-	int INPUT_GATE_TEMPLATE = 18;
+	int INPUT_GATE_TEMPLATE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1152,7 +1105,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getArcTemplate()
 	 * @generated
 	 */
-	int ARC_TEMPLATE = 19;
+	int ARC_TEMPLATE = 18;
 
 	/**
 	 * The number of structural features of the '<em>Arc Template</em>' class.
@@ -1180,7 +1133,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getInputArc()
 	 * @generated
 	 */
-	int INPUT_ARC = 20;
+	int INPUT_ARC = 19;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1226,7 +1179,7 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @see sant_dev.impl.SANT_DEVPackageImpl#getOutputArc()
 	 * @generated
 	 */
-	int OUTPUT_ARC = 21;
+	int OUTPUT_ARC = 20;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1448,37 +1401,6 @@ public interface SANT_DEVPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMultiplicityRangeOperator_Step();
-
-	/**
-	 * Returns the meta object for class '{@link sant_dev.MultiplicityArrayIntegerFromReal <em>Multiplicity Array Integer From Real</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Multiplicity Array Integer From Real</em>'.
-	 * @see sant_dev.MultiplicityArrayIntegerFromReal
-	 * @generated
-	 */
-	EClass getMultiplicityArrayIntegerFromReal();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link sant_dev.MultiplicityArrayIntegerFromReal#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Values</em>'.
-	 * @see sant_dev.MultiplicityArrayIntegerFromReal#getValues()
-	 * @see #getMultiplicityArrayIntegerFromReal()
-	 * @generated
-	 */
-	EAttribute getMultiplicityArrayIntegerFromReal_Values();
-
-	/**
-	 * Returns the meta object for the '{@link sant_dev.MultiplicityArrayIntegerFromReal#convertDoubleToInt() <em>Convert Double To Int</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Convert Double To Int</em>' operation.
-	 * @see sant_dev.MultiplicityArrayIntegerFromReal#convertDoubleToInt()
-	 * @generated
-	 */
-	EOperation getMultiplicityArrayIntegerFromReal__ConvertDoubleToInt();
 
 	/**
 	 * Returns the meta object for class '{@link sant_dev.ActivityTemplate <em>Activity Template</em>}'.
@@ -2055,32 +1977,6 @@ public interface SANT_DEVPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MULTIPLICITY_RANGE_OPERATOR__STEP = eINSTANCE.getMultiplicityRangeOperator_Step();
-
-		/**
-		 * The meta object literal for the '{@link sant_dev.impl.MultiplicityArrayIntegerFromRealImpl <em>Multiplicity Array Integer From Real</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see sant_dev.impl.MultiplicityArrayIntegerFromRealImpl
-		 * @see sant_dev.impl.SANT_DEVPackageImpl#getMultiplicityArrayIntegerFromReal()
-		 * @generated
-		 */
-		EClass MULTIPLICITY_ARRAY_INTEGER_FROM_REAL = eINSTANCE.getMultiplicityArrayIntegerFromReal();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MULTIPLICITY_ARRAY_INTEGER_FROM_REAL__VALUES = eINSTANCE.getMultiplicityArrayIntegerFromReal_Values();
-
-		/**
-		 * The meta object literal for the '<em><b>Convert Double To Int</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation MULTIPLICITY_ARRAY_INTEGER_FROM_REAL___CONVERT_DOUBLE_TO_INT = eINSTANCE.getMultiplicityArrayIntegerFromReal__ConvertDoubleToInt();
 
 		/**
 		 * The meta object literal for the '{@link sant_dev.impl.ActivityTemplateImpl <em>Activity Template</em>}' class.

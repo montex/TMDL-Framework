@@ -92,13 +92,6 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANT_DEVPackage.MULTIPLICITY_ARRAY_INTEGER_FROM_REAL: {
-				MultiplicityArrayIntegerFromReal multiplicityArrayIntegerFromReal = (MultiplicityArrayIntegerFromReal)theEObject;
-				T result = caseMultiplicityArrayIntegerFromReal(multiplicityArrayIntegerFromReal);
-				if (result == null) result = caseMultiplicity(multiplicityArrayIntegerFromReal);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case SANT_DEVPackage.ACTIVITY_TEMPLATE: {
 				ActivityTemplate activityTemplate = (ActivityTemplate)theEObject;
 				T result = caseActivityTemplate(activityTemplate);
@@ -281,21 +274,6 @@ public class SANT_DEVSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMultiplicityRangeOperator(MultiplicityRangeOperator object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Multiplicity Array Integer From Real</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Multiplicity Array Integer From Real</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMultiplicityArrayIntegerFromReal(MultiplicityArrayIntegerFromReal object) {
 		return null;
 	}
 

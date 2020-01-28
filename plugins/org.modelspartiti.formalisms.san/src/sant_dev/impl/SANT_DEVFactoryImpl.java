@@ -59,7 +59,6 @@ public class SANT_DEVFactoryImpl extends EFactoryImpl implements SANT_DEVFactory
 			case SANT_DEVPackage.SANT: return createSANT();
 			case SANT_DEVPackage.PLACE_TEMPLATE: return createPlaceTemplate();
 			case SANT_DEVPackage.MULTIPLICITY_RANGE_OPERATOR: return createMultiplicityRangeOperator();
-			case SANT_DEVPackage.MULTIPLICITY_ARRAY_INTEGER_FROM_REAL: return createMultiplicityArrayIntegerFromReal();
 			case SANT_DEVPackage.CASES_SPECIFICATION_CONCRETE: return createCasesSpecificationConcrete();
 			case SANT_DEVPackage.CASES_SPECIFICATION_ARRAY: return createCasesSpecificationArray();
 			case SANT_DEVPackage.CASES_SPECIFICATION_PARAMETRIC: return createCasesSpecificationParametric();
@@ -105,16 +104,6 @@ public class SANT_DEVFactoryImpl extends EFactoryImpl implements SANT_DEVFactory
 	public MultiplicityRangeOperator createMultiplicityRangeOperator() {
 		MultiplicityRangeOperatorImpl multiplicityRangeOperator = new MultiplicityRangeOperatorImpl();
 		return multiplicityRangeOperator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MultiplicityArrayIntegerFromReal createMultiplicityArrayIntegerFromReal() {
-		MultiplicityArrayIntegerFromRealImpl multiplicityArrayIntegerFromReal = new MultiplicityArrayIntegerFromRealImpl();
-		return multiplicityArrayIntegerFromReal;
 	}
 
 	/**
