@@ -67,16 +67,10 @@ import san.Type;
 import san.Uniform;
 import san.VariableType;
 import san.Weibull;
-import sant.SANTPackage;
-import sant.impl.SANTPackageImpl;
 import tmdl.core.CorePackage;
-import tmdl.core.impl.CorePackageImpl;
 import tmdl.expressions.ExpressionsPackage;
-import tmdl.expressions.impl.ExpressionsPackageImpl;
 import tmdl.library.LibraryPackage;
-import tmdl.library.impl.LibraryPackageImpl;
 import tmdl.scenario.ScenarioPackage;
-import tmdl.scenario.impl.ScenarioPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -531,33 +525,17 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SANTPackage.eNS_URI);
-		SANTPackageImpl theSANTPackage = (SANTPackageImpl)(registeredPackage instanceof SANTPackageImpl ? registeredPackage : SANTPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
-		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(registeredPackage instanceof ScenarioPackageImpl ? registeredPackage : ScenarioPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI);
-		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(registeredPackage instanceof LibraryPackageImpl ? registeredPackage : LibraryPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
-		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI);
-		ExpressionsPackageImpl theExpressionsPackage = (ExpressionsPackageImpl)(registeredPackage instanceof ExpressionsPackageImpl ? registeredPackage : ExpressionsPackage.eINSTANCE);
+		// Initialize simple dependencies
+		ScenarioPackage.eINSTANCE.eClass();
+		LibraryPackage.eINSTANCE.eClass();
+		CorePackage.eINSTANCE.eClass();
+		ExpressionsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSANPackage.createPackageContents();
-		theSANTPackage.createPackageContents();
-		theScenarioPackage.createPackageContents();
-		theLibraryPackage.createPackageContents();
-		theCorePackage.createPackageContents();
-		theExpressionsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theSANPackage.initializePackageContents();
-		theSANTPackage.initializePackageContents();
-		theScenarioPackage.initializePackageContents();
-		theLibraryPackage.initializePackageContents();
-		theCorePackage.initializePackageContents();
-		theExpressionsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theSANPackage.freeze();
