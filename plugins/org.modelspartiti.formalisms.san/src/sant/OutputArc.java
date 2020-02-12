@@ -2,6 +2,7 @@
  */
 package sant;
 
+import san.Place;
 
 /**
  * <!-- begin-user-doc -->
@@ -10,17 +11,17 @@ package sant;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link sant.OutputArc#getSource <em>Source</em>}</li>
  *   <li>{@link sant.OutputArc#getTarget <em>Target</em>}</li>
  * </ul>
- * </p>
  *
  * @see sant.SANTPackage#getOutputArc()
  * @model
  * @generated
  */
-public interface OutputArc extends Arc {
+public interface OutputArc extends ArcTemplate {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -30,12 +31,12 @@ public interface OutputArc extends Arc {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(Case)
+	 * @see #setSource(ActivityTemplate)
 	 * @see sant.SANTPackage#getOutputArc_Source()
 	 * @model required="true"
 	 * @generated
 	 */
-	Case getSource();
+	ActivityTemplate getSource();
 
 	/**
 	 * Sets the value of the '{@link sant.OutputArc#getSource <em>Source</em>}' reference.
@@ -45,7 +46,7 @@ public interface OutputArc extends Arc {
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(Case value);
+	void setSource(ActivityTemplate value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.

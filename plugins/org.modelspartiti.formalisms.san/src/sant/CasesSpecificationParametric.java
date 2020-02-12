@@ -2,8 +2,11 @@
  */
 package sant;
 
-import tmdl.expressions.TemplateExpressionInteger;
-import tmdl.expressions.TemplateExpressionReal;
+import org.eclipse.emf.common.util.EList;
+
+import san.Expression;
+
+import tmdl.core.Parameter;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,11 +15,11 @@ import tmdl.expressions.TemplateExpressionReal;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link sant.CasesSpecificationParametric#getNumCases <em>Num Cases</em>}</li>
- *   <li>{@link sant.CasesSpecificationParametric#getPExpression <em>PExpression</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link sant.CasesSpecificationParametric#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link sant.CasesSpecificationParametric#getP <em>P</em>}</li>
+ * </ul>
  *
  * @see sant.SANTPackage#getCasesSpecificationParametric()
  * @model
@@ -24,55 +27,45 @@ import tmdl.expressions.TemplateExpressionReal;
  */
 public interface CasesSpecificationParametric extends CasesSpecification {
 	/**
-	 * Returns the value of the '<em><b>Num Cases</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Num Cases</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Parameter</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Num Cases</em>' containment reference.
-	 * @see #setNumCases(TemplateExpressionInteger)
-	 * @see sant.SANTPackage#getCasesSpecificationParametric_NumCases()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Parameter</em>' reference.
+	 * @see #setParameter(Parameter)
+	 * @see sant.SANTPackage#getCasesSpecificationParametric_Parameter()
+	 * @model required="true"
 	 * @generated
 	 */
-	TemplateExpressionInteger getNumCases();
+	Parameter getParameter();
 
 	/**
-	 * Sets the value of the '{@link sant.CasesSpecificationParametric#getNumCases <em>Num Cases</em>}' containment reference.
+	 * Sets the value of the '{@link sant.CasesSpecificationParametric#getParameter <em>Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Num Cases</em>' containment reference.
-	 * @see #getNumCases()
+	 * @param value the new value of the '<em>Parameter</em>' reference.
+	 * @see #getParameter()
 	 * @generated
 	 */
-	void setNumCases(TemplateExpressionInteger value);
+	void setParameter(Parameter value);
 
 	/**
-	 * Returns the value of the '<em><b>PExpression</b></em>' containment reference.
+	 * Returns the value of the '<em><b>P</b></em>' containment reference list.
+	 * The list contents are of type {@link san.Expression}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>PExpression</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>P</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>PExpression</em>' containment reference.
-	 * @see #setPExpression(TemplateExpressionReal)
-	 * @see sant.SANTPackage#getCasesSpecificationParametric_PExpression()
+	 * @return the value of the '<em>P</em>' containment reference list.
+	 * @see sant.SANTPackage#getCasesSpecificationParametric_P()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	TemplateExpressionReal getPExpression();
-
-	/**
-	 * Sets the value of the '{@link sant.CasesSpecificationParametric#getPExpression <em>PExpression</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>PExpression</em>' containment reference.
-	 * @see #getPExpression()
-	 * @generated
-	 */
-	void setPExpression(TemplateExpressionReal value);
+	EList<Expression> getP();
 
 } // CasesSpecificationParametric

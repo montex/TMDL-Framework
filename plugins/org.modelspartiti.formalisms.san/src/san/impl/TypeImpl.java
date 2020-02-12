@@ -5,7 +5,6 @@ package san.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import san.SANPackage;
 import san.Type;
 

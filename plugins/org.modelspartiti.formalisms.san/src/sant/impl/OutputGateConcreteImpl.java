@@ -9,7 +9,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import sant.Case;
+import san.Case;
+
 import sant.OutputGateConcrete;
 import sant.SANTPackage;
 
@@ -19,23 +20,23 @@ import sant.SANTPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link sant.impl.OutputGateConcreteImpl#getActivityCase <em>Activity Case</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link sant.impl.OutputGateConcreteImpl#getCase <em>Case</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGateConcrete {
 	/**
-	 * The cached value of the '{@link #getActivityCase() <em>Activity Case</em>}' reference.
+	 * The cached value of the '{@link #getCase() <em>Case</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActivityCase()
+	 * @see #getCase()
 	 * @generated
 	 * @ordered
 	 */
-	protected Case activityCase;
+	protected Case case_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,16 +62,16 @@ public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Case getActivityCase() {
-		if (activityCase != null && activityCase.eIsProxy()) {
-			InternalEObject oldActivityCase = (InternalEObject)activityCase;
-			activityCase = (Case)eResolveProxy(oldActivityCase);
-			if (activityCase != oldActivityCase) {
+	public Case getCase() {
+		if (case_ != null && case_.eIsProxy()) {
+			InternalEObject oldCase = (InternalEObject)case_;
+			case_ = (Case)eResolveProxy(oldCase);
+			if (case_ != oldCase) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANTPackage.OUTPUT_GATE_CONCRETE__ACTIVITY_CASE, oldActivityCase, activityCase));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANTPackage.OUTPUT_GATE_CONCRETE__CASE, oldCase, case_));
 			}
 		}
-		return activityCase;
+		return case_;
 	}
 
 	/**
@@ -78,8 +79,8 @@ public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Case basicGetActivityCase() {
-		return activityCase;
+	public Case basicGetCase() {
+		return case_;
 	}
 
 	/**
@@ -87,11 +88,11 @@ public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActivityCase(Case newActivityCase) {
-		Case oldActivityCase = activityCase;
-		activityCase = newActivityCase;
+	public void setCase(Case newCase) {
+		Case oldCase = case_;
+		case_ = newCase;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANTPackage.OUTPUT_GATE_CONCRETE__ACTIVITY_CASE, oldActivityCase, activityCase));
+			eNotify(new ENotificationImpl(this, Notification.SET, SANTPackage.OUTPUT_GATE_CONCRETE__CASE, oldCase, case_));
 	}
 
 	/**
@@ -102,9 +103,9 @@ public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGate
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANTPackage.OUTPUT_GATE_CONCRETE__ACTIVITY_CASE:
-				if (resolve) return getActivityCase();
-				return basicGetActivityCase();
+			case SANTPackage.OUTPUT_GATE_CONCRETE__CASE:
+				if (resolve) return getCase();
+				return basicGetCase();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,8 +118,8 @@ public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGate
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANTPackage.OUTPUT_GATE_CONCRETE__ACTIVITY_CASE:
-				setActivityCase((Case)newValue);
+			case SANTPackage.OUTPUT_GATE_CONCRETE__CASE:
+				setCase((Case)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,8 +133,8 @@ public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGate
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANTPackage.OUTPUT_GATE_CONCRETE__ACTIVITY_CASE:
-				setActivityCase((Case)null);
+			case SANTPackage.OUTPUT_GATE_CONCRETE__CASE:
+				setCase((Case)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,8 +148,8 @@ public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGate
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANTPackage.OUTPUT_GATE_CONCRETE__ACTIVITY_CASE:
-				return activityCase != null;
+			case SANTPackage.OUTPUT_GATE_CONCRETE__CASE:
+				return case_ != null;
 		}
 		return super.eIsSet(featureID);
 	}

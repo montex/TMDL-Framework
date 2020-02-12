@@ -9,9 +9,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import sant.Activity;
+import san.Place;
+
+import sant.ActivityTemplate;
 import sant.InputArc;
-import sant.Place;
 import sant.SANTPackage;
 
 /**
@@ -20,15 +21,15 @@ import sant.SANTPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link sant.impl.InputArcImpl#getSource <em>Source</em>}</li>
  *   <li>{@link sant.impl.InputArcImpl#getTarget <em>Target</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class InputArcImpl extends ArcImpl implements InputArc {
+public class InputArcImpl extends ArcTemplateImpl implements InputArc {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -47,7 +48,7 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * @generated
 	 * @ordered
 	 */
-	protected Activity target;
+	protected ActivityTemplate target;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,10 +112,10 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activity getTarget() {
+	public ActivityTemplate getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
-			target = (Activity)eResolveProxy(oldTarget);
+			target = (ActivityTemplate)eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANTPackage.INPUT_ARC__TARGET, oldTarget, target));
@@ -128,7 +129,7 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activity basicGetTarget() {
+	public ActivityTemplate basicGetTarget() {
 		return target;
 	}
 
@@ -137,8 +138,8 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(Activity newTarget) {
-		Activity oldTarget = target;
+	public void setTarget(ActivityTemplate newTarget) {
+		ActivityTemplate oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SANTPackage.INPUT_ARC__TARGET, oldTarget, target));
@@ -174,7 +175,7 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 				setSource((Place)newValue);
 				return;
 			case SANTPackage.INPUT_ARC__TARGET:
-				setTarget((Activity)newValue);
+				setTarget((ActivityTemplate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,7 +193,7 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 				setSource((Place)null);
 				return;
 			case SANTPackage.INPUT_ARC__TARGET:
-				setTarget((Activity)null);
+				setTarget((ActivityTemplate)null);
 				return;
 		}
 		super.eUnset(featureID);

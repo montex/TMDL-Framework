@@ -9,9 +9,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import sant.Case;
+import san.Place;
+
+import sant.ActivityTemplate;
 import sant.OutputArc;
-import sant.Place;
 import sant.SANTPackage;
 
 /**
@@ -20,15 +21,15 @@ import sant.SANTPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link sant.impl.OutputArcImpl#getSource <em>Source</em>}</li>
  *   <li>{@link sant.impl.OutputArcImpl#getTarget <em>Target</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class OutputArcImpl extends ArcImpl implements OutputArc {
+public class OutputArcImpl extends ArcTemplateImpl implements OutputArc {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -37,7 +38,7 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	 * @generated
 	 * @ordered
 	 */
-	protected Case source;
+	protected ActivityTemplate source;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
@@ -73,10 +74,10 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Case getSource() {
+	public ActivityTemplate getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
-			source = (Case)eResolveProxy(oldSource);
+			source = (ActivityTemplate)eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANTPackage.OUTPUT_ARC__SOURCE, oldSource, source));
@@ -90,7 +91,7 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Case basicGetSource() {
+	public ActivityTemplate basicGetSource() {
 		return source;
 	}
 
@@ -99,8 +100,8 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(Case newSource) {
-		Case oldSource = source;
+	public void setSource(ActivityTemplate newSource) {
+		ActivityTemplate oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SANTPackage.OUTPUT_ARC__SOURCE, oldSource, source));
@@ -171,7 +172,7 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case SANTPackage.OUTPUT_ARC__SOURCE:
-				setSource((Case)newValue);
+				setSource((ActivityTemplate)newValue);
 				return;
 			case SANTPackage.OUTPUT_ARC__TARGET:
 				setTarget((Place)newValue);
@@ -189,7 +190,7 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case SANTPackage.OUTPUT_ARC__SOURCE:
-				setSource((Case)null);
+				setSource((ActivityTemplate)null);
 				return;
 			case SANTPackage.OUTPUT_ARC__TARGET:
 				setTarget((Place)null);

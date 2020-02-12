@@ -4,6 +4,7 @@
     <semanticResources>san.ecore</semanticResources>
     <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
     <semanticResources>platform:/resource/org.modelspartiti.infrastructure/model/tmdl.ecore</semanticResources>
+    <semanticResources>tmdl.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_DRb2sIpZEeaJoq3wzEDx5w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_KTyREO5qEemJ2_gSzZ0cSA" name="SAN Class Diagram" repPath="#_1zcLEIpZEeaJoq3wzEDx5w">

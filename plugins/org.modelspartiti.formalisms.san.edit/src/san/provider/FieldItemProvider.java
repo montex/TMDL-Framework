@@ -27,6 +27,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import san.Field;
 import san.SANFactory;
 import san.SANPackage;
+import sant.provider.SANTEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link san.Field} object.
@@ -198,7 +199,7 @@ public class FieldItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SANEditPlugin.INSTANCE;
+		return SANTEditPlugin.INSTANCE;
 	}
 
 }
