@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:properties-ext-widgets-reference="http://www.eclipse.org/sirius/properties/1.0.0/ext/widgets/reference" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="sant" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:properties-ext-widgets-reference="http://www.eclipse.org/sirius/properties/1.0.0/ext/widgets/reference" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="sant" version="12.0.0.2017041100">
   <ownedViewpoints name="SANT" modelFileExtension="sant">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SANT" initialisation="true" domainClass="sant::SANT" enablePopupBars="true">
       <metamodel href="http://www.modelspartiti.org/templates/san/san#/"/>
@@ -108,16 +108,6 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Marking" semanticCandidatesExpression="feature:eAllContents" domainClass="sant::MarkingTemplate">
-          <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="feature:idPlace" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <forbiddenSides>WEST</forbiddenSides>
-            <forbiddenSides>EAST</forbiddenSides>
-            <forbiddenSides>NORTH</forbiddenSides>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-          </style>
-        </nodeMappings>
         <edgeMappings name="sourceInputGate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']" targetFinderExpression="feature:places">
           <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -135,7 +125,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="targetInputGate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']" targetFinderExpression="feature:activity">
-          <style sizeComputationExpression="2" routingStyle="manhattan">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -144,7 +134,7 @@
         </edgeMappings>
         <edgeMappings name="targetOutputGate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetFinderExpression="feature:places">
           <targetMapping xsi:type="description_1:NodeMapping" href="../../org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
-          <style sizeComputationExpression="2" routingStyle="manhattan">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -152,8 +142,8 @@
           </style>
         </edgeMappings>
         <edgeMappings name="targetOutputGateTemplate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetFinderExpression="feature:placeTemplate">
-          <style sizeComputationExpression="2" routingStyle="manhattan">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
@@ -193,14 +183,6 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="MarkingTemplateArc" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Marking']" targetFinderExpression="feature:marking">
-          <style lineStyle="dash" sizeComputationExpression="2" endsCentering="Source">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
         <containerMappings name="PlaceTemplate" semanticCandidatesExpression="feature:templatePlaces" domainClass="sant::PlaceTemplate" childrenPresentation="List">
           <subNodeMappings name="MultiplicityValue" semanticCandidatesExpression="feature:multiplicity" domainClass="core::MultiplicityValue">
             <style xsi:type="style:DotDescription" labelSize="12" labelExpression="feature:value" labelPosition="node" resizeKind="NSEW">
@@ -210,7 +192,7 @@
             </style>
           </subNodeMappings>
           <subNodeMappings name="MultiplicityArray" semanticCandidatesExpression="feature:multiplicity" domainClass="core::MultiplicityArray">
-            <style xsi:type="style:SquareDescription" labelSize="13" showIcon="false" labelExpression="feature:values" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" labelSize="13" showIcon="false" labelExpression="[values/]" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -231,17 +213,210 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
+          <subNodeMappings name="MarkingSimple" semanticCandidatesExpression="feature:marking" domainClass="sant::MarkingTemplateSimple">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.toString()" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="MarkingGlobalVariable" semanticCandidatesExpression="feature:marking" domainClass="sant::MarkingTemplateGlobalVariable">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.toString()" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
         <reusedMappings xsi:type="description_1:NodeMapping" href="../../org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='GlobalVariable']"/>
-        <reusedMappings xsi:type="description_1:NodeMapping" href="../../org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']"/>
         <toolSections name="Tools">
-          <reusedTools xsi:type="tool:NodeCreationDescription" href="../../org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Place']"/>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Normal Place" nodeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Place" referenceName="places">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'P'+container.places->filter(san::Place)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="PlaceTemplate" nodeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::PlaceTemplate" referenceName="templatePlaces">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'PlaceTemplate'+container.templatePlaces->filter(sant::PlaceTemplate)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="InputGateTemplate" nodeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InputGate']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::InputGateTemplate" referenceName="gates">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="predicate"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'OG'+container.gates->filter(sant::InputGateTemplate)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OutputGateTemplate" nodeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::OutputGateTemplate" referenceName="gates">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'OG'+container.gates->filter(sant::OutputGate)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OutputGateConcrete" nodeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::OutputGateConcrete" referenceName="gates">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'OG'+container.gates->filter(sant::OutputGate)->size()"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="TimedActivity" nodeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::TimedActivityTemplate" referenceName="activityTemplates">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'TA'+container.activityTemplates->filter(sant::TimedActivityTemplate)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="InstantaneousActivity" nodeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::InstantaneousActivityTemplate" referenceName="activityTemplates">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'IA'+container.activityTemplates->filter(sant::InstantaneousActivityTemplate)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="SourceInputGate" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceInputGate'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceInputGateTemplate']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:target.oclIsTypeOf(sant::PlaceTemplate)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="placeTemplate" valueExpression="var:target"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:target.oclIsTypeOf(san::Place)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="places" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="TargetInputGate" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetInputGate']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="activity" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="SourceOutputGate" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGate'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGateTemplate']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:source.oclIsTypeOf(sant::OutputGateConcrete)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="case" valueExpression="var:target"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:source.oclIsTypeOf(sant::OutputGateTemplate)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="activity" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="TargetOutputGate" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGate'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGateTemplate']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:target.oclIsTypeOf(sant::PlaceTemplate)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="placeTemplate" valueExpression="var:target"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:target.oclIsTypeOf(san::Place)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="places" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InputArc" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer()/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::InputArc" referenceName="arcs">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="OutputArc" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArc']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.eContainer()/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::OutputArc" referenceName="arcs">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
@@ -249,9 +424,11 @@
   </ownedViewpoints>
   <extensions xsi:type="properties:ViewExtensionDescription" name="SantProperties">
     <metamodels href="http://www.modelspartiti.org/templates/san/sant#/"/>
+    <metamodels href="http://www.modelspartiti.org/templates/san/san#/"/>
     <categories name="Category">
       <pages name="PageActivity" labelExpression="Distribution and cases" domainClass="sant::ActivityTemplate" groups="//@extensions.0/@categories.0/@groups.0"/>
       <pages name="PagePlaceTemplate" labelExpression="Multiplicity" domainClass="sant::PlaceTemplate" groups="//@extensions.0/@categories.0/@groups.1"/>
+      <pages name="PageGate" labelExpression="Expression" domainClass="sant::GateTemplate" groups="//@extensions.0/@categories.0/@groups.2"/>
       <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="sant::ActivityTemplate">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" isEnabledExpression="aql:self.oclIsTypeOf(sant::TimedActivityTemplate)" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="CasesSpecification" labelExpression="CasesSpecification" referenceNameExpression="casesTemplate" referenceOwnerExpression="var:self"/>
@@ -259,7 +436,30 @@
       </groups>
       <groups name="Group PlaceTemplate" labelExpression="Multiplicity and Marking" domainClass="sant::PlaceTemplate">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Multiplicity" labelExpression="Multiplicity" referenceNameExpression="multiplicity" referenceOwnerExpression="var:self"/>
+        <controls xsi:type="properties:ButtonDescription" name="Delete Markings" labelExpression="Delete Markings" helpExpression="Delete all associated markings" buttonLabelExpression="Delete Markings">
+          <initialOperation>
+            <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Delete Marking">
+              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                <initialOperation/>
+              </buttons>
+              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                    <subModelOperations xsi:type="tool_1:For" expression="aql:self.oclAsType(sant::PlaceTemplate).marking">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </subModelOperations>
+                  </firstModelOperations>
+                </initialOperation>
+              </buttons>
+              <page name="Default Page" labelExpression="Are you sure to delete marking?" semanticCandidateExpression="var:self"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Marking" labelExpression="Marking" referenceNameExpression="marking" referenceOwnerExpression="var:self"/>
+      </groups>
+      <groups name="Group Gate" labelExpression="Function" domainClass="sant::GateTemplate" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Predicate" labelExpression="Predicate" isEnabledExpression="aql:self.oclIsTypeOf(sant::InputGateTemplate)" referenceNameExpression="segments" referenceOwnerExpression="aql:self.oclAsType(sant::InputGateTemplate).predicate"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Function" labelExpression="Function" referenceNameExpression="segments" referenceOwnerExpression="aql:self.oclAsType(san::Gate).function"/>
       </groups>
     </categories>
   </extensions>

@@ -153,5 +153,19 @@ public class MarkingTemplateGlobalVariableImpl extends MarkingTemplateImpl imple
 		}
 		return super.eIsSet(featureID);
 	}
+	
+	/**
+	 * @generated NOT
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (Variable: ");
+		result.append(variable.getName());
+		result.append(')');
+		return result.toString();
+	}
 
 } //MarkingTemplateGlobalVariableImpl
