@@ -183,6 +183,22 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="OutputArcForPlaceTemplate" semanticCandidatesExpression="feature:arcs" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetFinderExpression="feature:templateTarget" sourceFinderExpression="feature:source" domainClass="sant::OutputArc" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="InputArcForPlaceTemplate" semanticCandidatesExpression="feature:arcs" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']" targetFinderExpression="feature:target" sourceFinderExpression="feature:templateSource" domainClass="sant::InputArc" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="PlaceTemplate" semanticCandidatesExpression="feature:templatePlaces" domainClass="sant::PlaceTemplate" childrenPresentation="List">
           <subNodeMappings name="MultiplicityValue" semanticCandidatesExpression="feature:multiplicity" domainClass="core::MultiplicityValue">
             <style xsi:type="style:DotDescription" labelSize="12" labelExpression="feature:value" labelPosition="node" resizeKind="NSEW">
@@ -389,7 +405,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InputArc" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InputArc" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArcForPlaceTemplate']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -397,13 +413,18 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer()/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::InputArc" referenceName="arcs">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:source.oclIsTypeOf(san::Place)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:source.oclIsTypeOf(sant::PlaceTemplate)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="templateSource" valueExpression="var:source"/>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="OutputArc" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArc']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="OutputArc" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArc'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcForPlaceTemplate']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -412,7 +433,12 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.eContainer()/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::OutputArc" referenceName="arcs">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:target.oclIsKindOf(san::Place)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:target.oclIsKindOf(sant::PlaceTemplate)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="templateTarget" valueExpression="var:target"/>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>

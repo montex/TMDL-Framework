@@ -74,10 +74,12 @@
     <genClasses ecoreClass="sant.ecore#//InputArc">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//InputArc/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//InputArc/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//InputArc/templateSource"/>
     </genClasses>
     <genClasses ecoreClass="sant.ecore#//OutputArc">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//OutputArc/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//OutputArc/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//OutputArc/templateTarget"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="TMDL" disposableProviderFactory="true" ecorePackage="tmdl.ecore#/">

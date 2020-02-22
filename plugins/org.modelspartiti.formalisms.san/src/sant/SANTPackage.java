@@ -1152,13 +1152,22 @@ public interface SANTPackage extends EPackage {
 	int INPUT_ARC__TARGET = ARC_TEMPLATE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Template Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC__TEMPLATE_SOURCE = ARC_TEMPLATE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Input Arc</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_ARC_FEATURE_COUNT = ARC_TEMPLATE_FEATURE_COUNT + 2;
+	int INPUT_ARC_FEATURE_COUNT = ARC_TEMPLATE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Input Arc</em>' class.
@@ -1198,13 +1207,22 @@ public interface SANTPackage extends EPackage {
 	int OUTPUT_ARC__TARGET = ARC_TEMPLATE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Template Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC__TEMPLATE_TARGET = ARC_TEMPLATE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Output Arc</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_ARC_FEATURE_COUNT = ARC_TEMPLATE_FEATURE_COUNT + 2;
+	int OUTPUT_ARC_FEATURE_COUNT = ARC_TEMPLATE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Output Arc</em>' class.
@@ -1780,6 +1798,17 @@ public interface SANTPackage extends EPackage {
 	EReference getInputArc_Target();
 
 	/**
+	 * Returns the meta object for the reference '{@link sant.InputArc#getTemplateSource <em>Template Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Template Source</em>'.
+	 * @see sant.InputArc#getTemplateSource()
+	 * @see #getInputArc()
+	 * @generated
+	 */
+	EReference getInputArc_TemplateSource();
+
+	/**
 	 * Returns the meta object for class '{@link sant.OutputArc <em>Output Arc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1810,6 +1839,17 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOutputArc_Target();
+
+	/**
+	 * Returns the meta object for the reference '{@link sant.OutputArc#getTemplateTarget <em>Template Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Template Target</em>'.
+	 * @see sant.OutputArc#getTemplateTarget()
+	 * @see #getOutputArc()
+	 * @generated
+	 */
+	EReference getOutputArc_TemplateTarget();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2299,6 +2339,14 @@ public interface SANTPackage extends EPackage {
 		EReference INPUT_ARC__TARGET = eINSTANCE.getInputArc_Target();
 
 		/**
+		 * The meta object literal for the '<em><b>Template Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT_ARC__TEMPLATE_SOURCE = eINSTANCE.getInputArc_TemplateSource();
+
+		/**
 		 * The meta object literal for the '{@link sant.impl.OutputArcImpl <em>Output Arc</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2323,6 +2371,14 @@ public interface SANTPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OUTPUT_ARC__TARGET = eINSTANCE.getOutputArc_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Template Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT_ARC__TEMPLATE_TARGET = eINSTANCE.getOutputArc_TemplateTarget();
 
 	}
 

@@ -44,6 +44,7 @@ public class InputArcItemProvider extends ArcTemplateItemProvider {
 
 			addSourcePropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
+			addTemplateSourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,6 +85,28 @@ public class InputArcItemProvider extends ArcTemplateItemProvider {
 				 getString("_UI_InputArc_target_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_InputArc_target_feature", "_UI_InputArc_type"),
 				 SANTPackage.Literals.INPUT_ARC__TARGET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Template Source feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTemplateSourcePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InputArc_templateSource_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InputArc_templateSource_feature", "_UI_InputArc_type"),
+				 SANTPackage.Literals.INPUT_ARC__TEMPLATE_SOURCE,
 				 true,
 				 false,
 				 true,

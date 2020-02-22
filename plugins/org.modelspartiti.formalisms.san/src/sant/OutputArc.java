@@ -15,6 +15,7 @@ import san.Place;
  * <ul>
  *   <li>{@link sant.OutputArc#getSource <em>Source</em>}</li>
  *   <li>{@link sant.OutputArc#getTarget <em>Target</em>}</li>
+ *   <li>{@link sant.OutputArc#getTemplateTarget <em>Template Target</em>}</li>
  * </ul>
  *
  * @see sant.SANTPackage#getOutputArc()
@@ -59,7 +60,7 @@ public interface OutputArc extends ArcTemplate {
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(Place)
 	 * @see sant.SANTPackage#getOutputArc_Target()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	Place getTarget();
@@ -73,5 +74,31 @@ public interface OutputArc extends ArcTemplate {
 	 * @generated
 	 */
 	void setTarget(Place value);
+
+	/**
+	 * Returns the value of the '<em><b>Template Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Template Target</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Template Target</em>' reference.
+	 * @see #setTemplateTarget(PlaceTemplate)
+	 * @see sant.SANTPackage#getOutputArc_TemplateTarget()
+	 * @model
+	 * @generated
+	 */
+	PlaceTemplate getTemplateTarget();
+
+	/**
+	 * Sets the value of the '{@link sant.OutputArc#getTemplateTarget <em>Template Target</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Template Target</em>' reference.
+	 * @see #getTemplateTarget()
+	 * @generated
+	 */
+	void setTemplateTarget(PlaceTemplate value);
 
 } // OutputArc
