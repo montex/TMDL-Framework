@@ -115,17 +115,15 @@
           </style>
         </nodeMappings>
         <nodeMappings name="InputGate" semanticCandidatesExpression="feature:gates" domainClass="san::InputGate">
-          <style xsi:type="style:LozengeNodeDescription" labelSize="12" hideLabelByDefault="true" resizeKind="NSEW">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.modelspartiti.formalisms.san.design/icons/san_ingate.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="OutputGate" semanticCandidatesExpression="feature:gates" domainClass="san::OutputGate">
-          <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.modelspartiti.formalisms.san.design/icons/san_outgate.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="GlobalVariable" semanticCandidatesExpression="feature:globalVariables" domainClass="san::GlobalVariable">
@@ -290,7 +288,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="ExtendedPlace" nodeMappings="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ComplexType-Place" nodeMappings="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -342,6 +340,10 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::InputGate" referenceName="gates">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'IG'+container.gates->filter(san::InputGate)->size()"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="predicate"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function"/>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -393,6 +395,9 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::OutputGate" referenceName="gates">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'OG'+container.gates->filter(san::OutputGate)->size()"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function"/>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -455,10 +460,11 @@
   <extensions xsi:type="properties:ViewExtensionDescription" name="SanProperties">
     <metamodels href="http://www.modelspartiti.org/templates/san/san#/"/>
     <categories name="Category">
-      <pages name="PageSAN" labelExpression="Properties" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.4 //@extensions.0/@categories.0/@groups.5">
+      <pages name="PageSAN" labelExpression="Properties" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.4 //@extensions.0/@categories.0/@groups.5" indented="true">
         <extends href="platform:/plugin/org.eclipse.sirius.properties.defaultrules/model/properties.odesign#//@extensions.0/@categories.0/@pages.0"/>
       </pages>
       <pages name="PageMarkingNodeArray" labelExpression="LeafNode" domainClass="san::Array" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.2"/>
+      <pages name="PageGate" labelExpression="Expression" domainClass="san::Gate" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.6"/>
       <groups name="GroupPlace" labelExpression="Type of marking" domainClass="san::Place" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:ContainerDescription" name="ContainerPlace">
           <controls xsi:type="properties:CheckboxDescription" name="PrimitiveType" labelExpression="Primitive Type" valueExpression="aql:self.type.oclIsTypeOf(san::PrimitiveType)">
@@ -537,6 +543,10 @@
       </groups>
       <groups name="GroupField" labelExpression="Type" domainClass="san::Field" semanticCandidateExpression="var:self">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Type" labelExpression="Type" referenceNameExpression="typeStruct" referenceOwnerExpression="var:self"/>
+      </groups>
+      <groups name="Group Gate" labelExpression="Function" domainClass="san::Gate" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Predicate" labelExpression="Predicate" isEnabledExpression="aql:self.oclIsTypeOf(san::InputGate)" referenceNameExpression="segments" referenceOwnerExpression="aql:self.oclAsType(san::InputGate).predicate"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Function" labelExpression="Function" referenceNameExpression="segments" referenceOwnerExpression="aql:self.oclAsType(san::Gate).function"/>
       </groups>
     </categories>
   </extensions>
