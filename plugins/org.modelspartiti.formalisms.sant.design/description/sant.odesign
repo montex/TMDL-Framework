@@ -142,7 +142,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="targetOutputGateTemplate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetFinderExpression="feature:placeTemplate">
-          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+          <style targetArrow="NoDecoration" sizeComputationExpression="5" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -150,7 +150,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="sourceOutputGateTemplate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']" targetFinderExpression="feature:activity">
-          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+          <style targetArrow="NoDecoration" sizeComputationExpression="5">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -288,10 +288,10 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::InputGateTemplate" referenceName="gates">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="predicate"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="predicate"/>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'OG'+container.gates->filter(sant::InputGateTemplate)->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'IG'+container.gates->filter(sant::InputGateTemplate)->size()"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -484,8 +484,8 @@
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Marking" labelExpression="Marking" referenceNameExpression="marking" referenceOwnerExpression="var:self"/>
       </groups>
       <groups name="Group Gate" labelExpression="Function" domainClass="sant::GateTemplate" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Predicate" labelExpression="Predicate" isEnabledExpression="aql:self.oclIsTypeOf(sant::InputGateTemplate)" referenceNameExpression="segments" referenceOwnerExpression="aql:self.oclAsType(sant::InputGateTemplate).predicate"/>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Function" labelExpression="Function" referenceNameExpression="segments" referenceOwnerExpression="aql:self.oclAsType(san::Gate).function"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Predicate" labelExpression="Predicate" isEnabledExpression="aql:self.oclIsTypeOf(sant::InputGateTemplate)" referenceNameExpression="segments" referenceOwnerExpression="aql:self.oclAsType(sant::InputGateTemplate).predicate"/>
       </groups>
     </categories>
   </extensions>
