@@ -805,13 +805,22 @@ public interface SANPackage extends EPackage {
 	int DISTRIBUTION = 13;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISTRIBUTION__PARAMETERS = 0;
+
+	/**
 	 * The number of structural features of the '<em>Distribution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISTRIBUTION_FEATURE_COUNT = 0;
+	int DISTRIBUTION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Distribution</em>' class.
@@ -1122,6 +1131,15 @@ public interface SANPackage extends EPackage {
 	int EXPONENTIAL = 20;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPONENTIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
+
+	/**
 	 * The feature id for the '<em><b>Rate</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1157,6 +1175,15 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	int NORMAL = 21;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NORMAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Mean</b></em>' containment reference.
@@ -1205,6 +1232,15 @@ public interface SANPackage extends EPackage {
 	int GAMMA = 22;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMMA__PARAMETERS = DISTRIBUTION__PARAMETERS;
+
+	/**
 	 * The feature id for the '<em><b>Alpha</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1249,6 +1285,15 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	int BINOMIAL = 23;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINOMIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>T</b></em>' containment reference.
@@ -1297,6 +1342,15 @@ public interface SANPackage extends EPackage {
 	int DETERMINISTIC = 24;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETERMINISTIC__PARAMETERS = DISTRIBUTION__PARAMETERS;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1332,6 +1386,15 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	int LOGNORMAL = 25;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGNORMAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Mu</b></em>' containment reference.
@@ -1380,6 +1443,15 @@ public interface SANPackage extends EPackage {
 	int BETA = 26;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BETA__PARAMETERS = DISTRIBUTION__PARAMETERS;
+
+	/**
 	 * The feature id for the '<em><b>Alpha1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1424,6 +1496,15 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	int NEGATIVE_BINOMIAL = 27;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEGATIVE_BINOMIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>S</b></em>' containment reference.
@@ -1472,6 +1553,15 @@ public interface SANPackage extends EPackage {
 	int GEOMETRIC = 28;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOMETRIC__PARAMETERS = DISTRIBUTION__PARAMETERS;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1507,6 +1597,15 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	int ERLANG = 29;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERLANG__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>M</b></em>' containment reference.
@@ -1555,6 +1654,15 @@ public interface SANPackage extends EPackage {
 	int UNIFORM = 30;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIFORM__PARAMETERS = DISTRIBUTION__PARAMETERS;
+
+	/**
 	 * The feature id for the '<em><b>Lower Bound</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1599,6 +1707,15 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	int HYPER_EXPONENTIAL = 31;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HYPER_EXPONENTIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Rate0</b></em>' containment reference.
@@ -1647,6 +1764,15 @@ public interface SANPackage extends EPackage {
 	int WEIBULL = 32;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIBULL__PARAMETERS = DISTRIBUTION__PARAMETERS;
+
+	/**
 	 * The feature id for the '<em><b>Alpha</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1691,6 +1817,15 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	int TRIANGULAR = 33;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRIANGULAR__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' containment reference.
@@ -1748,6 +1883,15 @@ public interface SANPackage extends EPackage {
 	int CONDITIONAL_WEIBULL = 34;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_WEIBULL__PARAMETERS = DISTRIBUTION__PARAMETERS;
+
+	/**
 	 * The feature id for the '<em><b>Alpha</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1803,6 +1947,15 @@ public interface SANPackage extends EPackage {
 	int HYPO_EXPONENTIAL = 35;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HYPO_EXPONENTIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
+
+	/**
 	 * The feature id for the '<em><b>Rate0</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1838,6 +1991,15 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	int PARETO = 36;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARETO__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Lower Bound</b></em>' containment reference.
@@ -2913,6 +3075,17 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDistribution();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.Distribution#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Parameters</em>'.
+	 * @see san.Distribution#getParameters()
+	 * @see #getDistribution()
+	 * @generated
+	 */
+	EAttribute getDistribution_Parameters();
 
 	/**
 	 * Returns the meta object for class '{@link san.Expression <em>Expression</em>}'.
@@ -4328,6 +4501,14 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DISTRIBUTION = eINSTANCE.getDistribution();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTRIBUTION__PARAMETERS = eINSTANCE.getDistribution_Parameters();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.ExpressionImpl <em>Expression</em>}' class.
