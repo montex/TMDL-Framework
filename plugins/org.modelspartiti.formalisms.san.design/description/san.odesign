@@ -466,6 +466,7 @@
       <pages name="PageMarkingNodeArray" labelExpression="LeafNode" domainClass="san::Array" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.2"/>
       <pages name="PageGate" labelExpression="Expression" domainClass="san::Gate" semanticCandidateExpression="var:self" preconditionExpression="aql:self.oclIsTypeOf(san::InputGate) or self.oclIsTypeOf(san::OutputGate)" groups="//@extensions.0/@categories.0/@groups.6 //@extensions.0/@categories.0/@groups.7"/>
       <pages name="Page Case" labelExpression="p Expression" domainClass="san::Case" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.8"/>
+      <pages name="Page ExecutionPolicy" labelExpression="Execution Policy" domainClass="san::TimedActivity" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.9"/>
       <groups name="GroupPlace" labelExpression="Type of marking" domainClass="san::Place" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:ContainerDescription" name="ContainerPlace">
           <controls xsi:type="properties:CheckboxDescription" name="PrimitiveType" labelExpression="Primitive Type" valueExpression="aql:self.type.oclIsTypeOf(san::PrimitiveType)">
@@ -632,9 +633,43 @@
             </firstModelOperations>
           </initialOperation>
         </controls>
-        <controls xsi:type="properties:ButtonDescription" name="Save" buttonLabelExpression="Save p">
+        <controls xsi:type="properties:ButtonDescription" name="Save" buttonLabelExpression="Save">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="Group ExecutionPolicy" labelExpression="Execution Policy" domainClass="san::TimedActivity" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextAreaDescription" name="Activation Predicate" labelExpression="Activation Predicate" valueExpression="aql:self.activation.segments->first().text">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="activation"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="activation" variableName="exp">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exp">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::ExpressionText" referenceName="segments" variableName="exptext">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exptext">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </subModelOperations>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextAreaDescription" name="Reactivation Predicate" labelExpression="Reactivation Predicate" valueExpression="aql:self.reactivation.segments->first().text">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="reactivation"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="reactivation" variableName="exp">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exp">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::ExpressionText" referenceName="segments" variableName="exptext">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exptext">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </subModelOperations>
+            </firstModelOperations>
           </initialOperation>
         </controls>
       </groups>

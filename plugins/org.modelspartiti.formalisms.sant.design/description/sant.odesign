@@ -62,7 +62,17 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             </style>
           </borderedNodeMappings>
-          <reusedBorderedNodeMappings href="../../org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
+          <borderedNodeMappings name="Distribution" semanticCandidatesExpression="feature:eAllContents" domainClass="san::Distribution">
+            <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:self.eClass().name" labelPosition="node" resizeKind="NSEW" width="6" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </borderedNodeMappings>
           <style xsi:type="style:SquareDescription" labelSize="12" resizeKind="NSEW" width="3" height="6">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -465,6 +475,7 @@
       <pages name="PageActivity" labelExpression="Distribution and cases" domainClass="sant::ActivityTemplate" groups="//@extensions.0/@categories.0/@groups.0"/>
       <pages name="PagePlaceTemplate" labelExpression="Multiplicity" domainClass="sant::PlaceTemplate" groups="//@extensions.0/@categories.0/@groups.1"/>
       <pages name="Page Gate" labelExpression="Expression" domainClass="sant::GateTemplate" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3"/>
+      <pages name="Page ExecutionPolicy" labelExpression="Execution Policy" domainClass="sant::TimedActivityTemplate" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.4"/>
       <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="sant::ActivityTemplate">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" isEnabledExpression="aql:self.oclIsTypeOf(sant::TimedActivityTemplate)" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="CasesSpecification" labelExpression="CasesSpecification" referenceNameExpression="casesTemplate" referenceOwnerExpression="var:self"/>
@@ -560,6 +571,40 @@
         <controls xsi:type="properties:ButtonDescription" name="Update Function" buttonLabelExpression="Update Function">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="Group Execution Policy" labelExpression="Execution Policy" domainClass="sant::TimedActivityTemplate" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextAreaDescription" name="Activation Predicate" labelExpression="Activation Predicate" lineCount="6" valueExpression="aql:self.activation.segments->first().text">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="activation"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="activation" variableName="exp">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exp">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::ExpressionText" referenceName="segments" variableName="exptext">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exptext">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </subModelOperations>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextAreaDescription" name="Reactivation Predicate" labelExpression="Reactivation Predicate" lineCount="6" valueExpression="aql:self.reactivation.segments->first().text">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="reactivation"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="reactivation" variableName="exp">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exp">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::ExpressionText" referenceName="segments" variableName="exptext">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exptext">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </subModelOperations>
+            </firstModelOperations>
           </initialOperation>
         </controls>
       </groups>
