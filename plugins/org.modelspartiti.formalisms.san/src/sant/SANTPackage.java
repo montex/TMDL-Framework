@@ -492,6 +492,52 @@ public interface SANTPackage extends EPackage {
 	int CASES_SPECIFICATION_PARAMETRIC_OPERATION_COUNT = CASES_SPECIFICATION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link sant.impl.CasesSpecificationProbabilityArrayImpl <em>Cases Specification Probability Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see sant.impl.CasesSpecificationProbabilityArrayImpl
+	 * @see sant.impl.SANTPackageImpl#getCasesSpecificationProbabilityArray()
+	 * @generated
+	 */
+	int CASES_SPECIFICATION_PROBABILITY_ARRAY = 8;
+
+	/**
+	 * The feature id for the '<em><b>Case Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASES_SPECIFICATION_PROBABILITY_ARRAY__CASE_PARAMETER = CASES_SPECIFICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>PValues</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASES_SPECIFICATION_PROBABILITY_ARRAY__PVALUES = CASES_SPECIFICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Cases Specification Probability Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASES_SPECIFICATION_PROBABILITY_ARRAY_FEATURE_COUNT = CASES_SPECIFICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Cases Specification Probability Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASES_SPECIFICATION_PROBABILITY_ARRAY_OPERATION_COUNT = CASES_SPECIFICATION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link sant.impl.TimedActivityTemplateImpl <em>Timed Activity Template</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -499,7 +545,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getTimedActivityTemplate()
 	 * @generated
 	 */
-	int TIMED_ACTIVITY_TEMPLATE = 8;
+	int TIMED_ACTIVITY_TEMPLATE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -572,7 +618,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getInstantaneousActivityTemplate()
 	 * @generated
 	 */
-	int INSTANTANEOUS_ACTIVITY_TEMPLATE = 9;
+	int INSTANTANEOUS_ACTIVITY_TEMPLATE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -618,7 +664,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getMarkingTemplate()
 	 * @generated
 	 */
-	int MARKING_TEMPLATE = 10;
+	int MARKING_TEMPLATE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id Place</b></em>' attribute.
@@ -655,7 +701,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getMarkingTemplateSimple()
 	 * @generated
 	 */
-	int MARKING_TEMPLATE_SIMPLE = 11;
+	int MARKING_TEMPLATE_SIMPLE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id Place</b></em>' attribute.
@@ -701,7 +747,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getMarkingTemplateGlobalVariable()
 	 * @generated
 	 */
-	int MARKING_TEMPLATE_GLOBAL_VARIABLE = 12;
+	int MARKING_TEMPLATE_GLOBAL_VARIABLE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id Place</b></em>' attribute.
@@ -747,7 +793,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getGateTemplate()
 	 * @generated
 	 */
-	int GATE_TEMPLATE = 13;
+	int GATE_TEMPLATE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -811,7 +857,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getOutputGate()
 	 * @generated
 	 */
-	int OUTPUT_GATE = 14;
+	int OUTPUT_GATE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -875,7 +921,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getOutputGateConcrete()
 	 * @generated
 	 */
-	int OUTPUT_GATE_CONCRETE = 15;
+	int OUTPUT_GATE_CONCRETE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -948,7 +994,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getOutputGateTemplate()
 	 * @generated
 	 */
-	int OUTPUT_GATE_TEMPLATE = 16;
+	int OUTPUT_GATE_TEMPLATE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1021,7 +1067,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getInputGateTemplate()
 	 * @generated
 	 */
-	int INPUT_GATE_TEMPLATE = 17;
+	int INPUT_GATE_TEMPLATE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1103,7 +1149,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getArcTemplate()
 	 * @generated
 	 */
-	int ARC_TEMPLATE = 18;
+	int ARC_TEMPLATE = 19;
 
 	/**
 	 * The number of structural features of the '<em>Arc Template</em>' class.
@@ -1131,7 +1177,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getInputArc()
 	 * @generated
 	 */
-	int INPUT_ARC = 19;
+	int INPUT_ARC = 20;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1186,7 +1232,7 @@ public interface SANTPackage extends EPackage {
 	 * @see sant.impl.SANTPackageImpl#getOutputArc()
 	 * @generated
 	 */
-	int OUTPUT_ARC = 20;
+	int OUTPUT_ARC = 21;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1533,6 +1579,38 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCasesSpecificationParametric_P();
+
+	/**
+	 * Returns the meta object for class '{@link sant.CasesSpecificationProbabilityArray <em>Cases Specification Probability Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cases Specification Probability Array</em>'.
+	 * @see sant.CasesSpecificationProbabilityArray
+	 * @generated
+	 */
+	EClass getCasesSpecificationProbabilityArray();
+
+	/**
+	 * Returns the meta object for the reference '{@link sant.CasesSpecificationProbabilityArray#getCaseParameter <em>Case Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Case Parameter</em>'.
+	 * @see sant.CasesSpecificationProbabilityArray#getCaseParameter()
+	 * @see #getCasesSpecificationProbabilityArray()
+	 * @generated
+	 */
+	EReference getCasesSpecificationProbabilityArray_CaseParameter();
+
+	/**
+	 * Returns the meta object for the reference '{@link sant.CasesSpecificationProbabilityArray#getPValues <em>PValues</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>PValues</em>'.
+	 * @see sant.CasesSpecificationProbabilityArray#getPValues()
+	 * @see #getCasesSpecificationProbabilityArray()
+	 * @generated
+	 */
+	EReference getCasesSpecificationProbabilityArray_PValues();
 
 	/**
 	 * Returns the meta object for class '{@link sant.TimedActivityTemplate <em>Timed Activity Template</em>}'.
@@ -2113,6 +2191,32 @@ public interface SANTPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CASES_SPECIFICATION_PARAMETRIC__P = eINSTANCE.getCasesSpecificationParametric_P();
+
+		/**
+		 * The meta object literal for the '{@link sant.impl.CasesSpecificationProbabilityArrayImpl <em>Cases Specification Probability Array</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see sant.impl.CasesSpecificationProbabilityArrayImpl
+		 * @see sant.impl.SANTPackageImpl#getCasesSpecificationProbabilityArray()
+		 * @generated
+		 */
+		EClass CASES_SPECIFICATION_PROBABILITY_ARRAY = eINSTANCE.getCasesSpecificationProbabilityArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Case Parameter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CASES_SPECIFICATION_PROBABILITY_ARRAY__CASE_PARAMETER = eINSTANCE.getCasesSpecificationProbabilityArray_CaseParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>PValues</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CASES_SPECIFICATION_PROBABILITY_ARRAY__PVALUES = eINSTANCE.getCasesSpecificationProbabilityArray_PValues();
 
 		/**
 		 * The meta object literal for the '{@link sant.impl.TimedActivityTemplateImpl <em>Timed Activity Template</em>}' class.

@@ -52,6 +52,16 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             </style>
           </borderedNodeMappings>
+          <borderedNodeMappings name="CasesSpecificationProbabilityArray" semanticCandidatesExpression="feature:casesTemplate" domainClass="sant::CasesSpecificationProbabilityArray">
+            <style xsi:type="style:DotDescription" labelSize="11" showIcon="false" labelExpression="aql:self.pValues.name" sizeComputationExpression="2" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            </style>
+          </borderedNodeMappings>
           <reusedBorderedNodeMappings href="../../org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
           <style xsi:type="style:SquareDescription" labelSize="12" resizeKind="NSEW" width="3" height="6">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -454,7 +464,7 @@
     <categories name="Category">
       <pages name="PageActivity" labelExpression="Distribution and cases" domainClass="sant::ActivityTemplate" groups="//@extensions.0/@categories.0/@groups.0"/>
       <pages name="PagePlaceTemplate" labelExpression="Multiplicity" domainClass="sant::PlaceTemplate" groups="//@extensions.0/@categories.0/@groups.1"/>
-      <pages name="PageGate" labelExpression="Expression" domainClass="sant::GateTemplate" groups="//@extensions.0/@categories.0/@groups.2"/>
+      <pages name="Page Gate" labelExpression="Expression" domainClass="sant::GateTemplate" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3"/>
       <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="sant::ActivityTemplate">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" isEnabledExpression="aql:self.oclIsTypeOf(sant::TimedActivityTemplate)" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="CasesSpecification" labelExpression="CasesSpecification" referenceNameExpression="casesTemplate" referenceOwnerExpression="var:self"/>
@@ -483,9 +493,75 @@
         </controls>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Marking" labelExpression="Marking" referenceNameExpression="marking" referenceOwnerExpression="var:self"/>
       </groups>
-      <groups name="Group Gate" labelExpression="Function" domainClass="sant::GateTemplate" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Function" labelExpression="Function" referenceNameExpression="segments" referenceOwnerExpression="aql:self.oclAsType(san::Gate).function"/>
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Predicate" labelExpression="Predicate" isEnabledExpression="aql:self.oclIsTypeOf(sant::InputGateTemplate)" referenceNameExpression="segments" referenceOwnerExpression="aql:self.oclAsType(sant::InputGateTemplate).predicate"/>
+      <groups name="Group InputGateTemplate" labelExpression="Function" domainClass="sant::InputGateTemplate" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextAreaDescription" name="Function(read-only)" labelExpression="Function (read-only)" isEnabledExpression="aql:false" lineCount="4" valueExpression="aql:self.function.segments->first().text"/>
+        <controls xsi:type="properties:TextAreaDescription" name="Function" labelExpression="Code Function" lineCount="4" valueExpression="aql:self.function.segments->first().text">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="function"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function" variableName="exp">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exp">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::ExpressionText" referenceName="segments" variableName="exptext">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exptext">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </subModelOperations>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:ButtonDescription" name="Update Function" buttonLabelExpression="Update Function">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextAreaDescription" name="Predicate(read-only)" labelExpression="Predicate (read-only)" isEnabledExpression="aql:false" lineCount="4" valueExpression="aql:self.predicate.segments->first().text"/>
+        <controls xsi:type="properties:TextAreaDescription" name="Predicate" labelExpression="Predicate" lineCount="4" valueExpression="aql:self.predicate.segments->first().text">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="predicate"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="predicate" variableName="exp">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exp">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::ExpressionText" referenceName="segments" variableName="exptext">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exptext">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </subModelOperations>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:ButtonDescription" name="Update Predicate" buttonLabelExpression="Update Predicate">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="Group OutputGateTemplate" labelExpression="Function" domainClass="sant::OutputGate" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextAreaDescription" name="Function(read-only)" labelExpression="Function (read-only)" isEnabledExpression="aql:false" lineCount="4" valueExpression="aql:self.function.segments->first().text"/>
+        <controls xsi:type="properties:TextAreaDescription" name="Code function" labelExpression="Function" lineCount="4" valueExpression="aql:self.function.segments->first().text">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="function"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function" variableName="exp">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exp">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::ExpressionText" referenceName="segments" variableName="exptext">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:exptext">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </subModelOperations>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:ButtonDescription" name="Update Function" buttonLabelExpression="Update Function">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
       </groups>
     </categories>
   </extensions>

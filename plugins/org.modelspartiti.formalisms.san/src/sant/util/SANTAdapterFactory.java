@@ -106,6 +106,10 @@ public class SANTAdapterFactory extends AdapterFactoryImpl {
 				return createCasesSpecificationParametricAdapter();
 			}
 			@Override
+			public Adapter caseCasesSpecificationProbabilityArray(CasesSpecificationProbabilityArray object) {
+				return createCasesSpecificationProbabilityArrayAdapter();
+			}
+			@Override
 			public Adapter caseTimedActivityTemplate(TimedActivityTemplate object) {
 				return createTimedActivityTemplateAdapter();
 			}
@@ -302,6 +306,20 @@ public class SANTAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCasesSpecificationParametricAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link sant.CasesSpecificationProbabilityArray <em>Cases Specification Probability Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see sant.CasesSpecificationProbabilityArray
+	 * @generated
+	 */
+	public Adapter createCasesSpecificationProbabilityArrayAdapter() {
 		return null;
 	}
 

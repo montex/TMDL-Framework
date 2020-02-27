@@ -210,6 +210,29 @@ public class SANTItemProviderAdapterFactory extends SANTAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link sant.CasesSpecificationProbabilityArray} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CasesSpecificationProbabilityArrayItemProvider casesSpecificationProbabilityArrayItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link sant.CasesSpecificationProbabilityArray}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCasesSpecificationProbabilityArrayAdapter() {
+		if (casesSpecificationProbabilityArrayItemProvider == null) {
+			casesSpecificationProbabilityArrayItemProvider = new CasesSpecificationProbabilityArrayItemProvider(this);
+		}
+
+		return casesSpecificationProbabilityArrayItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link sant.TimedActivityTemplate} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -521,6 +544,7 @@ public class SANTItemProviderAdapterFactory extends SANTAdapterFactory implement
 		if (casesSpecificationConcreteItemProvider != null) casesSpecificationConcreteItemProvider.dispose();
 		if (casesSpecificationArrayItemProvider != null) casesSpecificationArrayItemProvider.dispose();
 		if (casesSpecificationParametricItemProvider != null) casesSpecificationParametricItemProvider.dispose();
+		if (casesSpecificationProbabilityArrayItemProvider != null) casesSpecificationProbabilityArrayItemProvider.dispose();
 		if (timedActivityTemplateItemProvider != null) timedActivityTemplateItemProvider.dispose();
 		if (instantaneousActivityTemplateItemProvider != null) instantaneousActivityTemplateItemProvider.dispose();
 		if (markingTemplateSimpleItemProvider != null) markingTemplateSimpleItemProvider.dispose();

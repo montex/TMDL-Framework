@@ -62,6 +62,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 			case SANTPackage.CASES_SPECIFICATION_CONCRETE: return createCasesSpecificationConcrete();
 			case SANTPackage.CASES_SPECIFICATION_ARRAY: return createCasesSpecificationArray();
 			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC: return createCasesSpecificationParametric();
+			case SANTPackage.CASES_SPECIFICATION_PROBABILITY_ARRAY: return createCasesSpecificationProbabilityArray();
 			case SANTPackage.TIMED_ACTIVITY_TEMPLATE: return createTimedActivityTemplate();
 			case SANTPackage.INSTANTANEOUS_ACTIVITY_TEMPLATE: return createInstantaneousActivityTemplate();
 			case SANTPackage.MARKING_TEMPLATE_SIMPLE: return createMarkingTemplateSimple();
@@ -134,6 +135,16 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	public CasesSpecificationParametric createCasesSpecificationParametric() {
 		CasesSpecificationParametricImpl casesSpecificationParametric = new CasesSpecificationParametricImpl();
 		return casesSpecificationParametric;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CasesSpecificationProbabilityArray createCasesSpecificationProbabilityArray() {
+		CasesSpecificationProbabilityArrayImpl casesSpecificationProbabilityArray = new CasesSpecificationProbabilityArrayImpl();
+		return casesSpecificationProbabilityArray;
 	}
 
 	/**

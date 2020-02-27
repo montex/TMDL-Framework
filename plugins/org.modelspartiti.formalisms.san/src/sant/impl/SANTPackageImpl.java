@@ -19,6 +19,7 @@ import sant.CasesSpecification;
 import sant.CasesSpecificationArray;
 import sant.CasesSpecificationConcrete;
 import sant.CasesSpecificationParametric;
+import sant.CasesSpecificationProbabilityArray;
 import sant.GateTemplate;
 import sant.InputArc;
 import sant.InputGateTemplate;
@@ -114,6 +115,13 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * @generated
 	 */
 	private EClass casesSpecificationParametricEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass casesSpecificationProbabilityArrayEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -546,6 +554,33 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCasesSpecificationProbabilityArray() {
+		return casesSpecificationProbabilityArrayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCasesSpecificationProbabilityArray_CaseParameter() {
+		return (EReference)casesSpecificationProbabilityArrayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCasesSpecificationProbabilityArray_PValues() {
+		return (EReference)casesSpecificationProbabilityArrayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTimedActivityTemplate() {
 		return timedActivityTemplateEClass;
 	}
@@ -875,6 +910,10 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		createEReference(casesSpecificationParametricEClass, CASES_SPECIFICATION_PARAMETRIC__PARAMETER);
 		createEReference(casesSpecificationParametricEClass, CASES_SPECIFICATION_PARAMETRIC__P);
 
+		casesSpecificationProbabilityArrayEClass = createEClass(CASES_SPECIFICATION_PROBABILITY_ARRAY);
+		createEReference(casesSpecificationProbabilityArrayEClass, CASES_SPECIFICATION_PROBABILITY_ARRAY__CASE_PARAMETER);
+		createEReference(casesSpecificationProbabilityArrayEClass, CASES_SPECIFICATION_PROBABILITY_ARRAY__PVALUES);
+
 		timedActivityTemplateEClass = createEClass(TIMED_ACTIVITY_TEMPLATE);
 		createEReference(timedActivityTemplateEClass, TIMED_ACTIVITY_TEMPLATE__TIME_DISTRIBUTION);
 		createEReference(timedActivityTemplateEClass, TIMED_ACTIVITY_TEMPLATE__ACTIVATION);
@@ -958,6 +997,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		casesSpecificationConcreteEClass.getESuperTypes().add(this.getCasesSpecification());
 		casesSpecificationArrayEClass.getESuperTypes().add(this.getCasesSpecification());
 		casesSpecificationParametricEClass.getESuperTypes().add(this.getCasesSpecification());
+		casesSpecificationProbabilityArrayEClass.getESuperTypes().add(this.getCasesSpecification());
 		timedActivityTemplateEClass.getESuperTypes().add(this.getActivityTemplate());
 		instantaneousActivityTemplateEClass.getESuperTypes().add(this.getActivityTemplate());
 		markingTemplateSimpleEClass.getESuperTypes().add(this.getMarkingTemplate());
@@ -1010,6 +1050,10 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		initEClass(casesSpecificationParametricEClass, CasesSpecificationParametric.class, "CasesSpecificationParametric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCasesSpecificationParametric_Parameter(), theCorePackage.getParameter(), null, "parameter", null, 1, 1, CasesSpecificationParametric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCasesSpecificationParametric_P(), theSANPackage.getExpression(), null, "p", null, 1, -1, CasesSpecificationParametric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(casesSpecificationProbabilityArrayEClass, CasesSpecificationProbabilityArray.class, "CasesSpecificationProbabilityArray", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCasesSpecificationProbabilityArray_CaseParameter(), theCorePackage.getParameter(), null, "caseParameter", null, 1, 1, CasesSpecificationProbabilityArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCasesSpecificationProbabilityArray_PValues(), theCorePackage.getParameterArray(), null, "pValues", null, 1, 1, CasesSpecificationProbabilityArray.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timedActivityTemplateEClass, TimedActivityTemplate.class, "TimedActivityTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTimedActivityTemplate_TimeDistribution(), theSANPackage.getDistribution(), null, "timeDistribution", null, 1, 1, TimedActivityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

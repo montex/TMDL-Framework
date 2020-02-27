@@ -41,6 +41,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//CasesSpecificationParametric/parameter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant.ecore#//CasesSpecificationParametric/p"/>
     </genClasses>
+    <genClasses ecoreClass="sant.ecore#//CasesSpecificationProbabilityArray">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//CasesSpecificationProbabilityArray/caseParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//CasesSpecificationProbabilityArray/pValues"/>
+    </genClasses>
     <genClasses ecoreClass="sant.ecore#//TimedActivityTemplate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant.ecore#//TimedActivityTemplate/timeDistribution"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant.ecore#//TimedActivityTemplate/activation"/>

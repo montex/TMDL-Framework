@@ -53,6 +53,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="p" lowerBound="1" upperBound="-1"
         eType="ecore:EClass san.ecore#//Expression" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CasesSpecificationProbabilityArray"
+      eSuperTypes="#//CasesSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="caseParameter" lowerBound="1"
+        eType="ecore:EClass tmdl.ecore#//core/Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pValues" lowerBound="1"
+        eType="ecore:EClass tmdl.ecore#//core/ParameterArray"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimedActivityTemplate" eSuperTypes="#//ActivityTemplate">
     <eStructuralFeatures xsi:type="ecore:EReference" name="timeDistribution" lowerBound="1"
         eType="ecore:EClass san.ecore#//Distribution" containment="true"/>

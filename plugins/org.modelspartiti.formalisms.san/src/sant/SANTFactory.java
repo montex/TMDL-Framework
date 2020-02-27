@@ -76,6 +76,15 @@ public interface SANTFactory extends EFactory {
 	CasesSpecificationParametric createCasesSpecificationParametric();
 
 	/**
+	 * Returns a new object of class '<em>Cases Specification Probability Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cases Specification Probability Array</em>'.
+	 * @generated
+	 */
+	CasesSpecificationProbabilityArray createCasesSpecificationProbabilityArray();
+
+	/**
 	 * Returns a new object of class '<em>Timed Activity Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

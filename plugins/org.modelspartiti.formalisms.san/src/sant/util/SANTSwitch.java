@@ -127,6 +127,13 @@ public class SANTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SANTPackage.CASES_SPECIFICATION_PROBABILITY_ARRAY: {
+				CasesSpecificationProbabilityArray casesSpecificationProbabilityArray = (CasesSpecificationProbabilityArray)theEObject;
+				T result = caseCasesSpecificationProbabilityArray(casesSpecificationProbabilityArray);
+				if (result == null) result = caseCasesSpecification(casesSpecificationProbabilityArray);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SANTPackage.TIMED_ACTIVITY_TEMPLATE: {
 				TimedActivityTemplate timedActivityTemplate = (TimedActivityTemplate)theEObject;
 				T result = caseTimedActivityTemplate(timedActivityTemplate);
@@ -350,6 +357,21 @@ public class SANTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCasesSpecificationParametric(CasesSpecificationParametric object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cases Specification Probability Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cases Specification Probability Array</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCasesSpecificationProbabilityArray(CasesSpecificationProbabilityArray object) {
 		return null;
 	}
 
