@@ -77,7 +77,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/reactivation"/>
     </genClasses>
     <genClasses image="false" ecoreClass="san.ecore#//Distribution">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Distribution/Parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Distribution/parameters"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//Expression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Expression/segments"/>

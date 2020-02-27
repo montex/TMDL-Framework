@@ -152,7 +152,7 @@ public abstract class DistributionImpl extends MinimalEObjectImpl.Container impl
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (Parameters: ");
+		result.append(" (parameters: ");
 		result.append(parameters);
 		result.append(')');
 		return result.toString();

@@ -102,7 +102,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Distribution" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Parameters" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameters" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="CodeFragment" instanceClassName="java.lang.String"/>
