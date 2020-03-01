@@ -476,6 +476,7 @@
       <pages name="PagePlaceTemplate" labelExpression="Multiplicity" domainClass="sant::PlaceTemplate" groups="//@extensions.0/@categories.0/@groups.1"/>
       <pages name="Page Gate" labelExpression="Expression" domainClass="sant::GateTemplate" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3"/>
       <pages name="Page ExecutionPolicy" labelExpression="Execution Policy" domainClass="sant::TimedActivityTemplate" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.4"/>
+      <pages name="Page General" labelExpression="General" domainClass="sant::SANT" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.5"/>
       <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="sant::ActivityTemplate">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" isEnabledExpression="aql:self.oclIsTypeOf(sant::TimedActivityTemplate)" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="CasesSpecification" labelExpression="CasesSpecification" referenceNameExpression="casesTemplate" referenceOwnerExpression="var:self"/>
@@ -606,6 +607,20 @@
               </subModelOperations>
             </firstModelOperations>
           </initialOperation>
+        </controls>
+      </groups>
+      <groups name="Group General" labelExpression="General" domainClass="sant.SANT" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Parameters" labelExpression="Parameters" referenceNameExpression="parameters"/>
+        <controls xsi:type="properties:DynamicMappingForDescription" name="Parameters" iterator="Parameter" iterableExpression="feature:parameters">
+          <ifs name="ParameterCondition" predicateExpression="aql:true">
+            <widget xsi:type="properties:TextDescription" name="Parameter" labelExpression="aql:'Edit name of the parameter  -> ' + Parameter.name" valueExpression="aql:Parameter.name">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:Parameter">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                </firstModelOperations>
+              </initialOperation>
+            </widget>
+          </ifs>
         </controls>
       </groups>
     </categories>
