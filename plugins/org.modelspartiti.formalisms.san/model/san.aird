@@ -72,6 +72,10 @@
         <children xmi:type="notation:Node" xmi:id="_5bEZEIpZEeaJoq3wzEDx5w" type="2003" element="_5ZQbMIpZEeaJoq3wzEDx5w">
           <children xmi:type="notation:Node" xmi:id="_5bEZE4pZEeaJoq3wzEDx5w" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_5bFAIIpZEeaJoq3wzEDx5w" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_LsFtEFzREeqsgt92Hra_Jg" type="3010" element="_LqJzYVzREeqsgt92Hra_Jg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_LsFtEVzREeqsgt92Hra_Jg" fontName="Segoe UI" fontHeight="8" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_LsFtElzREeqsgt92Hra_Jg"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_5bFAIYpZEeaJoq3wzEDx5w"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_5bFAIopZEeaJoq3wzEDx5w"/>
           </children>
@@ -1419,6 +1423,14 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_LqJzYVzREeqsgt92Hra_Jg" name="parameters : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="san.ecore#//Distribution/parameters"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="san.ecore#//Distribution/parameters"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_LqJzYlzREeqsgt92Hra_Jg" labelAlignment="LEFT" description="_rRla8pWTEeajBtZg3-FKCw">
+          <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_5ZTegIpZEeaJoq3wzEDx5w" name="ExpressionMarking" tooltipText="" outgoingEdges="_Hb90EIpyEeapUs24bZ3isA _YL7ZljRbEeqlsJqYX6LQ1w" width="12" height="10">
       <target xmi:type="ecore:EClass" href="san.ecore#//ExpressionMarking"/>

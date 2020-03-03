@@ -81,6 +81,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//InputArc/templateSource"/>
     </genClasses>
     <genClasses ecoreClass="sant.ecore#//OutputArc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//OutputArc/sourceCaseConcrete"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//OutputArc/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//OutputArc/target"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sant.ecore#//OutputArc/templateTarget"/>
@@ -445,7 +446,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/activation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/reactivation"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="san.ecore#//Distribution"/>
+    <genClasses image="false" ecoreClass="san.ecore#//Distribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Distribution/parameters"/>
+    </genClasses>
     <genClasses ecoreClass="san.ecore#//Expression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Expression/segments"/>
     </genClasses>

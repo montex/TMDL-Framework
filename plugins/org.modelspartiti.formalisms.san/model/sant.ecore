@@ -106,8 +106,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="templateSource" eType="#//PlaceTemplate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OutputArc" eSuperTypes="#//ArcTemplate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//ActivityTemplate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceCaseConcrete" eType="ecore:EClass san.ecore#//Case"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//ActivityTemplate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass san.ecore#//Place"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="templateTarget" eType="#//PlaceTemplate"/>
   </eClassifiers>

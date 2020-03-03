@@ -824,7 +824,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOutputArc_Source() {
+	public EReference getOutputArc_SourceCaseConcrete() {
 		return (EReference)outputArcEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -833,7 +833,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOutputArc_Target() {
+	public EReference getOutputArc_Source() {
 		return (EReference)outputArcEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -842,8 +842,17 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOutputArc_TemplateTarget() {
+	public EReference getOutputArc_Target() {
 		return (EReference)outputArcEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutputArc_TemplateTarget() {
+		return (EReference)outputArcEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -953,6 +962,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		createEReference(inputArcEClass, INPUT_ARC__TEMPLATE_SOURCE);
 
 		outputArcEClass = createEClass(OUTPUT_ARC);
+		createEReference(outputArcEClass, OUTPUT_ARC__SOURCE_CASE_CONCRETE);
 		createEReference(outputArcEClass, OUTPUT_ARC__SOURCE);
 		createEReference(outputArcEClass, OUTPUT_ARC__TARGET);
 		createEReference(outputArcEClass, OUTPUT_ARC__TEMPLATE_TARGET);
@@ -1094,7 +1104,8 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		initEReference(getInputArc_TemplateSource(), this.getPlaceTemplate(), null, "templateSource", null, 0, 1, InputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputArcEClass, OutputArc.class, "OutputArc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOutputArc_Source(), this.getActivityTemplate(), null, "source", null, 1, 1, OutputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutputArc_SourceCaseConcrete(), theSANPackage.getCase(), null, "sourceCaseConcrete", null, 0, 1, OutputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutputArc_Source(), this.getActivityTemplate(), null, "source", null, 0, 1, OutputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutputArc_Target(), theSANPackage.getPlace(), null, "target", null, 0, 1, OutputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutputArc_TemplateTarget(), this.getPlaceTemplate(), null, "templateTarget", null, 0, 1, OutputArc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

@@ -2,6 +2,7 @@
  */
 package sant;
 
+import san.Case;
 import san.Place;
 
 /**
@@ -13,6 +14,7 @@ import san.Place;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link sant.OutputArc#getSourceCaseConcrete <em>Source Case Concrete</em>}</li>
  *   <li>{@link sant.OutputArc#getSource <em>Source</em>}</li>
  *   <li>{@link sant.OutputArc#getTarget <em>Target</em>}</li>
  *   <li>{@link sant.OutputArc#getTemplateTarget <em>Template Target</em>}</li>
@@ -24,6 +26,32 @@ import san.Place;
  */
 public interface OutputArc extends ArcTemplate {
 	/**
+	 * Returns the value of the '<em><b>Source Case Concrete</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Source Case Concrete</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Source Case Concrete</em>' reference.
+	 * @see #setSourceCaseConcrete(Case)
+	 * @see sant.SANTPackage#getOutputArc_SourceCaseConcrete()
+	 * @model
+	 * @generated
+	 */
+	Case getSourceCaseConcrete();
+
+	/**
+	 * Sets the value of the '{@link sant.OutputArc#getSourceCaseConcrete <em>Source Case Concrete</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Source Case Concrete</em>' reference.
+	 * @see #getSourceCaseConcrete()
+	 * @generated
+	 */
+	void setSourceCaseConcrete(Case value);
+
+	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -34,7 +62,7 @@ public interface OutputArc extends ArcTemplate {
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(ActivityTemplate)
 	 * @see sant.SANTPackage#getOutputArc_Source()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	ActivityTemplate getSource();

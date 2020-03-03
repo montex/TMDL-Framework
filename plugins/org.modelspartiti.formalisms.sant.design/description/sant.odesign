@@ -161,9 +161,17 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="sourceOutputGate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']" targetFinderExpression="feature:case">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <edgeMappings name="targetOutputGateTemplate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetFinderExpression="feature:placeTemplate">
           <style targetArrow="NoDecoration" sizeComputationExpression="5" routingStyle="manhattan">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
@@ -171,15 +179,7 @@
         </edgeMappings>
         <edgeMappings name="sourceOutputGateTemplate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']" targetFinderExpression="feature:activity">
           <style targetArrow="NoDecoration" sizeComputationExpression="5">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <edgeMappings name="sourceOutputGate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']" targetFinderExpression="feature:case">
-          <style targetArrow="NoDecoration" sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
@@ -194,7 +194,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="OutputArc" semanticCandidatesExpression="feature:arcs" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="sant::OutputArc" useDomainElement="true">
+        <edgeMappings name="OutputArcFromActivityToPlace" semanticCandidatesExpression="feature:arcs" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="sant::OutputArc" useDomainElement="true">
           <targetMapping xsi:type="description_1:NodeMapping" href="../../org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -203,7 +203,24 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="OutputArcForPlaceTemplate" semanticCandidatesExpression="feature:arcs" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetFinderExpression="feature:templateTarget" sourceFinderExpression="feature:source" domainClass="sant::OutputArc" useDomainElement="true">
+        <edgeMappings name="OutputArcFromCaseToPlace" semanticCandidatesExpression="feature:arcs" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']" targetFinderExpression="feature:target" sourceFinderExpression="feature:sourceCaseConcrete" domainClass="sant::OutputArc" useDomainElement="true">
+          <targetMapping xsi:type="description_1:NodeMapping" href="../../org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="OutputArcFromActivityToPlaceTemplate" semanticCandidatesExpression="feature:arcs" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetFinderExpression="feature:templateTarget" sourceFinderExpression="feature:source" domainClass="sant::OutputArc" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="OutputArcFromCaseToPlaceTemplate" semanticCandidatesExpression="feature:arcs" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']" targetFinderExpression="feature:templateTarget" sourceFinderExpression="feature:sourceCaseConcrete" domainClass="sant::OutputArc" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -444,7 +461,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="OutputArc" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArc'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcForPlaceTemplate']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="OutputArc" edgeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlaceTemplate'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromCaseToPlace'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromCaseToPlaceTemplate']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -452,7 +469,12 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.eContainer()/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sant::OutputArc" referenceName="arcs">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:source.oclIsKindOf(sant::ActivityTemplate)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:source.oclIsKindOf(san::Case)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="sourceCaseConcrete" valueExpression="var:source"/>
+                  </subModelOperations>
                   <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:target.oclIsKindOf(san::Place)">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
                   </subModelOperations>

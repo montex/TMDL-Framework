@@ -1235,13 +1235,22 @@ public interface SANTPackage extends EPackage {
 	int OUTPUT_ARC = 21;
 
 	/**
+	 * The feature id for the '<em><b>Source Case Concrete</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC__SOURCE_CASE_CONCRETE = ARC_TEMPLATE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_ARC__SOURCE = ARC_TEMPLATE_FEATURE_COUNT + 0;
+	int OUTPUT_ARC__SOURCE = ARC_TEMPLATE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -1250,7 +1259,7 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_ARC__TARGET = ARC_TEMPLATE_FEATURE_COUNT + 1;
+	int OUTPUT_ARC__TARGET = ARC_TEMPLATE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Template Target</b></em>' reference.
@@ -1259,7 +1268,7 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_ARC__TEMPLATE_TARGET = ARC_TEMPLATE_FEATURE_COUNT + 2;
+	int OUTPUT_ARC__TEMPLATE_TARGET = ARC_TEMPLATE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Output Arc</em>' class.
@@ -1268,7 +1277,7 @@ public interface SANTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_ARC_FEATURE_COUNT = ARC_TEMPLATE_FEATURE_COUNT + 3;
+	int OUTPUT_ARC_FEATURE_COUNT = ARC_TEMPLATE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Output Arc</em>' class.
@@ -1897,6 +1906,17 @@ public interface SANTPackage extends EPackage {
 	EClass getOutputArc();
 
 	/**
+	 * Returns the meta object for the reference '{@link sant.OutputArc#getSourceCaseConcrete <em>Source Case Concrete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source Case Concrete</em>'.
+	 * @see sant.OutputArc#getSourceCaseConcrete()
+	 * @see #getOutputArc()
+	 * @generated
+	 */
+	EReference getOutputArc_SourceCaseConcrete();
+
+	/**
 	 * Returns the meta object for the reference '{@link sant.OutputArc#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2459,6 +2479,14 @@ public interface SANTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OUTPUT_ARC = eINSTANCE.getOutputArc();
+
+		/**
+		 * The meta object literal for the '<em><b>Source Case Concrete</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT_ARC__SOURCE_CASE_CONCRETE = eINSTANCE.getOutputArc_SourceCaseConcrete();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
