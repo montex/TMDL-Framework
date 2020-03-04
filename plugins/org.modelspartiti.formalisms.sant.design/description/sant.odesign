@@ -81,13 +81,13 @@
         </nodeMappings>
         <nodeMappings name="InstantaneousActivity" semanticCandidatesExpression="feature:activityTemplates" domainClass="sant::InstantaneousActivityTemplate">
           <borderedNodeMappings name="Case" semanticCandidatesExpression="feature:eAllContents" domainClass="san::Case">
-            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>WEST</forbiddenSides>
               <forbiddenSides>SOUTH</forbiddenSides>
               <forbiddenSides>NORTH</forbiddenSides>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
             </style>
           </borderedNodeMappings>
           <borderedNodeMappings name="CasesSpecificationArray" semanticCandidatesExpression="feature:casesTemplate" domainClass="sant::CasesSpecificationArray">
@@ -161,7 +161,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="sourceOutputGate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']" targetFinderExpression="feature:case">
+        <edgeMappings name="sourceOutputGate" sourceMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']" targetMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case'] //@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']" targetFinderExpression="feature:case">
           <style targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
