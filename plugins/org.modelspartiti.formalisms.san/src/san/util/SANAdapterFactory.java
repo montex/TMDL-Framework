@@ -73,6 +73,10 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createSANAdapter();
 			}
 			@Override
+			public Adapter caseNamedElement(NamedElement object) {
+				return createNamedElementAdapter();
+			}
+			@Override
 			public Adapter casePlace(Place object) {
 				return createPlaceAdapter();
 			}
@@ -81,8 +85,12 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 				return createActivityAdapter();
 			}
 			@Override
-			public Adapter caseNamedElement(NamedElement object) {
-				return createNamedElementAdapter();
+			public Adapter caseInstantaneousActivity(InstantaneousActivity object) {
+				return createInstantaneousActivityAdapter();
+			}
+			@Override
+			public Adapter caseTimedActivity(TimedActivity object) {
+				return createTimedActivityAdapter();
 			}
 			@Override
 			public Adapter caseCase(Case object) {
@@ -111,14 +119,6 @@ public class SANAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseInputGate(InputGate object) {
 				return createInputGateAdapter();
-			}
-			@Override
-			public Adapter caseInstantaneousActivity(InstantaneousActivity object) {
-				return createInstantaneousActivityAdapter();
-			}
-			@Override
-			public Adapter caseTimedActivity(TimedActivity object) {
-				return createTimedActivityAdapter();
 			}
 			@Override
 			public Adapter caseDistribution(Distribution object) {

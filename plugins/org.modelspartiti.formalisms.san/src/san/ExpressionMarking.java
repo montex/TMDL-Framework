@@ -13,7 +13,6 @@ package san;
  * </p>
  * <ul>
  *   <li>{@link san.ExpressionMarking#getPlace <em>Place</em>}</li>
- *   <li>{@link san.ExpressionMarking#getIndex <em>Index</em>}</li>
  * </ul>
  *
  * @see san.SANPackage#getExpressionMarking()
@@ -46,31 +45,5 @@ public interface ExpressionMarking extends ExpressionSegment {
 	 * @generated
 	 */
 	void setPlace(Place value);
-
-	/**
-	 * Returns the value of the '<em><b>Index</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Index</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Index</em>' attribute.
-	 * @see #setIndex(int)
-	 * @see san.SANPackage#getExpressionMarking_Index()
-	 * @model
-	 * @generated
-	 */
-	int getIndex();
-
-	/**
-	 * Sets the value of the '{@link san.ExpressionMarking#getIndex <em>Index</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Index</em>' attribute.
-	 * @see #getIndex()
-	 * @generated
-	 */
-	void setIndex(int value);
 
 } // ExpressionMarking

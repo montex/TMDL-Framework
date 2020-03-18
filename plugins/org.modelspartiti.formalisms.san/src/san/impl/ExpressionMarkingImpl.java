@@ -20,7 +20,6 @@ import san.SANPackage;
  * </p>
  * <ul>
  *   <li>{@link san.impl.ExpressionMarkingImpl#getPlace <em>Place</em>}</li>
- *   <li>{@link san.impl.ExpressionMarkingImpl#getIndex <em>Index</em>}</li>
  * </ul>
  *
  * @generated
@@ -35,25 +34,6 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected Place place;
-
-	/**
-	 * The default value of the '{@link #getIndex() <em>Index</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIndex()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int INDEX_EDEFAULT = 0;
-	/**
-	 * The cached value of the '{@link #getIndex() <em>Index</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIndex()
-	 * @generated
-	 * @ordered
-	 */
-	protected int index = INDEX_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,35 +97,12 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIndex() {
-		return index;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIndex(int newIndex) {
-		int oldIndex = index;
-		index = newIndex;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANPackage.EXPRESSION_MARKING__INDEX, oldIndex, index));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SANPackage.EXPRESSION_MARKING__PLACE:
 				if (resolve) return getPlace();
 				return basicGetPlace();
-			case SANPackage.EXPRESSION_MARKING__INDEX:
-				return getIndex();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -160,9 +117,6 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case SANPackage.EXPRESSION_MARKING__PLACE:
 				setPlace((Place)newValue);
-				return;
-			case SANPackage.EXPRESSION_MARKING__INDEX:
-				setIndex((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,9 +133,6 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 			case SANPackage.EXPRESSION_MARKING__PLACE:
 				setPlace((Place)null);
 				return;
-			case SANPackage.EXPRESSION_MARKING__INDEX:
-				setIndex(INDEX_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -196,8 +147,6 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case SANPackage.EXPRESSION_MARKING__PLACE:
 				return place != null;
-			case SANPackage.EXPRESSION_MARKING__INDEX:
-				return index != INDEX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

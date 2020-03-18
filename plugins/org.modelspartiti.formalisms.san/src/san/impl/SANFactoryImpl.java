@@ -59,13 +59,13 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 		switch (eClass.getClassifierID()) {
 			case SANPackage.SAN: return createSAN();
 			case SANPackage.PLACE: return createPlace();
+			case SANPackage.INSTANTANEOUS_ACTIVITY: return createInstantaneousActivity();
+			case SANPackage.TIMED_ACTIVITY: return createTimedActivity();
 			case SANPackage.CASE: return createCase();
 			case SANPackage.INPUT_ARC: return createInputArc();
 			case SANPackage.OUTPUT_ARC: return createOutputArc();
 			case SANPackage.OUTPUT_GATE: return createOutputGate();
 			case SANPackage.INPUT_GATE: return createInputGate();
-			case SANPackage.INSTANTANEOUS_ACTIVITY: return createInstantaneousActivity();
-			case SANPackage.TIMED_ACTIVITY: return createTimedActivity();
 			case SANPackage.EXPRESSION: return createExpression();
 			case SANPackage.EXPRESSION_TEXT: return createExpressionText();
 			case SANPackage.EXPRESSION_MARKING: return createExpressionMarking();

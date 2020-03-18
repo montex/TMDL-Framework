@@ -982,15 +982,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExpressionMarking_Index() {
-		return (EAttribute)expressionMarkingEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getExpressionVariable() {
 		return expressionVariableEClass;
 	}
@@ -1843,6 +1834,9 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		createEReference(sanEClass, SAN__INITIALIZATION);
 		createEReference(sanEClass, SAN__CUSTOMTYPE);
 
+		namedElementEClass = createEClass(NAMED_ELEMENT);
+		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
+
 		placeEClass = createEClass(PLACE);
 		createEAttribute(placeEClass, PLACE__IS_EXTENDED);
 		createEReference(placeEClass, PLACE__TYPE);
@@ -1851,8 +1845,12 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		activityEClass = createEClass(ACTIVITY);
 		createEReference(activityEClass, ACTIVITY__CASES);
 
-		namedElementEClass = createEClass(NAMED_ELEMENT);
-		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
+		instantaneousActivityEClass = createEClass(INSTANTANEOUS_ACTIVITY);
+
+		timedActivityEClass = createEClass(TIMED_ACTIVITY);
+		createEReference(timedActivityEClass, TIMED_ACTIVITY__TIME_DISTRIBUTION);
+		createEReference(timedActivityEClass, TIMED_ACTIVITY__ACTIVATION);
+		createEReference(timedActivityEClass, TIMED_ACTIVITY__REACTIVATION);
 
 		caseEClass = createEClass(CASE);
 		createEAttribute(caseEClass, CASE__ID);
@@ -1879,13 +1877,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		createEReference(inputGateEClass, INPUT_GATE__PREDICATE);
 		createEReference(inputGateEClass, INPUT_GATE__ACTIVITY);
 
-		instantaneousActivityEClass = createEClass(INSTANTANEOUS_ACTIVITY);
-
-		timedActivityEClass = createEClass(TIMED_ACTIVITY);
-		createEReference(timedActivityEClass, TIMED_ACTIVITY__TIME_DISTRIBUTION);
-		createEReference(timedActivityEClass, TIMED_ACTIVITY__ACTIVATION);
-		createEReference(timedActivityEClass, TIMED_ACTIVITY__REACTIVATION);
-
 		distributionEClass = createEClass(DISTRIBUTION);
 		createEAttribute(distributionEClass, DISTRIBUTION__PARAMETERS);
 
@@ -1897,7 +1888,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		expressionMarkingEClass = createEClass(EXPRESSION_MARKING);
 		createEReference(expressionMarkingEClass, EXPRESSION_MARKING__PLACE);
-		createEAttribute(expressionMarkingEClass, EXPRESSION_MARKING__INDEX);
 
 		expressionVariableEClass = createEClass(EXPRESSION_VARIABLE);
 		createEReference(expressionVariableEClass, EXPRESSION_VARIABLE__VARIABLE);
@@ -2066,13 +2056,13 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		sanEClass.getESuperTypes().add(theCorePackage.getConcreteModel());
 		placeEClass.getESuperTypes().add(this.getNamedElement());
 		activityEClass.getESuperTypes().add(this.getNamedElement());
+		instantaneousActivityEClass.getESuperTypes().add(this.getActivity());
+		timedActivityEClass.getESuperTypes().add(this.getActivity());
 		inputArcEClass.getESuperTypes().add(this.getArc());
 		outputArcEClass.getESuperTypes().add(this.getArc());
 		gateEClass.getESuperTypes().add(this.getNamedElement());
 		outputGateEClass.getESuperTypes().add(this.getGate());
 		inputGateEClass.getESuperTypes().add(this.getGate());
-		instantaneousActivityEClass.getESuperTypes().add(this.getActivity());
-		timedActivityEClass.getESuperTypes().add(this.getActivity());
 		expressionTextEClass.getESuperTypes().add(this.getExpressionSegment());
 		expressionMarkingEClass.getESuperTypes().add(this.getExpressionSegment());
 		expressionVariableEClass.getESuperTypes().add(this.getExpressionSegment());
@@ -2122,6 +2112,9 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEReference(getSAN_Initialization(), this.getExpression(), null, "initialization", null, 0, -1, san.SAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSAN_Customtype(), this.getCustomTypeDefinition(), null, "customtype", null, 0, -1, san.SAN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPlace_IsExtended(), ecorePackage.getEBoolean(), "isExtended", null, 0, 1, Place.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getPlace_Type(), this.getType(), null, "type", null, 1, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2131,8 +2124,12 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEReference(getActivity_Cases(), this.getCase(), null, "cases", null, 1, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getActivity_Cases().getEKeys().add(this.getCase_ID());
 
-		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(instantaneousActivityEClass, InstantaneousActivity.class, "InstantaneousActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(timedActivityEClass, TimedActivity.class, "TimedActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTimedActivity_TimeDistribution(), this.getDistribution(), null, "timeDistribution", null, 1, 1, TimedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTimedActivity_Activation(), this.getExpression(), null, "activation", null, 0, 1, TimedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTimedActivity_Reactivation(), this.getExpression(), null, "reactivation", null, 0, 1, TimedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCase_ID(), ecorePackage.getEInt(), "ID", "0", 1, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2159,13 +2156,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		initEReference(getInputGate_Predicate(), this.getExpression(), null, "predicate", null, 1, 1, InputGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInputGate_Activity(), this.getActivity(), null, "activity", null, 1, -1, InputGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(instantaneousActivityEClass, InstantaneousActivity.class, "InstantaneousActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(timedActivityEClass, TimedActivity.class, "TimedActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTimedActivity_TimeDistribution(), this.getDistribution(), null, "timeDistribution", null, 1, 1, TimedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTimedActivity_Activation(), this.getExpression(), null, "activation", null, 0, 1, TimedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTimedActivity_Reactivation(), this.getExpression(), null, "reactivation", null, 0, 1, TimedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(distributionEClass, Distribution.class, "Distribution", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDistribution_Parameters(), ecorePackage.getEString(), "parameters", null, 1, 1, Distribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2177,7 +2167,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		initEClass(expressionMarkingEClass, ExpressionMarking.class, "ExpressionMarking", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExpressionMarking_Place(), this.getPlace(), null, "place", null, 1, 1, ExpressionMarking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExpressionMarking_Index(), ecorePackage.getEInt(), "index", null, 0, 1, ExpressionMarking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressionVariableEClass, ExpressionVariable.class, "ExpressionVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExpressionVariable_Variable(), this.getGlobalVariable(), null, "variable", null, 1, 1, ExpressionVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

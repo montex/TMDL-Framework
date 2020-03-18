@@ -405,6 +405,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/initialization"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//SAN/customtype"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="san.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//NamedElement/name"/>
+    </genClasses>
     <genClasses ecoreClass="san.ecore#//Place">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Place/isExtended"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Place/type"/>
@@ -413,8 +416,11 @@
     <genClasses image="false" ecoreClass="san.ecore#//Activity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//Activity/cases"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="san.ecore#//NamedElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//NamedElement/name"/>
+    <genClasses ecoreClass="san.ecore#//InstantaneousActivity"/>
+    <genClasses ecoreClass="san.ecore#//TimedActivity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/timeDistribution"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/activation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/reactivation"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//Case">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Case/ID"/>
@@ -440,12 +446,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//InputGate/predicate"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//InputGate/activity"/>
     </genClasses>
-    <genClasses ecoreClass="san.ecore#//InstantaneousActivity"/>
-    <genClasses ecoreClass="san.ecore#//TimedActivity">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/timeDistribution"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/activation"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference san.ecore#//TimedActivity/reactivation"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="san.ecore#//Distribution">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//Distribution/parameters"/>
     </genClasses>
@@ -457,7 +457,6 @@
     </genClasses>
     <genClasses ecoreClass="san.ecore#//ExpressionMarking">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionMarking/place"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute san.ecore#//ExpressionMarking/index"/>
     </genClasses>
     <genClasses ecoreClass="san.ecore#//ExpressionVariable">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference san.ecore#//ExpressionVariable/variable"/>

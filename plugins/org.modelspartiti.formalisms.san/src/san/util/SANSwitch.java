@@ -74,6 +74,12 @@ public class SANSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SANPackage.NAMED_ELEMENT: {
+				NamedElement namedElement = (NamedElement)theEObject;
+				T result = caseNamedElement(namedElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SANPackage.PLACE: {
 				Place place = (Place)theEObject;
 				T result = casePlace(place);
@@ -88,9 +94,19 @@ public class SANSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SANPackage.NAMED_ELEMENT: {
-				NamedElement namedElement = (NamedElement)theEObject;
-				T result = caseNamedElement(namedElement);
+			case SANPackage.INSTANTANEOUS_ACTIVITY: {
+				InstantaneousActivity instantaneousActivity = (InstantaneousActivity)theEObject;
+				T result = caseInstantaneousActivity(instantaneousActivity);
+				if (result == null) result = caseActivity(instantaneousActivity);
+				if (result == null) result = caseNamedElement(instantaneousActivity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SANPackage.TIMED_ACTIVITY: {
+				TimedActivity timedActivity = (TimedActivity)theEObject;
+				T result = caseTimedActivity(timedActivity);
+				if (result == null) result = caseActivity(timedActivity);
+				if (result == null) result = caseNamedElement(timedActivity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -140,22 +156,6 @@ public class SANSwitch<T> extends Switch<T> {
 				T result = caseInputGate(inputGate);
 				if (result == null) result = caseGate(inputGate);
 				if (result == null) result = caseNamedElement(inputGate);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.INSTANTANEOUS_ACTIVITY: {
-				InstantaneousActivity instantaneousActivity = (InstantaneousActivity)theEObject;
-				T result = caseInstantaneousActivity(instantaneousActivity);
-				if (result == null) result = caseActivity(instantaneousActivity);
-				if (result == null) result = caseNamedElement(instantaneousActivity);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SANPackage.TIMED_ACTIVITY: {
-				TimedActivity timedActivity = (TimedActivity)theEObject;
-				T result = caseTimedActivity(timedActivity);
-				if (result == null) result = caseActivity(timedActivity);
-				if (result == null) result = caseNamedElement(timedActivity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -178,7 +178,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getNamedElement()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 3;
+	int NAMED_ELEMENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -215,7 +215,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getPlace()
 	 * @generated
 	 */
-	int PLACE = 1;
+	int PLACE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -279,7 +279,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getActivity()
 	 * @generated
 	 */
-	int ACTIVITY = 2;
+	int ACTIVITY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -325,43 +325,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getCase()
 	 * @generated
 	 */
-	int CASE = 4;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__P = 1;
-
-	/**
-	 * The number of structural features of the '<em>Case</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Case</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE_OPERATION_COUNT = 0;
+	int CASE = 6;
 
 	/**
 	 * The meta object id for the '{@link san.impl.ArcImpl <em>Arc</em>}' class.
@@ -371,25 +335,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getArc()
 	 * @generated
 	 */
-	int ARC = 5;
-
-	/**
-	 * The number of structural features of the '<em>Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARC_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARC_OPERATION_COUNT = 0;
+	int ARC = 7;
 
 	/**
 	 * The meta object id for the '{@link san.impl.InputArcImpl <em>Input Arc</em>}' class.
@@ -399,43 +345,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getInputArc()
 	 * @generated
 	 */
-	int INPUT_ARC = 6;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_ARC__SOURCE = ARC_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_ARC__TARGET = ARC_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Input Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_ARC_FEATURE_COUNT = ARC_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Input Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
+	int INPUT_ARC = 8;
 
 	/**
 	 * The meta object id for the '{@link san.impl.OutputArcImpl <em>Output Arc</em>}' class.
@@ -445,43 +355,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getOutputArc()
 	 * @generated
 	 */
-	int OUTPUT_ARC = 7;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_ARC__SOURCE = ARC_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_ARC__TARGET = ARC_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Output Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_ARC_FEATURE_COUNT = ARC_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Output Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
+	int OUTPUT_ARC = 9;
 
 	/**
 	 * The meta object id for the '{@link san.impl.GateImpl <em>Gate</em>}' class.
@@ -491,52 +365,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getGate()
 	 * @generated
 	 */
-	int GATE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Function</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE__FUNCTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Places</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE__PLACES = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int GATE = 10;
 
 	/**
 	 * The meta object id for the '{@link san.impl.OutputGateImpl <em>Output Gate</em>}' class.
@@ -546,61 +375,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getOutputGate()
 	 * @generated
 	 */
-	int OUTPUT_GATE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE__NAME = GATE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Function</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE__FUNCTION = GATE__FUNCTION;
-
-	/**
-	 * The feature id for the '<em><b>Places</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE__PLACES = GATE__PLACES;
-
-	/**
-	 * The feature id for the '<em><b>Activity Case</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE__ACTIVITY_CASE = GATE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Output Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE_FEATURE_COUNT = GATE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Output Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE_OPERATION_COUNT = GATE_OPERATION_COUNT + 0;
+	int OUTPUT_GATE = 11;
 
 	/**
 	 * The meta object id for the '{@link san.impl.InputGateImpl <em>Input Gate</em>}' class.
@@ -610,70 +385,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getInputGate()
 	 * @generated
 	 */
-	int INPUT_GATE = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__NAME = GATE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Function</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__FUNCTION = GATE__FUNCTION;
-
-	/**
-	 * The feature id for the '<em><b>Places</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__PLACES = GATE__PLACES;
-
-	/**
-	 * The feature id for the '<em><b>Predicate</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__PREDICATE = GATE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Activity</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__ACTIVITY = GATE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Input Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE_FEATURE_COUNT = GATE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Input Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE_OPERATION_COUNT = GATE_OPERATION_COUNT + 0;
+	int INPUT_GATE = 12;
 
 	/**
 	 * The meta object id for the '{@link san.impl.InstantaneousActivityImpl <em>Instantaneous Activity</em>}' class.
@@ -683,7 +395,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getInstantaneousActivity()
 	 * @generated
 	 */
-	int INSTANTANEOUS_ACTIVITY = 11;
+	int INSTANTANEOUS_ACTIVITY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -729,7 +441,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getTimedActivity()
 	 * @generated
 	 */
-	int TIMED_ACTIVITY = 12;
+	int TIMED_ACTIVITY = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -793,6 +505,294 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int TIMED_ACTIVITY_OPERATION_COUNT = ACTIVITY_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__P = 1;
+
+	/**
+	 * The number of structural features of the '<em>Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE_OPERATION_COUNT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC__SOURCE = ARC_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC__TARGET = ARC_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Input Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC_FEATURE_COUNT = ARC_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Input Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC__SOURCE = ARC_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC__TARGET = ARC_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Output Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC_FEATURE_COUNT = ARC_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Output Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE__FUNCTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Places</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE__PLACES = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__NAME = GATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__FUNCTION = GATE__FUNCTION;
+
+	/**
+	 * The feature id for the '<em><b>Places</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__PLACES = GATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Activity Case</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__ACTIVITY_CASE = GATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Output Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_FEATURE_COUNT = GATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Output Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_OPERATION_COUNT = GATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__NAME = GATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__FUNCTION = GATE__FUNCTION;
+
+	/**
+	 * The feature id for the '<em><b>Places</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__PLACES = GATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Predicate</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__PREDICATE = GATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__ACTIVITY = GATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Input Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE_FEATURE_COUNT = GATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Input Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE_OPERATION_COUNT = GATE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.impl.DistributionImpl <em>Distribution</em>}' class.
@@ -953,22 +953,13 @@ public interface SANPackage extends EPackage {
 	int EXPRESSION_MARKING__PLACE = EXPRESSION_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Index</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_MARKING__INDEX = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Expression Marking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_MARKING_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 2;
+	int EXPRESSION_MARKING_FEATURE_COUNT = EXPRESSION_SEGMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Expression Marking</em>' class.
@@ -3151,17 +3142,6 @@ public interface SANPackage extends EPackage {
 	EReference getExpressionMarking_Place();
 
 	/**
-	 * Returns the meta object for the attribute '{@link san.ExpressionMarking#getIndex <em>Index</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Index</em>'.
-	 * @see san.ExpressionMarking#getIndex()
-	 * @see #getExpressionMarking()
-	 * @generated
-	 */
-	EAttribute getExpressionMarking_Index();
-
-	/**
 	 * Returns the meta object for class '{@link san.ExpressionVariable <em>Expression Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4563,14 +4543,6 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EXPRESSION_MARKING__PLACE = eINSTANCE.getExpressionMarking_Place();
-
-		/**
-		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXPRESSION_MARKING__INDEX = eINSTANCE.getExpressionMarking_Index();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.ExpressionVariableImpl <em>Expression Variable</em>}' class.

@@ -28,6 +28,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="customtype" upperBound="-1"
         eType="#//CustomTypeDefinition" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isExtended" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         changeable="false" volatile="true" transient="true" derived="true">
@@ -44,9 +48,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cases" lowerBound="1" upperBound="-1"
         eType="#//Case" containment="true" eKeys="#//Case/ID"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InstantaneousActivity" eSuperTypes="#//Activity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedActivity" eSuperTypes="#//Activity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeDistribution" lowerBound="1"
+        eType="#//Distribution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activation" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reactivation" eType="#//Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Case">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -92,15 +101,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
         upperBound="-1" eType="#//Activity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InstantaneousActivity" eSuperTypes="#//Activity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TimedActivity" eSuperTypes="#//Activity">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="timeDistribution" lowerBound="1"
-        eType="#//Distribution" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activation" eType="#//Expression"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reactivation" eType="#//Expression"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Distribution" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameters" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -120,7 +120,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpressionMarking" eSuperTypes="#//ExpressionSegment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="place" lowerBound="1" eType="#//Place"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpressionVariable" eSuperTypes="#//ExpressionSegment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
