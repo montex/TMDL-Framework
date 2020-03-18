@@ -322,7 +322,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Case" nodeMappings="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Case" nodeMappings="//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case'] //@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -460,12 +460,17 @@
   <extensions xsi:type="properties:ViewExtensionDescription" name="SanProperties">
     <metamodels href="http://www.modelspartiti.org/templates/san/san#/"/>
     <categories name="Category">
-      <pages name="PageSAN" labelExpression="Properties" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.4 //@extensions.0/@categories.0/@groups.5" indented="true">
-        <extends href="platform:/plugin/org.eclipse.sirius.properties.defaultrules/model/properties.odesign#//@extensions.0/@categories.0/@pages.0"/>
+      <pages name="PageSAN" labelExpression="Properties" semanticCandidateExpression="var:self" indented="true">
+        <groups href="platform:/plugin/org.eclipse.sirius.properties.defaultrules/model/properties.odesign#//@extensions.0/@categories.0/@groups.0"/>
+        <groups href="#//@extensions.0/@categories.0/@groups.0"/>
+        <groups href="#//@extensions.0/@categories.0/@groups.1"/>
+        <groups href="#//@extensions.0/@categories.0/@groups.3"/>
+        <groups href="#//@extensions.0/@categories.0/@groups.4"/>
+        <groups href="#//@extensions.0/@categories.0/@groups.5"/>
       </pages>
       <pages name="PageMarkingNodeArray" labelExpression="LeafNode" domainClass="san::Array" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.2"/>
       <pages name="PageGate" labelExpression="Expression" domainClass="san::Gate" semanticCandidateExpression="var:self" preconditionExpression="aql:self.oclIsTypeOf(san::InputGate) or self.oclIsTypeOf(san::OutputGate)" groups="//@extensions.0/@categories.0/@groups.6 //@extensions.0/@categories.0/@groups.7"/>
-      <pages name="Page Case" labelExpression="p Expression" domainClass="san::Case" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.8"/>
+      <pages name="Page Case" labelExpression="Case probability" domainClass="san::Case" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.8"/>
       <pages name="Page ExecutionPolicy" labelExpression="Execution Policy" domainClass="san::TimedActivity" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.9"/>
       <groups name="GroupPlace" labelExpression="Type of marking" domainClass="san::Place" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:ContainerDescription" name="ContainerPlace">
@@ -489,14 +494,14 @@
           </controls>
           <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="2"/>
         </controls>
-        <controls xsi:type="properties:ButtonDescription" name="Add MarkingExtended" labelExpression="Add MarkingExtended to Place" isEnabledExpression="aql:self.type.oclIsTypeOf(san::ComplexType)" buttonLabelExpression="Add MarkingExtended">
+        <controls xsi:type="properties:ButtonDescription" name="Add MarkingExtended" labelExpression="Add MarkingExtended to Place" isEnabledExpression="aql:self.type.oclIsTypeOf(san::ComplexType) or (self.type.oclIsTypeOf(san::PrimitiveType) and self.type.oclAsType(san::PrimitiveType).type &lt;> san::ExtendedPlaceType::short)" buttonLabelExpression="Add MarkingExtended">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
               <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::MarkingExtended" referenceName="marking"/>
             </firstModelOperations>
           </initialOperation>
         </controls>
-        <controls xsi:type="properties:ButtonDescription" name="Add MarkingSimple" labelExpression="Add MarkingSimple to Place" isEnabledExpression="aql:self.type.oclIsTypeOf(san::PrimitiveType)" buttonLabelExpression="Add MarkingSimple">
+        <controls xsi:type="properties:ButtonDescription" name="Add MarkingSimple" labelExpression="Add MarkingSimple to Place" isEnabledExpression="aql:self.type.oclIsTypeOf(san::PrimitiveType) and ( self.type.oclAsType(san::PrimitiveType).type = san::ExtendedPlaceType::short)" buttonLabelExpression="Add MarkingSimple">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
               <subModelOperations xsi:type="tool_1:Unset" featureName="marking"/>
@@ -504,7 +509,7 @@
             </firstModelOperations>
           </initialOperation>
         </controls>
-        <controls xsi:type="properties:ButtonDescription" name="Add MarkingGlobalVariable" labelExpression="Add MarkingGlobalVariable to Place" isEnabledExpression="aql:self.type.oclIsTypeOf(san::PrimitiveType)" buttonLabelExpression="Add MarkingGlobalVariable">
+        <controls xsi:type="properties:ButtonDescription" name="Add MarkingGlobalVariable" labelExpression="Add MarkingGlobalVariable to Place" isEnabledExpression="aql:self.type.oclIsTypeOf(san::PrimitiveType) and ( self.type.oclAsType(san::PrimitiveType).type = san::ExtendedPlaceType::short)" buttonLabelExpression="Add MarkingGlobalVariable">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
               <subModelOperations xsi:type="tool_1:Unset" featureName="marking"/>
@@ -514,7 +519,22 @@
         </controls>
       </groups>
       <groups name="GroupMarkingExtended" labelExpression="Definition" domainClass="san::MarkingExtended" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="type" labelExpression="type" referenceNameExpression="type"/>
+        <controls xsi:type="properties:ButtonDescription" name="LeafNodeString" labelExpression="Leaf Node String" isEnabledExpression="aql:self.eContainer().type.oclIsTypeOf(san::PrimitiveType)" buttonLabelExpression="Create Leaf Node String">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="node"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::LeafNodeString" referenceName="node"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:ButtonDescription" name="LeafNodeGlobalVariable" labelExpression="Leaf Node Global Variable" isEnabledExpression="aql:self.eContainer().type.oclIsTypeOf(san::PrimitiveType)" buttonLabelExpression="Create Leaf Node Global Variable">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:Unset" featureName="node"/>
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::LeafNodeGlobalVariable" referenceName="node"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
         <controls xsi:type="properties:ButtonDescription" name="Array" labelExpression="Node Array" isEnabledExpression="aql:self.eContainer().type.oclIsTypeOf(san::ComplexType)" buttonLabelExpression="Create Node Array">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
@@ -531,13 +551,27 @@
             </firstModelOperations>
           </initialOperation>
         </controls>
+        <controls xsi:type="properties:DynamicMappingForDescription" name="Node" iterator="node" iterableExpression="aql:self.node" forceRefresh="true">
+          <ifs name="CheckLeafNodeString" predicateExpression="aql:node.oclIsTypeOf(san::LeafNodeString)">
+            <widget xsi:type="properties:TextDescription" name="Marking String" labelExpression="Marking String" valueExpression="aql:node.oclAsType(san::LeafNodeString).value">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:node.oclAsType(san::LeafNodeString)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="var:newValue"/>
+                </firstModelOperations>
+              </initialOperation>
+            </widget>
+          </ifs>
+          <ifs name="CheckLeafNodeGlobalVariable" predicateExpression="aql:node.oclIsTypeOf(san::LeafNodeGlobalVariable)">
+            <widget xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="GlobalVariable" labelExpression="Marking Global Variable" referenceNameExpression="variable" referenceOwnerExpression="aql:node.oclAsType(san::LeafNodeGlobalVariable)"/>
+          </ifs>
+        </controls>
       </groups>
       <groups name="GroupNodeArray" labelExpression="Create LeafNode" domainClass="san::Array" semanticCandidateExpression="var:self">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="LeafNodeRef" labelExpression="LeafNode" isEnabledExpression="aql:self.oclAsType(san::Array).leafnode->size() &lt; self.oclAsType(san::Array).definition.size" referenceNameExpression="leafnode" referenceOwnerExpression="var:self"/>
       </groups>
       <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="san::Activity">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" isEnabledExpression="aql:self.oclIsTypeOf(san::TimedActivity)" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Cases" labelExpression="Case quantity" referenceNameExpression="cases" referenceOwnerExpression="var:self"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Cases" labelExpression="Cases" referenceNameExpression="cases" referenceOwnerExpression="var:self"/>
       </groups>
       <groups name="GroupCustomTypeDefinition" labelExpression="Type" domainClass="san::CustomTypeDefinition" semanticCandidateExpression="var:self">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TypeArray" labelExpression="Type" isEnabledExpression="aql:self.oclIsTypeOf(san::CustomTypeArray)" referenceNameExpression="typeArray" referenceOwnerExpression="var:self"/>
@@ -616,9 +650,9 @@
           </initialOperation>
         </controls>
       </groups>
-      <groups name="Group Case" labelExpression="p Expression" domainClass="san::Case" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties:TextAreaDescription" name="p Expression(read-only)" labelExpression="p Expression (read-only)" isEnabledExpression="aql:false" valueExpression="aql:self.p.segments->first().text"/>
-        <controls xsi:type="properties:TextAreaDescription" name="p Expression" labelExpression="p Expression" valueExpression="aql:self.p.segments->first().text">
+      <groups name="Group Case" labelExpression="Case probability" domainClass="san::Case" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextAreaDescription" name="CaseProbability(read-only)" labelExpression="Case probability (read-only)" isEnabledExpression="aql:false" valueExpression="aql:self.p.segments->first().text"/>
+        <controls xsi:type="properties:TextAreaDescription" name="CaseProbability" labelExpression="Case probability" valueExpression="aql:self.p.segments->first().text">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
               <subModelOperations xsi:type="tool_1:Unset" featureName="p">
