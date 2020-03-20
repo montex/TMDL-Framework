@@ -2,6 +2,7 @@
  */
 package sant;
 
+import org.eclipse.emf.common.util.EList;
 import san.Case;
 
 /**
@@ -22,29 +23,19 @@ import san.Case;
  */
 public interface OutputGateConcrete extends OutputGate {
 	/**
-	 * Returns the value of the '<em><b>Case</b></em>' reference.
+	 * Returns the value of the '<em><b>Case</b></em>' reference list.
+	 * The list contents are of type {@link san.Case}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Case</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Case</em>' reference.
-	 * @see #setCase(Case)
+	 * @return the value of the '<em>Case</em>' reference list.
 	 * @see sant.SANTPackage#getOutputGateConcrete_Case()
 	 * @model required="true"
 	 * @generated
 	 */
-	Case getCase();
-
-	/**
-	 * Sets the value of the '{@link sant.OutputGateConcrete#getCase <em>Case</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Case</em>' reference.
-	 * @see #getCase()
-	 * @generated
-	 */
-	void setCase(Case value);
+	EList<Case> getCase();
 
 } // OutputGateConcrete

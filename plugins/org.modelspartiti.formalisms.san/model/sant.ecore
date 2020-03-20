@@ -86,7 +86,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OutputGate" abstract="true" eSuperTypes="#//GateTemplate"/>
   <eClassifiers xsi:type="ecore:EClass" name="OutputGateConcrete" eSuperTypes="#//OutputGate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="case" lowerBound="1" eType="ecore:EClass san.ecore#//Case"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="case" lowerBound="1" upperBound="-1"
+        eType="ecore:EClass san.ecore#//Case"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OutputGateTemplate" eSuperTypes="#//OutputGate">
     <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
@@ -100,8 +101,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArcTemplate" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="InputArc" eSuperTypes="#//ArcTemplate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="ecore:EClass san.ecore#//Place"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass san.ecore#//Place"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//ActivityTemplate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="templateSource" eType="#//PlaceTemplate"/>
   </eClassifiers>

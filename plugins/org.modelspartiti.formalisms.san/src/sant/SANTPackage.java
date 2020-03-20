@@ -960,7 +960,7 @@ public interface SANTPackage extends EPackage {
 	int OUTPUT_GATE_CONCRETE__PLACE_TEMPLATE = OUTPUT_GATE__PLACE_TEMPLATE;
 
 	/**
-	 * The feature id for the '<em><b>Case</b></em>' reference.
+	 * The feature id for the '<em><b>Case</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1779,10 +1779,10 @@ public interface SANTPackage extends EPackage {
 	EClass getOutputGateConcrete();
 
 	/**
-	 * Returns the meta object for the reference '{@link sant.OutputGateConcrete#getCase <em>Case</em>}'.
+	 * Returns the meta object for the reference list '{@link sant.OutputGateConcrete#getCase <em>Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Case</em>'.
+	 * @return the meta object for the reference list '<em>Case</em>'.
 	 * @see sant.OutputGateConcrete#getCase()
 	 * @see #getOutputGateConcrete()
 	 * @generated
@@ -2375,7 +2375,7 @@ public interface SANTPackage extends EPackage {
 		EClass OUTPUT_GATE_CONCRETE = eINSTANCE.getOutputGateConcrete();
 
 		/**
-		 * The meta object literal for the '<em><b>Case</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Case</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

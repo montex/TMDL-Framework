@@ -34,7 +34,7 @@ public interface InputArc extends ArcTemplate {
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(Place)
 	 * @see sant.SANTPackage#getInputArc_Source()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	Place getSource();
