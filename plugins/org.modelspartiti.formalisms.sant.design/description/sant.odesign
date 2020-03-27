@@ -23,7 +23,7 @@
         </nodeMappings>
         <nodeMappings name="TimedActivity" semanticCandidatesExpression="feature:activityTemplates" domainClass="sant::TimedActivityTemplate">
           <borderedNodeMappings name="Case" semanticCandidatesExpression="feature:eAllContents" domainClass="san::Case">
-            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <forbiddenSides>WEST</forbiddenSides>
@@ -110,6 +110,7 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             </style>
           </borderedNodeMappings>
+          <borderedNodeMappings xsi:type="description_1:NodeMappingImport" name="CasesSpecificationProbabilityArray" importedMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']"/>
           <style xsi:type="style:SquareDescription" labelSize="12" resizeKind="NSEW" width="1" height="6">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -253,7 +254,7 @@
             </style>
           </subNodeMappings>
           <subNodeMappings name="MultiplicityParametric" semanticCandidatesExpression="feature:multiplicity" domainClass="core::MultiplicityParametric">
-            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="aql:self.eClass().name" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="aql:'Parameter ' + self.parameter.name" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -296,7 +297,7 @@
         </containerMappings>
         <reusedMappings xsi:type="description_1:NodeMapping" href="../../org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='GlobalVariable']"/>
         <toolSections name="Tools">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Normal Place" nodeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="NormalPlace" nodeMappings="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -501,7 +502,7 @@
       <pages name="Page General" labelExpression="General" domainClass="sant::SANT" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.5"/>
       <groups name="GroupTimeDistribution" labelExpression="TimeDistribution" domainClass="sant::ActivityTemplate">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="TimeDistRef" labelExpression="Time Distribution function" isEnabledExpression="aql:self.oclIsTypeOf(sant::TimedActivityTemplate)" referenceNameExpression="timeDistribution" referenceOwnerExpression="var:self"/>
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="CasesSpecification" labelExpression="CasesSpecification" referenceNameExpression="casesTemplate" referenceOwnerExpression="var:self"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="CasesSpecification" labelExpression="Cases Specification" referenceNameExpression="casesTemplate" referenceOwnerExpression="var:self"/>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Cases" labelExpression="Cases" isEnabledExpression="aql:self.oclAsType(sant::ActivityTemplate).casesTemplate.oclIsTypeOf(sant::CasesSpecificationConcrete)" referenceNameExpression="cases" referenceOwnerExpression="aql:self.oclAsType(sant::ActivityTemplate).casesTemplate"/>
       </groups>
       <groups name="Group PlaceTemplate" labelExpression="Multiplicity and Marking" domainClass="sant::PlaceTemplate">
@@ -633,7 +634,7 @@
       </groups>
       <groups name="Group General" labelExpression="General" domainClass="sant.SANT" semanticCandidateExpression="var:self">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Parameters" labelExpression="Parameters" referenceNameExpression="parameters"/>
-        <controls xsi:type="properties:DynamicMappingForDescription" name="Parameters" iterator="Parameter" iterableExpression="feature:parameters">
+        <controls xsi:type="properties:DynamicMappingForDescription" name="Parameters" iterator="Parameter" iterableExpression="feature:parameters" forceRefresh="true">
           <ifs name="ParameterCondition" predicateExpression="aql:true">
             <widget xsi:type="properties:TextDescription" name="Parameter" labelExpression="aql:'Edit name of the parameter  -> ' + Parameter.name" valueExpression="aql:Parameter.name">
               <initialOperation>
