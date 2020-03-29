@@ -110,7 +110,16 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             </style>
           </borderedNodeMappings>
-          <borderedNodeMappings xsi:type="description_1:NodeMappingImport" name="CasesSpecificationProbabilityArray" importedMapping="//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']"/>
+          <borderedNodeMappings xsi:type="description_1:NodeMappingImport" name="CasesSpecificationProbabilityArray" semanticCandidatesExpression="feature:casesTemplate" domainClass="sant::CasesSpecificationProbabilityArray" inheritsAncestorFilters="false">
+            <style xsi:type="style:DotDescription" labelSize="11" showIcon="false" labelExpression="aql:self.pValues.name" sizeComputationExpression="2" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            </style>
+          </borderedNodeMappings>
           <style xsi:type="style:SquareDescription" labelSize="12" resizeKind="NSEW" width="1" height="6">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
