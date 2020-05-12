@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<san:SAN xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:san="http://www.modelspartiti.org/templates/san/san" name="Ambulance User">
+  <places name="Failed">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple"/>
+  </places>
+  <places name="Dropped">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple"/>
+  </places>
+  <places name="Idle">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple" value="1"/>
+  </places>
+  <places name="Req3">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple"/>
+  </places>
+  <places name="Req7">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple"/>
+  </places>
+  <activities xsi:type="san:InstantaneousActivity" name="Fail">
+    <cases/>
+  </activities>
+  <activities xsi:type="san:InstantaneousActivity" name="Drop">
+    <cases/>
+  </activities>
+  <activities xsi:type="san:TimedActivity" name="Request">
+    <cases ID="1">
+      <p>
+        <segments xsi:type="san:ExpressionText">
+          <text>0.4</text>
+        </segments>
+      </p>
+    </cases>
+    <cases ID="2">
+      <p>
+        <segments xsi:type="san:ExpressionText">
+          <text>0.6&#xD;
+</text>
+        </segments>
+      </p>
+    </cases>
+    <timeDistribution xsi:type="san:Uniform" parameters="rate"/>
+    <activation>
+      <segments xsi:type="san:ExpressionText">
+        <text></text>
+      </segments>
+    </activation>
+    <reactivation>
+      <segments xsi:type="san:ExpressionText">
+        <text></text>
+      </segments>
+    </reactivation>
+  </activities>
+  <arcs xsi:type="san:InputArc" source="#Failed" target="#Fail"/>
+  <arcs xsi:type="san:InputArc" source="#Dropped" target="#Drop"/>
+  <arcs xsi:type="san:OutputArc"/>
+  <arcs xsi:type="san:OutputArc" source="#//@activities[name='Request']/@cases[ID='2']" target="#Req7"/>
+  <arcs xsi:type="san:OutputArc" source="#//@activities[name='Request']/@cases[ID='1']" target="#Req3"/>
+  <arcs xsi:type="san:OutputArc" target="#Idle"/>
+  <arcs xsi:type="san:OutputArc" source="#//@activities[name='Fail']/@cases[ID='0']" target="#Idle"/>
+  <arcs xsi:type="san:OutputArc" source="#//@activities[name='Drop']/@cases[ID='0']" target="#Idle"/>
+  <gates xsi:type="san:InputGate" name="IGRequest" places="#Idle" activity="#Request">
+    <function>
+      <segments xsi:type="san:ExpressionText">
+        <text>&#xD;
+</text>
+      </segments>
+    </function>
+    <predicate>
+      <segments xsi:type="san:ExpressionText">
+        <text></text>
+      </segments>
+    </predicate>
+  </gates>
+</san:SAN>
