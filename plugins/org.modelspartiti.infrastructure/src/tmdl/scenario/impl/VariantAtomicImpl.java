@@ -79,6 +79,7 @@ public class VariantAtomicImpl extends VariantImpl implements VariantAtomic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateAtomic getTemplate() {
 		if (template != null && template.eIsProxy()) {
 			InternalEObject oldTemplate = (InternalEObject)template;
@@ -105,6 +106,7 @@ public class VariantAtomicImpl extends VariantImpl implements VariantAtomic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplate(TemplateAtomic newTemplate) {
 		TemplateAtomic oldTemplate = template;
 		template = newTemplate;
@@ -117,6 +119,7 @@ public class VariantAtomicImpl extends VariantImpl implements VariantAtomic {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getLabels() {
 		if (labels == null) {
 			labels = new EDataTypeUniqueEList<String>(String.class, this, ScenarioPackage.VARIANT_ATOMIC__LABELS);

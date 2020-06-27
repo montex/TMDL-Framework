@@ -83,6 +83,7 @@ public class TemplateExpressionRealSumImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateExpressionReal getExp1() {
 		return exp1;
 	}
@@ -107,6 +108,7 @@ public class TemplateExpressionRealSumImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExp1(TemplateExpressionReal newExp1) {
 		if (newExp1 != exp1) {
 			NotificationChain msgs = null;
@@ -126,6 +128,7 @@ public class TemplateExpressionRealSumImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateExpressionReal getExp2() {
 		return exp2;
 	}
@@ -150,6 +153,7 @@ public class TemplateExpressionRealSumImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExp2(TemplateExpressionReal newExp2) {
 		if (newExp2 != exp2) {
 			NotificationChain msgs = null;
@@ -179,6 +183,7 @@ public class TemplateExpressionRealSumImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate(EList<Assignment> assignments) {
 		try {
 			return (Double)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
@@ -203,6 +208,7 @@ public class TemplateExpressionRealSumImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate() {
 		try {
 			return (Double)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);

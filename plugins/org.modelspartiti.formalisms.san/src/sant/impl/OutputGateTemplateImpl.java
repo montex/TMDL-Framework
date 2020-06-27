@@ -62,6 +62,7 @@ public class OutputGateTemplateImpl extends OutputGateImpl implements OutputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityTemplate> getActivity() {
 		if (activity == null) {
 			activity = new EObjectResolvingEList<ActivityTemplate>(ActivityTemplate.class, this, SANTPackage.OUTPUT_GATE_TEMPLATE__ACTIVITY);

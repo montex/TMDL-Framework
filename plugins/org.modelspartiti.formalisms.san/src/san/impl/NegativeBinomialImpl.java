@@ -73,6 +73,7 @@ public class NegativeBinomialImpl extends DistributionImpl implements NegativeBi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getS() {
 		return s;
 	}
@@ -97,6 +98,7 @@ public class NegativeBinomialImpl extends DistributionImpl implements NegativeBi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setS(Expression newS) {
 		if (newS != s) {
 			NotificationChain msgs = null;
@@ -116,6 +118,7 @@ public class NegativeBinomialImpl extends DistributionImpl implements NegativeBi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getP() {
 		return p;
 	}
@@ -140,6 +143,7 @@ public class NegativeBinomialImpl extends DistributionImpl implements NegativeBi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setP(Expression newP) {
 		if (newP != p) {
 			NotificationChain msgs = null;

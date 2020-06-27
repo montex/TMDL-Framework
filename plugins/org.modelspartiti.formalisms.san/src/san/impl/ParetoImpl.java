@@ -73,6 +73,7 @@ public class ParetoImpl extends DistributionImpl implements Pareto {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getLowerBound() {
 		return lowerBound;
 	}
@@ -97,6 +98,7 @@ public class ParetoImpl extends DistributionImpl implements Pareto {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLowerBound(Expression newLowerBound) {
 		if (newLowerBound != lowerBound) {
 			NotificationChain msgs = null;
@@ -116,6 +118,7 @@ public class ParetoImpl extends DistributionImpl implements Pareto {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getShape() {
 		return shape;
 	}
@@ -140,6 +143,7 @@ public class ParetoImpl extends DistributionImpl implements Pareto {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setShape(Expression newShape) {
 		if (newShape != shape) {
 			NotificationChain msgs = null;

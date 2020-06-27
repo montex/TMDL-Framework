@@ -24,8 +24,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import sant.SANTFactory;
-
 import sant.provider.SANTEditPlugin;
 
 import tmdl.core.CoreFactory;
@@ -207,11 +205,6 @@ public class InterfaceVariableItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LibraryPackage.Literals.INTERFACE_VARIABLE__MULTIPLICITY,
-				 SANTFactory.eINSTANCE.createMultiplicityRangeOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -59,6 +59,7 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Place getPlace() {
 		if (place != null && place.eIsProxy()) {
 			InternalEObject oldPlace = (InternalEObject)place;
@@ -85,6 +86,7 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlace(Place newPlace) {
 		Place oldPlace = place;
 		place = newPlace;

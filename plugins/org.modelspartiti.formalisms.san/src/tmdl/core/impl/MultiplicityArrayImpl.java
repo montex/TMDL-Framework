@@ -61,6 +61,7 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Integer> getValues() {
 		if (values == null) {
 			values = new EDataTypeUniqueEList<Integer>(Integer.class, this, CorePackage.MULTIPLICITY_ARRAY__VALUES);

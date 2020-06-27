@@ -104,6 +104,7 @@ public class ModelInterfaceImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -113,6 +114,7 @@ public class ModelInterfaceImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -125,6 +127,7 @@ public class ModelInterfaceImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceVariable> getVariables() {
 		if (variables == null) {
 			variables = new EObjectContainmentEList<InterfaceVariable>(InterfaceVariable.class, this, LibraryPackage.MODEL_INTERFACE__VARIABLES);
@@ -137,6 +140,7 @@ public class ModelInterfaceImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, LibraryPackage.MODEL_INTERFACE__PARAMETERS);

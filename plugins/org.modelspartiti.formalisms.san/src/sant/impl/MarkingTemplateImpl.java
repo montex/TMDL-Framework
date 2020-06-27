@@ -70,6 +70,7 @@ public abstract class MarkingTemplateImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getIdPlace() {
 		return idPlace;
 	}
@@ -79,6 +80,7 @@ public abstract class MarkingTemplateImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdPlace(int newIdPlace) {
 		int oldIdPlace = idPlace;
 		idPlace = newIdPlace;

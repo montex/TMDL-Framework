@@ -73,6 +73,7 @@ public class ErlangImpl extends DistributionImpl implements Erlang {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getM() {
 		return m;
 	}
@@ -97,6 +98,7 @@ public class ErlangImpl extends DistributionImpl implements Erlang {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setM(Expression newM) {
 		if (newM != m) {
 			NotificationChain msgs = null;
@@ -116,6 +118,7 @@ public class ErlangImpl extends DistributionImpl implements Erlang {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getBeta() {
 		return beta;
 	}
@@ -140,6 +143,7 @@ public class ErlangImpl extends DistributionImpl implements Erlang {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBeta(Expression newBeta) {
 		if (newBeta != beta) {
 			NotificationChain msgs = null;

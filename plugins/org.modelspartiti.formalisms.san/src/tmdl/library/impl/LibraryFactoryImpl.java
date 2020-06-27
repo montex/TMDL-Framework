@@ -75,6 +75,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Library createLibrary() {
 		LibraryImpl library = new LibraryImpl();
 		return library;
@@ -85,6 +86,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ModelInterface createModelInterface() {
 		ModelInterfaceImpl modelInterface = new ModelInterfaceImpl();
 		return modelInterface;
@@ -95,6 +97,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateAtomic createTemplateAtomic() {
 		TemplateAtomicImpl templateAtomic = new TemplateAtomicImpl();
 		return templateAtomic;
@@ -105,6 +108,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateComposite createTemplateComposite() {
 		TemplateCompositeImpl templateComposite = new TemplateCompositeImpl();
 		return templateComposite;
@@ -115,6 +119,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block createBlock() {
 		BlockImpl block = new BlockImpl();
 		return block;
@@ -125,6 +130,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceVariable createInterfaceVariable() {
 		InterfaceVariableImpl interfaceVariable = new InterfaceVariableImpl();
 		return interfaceVariable;
@@ -135,6 +141,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionRuleAll createCompositionRuleAll() {
 		CompositionRuleAllImpl compositionRuleAll = new CompositionRuleAllImpl();
 		return compositionRuleAll;
@@ -145,6 +152,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionRuleMatch createCompositionRuleMatch() {
 		CompositionRuleMatchImpl compositionRuleMatch = new CompositionRuleMatchImpl();
 		return compositionRuleMatch;
@@ -155,6 +163,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompositionRuleForwards createCompositionRuleForwards() {
 		CompositionRuleForwardsImpl compositionRuleForwards = new CompositionRuleForwardsImpl();
 		return compositionRuleForwards;
@@ -165,6 +174,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LibraryPackage getLibraryPackage() {
 		return (LibraryPackage)getEPackage();
 	}

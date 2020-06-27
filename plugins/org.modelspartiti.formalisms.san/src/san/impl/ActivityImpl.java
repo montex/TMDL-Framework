@@ -66,6 +66,7 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Case> getCases() {
 		if (cases == null) {
 			cases = new EObjectContainmentEList<Case>(Case.class, this, SANPackage.ACTIVITY__CASES);

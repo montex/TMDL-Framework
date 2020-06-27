@@ -84,6 +84,7 @@ public class TemplateExpressionParameterArrayValueAtImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterArray getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject)parameter;
@@ -110,6 +111,7 @@ public class TemplateExpressionParameterArrayValueAtImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(ParameterArray newParameter) {
 		ParameterArray oldParameter = parameter;
 		parameter = newParameter;
@@ -122,6 +124,7 @@ public class TemplateExpressionParameterArrayValueAtImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateExpressionInteger getPosition() {
 		return position;
 	}
@@ -146,6 +149,7 @@ public class TemplateExpressionParameterArrayValueAtImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPosition(TemplateExpressionInteger newPosition) {
 		if (newPosition != position) {
 			NotificationChain msgs = null;
@@ -175,6 +179,7 @@ public class TemplateExpressionParameterArrayValueAtImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate(EList<Assignment> assignments) {
 		try {
 			return (Double)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
@@ -199,6 +204,7 @@ public class TemplateExpressionParameterArrayValueAtImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate() {
 		try {
 			return (Double)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);

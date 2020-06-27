@@ -72,6 +72,7 @@ public class TemplateExpressionBooleanToIntegerImpl extends MinimalEObjectImpl.C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateExpressionBoolean getExp() {
 		return exp;
 	}
@@ -96,6 +97,7 @@ public class TemplateExpressionBooleanToIntegerImpl extends MinimalEObjectImpl.C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExp(TemplateExpressionBoolean newExp) {
 		if (newExp != exp) {
 			NotificationChain msgs = null;
@@ -125,6 +127,7 @@ public class TemplateExpressionBooleanToIntegerImpl extends MinimalEObjectImpl.C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int evaluate(EList<Assignment> assignments) {
 		try {
 			return (Integer)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
@@ -149,6 +152,7 @@ public class TemplateExpressionBooleanToIntegerImpl extends MinimalEObjectImpl.C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int evaluate() {
 		try {
 			return (Integer)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);

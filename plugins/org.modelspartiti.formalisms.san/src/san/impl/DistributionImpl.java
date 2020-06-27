@@ -68,6 +68,7 @@ public abstract class DistributionImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getParameters() {
 		return parameters;
 	}
@@ -77,6 +78,7 @@ public abstract class DistributionImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameters(String newParameters) {
 		String oldParameters = parameters;
 		parameters = newParameters;

@@ -113,6 +113,7 @@ public class MultiplicityRangeOperatorImpl extends MultiplicityImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getMin() {
 		return min;
 	}
@@ -122,6 +123,7 @@ public class MultiplicityRangeOperatorImpl extends MultiplicityImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMin(int newMin) {
 		int oldMin = min;
 		min = newMin;
@@ -134,6 +136,7 @@ public class MultiplicityRangeOperatorImpl extends MultiplicityImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getMax() {
 		return max;
 	}
@@ -143,6 +146,7 @@ public class MultiplicityRangeOperatorImpl extends MultiplicityImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMax(int newMax) {
 		int oldMax = max;
 		max = newMax;
@@ -155,6 +159,7 @@ public class MultiplicityRangeOperatorImpl extends MultiplicityImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getStep() {
 		return step;
 	}
@@ -164,6 +169,7 @@ public class MultiplicityRangeOperatorImpl extends MultiplicityImpl implements M
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStep(int newStep) {
 		int oldStep = step;
 		step = newStep;

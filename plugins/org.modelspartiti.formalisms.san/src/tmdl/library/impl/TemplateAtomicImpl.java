@@ -86,6 +86,7 @@ public class TemplateAtomicImpl extends TemplateSpecificationImpl implements Tem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSource() {
 		return source;
 	}
@@ -95,6 +96,7 @@ public class TemplateAtomicImpl extends TemplateSpecificationImpl implements Tem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(String newSource) {
 		String oldSource = source;
 		source = newSource;
@@ -107,6 +109,7 @@ public class TemplateAtomicImpl extends TemplateSpecificationImpl implements Tem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getLabels() {
 		if (labels == null) {
 			labels = new EDataTypeUniqueEList<String>(String.class, this, LibraryPackage.TEMPLATE_ATOMIC__LABELS);

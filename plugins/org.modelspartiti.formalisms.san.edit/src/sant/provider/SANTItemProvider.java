@@ -30,8 +30,6 @@ import sant.SANT;
 import sant.SANTFactory;
 import sant.SANTPackage;
 
-import tmdl.core.CoreFactory;
-
 /**
  * This is the item provider adapter for a {@link sant.SANT} object.
  * <!-- begin-user-doc -->
@@ -216,16 +214,6 @@ public class SANTItemProvider
 			(createChildParameter
 				(SANTPackage.Literals.SANT__ACTIVITY_TEMPLATES,
 				 SANTFactory.eINSTANCE.createInstantaneousActivityTemplate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SANTPackage.Literals.SANT__PARAMETERS,
-				 CoreFactory.eINSTANCE.createParameterSimple()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SANTPackage.Literals.SANT__PARAMETERS,
-				 CoreFactory.eINSTANCE.createParameterArray()));
 
 		newChildDescriptors.add
 			(createChildParameter

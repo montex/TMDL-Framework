@@ -84,6 +84,7 @@ public class ConditionalWeibullImpl extends DistributionImpl implements Conditio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getAlpha() {
 		return alpha;
 	}
@@ -108,6 +109,7 @@ public class ConditionalWeibullImpl extends DistributionImpl implements Conditio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlpha(Expression newAlpha) {
 		if (newAlpha != alpha) {
 			NotificationChain msgs = null;
@@ -127,6 +129,7 @@ public class ConditionalWeibullImpl extends DistributionImpl implements Conditio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getBeta() {
 		return beta;
 	}
@@ -151,6 +154,7 @@ public class ConditionalWeibullImpl extends DistributionImpl implements Conditio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBeta(Expression newBeta) {
 		if (newBeta != beta) {
 			NotificationChain msgs = null;
@@ -170,6 +174,7 @@ public class ConditionalWeibullImpl extends DistributionImpl implements Conditio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getT() {
 		return t;
 	}
@@ -194,6 +199,7 @@ public class ConditionalWeibullImpl extends DistributionImpl implements Conditio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setT(Expression newT) {
 		if (newT != t) {
 			NotificationChain msgs = null;

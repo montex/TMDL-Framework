@@ -222,6 +222,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConcreteModel() {
 		return concreteModelEClass;
 	}
@@ -231,6 +232,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getConcreteModel__Templatize() {
 		return concreteModelEClass.getEOperations().get(0);
 	}
@@ -240,6 +242,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateModel() {
 		return templateModelEClass;
 	}
@@ -249,6 +252,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateModel__Concretize__EList() {
 		return templateModelEClass.getEOperations().get(0);
 	}
@@ -258,6 +262,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameter() {
 		return parameterEClass;
 	}
@@ -267,6 +272,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getParameter_Name() {
 		return (EAttribute)parameterEClass.getEStructuralFeatures().get(0);
 	}
@@ -276,6 +282,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameterSimple() {
 		return parameterSimpleEClass;
 	}
@@ -285,6 +292,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameterArray() {
 		return parameterArrayEClass;
 	}
@@ -294,6 +302,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssignment() {
 		return assignmentEClass;
 	}
@@ -303,6 +312,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssignmentSimple() {
 		return assignmentSimpleEClass;
 	}
@@ -312,6 +322,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssignmentSimple_Parameter() {
 		return (EReference)assignmentSimpleEClass.getEStructuralFeatures().get(0);
 	}
@@ -321,6 +332,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssignmentSimple_Value() {
 		return (EAttribute)assignmentSimpleEClass.getEStructuralFeatures().get(1);
 	}
@@ -330,6 +342,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssignmentArray() {
 		return assignmentArrayEClass;
 	}
@@ -339,6 +352,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssignmentArray_Parameter() {
 		return (EReference)assignmentArrayEClass.getEStructuralFeatures().get(0);
 	}
@@ -348,6 +362,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssignmentArray_Values() {
 		return (EAttribute)assignmentArrayEClass.getEStructuralFeatures().get(1);
 	}
@@ -357,6 +372,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMultiplicity() {
 		return multiplicityEClass;
 	}
@@ -366,6 +382,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMultiplicityValue() {
 		return multiplicityValueEClass;
 	}
@@ -375,6 +392,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMultiplicityValue_Value() {
 		return (EAttribute)multiplicityValueEClass.getEStructuralFeatures().get(0);
 	}
@@ -384,6 +402,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMultiplicityArray() {
 		return multiplicityArrayEClass;
 	}
@@ -393,6 +412,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMultiplicityArray_Values() {
 		return (EAttribute)multiplicityArrayEClass.getEStructuralFeatures().get(0);
 	}
@@ -402,6 +422,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMultiplicityParametric() {
 		return multiplicityParametricEClass;
 	}
@@ -411,6 +432,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMultiplicityParametric_Parameter() {
 		return (EReference)multiplicityParametricEClass.getEStructuralFeatures().get(0);
 	}
@@ -420,6 +442,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CoreFactory getCoreFactory() {
 		return (CoreFactory)getEFactoryInstance();
 	}

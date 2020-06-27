@@ -102,6 +102,7 @@ public class InterfaceVariableImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -111,6 +112,7 @@ public class InterfaceVariableImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -123,6 +125,7 @@ public class InterfaceVariableImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getLabels() {
 		if (labels == null) {
 			labels = new EDataTypeUniqueEList<String>(String.class, this, LibraryPackage.INTERFACE_VARIABLE__LABELS);
@@ -135,6 +138,7 @@ public class InterfaceVariableImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Multiplicity getMultiplicity() {
 		return multiplicity;
 	}
@@ -159,6 +163,7 @@ public class InterfaceVariableImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMultiplicity(Multiplicity newMultiplicity) {
 		if (newMultiplicity != multiplicity) {
 			NotificationChain msgs = null;

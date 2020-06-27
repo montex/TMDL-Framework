@@ -75,6 +75,7 @@ public class BlockRealizationImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBlock() {
 		if (block != null && block.eIsProxy()) {
 			InternalEObject oldBlock = (InternalEObject)block;
@@ -101,6 +102,7 @@ public class BlockRealizationImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBlock(Block newBlock) {
 		Block oldBlock = block;
 		block = newBlock;
@@ -113,6 +115,7 @@ public class BlockRealizationImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variant getVariant() {
 		if (variant != null && variant.eIsProxy()) {
 			InternalEObject oldVariant = (InternalEObject)variant;
@@ -139,6 +142,7 @@ public class BlockRealizationImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariant(Variant newVariant) {
 		Variant oldVariant = variant;
 		variant = newVariant;

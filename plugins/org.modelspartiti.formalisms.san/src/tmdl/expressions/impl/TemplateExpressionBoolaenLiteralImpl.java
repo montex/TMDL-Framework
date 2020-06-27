@@ -79,6 +79,7 @@ public class TemplateExpressionBoolaenLiteralImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isValue() {
 		return value;
 	}
@@ -88,6 +89,7 @@ public class TemplateExpressionBoolaenLiteralImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(boolean newValue) {
 		boolean oldValue = value;
 		value = newValue;
@@ -110,6 +112,7 @@ public class TemplateExpressionBoolaenLiteralImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean evaluate(EList<Assignment> assignments) {
 		try {
 			return (Boolean)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
@@ -134,6 +137,7 @@ public class TemplateExpressionBoolaenLiteralImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean evaluate() {
 		try {
 			return (Boolean)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);

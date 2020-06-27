@@ -88,6 +88,7 @@ public abstract class CompositionRuleImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -97,6 +98,7 @@ public abstract class CompositionRuleImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -109,6 +111,7 @@ public abstract class CompositionRuleImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceVariable> getVariables() {
 		if (variables == null) {
 			variables = new EObjectResolvingEList<InterfaceVariable>(InterfaceVariable.class, this, LibraryPackage.COMPOSITION_RULE__VARIABLES);

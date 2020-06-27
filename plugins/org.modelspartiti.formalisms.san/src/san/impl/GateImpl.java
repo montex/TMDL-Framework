@@ -80,6 +80,7 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getFunction() {
 		return function;
 	}
@@ -104,6 +105,7 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFunction(Expression newFunction) {
 		if (newFunction != function) {
 			NotificationChain msgs = null;
@@ -123,6 +125,7 @@ public abstract class GateImpl extends NamedElementImpl implements Gate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Place> getPlaces() {
 		if (places == null) {
 			places = new EObjectResolvingEList<Place>(Place.class, this, SANPackage.GATE__PLACES);

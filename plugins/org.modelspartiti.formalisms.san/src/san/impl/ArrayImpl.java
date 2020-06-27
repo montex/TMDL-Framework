@@ -81,6 +81,7 @@ public class ArrayImpl extends NodeImpl implements Array {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CustomTypeArray getDefinition() {
 		if (definition != null && definition.eIsProxy()) {
 			InternalEObject oldDefinition = (InternalEObject)definition;
@@ -107,6 +108,7 @@ public class ArrayImpl extends NodeImpl implements Array {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinition(CustomTypeArray newDefinition) {
 		CustomTypeArray oldDefinition = definition;
 		definition = newDefinition;
@@ -119,6 +121,7 @@ public class ArrayImpl extends NodeImpl implements Array {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Node> getLeafnode() {
 		if (leafnode == null) {
 			leafnode = new EObjectContainmentEList<Node>(Node.class, this, SANPackage.ARRAY__LEAFNODE);

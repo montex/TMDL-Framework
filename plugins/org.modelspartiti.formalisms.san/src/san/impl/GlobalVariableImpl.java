@@ -70,6 +70,7 @@ public class GlobalVariableImpl extends NamedElementImpl implements GlobalVariab
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableType getType() {
 		return type;
 	}
@@ -79,6 +80,7 @@ public class GlobalVariableImpl extends NamedElementImpl implements GlobalVariab
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(VariableType newType) {
 		VariableType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;

@@ -64,6 +64,7 @@ public abstract class GateTemplateImpl extends GateImpl implements GateTemplate 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PlaceTemplate> getPlaceTemplate() {
 		if (placeTemplate == null) {
 			placeTemplate = new EObjectResolvingEList<PlaceTemplate>(PlaceTemplate.class, this, SANTPackage.GATE_TEMPLATE__PLACE_TEMPLATE);

@@ -73,6 +73,7 @@ public class BetaImpl extends DistributionImpl implements Beta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getAlpha1() {
 		return alpha1;
 	}
@@ -97,6 +98,7 @@ public class BetaImpl extends DistributionImpl implements Beta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlpha1(Expression newAlpha1) {
 		if (newAlpha1 != alpha1) {
 			NotificationChain msgs = null;
@@ -116,6 +118,7 @@ public class BetaImpl extends DistributionImpl implements Beta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getBeta1() {
 		return beta1;
 	}
@@ -140,6 +143,7 @@ public class BetaImpl extends DistributionImpl implements Beta {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBeta1(Expression newBeta1) {
 		if (newBeta1 != beta1) {
 			NotificationChain msgs = null;

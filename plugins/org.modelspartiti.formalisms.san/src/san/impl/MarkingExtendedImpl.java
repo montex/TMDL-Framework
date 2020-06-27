@@ -59,6 +59,7 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Node getNode() {
 		return node;
 	}
@@ -83,6 +84,7 @@ public class MarkingExtendedImpl extends MarkingImpl implements MarkingExtended 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNode(Node newNode) {
 		if (newNode != node) {
 			NotificationChain msgs = null;

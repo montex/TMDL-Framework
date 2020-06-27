@@ -61,6 +61,7 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject)parameter;
@@ -87,6 +88,7 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(Parameter newParameter) {
 		Parameter oldParameter = parameter;
 		parameter = newParameter;

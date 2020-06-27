@@ -70,6 +70,7 @@ public class PrimitiveTypeImpl extends TypeImpl implements PrimitiveType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtendedPlaceType getType() {
 		return type;
 	}
@@ -79,6 +80,7 @@ public class PrimitiveTypeImpl extends TypeImpl implements PrimitiveType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ExtendedPlaceType newType) {
 		ExtendedPlaceType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;

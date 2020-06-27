@@ -61,6 +61,7 @@ public class CompositionRuleMatchImpl extends CompositionRuleImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getLabels() {
 		if (labels == null) {
 			labels = new EDataTypeUniqueEList<String>(String.class, this, LibraryPackage.COMPOSITION_RULE_MATCH__LABELS);

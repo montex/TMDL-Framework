@@ -73,6 +73,7 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Place getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
@@ -99,6 +100,7 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Place newSource) {
 		Place oldSource = source;
 		source = newSource;
@@ -111,6 +113,7 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
@@ -137,6 +140,7 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(Activity newTarget) {
 		Activity oldTarget = target;
 		target = newTarget;

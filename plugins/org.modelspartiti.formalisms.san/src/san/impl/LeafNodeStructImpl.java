@@ -61,6 +61,7 @@ public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CustomTypeStruct getDefinition() {
 		if (definition != null && definition.eIsProxy()) {
 			InternalEObject oldDefinition = (InternalEObject)definition;
@@ -87,6 +88,7 @@ public class LeafNodeStructImpl extends NodeImpl implements LeafNodeStruct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinition(CustomTypeStruct newDefinition) {
 		CustomTypeStruct oldDefinition = definition;
 		definition = newDefinition;

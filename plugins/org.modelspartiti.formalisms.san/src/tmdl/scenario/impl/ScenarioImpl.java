@@ -102,6 +102,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -111,6 +112,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -123,6 +125,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Variant> getVariants() {
 		if (variants == null) {
 			variants = new EObjectContainmentEList<Variant>(Variant.class, this, ScenarioPackage.SCENARIO__VARIANTS);
@@ -135,6 +138,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variant getRoot() {
 		if (root != null && root.eIsProxy()) {
 			InternalEObject oldRoot = (InternalEObject)root;
@@ -161,6 +165,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoot(Variant newRoot) {
 		Variant oldRoot = root;
 		root = newRoot;

@@ -94,6 +94,7 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getLabels() {
 		if (labels == null) {
 			labels = new EDataTypeUniqueEList<String>(String.class, this, LibraryPackage.BLOCK__LABELS);
@@ -106,6 +107,7 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Multiplicity getMultiplicity() {
 		return multiplicity;
 	}
@@ -130,6 +132,7 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMultiplicity(Multiplicity newMultiplicity) {
 		if (newMultiplicity != multiplicity) {
 			NotificationChain msgs = null;
@@ -149,6 +152,7 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ModelInterface> getRequiredInterfaces() {
 		if (requiredInterfaces == null) {
 			requiredInterfaces = new EObjectResolvingEList<ModelInterface>(ModelInterface.class, this, LibraryPackage.BLOCK__REQUIRED_INTERFACES);

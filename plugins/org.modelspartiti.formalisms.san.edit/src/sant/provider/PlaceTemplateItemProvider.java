@@ -22,8 +22,6 @@ import sant.PlaceTemplate;
 import sant.SANTFactory;
 import sant.SANTPackage;
 
-import tmdl.core.CoreFactory;
-
 /**
  * This is the item provider adapter for a {@link sant.PlaceTemplate} object.
  * <!-- begin-user-doc -->
@@ -148,21 +146,6 @@ public class PlaceTemplateItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(SANTPackage.Literals.PLACE_TEMPLATE__MULTIPLICITY,
 				 SANTFactory.eINSTANCE.createMultiplicityRangeOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SANTPackage.Literals.PLACE_TEMPLATE__MULTIPLICITY,
-				 CoreFactory.eINSTANCE.createMultiplicityValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SANTPackage.Literals.PLACE_TEMPLATE__MULTIPLICITY,
-				 CoreFactory.eINSTANCE.createMultiplicityArray()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SANTPackage.Literals.PLACE_TEMPLATE__MULTIPLICITY,
-				 CoreFactory.eINSTANCE.createMultiplicityParametric()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -213,6 +213,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLibrary() {
 		return libraryEClass;
 	}
@@ -222,6 +223,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLibrary_Name() {
 		return (EAttribute)libraryEClass.getEStructuralFeatures().get(0);
 	}
@@ -231,6 +233,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLibrary_Interfaces() {
 		return (EReference)libraryEClass.getEStructuralFeatures().get(1);
 	}
@@ -240,6 +243,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLibrary_Templates() {
 		return (EReference)libraryEClass.getEStructuralFeatures().get(2);
 	}
@@ -249,6 +253,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModelInterface() {
 		return modelInterfaceEClass;
 	}
@@ -258,6 +263,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getModelInterface_Name() {
 		return (EAttribute)modelInterfaceEClass.getEStructuralFeatures().get(0);
 	}
@@ -267,6 +273,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModelInterface_Variables() {
 		return (EReference)modelInterfaceEClass.getEStructuralFeatures().get(1);
 	}
@@ -276,6 +283,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModelInterface_Parameters() {
 		return (EReference)modelInterfaceEClass.getEStructuralFeatures().get(2);
 	}
@@ -285,6 +293,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateSpecification() {
 		return templateSpecificationEClass;
 	}
@@ -294,6 +303,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTemplateSpecification_Name() {
 		return (EAttribute)templateSpecificationEClass.getEStructuralFeatures().get(0);
 	}
@@ -303,6 +313,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateSpecification_Interfaces() {
 		return (EReference)templateSpecificationEClass.getEStructuralFeatures().get(1);
 	}
@@ -312,6 +323,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateSpecification_Parameters() {
 		return (EReference)templateSpecificationEClass.getEStructuralFeatures().get(2);
 	}
@@ -321,6 +333,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateAtomic() {
 		return templateAtomicEClass;
 	}
@@ -330,6 +343,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTemplateAtomic_Source() {
 		return (EAttribute)templateAtomicEClass.getEStructuralFeatures().get(0);
 	}
@@ -339,6 +353,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTemplateAtomic_Labels() {
 		return (EAttribute)templateAtomicEClass.getEStructuralFeatures().get(1);
 	}
@@ -348,6 +363,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateComposite() {
 		return templateCompositeEClass;
 	}
@@ -357,6 +373,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateComposite_Rules() {
 		return (EReference)templateCompositeEClass.getEStructuralFeatures().get(0);
 	}
@@ -366,6 +383,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateComposite_Blocks() {
 		return (EReference)templateCompositeEClass.getEStructuralFeatures().get(1);
 	}
@@ -375,6 +393,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBlock() {
 		return blockEClass;
 	}
@@ -384,6 +403,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBlock_Labels() {
 		return (EAttribute)blockEClass.getEStructuralFeatures().get(0);
 	}
@@ -393,6 +413,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBlock_Multiplicity() {
 		return (EReference)blockEClass.getEStructuralFeatures().get(1);
 	}
@@ -402,6 +423,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBlock_RequiredInterfaces() {
 		return (EReference)blockEClass.getEStructuralFeatures().get(2);
 	}
@@ -411,6 +433,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterfaceVariable() {
 		return interfaceVariableEClass;
 	}
@@ -420,6 +443,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceVariable_Name() {
 		return (EAttribute)interfaceVariableEClass.getEStructuralFeatures().get(0);
 	}
@@ -429,6 +453,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceVariable_Labels() {
 		return (EAttribute)interfaceVariableEClass.getEStructuralFeatures().get(1);
 	}
@@ -438,6 +463,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInterfaceVariable_Multiplicity() {
 		return (EReference)interfaceVariableEClass.getEStructuralFeatures().get(2);
 	}
@@ -447,6 +473,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCompositionRule() {
 		return compositionRuleEClass;
 	}
@@ -456,6 +483,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCompositionRule_Name() {
 		return (EAttribute)compositionRuleEClass.getEStructuralFeatures().get(0);
 	}
@@ -465,6 +493,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCompositionRule_Variables() {
 		return (EReference)compositionRuleEClass.getEStructuralFeatures().get(1);
 	}
@@ -474,6 +503,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCompositionRuleAll() {
 		return compositionRuleAllEClass;
 	}
@@ -483,6 +513,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCompositionRuleMatch() {
 		return compositionRuleMatchEClass;
 	}
@@ -492,6 +523,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCompositionRuleMatch_Labels() {
 		return (EAttribute)compositionRuleMatchEClass.getEStructuralFeatures().get(0);
 	}
@@ -501,6 +533,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCompositionRuleForwards() {
 		return compositionRuleForwardsEClass;
 	}
@@ -510,6 +543,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LibraryFactory getLibraryFactory() {
 		return (LibraryFactory)getEFactoryInstance();
 	}

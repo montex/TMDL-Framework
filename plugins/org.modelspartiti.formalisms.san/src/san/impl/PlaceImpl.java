@@ -82,6 +82,7 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIsExtended() {
 		return (Boolean)IS_EXTENDED__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
@@ -91,6 +92,7 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		return type;
 	}
@@ -115,6 +117,7 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Type newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -134,6 +137,7 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Marking getMarking() {
 		return marking;
 	}
@@ -158,6 +162,7 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMarking(Marking newMarking) {
 		if (newMarking != marking) {
 			NotificationChain msgs = null;

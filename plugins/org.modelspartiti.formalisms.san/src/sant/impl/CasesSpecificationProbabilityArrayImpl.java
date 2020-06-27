@@ -74,6 +74,7 @@ public class CasesSpecificationProbabilityArrayImpl extends CasesSpecificationIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getCaseParameter() {
 		if (caseParameter != null && caseParameter.eIsProxy()) {
 			InternalEObject oldCaseParameter = (InternalEObject)caseParameter;
@@ -100,6 +101,7 @@ public class CasesSpecificationProbabilityArrayImpl extends CasesSpecificationIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCaseParameter(Parameter newCaseParameter) {
 		Parameter oldCaseParameter = caseParameter;
 		caseParameter = newCaseParameter;
@@ -112,6 +114,7 @@ public class CasesSpecificationProbabilityArrayImpl extends CasesSpecificationIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterArray getPValues() {
 		if (pValues != null && pValues.eIsProxy()) {
 			InternalEObject oldPValues = (InternalEObject)pValues;
@@ -138,6 +141,7 @@ public class CasesSpecificationProbabilityArrayImpl extends CasesSpecificationIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPValues(ParameterArray newPValues) {
 		ParameterArray oldPValues = pValues;
 		pValues = newPValues;

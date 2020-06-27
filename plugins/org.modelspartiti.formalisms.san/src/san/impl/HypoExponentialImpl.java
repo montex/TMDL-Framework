@@ -62,6 +62,7 @@ public class HypoExponentialImpl extends DistributionImpl implements HypoExponen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getRate0() {
 		return rate0;
 	}
@@ -86,6 +87,7 @@ public class HypoExponentialImpl extends DistributionImpl implements HypoExponen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRate0(Expression newRate0) {
 		if (newRate0 != rate0) {
 			NotificationChain msgs = null;

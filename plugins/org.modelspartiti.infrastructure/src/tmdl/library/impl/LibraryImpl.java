@@ -103,6 +103,7 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -112,6 +113,7 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -124,6 +126,7 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ModelInterface> getInterfaces() {
 		if (interfaces == null) {
 			interfaces = new EObjectContainmentEList<ModelInterface>(ModelInterface.class, this, LibraryPackage.LIBRARY__INTERFACES);
@@ -136,6 +139,7 @@ public class LibraryImpl extends MinimalEObjectImpl.Container implements Library
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateSpecification> getTemplates() {
 		if (templates == null) {
 			templates = new EObjectContainmentEList<TemplateSpecification>(TemplateSpecification.class, this, LibraryPackage.LIBRARY__TEMPLATES);

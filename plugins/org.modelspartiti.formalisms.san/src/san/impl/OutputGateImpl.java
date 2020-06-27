@@ -58,6 +58,7 @@ public class OutputGateImpl extends GateImpl implements OutputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Case> getActivityCase() {
 		if (activityCase == null) {
 			activityCase = new EObjectResolvingEList<Case>(Case.class, this, SANPackage.OUTPUT_GATE__ACTIVITY_CASE);

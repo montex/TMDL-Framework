@@ -73,6 +73,7 @@ public class NormalImpl extends DistributionImpl implements Normal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getMean() {
 		return mean;
 	}
@@ -97,6 +98,7 @@ public class NormalImpl extends DistributionImpl implements Normal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMean(Expression newMean) {
 		if (newMean != mean) {
 			NotificationChain msgs = null;
@@ -116,6 +118,7 @@ public class NormalImpl extends DistributionImpl implements Normal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getVariance() {
 		return variance;
 	}
@@ -140,6 +143,7 @@ public class NormalImpl extends DistributionImpl implements Normal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariance(Expression newVariance) {
 		if (newVariance != variance) {
 			NotificationChain msgs = null;

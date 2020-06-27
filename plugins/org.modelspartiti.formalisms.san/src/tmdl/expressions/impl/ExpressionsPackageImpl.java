@@ -375,6 +375,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpression() {
 		return templateExpressionEClass;
 	}
@@ -384,6 +385,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionInteger() {
 		return templateExpressionIntegerEClass;
 	}
@@ -393,6 +395,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionInteger__Evaluate__EList() {
 		return templateExpressionIntegerEClass.getEOperations().get(0);
 	}
@@ -402,6 +405,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionInteger__Evaluate() {
 		return templateExpressionIntegerEClass.getEOperations().get(1);
 	}
@@ -411,6 +415,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionReal() {
 		return templateExpressionRealEClass;
 	}
@@ -420,6 +425,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionReal__Evaluate__EList() {
 		return templateExpressionRealEClass.getEOperations().get(0);
 	}
@@ -429,6 +435,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionReal__Evaluate() {
 		return templateExpressionRealEClass.getEOperations().get(1);
 	}
@@ -438,6 +445,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionBoolean() {
 		return templateExpressionBooleanEClass;
 	}
@@ -447,6 +455,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionBoolean__Evaluate__EList() {
 		return templateExpressionBooleanEClass.getEOperations().get(0);
 	}
@@ -456,6 +465,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionBoolean__Evaluate() {
 		return templateExpressionBooleanEClass.getEOperations().get(1);
 	}
@@ -465,6 +475,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionIntegerLiteral() {
 		return templateExpressionIntegerLiteralEClass;
 	}
@@ -474,6 +485,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTemplateExpressionIntegerLiteral_Value() {
 		return (EAttribute)templateExpressionIntegerLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -483,6 +495,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionIntegerLiteral__Evaluate__EList() {
 		return templateExpressionIntegerLiteralEClass.getEOperations().get(0);
 	}
@@ -492,6 +505,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealLiteral() {
 		return templateExpressionRealLiteralEClass;
 	}
@@ -501,6 +515,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTemplateExpressionRealLiteral_Value() {
 		return (EAttribute)templateExpressionRealLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -510,6 +525,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealLiteral__Evaluate__EList() {
 		return templateExpressionRealLiteralEClass.getEOperations().get(0);
 	}
@@ -519,6 +535,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionBoolaenLiteral() {
 		return templateExpressionBoolaenLiteralEClass;
 	}
@@ -528,6 +545,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTemplateExpressionBoolaenLiteral_Value() {
 		return (EAttribute)templateExpressionBoolaenLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -537,6 +555,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionBoolaenLiteral__Evaluate__EList() {
 		return templateExpressionBoolaenLiteralEClass.getEOperations().get(0);
 	}
@@ -546,6 +565,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionIntegerFromReal() {
 		return templateExpressionIntegerFromRealEClass;
 	}
@@ -555,6 +575,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionIntegerFromReal_Exp() {
 		return (EReference)templateExpressionIntegerFromRealEClass.getEStructuralFeatures().get(0);
 	}
@@ -564,6 +585,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionIntegerFromReal__Evaluate__EList() {
 		return templateExpressionIntegerFromRealEClass.getEOperations().get(0);
 	}
@@ -573,6 +595,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealFromInteger() {
 		return templateExpressionRealFromIntegerEClass;
 	}
@@ -582,6 +605,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealFromInteger_Exp() {
 		return (EReference)templateExpressionRealFromIntegerEClass.getEStructuralFeatures().get(0);
 	}
@@ -591,6 +615,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealFromInteger__Evaluate__EList() {
 		return templateExpressionRealFromIntegerEClass.getEOperations().get(0);
 	}
@@ -600,6 +625,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionParameterSimple() {
 		return templateExpressionParameterSimpleEClass;
 	}
@@ -609,6 +635,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionParameterSimple_Parameter() {
 		return (EReference)templateExpressionParameterSimpleEClass.getEStructuralFeatures().get(0);
 	}
@@ -618,6 +645,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionParameterSimple__Evaluate__EList() {
 		return templateExpressionParameterSimpleEClass.getEOperations().get(0);
 	}
@@ -627,6 +655,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionParameterArrayValueAt() {
 		return templateExpressionParameterArrayValueAtEClass;
 	}
@@ -636,6 +665,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionParameterArrayValueAt_Parameter() {
 		return (EReference)templateExpressionParameterArrayValueAtEClass.getEStructuralFeatures().get(0);
 	}
@@ -645,6 +675,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionParameterArrayValueAt_Position() {
 		return (EReference)templateExpressionParameterArrayValueAtEClass.getEStructuralFeatures().get(1);
 	}
@@ -654,6 +685,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionParameterArrayValueAt__Evaluate__EList() {
 		return templateExpressionParameterArrayValueAtEClass.getEOperations().get(0);
 	}
@@ -663,6 +695,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionParameterArraySize() {
 		return templateExpressionParameterArraySizeEClass;
 	}
@@ -672,6 +705,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionParameterArraySize_Parameter() {
 		return (EReference)templateExpressionParameterArraySizeEClass.getEStructuralFeatures().get(0);
 	}
@@ -681,6 +715,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionParameterArraySize__Evaluate__EList() {
 		return templateExpressionParameterArraySizeEClass.getEOperations().get(0);
 	}
@@ -690,6 +725,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionArrayAggregate() {
 		return templateExpressionArrayAggregateEClass;
 	}
@@ -699,6 +735,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionArrayAggregate_Parameter() {
 		return (EReference)templateExpressionArrayAggregateEClass.getEStructuralFeatures().get(0);
 	}
@@ -708,6 +745,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTemplateExpressionArrayAggregate_Function() {
 		return (EAttribute)templateExpressionArrayAggregateEClass.getEStructuralFeatures().get(1);
 	}
@@ -717,6 +755,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionArrayAggregate__Evaluate__EList() {
 		return templateExpressionArrayAggregateEClass.getEOperations().get(0);
 	}
@@ -726,6 +765,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealBinaryOperation() {
 		return templateExpressionRealBinaryOperationEClass;
 	}
@@ -735,6 +775,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealBinaryOperation_Exp1() {
 		return (EReference)templateExpressionRealBinaryOperationEClass.getEStructuralFeatures().get(0);
 	}
@@ -744,6 +785,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealBinaryOperation_Exp2() {
 		return (EReference)templateExpressionRealBinaryOperationEClass.getEStructuralFeatures().get(1);
 	}
@@ -753,6 +795,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealSum() {
 		return templateExpressionRealSumEClass;
 	}
@@ -762,6 +805,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealSum__Evaluate__EList() {
 		return templateExpressionRealSumEClass.getEOperations().get(0);
 	}
@@ -771,6 +815,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealSubtract() {
 		return templateExpressionRealSubtractEClass;
 	}
@@ -780,6 +825,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealSubtract__Evaluate__EList() {
 		return templateExpressionRealSubtractEClass.getEOperations().get(0);
 	}
@@ -789,6 +835,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealMultiply() {
 		return templateExpressionRealMultiplyEClass;
 	}
@@ -798,6 +845,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealMultiply__Evaluate__EList() {
 		return templateExpressionRealMultiplyEClass.getEOperations().get(0);
 	}
@@ -807,6 +855,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealDivide() {
 		return templateExpressionRealDivideEClass;
 	}
@@ -816,6 +865,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealDivide__Evaluate__EList() {
 		return templateExpressionRealDivideEClass.getEOperations().get(0);
 	}
@@ -825,6 +875,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealModulo() {
 		return templateExpressionRealModuloEClass;
 	}
@@ -834,6 +885,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealModulo_Exp1() {
 		return (EReference)templateExpressionRealModuloEClass.getEStructuralFeatures().get(0);
 	}
@@ -843,6 +895,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealModulo_Exp2() {
 		return (EReference)templateExpressionRealModuloEClass.getEStructuralFeatures().get(1);
 	}
@@ -852,6 +905,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealModulo__Evaluate__EList() {
 		return templateExpressionRealModuloEClass.getEOperations().get(0);
 	}
@@ -861,6 +915,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealUnary() {
 		return templateExpressionRealUnaryEClass;
 	}
@@ -870,6 +925,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealUnary_Exp() {
 		return (EReference)templateExpressionRealUnaryEClass.getEStructuralFeatures().get(0);
 	}
@@ -879,6 +935,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealFloor() {
 		return templateExpressionRealFloorEClass;
 	}
@@ -888,6 +945,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealFloor_Exp() {
 		return (EReference)templateExpressionRealFloorEClass.getEStructuralFeatures().get(0);
 	}
@@ -897,6 +955,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealFloor__Evaluate__EList() {
 		return templateExpressionRealFloorEClass.getEOperations().get(0);
 	}
@@ -906,6 +965,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealCeil() {
 		return templateExpressionRealCeilEClass;
 	}
@@ -915,6 +975,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealCeil_Exp() {
 		return (EReference)templateExpressionRealCeilEClass.getEStructuralFeatures().get(0);
 	}
@@ -924,6 +985,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealCeil__Evaluate__EList() {
 		return templateExpressionRealCeilEClass.getEOperations().get(0);
 	}
@@ -933,6 +995,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealRound() {
 		return templateExpressionRealRoundEClass;
 	}
@@ -942,6 +1005,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealRound_Exp() {
 		return (EReference)templateExpressionRealRoundEClass.getEStructuralFeatures().get(0);
 	}
@@ -951,6 +1015,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealRound__Evaluate__EList() {
 		return templateExpressionRealRoundEClass.getEOperations().get(0);
 	}
@@ -960,6 +1025,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionRealIfThenElse() {
 		return templateExpressionRealIfThenElseEClass;
 	}
@@ -969,6 +1035,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealIfThenElse_Condition() {
 		return (EReference)templateExpressionRealIfThenElseEClass.getEStructuralFeatures().get(0);
 	}
@@ -978,6 +1045,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealIfThenElse_IfTrue() {
 		return (EReference)templateExpressionRealIfThenElseEClass.getEStructuralFeatures().get(1);
 	}
@@ -987,6 +1055,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionRealIfThenElse_IfFalse() {
 		return (EReference)templateExpressionRealIfThenElseEClass.getEStructuralFeatures().get(2);
 	}
@@ -996,6 +1065,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionRealIfThenElse__Evaluate__EList() {
 		return templateExpressionRealIfThenElseEClass.getEOperations().get(0);
 	}
@@ -1005,6 +1075,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionBooleanUnaryOperation() {
 		return templateExpressionBooleanUnaryOperationEClass;
 	}
@@ -1014,6 +1085,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionBooleanUnaryOperation_Exp() {
 		return (EReference)templateExpressionBooleanUnaryOperationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1023,6 +1095,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionBooleanNot() {
 		return templateExpressionBooleanNotEClass;
 	}
@@ -1032,6 +1105,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionBooleanNot__Evaluate__EList() {
 		return templateExpressionBooleanNotEClass.getEOperations().get(0);
 	}
@@ -1041,6 +1115,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionBooleanToInteger() {
 		return templateExpressionBooleanToIntegerEClass;
 	}
@@ -1050,6 +1125,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionBooleanToInteger_Exp() {
 		return (EReference)templateExpressionBooleanToIntegerEClass.getEStructuralFeatures().get(0);
 	}
@@ -1059,6 +1135,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionBooleanToInteger__Evaluate__EList() {
 		return templateExpressionBooleanToIntegerEClass.getEOperations().get(0);
 	}
@@ -1068,6 +1145,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionBooleanBinaryOperation() {
 		return templateExpressionBooleanBinaryOperationEClass;
 	}
@@ -1077,6 +1155,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionBooleanBinaryOperation_Exp1() {
 		return (EReference)templateExpressionBooleanBinaryOperationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1086,6 +1165,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateExpressionBooleanBinaryOperation_Exp2() {
 		return (EReference)templateExpressionBooleanBinaryOperationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1095,6 +1175,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionBooleanAnd() {
 		return templateExpressionBooleanAndEClass;
 	}
@@ -1104,6 +1185,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionBooleanAnd__Evaluate__EList() {
 		return templateExpressionBooleanAndEClass.getEOperations().get(0);
 	}
@@ -1113,6 +1195,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateExpressionBooleanOr() {
 		return templateExpressionBooleanOrEClass;
 	}
@@ -1122,6 +1205,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTemplateExpressionBooleanOr__Evaluate__EList() {
 		return templateExpressionBooleanOrEClass.getEOperations().get(0);
 	}
@@ -1131,6 +1215,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getArrayAggregateKind() {
 		return arrayAggregateKindEEnum;
 	}
@@ -1140,6 +1225,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionsFactory getExpressionsFactory() {
 		return (ExpressionsFactory)getEFactoryInstance();
 	}

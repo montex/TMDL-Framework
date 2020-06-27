@@ -61,6 +61,7 @@ public class ComplexTypeImpl extends TypeImpl implements ComplexType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CustomTypeDefinition getDefinition() {
 		if (definition != null && definition.eIsProxy()) {
 			InternalEObject oldDefinition = (InternalEObject)definition;
@@ -87,6 +88,7 @@ public class ComplexTypeImpl extends TypeImpl implements ComplexType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefinition(CustomTypeDefinition newDefinition) {
 		CustomTypeDefinition oldDefinition = definition;
 		definition = newDefinition;

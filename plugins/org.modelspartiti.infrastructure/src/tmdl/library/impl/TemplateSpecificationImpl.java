@@ -102,6 +102,7 @@ public abstract class TemplateSpecificationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -111,6 +112,7 @@ public abstract class TemplateSpecificationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -123,6 +125,7 @@ public abstract class TemplateSpecificationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ModelInterface> getInterfaces() {
 		if (interfaces == null) {
 			interfaces = new EObjectResolvingEList<ModelInterface>(ModelInterface.class, this, LibraryPackage.TEMPLATE_SPECIFICATION__INTERFACES);
@@ -135,6 +138,7 @@ public abstract class TemplateSpecificationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getParameters() {
 		if (parameters != null && parameters.eIsProxy()) {
 			InternalEObject oldParameters = (InternalEObject)parameters;
@@ -161,6 +165,7 @@ public abstract class TemplateSpecificationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameters(Parameter newParameters) {
 		Parameter oldParameters = parameters;
 		parameters = newParameters;

@@ -73,6 +73,7 @@ public class LognormalImpl extends DistributionImpl implements Lognormal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getMu() {
 		return mu;
 	}
@@ -97,6 +98,7 @@ public class LognormalImpl extends DistributionImpl implements Lognormal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMu(Expression newMu) {
 		if (newMu != mu) {
 			NotificationChain msgs = null;
@@ -116,6 +118,7 @@ public class LognormalImpl extends DistributionImpl implements Lognormal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getAlphaSquared() {
 		return alphaSquared;
 	}
@@ -140,6 +143,7 @@ public class LognormalImpl extends DistributionImpl implements Lognormal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlphaSquared(Expression newAlphaSquared) {
 		if (newAlphaSquared != alphaSquared) {
 			NotificationChain msgs = null;

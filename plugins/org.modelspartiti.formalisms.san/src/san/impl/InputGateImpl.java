@@ -77,6 +77,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getPredicate() {
 		return predicate;
 	}
@@ -101,6 +102,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPredicate(Expression newPredicate) {
 		if (newPredicate != predicate) {
 			NotificationChain msgs = null;
@@ -120,6 +122,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Activity> getActivity() {
 		if (activity == null) {
 			activity = new EObjectResolvingEList<Activity>(Activity.class, this, SANPackage.INPUT_GATE__ACTIVITY);

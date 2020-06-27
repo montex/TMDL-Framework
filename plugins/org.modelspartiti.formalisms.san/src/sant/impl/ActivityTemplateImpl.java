@@ -64,6 +64,7 @@ public abstract class ActivityTemplateImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CasesSpecification getCasesTemplate() {
 		return casesTemplate;
 	}
@@ -88,6 +89,7 @@ public abstract class ActivityTemplateImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCasesTemplate(CasesSpecification newCasesTemplate) {
 		if (newCasesTemplate != casesTemplate) {
 			NotificationChain msgs = null;

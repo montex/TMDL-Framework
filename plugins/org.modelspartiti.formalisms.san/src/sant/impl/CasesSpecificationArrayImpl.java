@@ -91,6 +91,7 @@ public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getNumCases() {
 		return numCases;
 	}
@@ -100,6 +101,7 @@ public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumCases(int newNumCases) {
 		int oldNumCases = numCases;
 		numCases = newNumCases;
@@ -112,6 +114,7 @@ public class CasesSpecificationArrayImpl extends CasesSpecificationImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getP() {
 		if (p == null) {
 			p = new EObjectContainmentEList<Expression>(Expression.class, this, SANTPackage.CASES_SPECIFICATION_ARRAY__P);

@@ -67,10 +67,16 @@ import san.Type;
 import san.Uniform;
 import san.VariableType;
 import san.Weibull;
+import sant.SANTPackage;
+import sant.impl.SANTPackageImpl;
 import tmdl.core.CorePackage;
+import tmdl.core.impl.CorePackageImpl;
 import tmdl.expressions.ExpressionsPackage;
+import tmdl.expressions.impl.ExpressionsPackageImpl;
 import tmdl.library.LibraryPackage;
+import tmdl.library.impl.LibraryPackageImpl;
 import tmdl.scenario.ScenarioPackage;
+import tmdl.scenario.impl.ScenarioPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -525,17 +531,33 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		ScenarioPackage.eINSTANCE.eClass();
-		LibraryPackage.eINSTANCE.eClass();
-		CorePackage.eINSTANCE.eClass();
-		ExpressionsPackage.eINSTANCE.eClass();
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SANTPackage.eNS_URI);
+		SANTPackageImpl theSANTPackage = (SANTPackageImpl)(registeredPackage instanceof SANTPackageImpl ? registeredPackage : SANTPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
+		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(registeredPackage instanceof ScenarioPackageImpl ? registeredPackage : ScenarioPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI);
+		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(registeredPackage instanceof LibraryPackageImpl ? registeredPackage : LibraryPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI);
+		ExpressionsPackageImpl theExpressionsPackage = (ExpressionsPackageImpl)(registeredPackage instanceof ExpressionsPackageImpl ? registeredPackage : ExpressionsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theSANPackage.createPackageContents();
+		theSANTPackage.createPackageContents();
+		theScenarioPackage.createPackageContents();
+		theLibraryPackage.createPackageContents();
+		theCorePackage.createPackageContents();
+		theExpressionsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theSANPackage.initializePackageContents();
+		theSANTPackage.initializePackageContents();
+		theScenarioPackage.initializePackageContents();
+		theLibraryPackage.initializePackageContents();
+		theCorePackage.initializePackageContents();
+		theExpressionsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theSANPackage.freeze();
@@ -550,6 +572,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSAN() {
 		return sanEClass;
 	}
@@ -559,6 +582,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSAN_Places() {
 		return (EReference)sanEClass.getEStructuralFeatures().get(0);
 	}
@@ -568,6 +592,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSAN_Name() {
 		return (EAttribute)sanEClass.getEStructuralFeatures().get(1);
 	}
@@ -577,6 +602,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSAN_Activities() {
 		return (EReference)sanEClass.getEStructuralFeatures().get(2);
 	}
@@ -586,6 +612,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSAN_GlobalVariables() {
 		return (EReference)sanEClass.getEStructuralFeatures().get(3);
 	}
@@ -595,6 +622,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSAN_Arcs() {
 		return (EReference)sanEClass.getEStructuralFeatures().get(4);
 	}
@@ -604,6 +632,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSAN_Gates() {
 		return (EReference)sanEClass.getEStructuralFeatures().get(5);
 	}
@@ -613,6 +642,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSAN_Initialization() {
 		return (EReference)sanEClass.getEStructuralFeatures().get(6);
 	}
@@ -622,6 +652,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSAN_Customtype() {
 		return (EReference)sanEClass.getEStructuralFeatures().get(7);
 	}
@@ -631,6 +662,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPlace() {
 		return placeEClass;
 	}
@@ -640,6 +672,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPlace_IsExtended() {
 		return (EAttribute)placeEClass.getEStructuralFeatures().get(0);
 	}
@@ -649,6 +682,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlace_Type() {
 		return (EReference)placeEClass.getEStructuralFeatures().get(1);
 	}
@@ -658,6 +692,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlace_Marking() {
 		return (EReference)placeEClass.getEStructuralFeatures().get(2);
 	}
@@ -667,6 +702,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getActivity() {
 		return activityEClass;
 	}
@@ -676,6 +712,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivity_Cases() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(0);
 	}
@@ -685,6 +722,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNamedElement() {
 		return namedElementEClass;
 	}
@@ -694,6 +732,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNamedElement_Name() {
 		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -703,6 +742,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCase() {
 		return caseEClass;
 	}
@@ -712,6 +752,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCase_ID() {
 		return (EAttribute)caseEClass.getEStructuralFeatures().get(0);
 	}
@@ -721,6 +762,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCase_P() {
 		return (EReference)caseEClass.getEStructuralFeatures().get(1);
 	}
@@ -730,6 +772,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArc() {
 		return arcEClass;
 	}
@@ -739,6 +782,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInputArc() {
 		return inputArcEClass;
 	}
@@ -748,6 +792,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInputArc_Source() {
 		return (EReference)inputArcEClass.getEStructuralFeatures().get(0);
 	}
@@ -757,6 +802,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInputArc_Target() {
 		return (EReference)inputArcEClass.getEStructuralFeatures().get(1);
 	}
@@ -766,6 +812,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOutputArc() {
 		return outputArcEClass;
 	}
@@ -775,6 +822,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOutputArc_Source() {
 		return (EReference)outputArcEClass.getEStructuralFeatures().get(0);
 	}
@@ -784,6 +832,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOutputArc_Target() {
 		return (EReference)outputArcEClass.getEStructuralFeatures().get(1);
 	}
@@ -793,6 +842,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGate() {
 		return gateEClass;
 	}
@@ -802,6 +852,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGate_Function() {
 		return (EReference)gateEClass.getEStructuralFeatures().get(0);
 	}
@@ -811,6 +862,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGate_Places() {
 		return (EReference)gateEClass.getEStructuralFeatures().get(1);
 	}
@@ -820,6 +872,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOutputGate() {
 		return outputGateEClass;
 	}
@@ -829,6 +882,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOutputGate_ActivityCase() {
 		return (EReference)outputGateEClass.getEStructuralFeatures().get(0);
 	}
@@ -838,6 +892,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInputGate() {
 		return inputGateEClass;
 	}
@@ -847,6 +902,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInputGate_Predicate() {
 		return (EReference)inputGateEClass.getEStructuralFeatures().get(0);
 	}
@@ -856,6 +912,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInputGate_Activity() {
 		return (EReference)inputGateEClass.getEStructuralFeatures().get(1);
 	}
@@ -865,6 +922,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInstantaneousActivity() {
 		return instantaneousActivityEClass;
 	}
@@ -874,6 +932,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTimedActivity() {
 		return timedActivityEClass;
 	}
@@ -883,6 +942,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTimedActivity_TimeDistribution() {
 		return (EReference)timedActivityEClass.getEStructuralFeatures().get(0);
 	}
@@ -892,6 +952,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTimedActivity_Activation() {
 		return (EReference)timedActivityEClass.getEStructuralFeatures().get(1);
 	}
@@ -901,6 +962,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTimedActivity_Reactivation() {
 		return (EReference)timedActivityEClass.getEStructuralFeatures().get(2);
 	}
@@ -910,6 +972,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDistribution() {
 		return distributionEClass;
 	}
@@ -919,6 +982,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDistribution_Parameters() {
 		return (EAttribute)distributionEClass.getEStructuralFeatures().get(0);
 	}
@@ -928,6 +992,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpression() {
 		return expressionEClass;
 	}
@@ -937,6 +1002,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExpression_Segments() {
 		return (EReference)expressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -946,6 +1012,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpressionText() {
 		return expressionTextEClass;
 	}
@@ -955,6 +1022,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExpressionText_Text() {
 		return (EAttribute)expressionTextEClass.getEStructuralFeatures().get(0);
 	}
@@ -964,6 +1032,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpressionMarking() {
 		return expressionMarkingEClass;
 	}
@@ -973,6 +1042,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExpressionMarking_Place() {
 		return (EReference)expressionMarkingEClass.getEStructuralFeatures().get(0);
 	}
@@ -982,6 +1052,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpressionVariable() {
 		return expressionVariableEClass;
 	}
@@ -991,6 +1062,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExpressionVariable_Variable() {
 		return (EReference)expressionVariableEClass.getEStructuralFeatures().get(0);
 	}
@@ -1000,6 +1072,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMarking() {
 		return markingEClass;
 	}
@@ -1009,6 +1082,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMarkingExtended() {
 		return markingExtendedEClass;
 	}
@@ -1018,6 +1092,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMarkingExtended_Node() {
 		return (EReference)markingExtendedEClass.getEStructuralFeatures().get(0);
 	}
@@ -1027,6 +1102,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGlobalVariable() {
 		return globalVariableEClass;
 	}
@@ -1036,6 +1112,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGlobalVariable_Type() {
 		return (EAttribute)globalVariableEClass.getEStructuralFeatures().get(0);
 	}
@@ -1045,6 +1122,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExponential() {
 		return exponentialEClass;
 	}
@@ -1054,6 +1132,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExponential_Rate() {
 		return (EReference)exponentialEClass.getEStructuralFeatures().get(0);
 	}
@@ -1063,6 +1142,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNormal() {
 		return normalEClass;
 	}
@@ -1072,6 +1152,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNormal_Mean() {
 		return (EReference)normalEClass.getEStructuralFeatures().get(0);
 	}
@@ -1081,6 +1162,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNormal_Variance() {
 		return (EReference)normalEClass.getEStructuralFeatures().get(1);
 	}
@@ -1090,6 +1172,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGamma() {
 		return gammaEClass;
 	}
@@ -1099,6 +1182,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGamma_Alpha() {
 		return (EReference)gammaEClass.getEStructuralFeatures().get(0);
 	}
@@ -1108,6 +1192,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGamma_Beta() {
 		return (EReference)gammaEClass.getEStructuralFeatures().get(1);
 	}
@@ -1117,6 +1202,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBinomial() {
 		return binomialEClass;
 	}
@@ -1126,6 +1212,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBinomial_T() {
 		return (EReference)binomialEClass.getEStructuralFeatures().get(0);
 	}
@@ -1135,6 +1222,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBinomial_P() {
 		return (EReference)binomialEClass.getEStructuralFeatures().get(1);
 	}
@@ -1144,6 +1232,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDeterministic() {
 		return deterministicEClass;
 	}
@@ -1153,6 +1242,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDeterministic_Value() {
 		return (EReference)deterministicEClass.getEStructuralFeatures().get(0);
 	}
@@ -1162,6 +1252,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLognormal() {
 		return lognormalEClass;
 	}
@@ -1171,6 +1262,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLognormal_Mu() {
 		return (EReference)lognormalEClass.getEStructuralFeatures().get(0);
 	}
@@ -1180,6 +1272,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLognormal_AlphaSquared() {
 		return (EReference)lognormalEClass.getEStructuralFeatures().get(1);
 	}
@@ -1189,6 +1282,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBeta() {
 		return betaEClass;
 	}
@@ -1198,6 +1292,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBeta_Alpha1() {
 		return (EReference)betaEClass.getEStructuralFeatures().get(0);
 	}
@@ -1207,6 +1302,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBeta_Beta1() {
 		return (EReference)betaEClass.getEStructuralFeatures().get(1);
 	}
@@ -1216,6 +1312,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNegativeBinomial() {
 		return negativeBinomialEClass;
 	}
@@ -1225,6 +1322,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNegativeBinomial_S() {
 		return (EReference)negativeBinomialEClass.getEStructuralFeatures().get(0);
 	}
@@ -1234,6 +1332,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNegativeBinomial_P() {
 		return (EReference)negativeBinomialEClass.getEStructuralFeatures().get(1);
 	}
@@ -1243,6 +1342,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGeometric() {
 		return geometricEClass;
 	}
@@ -1252,6 +1352,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGeometric_P() {
 		return (EReference)geometricEClass.getEStructuralFeatures().get(0);
 	}
@@ -1261,6 +1362,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getErlang() {
 		return erlangEClass;
 	}
@@ -1270,6 +1372,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getErlang_M() {
 		return (EReference)erlangEClass.getEStructuralFeatures().get(0);
 	}
@@ -1279,6 +1382,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getErlang_Beta() {
 		return (EReference)erlangEClass.getEStructuralFeatures().get(1);
 	}
@@ -1288,6 +1392,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUniform() {
 		return uniformEClass;
 	}
@@ -1297,6 +1402,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUniform_LowerBound() {
 		return (EReference)uniformEClass.getEStructuralFeatures().get(0);
 	}
@@ -1306,6 +1412,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUniform_UpperBound() {
 		return (EReference)uniformEClass.getEStructuralFeatures().get(1);
 	}
@@ -1315,6 +1422,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getHyperExponential() {
 		return hyperExponentialEClass;
 	}
@@ -1324,6 +1432,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getHyperExponential_Rate0() {
 		return (EReference)hyperExponentialEClass.getEStructuralFeatures().get(0);
 	}
@@ -1333,6 +1442,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getHyperExponential_P0() {
 		return (EReference)hyperExponentialEClass.getEStructuralFeatures().get(1);
 	}
@@ -1342,6 +1452,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWeibull() {
 		return weibullEClass;
 	}
@@ -1351,6 +1462,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWeibull_Alpha() {
 		return (EReference)weibullEClass.getEStructuralFeatures().get(0);
 	}
@@ -1360,6 +1472,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWeibull_Beta() {
 		return (EReference)weibullEClass.getEStructuralFeatures().get(1);
 	}
@@ -1369,6 +1482,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTriangular() {
 		return triangularEClass;
 	}
@@ -1378,6 +1492,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTriangular_Min() {
 		return (EReference)triangularEClass.getEStructuralFeatures().get(0);
 	}
@@ -1387,6 +1502,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTriangular_Middle() {
 		return (EReference)triangularEClass.getEStructuralFeatures().get(1);
 	}
@@ -1396,6 +1512,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTriangular_Max() {
 		return (EReference)triangularEClass.getEStructuralFeatures().get(2);
 	}
@@ -1405,6 +1522,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConditionalWeibull() {
 		return conditionalWeibullEClass;
 	}
@@ -1414,6 +1532,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConditionalWeibull_Alpha() {
 		return (EReference)conditionalWeibullEClass.getEStructuralFeatures().get(0);
 	}
@@ -1423,6 +1542,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConditionalWeibull_Beta() {
 		return (EReference)conditionalWeibullEClass.getEStructuralFeatures().get(1);
 	}
@@ -1432,6 +1552,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConditionalWeibull_T() {
 		return (EReference)conditionalWeibullEClass.getEStructuralFeatures().get(2);
 	}
@@ -1441,6 +1562,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getHypoExponential() {
 		return hypoExponentialEClass;
 	}
@@ -1450,6 +1572,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getHypoExponential_Rate0() {
 		return (EReference)hypoExponentialEClass.getEStructuralFeatures().get(0);
 	}
@@ -1459,6 +1582,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPareto() {
 		return paretoEClass;
 	}
@@ -1468,6 +1592,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPareto_LowerBound() {
 		return (EReference)paretoEClass.getEStructuralFeatures().get(0);
 	}
@@ -1477,6 +1602,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPareto_Shape() {
 		return (EReference)paretoEClass.getEStructuralFeatures().get(1);
 	}
@@ -1486,6 +1612,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpressionSegment() {
 		return expressionSegmentEClass;
 	}
@@ -1495,6 +1622,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getType() {
 		return typeEClass;
 	}
@@ -1504,6 +1632,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrimitiveType() {
 		return primitiveTypeEClass;
 	}
@@ -1513,6 +1642,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPrimitiveType_Type() {
 		return (EAttribute)primitiveTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1522,6 +1652,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getComplexType() {
 		return complexTypeEClass;
 	}
@@ -1531,6 +1662,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getComplexType_Definition() {
 		return (EReference)complexTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1540,6 +1672,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCustomTypeDefinition() {
 		return customTypeDefinitionEClass;
 	}
@@ -1549,6 +1682,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCustomTypeArray() {
 		return customTypeArrayEClass;
 	}
@@ -1558,6 +1692,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCustomTypeArray_Size() {
 		return (EAttribute)customTypeArrayEClass.getEStructuralFeatures().get(0);
 	}
@@ -1567,6 +1702,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCustomTypeArray_Name() {
 		return (EAttribute)customTypeArrayEClass.getEStructuralFeatures().get(1);
 	}
@@ -1576,6 +1712,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCustomTypeArray_TypeArray() {
 		return (EReference)customTypeArrayEClass.getEStructuralFeatures().get(2);
 	}
@@ -1585,6 +1722,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCustomTypeStruct() {
 		return customTypeStructEClass;
 	}
@@ -1594,6 +1732,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCustomTypeStruct_Field() {
 		return (EReference)customTypeStructEClass.getEStructuralFeatures().get(0);
 	}
@@ -1603,6 +1742,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCustomTypeStruct_Name() {
 		return (EAttribute)customTypeStructEClass.getEStructuralFeatures().get(1);
 	}
@@ -1612,6 +1752,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getField() {
 		return fieldEClass;
 	}
@@ -1621,6 +1762,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getField_Name() {
 		return (EAttribute)fieldEClass.getEStructuralFeatures().get(0);
 	}
@@ -1630,6 +1772,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getField_TypeStruct() {
 		return (EReference)fieldEClass.getEStructuralFeatures().get(1);
 	}
@@ -1639,6 +1782,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMarkingSimple() {
 		return markingSimpleEClass;
 	}
@@ -1648,6 +1792,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMarkingSimple_Value() {
 		return (EAttribute)markingSimpleEClass.getEStructuralFeatures().get(0);
 	}
@@ -1657,6 +1802,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMarkingGlobalVariable() {
 		return markingGlobalVariableEClass;
 	}
@@ -1666,6 +1812,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMarkingGlobalVariable_Variable() {
 		return (EReference)markingGlobalVariableEClass.getEStructuralFeatures().get(0);
 	}
@@ -1675,6 +1822,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNode() {
 		return nodeEClass;
 	}
@@ -1684,6 +1832,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArray() {
 		return arrayEClass;
 	}
@@ -1693,6 +1842,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArray_Definition() {
 		return (EReference)arrayEClass.getEStructuralFeatures().get(0);
 	}
@@ -1702,6 +1852,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArray_Leafnode() {
 		return (EReference)arrayEClass.getEStructuralFeatures().get(1);
 	}
@@ -1711,6 +1862,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLeafNode() {
 		return leafNodeEClass;
 	}
@@ -1720,6 +1872,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLeafNodeString() {
 		return leafNodeStringEClass;
 	}
@@ -1729,6 +1882,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLeafNodeString_Value() {
 		return (EAttribute)leafNodeStringEClass.getEStructuralFeatures().get(0);
 	}
@@ -1738,6 +1892,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLeafNodeStruct() {
 		return leafNodeStructEClass;
 	}
@@ -1747,6 +1902,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLeafNodeStruct_Definition() {
 		return (EReference)leafNodeStructEClass.getEStructuralFeatures().get(0);
 	}
@@ -1756,6 +1912,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLeafNodeGlobalVariable() {
 		return leafNodeGlobalVariableEClass;
 	}
@@ -1765,6 +1922,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLeafNodeGlobalVariable_Variable() {
 		return (EReference)leafNodeGlobalVariableEClass.getEStructuralFeatures().get(0);
 	}
@@ -1774,6 +1932,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getVariableType() {
 		return variableTypeEEnum;
 	}
@@ -1783,6 +1942,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getExtendedPlaceType() {
 		return extendedPlaceTypeEEnum;
 	}
@@ -1792,6 +1952,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getCodeFragment() {
 		return codeFragmentEDataType;
 	}
@@ -1801,6 +1962,7 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SANFactory getSANFactory() {
 		return (SANFactory)getEFactoryInstance();
 	}
@@ -2402,11 +2564,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 		   source,
 		   new String[] {
 			   "kind", "elementOnly"
-		   });
-		addAnnotation
-		  (expressionTextEClass,
-		   source,
-		   new String[] {
 		   });
 		addAnnotation
 		  (getExpressionText_Text(),

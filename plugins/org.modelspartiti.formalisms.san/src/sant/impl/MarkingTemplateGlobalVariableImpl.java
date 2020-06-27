@@ -62,6 +62,7 @@ public class MarkingTemplateGlobalVariableImpl extends MarkingTemplateImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GlobalVariable getVariable() {
 		if (variable != null && variable.eIsProxy()) {
 			InternalEObject oldVariable = (InternalEObject)variable;
@@ -88,6 +89,7 @@ public class MarkingTemplateGlobalVariableImpl extends MarkingTemplateImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariable(GlobalVariable newVariable) {
 		GlobalVariable oldVariable = variable;
 		variable = newVariable;

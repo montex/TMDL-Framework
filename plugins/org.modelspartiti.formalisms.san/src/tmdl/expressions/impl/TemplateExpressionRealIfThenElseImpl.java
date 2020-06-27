@@ -95,6 +95,7 @@ public class TemplateExpressionRealIfThenElseImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateExpressionBoolean getCondition() {
 		return condition;
 	}
@@ -119,6 +120,7 @@ public class TemplateExpressionRealIfThenElseImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(TemplateExpressionBoolean newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -138,6 +140,7 @@ public class TemplateExpressionRealIfThenElseImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateExpressionReal getIfTrue() {
 		return ifTrue;
 	}
@@ -162,6 +165,7 @@ public class TemplateExpressionRealIfThenElseImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIfTrue(TemplateExpressionReal newIfTrue) {
 		if (newIfTrue != ifTrue) {
 			NotificationChain msgs = null;
@@ -181,6 +185,7 @@ public class TemplateExpressionRealIfThenElseImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateExpressionReal getIfFalse() {
 		return ifFalse;
 	}
@@ -205,6 +210,7 @@ public class TemplateExpressionRealIfThenElseImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIfFalse(TemplateExpressionReal newIfFalse) {
 		if (newIfFalse != ifFalse) {
 			NotificationChain msgs = null;
@@ -234,6 +240,7 @@ public class TemplateExpressionRealIfThenElseImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate(EList<Assignment> assignments) {
 		try {
 			return (Double)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
@@ -258,6 +265,7 @@ public class TemplateExpressionRealIfThenElseImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate() {
 		try {
 			return (Double)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);

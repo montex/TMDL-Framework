@@ -78,6 +78,7 @@ public class TemplateCompositeImpl extends TemplateSpecificationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CompositionRule> getRules() {
 		if (rules == null) {
 			rules = new EObjectContainmentEList<CompositionRule>(CompositionRule.class, this, LibraryPackage.TEMPLATE_COMPOSITE__RULES);
@@ -90,6 +91,7 @@ public class TemplateCompositeImpl extends TemplateSpecificationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Block> getBlocks() {
 		if (blocks == null) {
 			blocks = new EObjectContainmentEList<Block>(Block.class, this, LibraryPackage.TEMPLATE_COMPOSITE__BLOCKS);

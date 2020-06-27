@@ -66,6 +66,7 @@ public class MarkingSimpleImpl extends MarkingImpl implements MarkingSimple {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public short getValue() {
 		return value;
 	}
@@ -75,6 +76,7 @@ public class MarkingSimpleImpl extends MarkingImpl implements MarkingSimple {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(short newValue) {
 		short oldValue = value;
 		value = newValue;

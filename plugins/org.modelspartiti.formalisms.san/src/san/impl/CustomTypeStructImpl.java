@@ -88,6 +88,7 @@ public class CustomTypeStructImpl extends CustomTypeDefinitionImpl implements Cu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Field> getField() {
 		if (field == null) {
 			field = new EObjectContainmentEList<Field>(Field.class, this, SANPackage.CUSTOM_TYPE_STRUCT__FIELD);
@@ -100,6 +101,7 @@ public class CustomTypeStructImpl extends CustomTypeDefinitionImpl implements Cu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -109,6 +111,7 @@ public class CustomTypeStructImpl extends CustomTypeDefinitionImpl implements Cu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;

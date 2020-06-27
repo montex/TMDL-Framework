@@ -59,6 +59,7 @@ public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Case> getCase() {
 		if (case_ == null) {
 			case_ = new EObjectResolvingEList<Case>(Case.class, this, SANTPackage.OUTPUT_GATE_CONCRETE__CASE);

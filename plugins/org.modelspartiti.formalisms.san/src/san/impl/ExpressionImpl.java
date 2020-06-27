@@ -65,6 +65,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExpressionSegment> getSegments() {
 		if (segments == null) {
 			segments = new EObjectContainmentEList<ExpressionSegment>(ExpressionSegment.class, this, SANPackage.EXPRESSION__SEGMENTS);

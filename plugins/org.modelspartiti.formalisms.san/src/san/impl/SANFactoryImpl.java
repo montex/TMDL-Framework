@@ -148,6 +148,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SAN createSAN() {
 		SANImpl san = new SANImpl();
 		return san;
@@ -158,6 +159,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Place createPlace() {
 		PlaceImpl place = new PlaceImpl();
 		return place;
@@ -168,6 +170,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Case createCase() {
 		CaseImpl case_ = new CaseImpl();
 		return case_;
@@ -178,6 +181,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputArc createInputArc() {
 		InputArcImpl inputArc = new InputArcImpl();
 		return inputArc;
@@ -188,6 +192,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputArc createOutputArc() {
 		OutputArcImpl outputArc = new OutputArcImpl();
 		return outputArc;
@@ -198,6 +203,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputGate createOutputGate() {
 		OutputGateImpl outputGate = new OutputGateImpl();
 		return outputGate;
@@ -208,6 +214,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputGate createInputGate() {
 		InputGateImpl inputGate = new InputGateImpl();
 		return inputGate;
@@ -218,6 +225,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InstantaneousActivity createInstantaneousActivity() {
 		InstantaneousActivityImpl instantaneousActivity = new InstantaneousActivityImpl();
 		return instantaneousActivity;
@@ -228,6 +236,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimedActivity createTimedActivity() {
 		TimedActivityImpl timedActivity = new TimedActivityImpl();
 		return timedActivity;
@@ -238,6 +247,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression createExpression() {
 		ExpressionImpl expression = new ExpressionImpl();
 		return expression;
@@ -248,6 +258,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionText createExpressionText() {
 		ExpressionTextImpl expressionText = new ExpressionTextImpl();
 		return expressionText;
@@ -258,6 +269,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionMarking createExpressionMarking() {
 		ExpressionMarkingImpl expressionMarking = new ExpressionMarkingImpl();
 		return expressionMarking;
@@ -268,6 +280,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionVariable createExpressionVariable() {
 		ExpressionVariableImpl expressionVariable = new ExpressionVariableImpl();
 		return expressionVariable;
@@ -278,6 +291,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GlobalVariable createGlobalVariable() {
 		GlobalVariableImpl globalVariable = new GlobalVariableImpl();
 		return globalVariable;
@@ -288,6 +302,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Exponential createExponential() {
 		ExponentialImpl exponential = new ExponentialImpl();
 		return exponential;
@@ -298,6 +313,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Normal createNormal() {
 		NormalImpl normal = new NormalImpl();
 		return normal;
@@ -308,6 +324,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gamma createGamma() {
 		GammaImpl gamma = new GammaImpl();
 		return gamma;
@@ -318,6 +335,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Binomial createBinomial() {
 		BinomialImpl binomial = new BinomialImpl();
 		return binomial;
@@ -328,6 +346,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deterministic createDeterministic() {
 		DeterministicImpl deterministic = new DeterministicImpl();
 		return deterministic;
@@ -338,6 +357,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lognormal createLognormal() {
 		LognormalImpl lognormal = new LognormalImpl();
 		return lognormal;
@@ -348,6 +368,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Beta createBeta() {
 		BetaImpl beta = new BetaImpl();
 		return beta;
@@ -358,6 +379,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NegativeBinomial createNegativeBinomial() {
 		NegativeBinomialImpl negativeBinomial = new NegativeBinomialImpl();
 		return negativeBinomial;
@@ -368,6 +390,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Geometric createGeometric() {
 		GeometricImpl geometric = new GeometricImpl();
 		return geometric;
@@ -378,6 +401,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Erlang createErlang() {
 		ErlangImpl erlang = new ErlangImpl();
 		return erlang;
@@ -388,6 +412,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Uniform createUniform() {
 		UniformImpl uniform = new UniformImpl();
 		return uniform;
@@ -398,6 +423,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HyperExponential createHyperExponential() {
 		HyperExponentialImpl hyperExponential = new HyperExponentialImpl();
 		return hyperExponential;
@@ -408,6 +434,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Weibull createWeibull() {
 		WeibullImpl weibull = new WeibullImpl();
 		return weibull;
@@ -418,6 +445,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Triangular createTriangular() {
 		TriangularImpl triangular = new TriangularImpl();
 		return triangular;
@@ -428,6 +456,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConditionalWeibull createConditionalWeibull() {
 		ConditionalWeibullImpl conditionalWeibull = new ConditionalWeibullImpl();
 		return conditionalWeibull;
@@ -438,6 +467,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HypoExponential createHypoExponential() {
 		HypoExponentialImpl hypoExponential = new HypoExponentialImpl();
 		return hypoExponential;
@@ -448,6 +478,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pareto createPareto() {
 		ParetoImpl pareto = new ParetoImpl();
 		return pareto;
@@ -458,6 +489,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PrimitiveType createPrimitiveType() {
 		PrimitiveTypeImpl primitiveType = new PrimitiveTypeImpl();
 		return primitiveType;
@@ -468,6 +500,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComplexType createComplexType() {
 		ComplexTypeImpl complexType = new ComplexTypeImpl();
 		return complexType;
@@ -478,6 +511,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CustomTypeArray createCustomTypeArray() {
 		CustomTypeArrayImpl customTypeArray = new CustomTypeArrayImpl();
 		return customTypeArray;
@@ -488,6 +522,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CustomTypeStruct createCustomTypeStruct() {
 		CustomTypeStructImpl customTypeStruct = new CustomTypeStructImpl();
 		return customTypeStruct;
@@ -498,6 +533,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Field createField() {
 		FieldImpl field = new FieldImpl();
 		return field;
@@ -508,6 +544,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MarkingExtended createMarkingExtended() {
 		MarkingExtendedImpl markingExtended = new MarkingExtendedImpl();
 		return markingExtended;
@@ -518,6 +555,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Array createArray() {
 		ArrayImpl array = new ArrayImpl();
 		return array;
@@ -528,6 +566,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LeafNodeString createLeafNodeString() {
 		LeafNodeStringImpl leafNodeString = new LeafNodeStringImpl();
 		return leafNodeString;
@@ -538,6 +577,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MarkingSimple createMarkingSimple() {
 		MarkingSimpleImpl markingSimple = new MarkingSimpleImpl();
 		return markingSimple;
@@ -548,6 +588,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MarkingGlobalVariable createMarkingGlobalVariable() {
 		MarkingGlobalVariableImpl markingGlobalVariable = new MarkingGlobalVariableImpl();
 		return markingGlobalVariable;
@@ -558,6 +599,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LeafNodeStruct createLeafNodeStruct() {
 		LeafNodeStructImpl leafNodeStruct = new LeafNodeStructImpl();
 		return leafNodeStruct;
@@ -568,6 +610,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LeafNodeGlobalVariable createLeafNodeGlobalVariable() {
 		LeafNodeGlobalVariableImpl leafNodeGlobalVariable = new LeafNodeGlobalVariableImpl();
 		return leafNodeGlobalVariable;
@@ -636,6 +679,7 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SANPackage getSANPackage() {
 		return (SANPackage)getEPackage();
 	}

@@ -302,6 +302,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSANT() {
 		return santEClass;
 	}
@@ -311,6 +312,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSANT_Name() {
 		return (EAttribute)santEClass.getEStructuralFeatures().get(0);
 	}
@@ -320,6 +322,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSANT_TemplatePlaces() {
 		return (EReference)santEClass.getEStructuralFeatures().get(1);
 	}
@@ -329,6 +332,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSANT_Places() {
 		return (EReference)santEClass.getEStructuralFeatures().get(2);
 	}
@@ -338,6 +342,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSANT_ActivityTemplates() {
 		return (EReference)santEClass.getEStructuralFeatures().get(3);
 	}
@@ -347,6 +352,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSANT_Parameters() {
 		return (EReference)santEClass.getEStructuralFeatures().get(4);
 	}
@@ -356,6 +362,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSANT_GlobalVariables() {
 		return (EReference)santEClass.getEStructuralFeatures().get(5);
 	}
@@ -365,6 +372,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSANT_CustomType() {
 		return (EReference)santEClass.getEStructuralFeatures().get(6);
 	}
@@ -374,6 +382,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSANT_Gates() {
 		return (EReference)santEClass.getEStructuralFeatures().get(7);
 	}
@@ -383,6 +392,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSANT_Arcs() {
 		return (EReference)santEClass.getEStructuralFeatures().get(8);
 	}
@@ -392,6 +402,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPlaceTemplate() {
 		return placeTemplateEClass;
 	}
@@ -401,6 +412,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlaceTemplate_Multiplicity() {
 		return (EReference)placeTemplateEClass.getEStructuralFeatures().get(0);
 	}
@@ -410,6 +422,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlaceTemplate_Marking() {
 		return (EReference)placeTemplateEClass.getEStructuralFeatures().get(1);
 	}
@@ -419,6 +432,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMultiplicityRangeOperator() {
 		return multiplicityRangeOperatorEClass;
 	}
@@ -428,6 +442,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMultiplicityRangeOperator_Min() {
 		return (EAttribute)multiplicityRangeOperatorEClass.getEStructuralFeatures().get(0);
 	}
@@ -437,6 +452,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMultiplicityRangeOperator_Max() {
 		return (EAttribute)multiplicityRangeOperatorEClass.getEStructuralFeatures().get(1);
 	}
@@ -446,6 +462,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMultiplicityRangeOperator_Step() {
 		return (EAttribute)multiplicityRangeOperatorEClass.getEStructuralFeatures().get(2);
 	}
@@ -455,6 +472,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getActivityTemplate() {
 		return activityTemplateEClass;
 	}
@@ -464,6 +482,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivityTemplate_CasesTemplate() {
 		return (EReference)activityTemplateEClass.getEStructuralFeatures().get(0);
 	}
@@ -473,6 +492,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCasesSpecification() {
 		return casesSpecificationEClass;
 	}
@@ -482,6 +502,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCasesSpecificationConcrete() {
 		return casesSpecificationConcreteEClass;
 	}
@@ -491,6 +512,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCasesSpecificationConcrete_Cases() {
 		return (EReference)casesSpecificationConcreteEClass.getEStructuralFeatures().get(0);
 	}
@@ -500,6 +522,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCasesSpecificationArray() {
 		return casesSpecificationArrayEClass;
 	}
@@ -509,6 +532,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCasesSpecificationArray_NumCases() {
 		return (EAttribute)casesSpecificationArrayEClass.getEStructuralFeatures().get(0);
 	}
@@ -518,6 +542,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCasesSpecificationArray_P() {
 		return (EReference)casesSpecificationArrayEClass.getEStructuralFeatures().get(1);
 	}
@@ -527,6 +552,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCasesSpecificationParametric() {
 		return casesSpecificationParametricEClass;
 	}
@@ -536,6 +562,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCasesSpecificationParametric_Parameter() {
 		return (EReference)casesSpecificationParametricEClass.getEStructuralFeatures().get(0);
 	}
@@ -545,6 +572,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCasesSpecificationParametric_P() {
 		return (EReference)casesSpecificationParametricEClass.getEStructuralFeatures().get(1);
 	}
@@ -554,6 +582,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCasesSpecificationProbabilityArray() {
 		return casesSpecificationProbabilityArrayEClass;
 	}
@@ -563,6 +592,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCasesSpecificationProbabilityArray_CaseParameter() {
 		return (EReference)casesSpecificationProbabilityArrayEClass.getEStructuralFeatures().get(0);
 	}
@@ -572,6 +602,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCasesSpecificationProbabilityArray_PValues() {
 		return (EReference)casesSpecificationProbabilityArrayEClass.getEStructuralFeatures().get(1);
 	}
@@ -581,6 +612,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTimedActivityTemplate() {
 		return timedActivityTemplateEClass;
 	}
@@ -590,6 +622,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTimedActivityTemplate_TimeDistribution() {
 		return (EReference)timedActivityTemplateEClass.getEStructuralFeatures().get(0);
 	}
@@ -599,6 +632,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTimedActivityTemplate_Activation() {
 		return (EReference)timedActivityTemplateEClass.getEStructuralFeatures().get(1);
 	}
@@ -608,6 +642,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTimedActivityTemplate_Reactivation() {
 		return (EReference)timedActivityTemplateEClass.getEStructuralFeatures().get(2);
 	}
@@ -617,6 +652,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInstantaneousActivityTemplate() {
 		return instantaneousActivityTemplateEClass;
 	}
@@ -626,6 +662,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMarkingTemplate() {
 		return markingTemplateEClass;
 	}
@@ -635,6 +672,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMarkingTemplate_IdPlace() {
 		return (EAttribute)markingTemplateEClass.getEStructuralFeatures().get(0);
 	}
@@ -644,6 +682,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMarkingTemplateSimple() {
 		return markingTemplateSimpleEClass;
 	}
@@ -653,6 +692,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMarkingTemplateSimple_Value() {
 		return (EAttribute)markingTemplateSimpleEClass.getEStructuralFeatures().get(0);
 	}
@@ -662,6 +702,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMarkingTemplateGlobalVariable() {
 		return markingTemplateGlobalVariableEClass;
 	}
@@ -671,6 +712,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMarkingTemplateGlobalVariable_Variable() {
 		return (EReference)markingTemplateGlobalVariableEClass.getEStructuralFeatures().get(0);
 	}
@@ -680,6 +722,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGateTemplate() {
 		return gateTemplateEClass;
 	}
@@ -689,6 +732,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGateTemplate_PlaceTemplate() {
 		return (EReference)gateTemplateEClass.getEStructuralFeatures().get(0);
 	}
@@ -698,6 +742,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOutputGate() {
 		return outputGateEClass;
 	}
@@ -707,6 +752,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOutputGateConcrete() {
 		return outputGateConcreteEClass;
 	}
@@ -716,6 +762,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOutputGateConcrete_Case() {
 		return (EReference)outputGateConcreteEClass.getEStructuralFeatures().get(0);
 	}
@@ -725,6 +772,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOutputGateTemplate() {
 		return outputGateTemplateEClass;
 	}
@@ -734,6 +782,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOutputGateTemplate_Activity() {
 		return (EReference)outputGateTemplateEClass.getEStructuralFeatures().get(0);
 	}
@@ -743,6 +792,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInputGateTemplate() {
 		return inputGateTemplateEClass;
 	}
@@ -752,6 +802,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInputGateTemplate_Predicate() {
 		return (EReference)inputGateTemplateEClass.getEStructuralFeatures().get(0);
 	}
@@ -761,6 +812,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInputGateTemplate_Activity() {
 		return (EReference)inputGateTemplateEClass.getEStructuralFeatures().get(1);
 	}
@@ -770,6 +822,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArcTemplate() {
 		return arcTemplateEClass;
 	}
@@ -779,6 +832,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInputArc() {
 		return inputArcEClass;
 	}
@@ -788,6 +842,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInputArc_Source() {
 		return (EReference)inputArcEClass.getEStructuralFeatures().get(0);
 	}
@@ -797,6 +852,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInputArc_Target() {
 		return (EReference)inputArcEClass.getEStructuralFeatures().get(1);
 	}
@@ -806,6 +862,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInputArc_TemplateSource() {
 		return (EReference)inputArcEClass.getEStructuralFeatures().get(2);
 	}
@@ -815,6 +872,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOutputArc() {
 		return outputArcEClass;
 	}
@@ -824,6 +882,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOutputArc_SourceCaseConcrete() {
 		return (EReference)outputArcEClass.getEStructuralFeatures().get(0);
 	}
@@ -833,6 +892,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOutputArc_Source() {
 		return (EReference)outputArcEClass.getEStructuralFeatures().get(1);
 	}
@@ -842,6 +902,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOutputArc_Target() {
 		return (EReference)outputArcEClass.getEStructuralFeatures().get(2);
 	}
@@ -851,6 +912,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOutputArc_TemplateTarget() {
 		return (EReference)outputArcEClass.getEStructuralFeatures().get(3);
 	}
@@ -860,6 +922,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SANTFactory getSANTFactory() {
 		return (SANTFactory)getEFactoryInstance();
 	}
@@ -1029,7 +1092,6 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		initEReference(getSANT_ActivityTemplates(), this.getActivityTemplate(), null, "activityTemplates", null, 0, -1, sant.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_ActivityTemplates().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_Parameters(), theCorePackage.getParameter(), null, "parameters", null, 0, -1, sant.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		getSANT_Parameters().getEKeys().add(theCorePackage.getParameter_Name());
 		initEReference(getSANT_GlobalVariables(), theSANPackage.getGlobalVariable(), null, "globalVariables", null, 0, -1, sant.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_GlobalVariables().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_CustomType(), theSANPackage.getCustomTypeDefinition(), null, "customType", null, 0, -1, sant.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

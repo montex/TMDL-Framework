@@ -151,6 +151,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getScenario() {
 		return scenarioEClass;
 	}
@@ -160,6 +161,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getScenario_Name() {
 		return (EAttribute)scenarioEClass.getEStructuralFeatures().get(0);
 	}
@@ -169,6 +171,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScenario_Variants() {
 		return (EReference)scenarioEClass.getEStructuralFeatures().get(1);
 	}
@@ -178,6 +181,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScenario_Root() {
 		return (EReference)scenarioEClass.getEStructuralFeatures().get(2);
 	}
@@ -187,6 +191,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariant() {
 		return variantEClass;
 	}
@@ -196,6 +201,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVariant_Name() {
 		return (EAttribute)variantEClass.getEStructuralFeatures().get(0);
 	}
@@ -205,6 +211,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariant_Assignments() {
 		return (EReference)variantEClass.getEStructuralFeatures().get(1);
 	}
@@ -214,6 +221,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariantAtomic() {
 		return variantAtomicEClass;
 	}
@@ -223,6 +231,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariantAtomic_Template() {
 		return (EReference)variantAtomicEClass.getEStructuralFeatures().get(0);
 	}
@@ -232,6 +241,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVariantAtomic_Labels() {
 		return (EAttribute)variantAtomicEClass.getEStructuralFeatures().get(1);
 	}
@@ -241,6 +251,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariantComposite() {
 		return variantCompositeEClass;
 	}
@@ -250,6 +261,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariantComposite_Template() {
 		return (EReference)variantCompositeEClass.getEStructuralFeatures().get(0);
 	}
@@ -259,6 +271,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariantComposite_Realizations() {
 		return (EReference)variantCompositeEClass.getEStructuralFeatures().get(1);
 	}
@@ -268,6 +281,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBlockRealization() {
 		return blockRealizationEClass;
 	}
@@ -277,6 +291,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBlockRealization_Block() {
 		return (EReference)blockRealizationEClass.getEStructuralFeatures().get(0);
 	}
@@ -286,6 +301,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBlockRealization_Variant() {
 		return (EReference)blockRealizationEClass.getEStructuralFeatures().get(1);
 	}
@@ -295,6 +311,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ScenarioFactory getScenarioFactory() {
 		return (ScenarioFactory)getEFactoryInstance();
 	}

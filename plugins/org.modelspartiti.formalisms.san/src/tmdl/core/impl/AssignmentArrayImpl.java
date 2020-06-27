@@ -78,6 +78,7 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterArray getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject)parameter;
@@ -104,6 +105,7 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(ParameterArray newParameter) {
 		ParameterArray oldParameter = parameter;
 		parameter = newParameter;
@@ -116,6 +118,7 @@ public class AssignmentArrayImpl extends AssignmentImpl implements AssignmentArr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Double> getValues() {
 		if (values == null) {
 			values = new EDataTypeUniqueEList<Double>(Double.class, this, CorePackage.ASSIGNMENT_ARRAY__VALUES);

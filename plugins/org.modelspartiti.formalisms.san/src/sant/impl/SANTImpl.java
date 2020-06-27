@@ -181,6 +181,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -190,6 +191,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -202,6 +204,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PlaceTemplate> getTemplatePlaces() {
 		if (templatePlaces == null) {
 			templatePlaces = new EObjectContainmentEList<PlaceTemplate>(PlaceTemplate.class, this, SANTPackage.SANT__TEMPLATE_PLACES);
@@ -214,6 +217,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Place> getPlaces() {
 		if (places == null) {
 			places = new EObjectContainmentEList<Place>(Place.class, this, SANTPackage.SANT__PLACES);
@@ -226,6 +230,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityTemplate> getActivityTemplates() {
 		if (activityTemplates == null) {
 			activityTemplates = new EObjectContainmentEList<ActivityTemplate>(ActivityTemplate.class, this, SANTPackage.SANT__ACTIVITY_TEMPLATES);
@@ -238,6 +243,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, SANTPackage.SANT__PARAMETERS);
@@ -250,6 +256,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GlobalVariable> getGlobalVariables() {
 		if (globalVariables == null) {
 			globalVariables = new EObjectContainmentEList<GlobalVariable>(GlobalVariable.class, this, SANTPackage.SANT__GLOBAL_VARIABLES);
@@ -262,6 +269,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CustomTypeDefinition> getCustomType() {
 		if (customType == null) {
 			customType = new EObjectContainmentEList<CustomTypeDefinition>(CustomTypeDefinition.class, this, SANTPackage.SANT__CUSTOM_TYPE);
@@ -274,6 +282,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GateTemplate> getGates() {
 		if (gates == null) {
 			gates = new EObjectContainmentEList<GateTemplate>(GateTemplate.class, this, SANTPackage.SANT__GATES);
@@ -286,6 +295,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ArcTemplate> getArcs() {
 		if (arcs == null) {
 			arcs = new EObjectContainmentEList<ArcTemplate>(ArcTemplate.class, this, SANTPackage.SANT__ARCS);
@@ -298,6 +308,7 @@ public class SANTImpl extends MinimalEObjectImpl.Container implements SANT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConcreteModel concretize(EList<Assignment> parameterValues) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

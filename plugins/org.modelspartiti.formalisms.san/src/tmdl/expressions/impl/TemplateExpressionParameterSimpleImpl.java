@@ -71,6 +71,7 @@ public class TemplateExpressionParameterSimpleImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSimple getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject)parameter;
@@ -97,6 +98,7 @@ public class TemplateExpressionParameterSimpleImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(ParameterSimple newParameter) {
 		ParameterSimple oldParameter = parameter;
 		parameter = newParameter;
@@ -119,6 +121,7 @@ public class TemplateExpressionParameterSimpleImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate(EList<Assignment> assignments) {
 		try {
 			return (Double)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
@@ -143,6 +146,7 @@ public class TemplateExpressionParameterSimpleImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate() {
 		try {
 			return (Double)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);

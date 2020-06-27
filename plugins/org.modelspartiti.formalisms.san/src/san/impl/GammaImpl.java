@@ -73,6 +73,7 @@ public class GammaImpl extends DistributionImpl implements Gamma {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getAlpha() {
 		return alpha;
 	}
@@ -97,6 +98,7 @@ public class GammaImpl extends DistributionImpl implements Gamma {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlpha(Expression newAlpha) {
 		if (newAlpha != alpha) {
 			NotificationChain msgs = null;
@@ -116,6 +118,7 @@ public class GammaImpl extends DistributionImpl implements Gamma {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getBeta() {
 		return beta;
 	}
@@ -140,6 +143,7 @@ public class GammaImpl extends DistributionImpl implements Gamma {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBeta(Expression newBeta) {
 		if (newBeta != beta) {
 			NotificationChain msgs = null;
