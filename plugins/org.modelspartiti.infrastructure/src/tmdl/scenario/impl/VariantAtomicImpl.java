@@ -26,11 +26,11 @@ import tmdl.scenario.VariantAtomic;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.impl.VariantAtomicImpl#getTemplate <em>Template</em>}</li>
  *   <li>{@link tmdl.scenario.impl.VariantAtomicImpl#getLabels <em>Labels</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -204,7 +204,7 @@ public class VariantAtomicImpl extends VariantImpl implements VariantAtomic {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (labels: ");
 		result.append(labels);
 		result.append(')');

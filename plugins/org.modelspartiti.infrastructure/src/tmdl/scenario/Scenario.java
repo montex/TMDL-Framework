@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.Scenario#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.scenario.Scenario#getVariants <em>Variants</em>}</li>
  *   <li>{@link tmdl.scenario.Scenario#getRoot <em>Root</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.scenario.ScenarioPackage#getScenario()
  * @model

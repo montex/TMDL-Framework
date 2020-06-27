@@ -30,12 +30,12 @@ import tmdl.library.ModelInterface;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.impl.BlockImpl#getLabels <em>Labels</em>}</li>
  *   <li>{@link tmdl.library.impl.BlockImpl#getMultiplicity <em>Multiplicity</em>}</li>
  *   <li>{@link tmdl.library.impl.BlockImpl#getRequiredInterfaces <em>Required Interfaces</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -260,7 +260,7 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (labels: ");
 		result.append(labels);
 		result.append(')');

@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.TemplateAtomic#getSource <em>Source</em>}</li>
  *   <li>{@link tmdl.library.TemplateAtomic#getLabels <em>Labels</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.library.LibraryPackage#getTemplateAtomic()
  * @model

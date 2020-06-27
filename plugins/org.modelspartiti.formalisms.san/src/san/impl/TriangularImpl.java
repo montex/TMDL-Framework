@@ -20,12 +20,12 @@ import san.Triangular;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.TriangularImpl#getMin <em>Min</em>}</li>
  *   <li>{@link san.impl.TriangularImpl#getMiddle <em>Middle</em>}</li>
  *   <li>{@link san.impl.TriangularImpl#getMax <em>Max</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

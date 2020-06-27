@@ -28,12 +28,12 @@ import tmdl.library.TemplateSpecification;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.impl.TemplateSpecificationImpl#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.library.impl.TemplateSpecificationImpl#getInterfaces <em>Interfaces</em>}</li>
  *   <li>{@link tmdl.library.impl.TemplateSpecificationImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -258,7 +258,7 @@ public abstract class TemplateSpecificationImpl extends MinimalEObjectImpl.Conta
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

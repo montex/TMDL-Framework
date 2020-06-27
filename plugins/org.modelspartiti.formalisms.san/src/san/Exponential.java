@@ -10,10 +10,10 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Exponential#getRate <em>Rate</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getExponential()
  * @model

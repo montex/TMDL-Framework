@@ -24,10 +24,10 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.ActivityImpl#getCases <em>Cases</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

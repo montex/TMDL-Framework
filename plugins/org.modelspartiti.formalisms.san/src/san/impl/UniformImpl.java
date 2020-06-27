@@ -20,11 +20,11 @@ import san.Uniform;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.UniformImpl#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link san.impl.UniformImpl#getUpperBound <em>Upper Bound</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

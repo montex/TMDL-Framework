@@ -19,11 +19,11 @@ import tmdl.core.ParameterSimple;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.core.impl.AssignmentSimpleImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link tmdl.core.impl.AssignmentSimpleImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -214,7 +214,7 @@ public class AssignmentSimpleImpl extends AssignmentImpl implements AssignmentSi
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(')');

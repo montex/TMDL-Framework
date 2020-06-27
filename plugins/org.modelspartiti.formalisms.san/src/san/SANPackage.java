@@ -24,6 +24,8 @@ import tmdl.core.CorePackage;
  * <!-- end-user-doc -->
  * @see san.SANFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL'"
  * @generated
  */
 public interface SANPackage extends EPackage {
@@ -133,13 +135,22 @@ public interface SANPackage extends EPackage {
 	int SAN__INITIALIZATION = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Customtype</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SAN__CUSTOMTYPE = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>SAN</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SAN_FEATURE_COUNT = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 7;
+	int SAN_FEATURE_COUNT = CorePackage.CONCRETE_MODEL_FEATURE_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Templatize</em>' operation.
@@ -167,7 +178,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getNamedElement()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 3;
+	int NAMED_ELEMENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -204,7 +215,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getPlace()
 	 * @generated
 	 */
-	int PLACE = 1;
+	int PLACE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -216,13 +227,40 @@ public interface SANPackage extends EPackage {
 	int PLACE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Is Extended</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLACE__IS_EXTENDED = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLACE__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Marking</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLACE__MARKING = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Place</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int PLACE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Place</em>' class.
@@ -241,7 +279,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getActivity()
 	 * @generated
 	 */
-	int ACTIVITY = 2;
+	int ACTIVITY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -287,43 +325,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getCase()
 	 * @generated
 	 */
-	int CASE = 4;
-
-	/**
-	 * The feature id for the '<em><b>ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE__P = 1;
-
-	/**
-	 * The number of structural features of the '<em>Case</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Case</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CASE_OPERATION_COUNT = 0;
+	int CASE = 6;
 
 	/**
 	 * The meta object id for the '{@link san.impl.ArcImpl <em>Arc</em>}' class.
@@ -333,25 +335,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getArc()
 	 * @generated
 	 */
-	int ARC = 5;
-
-	/**
-	 * The number of structural features of the '<em>Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARC_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARC_OPERATION_COUNT = 0;
+	int ARC = 7;
 
 	/**
 	 * The meta object id for the '{@link san.impl.InputArcImpl <em>Input Arc</em>}' class.
@@ -361,43 +345,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getInputArc()
 	 * @generated
 	 */
-	int INPUT_ARC = 6;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_ARC__SOURCE = ARC_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_ARC__TARGET = ARC_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Input Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_ARC_FEATURE_COUNT = ARC_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Input Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
+	int INPUT_ARC = 8;
 
 	/**
 	 * The meta object id for the '{@link san.impl.OutputArcImpl <em>Output Arc</em>}' class.
@@ -407,43 +355,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getOutputArc()
 	 * @generated
 	 */
-	int OUTPUT_ARC = 7;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_ARC__SOURCE = ARC_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_ARC__TARGET = ARC_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Output Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_ARC_FEATURE_COUNT = ARC_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Output Arc</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
+	int OUTPUT_ARC = 9;
 
 	/**
 	 * The meta object id for the '{@link san.impl.GateImpl <em>Gate</em>}' class.
@@ -453,52 +365,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getGate()
 	 * @generated
 	 */
-	int GATE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Function</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE__FUNCTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Places</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE__PLACES = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GATE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int GATE = 10;
 
 	/**
 	 * The meta object id for the '{@link san.impl.OutputGateImpl <em>Output Gate</em>}' class.
@@ -508,61 +375,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getOutputGate()
 	 * @generated
 	 */
-	int OUTPUT_GATE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE__NAME = GATE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Function</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE__FUNCTION = GATE__FUNCTION;
-
-	/**
-	 * The feature id for the '<em><b>Places</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE__PLACES = GATE__PLACES;
-
-	/**
-	 * The feature id for the '<em><b>Activity Case</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE__ACTIVITY_CASE = GATE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Output Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE_FEATURE_COUNT = GATE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Output Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT_GATE_OPERATION_COUNT = GATE_OPERATION_COUNT + 0;
+	int OUTPUT_GATE = 11;
 
 	/**
 	 * The meta object id for the '{@link san.impl.InputGateImpl <em>Input Gate</em>}' class.
@@ -572,70 +385,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getInputGate()
 	 * @generated
 	 */
-	int INPUT_GATE = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__NAME = GATE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Function</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__FUNCTION = GATE__FUNCTION;
-
-	/**
-	 * The feature id for the '<em><b>Places</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__PLACES = GATE__PLACES;
-
-	/**
-	 * The feature id for the '<em><b>Predicate</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__PREDICATE = GATE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Activity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE__ACTIVITY = GATE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Input Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE_FEATURE_COUNT = GATE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Input Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_GATE_OPERATION_COUNT = GATE_OPERATION_COUNT + 0;
+	int INPUT_GATE = 12;
 
 	/**
 	 * The meta object id for the '{@link san.impl.InstantaneousActivityImpl <em>Instantaneous Activity</em>}' class.
@@ -645,7 +395,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getInstantaneousActivity()
 	 * @generated
 	 */
-	int INSTANTANEOUS_ACTIVITY = 11;
+	int INSTANTANEOUS_ACTIVITY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -691,7 +441,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getTimedActivity()
 	 * @generated
 	 */
-	int TIMED_ACTIVITY = 12;
+	int TIMED_ACTIVITY = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -757,6 +507,294 @@ public interface SANPackage extends EPackage {
 	int TIMED_ACTIVITY_OPERATION_COUNT = ACTIVITY_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__P = 1;
+
+	/**
+	 * The number of structural features of the '<em>Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE_OPERATION_COUNT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC__SOURCE = ARC_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC__TARGET = ARC_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Input Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC_FEATURE_COUNT = ARC_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Input Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC__SOURCE = ARC_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC__TARGET = ARC_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Output Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC_FEATURE_COUNT = ARC_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Output Arc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE__FUNCTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Places</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE__PLACES = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GATE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__NAME = GATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__FUNCTION = GATE__FUNCTION;
+
+	/**
+	 * The feature id for the '<em><b>Places</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__PLACES = GATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Activity Case</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE__ACTIVITY_CASE = GATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Output Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_FEATURE_COUNT = GATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Output Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_GATE_OPERATION_COUNT = GATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__NAME = GATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__FUNCTION = GATE__FUNCTION;
+
+	/**
+	 * The feature id for the '<em><b>Places</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__PLACES = GATE__PLACES;
+
+	/**
+	 * The feature id for the '<em><b>Predicate</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__PREDICATE = GATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE__ACTIVITY = GATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Input Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE_FEATURE_COUNT = GATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Input Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_GATE_OPERATION_COUNT = GATE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link san.impl.DistributionImpl <em>Distribution</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -767,13 +805,22 @@ public interface SANPackage extends EPackage {
 	int DISTRIBUTION = 13;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISTRIBUTION__PARAMETERS = 0;
+
+	/**
 	 * The number of structural features of the '<em>Distribution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISTRIBUTION_FEATURE_COUNT = 0;
+	int DISTRIBUTION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Distribution</em>' class.
@@ -829,7 +876,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExpressionSegment()
 	 * @generated
 	 */
-	int EXPRESSION_SEGMENT = 40;
+	int EXPRESSION_SEGMENT = 37;
 
 	/**
 	 * The number of structural features of the '<em>Expression Segment</em>' class.
@@ -996,62 +1043,17 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getMarkingSimple()
 	 * @generated
 	 */
-	int MARKING_SIMPLE = 41;
+	int MARKING_SIMPLE = 45;
 
 	/**
-	 * The number of structural features of the '<em>Marking Simple</em>' class.
+	 * The meta object id for the '{@link san.impl.MarkingGlobalVariableImpl <em>Marking Global Variable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_SIMPLE_FEATURE_COUNT = MARKING_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Marking Simple</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_SIMPLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link san.impl.MarkingIntegerImpl <em>Marking Integer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingIntegerImpl
-	 * @see san.impl.SANPackageImpl#getMarkingInteger()
+	 * @see san.impl.MarkingGlobalVariableImpl
+	 * @see san.impl.SANPackageImpl#getMarkingGlobalVariable()
 	 * @generated
 	 */
-	int MARKING_INTEGER = 19;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_INTEGER__VALUE = MARKING_SIMPLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Marking Integer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_INTEGER_FEATURE_COUNT = MARKING_SIMPLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Marking Integer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_INTEGER_OPERATION_COUNT = MARKING_SIMPLE_OPERATION_COUNT + 0;
+	int MARKING_GLOBAL_VARIABLE = 46;
 
 	/**
 	 * The meta object id for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
@@ -1061,25 +1063,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getMarkingExtended()
 	 * @generated
 	 */
-	int MARKING_EXTENDED = 20;
-
-	/**
-	 * The number of structural features of the '<em>Marking Extended</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_EXTENDED_FEATURE_COUNT = MARKING_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Marking Extended</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_EXTENDED_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
+	int MARKING_EXTENDED = 47;
 
 	/**
 	 * The meta object id for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -1089,7 +1073,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getGlobalVariable()
 	 * @generated
 	 */
-	int GLOBAL_VARIABLE = 21;
+	int GLOBAL_VARIABLE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1128,43 +1112,6 @@ public interface SANPackage extends EPackage {
 	int GLOBAL_VARIABLE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.MarkingVariableSimpleImpl <em>Marking Variable Simple</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingVariableSimpleImpl
-	 * @see san.impl.SANPackageImpl#getMarkingVariableSimple()
-	 * @generated
-	 */
-	int MARKING_VARIABLE_SIMPLE = 22;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_VARIABLE_SIMPLE__VARIABLE = MARKING_SIMPLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Marking Variable Simple</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_VARIABLE_SIMPLE_FEATURE_COUNT = MARKING_SIMPLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Marking Variable Simple</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKING_VARIABLE_SIMPLE_OPERATION_COUNT = MARKING_SIMPLE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link san.impl.ExponentialImpl <em>Exponential</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1172,7 +1119,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExponential()
 	 * @generated
 	 */
-	int EXPONENTIAL = 23;
+	int EXPONENTIAL = 20;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPONENTIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Rate</b></em>' containment reference.
@@ -1209,7 +1165,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getNormal()
 	 * @generated
 	 */
-	int NORMAL = 24;
+	int NORMAL = 21;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NORMAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Mean</b></em>' containment reference.
@@ -1255,7 +1220,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getGamma()
 	 * @generated
 	 */
-	int GAMMA = 25;
+	int GAMMA = 22;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAMMA__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Alpha</b></em>' containment reference.
@@ -1301,7 +1275,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getBinomial()
 	 * @generated
 	 */
-	int BINOMIAL = 26;
+	int BINOMIAL = 23;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINOMIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>T</b></em>' containment reference.
@@ -1347,7 +1330,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getDeterministic()
 	 * @generated
 	 */
-	int DETERMINISTIC = 27;
+	int DETERMINISTIC = 24;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DETERMINISTIC__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1384,7 +1376,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getLognormal()
 	 * @generated
 	 */
-	int LOGNORMAL = 28;
+	int LOGNORMAL = 25;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGNORMAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Mu</b></em>' containment reference.
@@ -1430,7 +1431,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getBeta()
 	 * @generated
 	 */
-	int BETA = 29;
+	int BETA = 26;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BETA__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Alpha1</b></em>' containment reference.
@@ -1476,7 +1486,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getNegativeBinomial()
 	 * @generated
 	 */
-	int NEGATIVE_BINOMIAL = 30;
+	int NEGATIVE_BINOMIAL = 27;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEGATIVE_BINOMIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>S</b></em>' containment reference.
@@ -1522,7 +1541,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getGeometric()
 	 * @generated
 	 */
-	int GEOMETRIC = 31;
+	int GEOMETRIC = 28;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEOMETRIC__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -1559,7 +1587,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getErlang()
 	 * @generated
 	 */
-	int ERLANG = 32;
+	int ERLANG = 29;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERLANG__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>M</b></em>' containment reference.
@@ -1605,7 +1642,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getUniform()
 	 * @generated
 	 */
-	int UNIFORM = 33;
+	int UNIFORM = 30;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIFORM__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Lower Bound</b></em>' containment reference.
@@ -1651,7 +1697,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getHyperExponential()
 	 * @generated
 	 */
-	int HYPER_EXPONENTIAL = 34;
+	int HYPER_EXPONENTIAL = 31;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HYPER_EXPONENTIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Rate0</b></em>' containment reference.
@@ -1697,7 +1752,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getWeibull()
 	 * @generated
 	 */
-	int WEIBULL = 35;
+	int WEIBULL = 32;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIBULL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Alpha</b></em>' containment reference.
@@ -1743,7 +1807,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getTriangular()
 	 * @generated
 	 */
-	int TRIANGULAR = 36;
+	int TRIANGULAR = 33;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRIANGULAR__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' containment reference.
@@ -1798,7 +1871,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getConditionalWeibull()
 	 * @generated
 	 */
-	int CONDITIONAL_WEIBULL = 37;
+	int CONDITIONAL_WEIBULL = 34;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_WEIBULL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Alpha</b></em>' containment reference.
@@ -1853,7 +1935,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getHypoExponential()
 	 * @generated
 	 */
-	int HYPO_EXPONENTIAL = 38;
+	int HYPO_EXPONENTIAL = 35;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HYPO_EXPONENTIAL__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Rate0</b></em>' containment reference.
@@ -1890,7 +1981,16 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getPareto()
 	 * @generated
 	 */
-	int PARETO = 39;
+	int PARETO = 36;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARETO__PARAMETERS = DISTRIBUTION__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Lower Bound</b></em>' containment reference.
@@ -1929,78 +2029,42 @@ public interface SANPackage extends EPackage {
 	int PARETO_OPERATION_COUNT = DISTRIBUTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.NormalPlaceImpl <em>Normal Place</em>}' class.
+	 * The meta object id for the '{@link san.impl.TypeImpl <em>Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see san.impl.NormalPlaceImpl
-	 * @see san.impl.SANPackageImpl#getNormalPlace()
+	 * @see san.impl.TypeImpl
+	 * @see san.impl.SANPackageImpl#getType()
 	 * @generated
 	 */
-	int NORMAL_PLACE = 42;
+	int TYPE = 38;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The number of structural features of the '<em>Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NORMAL_PLACE__NAME = PLACE__NAME;
+	int TYPE_FEATURE_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Marking</b></em>' containment reference.
+	 * The number of operations of the '<em>Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NORMAL_PLACE__MARKING = PLACE_FEATURE_COUNT + 0;
+	int TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Normal Place</em>' class.
+	 * The meta object id for the '{@link san.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NORMAL_PLACE_FEATURE_COUNT = PLACE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Normal Place</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NORMAL_PLACE_OPERATION_COUNT = PLACE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link san.impl.ExtendedPlaceImpl <em>Extended Place</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.ExtendedPlaceImpl
-	 * @see san.impl.SANPackageImpl#getExtendedPlace()
+	 * @see san.impl.PrimitiveTypeImpl
+	 * @see san.impl.SANPackageImpl#getPrimitiveType()
 	 * @generated
 	 */
-	int EXTENDED_PLACE = 43;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PLACE__NAME = PLACE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Marking</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PLACE__MARKING = PLACE_FEATURE_COUNT + 0;
+	int PRIMITIVE_TYPE = 39;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2009,35 +2073,257 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENDED_PLACE__TYPE = PLACE_FEATURE_COUNT + 1;
+	int PRIMITIVE_TYPE__TYPE = TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Extended Place</em>' class.
+	 * The number of structural features of the '<em>Primitive Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENDED_PLACE_FEATURE_COUNT = PLACE_FEATURE_COUNT + 2;
+	int PRIMITIVE_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Extended Place</em>' class.
+	 * The number of operations of the '<em>Primitive Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENDED_PLACE_OPERATION_COUNT = PLACE_OPERATION_COUNT + 0;
+	int PRIMITIVE_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.MarkingStringImpl <em>Marking String</em>}' class.
+	 * The meta object id for the '{@link san.impl.ComplexTypeImpl <em>Complex Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingStringImpl
-	 * @see san.impl.SANPackageImpl#getMarkingString()
+	 * @see san.impl.ComplexTypeImpl
+	 * @see san.impl.SANPackageImpl#getComplexType()
 	 * @generated
 	 */
-	int MARKING_STRING = 44;
+	int COMPLEX_TYPE = 40;
+
+	/**
+	 * The feature id for the '<em><b>Definition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEX_TYPE__DEFINITION = TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Complex Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEX_TYPE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Complex Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEX_TYPE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.CustomTypeDefinitionImpl <em>Custom Type Definition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.CustomTypeDefinitionImpl
+	 * @see san.impl.SANPackageImpl#getCustomTypeDefinition()
+	 * @generated
+	 */
+	int CUSTOM_TYPE_DEFINITION = 41;
+
+	/**
+	 * The number of structural features of the '<em>Custom Type Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_DEFINITION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Custom Type Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_DEFINITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.CustomTypeArrayImpl <em>Custom Type Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.CustomTypeArrayImpl
+	 * @see san.impl.SANPackageImpl#getCustomTypeArray()
+	 * @generated
+	 */
+	int CUSTOM_TYPE_ARRAY = 42;
+
+	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_ARRAY__SIZE = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_ARRAY__NAME = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type Array</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_ARRAY__TYPE_ARRAY = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Custom Type Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_ARRAY_FEATURE_COUNT = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Custom Type Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_ARRAY_OPERATION_COUNT = CUSTOM_TYPE_DEFINITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.CustomTypeStructImpl <em>Custom Type Struct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.CustomTypeStructImpl
+	 * @see san.impl.SANPackageImpl#getCustomTypeStruct()
+	 * @generated
+	 */
+	int CUSTOM_TYPE_STRUCT = 43;
+
+	/**
+	 * The feature id for the '<em><b>Field</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_STRUCT__FIELD = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_STRUCT__NAME = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Custom Type Struct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_STRUCT_FEATURE_COUNT = CUSTOM_TYPE_DEFINITION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Custom Type Struct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_TYPE_STRUCT_OPERATION_COUNT = CUSTOM_TYPE_DEFINITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.FieldImpl <em>Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.FieldImpl
+	 * @see san.impl.SANPackageImpl#getField()
+	 * @generated
+	 */
+	int FIELD = 44;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type Struct</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD__TYPE_STRUCT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.NodeImpl <em>Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.NodeImpl
+	 * @see san.impl.SANPackageImpl#getNode()
+	 * @generated
+	 */
+	int NODE = 48;
+
+	/**
+	 * The meta object id for the '{@link san.impl.ArrayImpl <em>Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.ArrayImpl
+	 * @see san.impl.SANPackageImpl#getArray()
+	 * @generated
+	 */
+	int ARRAY = 49;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2046,35 +2332,25 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_STRING__VALUE = MARKING_EXTENDED_FEATURE_COUNT + 0;
+	int MARKING_SIMPLE__VALUE = MARKING_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Marking String</em>' class.
+	 * The number of structural features of the '<em>Marking Simple</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_STRING_FEATURE_COUNT = MARKING_EXTENDED_FEATURE_COUNT + 1;
+	int MARKING_SIMPLE_FEATURE_COUNT = MARKING_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Marking String</em>' class.
+	 * The number of operations of the '<em>Marking Simple</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_STRING_OPERATION_COUNT = MARKING_EXTENDED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link san.impl.MarkingVariableExtendedImpl <em>Marking Variable Extended</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingVariableExtendedImpl
-	 * @see san.impl.SANPackageImpl#getMarkingVariableExtended()
-	 * @generated
-	 */
-	int MARKING_VARIABLE_EXTENDED = 45;
+	int MARKING_SIMPLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -2083,25 +2359,245 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_EXTENDED__VARIABLE = MARKING_EXTENDED_FEATURE_COUNT + 0;
+	int MARKING_GLOBAL_VARIABLE__VARIABLE = MARKING_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Marking Variable Extended</em>' class.
+	 * The number of structural features of the '<em>Marking Global Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_EXTENDED_FEATURE_COUNT = MARKING_EXTENDED_FEATURE_COUNT + 1;
+	int MARKING_GLOBAL_VARIABLE_FEATURE_COUNT = MARKING_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Marking Variable Extended</em>' class.
+	 * The number of operations of the '<em>Marking Global Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARKING_VARIABLE_EXTENDED_OPERATION_COUNT = MARKING_EXTENDED_OPERATION_COUNT + 0;
+	int MARKING_GLOBAL_VARIABLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Node</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_EXTENDED__NODE = MARKING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Marking Extended</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_EXTENDED_FEATURE_COUNT = MARKING_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Marking Extended</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARKING_EXTENDED_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Definition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__DEFINITION = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Leafnode</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__LEAFNODE = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.LeafNodeImpl <em>Leaf Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.LeafNodeImpl
+	 * @see san.impl.SANPackageImpl#getLeafNode()
+	 * @generated
+	 */
+	int LEAF_NODE = 50;
+
+	/**
+	 * The number of structural features of the '<em>Leaf Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Leaf Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.LeafNodeStringImpl <em>Leaf Node String</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.LeafNodeStringImpl
+	 * @see san.impl.SANPackageImpl#getLeafNodeString()
+	 * @generated
+	 */
+	int LEAF_NODE_STRING = 51;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRING__VALUE = LEAF_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Leaf Node String</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRING_FEATURE_COUNT = LEAF_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Leaf Node String</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRING_OPERATION_COUNT = LEAF_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.LeafNodeStructImpl <em>Leaf Node Struct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.LeafNodeStructImpl
+	 * @see san.impl.SANPackageImpl#getLeafNodeStruct()
+	 * @generated
+	 */
+	int LEAF_NODE_STRUCT = 52;
+
+	/**
+	 * The feature id for the '<em><b>Definition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRUCT__DEFINITION = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Leaf Node Struct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRUCT_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Leaf Node Struct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_STRUCT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.LeafNodeGlobalVariableImpl <em>Leaf Node Global Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.LeafNodeGlobalVariableImpl
+	 * @see san.impl.SANPackageImpl#getLeafNodeGlobalVariable()
+	 * @generated
+	 */
+	int LEAF_NODE_GLOBAL_VARIABLE = 53;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_GLOBAL_VARIABLE__VARIABLE = LEAF_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Leaf Node Global Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_GLOBAL_VARIABLE_FEATURE_COUNT = LEAF_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Leaf Node Global Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_NODE_GLOBAL_VARIABLE_OPERATION_COUNT = LEAF_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link san.VariableType <em>Variable Type</em>}' enum.
@@ -2111,7 +2607,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getVariableType()
 	 * @generated
 	 */
-	int VARIABLE_TYPE = 46;
+	int VARIABLE_TYPE = 54;
 
 	/**
 	 * The meta object id for the '{@link san.ExtendedPlaceType <em>Extended Place Type</em>}' enum.
@@ -2121,7 +2617,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getExtendedPlaceType()
 	 * @generated
 	 */
-	int EXTENDED_PLACE_TYPE = 47;
+	int EXTENDED_PLACE_TYPE = 55;
 
 	/**
 	 * The meta object id for the '<em>Code Fragment</em>' data type.
@@ -2131,7 +2627,7 @@ public interface SANPackage extends EPackage {
 	 * @see san.impl.SANPackageImpl#getCodeFragment()
 	 * @generated
 	 */
-	int CODE_FRAGMENT = 48;
+	int CODE_FRAGMENT = 56;
 
 
 	/**
@@ -2222,6 +2718,17 @@ public interface SANPackage extends EPackage {
 	EReference getSAN_Initialization();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link san.SAN#getCustomtype <em>Customtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Customtype</em>'.
+	 * @see san.SAN#getCustomtype()
+	 * @see #getSAN()
+	 * @generated
+	 */
+	EReference getSAN_Customtype();
+
+	/**
 	 * Returns the meta object for class '{@link san.Place <em>Place</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2230,6 +2737,39 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPlace();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.Place#isIsExtended <em>Is Extended</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Extended</em>'.
+	 * @see san.Place#isIsExtended()
+	 * @see #getPlace()
+	 * @generated
+	 */
+	EAttribute getPlace_IsExtended();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.Place#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Type</em>'.
+	 * @see san.Place#getType()
+	 * @see #getPlace()
+	 * @generated
+	 */
+	EReference getPlace_Type();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.Place#getMarking <em>Marking</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Marking</em>'.
+	 * @see san.Place#getMarking()
+	 * @see #getPlace()
+	 * @generated
+	 */
+	EReference getPlace_Marking();
 
 	/**
 	 * Returns the meta object for class '{@link san.Activity <em>Activity</em>}'.
@@ -2422,10 +2962,10 @@ public interface SANPackage extends EPackage {
 	EClass getOutputGate();
 
 	/**
-	 * Returns the meta object for the reference '{@link san.OutputGate#getActivityCase <em>Activity Case</em>}'.
+	 * Returns the meta object for the reference list '{@link san.OutputGate#getActivityCase <em>Activity Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Activity Case</em>'.
+	 * @return the meta object for the reference list '<em>Activity Case</em>'.
 	 * @see san.OutputGate#getActivityCase()
 	 * @see #getOutputGate()
 	 * @generated
@@ -2454,10 +2994,10 @@ public interface SANPackage extends EPackage {
 	EReference getInputGate_Predicate();
 
 	/**
-	 * Returns the meta object for the reference '{@link san.InputGate#getActivity <em>Activity</em>}'.
+	 * Returns the meta object for the reference list '{@link san.InputGate#getActivity <em>Activity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Activity</em>'.
+	 * @return the meta object for the reference list '<em>Activity</em>'.
 	 * @see san.InputGate#getActivity()
 	 * @see #getInputGate()
 	 * @generated
@@ -2526,6 +3066,17 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDistribution();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.Distribution#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Parameters</em>'.
+	 * @see san.Distribution#getParameters()
+	 * @see #getDistribution()
+	 * @generated
+	 */
+	EAttribute getDistribution_Parameters();
 
 	/**
 	 * Returns the meta object for class '{@link san.Expression <em>Expression</em>}'.
@@ -2622,27 +3173,6 @@ public interface SANPackage extends EPackage {
 	EClass getMarking();
 
 	/**
-	 * Returns the meta object for class '{@link san.MarkingInteger <em>Marking Integer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking Integer</em>'.
-	 * @see san.MarkingInteger
-	 * @generated
-	 */
-	EClass getMarkingInteger();
-
-	/**
-	 * Returns the meta object for the attribute '{@link san.MarkingInteger#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see san.MarkingInteger#getValue()
-	 * @see #getMarkingInteger()
-	 * @generated
-	 */
-	EAttribute getMarkingInteger_Value();
-
-	/**
 	 * Returns the meta object for class '{@link san.MarkingExtended <em>Marking Extended</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2651,6 +3181,17 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMarkingExtended();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.MarkingExtended#getNode <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Node</em>'.
+	 * @see san.MarkingExtended#getNode()
+	 * @see #getMarkingExtended()
+	 * @generated
+	 */
+	EReference getMarkingExtended_Node();
 
 	/**
 	 * Returns the meta object for class '{@link san.GlobalVariable <em>Global Variable</em>}'.
@@ -2672,27 +3213,6 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGlobalVariable_Type();
-
-	/**
-	 * Returns the meta object for class '{@link san.MarkingVariableSimple <em>Marking Variable Simple</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking Variable Simple</em>'.
-	 * @see san.MarkingVariableSimple
-	 * @generated
-	 */
-	EClass getMarkingVariableSimple();
-
-	/**
-	 * Returns the meta object for the reference '{@link san.MarkingVariableSimple#getVariable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see san.MarkingVariableSimple#getVariable()
-	 * @see #getMarkingVariableSimple()
-	 * @generated
-	 */
-	EReference getMarkingVariableSimple_Variable();
 
 	/**
 	 * Returns the meta object for class '{@link san.Exponential <em>Exponential</em>}'.
@@ -3227,6 +3747,175 @@ public interface SANPackage extends EPackage {
 	EClass getExpressionSegment();
 
 	/**
+	 * Returns the meta object for class '{@link san.Type <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Type</em>'.
+	 * @see san.Type
+	 * @generated
+	 */
+	EClass getType();
+
+	/**
+	 * Returns the meta object for class '{@link san.PrimitiveType <em>Primitive Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Primitive Type</em>'.
+	 * @see san.PrimitiveType
+	 * @generated
+	 */
+	EClass getPrimitiveType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.PrimitiveType#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see san.PrimitiveType#getType()
+	 * @see #getPrimitiveType()
+	 * @generated
+	 */
+	EAttribute getPrimitiveType_Type();
+
+	/**
+	 * Returns the meta object for class '{@link san.ComplexType <em>Complex Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Complex Type</em>'.
+	 * @see san.ComplexType
+	 * @generated
+	 */
+	EClass getComplexType();
+
+	/**
+	 * Returns the meta object for the reference '{@link san.ComplexType#getDefinition <em>Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Definition</em>'.
+	 * @see san.ComplexType#getDefinition()
+	 * @see #getComplexType()
+	 * @generated
+	 */
+	EReference getComplexType_Definition();
+
+	/**
+	 * Returns the meta object for class '{@link san.CustomTypeDefinition <em>Custom Type Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Custom Type Definition</em>'.
+	 * @see san.CustomTypeDefinition
+	 * @generated
+	 */
+	EClass getCustomTypeDefinition();
+
+	/**
+	 * Returns the meta object for class '{@link san.CustomTypeArray <em>Custom Type Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Custom Type Array</em>'.
+	 * @see san.CustomTypeArray
+	 * @generated
+	 */
+	EClass getCustomTypeArray();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.CustomTypeArray#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see san.CustomTypeArray#getSize()
+	 * @see #getCustomTypeArray()
+	 * @generated
+	 */
+	EAttribute getCustomTypeArray_Size();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.CustomTypeArray#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see san.CustomTypeArray#getName()
+	 * @see #getCustomTypeArray()
+	 * @generated
+	 */
+	EAttribute getCustomTypeArray_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.CustomTypeArray#getTypeArray <em>Type Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Type Array</em>'.
+	 * @see san.CustomTypeArray#getTypeArray()
+	 * @see #getCustomTypeArray()
+	 * @generated
+	 */
+	EReference getCustomTypeArray_TypeArray();
+
+	/**
+	 * Returns the meta object for class '{@link san.CustomTypeStruct <em>Custom Type Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Custom Type Struct</em>'.
+	 * @see san.CustomTypeStruct
+	 * @generated
+	 */
+	EClass getCustomTypeStruct();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link san.CustomTypeStruct#getField <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Field</em>'.
+	 * @see san.CustomTypeStruct#getField()
+	 * @see #getCustomTypeStruct()
+	 * @generated
+	 */
+	EReference getCustomTypeStruct_Field();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.CustomTypeStruct#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see san.CustomTypeStruct#getName()
+	 * @see #getCustomTypeStruct()
+	 * @generated
+	 */
+	EAttribute getCustomTypeStruct_Name();
+
+	/**
+	 * Returns the meta object for class '{@link san.Field <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Field</em>'.
+	 * @see san.Field
+	 * @generated
+	 */
+	EClass getField();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.Field#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see san.Field#getName()
+	 * @see #getField()
+	 * @generated
+	 */
+	EAttribute getField_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.Field#getTypeStruct <em>Type Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Type Struct</em>'.
+	 * @see san.Field#getTypeStruct()
+	 * @see #getField()
+	 * @generated
+	 */
+	EReference getField_TypeStruct();
+
+	/**
 	 * Returns the meta object for class '{@link san.MarkingSimple <em>Marking Simple</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3237,99 +3926,151 @@ public interface SANPackage extends EPackage {
 	EClass getMarkingSimple();
 
 	/**
-	 * Returns the meta object for class '{@link san.NormalPlace <em>Normal Place</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Normal Place</em>'.
-	 * @see san.NormalPlace
-	 * @generated
-	 */
-	EClass getNormalPlace();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.NormalPlace#getMarking <em>Marking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Marking</em>'.
-	 * @see san.NormalPlace#getMarking()
-	 * @see #getNormalPlace()
-	 * @generated
-	 */
-	EReference getNormalPlace_Marking();
-
-	/**
-	 * Returns the meta object for class '{@link san.ExtendedPlace <em>Extended Place</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Extended Place</em>'.
-	 * @see san.ExtendedPlace
-	 * @generated
-	 */
-	EClass getExtendedPlace();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.ExtendedPlace#getMarking <em>Marking</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Marking</em>'.
-	 * @see san.ExtendedPlace#getMarking()
-	 * @see #getExtendedPlace()
-	 * @generated
-	 */
-	EReference getExtendedPlace_Marking();
-
-	/**
-	 * Returns the meta object for the attribute '{@link san.ExtendedPlace#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see san.ExtendedPlace#getType()
-	 * @see #getExtendedPlace()
-	 * @generated
-	 */
-	EAttribute getExtendedPlace_Type();
-
-	/**
-	 * Returns the meta object for class '{@link san.MarkingString <em>Marking String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking String</em>'.
-	 * @see san.MarkingString
-	 * @generated
-	 */
-	EClass getMarkingString();
-
-	/**
-	 * Returns the meta object for the attribute '{@link san.MarkingString#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link san.MarkingSimple#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see san.MarkingString#getValue()
-	 * @see #getMarkingString()
+	 * @see san.MarkingSimple#getValue()
+	 * @see #getMarkingSimple()
 	 * @generated
 	 */
-	EAttribute getMarkingString_Value();
+	EAttribute getMarkingSimple_Value();
 
 	/**
-	 * Returns the meta object for class '{@link san.MarkingVariableExtended <em>Marking Variable Extended</em>}'.
+	 * Returns the meta object for class '{@link san.MarkingGlobalVariable <em>Marking Global Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking Variable Extended</em>'.
-	 * @see san.MarkingVariableExtended
+	 * @return the meta object for class '<em>Marking Global Variable</em>'.
+	 * @see san.MarkingGlobalVariable
 	 * @generated
 	 */
-	EClass getMarkingVariableExtended();
+	EClass getMarkingGlobalVariable();
 
 	/**
-	 * Returns the meta object for the reference '{@link san.MarkingVariableExtended#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the reference '{@link san.MarkingGlobalVariable#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see san.MarkingVariableExtended#getVariable()
-	 * @see #getMarkingVariableExtended()
+	 * @see san.MarkingGlobalVariable#getVariable()
+	 * @see #getMarkingGlobalVariable()
 	 * @generated
 	 */
-	EReference getMarkingVariableExtended_Variable();
+	EReference getMarkingGlobalVariable_Variable();
+
+	/**
+	 * Returns the meta object for class '{@link san.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node</em>'.
+	 * @see san.Node
+	 * @generated
+	 */
+	EClass getNode();
+
+	/**
+	 * Returns the meta object for class '{@link san.Array <em>Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Array</em>'.
+	 * @see san.Array
+	 * @generated
+	 */
+	EClass getArray();
+
+	/**
+	 * Returns the meta object for the reference '{@link san.Array#getDefinition <em>Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Definition</em>'.
+	 * @see san.Array#getDefinition()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_Definition();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link san.Array#getLeafnode <em>Leafnode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Leafnode</em>'.
+	 * @see san.Array#getLeafnode()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_Leafnode();
+
+	/**
+	 * Returns the meta object for class '{@link san.LeafNode <em>Leaf Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf Node</em>'.
+	 * @see san.LeafNode
+	 * @generated
+	 */
+	EClass getLeafNode();
+
+	/**
+	 * Returns the meta object for class '{@link san.LeafNodeString <em>Leaf Node String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf Node String</em>'.
+	 * @see san.LeafNodeString
+	 * @generated
+	 */
+	EClass getLeafNodeString();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.LeafNodeString#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see san.LeafNodeString#getValue()
+	 * @see #getLeafNodeString()
+	 * @generated
+	 */
+	EAttribute getLeafNodeString_Value();
+
+	/**
+	 * Returns the meta object for class '{@link san.LeafNodeStruct <em>Leaf Node Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf Node Struct</em>'.
+	 * @see san.LeafNodeStruct
+	 * @generated
+	 */
+	EClass getLeafNodeStruct();
+
+	/**
+	 * Returns the meta object for the reference '{@link san.LeafNodeStruct#getDefinition <em>Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Definition</em>'.
+	 * @see san.LeafNodeStruct#getDefinition()
+	 * @see #getLeafNodeStruct()
+	 * @generated
+	 */
+	EReference getLeafNodeStruct_Definition();
+
+	/**
+	 * Returns the meta object for class '{@link san.LeafNodeGlobalVariable <em>Leaf Node Global Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf Node Global Variable</em>'.
+	 * @see san.LeafNodeGlobalVariable
+	 * @generated
+	 */
+	EClass getLeafNodeGlobalVariable();
+
+	/**
+	 * Returns the meta object for the reference '{@link san.LeafNodeGlobalVariable#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see san.LeafNodeGlobalVariable#getVariable()
+	 * @see #getLeafNodeGlobalVariable()
+	 * @generated
+	 */
+	EReference getLeafNodeGlobalVariable_Variable();
 
 	/**
 	 * Returns the meta object for enum '{@link san.VariableType <em>Variable Type</em>}'.
@@ -3452,6 +4193,14 @@ public interface SANPackage extends EPackage {
 		EReference SAN__INITIALIZATION = eINSTANCE.getSAN_Initialization();
 
 		/**
+		 * The meta object literal for the '<em><b>Customtype</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SAN__CUSTOMTYPE = eINSTANCE.getSAN_Customtype();
+
+		/**
 		 * The meta object literal for the '{@link san.impl.PlaceImpl <em>Place</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3460,6 +4209,30 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PLACE = eINSTANCE.getPlace();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Extended</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLACE__IS_EXTENDED = eINSTANCE.getPlace_IsExtended();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PLACE__TYPE = eINSTANCE.getPlace_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Marking</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PLACE__MARKING = eINSTANCE.getPlace_Marking();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.ActivityImpl <em>Activity</em>}' class.
@@ -3622,7 +4395,7 @@ public interface SANPackage extends EPackage {
 		EClass OUTPUT_GATE = eINSTANCE.getOutputGate();
 
 		/**
-		 * The meta object literal for the '<em><b>Activity Case</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Activity Case</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3648,7 +4421,7 @@ public interface SANPackage extends EPackage {
 		EReference INPUT_GATE__PREDICATE = eINSTANCE.getInputGate_Predicate();
 
 		/**
-		 * The meta object literal for the '<em><b>Activity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Activity</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3708,6 +4481,14 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DISTRIBUTION = eINSTANCE.getDistribution();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTRIBUTION__PARAMETERS = eINSTANCE.getDistribution_Parameters();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -3792,24 +4573,6 @@ public interface SANPackage extends EPackage {
 		EClass MARKING = eINSTANCE.getMarking();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.MarkingIntegerImpl <em>Marking Integer</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingIntegerImpl
-		 * @see san.impl.SANPackageImpl#getMarkingInteger()
-		 * @generated
-		 */
-		EClass MARKING_INTEGER = eINSTANCE.getMarkingInteger();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MARKING_INTEGER__VALUE = eINSTANCE.getMarkingInteger_Value();
-
-		/**
 		 * The meta object literal for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3818,6 +4581,14 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MARKING_EXTENDED = eINSTANCE.getMarkingExtended();
+
+		/**
+		 * The meta object literal for the '<em><b>Node</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MARKING_EXTENDED__NODE = eINSTANCE.getMarkingExtended_Node();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -3836,24 +4607,6 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GLOBAL_VARIABLE__TYPE = eINSTANCE.getGlobalVariable_Type();
-
-		/**
-		 * The meta object literal for the '{@link san.impl.MarkingVariableSimpleImpl <em>Marking Variable Simple</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingVariableSimpleImpl
-		 * @see san.impl.SANPackageImpl#getMarkingVariableSimple()
-		 * @generated
-		 */
-		EClass MARKING_VARIABLE_SIMPLE = eINSTANCE.getMarkingVariableSimple();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MARKING_VARIABLE_SIMPLE__VARIABLE = eINSTANCE.getMarkingVariableSimple_Variable();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.ExponentialImpl <em>Exponential</em>}' class.
@@ -4292,6 +5045,148 @@ public interface SANPackage extends EPackage {
 		EClass EXPRESSION_SEGMENT = eINSTANCE.getExpressionSegment();
 
 		/**
+		 * The meta object literal for the '{@link san.impl.TypeImpl <em>Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.TypeImpl
+		 * @see san.impl.SANPackageImpl#getType()
+		 * @generated
+		 */
+		EClass TYPE = eINSTANCE.getType();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.PrimitiveTypeImpl
+		 * @see san.impl.SANPackageImpl#getPrimitiveType()
+		 * @generated
+		 */
+		EClass PRIMITIVE_TYPE = eINSTANCE.getPrimitiveType();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRIMITIVE_TYPE__TYPE = eINSTANCE.getPrimitiveType_Type();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.ComplexTypeImpl <em>Complex Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.ComplexTypeImpl
+		 * @see san.impl.SANPackageImpl#getComplexType()
+		 * @generated
+		 */
+		EClass COMPLEX_TYPE = eINSTANCE.getComplexType();
+
+		/**
+		 * The meta object literal for the '<em><b>Definition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPLEX_TYPE__DEFINITION = eINSTANCE.getComplexType_Definition();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.CustomTypeDefinitionImpl <em>Custom Type Definition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.CustomTypeDefinitionImpl
+		 * @see san.impl.SANPackageImpl#getCustomTypeDefinition()
+		 * @generated
+		 */
+		EClass CUSTOM_TYPE_DEFINITION = eINSTANCE.getCustomTypeDefinition();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.CustomTypeArrayImpl <em>Custom Type Array</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.CustomTypeArrayImpl
+		 * @see san.impl.SANPackageImpl#getCustomTypeArray()
+		 * @generated
+		 */
+		EClass CUSTOM_TYPE_ARRAY = eINSTANCE.getCustomTypeArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOM_TYPE_ARRAY__SIZE = eINSTANCE.getCustomTypeArray_Size();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOM_TYPE_ARRAY__NAME = eINSTANCE.getCustomTypeArray_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Array</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOM_TYPE_ARRAY__TYPE_ARRAY = eINSTANCE.getCustomTypeArray_TypeArray();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.CustomTypeStructImpl <em>Custom Type Struct</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.CustomTypeStructImpl
+		 * @see san.impl.SANPackageImpl#getCustomTypeStruct()
+		 * @generated
+		 */
+		EClass CUSTOM_TYPE_STRUCT = eINSTANCE.getCustomTypeStruct();
+
+		/**
+		 * The meta object literal for the '<em><b>Field</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOM_TYPE_STRUCT__FIELD = eINSTANCE.getCustomTypeStruct_Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOM_TYPE_STRUCT__NAME = eINSTANCE.getCustomTypeStruct_Name();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.FieldImpl <em>Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.FieldImpl
+		 * @see san.impl.SANPackageImpl#getField()
+		 * @generated
+		 */
+		EClass FIELD = eINSTANCE.getField();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FIELD__NAME = eINSTANCE.getField_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Struct</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FIELD__TYPE_STRUCT = eINSTANCE.getField_TypeStruct();
+
+		/**
 		 * The meta object literal for the '{@link san.impl.MarkingSimpleImpl <em>Marking Simple</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4302,76 +5197,22 @@ public interface SANPackage extends EPackage {
 		EClass MARKING_SIMPLE = eINSTANCE.getMarkingSimple();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.NormalPlaceImpl <em>Normal Place</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.NormalPlaceImpl
-		 * @see san.impl.SANPackageImpl#getNormalPlace()
-		 * @generated
-		 */
-		EClass NORMAL_PLACE = eINSTANCE.getNormalPlace();
-
-		/**
-		 * The meta object literal for the '<em><b>Marking</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference NORMAL_PLACE__MARKING = eINSTANCE.getNormalPlace_Marking();
-
-		/**
-		 * The meta object literal for the '{@link san.impl.ExtendedPlaceImpl <em>Extended Place</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.ExtendedPlaceImpl
-		 * @see san.impl.SANPackageImpl#getExtendedPlace()
-		 * @generated
-		 */
-		EClass EXTENDED_PLACE = eINSTANCE.getExtendedPlace();
-
-		/**
-		 * The meta object literal for the '<em><b>Marking</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXTENDED_PLACE__MARKING = eINSTANCE.getExtendedPlace_Marking();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXTENDED_PLACE__TYPE = eINSTANCE.getExtendedPlace_Type();
-
-		/**
-		 * The meta object literal for the '{@link san.impl.MarkingStringImpl <em>Marking String</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingStringImpl
-		 * @see san.impl.SANPackageImpl#getMarkingString()
-		 * @generated
-		 */
-		EClass MARKING_STRING = eINSTANCE.getMarkingString();
-
-		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MARKING_STRING__VALUE = eINSTANCE.getMarkingString_Value();
+		EAttribute MARKING_SIMPLE__VALUE = eINSTANCE.getMarkingSimple_Value();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.MarkingVariableExtendedImpl <em>Marking Variable Extended</em>}' class.
+		 * The meta object literal for the '{@link san.impl.MarkingGlobalVariableImpl <em>Marking Global Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingVariableExtendedImpl
-		 * @see san.impl.SANPackageImpl#getMarkingVariableExtended()
+		 * @see san.impl.MarkingGlobalVariableImpl
+		 * @see san.impl.SANPackageImpl#getMarkingGlobalVariable()
 		 * @generated
 		 */
-		EClass MARKING_VARIABLE_EXTENDED = eINSTANCE.getMarkingVariableExtended();
+		EClass MARKING_GLOBAL_VARIABLE = eINSTANCE.getMarkingGlobalVariable();
 
 		/**
 		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
@@ -4379,7 +5220,107 @@ public interface SANPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MARKING_VARIABLE_EXTENDED__VARIABLE = eINSTANCE.getMarkingVariableExtended_Variable();
+		EReference MARKING_GLOBAL_VARIABLE__VARIABLE = eINSTANCE.getMarkingGlobalVariable_Variable();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.NodeImpl <em>Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.NodeImpl
+		 * @see san.impl.SANPackageImpl#getNode()
+		 * @generated
+		 */
+		EClass NODE = eINSTANCE.getNode();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.ArrayImpl <em>Array</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.ArrayImpl
+		 * @see san.impl.SANPackageImpl#getArray()
+		 * @generated
+		 */
+		EClass ARRAY = eINSTANCE.getArray();
+
+		/**
+		 * The meta object literal for the '<em><b>Definition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARRAY__DEFINITION = eINSTANCE.getArray_Definition();
+
+		/**
+		 * The meta object literal for the '<em><b>Leafnode</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARRAY__LEAFNODE = eINSTANCE.getArray_Leafnode();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.LeafNodeImpl <em>Leaf Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.LeafNodeImpl
+		 * @see san.impl.SANPackageImpl#getLeafNode()
+		 * @generated
+		 */
+		EClass LEAF_NODE = eINSTANCE.getLeafNode();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.LeafNodeStringImpl <em>Leaf Node String</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.LeafNodeStringImpl
+		 * @see san.impl.SANPackageImpl#getLeafNodeString()
+		 * @generated
+		 */
+		EClass LEAF_NODE_STRING = eINSTANCE.getLeafNodeString();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEAF_NODE_STRING__VALUE = eINSTANCE.getLeafNodeString_Value();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.LeafNodeStructImpl <em>Leaf Node Struct</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.LeafNodeStructImpl
+		 * @see san.impl.SANPackageImpl#getLeafNodeStruct()
+		 * @generated
+		 */
+		EClass LEAF_NODE_STRUCT = eINSTANCE.getLeafNodeStruct();
+
+		/**
+		 * The meta object literal for the '<em><b>Definition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEAF_NODE_STRUCT__DEFINITION = eINSTANCE.getLeafNodeStruct_Definition();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.LeafNodeGlobalVariableImpl <em>Leaf Node Global Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.LeafNodeGlobalVariableImpl
+		 * @see san.impl.SANPackageImpl#getLeafNodeGlobalVariable()
+		 * @generated
+		 */
+		EClass LEAF_NODE_GLOBAL_VARIABLE = eINSTANCE.getLeafNodeGlobalVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEAF_NODE_GLOBAL_VARIABLE__VARIABLE = eINSTANCE.getLeafNodeGlobalVariable_Variable();
 
 		/**
 		 * The meta object literal for the '{@link san.VariableType <em>Variable Type</em>}' enum.

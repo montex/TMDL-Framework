@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Erlang#getM <em>M</em>}</li>
  *   <li>{@link san.Erlang#getBeta <em>Beta</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getErlang()
  * @model

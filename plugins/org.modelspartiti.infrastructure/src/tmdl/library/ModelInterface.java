@@ -15,12 +15,12 @@ import tmdl.core.Parameter;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.ModelInterface#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.library.ModelInterface#getVariables <em>Variables</em>}</li>
  *   <li>{@link tmdl.library.ModelInterface#getParameters <em>Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.library.LibraryPackage#getModelInterface()
  * @model

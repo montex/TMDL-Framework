@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Binomial#getT <em>T</em>}</li>
  *   <li>{@link san.Binomial#getP <em>P</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getBinomial()
  * @model

@@ -11,8 +11,6 @@ import tmdl.library.LibraryPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Composition Rule All</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

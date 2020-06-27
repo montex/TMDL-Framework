@@ -2,19 +2,27 @@
  */
 package sant.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import san.Expression;
+
 import sant.CasesSpecificationParametric;
 import sant.SANTPackage;
 
-import tmdl.expressions.TemplateExpressionInteger;
-import tmdl.expressions.TemplateExpressionReal;
+import tmdl.core.Parameter;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,34 +30,34 @@ import tmdl.expressions.TemplateExpressionReal;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link sant.impl.CasesSpecificationParametricImpl#getNumCases <em>Num Cases</em>}</li>
- *   <li>{@link sant.impl.CasesSpecificationParametricImpl#getPExpression <em>PExpression</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link sant.impl.CasesSpecificationParametricImpl#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link sant.impl.CasesSpecificationParametricImpl#getP <em>P</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class CasesSpecificationParametricImpl extends CasesSpecificationImpl implements CasesSpecificationParametric {
 	/**
-	 * The cached value of the '{@link #getNumCases() <em>Num Cases</em>}' containment reference.
+	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNumCases()
+	 * @see #getParameter()
 	 * @generated
 	 * @ordered
 	 */
-	protected TemplateExpressionInteger numCases;
+	protected Parameter parameter;
 
 	/**
-	 * The cached value of the '{@link #getPExpression() <em>PExpression</em>}' containment reference.
+	 * The cached value of the '{@link #getP() <em>P</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPExpression()
+	 * @see #getP()
 	 * @generated
 	 * @ordered
 	 */
-	protected TemplateExpressionReal pExpression;
+	protected EList<Expression> p;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,23 +83,16 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TemplateExpressionInteger getNumCases() {
-		return numCases;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetNumCases(TemplateExpressionInteger newNumCases, NotificationChain msgs) {
-		TemplateExpressionInteger oldNumCases = numCases;
-		numCases = newNumCases;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SANTPackage.CASES_SPECIFICATION_PARAMETRIC__NUM_CASES, oldNumCases, newNumCases);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public Parameter getParameter() {
+		if (parameter != null && parameter.eIsProxy()) {
+			InternalEObject oldParameter = (InternalEObject)parameter;
+			parameter = (Parameter)eResolveProxy(oldParameter);
+			if (parameter != oldParameter) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER, oldParameter, parameter));
+			}
 		}
-		return msgs;
+		return parameter;
 	}
 
 	/**
@@ -99,61 +100,32 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNumCases(TemplateExpressionInteger newNumCases) {
-		if (newNumCases != numCases) {
-			NotificationChain msgs = null;
-			if (numCases != null)
-				msgs = ((InternalEObject)numCases).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SANTPackage.CASES_SPECIFICATION_PARAMETRIC__NUM_CASES, null, msgs);
-			if (newNumCases != null)
-				msgs = ((InternalEObject)newNumCases).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SANTPackage.CASES_SPECIFICATION_PARAMETRIC__NUM_CASES, null, msgs);
-			msgs = basicSetNumCases(newNumCases, msgs);
-			if (msgs != null) msgs.dispatch();
+	public Parameter basicGetParameter() {
+		return parameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParameter(Parameter newParameter) {
+		Parameter oldParameter = parameter;
+		parameter = newParameter;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER, oldParameter, parameter));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Expression> getP() {
+		if (p == null) {
+			p = new EObjectContainmentEList<Expression>(Expression.class, this, SANTPackage.CASES_SPECIFICATION_PARAMETRIC__P);
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANTPackage.CASES_SPECIFICATION_PARAMETRIC__NUM_CASES, newNumCases, newNumCases));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TemplateExpressionReal getPExpression() {
-		return pExpression;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPExpression(TemplateExpressionReal newPExpression, NotificationChain msgs) {
-		TemplateExpressionReal oldPExpression = pExpression;
-		pExpression = newPExpression;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PEXPRESSION, oldPExpression, newPExpression);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPExpression(TemplateExpressionReal newPExpression) {
-		if (newPExpression != pExpression) {
-			NotificationChain msgs = null;
-			if (pExpression != null)
-				msgs = ((InternalEObject)pExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PEXPRESSION, null, msgs);
-			if (newPExpression != null)
-				msgs = ((InternalEObject)newPExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PEXPRESSION, null, msgs);
-			msgs = basicSetPExpression(newPExpression, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PEXPRESSION, newPExpression, newPExpression));
+		return p;
 	}
 
 	/**
@@ -164,10 +136,8 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__NUM_CASES:
-				return basicSetNumCases(null, msgs);
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PEXPRESSION:
-				return basicSetPExpression(null, msgs);
+			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__P:
+				return ((InternalEList<?>)getP()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -180,10 +150,11 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__NUM_CASES:
-				return getNumCases();
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PEXPRESSION:
-				return getPExpression();
+			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER:
+				if (resolve) return getParameter();
+				return basicGetParameter();
+			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__P:
+				return getP();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -193,14 +164,16 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__NUM_CASES:
-				setNumCases((TemplateExpressionInteger)newValue);
+			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER:
+				setParameter((Parameter)newValue);
 				return;
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PEXPRESSION:
-				setPExpression((TemplateExpressionReal)newValue);
+			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__P:
+				getP().clear();
+				getP().addAll((Collection<? extends Expression>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -214,11 +187,11 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__NUM_CASES:
-				setNumCases((TemplateExpressionInteger)null);
+			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER:
+				setParameter((Parameter)null);
 				return;
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PEXPRESSION:
-				setPExpression((TemplateExpressionReal)null);
+			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__P:
+				getP().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -232,10 +205,10 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__NUM_CASES:
-				return numCases != null;
-			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PEXPRESSION:
-				return pExpression != null;
+			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__PARAMETER:
+				return parameter != null;
+			case SANTPackage.CASES_SPECIFICATION_PARAMETRIC__P:
+				return p != null && !p.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

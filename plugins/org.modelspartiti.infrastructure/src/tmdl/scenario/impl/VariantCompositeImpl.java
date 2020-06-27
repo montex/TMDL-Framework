@@ -29,11 +29,11 @@ import tmdl.scenario.VariantComposite;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.impl.VariantCompositeImpl#getTemplate <em>Template</em>}</li>
  *   <li>{@link tmdl.scenario.impl.VariantCompositeImpl#getRealizations <em>Realizations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

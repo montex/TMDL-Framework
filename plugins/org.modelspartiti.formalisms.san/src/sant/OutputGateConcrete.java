@@ -2,6 +2,8 @@
  */
 package sant;
 
+import org.eclipse.emf.common.util.EList;
+import san.Case;
 
 /**
  * <!-- begin-user-doc -->
@@ -10,40 +12,30 @@ package sant;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link sant.OutputGateConcrete#getActivityCase <em>Activity Case</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link sant.OutputGateConcrete#getCase <em>Case</em>}</li>
+ * </ul>
  *
  * @see sant.SANTPackage#getOutputGateConcrete()
- * @model extendedMetaData="kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface OutputGateConcrete extends OutputGate {
 	/**
-	 * Returns the value of the '<em><b>Activity Case</b></em>' reference.
+	 * Returns the value of the '<em><b>Case</b></em>' reference list.
+	 * The list contents are of type {@link san.Case}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activity Case</em>' reference isn't clear,
+	 * If the meaning of the '<em>Case</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activity Case</em>' reference.
-	 * @see #setActivityCase(Case)
-	 * @see sant.SANTPackage#getOutputGateConcrete_ActivityCase()
+	 * @return the value of the '<em>Case</em>' reference list.
+	 * @see sant.SANTPackage#getOutputGateConcrete_Case()
 	 * @model required="true"
 	 * @generated
 	 */
-	Case getActivityCase();
-
-	/**
-	 * Sets the value of the '{@link sant.OutputGateConcrete#getActivityCase <em>Activity Case</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Activity Case</em>' reference.
-	 * @see #getActivityCase()
-	 * @generated
-	 */
-	void setActivityCase(Case value);
+	EList<Case> getCase();
 
 } // OutputGateConcrete

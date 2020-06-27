@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ExtendedPlaceType implements Enumerator {
 	/**
-	 * The '<em><b>Int</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #INT_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	INT(1, "int", "int"),
-
-	/**
 	 * The '<em><b>Short</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -37,6 +27,16 @@ public enum ExtendedPlaceType implements Enumerator {
 	 * @ordered
 	 */
 	SHORT(0, "short", "short"),
+
+	/**
+	 * The '<em><b>Int</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #INT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	INT(1, "int", "int"),
 
 	/**
 	 * The '<em><b>Float</b></em>' literal object.
@@ -69,21 +69,6 @@ public enum ExtendedPlaceType implements Enumerator {
 	CHAR(6, "char", "char");
 
 	/**
-	 * The '<em><b>Int</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Int</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #INT
-	 * @model name="int"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int INT_VALUE = 1;
-
-	/**
 	 * The '<em><b>Short</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -97,6 +82,21 @@ public enum ExtendedPlaceType implements Enumerator {
 	 * @ordered
 	 */
 	public static final int SHORT_VALUE = 0;
+
+	/**
+	 * The '<em><b>Int</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Int</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #INT
+	 * @model name="int"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int INT_VALUE = 1;
 
 	/**
 	 * The '<em><b>Float</b></em>' literal value.
@@ -151,8 +151,8 @@ public enum ExtendedPlaceType implements Enumerator {
 	 */
 	private static final ExtendedPlaceType[] VALUES_ARRAY =
 		new ExtendedPlaceType[] {
-			INT,
 			SHORT,
+			INT,
 			FLOAT,
 			DOUBLE,
 			CHAR,
@@ -170,6 +170,8 @@ public enum ExtendedPlaceType implements Enumerator {
 	 * Returns the '<em><b>Extended Place Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ExtendedPlaceType get(String literal) {
@@ -186,6 +188,8 @@ public enum ExtendedPlaceType implements Enumerator {
 	 * Returns the '<em><b>Extended Place Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ExtendedPlaceType getByName(String name) {
@@ -202,12 +206,14 @@ public enum ExtendedPlaceType implements Enumerator {
 	 * Returns the '<em><b>Extended Place Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ExtendedPlaceType get(int value) {
 		switch (value) {
-			case INT_VALUE: return INT;
 			case SHORT_VALUE: return SHORT;
+			case INT_VALUE: return INT;
 			case FLOAT_VALUE: return FLOAT;
 			case DOUBLE_VALUE: return DOUBLE;
 			case CHAR_VALUE: return CHAR;

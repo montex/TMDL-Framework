@@ -28,12 +28,12 @@ import tmdl.scenario.Variant;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.scenario.impl.ScenarioImpl#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.scenario.impl.ScenarioImpl#getVariants <em>Variants</em>}</li>
  *   <li>{@link tmdl.scenario.impl.ScenarioImpl#getRoot <em>Root</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -272,7 +272,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

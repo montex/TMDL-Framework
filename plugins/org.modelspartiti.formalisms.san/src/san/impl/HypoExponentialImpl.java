@@ -20,10 +20,10 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.HypoExponentialImpl#getRate0 <em>Rate0</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

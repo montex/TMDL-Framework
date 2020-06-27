@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Gamma#getAlpha <em>Alpha</em>}</li>
  *   <li>{@link san.Gamma#getBeta <em>Beta</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getGamma()
  * @model

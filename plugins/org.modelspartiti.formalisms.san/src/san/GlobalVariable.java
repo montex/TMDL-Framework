@@ -10,10 +10,10 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.GlobalVariable#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getGlobalVariable()
  * @model

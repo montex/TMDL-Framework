@@ -20,11 +20,11 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.NormalImpl#getMean <em>Mean</em>}</li>
  *   <li>{@link san.impl.NormalImpl#getVariance <em>Variance</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sant_dev:SANT
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sant_dev="http://www.modelspartiti.org/templates/san/sant_dev"
+    xsi:schemaLocation="http://www.modelspartiti.org/templates/san/sant_dev sant_dev.ecore"
+    name="template1">
+  <templatePlaces
+      name="PT1"/>
+  <activityTemplates
+      xsi:type="sant_dev:TimedActivityTemplate">
+    <casesTemplate
+        xsi:type="sant_dev:CasesSpecificationArray"/>
+  </activityTemplates>
+</sant_dev:SANT>

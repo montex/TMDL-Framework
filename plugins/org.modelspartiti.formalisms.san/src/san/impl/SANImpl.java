@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import san.Activity;
 import san.Arc;
+import san.CustomTypeDefinition;
 import san.Expression;
 import san.Gate;
 import san.GlobalVariable;
@@ -29,6 +30,7 @@ import tmdl.core.TemplateModel;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.SANImpl#getPlaces <em>Places</em>}</li>
  *   <li>{@link san.impl.SANImpl#getName <em>Name</em>}</li>
@@ -37,8 +39,8 @@ import tmdl.core.TemplateModel;
  *   <li>{@link san.impl.SANImpl#getArcs <em>Arcs</em>}</li>
  *   <li>{@link san.impl.SANImpl#getGates <em>Gates</em>}</li>
  *   <li>{@link san.impl.SANImpl#getInitialization <em>Initialization</em>}</li>
+ *   <li>{@link san.impl.SANImpl#getCustomtype <em>Customtype</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -122,6 +124,16 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * @ordered
 	 */
 	protected EList<Expression> initialization;
+
+	/**
+	 * The cached value of the '{@link #getCustomtype() <em>Customtype</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCustomtype()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CustomTypeDefinition> customtype;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,6 +252,18 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<CustomTypeDefinition> getCustomtype() {
+		if (customtype == null) {
+			customtype = new EObjectContainmentEList<CustomTypeDefinition>(CustomTypeDefinition.class, this, SANPackage.SAN__CUSTOMTYPE);
+		}
+		return customtype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TemplateModel templatize() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -266,6 +290,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return ((InternalEList<?>)getGates()).basicRemove(otherEnd, msgs);
 			case SANPackage.SAN__INITIALIZATION:
 				return ((InternalEList<?>)getInitialization()).basicRemove(otherEnd, msgs);
+			case SANPackage.SAN__CUSTOMTYPE:
+				return ((InternalEList<?>)getCustomtype()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -292,6 +318,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return getGates();
 			case SANPackage.SAN__INITIALIZATION:
 				return getInitialization();
+			case SANPackage.SAN__CUSTOMTYPE:
+				return getCustomtype();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -332,6 +360,10 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				getInitialization().clear();
 				getInitialization().addAll((Collection<? extends Expression>)newValue);
 				return;
+			case SANPackage.SAN__CUSTOMTYPE:
+				getCustomtype().clear();
+				getCustomtype().addAll((Collection<? extends CustomTypeDefinition>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -365,6 +397,9 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 			case SANPackage.SAN__INITIALIZATION:
 				getInitialization().clear();
 				return;
+			case SANPackage.SAN__CUSTOMTYPE:
+				getCustomtype().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -391,6 +426,8 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 				return gates != null && !gates.isEmpty();
 			case SANPackage.SAN__INITIALIZATION:
 				return initialization != null && !initialization.isEmpty();
+			case SANPackage.SAN__CUSTOMTYPE:
+				return customtype != null && !customtype.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -418,7 +455,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.OutputArc#getSource <em>Source</em>}</li>
  *   <li>{@link san.OutputArc#getTarget <em>Target</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getOutputArc()
  * @model

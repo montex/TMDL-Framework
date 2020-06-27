@@ -13,5 +13,5 @@ package sant;
  * @model abstract="true"
  * @generated
  */
-public interface OutputGate extends Gate {
+public interface OutputGate extends GateTemplate {
 } // OutputGate

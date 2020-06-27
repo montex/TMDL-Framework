@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.core.Parameter#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.core.CorePackage#getParameter()
  * @model abstract="true"

@@ -10,12 +10,12 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.ConditionalWeibull#getAlpha <em>Alpha</em>}</li>
  *   <li>{@link san.ConditionalWeibull#getBeta <em>Beta</em>}</li>
  *   <li>{@link san.ConditionalWeibull#getT <em>T</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getConditionalWeibull()
  * @model

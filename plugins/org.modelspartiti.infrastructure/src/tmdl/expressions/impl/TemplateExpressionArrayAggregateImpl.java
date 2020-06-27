@@ -30,11 +30,11 @@ import tmdl.expressions.TemplateExpressionArrayAggregate;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionArrayAggregateImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionArrayAggregateImpl#getFunction <em>Function</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -290,7 +290,7 @@ public class TemplateExpressionArrayAggregateImpl extends MinimalEObjectImpl.Con
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (function: ");
 		result.append(function);
 		result.append(')');

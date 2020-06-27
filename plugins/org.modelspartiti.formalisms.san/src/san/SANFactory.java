@@ -31,6 +31,15 @@ public interface SANFactory extends EFactory {
 	SAN createSAN();
 
 	/**
+	 * Returns a new object of class '<em>Place</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Place</em>'.
+	 * @generated
+	 */
+	Place createPlace();
+
+	/**
 	 * Returns a new object of class '<em>Case</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -130,15 +139,6 @@ public interface SANFactory extends EFactory {
 	ExpressionVariable createExpressionVariable();
 
 	/**
-	 * Returns a new object of class '<em>Marking Integer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Integer</em>'.
-	 * @generated
-	 */
-	MarkingInteger createMarkingInteger();
-
-	/**
 	 * Returns a new object of class '<em>Global Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,15 +146,6 @@ public interface SANFactory extends EFactory {
 	 * @generated
 	 */
 	GlobalVariable createGlobalVariable();
-
-	/**
-	 * Returns a new object of class '<em>Marking Variable Simple</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Variable Simple</em>'.
-	 * @generated
-	 */
-	MarkingVariableSimple createMarkingVariableSimple();
 
 	/**
 	 * Returns a new object of class '<em>Exponential</em>'.
@@ -310,40 +301,112 @@ public interface SANFactory extends EFactory {
 	Pareto createPareto();
 
 	/**
-	 * Returns a new object of class '<em>Normal Place</em>'.
+	 * Returns a new object of class '<em>Primitive Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Normal Place</em>'.
+	 * @return a new object of class '<em>Primitive Type</em>'.
 	 * @generated
 	 */
-	NormalPlace createNormalPlace();
+	PrimitiveType createPrimitiveType();
 
 	/**
-	 * Returns a new object of class '<em>Extended Place</em>'.
+	 * Returns a new object of class '<em>Complex Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Extended Place</em>'.
+	 * @return a new object of class '<em>Complex Type</em>'.
 	 * @generated
 	 */
-	ExtendedPlace createExtendedPlace();
+	ComplexType createComplexType();
 
 	/**
-	 * Returns a new object of class '<em>Marking String</em>'.
+	 * Returns a new object of class '<em>Custom Type Array</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking String</em>'.
+	 * @return a new object of class '<em>Custom Type Array</em>'.
 	 * @generated
 	 */
-	MarkingString createMarkingString();
+	CustomTypeArray createCustomTypeArray();
 
 	/**
-	 * Returns a new object of class '<em>Marking Variable Extended</em>'.
+	 * Returns a new object of class '<em>Custom Type Struct</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Variable Extended</em>'.
+	 * @return a new object of class '<em>Custom Type Struct</em>'.
 	 * @generated
 	 */
-	MarkingVariableExtended createMarkingVariableExtended();
+	CustomTypeStruct createCustomTypeStruct();
+
+	/**
+	 * Returns a new object of class '<em>Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Field</em>'.
+	 * @generated
+	 */
+	Field createField();
+
+	/**
+	 * Returns a new object of class '<em>Marking Extended</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Extended</em>'.
+	 * @generated
+	 */
+	MarkingExtended createMarkingExtended();
+
+	/**
+	 * Returns a new object of class '<em>Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Array</em>'.
+	 * @generated
+	 */
+	Array createArray();
+
+	/**
+	 * Returns a new object of class '<em>Leaf Node String</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leaf Node String</em>'.
+	 * @generated
+	 */
+	LeafNodeString createLeafNodeString();
+
+	/**
+	 * Returns a new object of class '<em>Marking Simple</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Simple</em>'.
+	 * @generated
+	 */
+	MarkingSimple createMarkingSimple();
+
+	/**
+	 * Returns a new object of class '<em>Marking Global Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Global Variable</em>'.
+	 * @generated
+	 */
+	MarkingGlobalVariable createMarkingGlobalVariable();
+
+	/**
+	 * Returns a new object of class '<em>Leaf Node Struct</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leaf Node Struct</em>'.
+	 * @generated
+	 */
+	LeafNodeStruct createLeafNodeStruct();
+
+	/**
+	 * Returns a new object of class '<em>Leaf Node Global Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leaf Node Global Variable</em>'.
+	 * @generated
+	 */
+	LeafNodeGlobalVariable createLeafNodeGlobalVariable();
 
 	/**
 	 * Returns the package supported by this factory.

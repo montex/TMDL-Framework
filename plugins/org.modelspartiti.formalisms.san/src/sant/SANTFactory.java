@@ -31,49 +31,40 @@ public interface SANTFactory extends EFactory {
 	SANT createSANT();
 
 	/**
-	 * Returns a new object of class '<em>Normal Place</em>'.
+	 * Returns a new object of class '<em>Place Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Normal Place</em>'.
+	 * @return a new object of class '<em>Place Template</em>'.
 	 * @generated
 	 */
-	NormalPlace createNormalPlace();
+	PlaceTemplate createPlaceTemplate();
 
 	/**
-	 * Returns a new object of class '<em>Extended Place</em>'.
+	 * Returns a new object of class '<em>Multiplicity Range Operator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Extended Place</em>'.
+	 * @return a new object of class '<em>Multiplicity Range Operator</em>'.
 	 * @generated
 	 */
-	ExtendedPlace createExtendedPlace();
+	MultiplicityRangeOperator createMultiplicityRangeOperator();
 
 	/**
-	 * Returns a new object of class '<em>Case</em>'.
+	 * Returns a new object of class '<em>Cases Specification Concrete</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Case</em>'.
+	 * @return a new object of class '<em>Cases Specification Concrete</em>'.
 	 * @generated
 	 */
-	Case createCase();
+	CasesSpecificationConcrete createCasesSpecificationConcrete();
 
 	/**
-	 * Returns a new object of class '<em>Cases Specification Cases</em>'.
+	 * Returns a new object of class '<em>Cases Specification Array</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cases Specification Cases</em>'.
+	 * @return a new object of class '<em>Cases Specification Array</em>'.
 	 * @generated
 	 */
-	CasesSpecificationCases createCasesSpecificationCases();
-
-	/**
-	 * Returns a new object of class '<em>Cases Specification Probability Array</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cases Specification Probability Array</em>'.
-	 * @generated
-	 */
-	CasesSpecificationProbabilityArray createCasesSpecificationProbabilityArray();
+	CasesSpecificationArray createCasesSpecificationArray();
 
 	/**
 	 * Returns a new object of class '<em>Cases Specification Parametric</em>'.
@@ -85,22 +76,49 @@ public interface SANTFactory extends EFactory {
 	CasesSpecificationParametric createCasesSpecificationParametric();
 
 	/**
-	 * Returns a new object of class '<em>Input Arc</em>'.
+	 * Returns a new object of class '<em>Cases Specification Probability Array</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Arc</em>'.
+	 * @return a new object of class '<em>Cases Specification Probability Array</em>'.
 	 * @generated
 	 */
-	InputArc createInputArc();
+	CasesSpecificationProbabilityArray createCasesSpecificationProbabilityArray();
 
 	/**
-	 * Returns a new object of class '<em>Output Arc</em>'.
+	 * Returns a new object of class '<em>Timed Activity Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Output Arc</em>'.
+	 * @return a new object of class '<em>Timed Activity Template</em>'.
 	 * @generated
 	 */
-	OutputArc createOutputArc();
+	TimedActivityTemplate createTimedActivityTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Instantaneous Activity Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Instantaneous Activity Template</em>'.
+	 * @generated
+	 */
+	InstantaneousActivityTemplate createInstantaneousActivityTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Marking Template Simple</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Template Simple</em>'.
+	 * @generated
+	 */
+	MarkingTemplateSimple createMarkingTemplateSimple();
+
+	/**
+	 * Returns a new object of class '<em>Marking Template Global Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Template Global Variable</em>'.
+	 * @generated
+	 */
+	MarkingTemplateGlobalVariable createMarkingTemplateGlobalVariable();
 
 	/**
 	 * Returns a new object of class '<em>Output Gate Concrete</em>'.
@@ -121,337 +139,31 @@ public interface SANTFactory extends EFactory {
 	OutputGateTemplate createOutputGateTemplate();
 
 	/**
-	 * Returns a new object of class '<em>Input Gate</em>'.
+	 * Returns a new object of class '<em>Input Gate Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Gate</em>'.
+	 * @return a new object of class '<em>Input Gate Template</em>'.
 	 * @generated
 	 */
-	InputGate createInputGate();
+	InputGateTemplate createInputGateTemplate();
 
 	/**
-	 * Returns a new object of class '<em>Instantaneous Activity</em>'.
+	 * Returns a new object of class '<em>Input Arc</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Instantaneous Activity</em>'.
+	 * @return a new object of class '<em>Input Arc</em>'.
 	 * @generated
 	 */
-	InstantaneousActivity createInstantaneousActivity();
+	InputArc createInputArc();
 
 	/**
-	 * Returns a new object of class '<em>Timed Activity</em>'.
+	 * Returns a new object of class '<em>Output Arc</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Timed Activity</em>'.
+	 * @return a new object of class '<em>Output Arc</em>'.
 	 * @generated
 	 */
-	TimedActivity createTimedActivity();
-
-	/**
-	 * Returns a new object of class '<em>Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression</em>'.
-	 * @generated
-	 */
-	Expression createExpression();
-
-	/**
-	 * Returns a new object of class '<em>Expression Text</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Text</em>'.
-	 * @generated
-	 */
-	ExpressionText createExpressionText();
-
-	/**
-	 * Returns a new object of class '<em>Expression Marking</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Marking</em>'.
-	 * @generated
-	 */
-	ExpressionMarking createExpressionMarking();
-
-	/**
-	 * Returns a new object of class '<em>Expression Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Variable</em>'.
-	 * @generated
-	 */
-	ExpressionVariable createExpressionVariable();
-
-	/**
-	 * Returns a new object of class '<em>Expression Template Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Template Expression</em>'.
-	 * @generated
-	 */
-	ExpressionTemplateExpression createExpressionTemplateExpression();
-
-	/**
-	 * Returns a new object of class '<em>Expression Iteration Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Iteration Element</em>'.
-	 * @generated
-	 */
-	ExpressionIterationElement createExpressionIterationElement();
-
-	/**
-	 * Returns a new object of class '<em>Expression Activity Cases Number</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Activity Cases Number</em>'.
-	 * @generated
-	 */
-	ExpressionActivityCasesNumber createExpressionActivityCasesNumber();
-
-	/**
-	 * Returns a new object of class '<em>Expression Place Template Size</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Place Template Size</em>'.
-	 * @generated
-	 */
-	ExpressionPlaceTemplateSize createExpressionPlaceTemplateSize();
-
-	/**
-	 * Returns a new object of class '<em>Expression If Then Else</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression If Then Else</em>'.
-	 * @generated
-	 */
-	ExpressionIfThenElse createExpressionIfThenElse();
-
-	/**
-	 * Returns a new object of class '<em>Expression Loop</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression Loop</em>'.
-	 * @generated
-	 */
-	ExpressionLoop createExpressionLoop();
-
-	/**
-	 * Returns a new object of class '<em>This Context Iterator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>This Context Iterator</em>'.
-	 * @generated
-	 */
-	ThisContextIterator createThisContextIterator();
-
-	/**
-	 * Returns a new object of class '<em>Loop Iterator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Loop Iterator</em>'.
-	 * @generated
-	 */
-	LoopIterator createLoopIterator();
-
-	/**
-	 * Returns a new object of class '<em>Marking Integer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Integer</em>'.
-	 * @generated
-	 */
-	MarkingInteger createMarkingInteger();
-
-	/**
-	 * Returns a new object of class '<em>Global Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Global Variable</em>'.
-	 * @generated
-	 */
-	GlobalVariable createGlobalVariable();
-
-	/**
-	 * Returns a new object of class '<em>Marking Variable Simple</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Variable Simple</em>'.
-	 * @generated
-	 */
-	MarkingVariableSimple createMarkingVariableSimple();
-
-	/**
-	 * Returns a new object of class '<em>Exponential</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Exponential</em>'.
-	 * @generated
-	 */
-	Exponential createExponential();
-
-	/**
-	 * Returns a new object of class '<em>Normal</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Normal</em>'.
-	 * @generated
-	 */
-	Normal createNormal();
-
-	/**
-	 * Returns a new object of class '<em>Gamma</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Gamma</em>'.
-	 * @generated
-	 */
-	Gamma createGamma();
-
-	/**
-	 * Returns a new object of class '<em>Binomial</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Binomial</em>'.
-	 * @generated
-	 */
-	Binomial createBinomial();
-
-	/**
-	 * Returns a new object of class '<em>Deterministic</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Deterministic</em>'.
-	 * @generated
-	 */
-	Deterministic createDeterministic();
-
-	/**
-	 * Returns a new object of class '<em>Lognormal</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lognormal</em>'.
-	 * @generated
-	 */
-	Lognormal createLognormal();
-
-	/**
-	 * Returns a new object of class '<em>Beta</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Beta</em>'.
-	 * @generated
-	 */
-	Beta createBeta();
-
-	/**
-	 * Returns a new object of class '<em>Negative Binomial</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Negative Binomial</em>'.
-	 * @generated
-	 */
-	NegativeBinomial createNegativeBinomial();
-
-	/**
-	 * Returns a new object of class '<em>Geometric</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Geometric</em>'.
-	 * @generated
-	 */
-	Geometric createGeometric();
-
-	/**
-	 * Returns a new object of class '<em>Erlang</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Erlang</em>'.
-	 * @generated
-	 */
-	Erlang createErlang();
-
-	/**
-	 * Returns a new object of class '<em>Uniform</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Uniform</em>'.
-	 * @generated
-	 */
-	Uniform createUniform();
-
-	/**
-	 * Returns a new object of class '<em>Hyper Exponential</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Hyper Exponential</em>'.
-	 * @generated
-	 */
-	HyperExponential createHyperExponential();
-
-	/**
-	 * Returns a new object of class '<em>Weibull</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Weibull</em>'.
-	 * @generated
-	 */
-	Weibull createWeibull();
-
-	/**
-	 * Returns a new object of class '<em>Triangular</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Triangular</em>'.
-	 * @generated
-	 */
-	Triangular createTriangular();
-
-	/**
-	 * Returns a new object of class '<em>Conditional Weibull</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conditional Weibull</em>'.
-	 * @generated
-	 */
-	ConditionalWeibull createConditionalWeibull();
-
-	/**
-	 * Returns a new object of class '<em>Hypo Exponential</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Hypo Exponential</em>'.
-	 * @generated
-	 */
-	HypoExponential createHypoExponential();
-
-	/**
-	 * Returns a new object of class '<em>Pareto</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pareto</em>'.
-	 * @generated
-	 */
-	Pareto createPareto();
-
-	/**
-	 * Returns a new object of class '<em>Marking String</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking String</em>'.
-	 * @generated
-	 */
-	MarkingString createMarkingString();
-
-	/**
-	 * Returns a new object of class '<em>Marking Variable Extended</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Variable Extended</em>'.
-	 * @generated
-	 */
-	MarkingVariableExtended createMarkingVariableExtended();
+	OutputArc createOutputArc();
 
 	/**
 	 * Returns the package supported by this factory.

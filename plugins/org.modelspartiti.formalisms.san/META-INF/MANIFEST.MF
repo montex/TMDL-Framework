@@ -2,22 +2,33 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.modelspartiti.formalisms.san;singleton:=true
+Automatic-Module-Name: org.modelspartiti.formalisms.san
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: api.exporters,
- api.importers,
- api.transformers,
- san,
+Export-Package: san,
  san.impl,
  san.util,
  sant,
  sant.impl,
- sant.util
+ sant.util,
+ tmdl.core,
+ tmdl.core.impl,
+ tmdl.core.util,
+ tmdl.expressions,
+ tmdl.expressions.impl,
+ tmdl.expressions.util,
+ tmdl.library,
+ tmdl.library.impl,
+ tmdl.library.util,
+ tmdl.scenario,
+ tmdl.scenario.impl,
+ tmdl.scenario.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.modelspartiti.formalisms.san;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.modelspartiti.infrastructure;visibility:=reexport,
  org.eclipse.acceleo.engine,

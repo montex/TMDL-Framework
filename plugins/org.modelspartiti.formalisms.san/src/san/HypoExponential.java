@@ -10,10 +10,10 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.HypoExponential#getRate0 <em>Rate0</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getHypoExponential()
  * @model

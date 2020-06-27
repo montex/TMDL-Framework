@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Normal#getMean <em>Mean</em>}</li>
  *   <li>{@link san.Normal#getVariance <em>Variance</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getNormal()
  * @model

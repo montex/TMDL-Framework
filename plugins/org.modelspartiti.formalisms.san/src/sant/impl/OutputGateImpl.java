@@ -11,12 +11,10 @@ import sant.SANTPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Output Gate</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public abstract class OutputGateImpl extends GateImpl implements OutputGate {
+public abstract class OutputGateImpl extends GateTemplateImpl implements OutputGate {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

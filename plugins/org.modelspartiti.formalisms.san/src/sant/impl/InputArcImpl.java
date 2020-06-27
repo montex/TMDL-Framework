@@ -9,9 +9,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import sant.Activity;
+import san.Place;
+
+import sant.ActivityTemplate;
 import sant.InputArc;
-import sant.Place;
+import sant.PlaceTemplate;
 import sant.SANTPackage;
 
 /**
@@ -20,15 +22,16 @@ import sant.SANTPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link sant.impl.InputArcImpl#getSource <em>Source</em>}</li>
  *   <li>{@link sant.impl.InputArcImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link sant.impl.InputArcImpl#getTemplateSource <em>Template Source</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class InputArcImpl extends ArcImpl implements InputArc {
+public class InputArcImpl extends ArcTemplateImpl implements InputArc {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -47,7 +50,17 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * @generated
 	 * @ordered
 	 */
-	protected Activity target;
+	protected ActivityTemplate target;
+
+	/**
+	 * The cached value of the '{@link #getTemplateSource() <em>Template Source</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemplateSource()
+	 * @generated
+	 * @ordered
+	 */
+	protected PlaceTemplate templateSource;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,10 +124,10 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activity getTarget() {
+	public ActivityTemplate getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
-			target = (Activity)eResolveProxy(oldTarget);
+			target = (ActivityTemplate)eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANTPackage.INPUT_ARC__TARGET, oldTarget, target));
@@ -128,7 +141,7 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activity basicGetTarget() {
+	public ActivityTemplate basicGetTarget() {
 		return target;
 	}
 
@@ -137,11 +150,49 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(Activity newTarget) {
-		Activity oldTarget = target;
+	public void setTarget(ActivityTemplate newTarget) {
+		ActivityTemplate oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SANTPackage.INPUT_ARC__TARGET, oldTarget, target));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PlaceTemplate getTemplateSource() {
+		if (templateSource != null && templateSource.eIsProxy()) {
+			InternalEObject oldTemplateSource = (InternalEObject)templateSource;
+			templateSource = (PlaceTemplate)eResolveProxy(oldTemplateSource);
+			if (templateSource != oldTemplateSource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SANTPackage.INPUT_ARC__TEMPLATE_SOURCE, oldTemplateSource, templateSource));
+			}
+		}
+		return templateSource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PlaceTemplate basicGetTemplateSource() {
+		return templateSource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTemplateSource(PlaceTemplate newTemplateSource) {
+		PlaceTemplate oldTemplateSource = templateSource;
+		templateSource = newTemplateSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SANTPackage.INPUT_ARC__TEMPLATE_SOURCE, oldTemplateSource, templateSource));
 	}
 
 	/**
@@ -158,6 +209,9 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 			case SANTPackage.INPUT_ARC__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
+			case SANTPackage.INPUT_ARC__TEMPLATE_SOURCE:
+				if (resolve) return getTemplateSource();
+				return basicGetTemplateSource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -174,7 +228,10 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 				setSource((Place)newValue);
 				return;
 			case SANTPackage.INPUT_ARC__TARGET:
-				setTarget((Activity)newValue);
+				setTarget((ActivityTemplate)newValue);
+				return;
+			case SANTPackage.INPUT_ARC__TEMPLATE_SOURCE:
+				setTemplateSource((PlaceTemplate)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,7 +249,10 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 				setSource((Place)null);
 				return;
 			case SANTPackage.INPUT_ARC__TARGET:
-				setTarget((Activity)null);
+				setTarget((ActivityTemplate)null);
+				return;
+			case SANTPackage.INPUT_ARC__TEMPLATE_SOURCE:
+				setTemplateSource((PlaceTemplate)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -210,6 +270,8 @@ public class InputArcImpl extends ArcImpl implements InputArc {
 				return source != null;
 			case SANTPackage.INPUT_ARC__TARGET:
 				return target != null;
+			case SANTPackage.INPUT_ARC__TEMPLATE_SOURCE:
+				return templateSource != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -23,11 +23,11 @@ import tmdl.library.TemplateAtomic;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.impl.TemplateAtomicImpl#getSource <em>Source</em>}</li>
  *   <li>{@link tmdl.library.impl.TemplateAtomicImpl#getLabels <em>Labels</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -193,7 +193,7 @@ public class TemplateAtomicImpl extends TemplateSpecificationImpl implements Tem
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (source: ");
 		result.append(source);
 		result.append(", labels: ");

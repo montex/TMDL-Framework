@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.CompositionRule#getName <em>Name</em>}</li>
  *   <li>{@link tmdl.library.CompositionRule#getVariables <em>Variables</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.library.LibraryPackage#getCompositionRule()
  * @model abstract="true"

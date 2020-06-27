@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.library.CompositionRuleMatch#getLabels <em>Labels</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.library.LibraryPackage#getCompositionRuleMatch()
  * @model

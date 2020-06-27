@@ -10,11 +10,11 @@ package san;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.NegativeBinomial#getS <em>S</em>}</li>
  *   <li>{@link san.NegativeBinomial#getP <em>P</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getNegativeBinomial()
  * @model

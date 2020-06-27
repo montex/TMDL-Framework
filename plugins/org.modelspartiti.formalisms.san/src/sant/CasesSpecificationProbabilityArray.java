@@ -2,6 +2,7 @@
  */
 package sant;
 
+import tmdl.core.Parameter;
 import tmdl.core.ParameterArray;
 
 /**
@@ -11,16 +12,43 @@ import tmdl.core.ParameterArray;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
+ *   <li>{@link sant.CasesSpecificationProbabilityArray#getCaseParameter <em>Case Parameter</em>}</li>
  *   <li>{@link sant.CasesSpecificationProbabilityArray#getPValues <em>PValues</em>}</li>
  * </ul>
- * </p>
  *
  * @see sant.SANTPackage#getCasesSpecificationProbabilityArray()
  * @model
  * @generated
  */
 public interface CasesSpecificationProbabilityArray extends CasesSpecification {
+	/**
+	 * Returns the value of the '<em><b>Case Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Case Parameter</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Case Parameter</em>' reference.
+	 * @see #setCaseParameter(Parameter)
+	 * @see sant.SANTPackage#getCasesSpecificationProbabilityArray_CaseParameter()
+	 * @model required="true"
+	 * @generated
+	 */
+	Parameter getCaseParameter();
+
+	/**
+	 * Sets the value of the '{@link sant.CasesSpecificationProbabilityArray#getCaseParameter <em>Case Parameter</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Case Parameter</em>' reference.
+	 * @see #getCaseParameter()
+	 * @generated
+	 */
+	void setCaseParameter(Parameter value);
+
 	/**
 	 * Returns the value of the '<em><b>PValues</b></em>' reference.
 	 * <!-- begin-user-doc -->

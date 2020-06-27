@@ -20,12 +20,12 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.ConditionalWeibullImpl#getAlpha <em>Alpha</em>}</li>
  *   <li>{@link san.impl.ConditionalWeibullImpl#getBeta <em>Beta</em>}</li>
  *   <li>{@link san.impl.ConditionalWeibullImpl#getT <em>T</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

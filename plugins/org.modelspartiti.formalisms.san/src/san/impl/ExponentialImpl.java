@@ -20,10 +20,10 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.ExponentialImpl#getRate <em>Rate</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

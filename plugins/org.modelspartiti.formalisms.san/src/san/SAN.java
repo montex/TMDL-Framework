@@ -12,6 +12,7 @@ import tmdl.core.ConcreteModel;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.SAN#getPlaces <em>Places</em>}</li>
  *   <li>{@link san.SAN#getName <em>Name</em>}</li>
@@ -20,8 +21,8 @@ import tmdl.core.ConcreteModel;
  *   <li>{@link san.SAN#getArcs <em>Arcs</em>}</li>
  *   <li>{@link san.SAN#getGates <em>Gates</em>}</li>
  *   <li>{@link san.SAN#getInitialization <em>Initialization</em>}</li>
+ *   <li>{@link san.SAN#getCustomtype <em>Customtype</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getSAN()
  * @model
@@ -129,7 +130,7 @@ public interface SAN extends ConcreteModel {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gates</em>' containment reference list.
 	 * @see san.SANPackage#getSAN_Gates()
-	 * @model containment="true"
+	 * @model containment="true" keys="name"
 	 * @generated
 	 */
 	EList<Gate> getGates();
@@ -149,5 +150,21 @@ public interface SAN extends ConcreteModel {
 	 * @generated
 	 */
 	EList<Expression> getInitialization();
+
+	/**
+	 * Returns the value of the '<em><b>Customtype</b></em>' containment reference list.
+	 * The list contents are of type {@link san.CustomTypeDefinition}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customtype</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Customtype</em>' containment reference list.
+	 * @see san.SANPackage#getSAN_Customtype()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<CustomTypeDefinition> getCustomtype();
 
 } // SAN

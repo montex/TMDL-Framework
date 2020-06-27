@@ -10,11 +10,11 @@ package tmdl.expressions;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.TemplateExpressionRealBinaryOperation#getExp1 <em>Exp1</em>}</li>
  *   <li>{@link tmdl.expressions.TemplateExpressionRealBinaryOperation#getExp2 <em>Exp2</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionRealBinaryOperation()
  * @model interface="true" abstract="true"

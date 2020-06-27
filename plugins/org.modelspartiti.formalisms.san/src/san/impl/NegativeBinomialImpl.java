@@ -20,11 +20,11 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.NegativeBinomialImpl#getS <em>S</em>}</li>
  *   <li>{@link san.impl.NegativeBinomialImpl#getP <em>P</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

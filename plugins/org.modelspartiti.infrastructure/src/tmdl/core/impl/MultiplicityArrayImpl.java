@@ -21,10 +21,10 @@ import tmdl.core.MultiplicityArray;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.core.impl.MultiplicityArrayImpl#getValues <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -139,7 +139,7 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (values: ");
 		result.append(values);
 		result.append(')');

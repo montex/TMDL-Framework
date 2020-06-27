@@ -20,11 +20,11 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.ParetoImpl#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link san.impl.ParetoImpl#getShape <em>Shape</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

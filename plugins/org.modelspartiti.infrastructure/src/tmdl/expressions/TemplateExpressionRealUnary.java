@@ -10,10 +10,10 @@ package tmdl.expressions;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.TemplateExpressionRealUnary#getExp <em>Exp</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionRealUnary()
  * @model interface="true" abstract="true"

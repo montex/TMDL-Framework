@@ -27,11 +27,11 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.GateImpl#getFunction <em>Function</em>}</li>
  *   <li>{@link san.impl.GateImpl#getPlaces <em>Places</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

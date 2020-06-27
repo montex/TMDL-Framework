@@ -14,10 +14,10 @@ import tmdl.core.ParameterSimple;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.TemplateExpressionParameterSimple#getParameter <em>Parameter</em>}</li>
  * </ul>
- * </p>
  *
  * @see tmdl.expressions.ExpressionsPackage#getTemplateExpressionParameterSimple()
  * @model
@@ -54,7 +54,7 @@ public interface TemplateExpressionParameterSimple extends TemplateExpressionRea
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='assignments->select(as | as.oclIsTypeOf(core::AssignmentSimple))\n\t\t\t\t\t\t->select(a | a.oclAsType(core::AssignmentSimple).parameter = self.parameter)\n\t\t\t\t\t\t->asSequence()->first().oclAsType(core::AssignmentSimple).value'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='assignments-&gt;select(as | as.oclIsTypeOf(core::AssignmentSimple))\n\t\t\t\t\t\t-&gt;select(a | a.oclAsType(core::AssignmentSimple).parameter = self.parameter)\n\t\t\t\t\t\t-&gt;asSequence()-&gt;first().oclAsType(core::AssignmentSimple).value'"
 	 * @generated
 	 */
 	double evaluate(EList<Assignment> assignments);

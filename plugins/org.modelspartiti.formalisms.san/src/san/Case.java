@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link san.Case#getID <em>ID</em>}</li>
  *   <li>{@link san.Case#getP <em>P</em>}</li>
  * </ul>
- * </p>
  *
  * @see san.SANPackage#getCase()
  * @model

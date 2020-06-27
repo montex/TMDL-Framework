@@ -31,12 +31,12 @@ import tmdl.expressions.TemplateExpressionRealIfThenElse;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionRealIfThenElseImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionRealIfThenElseImpl#getIfTrue <em>If True</em>}</li>
  *   <li>{@link tmdl.expressions.impl.TemplateExpressionRealIfThenElseImpl#getIfFalse <em>If False</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

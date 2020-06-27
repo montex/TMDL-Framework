@@ -21,11 +21,11 @@ import san.SANPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link san.impl.CaseImpl#getID <em>ID</em>}</li>
  *   <li>{@link san.impl.CaseImpl#getP <em>P</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -234,7 +234,7 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (ID: ");
 		result.append(id);
 		result.append(')');

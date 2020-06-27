@@ -29,10 +29,40 @@
             genModel="model/sant.genmodel"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.extension_parser">
+   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated sant -->
-      <parser
-            type="tsan"
-            class="sant.util.SANTResourceFactoryImpl"/>
+      <package
+            uri="http://www.modelspartiti.org/infrastructure/tmdl/scenario"
+            class="tmdl.scenario.ScenarioPackage"
+            genModel="model/sant.genmodel"/>
    </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sant -->
+      <package
+            uri="http://www.modelspartiti.org/infrastructure/tmdl/library"
+            class="tmdl.library.LibraryPackage"
+            genModel="model/sant.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sant -->
+      <package
+            uri="http://www.modelspartiti.org/infrastructure/tmdl/core"
+            class="tmdl.core.CorePackage"
+            genModel="model/sant.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sant -->
+      <package
+            uri="http://www.modelspartiti.org/infrastructure/tmdl/expressions"
+            class="tmdl.expressions.ExpressionsPackage"
+            genModel="model/sant.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sant_dev -->
+   </extension>
+
 </plugin>
