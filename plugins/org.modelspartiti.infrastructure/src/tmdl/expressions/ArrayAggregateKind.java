@@ -61,10 +61,6 @@ public enum ArrayAggregateKind implements Enumerator {
 	/**
 	 * The '<em><b>Min</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Min</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MIN
 	 * @model name="min"
@@ -76,10 +72,6 @@ public enum ArrayAggregateKind implements Enumerator {
 	/**
 	 * The '<em><b>Max</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Max</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAX
 	 * @model name="max"
@@ -91,10 +83,6 @@ public enum ArrayAggregateKind implements Enumerator {
 	/**
 	 * The '<em><b>Avg</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Avg</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #AVG
 	 * @model name="avg"
@@ -106,10 +94,6 @@ public enum ArrayAggregateKind implements Enumerator {
 	/**
 	 * The '<em><b>Sum</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Sum</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #SUM
 	 * @model name="sum"

@@ -25,10 +25,6 @@ public interface CompositionRuleMatch extends CompositionRule {
 	 * Returns the value of the '<em><b>Labels</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Labels</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Labels</em>' attribute list.
 	 * @see tmdl.library.LibraryPackage#getCompositionRuleMatch_Labels()

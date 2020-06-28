@@ -2,13 +2,10 @@
  */
 package tmdl.core.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import tmdl.core.Assignment;
 import tmdl.core.CorePackage;
 import tmdl.core.Multiplicity;
 
@@ -39,13 +36,4 @@ public abstract class MultiplicityImpl extends MinimalEObjectImpl.Container impl
 		return CorePackage.Literals.MULTIPLICITY;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public List<Integer> listValues() {
-		return listValues(new ArrayList<Assignment>());
-	}
 } //MultiplicityImpl

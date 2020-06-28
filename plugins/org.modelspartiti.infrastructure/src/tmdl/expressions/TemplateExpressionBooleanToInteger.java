@@ -26,10 +26,6 @@ public interface TemplateExpressionBooleanToInteger extends TemplateExpressionIn
 	/**
 	 * Returns the value of the '<em><b>Exp</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Exp</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exp</em>' containment reference.
 	 * @see #setExp(TemplateExpressionBoolean)
@@ -53,7 +49,7 @@ public interface TemplateExpressionBooleanToInteger extends TemplateExpressionIn
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" assignmentsMany="true" assignmentsOrdered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='exp.evaluate(assignments)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='if exp.evaluate(assignments) then 1 else 0 endif'"
 	 * @generated
 	 */
 	int evaluate(EList<Assignment> assignments);

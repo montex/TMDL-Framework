@@ -31,10 +31,6 @@ public interface Block extends EObject {
 	 * Returns the value of the '<em><b>Labels</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Labels</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Labels</em>' attribute list.
 	 * @see tmdl.library.LibraryPackage#getBlock_Labels()
@@ -46,10 +42,6 @@ public interface Block extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Multiplicity</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Multiplicity</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Multiplicity</em>' containment reference.
 	 * @see #setMultiplicity(Multiplicity)
@@ -73,10 +65,6 @@ public interface Block extends EObject {
 	 * Returns the value of the '<em><b>Required Interfaces</b></em>' reference list.
 	 * The list contents are of type {@link tmdl.library.ModelInterface}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Required Interfaces</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Required Interfaces</em>' reference list.
 	 * @see tmdl.library.LibraryPackage#getBlock_RequiredInterfaces()

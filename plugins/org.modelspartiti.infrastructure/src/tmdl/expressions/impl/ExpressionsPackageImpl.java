@@ -1671,7 +1671,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		  (getTemplateExpressionRealFromInteger__Evaluate__EList(),
 		   source,
 		   new String[] {
-			   "body", "exp.evaluate(assignments)"
+			   "body", "exp.evaluate(assignments).oclAsType(Real)"
 		   });
 		addAnnotation
 		  (getTemplateExpressionParameterSimple__Evaluate__EList(),
@@ -1761,7 +1761,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		  (getTemplateExpressionBooleanToInteger__Evaluate__EList(),
 		   source,
 		   new String[] {
-			   "body", "exp.evaluate(assignments)"
+			   "body", "if exp.evaluate(assignments) then 1 else 0 endif"
 		   });
 		addAnnotation
 		  (getTemplateExpressionBooleanAnd__Evaluate__EList(),

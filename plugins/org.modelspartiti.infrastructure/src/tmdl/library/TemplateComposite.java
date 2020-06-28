@@ -26,10 +26,6 @@ public interface TemplateComposite extends TemplateSpecification {
 	 * Returns the value of the '<em><b>Rules</b></em>' containment reference list.
 	 * The list contents are of type {@link tmdl.library.CompositionRule}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rules</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rules</em>' containment reference list.
 	 * @see tmdl.library.LibraryPackage#getTemplateComposite_Rules()
@@ -42,10 +38,6 @@ public interface TemplateComposite extends TemplateSpecification {
 	 * Returns the value of the '<em><b>Blocks</b></em>' containment reference list.
 	 * The list contents are of type {@link tmdl.library.Block}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Blocks</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Blocks</em>' containment reference list.
 	 * @see tmdl.library.LibraryPackage#getTemplateComposite_Blocks()

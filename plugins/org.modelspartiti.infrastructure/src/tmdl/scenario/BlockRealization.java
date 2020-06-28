@@ -27,10 +27,6 @@ public interface BlockRealization extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Block</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Block</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Block</em>' reference.
 	 * @see #setBlock(Block)
@@ -53,10 +49,6 @@ public interface BlockRealization extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Variant</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Variant</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variant</em>' reference.
 	 * @see #setVariant(Variant)

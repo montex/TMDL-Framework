@@ -2,23 +2,16 @@
  */
 package tmdl.core.impl;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import tmdl.core.Assignment;
-import tmdl.core.AssignmentArray;
-import tmdl.core.AssignmentSimple;
 import tmdl.core.CorePackage;
 import tmdl.core.MultiplicityParametric;
 import tmdl.core.Parameter;
-import tmdl.core.ParameterArray;
-import tmdl.core.ParameterSimple;
 
 /**
  * <!-- begin-user-doc -->
@@ -160,53 +153,6 @@ public class MultiplicityParametricImpl extends MultiplicityImpl implements Mult
 				return parameter != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public List<Integer> listValues(List<Assignment> assignments) {
-		ArrayList<Integer> retValues = new ArrayList<Integer>();
-		Iterator<Assignment> it = assignments.iterator();
-		boolean found = false;
-		Assignment ass = null;
-
-		if(getParameter() instanceof ParameterSimple) {
-			while(it.hasNext() && !found) {
-				ass = it.next();
-				if(ass instanceof AssignmentSimple) {
-					AssignmentSimple assSimple = ((AssignmentSimple)ass);
-					if(assSimple.getParameter().getName() == this.getParameter().getName()) {
-						found = true;
-						if(assSimple.getValue() > 0) {
-							for(int i = 1; i <= assSimple.getValue(); i++) {
-								retValues.add(i);
-							}
-						}
-					}
-				}
-			}
-		}else if(getParameter() instanceof ParameterArray) {
-			while(it.hasNext() && !found) {
-				ass = it.next();
-				if(ass instanceof AssignmentArray) {
-					AssignmentArray assArray = ((AssignmentArray)ass);
-					
-					if(assArray.getParameter().getName() == this.getParameter().getName()) {
-						found = true;
-						Iterator<Double> itArray = assArray.getValues().iterator();
-						while(itArray.hasNext()) {
-							retValues.add(itArray.next().intValue());
-						}
-					}
-				}
-			}
-		}
-
-		return retValues;
 	}
 
 } //MultiplicityParametricImpl

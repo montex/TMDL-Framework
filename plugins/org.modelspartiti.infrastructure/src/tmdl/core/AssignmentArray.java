@@ -25,10 +25,6 @@ public interface AssignmentArray extends Assignment {
 	/**
 	 * Returns the value of the '<em><b>Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parameter</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameter</em>' reference.
 	 * @see #setParameter(ParameterArray)
@@ -52,10 +48,6 @@ public interface AssignmentArray extends Assignment {
 	 * Returns the value of the '<em><b>Values</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Double}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Values</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' attribute list.
 	 * @see tmdl.core.CorePackage#getAssignmentArray_Values()

@@ -2,14 +2,12 @@
  */
 package tmdl.core.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import tmdl.core.Assignment;
 import tmdl.core.CorePackage;
 import tmdl.core.MultiplicityValue;
 
@@ -161,22 +159,6 @@ public class MultiplicityValueImpl extends MultiplicityImpl implements Multiplic
 		result.append(value);
 		result.append(')');
 		return result.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public List<Integer> listValues(List<Assignment> assignments) {
-		ArrayList<Integer> retValues = new ArrayList<Integer>();
-		if(getValue() > 0) {
-			for(int i = 1; i <= getValue(); i++) {
-				retValues.add(i);
-			}
-		}
-		return retValues;
 	}
 
 } //MultiplicityValueImpl

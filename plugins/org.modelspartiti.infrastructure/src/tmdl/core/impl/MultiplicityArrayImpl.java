@@ -2,16 +2,14 @@
  */
 package tmdl.core.impl;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
-import tmdl.core.Assignment;
 import tmdl.core.CorePackage;
 import tmdl.core.MultiplicityArray;
 
@@ -147,18 +145,4 @@ public class MultiplicityArrayImpl extends MultiplicityImpl implements Multiplic
 		return result.toString();
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public List<Integer> listValues(List<Assignment> assignments) {
-		ArrayList<Integer> retValues = new ArrayList<Integer>();
-		Iterator<Integer> it = getValues().iterator();
-		while(it.hasNext()) {
-			retValues.add(it.next());
-		}
-		return retValues;
-	}
 } //MultiplicityArrayImpl

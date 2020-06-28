@@ -27,10 +27,6 @@ public interface TemplateExpressionRealModulo extends TemplateExpressionInteger 
 	/**
 	 * Returns the value of the '<em><b>Exp1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Exp1</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exp1</em>' containment reference.
 	 * @see #setExp1(TemplateExpressionInteger)
@@ -53,10 +49,6 @@ public interface TemplateExpressionRealModulo extends TemplateExpressionInteger 
 	/**
 	 * Returns the value of the '<em><b>Exp2</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Exp2</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exp2</em>' containment reference.
 	 * @see #setExp2(TemplateExpressionInteger)
