@@ -280,7 +280,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Place" referenceName="places">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'P'+container.places->filter(san::Place)->size()"/>
                   <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::PrimitiveType" referenceName="type"/>
@@ -292,7 +292,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Place" referenceName="places">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'P'+container.places->filter(san::Place)->size()"/>
                   <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::ComplexType" referenceName="type"/>
@@ -304,7 +304,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::TimedActivity" referenceName="activities">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'TA'+container.activities->filter(san::TimedActivity)->size()"/>
                 </subModelOperations>
@@ -315,7 +315,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::InstantaneousActivity" referenceName="activities">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'IA'+container.activities->filter(san::InstantaneousActivity)->size()"/>
                 </subModelOperations>
@@ -326,7 +326,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Case" referenceName="cases">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="ID" valueExpression="aql:container.cases->filter(san::Case)->size()"/>
                 </subModelOperations>
@@ -337,10 +337,10 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::InputGate" referenceName="gates">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'IG'+container.gates->filter(san::InputGate)->size()"/>
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[instance/]">
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="predicate"/>
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function"/>
                   </subModelOperations>
@@ -354,7 +354,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="places" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
@@ -364,7 +364,7 @@
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
                 <subModelOperations xsi:type="tool_1:Switch">
                   <cases conditionExpression="feature:places">
                     <subModelOperations xsi:type="tool_1:Unset" featureName="places" elementExpression="aql:elementView.targetNode.target"/>
@@ -383,7 +383,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="activity" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
@@ -392,10 +392,10 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::OutputGate" referenceName="gates">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'OG'+container.gates->filter(san::OutputGate)->size()"/>
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[instance/]">
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="san::Expression" referenceName="function"/>
                   </subModelOperations>
                 </subModelOperations>
@@ -408,7 +408,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var: source">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="activityCase" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
@@ -419,7 +419,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var: source">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="places" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
