@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>org.modelspartiti.formalisms.san.examples</name>
+	<comment></comment>
+	<projects>
+		<project>org.modelspartiti.formalisms.san</project>
+		<project>org.modelspartiti.formalisms.san.design</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>
