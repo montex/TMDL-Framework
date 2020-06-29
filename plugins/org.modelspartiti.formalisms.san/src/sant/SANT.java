@@ -39,10 +39,6 @@ public interface SANT extends TemplateModel {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
@@ -66,10 +62,6 @@ public interface SANT extends TemplateModel {
 	 * Returns the value of the '<em><b>Template Places</b></em>' containment reference list.
 	 * The list contents are of type {@link sant.PlaceTemplate}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Template Places</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Template Places</em>' containment reference list.
 	 * @see sant.SANTPackage#getSANT_TemplatePlaces()
@@ -82,10 +74,6 @@ public interface SANT extends TemplateModel {
 	 * Returns the value of the '<em><b>Places</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Place}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Places</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Places</em>' containment reference list.
 	 * @see sant.SANTPackage#getSANT_Places()
@@ -98,10 +86,6 @@ public interface SANT extends TemplateModel {
 	 * Returns the value of the '<em><b>Activity Templates</b></em>' containment reference list.
 	 * The list contents are of type {@link sant.ActivityTemplate}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activity Templates</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Activity Templates</em>' containment reference list.
 	 * @see sant.SANTPackage#getSANT_ActivityTemplates()
@@ -114,10 +98,6 @@ public interface SANT extends TemplateModel {
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
 	 * The list contents are of type {@link tmdl.core.Parameter}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' containment reference list.
 	 * @see sant.SANTPackage#getSANT_Parameters()
@@ -130,10 +110,6 @@ public interface SANT extends TemplateModel {
 	 * Returns the value of the '<em><b>Global Variables</b></em>' containment reference list.
 	 * The list contents are of type {@link san.GlobalVariable}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Global Variables</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Global Variables</em>' containment reference list.
 	 * @see sant.SANTPackage#getSANT_GlobalVariables()
@@ -146,10 +122,6 @@ public interface SANT extends TemplateModel {
 	 * Returns the value of the '<em><b>Custom Type</b></em>' containment reference list.
 	 * The list contents are of type {@link san.CustomTypeDefinition}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Custom Type</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Custom Type</em>' containment reference list.
 	 * @see sant.SANTPackage#getSANT_CustomType()
@@ -162,10 +134,6 @@ public interface SANT extends TemplateModel {
 	 * Returns the value of the '<em><b>Gates</b></em>' containment reference list.
 	 * The list contents are of type {@link sant.GateTemplate}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Gates</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gates</em>' containment reference list.
 	 * @see sant.SANTPackage#getSANT_Gates()
@@ -178,10 +146,6 @@ public interface SANT extends TemplateModel {
 	 * Returns the value of the '<em><b>Arcs</b></em>' containment reference list.
 	 * The list contents are of type {@link sant.ArcTemplate}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Arcs</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arcs</em>' containment reference list.
 	 * @see sant.SANTPackage#getSANT_Arcs()

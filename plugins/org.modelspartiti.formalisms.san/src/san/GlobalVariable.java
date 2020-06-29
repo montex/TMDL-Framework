@@ -25,10 +25,6 @@ public interface GlobalVariable extends NamedElement {
 	 * The default value is <code>"int"</code>.
 	 * The literals are from the enumeration {@link san.VariableType}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see san.VariableType

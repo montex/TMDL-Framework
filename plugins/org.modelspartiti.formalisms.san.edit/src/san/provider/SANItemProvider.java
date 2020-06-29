@@ -27,8 +27,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import san.SAN;
 import san.SANFactory;
 import san.SANPackage;
-import sant.SANTFactory;
-import sant.provider.SANTEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link san.SAN} object.
@@ -235,21 +233,6 @@ public class SANItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SANPackage.Literals.SAN__GATES,
-				 SANTFactory.eINSTANCE.createOutputGateConcrete()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SANPackage.Literals.SAN__GATES,
-				 SANTFactory.eINSTANCE.createOutputGateTemplate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SANPackage.Literals.SAN__GATES,
-				 SANTFactory.eINSTANCE.createInputGateTemplate()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(SANPackage.Literals.SAN__INITIALIZATION,
 				 SANFactory.eINSTANCE.createExpression()));
 
@@ -272,7 +255,7 @@ public class SANItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SANTEditPlugin.INSTANCE;
+		return SANEditPlugin.INSTANCE;
 	}
 
 }

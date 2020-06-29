@@ -91,10 +91,6 @@ public enum VariableType implements Enumerator {
 	/**
 	 * The '<em><b>Short</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Short</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #SHORT
 	 * @model name="short"
@@ -106,10 +102,6 @@ public enum VariableType implements Enumerator {
 	/**
 	 * The '<em><b>Int</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Int</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #INT
 	 * @model name="int"
@@ -121,10 +113,6 @@ public enum VariableType implements Enumerator {
 	/**
 	 * The '<em><b>Long</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Long</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LONG
 	 * @model name="long"
@@ -136,10 +124,6 @@ public enum VariableType implements Enumerator {
 	/**
 	 * The '<em><b>Float</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Float</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #FLOAT
 	 * @model name="float"
@@ -151,10 +135,6 @@ public enum VariableType implements Enumerator {
 	/**
 	 * The '<em><b>Double</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Double</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DOUBLE
 	 * @model name="double"
@@ -166,10 +146,6 @@ public enum VariableType implements Enumerator {
 	/**
 	 * The '<em><b>Bool</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Bool</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BOOL
 	 * @model name="bool"
@@ -181,10 +157,6 @@ public enum VariableType implements Enumerator {
 	/**
 	 * The '<em><b>Char</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Char</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CHAR
 	 * @model name="char"

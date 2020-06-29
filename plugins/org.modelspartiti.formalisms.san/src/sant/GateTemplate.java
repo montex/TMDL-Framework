@@ -27,10 +27,6 @@ public interface GateTemplate extends Gate {
 	 * Returns the value of the '<em><b>Place Template</b></em>' reference list.
 	 * The list contents are of type {@link sant.PlaceTemplate}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Place Template</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Place Template</em>' reference list.
 	 * @see sant.SANTPackage#getGateTemplate_PlaceTemplate()

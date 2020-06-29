@@ -4,11 +4,13 @@ package san.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import san.Marking;
 import san.Place;
 import san.SANPackage;
@@ -39,6 +41,7 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 	 * @ordered
 	 */
 	protected EStructuralFeature.Internal.SettingDelegate IS_EXTENDED__ESETTING_DELEGATE = ((EStructuralFeature.Internal)SANPackage.Literals.PLACE__IS_EXTENDED).getSettingDelegate();
+
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -48,6 +51,7 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 	 * @ordered
 	 */
 	protected Type type;
+
 	/**
 	 * The cached value of the '{@link #getMarking() <em>Marking</em>}' containment reference.
 	 * <!-- begin-user-doc -->

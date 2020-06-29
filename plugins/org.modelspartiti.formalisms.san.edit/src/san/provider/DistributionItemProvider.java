@@ -24,7 +24,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import san.Distribution;
 import san.SANPackage;
-import sant.provider.SANTEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link san.Distribution} object.
@@ -142,7 +141,7 @@ public class DistributionItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SANTEditPlugin.INSTANCE;
+		return SANEditPlugin.INSTANCE;
 	}
 
 }

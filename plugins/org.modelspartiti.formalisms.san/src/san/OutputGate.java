@@ -4,7 +4,6 @@ package san;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Output Gate</b></em>'.
@@ -26,10 +25,6 @@ public interface OutputGate extends Gate {
 	 * Returns the value of the '<em><b>Activity Case</b></em>' reference list.
 	 * The list contents are of type {@link san.Case}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activity Case</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Activity Case</em>' reference list.
 	 * @see san.SANPackage#getOutputGate_ActivityCase()

@@ -4,7 +4,6 @@ package san;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Input Gate</b></em>'.
@@ -26,10 +25,6 @@ public interface InputGate extends Gate {
 	/**
 	 * Returns the value of the '<em><b>Predicate</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Predicate</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Predicate</em>' containment reference.
 	 * @see #setPredicate(Expression)
@@ -53,10 +48,6 @@ public interface InputGate extends Gate {
 	 * Returns the value of the '<em><b>Activity</b></em>' reference list.
 	 * The list contents are of type {@link san.Activity}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activity</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Activity</em>' reference list.
 	 * @see san.SANPackage#getInputGate_Activity()

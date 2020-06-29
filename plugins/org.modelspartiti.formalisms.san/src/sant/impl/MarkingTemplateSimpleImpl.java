@@ -148,14 +148,14 @@ public class MarkingTemplateSimpleImpl extends MarkingTemplateImpl implements Ma
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (Value: ");
+		result.append(" (value: ");
 		result.append(value);
 		result.append(')');
 		return result.toString();

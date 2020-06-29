@@ -3,9 +3,11 @@
 package san.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import san.MarkingSimple;
 import san.SANPackage;
 
@@ -32,6 +34,7 @@ public class MarkingSimpleImpl extends MarkingImpl implements MarkingSimple {
 	 * @ordered
 	 */
 	protected static final short VALUE_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

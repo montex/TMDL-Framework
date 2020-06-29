@@ -171,6 +171,28 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * @generated
 	 */
 	@Override
+	public InstantaneousActivity createInstantaneousActivity() {
+		InstantaneousActivityImpl instantaneousActivity = new InstantaneousActivityImpl();
+		return instantaneousActivity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TimedActivity createTimedActivity() {
+		TimedActivityImpl timedActivity = new TimedActivityImpl();
+		return timedActivity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Case createCase() {
 		CaseImpl case_ = new CaseImpl();
 		return case_;
@@ -218,28 +240,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public InputGate createInputGate() {
 		InputGateImpl inputGate = new InputGateImpl();
 		return inputGate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public InstantaneousActivity createInstantaneousActivity() {
-		InstantaneousActivityImpl instantaneousActivity = new InstantaneousActivityImpl();
-		return instantaneousActivity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TimedActivity createTimedActivity() {
-		TimedActivityImpl timedActivity = new TimedActivityImpl();
-		return timedActivity;
 	}
 
 	/**
@@ -545,6 +545,28 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	 * @generated
 	 */
 	@Override
+	public MarkingSimple createMarkingSimple() {
+		MarkingSimpleImpl markingSimple = new MarkingSimpleImpl();
+		return markingSimple;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public MarkingGlobalVariable createMarkingGlobalVariable() {
+		MarkingGlobalVariableImpl markingGlobalVariable = new MarkingGlobalVariableImpl();
+		return markingGlobalVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public MarkingExtended createMarkingExtended() {
 		MarkingExtendedImpl markingExtended = new MarkingExtendedImpl();
 		return markingExtended;
@@ -570,28 +592,6 @@ public class SANFactoryImpl extends EFactoryImpl implements SANFactory {
 	public LeafNodeString createLeafNodeString() {
 		LeafNodeStringImpl leafNodeString = new LeafNodeStringImpl();
 		return leafNodeString;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkingSimple createMarkingSimple() {
-		MarkingSimpleImpl markingSimple = new MarkingSimpleImpl();
-		return markingSimple;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkingGlobalVariable createMarkingGlobalVariable() {
-		MarkingGlobalVariableImpl markingGlobalVariable = new MarkingGlobalVariableImpl();
-		return markingGlobalVariable;
 	}
 
 	/**

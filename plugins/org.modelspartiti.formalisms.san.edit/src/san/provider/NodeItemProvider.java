@@ -18,7 +18,6 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import sant.provider.SANTEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link san.Node} object.
@@ -104,7 +103,7 @@ public class NodeItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SANTEditPlugin.INSTANCE;
+		return SANEditPlugin.INSTANCE;
 	}
 
 }

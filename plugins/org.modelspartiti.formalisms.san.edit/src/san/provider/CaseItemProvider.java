@@ -27,7 +27,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import san.Case;
 import san.SANFactory;
 import san.SANPackage;
-import sant.provider.SANTEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link san.Case} object.
@@ -192,7 +191,7 @@ public class CaseItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SANTEditPlugin.INSTANCE;
+		return SANEditPlugin.INSTANCE;
 	}
 
 }

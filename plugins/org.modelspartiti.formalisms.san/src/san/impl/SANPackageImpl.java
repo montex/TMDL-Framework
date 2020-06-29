@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import san.Activity;
@@ -67,16 +68,14 @@ import san.Type;
 import san.Uniform;
 import san.VariableType;
 import san.Weibull;
-import sant.SANTPackage;
-import sant.impl.SANTPackageImpl;
+
 import tmdl.core.CorePackage;
-import tmdl.core.impl.CorePackageImpl;
+
 import tmdl.expressions.ExpressionsPackage;
-import tmdl.expressions.impl.ExpressionsPackageImpl;
+
 import tmdl.library.LibraryPackage;
-import tmdl.library.impl.LibraryPackageImpl;
+
 import tmdl.scenario.ScenarioPackage;
-import tmdl.scenario.impl.ScenarioPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -97,6 +96,13 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass namedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass placeEClass = null;
 
 	/**
@@ -111,7 +117,14 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass namedElementEClass = null;
+	private EClass instantaneousActivityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timedActivityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -167,20 +180,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass instantaneousActivityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass timedActivityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass distributionEClass = null;
 
 	/**
@@ -217,13 +216,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * @generated
 	 */
 	private EClass markingEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markingExtendedEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -426,6 +418,13 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass markingExtendedEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass nodeEClass = null;
 
 	/**
@@ -531,33 +530,17 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SANTPackage.eNS_URI);
-		SANTPackageImpl theSANTPackage = (SANTPackageImpl)(registeredPackage instanceof SANTPackageImpl ? registeredPackage : SANTPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
-		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(registeredPackage instanceof ScenarioPackageImpl ? registeredPackage : ScenarioPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI);
-		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(registeredPackage instanceof LibraryPackageImpl ? registeredPackage : LibraryPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
-		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI);
-		ExpressionsPackageImpl theExpressionsPackage = (ExpressionsPackageImpl)(registeredPackage instanceof ExpressionsPackageImpl ? registeredPackage : ExpressionsPackage.eINSTANCE);
+		// Initialize simple dependencies
+		ScenarioPackage.eINSTANCE.eClass();
+		LibraryPackage.eINSTANCE.eClass();
+		CorePackage.eINSTANCE.eClass();
+		ExpressionsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSANPackage.createPackageContents();
-		theSANTPackage.createPackageContents();
-		theScenarioPackage.createPackageContents();
-		theLibraryPackage.createPackageContents();
-		theCorePackage.createPackageContents();
-		theExpressionsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theSANPackage.initializePackageContents();
-		theSANTPackage.initializePackageContents();
-		theScenarioPackage.initializePackageContents();
-		theLibraryPackage.initializePackageContents();
-		theCorePackage.initializePackageContents();
-		theExpressionsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theSANPackage.freeze();
@@ -663,6 +646,26 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getNamedElement() {
+		return namedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNamedElement_Name() {
+		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPlace() {
 		return placeEClass;
 	}
@@ -723,8 +726,8 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getNamedElement() {
-		return namedElementEClass;
+	public EClass getInstantaneousActivity() {
+		return instantaneousActivityEClass;
 	}
 
 	/**
@@ -733,8 +736,38 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNamedElement_Name() {
-		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
+	public EClass getTimedActivity() {
+		return timedActivityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTimedActivity_TimeDistribution() {
+		return (EReference)timedActivityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTimedActivity_Activation() {
+		return (EReference)timedActivityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTimedActivity_Reactivation() {
+		return (EReference)timedActivityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -923,56 +956,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getInstantaneousActivity() {
-		return instantaneousActivityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getTimedActivity() {
-		return timedActivityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTimedActivity_TimeDistribution() {
-		return (EReference)timedActivityEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTimedActivity_Activation() {
-		return (EReference)timedActivityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTimedActivity_Reactivation() {
-		return (EReference)timedActivityEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getDistribution() {
 		return distributionEClass;
 	}
@@ -1075,26 +1058,6 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	@Override
 	public EClass getMarking() {
 		return markingEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMarkingExtended() {
-		return markingExtendedEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkingExtended_Node() {
-		return (EReference)markingExtendedEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1815,6 +1778,26 @@ public class SANPackageImpl extends EPackageImpl implements SANPackage {
 	@Override
 	public EReference getMarkingGlobalVariable_Variable() {
 		return (EReference)markingGlobalVariableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getMarkingExtended() {
+		return markingExtendedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getMarkingExtended_Node() {
+		return (EReference)markingExtendedEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**

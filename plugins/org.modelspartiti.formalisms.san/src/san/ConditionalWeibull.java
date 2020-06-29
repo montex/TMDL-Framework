@@ -25,10 +25,6 @@ public interface ConditionalWeibull extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Alpha</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Alpha</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Alpha</em>' containment reference.
 	 * @see #setAlpha(Expression)
@@ -51,10 +47,6 @@ public interface ConditionalWeibull extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Beta</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Beta</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Beta</em>' containment reference.
 	 * @see #setBeta(Expression)
@@ -77,10 +69,6 @@ public interface ConditionalWeibull extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>T</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>T</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>T</em>' containment reference.
 	 * @see #setT(Expression)

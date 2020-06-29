@@ -27,10 +27,6 @@ public interface CasesSpecificationArray extends CasesSpecification {
 	/**
 	 * Returns the value of the '<em><b>Num Cases</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Num Cases</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Num Cases</em>' attribute.
 	 * @see #setNumCases(int)
@@ -54,10 +50,6 @@ public interface CasesSpecificationArray extends CasesSpecification {
 	 * Returns the value of the '<em><b>P</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Expression}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>P</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>P</em>' containment reference list.
 	 * @see sant.SANTPackage#getCasesSpecificationArray_P()

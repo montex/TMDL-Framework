@@ -38,7 +38,6 @@ import org.eclipse.jface.viewers.Viewer;
 
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
-import sant.presentation.SANTEditorPlugin;
 
 /**
  * This is the action bar contributor for the SAN model editor.
@@ -72,14 +71,14 @@ public class SANActionBarContributor
 	 * @generated
 	 */
 	protected IAction showPropertiesViewAction =
-		new Action(SANTEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+		new Action(SANEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
 			@Override
 			public void run() {
 				try {
 					getPage().showView("org.eclipse.ui.views.PropertySheet");
 				}
 				catch (PartInitException exception) {
-					SANTEditorPlugin.INSTANCE.log(exception);
+					SANEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -92,7 +91,7 @@ public class SANActionBarContributor
 	 * @generated
 	 */
 	protected IAction refreshViewerAction =
-		new Action(SANTEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+		new Action(SANEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
 			@Override
 			public boolean isEnabled() {
 				return activeEditorPart instanceof IViewerProvider;
@@ -180,7 +179,7 @@ public class SANActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(SANTEditorPlugin.INSTANCE.getString("_UI_SANEditor_menu"), "sanMenuID");
+		IMenuManager submenuManager = new MenuManager(SANEditorPlugin.INSTANCE.getString("_UI_SANEditor_menu"), "sanMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -189,12 +188,12 @@ public class SANActionBarContributor
 
 		// Prepare for CreateChild item addition or removal.
 		//
-		createChildMenuManager = new MenuManager(SANTEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		createChildMenuManager = new MenuManager(SANEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		submenuManager.insertBefore("additions", createChildMenuManager);
 
 		// Prepare for CreateSibling item addition or removal.
 		//
-		createSiblingMenuManager = new MenuManager(SANTEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		createSiblingMenuManager = new MenuManager(SANEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
 
 		// Force an update because Eclipse hides empty menus now.
@@ -387,11 +386,11 @@ public class SANActionBarContributor
 		super.menuAboutToShow(menuManager);
 		MenuManager submenuManager = null;
 
-		submenuManager = new MenuManager(SANTEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		submenuManager = new MenuManager(SANEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		populateManager(submenuManager, createChildActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager(SANTEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		submenuManager = new MenuManager(SANEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 	}

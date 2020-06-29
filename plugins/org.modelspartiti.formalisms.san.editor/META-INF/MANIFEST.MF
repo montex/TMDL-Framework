@@ -10,11 +10,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: san.presentation,
- sant.presentation,
- tmdl.core.presentation,
- tmdl.expressions.presentation,
- tmdl.library.presentation,
- tmdl.scenario.presentation
+ sant.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.modelspartiti.formalisms.san.edit;visibility:=reexport,

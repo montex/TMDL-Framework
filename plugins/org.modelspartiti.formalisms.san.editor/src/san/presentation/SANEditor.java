@@ -159,8 +159,6 @@ import san.provider.SANItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
-import sant.presentation.SANTEditorPlugin;
-import sant.provider.SANTItemProviderAdapterFactory;
 import tmdl.core.provider.CoreItemProviderAdapterFactory;
 
 import tmdl.expressions.provider.ExpressionsItemProviderAdapterFactory;
@@ -551,7 +549,7 @@ public class SANEditor
 					}
 				}
 				catch (CoreException exception) {
-					SANTEditorPlugin.INSTANCE.log(exception);
+					SANEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -668,7 +666,7 @@ public class SANEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					SANTEditorPlugin.INSTANCE.log(exception);
+					SANEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -677,7 +675,7 @@ public class SANEditor
 					markerHelper.updateMarkers(diagnostic);
 				}
 				catch (CoreException exception) {
-					SANTEditorPlugin.INSTANCE.log(exception);
+					SANEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -720,12 +718,11 @@ public class SANEditor
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SANTItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new SANItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ScenarioItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new LibraryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new CoreItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ExpressionsItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SANItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
@@ -1561,7 +1558,7 @@ public class SANEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			SANTEditorPlugin.INSTANCE.log(exception);
+			SANEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1770,7 +1767,7 @@ public class SANEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return SANTEditorPlugin.INSTANCE.getString(key);
+		return SANEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1780,7 +1777,7 @@ public class SANEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return SANTEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return SANEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

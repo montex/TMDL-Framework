@@ -23,10 +23,6 @@ public interface ComplexType extends Type {
 	/**
 	 * Returns the value of the '<em><b>Definition</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Definition</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Definition</em>' reference.
 	 * @see #setDefinition(CustomTypeDefinition)

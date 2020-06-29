@@ -6,6 +6,10 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import san.provider.SANEditPlugin;
+
+import tmdl.scenario.provider.TMDLEditPlugin;
+
 /**
  * This is the central singleton for the SANT edit plugin.
  * <!-- begin-user-doc -->
@@ -38,6 +42,8 @@ public final class SANTEditPlugin extends EMFPlugin {
 	public SANTEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     SANEditPlugin.INSTANCE,
+		     TMDLEditPlugin.INSTANCE,
 		   });
 	}
 

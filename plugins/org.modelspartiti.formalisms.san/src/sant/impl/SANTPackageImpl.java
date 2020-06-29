@@ -11,8 +11,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import san.SANPackage;
 
-import san.impl.SANPackageImpl;
-
 import sant.ActivityTemplate;
 import sant.ArcTemplate;
 import sant.CasesSpecification;
@@ -39,19 +37,11 @@ import sant.TimedActivityTemplate;
 
 import tmdl.core.CorePackage;
 
-import tmdl.core.impl.CorePackageImpl;
-
 import tmdl.expressions.ExpressionsPackage;
-
-import tmdl.expressions.impl.ExpressionsPackageImpl;
 
 import tmdl.library.LibraryPackage;
 
-import tmdl.library.impl.LibraryPackageImpl;
-
 import tmdl.scenario.ScenarioPackage;
-
-import tmdl.scenario.impl.ScenarioPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -261,33 +251,18 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
-		ScenarioPackageImpl theScenarioPackage = (ScenarioPackageImpl)(registeredPackage instanceof ScenarioPackageImpl ? registeredPackage : ScenarioPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI);
-		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(registeredPackage instanceof LibraryPackageImpl ? registeredPackage : LibraryPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
-		CorePackageImpl theCorePackage = (CorePackageImpl)(registeredPackage instanceof CorePackageImpl ? registeredPackage : CorePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI);
-		ExpressionsPackageImpl theExpressionsPackage = (ExpressionsPackageImpl)(registeredPackage instanceof ExpressionsPackageImpl ? registeredPackage : ExpressionsPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SANPackage.eNS_URI);
-		SANPackageImpl theSANPackage = (SANPackageImpl)(registeredPackage instanceof SANPackageImpl ? registeredPackage : SANPackage.eINSTANCE);
+		// Initialize simple dependencies
+		SANPackage.eINSTANCE.eClass();
+		ScenarioPackage.eINSTANCE.eClass();
+		LibraryPackage.eINSTANCE.eClass();
+		CorePackage.eINSTANCE.eClass();
+		ExpressionsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSANTPackage.createPackageContents();
-		theScenarioPackage.createPackageContents();
-		theLibraryPackage.createPackageContents();
-		theCorePackage.createPackageContents();
-		theExpressionsPackage.createPackageContents();
-		theSANPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theSANTPackage.initializePackageContents();
-		theScenarioPackage.initializePackageContents();
-		theLibraryPackage.initializePackageContents();
-		theCorePackage.initializePackageContents();
-		theExpressionsPackage.initializePackageContents();
-		theSANPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theSANTPackage.freeze();
@@ -1092,6 +1067,7 @@ public class SANTPackageImpl extends EPackageImpl implements SANTPackage {
 		initEReference(getSANT_ActivityTemplates(), this.getActivityTemplate(), null, "activityTemplates", null, 0, -1, sant.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_ActivityTemplates().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_Parameters(), theCorePackage.getParameter(), null, "parameters", null, 0, -1, sant.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getSANT_Parameters().getEKeys().add(theCorePackage.getParameter_Name());
 		initEReference(getSANT_GlobalVariables(), theSANPackage.getGlobalVariable(), null, "globalVariables", null, 0, -1, sant.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getSANT_GlobalVariables().getEKeys().add(theSANPackage.getNamedElement_Name());
 		initEReference(getSANT_CustomType(), theSANPackage.getCustomTypeDefinition(), null, "customType", null, 0, -1, sant.SANT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

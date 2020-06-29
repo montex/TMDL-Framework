@@ -24,7 +24,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import san.NamedElement;
 import san.SANPackage;
-import sant.provider.SANTEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link san.NamedElement} object.
@@ -142,7 +141,7 @@ public class NamedElementItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SANTEditPlugin.INSTANCE;
+		return SANEditPlugin.INSTANCE;
 	}
 
 }

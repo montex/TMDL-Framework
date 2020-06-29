@@ -21,14 +21,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Distribution extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parameters</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' attribute.
 	 * @see #setParameters(String)
@@ -47,4 +42,5 @@ public interface Distribution extends EObject {
 	 * @generated
 	 */
 	void setParameters(String value);
+
 } // Distribution

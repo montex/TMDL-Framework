@@ -25,10 +25,6 @@ public interface Array extends Node {
 	/**
 	 * Returns the value of the '<em><b>Definition</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Definition</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Definition</em>' reference.
 	 * @see #setDefinition(CustomTypeArray)
@@ -52,10 +48,6 @@ public interface Array extends Node {
 	 * Returns the value of the '<em><b>Leafnode</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Node}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Leafnode</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Leafnode</em>' containment reference list.
 	 * @see san.SANPackage#getArray_Leafnode()

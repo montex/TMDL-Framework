@@ -24,7 +24,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import san.ExpressionText;
 import san.SANPackage;
-import sant.provider.SANTEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link san.ExpressionText} object.
@@ -153,7 +152,7 @@ public class ExpressionTextItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SANTEditPlugin.INSTANCE;
+		return SANEditPlugin.INSTANCE;
 	}
 
 }

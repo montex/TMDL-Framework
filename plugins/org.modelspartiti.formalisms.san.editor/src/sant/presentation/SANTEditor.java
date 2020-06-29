@@ -721,11 +721,11 @@ public class SANTEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SANTItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new SANItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ScenarioItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new LibraryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new CoreItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ExpressionsItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SANItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

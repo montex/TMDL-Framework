@@ -24,10 +24,6 @@ public interface Binomial extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>T</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>T</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>T</em>' containment reference.
 	 * @see #setT(Expression)
@@ -50,10 +46,6 @@ public interface Binomial extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>P</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>P</em>' containment reference.
 	 * @see #setP(Expression)
