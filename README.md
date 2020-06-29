@@ -7,10 +7,22 @@ specification of complex performability models.
 
 ## Contributing
 
-The software in this repository has been created using
-[Obeo Designer Community](https://www.obeodesigner.com/)
-[version 11.1.2](https://www.obeodesigner.com/en/download-previous-versions),
-which is based on Eclipse Photon and contains Sirius 6.1.3.
+The software in this repository has been create using the Eclipse Modeling
+distribution, and it is aligned with [version 2020-06](https://www.eclipse.org/downloads/packages/release/2020-06/r/eclipse-modeling-tools).
+
+To be able to use the framework the following dependencies are needed:
+- Eclipse Modeling Framework (EMF)
+- Eclipse OCL
+- Sirius
+All of them can be found in the Eclipse Marketplace or in the default update
+site that comes configured by default.
+
+## Installation
+
+The easiest way to install the framework is to [export the plugins "as deployable
+fragments"](https://help.eclipse.org/2020-06/topic/org.eclipse.pde.doc.user/guide/tools/export_wizards/export_plugins.htm)
+and copy them into the _dropins_ folder of your Eclipse installation. On the
+next run Eclipse will automatically load the plugins in the environment.
 
 ## Contributors
 
