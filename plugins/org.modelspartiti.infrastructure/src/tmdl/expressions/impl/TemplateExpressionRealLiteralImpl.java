@@ -79,6 +79,7 @@ public class TemplateExpressionRealLiteralImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getValue() {
 		return value;
 	}
@@ -88,6 +89,7 @@ public class TemplateExpressionRealLiteralImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(double newValue) {
 		double oldValue = value;
 		value = newValue;
@@ -110,6 +112,7 @@ public class TemplateExpressionRealLiteralImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate(EList<Assignment> assignments) {
 		try {
 			return (Double)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
@@ -134,6 +137,7 @@ public class TemplateExpressionRealLiteralImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate() {
 		try {
 			return (Double)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);

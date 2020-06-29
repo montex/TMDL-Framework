@@ -73,6 +73,7 @@ public class HyperExponentialImpl extends DistributionImpl implements HyperExpon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getRate0() {
 		return rate0;
 	}
@@ -97,6 +98,7 @@ public class HyperExponentialImpl extends DistributionImpl implements HyperExpon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRate0(Expression newRate0) {
 		if (newRate0 != rate0) {
 			NotificationChain msgs = null;
@@ -116,6 +118,7 @@ public class HyperExponentialImpl extends DistributionImpl implements HyperExpon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getP0() {
 		return p0;
 	}
@@ -140,6 +143,7 @@ public class HyperExponentialImpl extends DistributionImpl implements HyperExpon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setP0(Expression newP0) {
 		if (newP0 != p0) {
 			NotificationChain msgs = null;

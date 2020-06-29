@@ -3,16 +3,19 @@
 package san.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import san.Activity;
 import san.Expression;
 import san.InputGate;
@@ -77,6 +80,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getPredicate() {
 		return predicate;
 	}
@@ -101,6 +105,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPredicate(Expression newPredicate) {
 		if (newPredicate != predicate) {
 			NotificationChain msgs = null;
@@ -120,6 +125,7 @@ public class InputGateImpl extends GateImpl implements InputGate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Activity> getActivity() {
 		if (activity == null) {
 			activity = new EObjectResolvingEList<Activity>(Activity.class, this, SANPackage.INPUT_GATE__ACTIVITY);

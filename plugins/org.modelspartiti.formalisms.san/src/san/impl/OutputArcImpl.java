@@ -73,6 +73,7 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Case getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
@@ -99,6 +100,7 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Case newSource) {
 		Case oldSource = source;
 		source = newSource;
@@ -111,6 +113,7 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Place getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
@@ -137,6 +140,7 @@ public class OutputArcImpl extends ArcImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(Place newTarget) {
 		Place oldTarget = target;
 		target = newTarget;

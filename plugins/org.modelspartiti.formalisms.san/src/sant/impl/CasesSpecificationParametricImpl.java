@@ -83,6 +83,7 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject)parameter;
@@ -109,6 +110,7 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(Parameter newParameter) {
 		Parameter oldParameter = parameter;
 		parameter = newParameter;
@@ -121,6 +123,7 @@ public class CasesSpecificationParametricImpl extends CasesSpecificationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getP() {
 		if (p == null) {
 			p = new EObjectContainmentEList<Expression>(Expression.class, this, SANTPackage.CASES_SPECIFICATION_PARAMETRIC__P);

@@ -62,6 +62,7 @@ public class ExponentialImpl extends DistributionImpl implements Exponential {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getRate() {
 		return rate;
 	}
@@ -86,6 +87,7 @@ public class ExponentialImpl extends DistributionImpl implements Exponential {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRate(Expression newRate) {
 		if (newRate != rate) {
 			NotificationChain msgs = null;

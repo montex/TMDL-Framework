@@ -3,9 +3,13 @@
 package sant.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import san.Case;
 
 import sant.OutputGateConcrete;
@@ -59,6 +63,7 @@ public class OutputGateConcreteImpl extends OutputGateImpl implements OutputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Case> getCase() {
 		if (case_ == null) {
 			case_ = new EObjectResolvingEList<Case>(Case.class, this, SANTPackage.OUTPUT_GATE_CONCRETE__CASE);

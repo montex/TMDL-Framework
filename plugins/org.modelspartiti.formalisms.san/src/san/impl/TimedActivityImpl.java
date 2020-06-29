@@ -85,6 +85,7 @@ public class TimedActivityImpl extends ActivityImpl implements TimedActivity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Distribution getTimeDistribution() {
 		return timeDistribution;
 	}
@@ -109,6 +110,7 @@ public class TimedActivityImpl extends ActivityImpl implements TimedActivity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimeDistribution(Distribution newTimeDistribution) {
 		if (newTimeDistribution != timeDistribution) {
 			NotificationChain msgs = null;
@@ -128,6 +130,7 @@ public class TimedActivityImpl extends ActivityImpl implements TimedActivity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getActivation() {
 		return activation;
 	}
@@ -152,6 +155,7 @@ public class TimedActivityImpl extends ActivityImpl implements TimedActivity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActivation(Expression newActivation) {
 		if (newActivation != activation) {
 			NotificationChain msgs = null;
@@ -171,6 +175,7 @@ public class TimedActivityImpl extends ActivityImpl implements TimedActivity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getReactivation() {
 		return reactivation;
 	}
@@ -195,6 +200,7 @@ public class TimedActivityImpl extends ActivityImpl implements TimedActivity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReactivation(Expression newReactivation) {
 		if (newReactivation != reactivation) {
 			NotificationChain msgs = null;

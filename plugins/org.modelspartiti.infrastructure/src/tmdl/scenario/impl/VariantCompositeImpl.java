@@ -82,6 +82,7 @@ public class VariantCompositeImpl extends VariantImpl implements VariantComposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateComposite getTemplate() {
 		if (template != null && template.eIsProxy()) {
 			InternalEObject oldTemplate = (InternalEObject)template;
@@ -108,6 +109,7 @@ public class VariantCompositeImpl extends VariantImpl implements VariantComposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplate(TemplateComposite newTemplate) {
 		TemplateComposite oldTemplate = template;
 		template = newTemplate;
@@ -120,6 +122,7 @@ public class VariantCompositeImpl extends VariantImpl implements VariantComposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<BlockRealization> getRealizations() {
 		if (realizations == null) {
 			realizations = new EObjectContainmentEList<BlockRealization>(BlockRealization.class, this, ScenarioPackage.VARIANT_COMPOSITE__REALIZATIONS);

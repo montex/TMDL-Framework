@@ -29,10 +29,6 @@ public interface CasesSpecificationParametric extends CasesSpecification {
 	/**
 	 * Returns the value of the '<em><b>Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parameter</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameter</em>' reference.
 	 * @see #setParameter(Parameter)
@@ -56,10 +52,6 @@ public interface CasesSpecificationParametric extends CasesSpecification {
 	 * Returns the value of the '<em><b>P</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Expression}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>P</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>P</em>' containment reference list.
 	 * @see sant.SANTPackage#getCasesSpecificationParametric_P()

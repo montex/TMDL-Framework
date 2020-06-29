@@ -3,16 +3,23 @@
 package san.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import san.Activity;
 import san.Arc;
 import san.CustomTypeDefinition;
@@ -22,6 +29,7 @@ import san.GlobalVariable;
 import san.Place;
 import san.SAN;
 import san.SANPackage;
+
 import tmdl.core.TemplateModel;
 
 /**
@@ -159,6 +167,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Place> getPlaces() {
 		if (places == null) {
 			places = new EObjectContainmentEList<Place>(Place.class, this, SANPackage.SAN__PLACES);
@@ -171,6 +180,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -180,6 +190,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -192,6 +203,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Activity> getActivities() {
 		if (activities == null) {
 			activities = new EObjectContainmentEList<Activity>(Activity.class, this, SANPackage.SAN__ACTIVITIES);
@@ -204,6 +216,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GlobalVariable> getGlobalVariables() {
 		if (globalVariables == null) {
 			globalVariables = new EObjectContainmentEList<GlobalVariable>(GlobalVariable.class, this, SANPackage.SAN__GLOBAL_VARIABLES);
@@ -216,6 +229,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Arc> getArcs() {
 		if (arcs == null) {
 			arcs = new EObjectContainmentEList<Arc>(Arc.class, this, SANPackage.SAN__ARCS);
@@ -228,6 +242,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Gate> getGates() {
 		if (gates == null) {
 			gates = new EObjectContainmentEList<Gate>(Gate.class, this, SANPackage.SAN__GATES);
@@ -240,6 +255,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getInitialization() {
 		if (initialization == null) {
 			initialization = new EObjectContainmentEList<Expression>(Expression.class, this, SANPackage.SAN__INITIALIZATION);
@@ -252,6 +268,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CustomTypeDefinition> getCustomtype() {
 		if (customtype == null) {
 			customtype = new EObjectContainmentEList<CustomTypeDefinition>(CustomTypeDefinition.class, this, SANPackage.SAN__CUSTOMTYPE);
@@ -264,6 +281,7 @@ public class SANImpl extends MinimalEObjectImpl.Container implements SAN {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateModel templatize() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

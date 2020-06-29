@@ -2,7 +2,6 @@
  */
 package tmdl.core;
 
-import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,19 +15,4 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Multiplicity extends EObject {
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public List<Integer> listValues();
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public List<Integer> listValues(List<Assignment> assignments);
-	
 } // Multiplicity

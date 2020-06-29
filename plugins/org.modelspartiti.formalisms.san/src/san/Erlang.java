@@ -24,10 +24,6 @@ public interface Erlang extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>M</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>M</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M</em>' containment reference.
 	 * @see #setM(Expression)
@@ -50,10 +46,6 @@ public interface Erlang extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Beta</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Beta</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Beta</em>' containment reference.
 	 * @see #setBeta(Expression)

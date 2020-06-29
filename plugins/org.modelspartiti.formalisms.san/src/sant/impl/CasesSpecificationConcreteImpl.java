@@ -67,6 +67,7 @@ public class CasesSpecificationConcreteImpl extends CasesSpecificationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Case> getCases() {
 		if (cases == null) {
 			cases = new EObjectContainmentEList<Case>(Case.class, this, SANTPackage.CASES_SPECIFICATION_CONCRETE__CASES);

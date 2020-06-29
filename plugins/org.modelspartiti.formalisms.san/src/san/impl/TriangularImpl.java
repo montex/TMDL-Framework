@@ -84,6 +84,7 @@ public class TriangularImpl extends DistributionImpl implements Triangular {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getMin() {
 		return min;
 	}
@@ -108,6 +109,7 @@ public class TriangularImpl extends DistributionImpl implements Triangular {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMin(Expression newMin) {
 		if (newMin != min) {
 			NotificationChain msgs = null;
@@ -127,6 +129,7 @@ public class TriangularImpl extends DistributionImpl implements Triangular {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getMiddle() {
 		return middle;
 	}
@@ -151,6 +154,7 @@ public class TriangularImpl extends DistributionImpl implements Triangular {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMiddle(Expression newMiddle) {
 		if (newMiddle != middle) {
 			NotificationChain msgs = null;
@@ -170,6 +174,7 @@ public class TriangularImpl extends DistributionImpl implements Triangular {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getMax() {
 		return max;
 	}
@@ -194,6 +199,7 @@ public class TriangularImpl extends DistributionImpl implements Triangular {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMax(Expression newMax) {
 		if (newMax != max) {
 			NotificationChain msgs = null;

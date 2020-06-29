@@ -3,13 +3,16 @@
 package san.impl;
 
 import java.util.Collection;
-import java.util.Iterator;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -65,6 +68,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExpressionSegment> getSegments() {
 		if (segments == null) {
 			segments = new EObjectContainmentEList<ExpressionSegment>(ExpressionSegment.class, this, SANPackage.EXPRESSION__SEGMENTS);
@@ -146,19 +150,4 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public String toString() {
-		String exp = "";
-		Iterator<ExpressionSegment> it = segments.iterator();
-		while(it.hasNext()) {
-			exp = exp + it.next().toString();
-		}
-		return exp;
-	}
-	
 } //ExpressionImpl

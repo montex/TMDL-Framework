@@ -26,10 +26,6 @@ public interface Gate extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Function</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Function</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Function</em>' containment reference.
 	 * @see #setFunction(Expression)
@@ -53,10 +49,6 @@ public interface Gate extends NamedElement {
 	 * Returns the value of the '<em><b>Places</b></em>' reference list.
 	 * The list contents are of type {@link san.Place}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Places</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Places</em>' reference list.
 	 * @see san.SANPackage#getGate_Places()

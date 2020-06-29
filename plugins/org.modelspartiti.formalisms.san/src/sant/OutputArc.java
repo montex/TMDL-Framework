@@ -28,10 +28,6 @@ public interface OutputArc extends ArcTemplate {
 	/**
 	 * Returns the value of the '<em><b>Source Case Concrete</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source Case Concrete</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source Case Concrete</em>' reference.
 	 * @see #setSourceCaseConcrete(Case)
@@ -54,10 +50,6 @@ public interface OutputArc extends ArcTemplate {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(ActivityTemplate)
@@ -80,10 +72,6 @@ public interface OutputArc extends ArcTemplate {
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(Place)
@@ -106,10 +94,6 @@ public interface OutputArc extends ArcTemplate {
 	/**
 	 * Returns the value of the '<em><b>Template Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Template Target</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Template Target</em>' reference.
 	 * @see #setTemplateTarget(PlaceTemplate)

@@ -3,10 +3,13 @@
 package san.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import san.ExpressionMarking;
 import san.Place;
 import san.SANPackage;
@@ -59,6 +62,7 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Place getPlace() {
 		if (place != null && place.eIsProxy()) {
 			InternalEObject oldPlace = (InternalEObject)place;
@@ -85,6 +89,7 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlace(Place newPlace) {
 		Place oldPlace = place;
 		place = newPlace;
@@ -150,13 +155,5 @@ public class ExpressionMarkingImpl extends MinimalEObjectImpl.Container implemen
 		}
 		return super.eIsSet(featureID);
 	}
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	@Override
-	public String toString() {
-		return place.getName() + "->Mark()";
-	}
+
 } //ExpressionMarkingImpl

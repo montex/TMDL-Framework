@@ -82,6 +82,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SANT createSANT() {
 		SANTImpl sant = new SANTImpl();
 		return sant;
@@ -92,6 +93,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlaceTemplate createPlaceTemplate() {
 		PlaceTemplateImpl placeTemplate = new PlaceTemplateImpl();
 		return placeTemplate;
@@ -102,6 +104,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MultiplicityRangeOperator createMultiplicityRangeOperator() {
 		MultiplicityRangeOperatorImpl multiplicityRangeOperator = new MultiplicityRangeOperatorImpl();
 		return multiplicityRangeOperator;
@@ -112,6 +115,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CasesSpecificationConcrete createCasesSpecificationConcrete() {
 		CasesSpecificationConcreteImpl casesSpecificationConcrete = new CasesSpecificationConcreteImpl();
 		return casesSpecificationConcrete;
@@ -122,6 +126,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CasesSpecificationArray createCasesSpecificationArray() {
 		CasesSpecificationArrayImpl casesSpecificationArray = new CasesSpecificationArrayImpl();
 		return casesSpecificationArray;
@@ -132,6 +137,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CasesSpecificationParametric createCasesSpecificationParametric() {
 		CasesSpecificationParametricImpl casesSpecificationParametric = new CasesSpecificationParametricImpl();
 		return casesSpecificationParametric;
@@ -142,6 +148,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CasesSpecificationProbabilityArray createCasesSpecificationProbabilityArray() {
 		CasesSpecificationProbabilityArrayImpl casesSpecificationProbabilityArray = new CasesSpecificationProbabilityArrayImpl();
 		return casesSpecificationProbabilityArray;
@@ -152,6 +159,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimedActivityTemplate createTimedActivityTemplate() {
 		TimedActivityTemplateImpl timedActivityTemplate = new TimedActivityTemplateImpl();
 		return timedActivityTemplate;
@@ -162,6 +170,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InstantaneousActivityTemplate createInstantaneousActivityTemplate() {
 		InstantaneousActivityTemplateImpl instantaneousActivityTemplate = new InstantaneousActivityTemplateImpl();
 		return instantaneousActivityTemplate;
@@ -172,6 +181,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MarkingTemplateSimple createMarkingTemplateSimple() {
 		MarkingTemplateSimpleImpl markingTemplateSimple = new MarkingTemplateSimpleImpl();
 		return markingTemplateSimple;
@@ -182,6 +192,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MarkingTemplateGlobalVariable createMarkingTemplateGlobalVariable() {
 		MarkingTemplateGlobalVariableImpl markingTemplateGlobalVariable = new MarkingTemplateGlobalVariableImpl();
 		return markingTemplateGlobalVariable;
@@ -192,6 +203,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputGateConcrete createOutputGateConcrete() {
 		OutputGateConcreteImpl outputGateConcrete = new OutputGateConcreteImpl();
 		return outputGateConcrete;
@@ -202,6 +214,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputGateTemplate createOutputGateTemplate() {
 		OutputGateTemplateImpl outputGateTemplate = new OutputGateTemplateImpl();
 		return outputGateTemplate;
@@ -212,6 +225,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputGateTemplate createInputGateTemplate() {
 		InputGateTemplateImpl inputGateTemplate = new InputGateTemplateImpl();
 		return inputGateTemplate;
@@ -222,6 +236,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputArc createInputArc() {
 		InputArcImpl inputArc = new InputArcImpl();
 		return inputArc;
@@ -232,6 +247,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputArc createOutputArc() {
 		OutputArcImpl outputArc = new OutputArcImpl();
 		return outputArc;
@@ -242,6 +258,7 @@ public class SANTFactoryImpl extends EFactoryImpl implements SANTFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SANTPackage getSANTPackage() {
 		return (SANTPackage)getEPackage();
 	}

@@ -29,10 +29,6 @@ public interface PlaceTemplate extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Multiplicity</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Multiplicity</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Multiplicity</em>' containment reference.
 	 * @see #setMultiplicity(Multiplicity)
@@ -56,10 +52,6 @@ public interface PlaceTemplate extends NamedElement {
 	 * Returns the value of the '<em><b>Marking</b></em>' containment reference list.
 	 * The list contents are of type {@link sant.MarkingTemplate}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Marking</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Marking</em>' containment reference list.
 	 * @see sant.SANTPackage#getPlaceTemplate_Marking()

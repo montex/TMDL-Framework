@@ -28,10 +28,6 @@ public interface Scenario extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
@@ -55,10 +51,6 @@ public interface Scenario extends EObject {
 	 * Returns the value of the '<em><b>Variants</b></em>' containment reference list.
 	 * The list contents are of type {@link tmdl.scenario.Variant}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Variants</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variants</em>' containment reference list.
 	 * @see tmdl.scenario.ScenarioPackage#getScenario_Variants()
@@ -70,10 +62,6 @@ public interface Scenario extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Root</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Root</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Root</em>' reference.
 	 * @see #setRoot(Variant)

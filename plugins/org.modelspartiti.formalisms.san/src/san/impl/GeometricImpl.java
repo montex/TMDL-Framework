@@ -62,6 +62,7 @@ public class GeometricImpl extends DistributionImpl implements Geometric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getP() {
 		return p;
 	}
@@ -86,6 +87,7 @@ public class GeometricImpl extends DistributionImpl implements Geometric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setP(Expression newP) {
 		if (newP != p) {
 			NotificationChain msgs = null;

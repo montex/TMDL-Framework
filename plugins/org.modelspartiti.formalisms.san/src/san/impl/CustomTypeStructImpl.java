@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -54,6 +55,7 @@ public class CustomTypeStructImpl extends CustomTypeDefinitionImpl implements Cu
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -88,6 +90,7 @@ public class CustomTypeStructImpl extends CustomTypeDefinitionImpl implements Cu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Field> getField() {
 		if (field == null) {
 			field = new EObjectContainmentEList<Field>(Field.class, this, SANPackage.CUSTOM_TYPE_STRUCT__FIELD);
@@ -100,6 +103,7 @@ public class CustomTypeStructImpl extends CustomTypeDefinitionImpl implements Cu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -109,6 +113,7 @@ public class CustomTypeStructImpl extends CustomTypeDefinitionImpl implements Cu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;

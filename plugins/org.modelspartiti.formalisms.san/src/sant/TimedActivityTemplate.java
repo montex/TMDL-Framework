@@ -27,10 +27,6 @@ public interface TimedActivityTemplate extends ActivityTemplate {
 	/**
 	 * Returns the value of the '<em><b>Time Distribution</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Time Distribution</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time Distribution</em>' containment reference.
 	 * @see #setTimeDistribution(Distribution)
@@ -53,10 +49,6 @@ public interface TimedActivityTemplate extends ActivityTemplate {
 	/**
 	 * Returns the value of the '<em><b>Activation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activation</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Activation</em>' containment reference.
 	 * @see #setActivation(Expression)
@@ -79,10 +71,6 @@ public interface TimedActivityTemplate extends ActivityTemplate {
 	/**
 	 * Returns the value of the '<em><b>Reactivation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reactivation</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reactivation</em>' containment reference.
 	 * @see #setReactivation(Expression)

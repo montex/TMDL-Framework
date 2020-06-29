@@ -26,10 +26,6 @@ public interface CasesSpecificationProbabilityArray extends CasesSpecification {
 	/**
 	 * Returns the value of the '<em><b>Case Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Case Parameter</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Case Parameter</em>' reference.
 	 * @see #setCaseParameter(Parameter)
@@ -52,10 +48,6 @@ public interface CasesSpecificationProbabilityArray extends CasesSpecification {
 	/**
 	 * Returns the value of the '<em><b>PValues</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>PValues</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>PValues</em>' reference.
 	 * @see #setPValues(ParameterArray)

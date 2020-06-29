@@ -27,10 +27,6 @@ public interface VariantComposite extends Variant {
 	/**
 	 * Returns the value of the '<em><b>Template</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Template</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Template</em>' reference.
 	 * @see #setTemplate(TemplateComposite)
@@ -54,10 +50,6 @@ public interface VariantComposite extends Variant {
 	 * Returns the value of the '<em><b>Realizations</b></em>' containment reference list.
 	 * The list contents are of type {@link tmdl.scenario.BlockRealization}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Realizations</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Realizations</em>' containment reference list.
 	 * @see tmdl.scenario.ScenarioPackage#getVariantComposite_Realizations()

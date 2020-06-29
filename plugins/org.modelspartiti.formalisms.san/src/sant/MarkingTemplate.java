@@ -24,10 +24,6 @@ public interface MarkingTemplate extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id Place</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Place</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id Place</em>' attribute.
 	 * @see #setIdPlace(int)

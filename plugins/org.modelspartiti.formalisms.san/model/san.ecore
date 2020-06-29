@@ -10,7 +10,7 @@
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="SAN" eSuperTypes="tmdl.ecore#//core/ConcreteModel">
+  <eClassifiers xsi:type="ecore:EClass" name="SAN" eSuperTypes="../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/ConcreteModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="places" lowerBound="1"
         upperBound="-1" eType="#//Place" containment="true" eKeys="#//NamedElement/name"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -111,7 +111,6 @@
         upperBound="-1" eType="#//ExpressionSegment" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpressionText" eSuperTypes="#//ExpressionSegment">
-    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="#//CodeFragment">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>

@@ -81,6 +81,7 @@ public class InputGateTemplateImpl extends GateTemplateImpl implements InputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getPredicate() {
 		return predicate;
 	}
@@ -105,6 +106,7 @@ public class InputGateTemplateImpl extends GateTemplateImpl implements InputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPredicate(Expression newPredicate) {
 		if (newPredicate != predicate) {
 			NotificationChain msgs = null;
@@ -124,6 +126,7 @@ public class InputGateTemplateImpl extends GateTemplateImpl implements InputGate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityTemplate> getActivity() {
 		if (activity == null) {
 			activity = new EObjectResolvingEList<ActivityTemplate>(ActivityTemplate.class, this, SANTPackage.INPUT_GATE_TEMPLATE__ACTIVITY);

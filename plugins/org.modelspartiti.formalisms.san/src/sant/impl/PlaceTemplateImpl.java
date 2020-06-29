@@ -84,6 +84,7 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Multiplicity getMultiplicity() {
 		return multiplicity;
 	}
@@ -108,6 +109,7 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMultiplicity(Multiplicity newMultiplicity) {
 		if (newMultiplicity != multiplicity) {
 			NotificationChain msgs = null;
@@ -127,6 +129,7 @@ public class PlaceTemplateImpl extends NamedElementImpl implements PlaceTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MarkingTemplate> getMarking() {
 		if (marking == null) {
 			marking = new EObjectContainmentEList<MarkingTemplate>(MarkingTemplate.class, this, SANTPackage.PLACE_TEMPLATE__MARKING);

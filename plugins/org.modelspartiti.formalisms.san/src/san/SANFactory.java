@@ -40,6 +40,24 @@ public interface SANFactory extends EFactory {
 	Place createPlace();
 
 	/**
+	 * Returns a new object of class '<em>Instantaneous Activity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Instantaneous Activity</em>'.
+	 * @generated
+	 */
+	InstantaneousActivity createInstantaneousActivity();
+
+	/**
+	 * Returns a new object of class '<em>Timed Activity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Timed Activity</em>'.
+	 * @generated
+	 */
+	TimedActivity createTimedActivity();
+
+	/**
 	 * Returns a new object of class '<em>Case</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,24 +101,6 @@ public interface SANFactory extends EFactory {
 	 * @generated
 	 */
 	InputGate createInputGate();
-
-	/**
-	 * Returns a new object of class '<em>Instantaneous Activity</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Instantaneous Activity</em>'.
-	 * @generated
-	 */
-	InstantaneousActivity createInstantaneousActivity();
-
-	/**
-	 * Returns a new object of class '<em>Timed Activity</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Timed Activity</em>'.
-	 * @generated
-	 */
-	TimedActivity createTimedActivity();
 
 	/**
 	 * Returns a new object of class '<em>Expression</em>'.
@@ -346,6 +346,24 @@ public interface SANFactory extends EFactory {
 	Field createField();
 
 	/**
+	 * Returns a new object of class '<em>Marking Simple</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Simple</em>'.
+	 * @generated
+	 */
+	MarkingSimple createMarkingSimple();
+
+	/**
+	 * Returns a new object of class '<em>Marking Global Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Marking Global Variable</em>'.
+	 * @generated
+	 */
+	MarkingGlobalVariable createMarkingGlobalVariable();
+
+	/**
 	 * Returns a new object of class '<em>Marking Extended</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -371,24 +389,6 @@ public interface SANFactory extends EFactory {
 	 * @generated
 	 */
 	LeafNodeString createLeafNodeString();
-
-	/**
-	 * Returns a new object of class '<em>Marking Simple</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Simple</em>'.
-	 * @generated
-	 */
-	MarkingSimple createMarkingSimple();
-
-	/**
-	 * Returns a new object of class '<em>Marking Global Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marking Global Variable</em>'.
-	 * @generated
-	 */
-	MarkingGlobalVariable createMarkingGlobalVariable();
 
 	/**
 	 * Returns a new object of class '<em>Leaf Node Struct</em>'.

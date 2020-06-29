@@ -98,6 +98,7 @@ public class OutputArcImpl extends ArcTemplateImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Case getSourceCaseConcrete() {
 		if (sourceCaseConcrete != null && sourceCaseConcrete.eIsProxy()) {
 			InternalEObject oldSourceCaseConcrete = (InternalEObject)sourceCaseConcrete;
@@ -124,6 +125,7 @@ public class OutputArcImpl extends ArcTemplateImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSourceCaseConcrete(Case newSourceCaseConcrete) {
 		Case oldSourceCaseConcrete = sourceCaseConcrete;
 		sourceCaseConcrete = newSourceCaseConcrete;
@@ -136,6 +138,7 @@ public class OutputArcImpl extends ArcTemplateImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityTemplate getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
@@ -162,6 +165,7 @@ public class OutputArcImpl extends ArcTemplateImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(ActivityTemplate newSource) {
 		ActivityTemplate oldSource = source;
 		source = newSource;
@@ -174,6 +178,7 @@ public class OutputArcImpl extends ArcTemplateImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Place getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
@@ -200,6 +205,7 @@ public class OutputArcImpl extends ArcTemplateImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(Place newTarget) {
 		Place oldTarget = target;
 		target = newTarget;
@@ -212,6 +218,7 @@ public class OutputArcImpl extends ArcTemplateImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlaceTemplate getTemplateTarget() {
 		if (templateTarget != null && templateTarget.eIsProxy()) {
 			InternalEObject oldTemplateTarget = (InternalEObject)templateTarget;
@@ -238,6 +245,7 @@ public class OutputArcImpl extends ArcTemplateImpl implements OutputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplateTarget(PlaceTemplate newTemplateTarget) {
 		PlaceTemplate oldTemplateTarget = templateTarget;
 		templateTarget = newTemplateTarget;

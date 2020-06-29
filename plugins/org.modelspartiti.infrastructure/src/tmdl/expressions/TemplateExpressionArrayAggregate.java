@@ -28,10 +28,6 @@ public interface TemplateExpressionArrayAggregate extends TemplateExpressionReal
 	/**
 	 * Returns the value of the '<em><b>Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parameter</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameter</em>' reference.
 	 * @see #setParameter(ParameterArray)
@@ -55,10 +51,6 @@ public interface TemplateExpressionArrayAggregate extends TemplateExpressionReal
 	 * Returns the value of the '<em><b>Function</b></em>' attribute.
 	 * The literals are from the enumeration {@link tmdl.expressions.ArrayAggregateKind}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Function</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Function</em>' attribute.
 	 * @see tmdl.expressions.ArrayAggregateKind

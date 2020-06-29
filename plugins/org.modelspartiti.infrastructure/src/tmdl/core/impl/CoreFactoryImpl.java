@@ -73,6 +73,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSimple createParameterSimple() {
 		ParameterSimpleImpl parameterSimple = new ParameterSimpleImpl();
 		return parameterSimple;
@@ -83,6 +84,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterArray createParameterArray() {
 		ParameterArrayImpl parameterArray = new ParameterArrayImpl();
 		return parameterArray;
@@ -93,6 +95,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssignmentSimple createAssignmentSimple() {
 		AssignmentSimpleImpl assignmentSimple = new AssignmentSimpleImpl();
 		return assignmentSimple;
@@ -103,6 +106,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssignmentArray createAssignmentArray() {
 		AssignmentArrayImpl assignmentArray = new AssignmentArrayImpl();
 		return assignmentArray;
@@ -113,6 +117,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MultiplicityValue createMultiplicityValue() {
 		MultiplicityValueImpl multiplicityValue = new MultiplicityValueImpl();
 		return multiplicityValue;
@@ -123,6 +128,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MultiplicityArray createMultiplicityArray() {
 		MultiplicityArrayImpl multiplicityArray = new MultiplicityArrayImpl();
 		return multiplicityArray;
@@ -133,6 +139,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MultiplicityParametric createMultiplicityParametric() {
 		MultiplicityParametricImpl multiplicityParametric = new MultiplicityParametricImpl();
 		return multiplicityParametric;
@@ -143,6 +150,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CorePackage getCorePackage() {
 		return (CorePackage)getEPackage();
 	}

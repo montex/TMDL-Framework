@@ -3,6 +3,7 @@
 package san;
 
 import org.eclipse.emf.common.util.EList;
+
 import tmdl.core.ConcreteModel;
 
 /**
@@ -33,10 +34,6 @@ public interface SAN extends ConcreteModel {
 	 * Returns the value of the '<em><b>Places</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Place}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Places</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Places</em>' containment reference list.
 	 * @see san.SANPackage#getSAN_Places()
@@ -48,10 +45,6 @@ public interface SAN extends ConcreteModel {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
@@ -75,10 +68,6 @@ public interface SAN extends ConcreteModel {
 	 * Returns the value of the '<em><b>Activities</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Activity}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activities</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Activities</em>' containment reference list.
 	 * @see san.SANPackage#getSAN_Activities()
@@ -91,10 +80,6 @@ public interface SAN extends ConcreteModel {
 	 * Returns the value of the '<em><b>Global Variables</b></em>' containment reference list.
 	 * The list contents are of type {@link san.GlobalVariable}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Global Variables</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Global Variables</em>' containment reference list.
 	 * @see san.SANPackage#getSAN_GlobalVariables()
@@ -107,10 +92,6 @@ public interface SAN extends ConcreteModel {
 	 * Returns the value of the '<em><b>Arcs</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Arc}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Arcs</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arcs</em>' containment reference list.
 	 * @see san.SANPackage#getSAN_Arcs()
@@ -123,10 +104,6 @@ public interface SAN extends ConcreteModel {
 	 * Returns the value of the '<em><b>Gates</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Gate}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Gates</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gates</em>' containment reference list.
 	 * @see san.SANPackage#getSAN_Gates()
@@ -139,10 +116,6 @@ public interface SAN extends ConcreteModel {
 	 * Returns the value of the '<em><b>Initialization</b></em>' containment reference list.
 	 * The list contents are of type {@link san.Expression}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Initialization</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initialization</em>' containment reference list.
 	 * @see san.SANPackage#getSAN_Initialization()
@@ -155,10 +128,6 @@ public interface SAN extends ConcreteModel {
 	 * Returns the value of the '<em><b>Customtype</b></em>' containment reference list.
 	 * The list contents are of type {@link san.CustomTypeDefinition}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Customtype</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Customtype</em>' containment reference list.
 	 * @see san.SANPackage#getSAN_Customtype()

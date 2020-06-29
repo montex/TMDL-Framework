@@ -23,10 +23,6 @@ public interface HypoExponential extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Rate0</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rate0</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rate0</em>' containment reference.
 	 * @see #setRate0(Expression)

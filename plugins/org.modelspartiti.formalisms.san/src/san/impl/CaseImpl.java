@@ -84,6 +84,7 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getID() {
 		return id;
 	}
@@ -93,6 +94,7 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setID(int newID) {
 		int oldID = id;
 		id = newID;
@@ -105,6 +107,7 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getP() {
 		return p;
 	}
@@ -129,6 +132,7 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setP(Expression newP) {
 		if (newP != p) {
 			NotificationChain msgs = null;

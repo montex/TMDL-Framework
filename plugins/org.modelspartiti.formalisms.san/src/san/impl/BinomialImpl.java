@@ -73,6 +73,7 @@ public class BinomialImpl extends DistributionImpl implements Binomial {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getT() {
 		return t;
 	}
@@ -97,6 +98,7 @@ public class BinomialImpl extends DistributionImpl implements Binomial {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setT(Expression newT) {
 		if (newT != t) {
 			NotificationChain msgs = null;
@@ -116,6 +118,7 @@ public class BinomialImpl extends DistributionImpl implements Binomial {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getP() {
 		return p;
 	}
@@ -140,6 +143,7 @@ public class BinomialImpl extends DistributionImpl implements Binomial {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setP(Expression newP) {
 		if (newP != p) {
 			NotificationChain msgs = null;

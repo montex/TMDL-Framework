@@ -3,6 +3,7 @@
 package san.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -34,6 +35,7 @@ public abstract class DistributionImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected static final String PARAMETERS_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,6 +70,7 @@ public abstract class DistributionImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getParameters() {
 		return parameters;
 	}
@@ -77,6 +80,7 @@ public abstract class DistributionImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameters(String newParameters) {
 		String oldParameters = parameters;
 		parameters = newParameters;

@@ -86,6 +86,7 @@ public class InputArcImpl extends ArcTemplateImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Place getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
@@ -112,6 +113,7 @@ public class InputArcImpl extends ArcTemplateImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Place newSource) {
 		Place oldSource = source;
 		source = newSource;
@@ -124,6 +126,7 @@ public class InputArcImpl extends ArcTemplateImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityTemplate getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
@@ -150,6 +153,7 @@ public class InputArcImpl extends ArcTemplateImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(ActivityTemplate newTarget) {
 		ActivityTemplate oldTarget = target;
 		target = newTarget;
@@ -162,6 +166,7 @@ public class InputArcImpl extends ArcTemplateImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlaceTemplate getTemplateSource() {
 		if (templateSource != null && templateSource.eIsProxy()) {
 			InternalEObject oldTemplateSource = (InternalEObject)templateSource;
@@ -188,6 +193,7 @@ public class InputArcImpl extends ArcTemplateImpl implements InputArc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplateSource(PlaceTemplate newTemplateSource) {
 		PlaceTemplate oldTemplateSource = templateSource;
 		templateSource = newTemplateSource;

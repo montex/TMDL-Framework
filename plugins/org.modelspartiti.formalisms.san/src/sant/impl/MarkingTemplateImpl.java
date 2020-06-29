@@ -70,6 +70,7 @@ public abstract class MarkingTemplateImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getIdPlace() {
 		return idPlace;
 	}
@@ -79,6 +80,7 @@ public abstract class MarkingTemplateImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdPlace(int newIdPlace) {
 		int oldIdPlace = idPlace;
 		idPlace = newIdPlace;
@@ -147,14 +149,14 @@ public abstract class MarkingTemplateImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder();
-		result.append(" (Marking place id: ");
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (idPlace: ");
 		result.append(idPlace);
 		result.append(')');
 		return result.toString();

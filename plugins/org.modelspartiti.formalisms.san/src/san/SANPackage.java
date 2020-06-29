@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import tmdl.core.CorePackage;
 
 /**
@@ -318,76 +319,6 @@ public interface SANPackage extends EPackage {
 	int ACTIVITY_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.CaseImpl <em>Case</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.CaseImpl
-	 * @see san.impl.SANPackageImpl#getCase()
-	 * @generated
-	 */
-	int CASE = 6;
-
-	/**
-	 * The meta object id for the '{@link san.impl.ArcImpl <em>Arc</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.ArcImpl
-	 * @see san.impl.SANPackageImpl#getArc()
-	 * @generated
-	 */
-	int ARC = 7;
-
-	/**
-	 * The meta object id for the '{@link san.impl.InputArcImpl <em>Input Arc</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.InputArcImpl
-	 * @see san.impl.SANPackageImpl#getInputArc()
-	 * @generated
-	 */
-	int INPUT_ARC = 8;
-
-	/**
-	 * The meta object id for the '{@link san.impl.OutputArcImpl <em>Output Arc</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.OutputArcImpl
-	 * @see san.impl.SANPackageImpl#getOutputArc()
-	 * @generated
-	 */
-	int OUTPUT_ARC = 9;
-
-	/**
-	 * The meta object id for the '{@link san.impl.GateImpl <em>Gate</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.GateImpl
-	 * @see san.impl.SANPackageImpl#getGate()
-	 * @generated
-	 */
-	int GATE = 10;
-
-	/**
-	 * The meta object id for the '{@link san.impl.OutputGateImpl <em>Output Gate</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.OutputGateImpl
-	 * @see san.impl.SANPackageImpl#getOutputGate()
-	 * @generated
-	 */
-	int OUTPUT_GATE = 11;
-
-	/**
-	 * The meta object id for the '{@link san.impl.InputGateImpl <em>Input Gate</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.InputGateImpl
-	 * @see san.impl.SANPackageImpl#getInputGate()
-	 * @generated
-	 */
-	int INPUT_GATE = 12;
-
-	/**
 	 * The meta object id for the '{@link san.impl.InstantaneousActivityImpl <em>Instantaneous Activity</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -507,6 +438,16 @@ public interface SANPackage extends EPackage {
 	int TIMED_ACTIVITY_OPERATION_COUNT = ACTIVITY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.CaseImpl <em>Case</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.CaseImpl
+	 * @see san.impl.SANPackageImpl#getCase()
+	 * @generated
+	 */
+	int CASE = 6;
+
+	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,6 +484,16 @@ public interface SANPackage extends EPackage {
 	int CASE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.ArcImpl <em>Arc</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.ArcImpl
+	 * @see san.impl.SANPackageImpl#getArc()
+	 * @generated
+	 */
+	int ARC = 7;
+
+	/**
 	 * The number of structural features of the '<em>Arc</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -559,6 +510,16 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int ARC_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.InputArcImpl <em>Input Arc</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.InputArcImpl
+	 * @see san.impl.SANPackageImpl#getInputArc()
+	 * @generated
+	 */
+	int INPUT_ARC = 8;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -597,6 +558,16 @@ public interface SANPackage extends EPackage {
 	int INPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.OutputArcImpl <em>Output Arc</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.OutputArcImpl
+	 * @see san.impl.SANPackageImpl#getOutputArc()
+	 * @generated
+	 */
+	int OUTPUT_ARC = 9;
+
+	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -631,6 +602,16 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int OUTPUT_ARC_OPERATION_COUNT = ARC_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.GateImpl <em>Gate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.GateImpl
+	 * @see san.impl.SANPackageImpl#getGate()
+	 * @generated
+	 */
+	int GATE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -676,6 +657,16 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int GATE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.OutputGateImpl <em>Output Gate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.OutputGateImpl
+	 * @see san.impl.SANPackageImpl#getOutputGate()
+	 * @generated
+	 */
+	int OUTPUT_GATE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -730,6 +721,16 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int OUTPUT_GATE_OPERATION_COUNT = GATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.InputGateImpl <em>Input Gate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.InputGateImpl
+	 * @see san.impl.SANPackageImpl#getInputGate()
+	 * @generated
+	 */
+	int INPUT_GATE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1034,36 +1035,6 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int MARKING_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link san.impl.MarkingSimpleImpl <em>Marking Simple</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingSimpleImpl
-	 * @see san.impl.SANPackageImpl#getMarkingSimple()
-	 * @generated
-	 */
-	int MARKING_SIMPLE = 45;
-
-	/**
-	 * The meta object id for the '{@link san.impl.MarkingGlobalVariableImpl <em>Marking Global Variable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingGlobalVariableImpl
-	 * @see san.impl.SANPackageImpl#getMarkingGlobalVariable()
-	 * @generated
-	 */
-	int MARKING_GLOBAL_VARIABLE = 46;
-
-	/**
-	 * The meta object id for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.MarkingExtendedImpl
-	 * @see san.impl.SANPackageImpl#getMarkingExtended()
-	 * @generated
-	 */
-	int MARKING_EXTENDED = 47;
 
 	/**
 	 * The meta object id for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -2306,24 +2277,14 @@ public interface SANPackage extends EPackage {
 	int FIELD_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link san.impl.NodeImpl <em>Node</em>}' class.
+	 * The meta object id for the '{@link san.impl.MarkingSimpleImpl <em>Marking Simple</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see san.impl.NodeImpl
-	 * @see san.impl.SANPackageImpl#getNode()
+	 * @see san.impl.MarkingSimpleImpl
+	 * @see san.impl.SANPackageImpl#getMarkingSimple()
 	 * @generated
 	 */
-	int NODE = 48;
-
-	/**
-	 * The meta object id for the '{@link san.impl.ArrayImpl <em>Array</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see san.impl.ArrayImpl
-	 * @see san.impl.SANPackageImpl#getArray()
-	 * @generated
-	 */
-	int ARRAY = 49;
+	int MARKING_SIMPLE = 45;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2353,6 +2314,16 @@ public interface SANPackage extends EPackage {
 	int MARKING_SIMPLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.MarkingGlobalVariableImpl <em>Marking Global Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.MarkingGlobalVariableImpl
+	 * @see san.impl.SANPackageImpl#getMarkingGlobalVariable()
+	 * @generated
+	 */
+	int MARKING_GLOBAL_VARIABLE = 46;
+
+	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2378,6 +2349,16 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int MARKING_GLOBAL_VARIABLE_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.MarkingExtendedImpl
+	 * @see san.impl.SANPackageImpl#getMarkingExtended()
+	 * @generated
+	 */
+	int MARKING_EXTENDED = 47;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' containment reference.
@@ -2407,6 +2388,16 @@ public interface SANPackage extends EPackage {
 	int MARKING_EXTENDED_OPERATION_COUNT = MARKING_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link san.impl.NodeImpl <em>Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.NodeImpl
+	 * @see san.impl.SANPackageImpl#getNode()
+	 * @generated
+	 */
+	int NODE = 48;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2423,6 +2414,16 @@ public interface SANPackage extends EPackage {
 	 * @ordered
 	 */
 	int NODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link san.impl.ArrayImpl <em>Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see san.impl.ArrayImpl
+	 * @see san.impl.SANPackageImpl#getArray()
+	 * @generated
+	 */
+	int ARRAY = 49;
 
 	/**
 	 * The feature id for the '<em><b>Definition</b></em>' reference.
@@ -2729,6 +2730,27 @@ public interface SANPackage extends EPackage {
 	EReference getSAN_Customtype();
 
 	/**
+	 * Returns the meta object for class '{@link san.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Named Element</em>'.
+	 * @see san.NamedElement
+	 * @generated
+	 */
+	EClass getNamedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link san.NamedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see san.NamedElement#getName()
+	 * @see #getNamedElement()
+	 * @generated
+	 */
+	EAttribute getNamedElement_Name();
+
+	/**
 	 * Returns the meta object for class '{@link san.Place <em>Place</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2793,25 +2815,57 @@ public interface SANPackage extends EPackage {
 	EReference getActivity_Cases();
 
 	/**
-	 * Returns the meta object for class '{@link san.NamedElement <em>Named Element</em>}'.
+	 * Returns the meta object for class '{@link san.InstantaneousActivity <em>Instantaneous Activity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Named Element</em>'.
-	 * @see san.NamedElement
+	 * @return the meta object for class '<em>Instantaneous Activity</em>'.
+	 * @see san.InstantaneousActivity
 	 * @generated
 	 */
-	EClass getNamedElement();
+	EClass getInstantaneousActivity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link san.NamedElement#getName <em>Name</em>}'.
+	 * Returns the meta object for class '{@link san.TimedActivity <em>Timed Activity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see san.NamedElement#getName()
-	 * @see #getNamedElement()
+	 * @return the meta object for class '<em>Timed Activity</em>'.
+	 * @see san.TimedActivity
 	 * @generated
 	 */
-	EAttribute getNamedElement_Name();
+	EClass getTimedActivity();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.TimedActivity#getTimeDistribution <em>Time Distribution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Time Distribution</em>'.
+	 * @see san.TimedActivity#getTimeDistribution()
+	 * @see #getTimedActivity()
+	 * @generated
+	 */
+	EReference getTimedActivity_TimeDistribution();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.TimedActivity#getActivation <em>Activation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Activation</em>'.
+	 * @see san.TimedActivity#getActivation()
+	 * @see #getTimedActivity()
+	 * @generated
+	 */
+	EReference getTimedActivity_Activation();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.TimedActivity#getReactivation <em>Reactivation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Reactivation</em>'.
+	 * @see san.TimedActivity#getReactivation()
+	 * @see #getTimedActivity()
+	 * @generated
+	 */
+	EReference getTimedActivity_Reactivation();
 
 	/**
 	 * Returns the meta object for class '{@link san.Case <em>Case</em>}'.
@@ -3005,59 +3059,6 @@ public interface SANPackage extends EPackage {
 	EReference getInputGate_Activity();
 
 	/**
-	 * Returns the meta object for class '{@link san.InstantaneousActivity <em>Instantaneous Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Instantaneous Activity</em>'.
-	 * @see san.InstantaneousActivity
-	 * @generated
-	 */
-	EClass getInstantaneousActivity();
-
-	/**
-	 * Returns the meta object for class '{@link san.TimedActivity <em>Timed Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Timed Activity</em>'.
-	 * @see san.TimedActivity
-	 * @generated
-	 */
-	EClass getTimedActivity();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.TimedActivity#getTimeDistribution <em>Time Distribution</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Time Distribution</em>'.
-	 * @see san.TimedActivity#getTimeDistribution()
-	 * @see #getTimedActivity()
-	 * @generated
-	 */
-	EReference getTimedActivity_TimeDistribution();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.TimedActivity#getActivation <em>Activation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Activation</em>'.
-	 * @see san.TimedActivity#getActivation()
-	 * @see #getTimedActivity()
-	 * @generated
-	 */
-	EReference getTimedActivity_Activation();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.TimedActivity#getReactivation <em>Reactivation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Reactivation</em>'.
-	 * @see san.TimedActivity#getReactivation()
-	 * @see #getTimedActivity()
-	 * @generated
-	 */
-	EReference getTimedActivity_Reactivation();
-
-	/**
 	 * Returns the meta object for class '{@link san.Distribution <em>Distribution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3171,27 +3172,6 @@ public interface SANPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMarking();
-
-	/**
-	 * Returns the meta object for class '{@link san.MarkingExtended <em>Marking Extended</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Marking Extended</em>'.
-	 * @see san.MarkingExtended
-	 * @generated
-	 */
-	EClass getMarkingExtended();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link san.MarkingExtended#getNode <em>Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Node</em>'.
-	 * @see san.MarkingExtended#getNode()
-	 * @see #getMarkingExtended()
-	 * @generated
-	 */
-	EReference getMarkingExtended_Node();
 
 	/**
 	 * Returns the meta object for class '{@link san.GlobalVariable <em>Global Variable</em>}'.
@@ -3958,6 +3938,27 @@ public interface SANPackage extends EPackage {
 	EReference getMarkingGlobalVariable_Variable();
 
 	/**
+	 * Returns the meta object for class '{@link san.MarkingExtended <em>Marking Extended</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Marking Extended</em>'.
+	 * @see san.MarkingExtended
+	 * @generated
+	 */
+	EClass getMarkingExtended();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link san.MarkingExtended#getNode <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Node</em>'.
+	 * @see san.MarkingExtended#getNode()
+	 * @see #getMarkingExtended()
+	 * @generated
+	 */
+	EReference getMarkingExtended_Node();
+
+	/**
 	 * Returns the meta object for class '{@link san.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4201,6 +4202,24 @@ public interface SANPackage extends EPackage {
 		EReference SAN__CUSTOMTYPE = eINSTANCE.getSAN_Customtype();
 
 		/**
+		 * The meta object literal for the '{@link san.impl.NamedElementImpl <em>Named Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.NamedElementImpl
+		 * @see san.impl.SANPackageImpl#getNamedElement()
+		 * @generated
+		 */
+		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+
+		/**
 		 * The meta object literal for the '{@link san.impl.PlaceImpl <em>Place</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4253,22 +4272,48 @@ public interface SANPackage extends EPackage {
 		EReference ACTIVITY__CASES = eINSTANCE.getActivity_Cases();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.NamedElementImpl <em>Named Element</em>}' class.
+		 * The meta object literal for the '{@link san.impl.InstantaneousActivityImpl <em>Instantaneous Activity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see san.impl.NamedElementImpl
-		 * @see san.impl.SANPackageImpl#getNamedElement()
+		 * @see san.impl.InstantaneousActivityImpl
+		 * @see san.impl.SANPackageImpl#getInstantaneousActivity()
 		 * @generated
 		 */
-		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
+		EClass INSTANTANEOUS_ACTIVITY = eINSTANCE.getInstantaneousActivity();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '{@link san.impl.TimedActivityImpl <em>Timed Activity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.TimedActivityImpl
+		 * @see san.impl.SANPackageImpl#getTimedActivity()
+		 * @generated
+		 */
+		EClass TIMED_ACTIVITY = eINSTANCE.getTimedActivity();
+
+		/**
+		 * The meta object literal for the '<em><b>Time Distribution</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+		EReference TIMED_ACTIVITY__TIME_DISTRIBUTION = eINSTANCE.getTimedActivity_TimeDistribution();
+
+		/**
+		 * The meta object literal for the '<em><b>Activation</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TIMED_ACTIVITY__ACTIVATION = eINSTANCE.getTimedActivity_Activation();
+
+		/**
+		 * The meta object literal for the '<em><b>Reactivation</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TIMED_ACTIVITY__REACTIVATION = eINSTANCE.getTimedActivity_Reactivation();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.CaseImpl <em>Case</em>}' class.
@@ -4429,50 +4474,6 @@ public interface SANPackage extends EPackage {
 		EReference INPUT_GATE__ACTIVITY = eINSTANCE.getInputGate_Activity();
 
 		/**
-		 * The meta object literal for the '{@link san.impl.InstantaneousActivityImpl <em>Instantaneous Activity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.InstantaneousActivityImpl
-		 * @see san.impl.SANPackageImpl#getInstantaneousActivity()
-		 * @generated
-		 */
-		EClass INSTANTANEOUS_ACTIVITY = eINSTANCE.getInstantaneousActivity();
-
-		/**
-		 * The meta object literal for the '{@link san.impl.TimedActivityImpl <em>Timed Activity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.TimedActivityImpl
-		 * @see san.impl.SANPackageImpl#getTimedActivity()
-		 * @generated
-		 */
-		EClass TIMED_ACTIVITY = eINSTANCE.getTimedActivity();
-
-		/**
-		 * The meta object literal for the '<em><b>Time Distribution</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TIMED_ACTIVITY__TIME_DISTRIBUTION = eINSTANCE.getTimedActivity_TimeDistribution();
-
-		/**
-		 * The meta object literal for the '<em><b>Activation</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TIMED_ACTIVITY__ACTIVATION = eINSTANCE.getTimedActivity_Activation();
-
-		/**
-		 * The meta object literal for the '<em><b>Reactivation</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TIMED_ACTIVITY__REACTIVATION = eINSTANCE.getTimedActivity_Reactivation();
-
-		/**
 		 * The meta object literal for the '{@link san.impl.DistributionImpl <em>Distribution</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4571,24 +4572,6 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MARKING = eINSTANCE.getMarking();
-
-		/**
-		 * The meta object literal for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see san.impl.MarkingExtendedImpl
-		 * @see san.impl.SANPackageImpl#getMarkingExtended()
-		 * @generated
-		 */
-		EClass MARKING_EXTENDED = eINSTANCE.getMarkingExtended();
-
-		/**
-		 * The meta object literal for the '<em><b>Node</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MARKING_EXTENDED__NODE = eINSTANCE.getMarkingExtended_Node();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -5221,6 +5204,24 @@ public interface SANPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MARKING_GLOBAL_VARIABLE__VARIABLE = eINSTANCE.getMarkingGlobalVariable_Variable();
+
+		/**
+		 * The meta object literal for the '{@link san.impl.MarkingExtendedImpl <em>Marking Extended</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see san.impl.MarkingExtendedImpl
+		 * @see san.impl.SANPackageImpl#getMarkingExtended()
+		 * @generated
+		 */
+		EClass MARKING_EXTENDED = eINSTANCE.getMarkingExtended();
+
+		/**
+		 * The meta object literal for the '<em><b>Node</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MARKING_EXTENDED__NODE = eINSTANCE.getMarkingExtended_Node();
 
 		/**
 		 * The meta object literal for the '{@link san.impl.NodeImpl <em>Node</em>}' class.

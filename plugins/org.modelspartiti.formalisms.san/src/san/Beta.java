@@ -24,10 +24,6 @@ public interface Beta extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Alpha1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Alpha1</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Alpha1</em>' containment reference.
 	 * @see #setAlpha1(Expression)
@@ -50,10 +46,6 @@ public interface Beta extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Beta1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Beta1</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Beta1</em>' containment reference.
 	 * @see #setBeta1(Expression)

@@ -62,6 +62,7 @@ public class MarkingTemplateGlobalVariableImpl extends MarkingTemplateImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GlobalVariable getVariable() {
 		if (variable != null && variable.eIsProxy()) {
 			InternalEObject oldVariable = (InternalEObject)variable;
@@ -88,6 +89,7 @@ public class MarkingTemplateGlobalVariableImpl extends MarkingTemplateImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariable(GlobalVariable newVariable) {
 		GlobalVariable oldVariable = variable;
 		variable = newVariable;
@@ -152,20 +154,6 @@ public class MarkingTemplateGlobalVariableImpl extends MarkingTemplateImpl imple
 				return variable != null;
 		}
 		return super.eIsSet(featureID);
-	}
-	
-	/**
-	 * @generated NOT
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (Variable: ");
-		result.append(variable.getName());
-		result.append(')');
-		return result.toString();
 	}
 
 } //MarkingTemplateGlobalVariableImpl

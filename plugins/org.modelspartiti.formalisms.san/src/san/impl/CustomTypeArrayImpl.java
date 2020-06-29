@@ -104,6 +104,7 @@ public class CustomTypeArrayImpl extends CustomTypeDefinitionImpl implements Cus
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getSize() {
 		return size;
 	}
@@ -113,6 +114,7 @@ public class CustomTypeArrayImpl extends CustomTypeDefinitionImpl implements Cus
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSize(int newSize) {
 		int oldSize = size;
 		size = newSize;
@@ -125,6 +127,7 @@ public class CustomTypeArrayImpl extends CustomTypeDefinitionImpl implements Cus
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -134,6 +137,7 @@ public class CustomTypeArrayImpl extends CustomTypeDefinitionImpl implements Cus
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -146,6 +150,7 @@ public class CustomTypeArrayImpl extends CustomTypeDefinitionImpl implements Cus
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getTypeArray() {
 		return typeArray;
 	}
@@ -170,6 +175,7 @@ public class CustomTypeArrayImpl extends CustomTypeDefinitionImpl implements Cus
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeArray(Type newTypeArray) {
 		if (newTypeArray != typeArray) {
 			NotificationChain msgs = null;

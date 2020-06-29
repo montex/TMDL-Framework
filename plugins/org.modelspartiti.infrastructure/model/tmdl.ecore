@@ -245,7 +245,7 @@
         eSuperTypes="#//expressions/TemplateExpressionReal">
       <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
         <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-          <details key="body" value="exp.evaluate(assignments)"/>
+          <details key="body" value="exp.evaluate(assignments).oclAsType(Real)"/>
         </eAnnotations>
         <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
       </eOperations>
@@ -424,7 +424,7 @@
         eSuperTypes="#//expressions/TemplateExpressionInteger">
       <eOperations name="evaluate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
         <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-          <details key="body" value="exp.evaluate(assignments)"/>
+          <details key="body" value="if exp.evaluate(assignments) then 1 else 0 endif"/>
         </eAnnotations>
         <eParameters name="assignments" ordered="false" upperBound="-1" eType="#//core/Assignment"/>
       </eOperations>

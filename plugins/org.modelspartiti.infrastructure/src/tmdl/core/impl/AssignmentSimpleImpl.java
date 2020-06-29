@@ -82,6 +82,7 @@ public class AssignmentSimpleImpl extends AssignmentImpl implements AssignmentSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSimple getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject)parameter;
@@ -108,6 +109,7 @@ public class AssignmentSimpleImpl extends AssignmentImpl implements AssignmentSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(ParameterSimple newParameter) {
 		ParameterSimple oldParameter = parameter;
 		parameter = newParameter;
@@ -120,6 +122,7 @@ public class AssignmentSimpleImpl extends AssignmentImpl implements AssignmentSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getValue() {
 		return value;
 	}
@@ -129,6 +132,7 @@ public class AssignmentSimpleImpl extends AssignmentImpl implements AssignmentSi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(double newValue) {
 		double oldValue = value;
 		value = newValue;

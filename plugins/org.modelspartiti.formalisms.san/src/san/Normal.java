@@ -24,10 +24,6 @@ public interface Normal extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Mean</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Mean</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mean</em>' containment reference.
 	 * @see #setMean(Expression)
@@ -50,10 +46,6 @@ public interface Normal extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Variance</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Variance</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variance</em>' containment reference.
 	 * @see #setVariance(Expression)

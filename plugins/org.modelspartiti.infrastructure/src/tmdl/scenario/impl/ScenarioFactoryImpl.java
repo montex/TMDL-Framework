@@ -70,6 +70,7 @@ public class ScenarioFactoryImpl extends EFactoryImpl implements ScenarioFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Scenario createScenario() {
 		ScenarioImpl scenario = new ScenarioImpl();
 		return scenario;
@@ -80,6 +81,7 @@ public class ScenarioFactoryImpl extends EFactoryImpl implements ScenarioFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariantAtomic createVariantAtomic() {
 		VariantAtomicImpl variantAtomic = new VariantAtomicImpl();
 		return variantAtomic;
@@ -90,6 +92,7 @@ public class ScenarioFactoryImpl extends EFactoryImpl implements ScenarioFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariantComposite createVariantComposite() {
 		VariantCompositeImpl variantComposite = new VariantCompositeImpl();
 		return variantComposite;
@@ -100,6 +103,7 @@ public class ScenarioFactoryImpl extends EFactoryImpl implements ScenarioFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BlockRealization createBlockRealization() {
 		BlockRealizationImpl blockRealization = new BlockRealizationImpl();
 		return blockRealization;
@@ -110,6 +114,7 @@ public class ScenarioFactoryImpl extends EFactoryImpl implements ScenarioFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ScenarioPackage getScenarioPackage() {
 		return (ScenarioPackage)getEPackage();
 	}

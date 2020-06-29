@@ -2,6 +2,7 @@
  */
 package san;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Marking Extended</b></em>'.
@@ -19,14 +20,9 @@ package san;
  * @generated
  */
 public interface MarkingExtended extends Marking {
-
 	/**
 	 * Returns the value of the '<em><b>Node</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Node</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node</em>' containment reference.
 	 * @see #setNode(Node)
@@ -45,4 +41,5 @@ public interface MarkingExtended extends Marking {
 	 * @generated
 	 */
 	void setNode(Node value);
+
 } // MarkingExtended

@@ -93,6 +93,7 @@ public class TemplateExpressionArrayAggregateImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterArray getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject)parameter;
@@ -119,6 +120,7 @@ public class TemplateExpressionArrayAggregateImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(ParameterArray newParameter) {
 		ParameterArray oldParameter = parameter;
 		parameter = newParameter;
@@ -131,6 +133,7 @@ public class TemplateExpressionArrayAggregateImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArrayAggregateKind getFunction() {
 		return function;
 	}
@@ -140,6 +143,7 @@ public class TemplateExpressionArrayAggregateImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFunction(ArrayAggregateKind newFunction) {
 		ArrayAggregateKind oldFunction = function;
 		function = newFunction == null ? FUNCTION_EDEFAULT : newFunction;
@@ -162,6 +166,7 @@ public class TemplateExpressionArrayAggregateImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate(EList<Assignment> assignments) {
 		try {
 			return (Double)EVALUATE_ELIST__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{assignments}));
@@ -186,6 +191,7 @@ public class TemplateExpressionArrayAggregateImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double evaluate() {
 		try {
 			return (Double)EVALUATE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);

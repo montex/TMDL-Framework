@@ -24,10 +24,6 @@ public interface Pareto extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Lower Bound</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lower Bound</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lower Bound</em>' containment reference.
 	 * @see #setLowerBound(Expression)
@@ -50,10 +46,6 @@ public interface Pareto extends Distribution {
 	/**
 	 * Returns the value of the '<em><b>Shape</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Shape</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Shape</em>' containment reference.
 	 * @see #setShape(Expression)
