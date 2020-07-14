@@ -1,8 +1,8 @@
-# TMDL Framework (aka ModelSpartiti)
+# TAME: TemplAte Modeling Environment
 
 ## About
 
-This project implements the TMDL Framework, an approach to simplify the
+This project implements the **TMDL Framework**, an approach to simplify the
 specification of complex performability models.
 
 ## Contributing
