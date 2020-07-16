@@ -12,6 +12,9 @@
   </parent>
 
   <modules>
+    <module>releng-updatesite</module>
+    <module>org.modelspartiti.feature</module>
+
     <module>org.modelspartiti.infrastructure</module>
     <module>org.modelspartiti.formalisms.san</module>
     <module>org.modelspartiti.formalisms.san.design</module>
