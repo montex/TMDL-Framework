@@ -28,3 +28,16 @@ jobs:
       with:
         name: plugins-jars
         path: plugins/releng-updatesite/target/repository/plugins/*.jar
+    - name: Deploy update site
+      uses: up9cloud/action-rsync@v1.1
+      env:
+        # Required
+        HOST: tame.montecchi.info
+        KEY: ${{secrets.DEPLOY_SSH_KEY}} # ssh private key
+        TARGET: ~/tame.montecchi.info/updatesite/${GITHUB_REF##*/}/ # target folder or file
+
+        # Optional (with `default` values)
+        VERBOSE: false # set it true if you want some tips
+        USER: tameframework # target server ssh user
+        ARGS: -avz
+        SOURCE: plugins/releng-updatesite/target/repository/ # source folder or file
