@@ -1,0 +1,30 @@
+stages:
+  - build
+  - package
+
+image: maven:latest
+
+variables:
+  MAVEN_CLI_OPTS: "--batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - plugins/*/target/
+
+build:
+  stage: build
+  script:
+    - cd plugins
+    - mvn $MAVEN_CLI_OPTS compile
+
+package:
+  stage: package
+  script:
+    - cd plugins
+    - mvn $MAVEN_CLI_OPTS package
+  artifacts:
+    paths:
+      - plugins/releng-updatesite/target/releng-updatesite*.zip
+      - plugins/releng-updatesite/target/repository/*
