@@ -2,3 +2,4 @@
 */.metadata
 .am3
 bin
+plugins/*/target

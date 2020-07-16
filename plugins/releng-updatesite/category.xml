@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.modelspartiti.feature">
+      <category name="org.modelspartiti.update"/>
+   </feature>
+   <category-def name="org.modelspartiti.update" label="TAME (TMDL Framework)"/>
+</site>
