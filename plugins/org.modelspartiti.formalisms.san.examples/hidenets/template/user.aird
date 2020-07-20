@@ -3,14 +3,14 @@
   <viewpoint:DAnalysis uid="_dsw08E3CEeqMJOTn_REb9g" selectedViews="_r2V-wE3CEeqMJOTn_REb9g _r3KeIE3CEeqMJOTn_REb9g" version="14.1.0.201810161215">
     <semanticResources>user.sant</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_r2V-wE3CEeqMJOTn_REb9g">
-      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']"/>
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_0ROkEVZMEeq9pbT7dw7Rtw" name="User model SANT" repPath="#_0KYVMFZMEeq9pbT7dw7Rtw">
-        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']"/>
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']"/>
         <target xmi:type="sant:SANT" href="user.sant#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_r3KeIE3CEeqMJOTn_REb9g">
-      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']"/>
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']"/>
     </ownedViews>
   </viewpoint:DAnalysis>
   <diagram:DSemanticDiagram uid="_0KYVMFZMEeq9pbT7dw7Rtw" name="User model SANT">
@@ -398,9 +398,9 @@
         <target xmi:type="san:PrimitiveType" href="user.sant#//@places.0/@type"/>
         <semanticElements xmi:type="san:PrimitiveType" href="user.sant#//@places.0/@type"/>
         <ownedStyle xmi:type="diagram:Square" uid="_N7yy41ZPEeq9pbT7dw7Rtw" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_xWKj2HJpEeq0jYGPLTVDdA" name="0" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="san:MarkingSimple" href="user.sant#//@places.0/@marking"/>
@@ -409,17 +409,17 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Lozenge" uid="_xWKj2XJpEeq0jYGPLTVDdA" labelSize="12" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Dot" uid="__NTlMVZOEeq9pbT7dw7Rtw" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
-        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+        <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']"/>
+      <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_G1IAQFZREeq9pbT7dw7Rtw" name="Dropped" outgoingEdges="_O81uRFZREeq9pbT7dw7Rtw" width="4" height="4" resizeKind="NSEW">
       <target xmi:type="san:Place" href="user.sant#Dropped"/>
@@ -428,9 +428,9 @@
         <target xmi:type="san:PrimitiveType" href="user.sant#//@places.1/@type"/>
         <semanticElements xmi:type="san:PrimitiveType" href="user.sant#//@places.1/@type"/>
         <ownedStyle xmi:type="diagram:Square" uid="_HKIm91ZREeq9pbT7dw7Rtw" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_zI4erHJpEeq0jYGPLTVDdA" name="0" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="san:MarkingSimple" href="user.sant#//@places.1/@marking"/>
@@ -439,17 +439,17 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Lozenge" uid="_zI4erXJpEeq0jYGPLTVDdA" labelSize="12" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Dot" uid="_G1IAQVZREeq9pbT7dw7Rtw" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
-        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+        <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']"/>
+      <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_L1gJ4FZREeq9pbT7dw7Rtw" name="Idle" incomingEdges="_THMZYFZSEeq9pbT7dw7Rtw _IffKsV4LEeqYS_4ITrkf_Q _IffKtl4LEeqYS_4ITrkf_Q" width="4" height="4" resizeKind="NSEW">
       <target xmi:type="san:Place" href="user.sant#Idle"/>
@@ -458,25 +458,25 @@
         <target xmi:type="san:PrimitiveType" href="user.sant#//@places.2/@type"/>
         <semanticElements xmi:type="san:PrimitiveType" href="user.sant#//@places.2/@type"/>
         <ownedStyle xmi:type="diagram:Square" uid="_5Iqa21ZREeq9pbT7dw7Rtw" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_vBWBi3JpEeq0jYGPLTVDdA" name="1" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="san:MarkingSimple" href="user.sant#//@places.2/@marking"/>
         <semanticElements xmi:type="san:MarkingSimple" href="user.sant#//@places.2/@marking"/>
         <ownedStyle xmi:type="diagram:Lozenge" uid="_vBWBjHJpEeq0jYGPLTVDdA" labelSize="12" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Dot" uid="_L1gJ4VZREeq9pbT7dw7Rtw" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
-        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+        <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']"/>
+      <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_8JPsYFZQEeq9pbT7dw7Rtw" name="Fail" outgoingEdges="_IffKsV4LEeqYS_4ITrkf_Q" incomingEdges="_Nx5lIFZREeq9pbT7dw7Rtw" width="1" height="6" resizeKind="NSEW">
       <target xmi:type="sant:InstantaneousActivityTemplate" href="user.sant#Fail"/>
@@ -485,9 +485,9 @@
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" uid="_8JPsYVZQEeq9pbT7dw7Rtw" labelSize="12" width="1" height="6" color="39,76,114">
-        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_HuLvMFZREeq9pbT7dw7Rtw" name="Drop" outgoingEdges="_IffKtl4LEeqYS_4ITrkf_Q" incomingEdges="_O81uRFZREeq9pbT7dw7Rtw" width="1" height="6" resizeKind="NSEW">
       <target xmi:type="sant:InstantaneousActivityTemplate" href="user.sant#Drop"/>
@@ -496,27 +496,27 @@
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" uid="_HuLvMVZREeq9pbT7dw7Rtw" labelSize="12" width="1" height="6" color="39,76,114">
-        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Nx5lIFZREeq9pbT7dw7Rtw" sourceNode="__NTlMFZOEeq9pbT7dw7Rtw" targetNode="_8JPsYFZQEeq9pbT7dw7Rtw">
       <target xmi:type="sant:InputArc" href="user.sant#//@arcs.0"/>
       <semanticElements xmi:type="sant:InputArc" href="user.sant#//@arcs.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Nx5lIVZREeq9pbT7dw7Rtw" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Nx5lIlZREeq9pbT7dw7Rtw" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_O81uRFZREeq9pbT7dw7Rtw" sourceNode="_G1IAQFZREeq9pbT7dw7Rtw" targetNode="_HuLvMFZREeq9pbT7dw7Rtw">
       <target xmi:type="sant:InputArc" href="user.sant#//@arcs.1"/>
       <semanticElements xmi:type="sant:InputArc" href="user.sant#//@arcs.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_O81uRVZREeq9pbT7dw7Rtw" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_O81uRlZREeq9pbT7dw7Rtw" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_RkCkkFZSEeq9pbT7dw7Rtw" name="IGRequest" outgoingEdges="_THMZYFZSEeq9pbT7dw7Rtw _qhgOEm-IEeqNALK-rE0B0Q" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="sant:InputGateTemplate" href="user.sant#IGRequest"/>
@@ -525,17 +525,17 @@
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_RkCkkVZSEeq9pbT7dw7Rtw" labelSize="12" workspacePath="/org.modelspartiti.formalisms.sant.design/icons/sant_ingate.png">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InputGate']/@style"/>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InputGate']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InputGate']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InputGate']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_THMZYFZSEeq9pbT7dw7Rtw" sourceNode="_RkCkkFZSEeq9pbT7dw7Rtw" targetNode="_L1gJ4FZREeq9pbT7dw7Rtw">
       <target xmi:type="sant:InputGateTemplate" href="user.sant#IGRequest"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_THMZYVZSEeq9pbT7dw7Rtw" targetArrow="NoDecoration" size="2" routingStyle="manhattan">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceInputGate']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceInputGate']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_THMZYlZSEeq9pbT7dw7Rtw" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceInputGate']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceInputGate']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Xnn3oFZSEeq9pbT7dw7Rtw" name="Request" incomingEdges="_UR7GwluuEeqDEYfcbygd2g _qhgOEm-IEeqNALK-rE0B0Q" width="3" height="6" resizeKind="NSEW">
       <target xmi:type="sant:TimedActivityTemplate" href="user.sant#Request"/>
@@ -545,9 +545,9 @@
         <semanticElements xmi:type="san:Uniform" href="user.sant#//@activityTemplates[name='Request']/@timeDistribution"/>
         <ownedStyle xmi:type="diagram:Square" uid="_f94X_1ZSEeq9pbT7dw7Rtw" labelSize="9" showIcon="false" labelPosition="node" width="6" height="2" color="138,226,52">
           <labelFormat>bold</labelFormat>
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_1fB5IFlvEeqWzYO6u0VNIQ" name="Uniform" width="6" height="2" resizeKind="NSEW">
         <target xmi:type="san:Uniform" href="user.sant#//@activityTemplates[name='Request']/@timeDistribution"/>
@@ -557,33 +557,33 @@
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Square" uid="_1fB5IVlvEeqWzYO6u0VNIQ" labelSize="9" showIcon="false" labelPosition="node" width="6" height="2" color="138,226,52">
           <labelFormat>bold</labelFormat>
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_QHzui3HaEeqoKpaZ3xbJVQ" visible="false" width="2" height="2" resizeKind="NSEW">
         <target xmi:type="sant:CasesSpecificationProbabilityArray" href="user.sant#//@activityTemplates[name='Request']/@casesTemplate"/>
         <semanticElements xmi:type="sant:CasesSpecificationProbabilityArray" href="user.sant#//@activityTemplates[name='Request']/@casesTemplate"/>
         <ownedStyle xmi:type="diagram:Dot" uid="_QHzujHHaEeqoKpaZ3xbJVQ" labelSize="11" showIcon="false" labelPosition="node" backgroundColor="114,159,207">
-          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']/@style"/>
+          <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']"/>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_YOM7_HHcEeqoKpaZ3xbJVQ" name="P" width="2" height="2" resizeKind="NSEW">
         <target xmi:type="sant:CasesSpecificationProbabilityArray" href="user.sant#//@activityTemplates[name='Request']/@casesTemplate"/>
         <semanticElements xmi:type="sant:CasesSpecificationProbabilityArray" href="user.sant#//@activityTemplates[name='Request']/@casesTemplate"/>
         <ownedStyle xmi:type="diagram:Dot" uid="_YOM7_XHcEeqoKpaZ3xbJVQ" labelSize="11" showIcon="false" labelPosition="node" backgroundColor="114,159,207">
-          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']/@style"/>
+          <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='CasesSpecificationProbabilityArray']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" uid="_Xnn3oVZSEeq9pbT7dw7Rtw" labelSize="12" width="3" height="6" color="194,239,255">
-        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_UkEKqlZTEeq9pbT7dw7Rtw" name="Req" incomingEdges="_UR7GvVuuEeqDEYfcbygd2g">
       <target xmi:type="sant:PlaceTemplate" href="user.sant#Req"/>
@@ -593,16 +593,16 @@
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_UkEKq1ZTEeq9pbT7dw7Rtw" labelSize="12" borderSize="2" borderSizeComputationExpression="2" backgroundColor="204,242,166">
         <labelFormat>bold</labelFormat>
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']/@style"/>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_N6xxbG7cEeqrKNjsUujq7A" name="Parameter S">
         <target xmi:type="core:MultiplicityParametric" href="user.sant#//@templatePlaces[name='Req']/@multiplicity"/>
         <semanticElements xmi:type="core:MultiplicityParametric" href="user.sant#//@templatePlaces[name='Req']/@multiplicity"/>
         <ownedStyle xmi:type="diagram:Dot" uid="_N6xxbW7cEeqrKNjsUujq7A" labelSize="12" labelPosition="node">
-          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']/@subNodeMappings[name='MultiplicityParametric']/@style"/>
+          <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']/@subNodeMappings[name='MultiplicityParametric']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']/@subNodeMappings[name='MultiplicityParametric']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']/@subNodeMappings[name='MultiplicityParametric']"/>
       </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_URtraFuuEeqDEYfcbygd2g" name="OGRequest" outgoingEdges="_UR7GvVuuEeqDEYfcbygd2g _UR7GwluuEeqDEYfcbygd2g" width="-1" height="-1" resizeKind="NSEW">
@@ -612,57 +612,57 @@
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_UR7GsFuuEeqDEYfcbygd2g" labelSize="12" workspacePath="/org.modelspartiti.formalisms.sant.design/icons/sant_outgate.png">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']/@style"/>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_UR7GvVuuEeqDEYfcbygd2g" sourceNode="_URtraFuuEeqDEYfcbygd2g" targetNode="_UkEKqlZTEeq9pbT7dw7Rtw">
       <target xmi:type="sant:OutputGateTemplate" href="user.sant#OGRequest"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_UR7GvluuEeqDEYfcbygd2g" targetArrow="NoDecoration" size="5" routingStyle="manhattan" strokeColor="0,255,0">
         <customFeatures>strokeColor</customFeatures>
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGateTemplate']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGateTemplate']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_UR7Gv1uuEeqDEYfcbygd2g" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGateTemplate']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGateTemplate']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_UR7GwluuEeqDEYfcbygd2g" sourceNode="_URtraFuuEeqDEYfcbygd2g" targetNode="_Xnn3oFZSEeq9pbT7dw7Rtw">
       <target xmi:type="sant:OutputGateTemplate" href="user.sant#OGRequest"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_UR7Gw1uuEeqDEYfcbygd2g" targetArrow="NoDecoration" size="5" strokeColor="0,255,0">
         <customFeatures>strokeColor</customFeatures>
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGateTemplate']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGateTemplate']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_UR7GxFuuEeqDEYfcbygd2g" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGateTemplate']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGateTemplate']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_IffKsV4LEeqYS_4ITrkf_Q" sourceNode="_8JPsYFZQEeq9pbT7dw7Rtw" targetNode="_L1gJ4FZREeq9pbT7dw7Rtw">
       <target xmi:type="sant:OutputArc" href="user.sant#//@arcs.2"/>
       <semanticElements xmi:type="sant:OutputArc" href="user.sant#//@arcs.2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_IffKsl4LEeqYS_4ITrkf_Q" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_IffKs14LEeqYS_4ITrkf_Q" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_IffKtl4LEeqYS_4ITrkf_Q" sourceNode="_HuLvMFZREeq9pbT7dw7Rtw" targetNode="_L1gJ4FZREeq9pbT7dw7Rtw">
       <target xmi:type="sant:OutputArc" href="user.sant#//@arcs.3"/>
       <semanticElements xmi:type="sant:OutputArc" href="user.sant#//@arcs.3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_IffKt14LEeqYS_4ITrkf_Q" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_IffKuF4LEeqYS_4ITrkf_Q" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qhgOEm-IEeqNALK-rE0B0Q" sourceNode="_RkCkkFZSEeq9pbT7dw7Rtw" targetNode="_Xnn3oFZSEeq9pbT7dw7Rtw">
       <target xmi:type="sant:InputGateTemplate" href="user.sant#IGRequest"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qhgOE2-IEeqNALK-rE0B0Q" targetArrow="NoDecoration" size="2" routingStyle="manhattan">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetInputGate']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetInputGate']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qhgOFG-IEeqNALK-rE0B0Q" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetInputGate']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetInputGate']"/>
     </ownedDiagramElements>
-    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']"/>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_0KYVMVZMEeq9pbT7dw7Rtw"/>
-    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer"/>
     <target xmi:type="sant:SANT" href="user.sant#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>
