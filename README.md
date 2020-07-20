@@ -64,6 +64,10 @@ the required dependencies are in place, on the next run Eclipse will automatical
 
 For more suggestions on the workflow to be used during development see the [CONTRIBUTING](CONTRIBUTING.md) file.
 
+## Usage
+
+A quick way to start using the framework is to import the plugin(s) with **examples** in their name in a new Eclipse workspace.
+
 ## Contributors
 
 - [Leonardo Montecchi](mailto:leonardo@ic.unicamp.br) (UNICAMP) 
