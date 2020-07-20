@@ -2,7 +2,7 @@ stages:
   - build
   - package
 
-image: maven:latest
+image: maven:3-openjdk-11
 
 variables:
   MAVEN_CLI_OPTS: "--batch-mode"
