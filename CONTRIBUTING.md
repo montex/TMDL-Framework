@@ -72,13 +72,26 @@ plugins installed.
 
 This can be done with the option `Run As / Eclipse Application`, which runs
 a new instance of Eclipse in which all the plugins in the development workspace are installed.
-We then talk about the _development workspace_, in which you develop
-the plugins, and the _runtime workspace_, the one of the instance in which the plugins are installed.
+We refer to these two instances of Eclipse as the _development instance_, in which you develop
+the plugins, and the _runtime instance_, the one of in which the plugins are already installed.
+
+Each has its own workspace. You will therefore have a _development workspace_ and a _runtime workspace_,
+in two different folder. The location of the _runtime workspace_ is configured in the Run Configuration.
 
 That said, the are some tasks that can be executed in the development workspace. For example:
 
 - By opening an Ecore metamodel with the _Sample Reflective Ecore Model Editor_, and right-clicking on a metaclass you can select `Create Dynamic Instance` to create a new XMI model conforming to that metamodel.
-- Selecting `File / New / Representations File` allows you to create a new Sirius diagram, based on one of the editor definitions that are available either from the installed plugins or from the workspace.
+
+It is important to note that **you can import plugins in the _runtime workspace_ as well**.
+Depending on the plugin you are developing, you may actually need to work in the _runtime workspace_. 
+For example, if you are developing a transformation from metamodel A to metamodel B, 
+you need the that plugin(s) that include the metamodels A and B are installed.
+
+Another option is to actually _install_ the plugins you need in the development instance, and continue
+developing the ones that depend on them. For example, in the example of the transformation from metamodel
+A to metamodel B above, you may want to _install_ the plugin(s) providing the A and B metamodels,
+so that you can work normally in the _development workspace_.
+The most convenient way to do this during development is explained in the next section.
 
 **Installing the Plugins**
 
