@@ -10,7 +10,7 @@
       <!-- @generated tmdl -->
       <package
             uri="http://www.modelspartiti.org/infrastructure/tmdl/scenario"
-            class="tmdl.scenario.ScenarioPackage"
+            class="org.modelspartiti.infrastructure.tmdl.scenario.ScenarioPackage"
             genModel="model/tmdl.genmodel"/>
    </extension>
 
@@ -18,7 +18,7 @@
       <!-- @generated tmdl -->
       <package
             uri="http://www.modelspartiti.org/infrastructure/tmdl/library"
-            class="tmdl.library.LibraryPackage"
+            class="org.modelspartiti.infrastructure.tmdl.library.LibraryPackage"
             genModel="model/tmdl.genmodel"/>
    </extension>
 
@@ -26,7 +26,7 @@
       <!-- @generated tmdl -->
       <package
             uri="http://www.modelspartiti.org/infrastructure/tmdl/core"
-            class="tmdl.core.CorePackage"
+            class="org.modelspartiti.infrastructure.tmdl.core.CorePackage"
             genModel="model/tmdl.genmodel"/>
    </extension>
 
@@ -34,7 +34,7 @@
       <!-- @generated tmdl -->
       <package
             uri="http://www.modelspartiti.org/infrastructure/tmdl/expressions"
-            class="tmdl.expressions.ExpressionsPackage"
+            class="org.modelspartiti.infrastructure.tmdl.expressions.ExpressionsPackage"
             genModel="model/tmdl.genmodel"/>
    </extension>
 </plugin>

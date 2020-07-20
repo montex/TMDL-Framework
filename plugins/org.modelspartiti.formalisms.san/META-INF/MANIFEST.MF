@@ -8,14 +8,15 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: san,
- san.impl,
- san.util,
- sant,
- sant.impl,
- sant.util
+Export-Package: org.modelspartiti.formalisms.san.san,
+ org.modelspartiti.formalisms.san.san.impl,
+ org.modelspartiti.formalisms.san.san.util,
+ org.modelspartiti.formalisms.san.sant,
+ org.modelspartiti.formalisms.san.sant.impl,
+ org.modelspartiti.formalisms.san.sant.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.modelspartiti.formalisms.san;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.modelspartiti.infrastructure;visibility:=reexport
 Bundle-ActivationPolicy: lazy

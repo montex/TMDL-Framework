@@ -6,8 +6,9 @@
     usedGenPackages="../../org.modelspartiti.infrastructure/model/tmdl.genmodel#//tmdl"
     operationReflection="true" importOrganizing="true">
   <foreignModel>san.ecore</foreignModel>
-  <genPackages prefix="SAN" resource="XML" disposableProviderFactory="true" contentTypeIdentifier=""
-      fileExtensions="msan" ecorePackage="san.ecore#/" publicationLocation="">
+  <genPackages prefix="SAN" basePackage="org.modelspartiti.formalisms.san" resource="XML"
+      disposableProviderFactory="true" contentTypeIdentifier="" fileExtensions="msan"
+      ecorePackage="san.ecore#/" publicationLocation="">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="san.ecore#//VariableType">
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/short"/>
       <genEnumLiterals ecoreEnumLiteral="san.ecore#//VariableType/int"/>
