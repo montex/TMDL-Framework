@@ -3,5 +3,8 @@
    <feature id="org.modelspartiti.feature">
       <category name="org.modelspartiti.update"/>
    </feature>
+   <feature id="org.modelspartiti.formalisms.san.feature">
+      <category name="org.modelspartiti.update"/>
+   </feature>
    <category-def name="org.modelspartiti.update" label="TAME (TMDL Framework)"/>
 </site>

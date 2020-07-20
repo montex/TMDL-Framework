@@ -16,7 +16,6 @@ Export-Package: san,
  sant.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.modelspartiti.formalisms.san;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.modelspartiti.infrastructure;visibility:=reexport
 Bundle-ActivationPolicy: lazy
