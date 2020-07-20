@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.modelspartiti.feature"
-      label="TMDL Framework"
+      label="TAME - TMDL Core Infrastructure"
       version="0.1.0.qualifier">
 
    <description url="http://www.example.com/description">
@@ -16,32 +16,18 @@
       [Enter License Description here.]
    </license>
 
-   <plugin
-         id="org.modelspartiti.formalisms.san.examples"
-         download-size="0"
-         install-size="0"
+   <url>
+      <update label="TAME Framework" url="http://tame.montecchi.info/updatesite/master"/>
+   </url>
+
+   <includes
+         id="org.modelspartiti.formalisms.san.feature"
          version="0.0.0"/>
 
-   <plugin
-         id="org.modelspartiti.formalisms.sant.design"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.modelspartiti.formalisms.san.design"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.modelspartiti.formalisms.san"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+   </requires>
 
    <plugin
          id="org.modelspartiti.infrastructure"

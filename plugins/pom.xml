@@ -2,18 +2,19 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.modelspartiti</groupId>
   <artifactId>root</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <parent>
     <groupId>org.modelspartiti</groupId>
     <artifactId>releng</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <relativePath>./releng</relativePath>
   </parent>
 
   <modules>
     <module>releng-updatesite</module>
     <module>org.modelspartiti.feature</module>
+    <module>org.modelspartiti.formalisms.san.feature</module>
 
     <module>org.modelspartiti.infrastructure</module>
     <module>org.modelspartiti.formalisms.san</module>
