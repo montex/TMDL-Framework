@@ -83,6 +83,9 @@ That said, the are some tasks that can be executed in the development workspace.
 - By opening an Ecore metamodel with the _Sample Reflective Ecore Model Editor_, and right-clicking on a metaclass you can select `Create Dynamic Instance` to create a new XMI model conforming to that metamodel.
 
 It is important to note that **you can import plugins in the _runtime workspace_ as well**.
+It is always a good idea to import the plugins with **example** in the name also in the runtime workspace,
+as they will depend on the other plugins. 
+
 Depending on the plugin you are developing, you may actually need to work in the _runtime workspace_. 
 For example, if you are developing a transformation from metamodel A to metamodel B, 
 you need the that plugin(s) that include the metamodels A and B are installed.
