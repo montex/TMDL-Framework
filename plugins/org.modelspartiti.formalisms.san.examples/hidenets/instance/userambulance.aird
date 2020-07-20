@@ -3,9 +3,9 @@
   <viewpoint:DAnalysis uid="_ytVrcPJfEemLgdPudL6YbQ" selectedViews="_2wYqIPJfEemLgdPudL6YbQ" version="14.1.0.201810161215">
     <semanticResources>userambulance.msan</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_2wYqIPJfEemLgdPudL6YbQ">
-      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']"/>
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Fg7YoWIyEeqQOafySJ768w" name="Ambulance User" repPath="#_FgLxwGIyEeqQOafySJ768w">
-        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']"/>
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']"/>
         <target xmi:type="san:SAN" href="userambulance.msan#Ambulance User"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
@@ -415,9 +415,9 @@
         <target xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Failed']/@type"/>
         <semanticElements xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Failed']/@type"/>
         <ownedStyle xmi:type="diagram:Square" uid="_Fgesw2IyEeqQOafySJ768w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_k1BTUnQdEeqlQ7vAoGYMSQ" name="0" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="san:MarkingSimple" href="userambulance.msan#//@places[name='Failed']/@marking"/>
@@ -426,17 +426,17 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Lozenge" uid="_k1BTU3QdEeqlQ7vAoGYMSQ" labelSize="12" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Dot" uid="_FgessWIyEeqQOafySJ768w" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
-        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+        <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgess2IyEeqQOafySJ768w" name="Dropped" outgoingEdges="_Fgxnr2IyEeqQOafySJ768w" width="4" height="4" resizeKind="NSEW">
       <target xmi:type="san:Place" href="userambulance.msan#Dropped"/>
@@ -445,9 +445,9 @@
         <target xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Dropped']/@type"/>
         <semanticElements xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Dropped']/@type"/>
         <ownedStyle xmi:type="diagram:Square" uid="_FgodsWIyEeqQOafySJ768w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_lNF1FHQdEeqlQ7vAoGYMSQ" name="0" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="san:MarkingSimple" href="userambulance.msan#//@places[name='Dropped']/@marking"/>
@@ -456,17 +456,17 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Lozenge" uid="_lNGcIHQdEeqlQ7vAoGYMSQ" labelSize="12" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Dot" uid="_FgestGIyEeqQOafySJ768w" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
-        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+        <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_FgestmIyEeqQOafySJ768w" name="Idle" incomingEdges="_FgxnoGIyEeqQOafySJ768w _Fgxnw2IyEeqQOafySJ768w _FgxnyGIyEeqQOafySJ768w" width="4" height="4" resizeKind="NSEW">
       <target xmi:type="san:Place" href="userambulance.msan#Idle"/>
@@ -475,25 +475,25 @@
         <target xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Idle']/@type"/>
         <semanticElements xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Idle']/@type"/>
         <ownedStyle xmi:type="diagram:Square" uid="_FgodtGIyEeqQOafySJ768w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_iYrMwHQdEeqlQ7vAoGYMSQ" name="1" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="san:MarkingSimple" href="userambulance.msan#//@places[name='Idle']/@marking"/>
         <semanticElements xmi:type="san:MarkingSimple" href="userambulance.msan#//@places[name='Idle']/@marking"/>
         <ownedStyle xmi:type="diagram:Lozenge" uid="_iY09sHQdEeqlQ7vAoGYMSQ" labelSize="12" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Dot" uid="_Fgest2IyEeqQOafySJ768w" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
-        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+        <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_FgesuWIyEeqQOafySJ768w" name="Req3" incomingEdges="_FgxnvmIyEeqQOafySJ768w" width="4" height="4" resizeKind="NSEW">
       <target xmi:type="san:Place" href="userambulance.msan#Req3"/>
@@ -502,9 +502,9 @@
         <target xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Req3']/@type"/>
         <semanticElements xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Req3']/@type"/>
         <ownedStyle xmi:type="diagram:Square" uid="_Fgodt2IyEeqQOafySJ768w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_kOcbgnQdEeqlQ7vAoGYMSQ" name="0" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="san:MarkingSimple" href="userambulance.msan#//@places[name='Req3']/@marking"/>
@@ -513,17 +513,17 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Lozenge" uid="_kOdCkHQdEeqlQ7vAoGYMSQ" labelSize="12" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Dot" uid="_FgesumIyEeqQOafySJ768w" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
-        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+        <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgesv2IyEeqQOafySJ768w" name="Req7" incomingEdges="_FgxnuWIyEeqQOafySJ768w" width="4" height="4" resizeKind="NSEW">
       <target xmi:type="san:Place" href="userambulance.msan#Req7"/>
@@ -532,9 +532,9 @@
         <target xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Req7']/@type"/>
         <semanticElements xmi:type="san:PrimitiveType" href="userambulance.msan#//@places[name='Req7']/@type"/>
         <ownedStyle xmi:type="diagram:Square" uid="_FgodvWIyEeqQOafySJ768w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_jVTNA3QdEeqlQ7vAoGYMSQ" name="0" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="san:MarkingSimple" href="userambulance.msan#//@places[name='Req7']/@marking"/>
@@ -543,17 +543,17 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Lozenge" uid="_jVT0EHQdEeqlQ7vAoGYMSQ" labelSize="12" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Dot" uid="_5dHSCWbSEeq1vY1LTThalA" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
-        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+        <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgodv2IyEeqQOafySJ768w" name="Request" incomingEdges="_FgxnpWIyEeqQOafySJ768w" width="3" height="6" resizeKind="NSEW">
       <target xmi:type="san:TimedActivity" href="userambulance.msan#Request"/>
@@ -566,35 +566,35 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Dot" uid="_Fgodx2IyEeqQOafySJ768w" labelSize="12" hideLabelByDefault="true" backgroundColor="114,159,207">
-          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']/@style"/>
+          <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FgodymIyEeqQOafySJ768w" outgoingEdges="_FgxnuWIyEeqQOafySJ768w" width="1" height="1" resizeKind="NSEW">
         <target xmi:type="san:Case" href="userambulance.msan#//@activities[name='Request']/@cases[ID='2']"/>
         <semanticElements xmi:type="san:Case" href="userambulance.msan#//@activities[name='Request']/@cases[ID='2']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_FgodzWIyEeqQOafySJ768w"/>
         <ownedStyle xmi:type="diagram:Dot" uid="_Fgody2IyEeqQOafySJ768w" labelSize="12" hideLabelByDefault="true" backgroundColor="114,159,207">
-          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']/@style"/>
+          <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']"/>
       </ownedBorderedNodes>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FgodzmIyEeqQOafySJ768w" name="Uniform" width="6" height="2" resizeKind="NSEW">
         <target xmi:type="san:Uniform" href="userambulance.msan#//@activities[name='Request']/@timeDistribution"/>
         <semanticElements xmi:type="san:Uniform" href="userambulance.msan#//@activities[name='Request']/@timeDistribution"/>
         <ownedStyle xmi:type="diagram:Square" uid="_Fgodz2IyEeqQOafySJ768w" labelSize="9" showIcon="false" labelPosition="node" width="6" height="2" color="138,226,52">
           <labelFormat>bold</labelFormat>
-          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']/@style"/>
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" uid="_FgodwGIyEeqQOafySJ768w" labelSize="12" width="3" height="6" color="194,239,255">
-        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgod0WIyEeqQOafySJ768w" name="Fail" incomingEdges="_FgxnqmIyEeqQOafySJ768w" width="1" height="6" resizeKind="NSEW">
       <target xmi:type="san:InstantaneousActivity" href="userambulance.msan#Fail"/>
@@ -607,17 +607,17 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Dot" uid="_Fgod2GIyEeqQOafySJ768w" labelSize="12" hideLabelByDefault="true" backgroundColor="114,159,207">
-          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']/@style"/>
+          <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" uid="_Fgod0mIyEeqQOafySJ768w" labelSize="12" width="1" height="6" color="39,76,114">
-        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgod1GIyEeqQOafySJ768w" name="Drop" incomingEdges="_Fgxnr2IyEeqQOafySJ768w" width="1" height="6" resizeKind="NSEW">
       <target xmi:type="san:InstantaneousActivity" href="userambulance.msan#Drop"/>
@@ -630,17 +630,17 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Dot" uid="_Fgod3GIyEeqQOafySJ768w" labelSize="12" hideLabelByDefault="true" backgroundColor="114,159,207">
-          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']/@style"/>
+          <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']"/>
       </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" uid="_Fgod1WIyEeqQOafySJ768w" labelSize="12" width="1" height="6" color="39,76,114">
-        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgod32IyEeqQOafySJ768w" name="IGRequest" outgoingEdges="_FgxnoGIyEeqQOafySJ768w _FgxnpWIyEeqQOafySJ768w" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="san:InputGate" href="userambulance.msan#IGRequest"/>
@@ -649,83 +649,83 @@
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_Fgod4GIyEeqQOafySJ768w" labelSize="12" showIcon="false" workspacePath="/org.modelspartiti.formalisms.san.design/icons/san_ingate.png">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InputGate']/@style"/>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InputGate']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InputGate']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InputGate']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FgxnoGIyEeqQOafySJ768w" sourceNode="_Fgod32IyEeqQOafySJ768w" targetNode="_FgestmIyEeqQOafySJ768w">
       <target xmi:type="san:InputGate" href="userambulance.msan#IGRequest"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FgxnoWIyEeqQOafySJ768w" targetArrow="NoDecoration" size="2" routingStyle="manhattan">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceInputGate']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceInputGate']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FgxnomIyEeqQOafySJ768w" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceInputGate']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceInputGate']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FgxnpWIyEeqQOafySJ768w" sourceNode="_Fgod32IyEeqQOafySJ768w" targetNode="_Fgodv2IyEeqQOafySJ768w">
       <target xmi:type="san:InputGate" href="userambulance.msan#IGRequest"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FgxnpmIyEeqQOafySJ768w" targetArrow="NoDecoration" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetInputGate']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetInputGate']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Fgxnp2IyEeqQOafySJ768w" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetInputGate']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetInputGate']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FgxnqmIyEeqQOafySJ768w" sourceNode="_FgessGIyEeqQOafySJ768w" targetNode="_Fgod0WIyEeqQOafySJ768w">
       <target xmi:type="san:InputArc" href="userambulance.msan#//@arcs.0"/>
       <semanticElements xmi:type="san:InputArc" href="userambulance.msan#//@arcs.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Fgxnq2IyEeqQOafySJ768w" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FgxnrGIyEeqQOafySJ768w" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Fgxnr2IyEeqQOafySJ768w" sourceNode="_Fgess2IyEeqQOafySJ768w" targetNode="_Fgod1GIyEeqQOafySJ768w">
       <target xmi:type="san:InputArc" href="userambulance.msan#//@arcs.1"/>
       <semanticElements xmi:type="san:InputArc" href="userambulance.msan#//@arcs.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FgxnsGIyEeqQOafySJ768w" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FgxnsWIyEeqQOafySJ768w" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FgxnuWIyEeqQOafySJ768w" sourceNode="_FgodymIyEeqQOafySJ768w" targetNode="_Fgesv2IyEeqQOafySJ768w">
       <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.3"/>
       <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FgxnumIyEeqQOafySJ768w" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Fgxnu2IyEeqQOafySJ768w" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FgxnvmIyEeqQOafySJ768w" sourceNode="_FgodxmIyEeqQOafySJ768w" targetNode="_FgesuWIyEeqQOafySJ768w">
       <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.4"/>
       <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.4"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Fgxnv2IyEeqQOafySJ768w" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FgxnwGIyEeqQOafySJ768w" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Fgxnw2IyEeqQOafySJ768w" sourceNode="_Fgod12IyEeqQOafySJ768w" targetNode="_FgestmIyEeqQOafySJ768w">
       <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.6"/>
       <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.6"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FgxnxGIyEeqQOafySJ768w" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FgxnxWIyEeqQOafySJ768w" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FgxnyGIyEeqQOafySJ768w" sourceNode="_Fgod22IyEeqQOafySJ768w" targetNode="_FgestmIyEeqQOafySJ768w">
       <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.7"/>
       <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.7"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FgxnyWIyEeqQOafySJ768w" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FgxnymIyEeqQOafySJ768w" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
     </ownedDiagramElements>
-    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']"/>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_FgLxwWIyEeqQOafySJ768w"/>
-    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer"/>
     <target xmi:type="san:SAN" href="userambulance.msan#Ambulance User"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>
