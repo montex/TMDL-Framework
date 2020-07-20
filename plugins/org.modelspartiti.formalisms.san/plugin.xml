@@ -9,7 +9,7 @@
       <!-- @generated san -->
       <package
             uri="http://www.modelspartiti.org/templates/san/san"
-            class="san.SANPackage"
+            class="org.modelspartiti.formalisms.san.san.SANPackage"
             genModel="model/san.genmodel"/>
    </extension>
 
@@ -17,13 +17,13 @@
       <!-- @generated san -->
       <parser
             type="msan"
-            class="san.util.SANResourceFactoryImpl"/>
+            class="org.modelspartiti.formalisms.san.san.util.SANResourceFactoryImpl"/>
    </extension>
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated sant -->
       <package
             uri="http://www.modelspartiti.org/templates/san/sant"
-            class="sant.SANTPackage"
+            class="org.modelspartiti.formalisms.san.sant.SANTPackage"
             genModel="model/sant.genmodel"/>
    </extension>
 

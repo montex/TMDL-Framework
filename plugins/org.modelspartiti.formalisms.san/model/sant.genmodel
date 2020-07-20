@@ -6,7 +6,8 @@
     usedGenPackages="san.genmodel#//san ../../org.modelspartiti.infrastructure/model/tmdl.genmodel#//tmdl"
     operationReflection="true" importOrganizing="true">
   <foreignModel>sant.ecore</foreignModel>
-  <genPackages prefix="SANT" disposableProviderFactory="true" ecorePackage="sant.ecore#/">
+  <genPackages prefix="SANT" basePackage="org.modelspartiti.formalisms.san" disposableProviderFactory="true"
+      ecorePackage="sant.ecore#/">
     <genClasses ecoreClass="sant.ecore#//SANT">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sant.ecore#//SANT/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sant.ecore#//SANT/templatePlaces"/>

@@ -5,9 +5,10 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>tmdl.ecore</foreignModel>
-  <genPackages prefix="TMDL" disposableProviderFactory="true" ecorePackage="tmdl.ecore#/">
-    <nestedGenPackages prefix="Scenario" basePackage="tmdl" disposableProviderFactory="true"
-        ecorePackage="tmdl.ecore#//scenario">
+  <genPackages prefix="TMDL" basePackage="org.modelspartiti.infrastructure" disposableProviderFactory="true"
+      ecorePackage="tmdl.ecore#/">
+    <nestedGenPackages prefix="Scenario" basePackage="org.modelspartiti.infrastructure.tmdl"
+        disposableProviderFactory="true" ecorePackage="tmdl.ecore#//scenario">
       <genClasses ecoreClass="tmdl.ecore#//scenario/Scenario">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//scenario/Scenario/name"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//scenario/Scenario/variants"/>
@@ -35,8 +36,8 @@
             ecoreFeature="ecore:EReference tmdl.ecore#//scenario/BlockRealization/variant"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Library" basePackage="tmdl" disposableProviderFactory="true"
-        ecorePackage="tmdl.ecore#//library">
+    <nestedGenPackages prefix="Library" basePackage="org.modelspartiti.infrastructure.tmdl"
+        disposableProviderFactory="true" ecorePackage="tmdl.ecore#//library">
       <genClasses ecoreClass="tmdl.ecore#//library/Library">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tmdl.ecore#//library/Library/name"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference tmdl.ecore#//library/Library/interfaces"/>
@@ -84,8 +85,8 @@
       </genClasses>
       <genClasses ecoreClass="tmdl.ecore#//library/CompositionRuleForwards"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Core" basePackage="tmdl" disposableProviderFactory="true"
-        ecorePackage="tmdl.ecore#//core">
+    <nestedGenPackages prefix="Core" basePackage="org.modelspartiti.infrastructure.tmdl"
+        disposableProviderFactory="true" ecorePackage="tmdl.ecore#//core">
       <genClasses image="false" ecoreClass="tmdl.ecore#//core/ConcreteModel">
         <genOperations ecoreOperation="tmdl.ecore#//core/ConcreteModel/templatize"/>
       </genClasses>
@@ -122,8 +123,8 @@
             ecoreFeature="ecore:EReference tmdl.ecore#//core/MultiplicityParametric/parameter"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Expressions" basePackage="tmdl" disposableProviderFactory="true"
-        ecorePackage="tmdl.ecore#//expressions">
+    <nestedGenPackages prefix="Expressions" basePackage="org.modelspartiti.infrastructure.tmdl"
+        disposableProviderFactory="true" ecorePackage="tmdl.ecore#//expressions">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="tmdl.ecore#//expressions/ArrayAggregateKind">
         <genEnumLiterals ecoreEnumLiteral="tmdl.ecore#//expressions/ArrayAggregateKind/min"/>
         <genEnumLiterals ecoreEnumLiteral="tmdl.ecore#//expressions/ArrayAggregateKind/max"/>
