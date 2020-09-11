@@ -75,5 +75,5 @@ A quick way to start using the framework is to import the plugin(s) with **examp
 
 ## Publications
 
-* L. Montecchi, F. Moncini, P. Lollini, K. Keefe. An Eclipse-Based Editor for SAN Templates. In: 12th International Workshop on Software Engineering for Resilient Systems (SERENE 2020). Munich, Germany, September 7-10, 2020.
+* L. Montecchi, F. Moncini, P. Lollini, K. Keefe. [An Eclipse-Based Editor for SAN Templates](https://link.springer.com/chapter/10.1007%2F978-3-030-58462-7_13). In: 12th International Workshop on Software Engineering for Resilient Systems (SERENE 2020). Munich, Germany, September 7, 2020.
 *  L. Montecchi, P. Lollini, A. Bondavalli. [A Template-Based Methodology for the Specification and Automated Composition of Performability Models](https://ieeexplore.ieee.org/document/8710621). In: IEEE Transactions on Reliability, Vol. 69, Issue 1, pp. 293-309 (March 2020). 
