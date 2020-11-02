@@ -1,0 +1,196 @@
+[% 
+	import "TransformEGL.egl"; //per riutilizzare la funzione getSegmentValue
+	import "CoordinatesGeneratorAIRD.egl";
+	var activity_x : Integer = 5;
+    var activity_y : Integer = 5;
+    var instantActivitiesMap: Map<String, Tuple>;
+	var timedActivitiesMap: Map<String, Tuple>;
+	
+	if (AIRD.isDefined()){
+		instantActivitiesMap = getInstantaneousActivitiesMap();
+		timedActivitiesMap = getTimedActivitiesMap();
+	}
+	else{
+		instantActivitiesMap = instantActivitiesMapDefault;
+		timedActivitiesMap = timedActivitiesMapDefault;
+	}
+    
+    
+	for (activity in XMI!t_activities){
+		if (activity.getAttribute("xsi:type").asString.equals("san:InstantaneousActivity"))
+			printInstantaneousActivity(activity);
+		else
+			printTimedActivity(activity);
+	}
+%]
+
+[%  operation printInstantaneousActivity(activity : XMI!t_activities) { %]
+<class id="Mobius.AtomicModels.San.InstantaneousActivityPanelObject">
+	<int id="ClassVersion">1</int>
+	<class id="Mobius.AtomicModels.San.ActivityPanelObject">
+		<int id="ClassVersion">1</int>
+		<class id="Mobius.BaseClasses.ExtendedBaseVertexClass">
+			<int id="ClassVersion">1</int>
+			<class id="Mobius.BaseClasses.BaseVertexClass">
+				<int id="ClassVersion">3</int>
+				<class id="Mobius.BaseClasses.BasePanelObjectClass">
+					<int id="ClassVersion">5</int>
+					<string id="Name">[%=activity.a_name%]</string>
+					<boolean id="ContainsLabel">true</boolean>
+					<boolean id="IsLabelShown">true</boolean>
+				</class>
+				<point id="CenterPoint">
+					[%=printCoordActivity(activity, instantActivitiesMap)%]
+				</point>
+			</class>
+		</class>
+		[%printCases(activity);%]
+	</class>
+</class>
+[%}%]
+
+[%  operation printCases(activity : XMI!t_activities){ 
+	var segment : XMI!t_segments;
+	var i : Integer;
+	var text : String; 
+	var num_cases : Integer = activity.children.select(a|a.tagName = "cases").size();
+	if (num_cases == 0)
+		num_cases = 1;%]
+		<int id="NumberOfCases">[%=num_cases.asString%]</int>
+		<vector id="CaseDistributions">[%	
+	if (activity.children.select(a|a.tagName = "cases").size == 0){%]	
+		<string id="0"></string>[%	
+	}
+	else{
+		for(act_case in activity.children.select(a|a.tagName = "cases")){
+				if (act_case.children.size > 0){
+					segment = act_case.children.first().children.first();
+					text = getSegmentValue(segment);%] 
+					<string id="[%=i%]">[%=text%]</string>[%			
+					i++;				
+				}
+				else{%]				
+					<string id="[%=i%]">Inserisci un valore per il case [%=i+1%]</string>[%								i++;		
+				}
+			}	
+	}%] 	
+		</vector>
+[%}%]
+
+[%  operation printTimedActivity(activity : XMI!t_activities) { 
+	var activation : XMI!t_activation;
+	var reactivation : XMI!t_reactivation;
+	var value : String;%]
+<class id="Mobius.AtomicModels.San.TimedActivityPanelObject">
+	<int id="ClassVersion">2</int>
+	<class id="Mobius.AtomicModels.San.ActivityPanelObject">
+		<int id="ClassVersion">1</int>
+		<class id="Mobius.BaseClasses.ExtendedBaseVertexClass">
+			<int id="ClassVersion">1</int>
+			<class id="Mobius.BaseClasses.BaseVertexClass">
+				<int id="ClassVersion">3</int>
+				<class id="Mobius.BaseClasses.BasePanelObjectClass">
+					<int id="ClassVersion">5</int>
+					<string id="Name">[%=activity.a_name%]</string>
+					<boolean id="ContainsLabel">true</boolean>
+					<boolean id="IsLabelShown">true</boolean>
+				</class>
+				<point id="CenterPoint">
+					[%=printCoordActivity(activity, timedActivitiesMap)%]
+				</point>
+			</class>
+		</class>
+		[%printCases(activity);%]
+	</class>
+[%	printDistribution(activity);
+	if (activity.children.select(a|a.tagName = "activation").size() > 0){
+		activation = activity.children.select(a|a.tagName = "activation").first();
+		value = activation.children.select(a|a.tagName = "segments").first().getAttribute("text").asString; %]
+		<string id="Activation">[%=value%]</string>
+[%	}
+	if (activity.children.select(a|a.tagName = "reactivation").size() > 0){
+		reactivation = activity.children.select(a|a.tagName = "reactivation").first();
+		value = reactivation.children.select(a|a.tagName = "segments").first().getAttribute("text").asString; %]
+		<string id="Reactivation">[%=value%]</string>
+[%	}%]
+</class>
+[%}%]
+
+[%  operation printDistribution(activity : XMI!t_activities){ 
+	var name : String;
+	var distribution : XMI!t_timeDistribution = activity.children.select(a|a.tagName = "timeDistribution").first();
+	var segment : XMI!t_segments;
+	var value : String;
+	var i : Integer = 0;
+	var parameter : XMI!t_p;
+	
+	if(activity.children.select(a|a.tagName = "timeDistribution").size()>0){
+		switch(distribution.getAttribute("xsi:type").asString){
+			case "san:Exponential": name = "Exponential";
+			case "san:Deterministic": name = "Deterministic";
+			case "san:Normal": name = "Normal";
+			case "san:Gamma": name = "Gamma";
+			case "san:Binomial": name = "Binomial";
+			case "san:Lognormal": name = "Lognormal";
+			case "san:Beta": name = "Beta";
+			case "san:NegativeBinomial": name = "NegativeBinomial";
+			case "san:Geometric": name = "Geometric";
+			case "san:Erlang": name = "Erlang";
+			case "san:Uniform": name = "Uniform";
+			case "san:HyperExponential": name = "HyperExponential";
+			case "san:Weibull": name = "Weibull";
+			case "san:Triangular": name = "Triangular";
+			case "san:ConditionalWeibull": name = "ConditionalWeibull";
+			case "san:HypoExponential": name = "HypoExponential";
+			case "san:Pareto": name = "Pareto";
+		} %]
+		<class id="Mobius.BaseClasses.Distributions.DistributionFunction">
+			<int id="ClassVersion">1</int>
+			<string id="Name">[%=name%]</string>
+			<vector id="MetaParameters">
+[%
+		if (name.equals("HyperExponential") or name.equals("HypoExponential")){
+%]
+			<int id="0">1</int>
+[%		}
+			%]</vector>
+			<vector id="Parameters"> 
+	[%	for(parameter in distribution.a_parameters.asString.split(" ")){
+			if (parameter.length() == 0)
+				parameter = "Testo parametro da inserire";%]
+			<string id="[%=i%]">[%=parameter%]</string>
+	[%		i++;
+		} %]
+			</vector>
+	</class> 
+[%  }
+	else{%]
+		<class id="Mobius.BaseClasses.Distributions.DistributionFunction">
+			<int id="ClassVersion">1</int>
+			<string id="Name">Exponential</string>
+			<vector id="MetaParameters">
+			</vector>
+			<vector id="Parameters"> 
+				<string id="0">Testo parametro da inserire</string>
+			</vector>
+		</class> 
+[%	}
+}%]
+
+[%  
+	@template
+	operation printCoordActivity(activity: XMI!t_activities, activitiesMap: Map<String, Tuple>){
+		var valx: Integer;
+		var valy: Integer;
+		
+		if (activitiesMap.containsKey(activity.a_name)){
+			valx = activitiesMap.get(activity.a_name).x; 
+			valy = activitiesMap.get(activity.a_name).y; 
+		}
+		else{
+			valx = 0;
+			valy = 0;
+		}		
+%]		<int id="x">[%=valx%]</int>
+		<int id="y">[%=valy%]</int>
+[%}%]
