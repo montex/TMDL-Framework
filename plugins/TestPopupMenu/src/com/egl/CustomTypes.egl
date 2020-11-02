@@ -1,0 +1,81 @@
+[%  
+	var num_custom_fields = XMI!t_customtype.all().size(); 
+%]
+<int id="typeListModelSize">[%=num_custom_fields%]</int>
+[%  
+   var custom_types : Map;
+   var i : Integer = 0;
+   custom_types = loadCustomTypes();
+	for (customType in XMI!t_customtype){
+    	if(customType.getAttribute("xsi:type").asString == "san:CustomTypeArray")
+    		printArrayType(customType);
+    	else
+    		printStructType(customType);
+    }
+%]
+
+
+
+[% //Print del tipo customizzato Array
+    operation printArrayType(customType : XMI!t_customtype) { %]
+<class id="Mobius.AtomicModels.San.SanArrayTypedefinition">
+	<int id="ClassVersion">2</int>
+	<class id="Mobius.BaseClasses.BaseTypedefinitionClass">
+		<int id="ClassVersion">1</int>
+		<string id="name">[%=customType.a_name.asString%]</string>
+		<string id="typeGroup">array</string>
+	</class>
+	<string id="FieldCountStr">[%=customType.a_size.asString%]</string>
+	<boolean id="CommonInitialValue">false</boolean>
+	<string id="baseType">[%=customType.children.first().a_type.asString%]</string>
+</class>
+[%}%]
+
+[%  //Print del tipo customizzato Struct
+	operation printStructType(customType : XMI!t_customtype) { 
+    var num_fields : Integer = customType.children.select(a|a.tagName = "field").size(); 
+	var type_struct : XMI!t_typeStruct; 
+	var num_complex_type : Integer; 
+	var field : XMI!t_field;
+%]
+<class id="Mobius.AtomicModels.San.SanStructTypedefinition">
+	<int id="ClassVersion">1</int>
+	<class id="Mobius.BaseClasses.BaseTypedefinitionClass">
+		<int id="ClassVersion">1</int>
+		<string id="name">[%=customType.a_name.asString%]</string>
+		<string id="typeGroup">struct</string>
+	</class>
+	<int id="fieldListModelSize">[%=num_fields.asString%]</int> 
+[%  for(field in customType.children.select(a|a.tagName = "field")){ 
+		type_struct = field.children.first(); 
+%]
+		<class id="Mobius.AtomicModels.San.SanStructTypedefinition$StructField">
+		<int id="ClassVersion">1</int>
+[%		
+	if (type_struct.getAttribute("xsi:type").asString.equals("san:PrimitiveType")){
+		if (type_struct.a_type.length() > 0){
+			%]<string id="type">[%=type_struct.a_type.asString%]</string>[%		
+		}
+		else{
+			%]<string id="type">int</string>	 [%
+		}
+	}
+	else
+	{
+		num_complex_type = type_struct.a_definition.asString.substring(14).asInteger; 
+	  %]<string id="type">[%=custom_types.get(num_complex_type).a_name.asString%]</string>[%
+	}
+	%]<string id="name">[%=field.a_name.asString%]</string>
+		</class>
+[%	} %]
+</class>
+[%}%]
+
+[% operation loadCustomTypes(): Map{
+	var map: Map;
+	for (customType in XMI!t_customtype){
+    	map.put(i, customType);
+    	i++;
+    }
+    return map;
+}%]

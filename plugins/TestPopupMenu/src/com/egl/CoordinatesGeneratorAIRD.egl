@@ -1,0 +1,235 @@
+[%  operation getPlacesMap(): Map<String, Tuple>{
+		return calculateMap("san:Place");
+}%]
+
+[%  operation getInputGatesMap(): Map<String, Tuple>{
+		return calculateMap("san:InputGate");
+}%]
+
+[%  operation getOutputGatesMap(): Map<String, Tuple>{
+		return calculateMap("san:OutputGate");
+}%]
+
+[%  operation getInstantaneousActivitiesMap(): Map<String, Tuple>{
+		return calculateMap("san:InstantaneousActivity");
+}%]
+
+[%  operation getTimedActivitiesMap(): Map<String, Tuple>{
+		return calculateMap("san:TimedActivity");
+}%]
+
+[%  operation getCasesMap(activityName: String): Map<String, Tuple>{
+		return calculateCasesMap(activityName);
+}%]
+ 	 
+ 
+ 
+ [% operation calculateMap(type: String): Map<String, String>{
+ 	var map: Map<String, Tuple>;
+ 	var namesMap: Map<String, String>;
+ 	var id: String;
+ 	var valname: String;
+
+	for (nameObj in AIRD!t_ownedDiagramElements){
+		if (nameObj.c_target.first.getAttribute("xmi:type").equals(type)){
+			id = nameObj.getAttribute("uid");
+			valname = nameObj.getAttribute("name");
+			namesMap.put(id, valname);
+		}
+	}
+	map = addCoordToMap(namesMap);
+/*	
+	for (key in map.keySet){
+		key.println();
+		map.get(key).println();
+	}*/
+	
+	return map;
+ }%] 
+ 
+  [% operation addCoordToMap(namesMap: Map<String, String>): Map<String, Tuple>{
+ 	var map: Map<String, Tuple>;
+ 	var id: String;
+	var coord: Tuple;
+	var valx: Integer;
+	var valy: Integer;
+	var valname: String;
+	
+	for (coordObj in AIRD!t_ownedAnnotationEntries){
+		if(coordObj.getAttribute("source").asString.equals("GMF_DIAGRAMS")){
+		    for(obj in coordObj.c_data.first.children.select(a|a.tagname="children")){
+		    	id = obj.a_element;
+		    	if (namesMap.containsKey(id)){
+		    		if (obj.c_layoutConstraint.first.a_x.isEmpty)
+		    			valx = 0;
+		    		else
+			    		valx = obj.c_layoutConstraint.first.a_x.asInteger;
+			    	if (obj.c_layoutConstraint.first.a_y.isEmpty)
+			    		valy = 0;
+			    	else
+		    			valy = obj.c_layoutConstraint.first.a_y.asInteger;
+		    		valname = namesMap.get(id);
+			    	coord = new Tuple(x = valx, y = valy);
+			    	map.put(valname, coord);
+		    	}
+		    }
+		}
+	}
+	return map;
+ }%] 
+ 
+ 
+ 
+ 
+ [% operation calculateCasesMap(activityName: String): Map<String, Tuple>{
+ 	var map: Map<String, Tuple>;
+ 	var namesMap: Map<String, String>;
+ 	var id: String;
+ 	var valname: String;
+ 	var href: String;
+ 	var start_index: Integer;
+ 	var activity_id: String;
+ 	var coord: Tuple<x, y>;
+	var valx: Integer;
+	var valy: Integer;
+	var half_cases: Integer;
+	var val: Integer;
+	var listY: List<Integer>;
+	var listCorrectY: OrderedSet<Integer>;
+	var i: Integer;
+	var index: Integer;	
+	var y: Integer;
+	var half: Real;
+ 	
+	for (nameObj in AIRD!t_ownedDiagramElements){
+		if (nameObj.a_name.equals(activityName)){
+			activity_id = nameObj.getAttribute("uid");
+			if (nameObj.children.select(a|a.tagName = "ownedBorderedNodes").size > 0){
+				for (caseAct in nameObj.children.select(a|a.tagName = "ownedBorderedNodes")){
+					if (caseAct.c_target.first.getAttribute("xmi:type").asString.equals("san:Case")){
+						id = caseAct.getAttribute("uid");
+						href = caseAct.c_target.first.getAttribute("href"); // Devo estrapolare il valore di ID del case da uan struttura del tipo: href="TestModel.xmi#//@activities[name='Timed']/@cases[ID='1']"
+						start_index = href.indexof("'");
+						href = href.substring(start_index+1);
+						start_index = href.asString.indexof("'");
+						href = href.substring(start_index+1);
+						start_index = href.asString.indexof("'");
+						href = href.substring(start_index+1);
+						href = href.replace("%20", " ");
+						valname = href.substring(0, href.indexof("'"));
+						namesMap.put(id, valname);					
+					}
+				}
+			}
+		}
+	}
+	
+	for (coordObj in AIRD!t_ownedAnnotationEntries){
+		if(coordObj.getAttribute("source").asString.equals("GMF_DIAGRAMS")){
+		    for(obj in coordObj.c_data.first.children.select(a|a.tagname="children")){
+		    	if (obj.a_element = activity_id){
+		    		for (coordCases in obj.children.select(a|a.tagname="children")){
+		    			id = coordCases.a_element;
+				    	if (namesMap.containsKey(id)){
+				    		valx = obj.c_layoutConstraint.first.a_x.asInteger + 4;
+					    	if (coordCases.c_layoutConstraint.first.a_y.length == 0)
+					    		valy = obj.c_layoutConstraint.first.a_y.asInteger;
+					    	else
+					    		valy = obj.c_layoutConstraint.first.a_y.asInteger +
+					    			coordCases.c_layoutConstraint.first.a_y.asInteger;
+			    			valname = namesMap.get(id);
+			    			listY.add(valy);
+					    	coord = new Tuple(x = valx, y = valy);
+					    	map.put(valname, coord);
+				    	}		
+		    		}
+		    		half_cases = (namesMap.size().asFloat/2.0).floor();
+		    		i = 1;
+		    		val = obj.c_layoutConstraint.first.a_y.asInteger - (10*(half_cases));
+		    		while (i<namesMap.size){
+		    			listCorrectY.add(val);
+						val = val + 10;
+						i++;
+					}
+					if ((namesMap.size().asFloat/2.0).floor() == (namesMap.size().asFloat/2.0).ceiling())
+						val = val + 10;
+					listCorrectY.add(val);
+		    	}
+		    }
+		}
+	}
+	listY = listY.sortBy(x|x);
+
+	for (key in map.keySet){
+		coord = map.get(key);
+		index = listY.indexOf(coord.y);
+		coord.y = listCorrectY.at(index); 
+		map.put(key, coord);
+	}
+	return map;
+ }%] 
+ 
+ 
+ [%  
+	operation getCoordPlace(name: String, placesMap: Map<String, Tuple>): Tuple{
+		var valx: Integer;
+		var valy: Integer;
+	
+		if (placesMap.containsKey(name)){
+			valx = placesMap.get(name).x; 
+			valy = placesMap.get(name).y; 
+		}
+		else{
+			valx = 0;
+			valy = 0;
+		}		
+		coord = new Tuple(x = valx, y = valy);
+		return coord;
+}%]
+
+[%  
+	operation getCoordActivity(
+	  name: String, 
+	  instantActivitiesMap: Map<String, Tuple>, 
+	  timedActivitiesMap: Map<String, Tuple>): Tuple{
+		var valx: Integer;
+		var valy: Integer;
+		var coord: Tuple;		
+		
+		if (instantActivitiesMap.containsKey(name)){
+			valx = instantActivitiesMap.get(name).x; 
+			valy = instantActivitiesMap.get(name).y; 
+		}
+		else if (timedActivitiesMap.containsKey(name)){
+			valx = timedActivitiesMap.get(name).x; 
+			valy = timedActivitiesMap.get(name).y;		
+		}
+		else{
+			valx = 0;
+			valy = 0;
+		}	
+		coord = new Tuple(x = valx, y = valy);
+		return coord;	
+}%]
+
+
+
+[%  
+	operation getCoordCase(activityName, caseId: String): Tuple{
+		var valx: Integer;
+		var valy: Integer;
+		var casesMap: Map<String, Tuple>;
+		var coord: Tuple;
+		
+		casesMap = getCasesMap(activityName);
+		if (casesMap.containsKey(caseId)){
+			valx = casesMap.get(caseId).x; 
+			valy = casesMap.get(caseId).y; 
+			coord = new Tuple(x = valx, y = valy);
+		}
+		else
+			coord = getCoordActivity(source);
+		return coord;	
+}%]
+
+ 

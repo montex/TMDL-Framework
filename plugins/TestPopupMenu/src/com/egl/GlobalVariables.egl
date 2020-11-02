@@ -1,0 +1,24 @@
+[%  var names : Map;
+	var types : Map;
+	var key;
+	var i : Integer = 0;
+	for(variable in XMI!t_globalVariables){
+		names.put(i, variable.a_name.asString);
+		if (variable.a_type.asString.length > 0)
+			types.put(i, variable.a_type.asString);
+		else
+			types.put(i, "int");
+		i++;
+	} 
+%]
+	<vector id="LocalGlobalNamesList">
+[%	for(key in names.keySet()) {
+	%]<string id="[%=key%]">[%=names.get(key)%]</string>
+	[%
+} %]
+	</vector>
+	<vector id="LocalGlobalTypesList">
+[%	for(key in types.keySet()) { %]
+		<string id="[%=key%]">[%=types.get(key)%]</string>
+[% } %]
+	</vector>		
