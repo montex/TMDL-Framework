@@ -5,6 +5,11 @@
 module user2normaluser;
 create OUT : SAN from IN : SANT, IN1 : Variant;
 
+-- TODO trasformazione OutputGate
+-- TODO generazione di casi più complessi
+-- TODO Case con expression marking e variable
+-- TOD utilizzare come input una List<Assignment> invece che la variant
+
 -------------------------------------------------------------------------------
 -- ATTRIBUTES -----------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -19,8 +24,6 @@ helper def : Variant : Variant!VariantAtomic = OclUndefined;
 -- HELPERS --------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
-
-			
 -------------------------------------------------------------------------------
 -- RULES ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -85,6 +88,9 @@ rule InstantActivities {
 			ID <- 0
 		)
 	do {
+		case.p <- SAN!Expression.newInstance();
+		case.p.segments <- SAN!ExpressionText.newInstance();
+		case.p.segments.first().text <- '1.0';
 		instantActivity_san.name <- instantActivity_sant.name;
 		instantActivity_san.cases <- case;
 		thisModule.SANModel.activities <- thisModule.SANModel.activities.append(instantActivity_san);
@@ -127,7 +133,7 @@ rule OutputArcs {
 -- questa rule genera i SAN!Place all'interno della SAN attraverso i parametri, viene
 -- richiamata all'interno della called rule PlaceTemptoPlace.
 -- IN: String -> Prefisso del nome della place, Sequence(Real) -> Identificativi delle place
-rule concretizePlacesFromAssignment( prefix: String, ids : Sequence(Real)) {
+rule concretizePlacesFromAssignment( prefix: String, ids : Sequence(Real)) { -- TODO generazione Place che non hanno marking e type di default
 	to 
 		place : SAN!Place,
 		marking : SAN!MarkingSimple,
@@ -249,3 +255,22 @@ rule TimedActivityTemplateToTimedActivity(activities_templ : Sequence(SANT!Timed
 	}
 }
 
+-- Rule 'InputGateTemplate'
+-- questa rule genera i SAN!InputGate all'interno della SAN dai SANT!InputGateTemplate presenti
+-- nella SANT. Una volta istanziato l' InputGate viene accodato agli InputGate presenti 
+-- nella istanza della SAN.
+rule InputGateTemplate {
+	from
+		gate_imp : SANT!InputGateTemplate
+	to 
+		gate_san : SAN!InputGate (
+			name <- gate_imp.name,
+			activity <- SAN!Activity.allInstances()->select(it | it.name = gate_imp.activity.first().name), -- TODO effettuare controllo non solo alla prima activity ma a tutte
+			function <- gate_imp.function,
+			places <- gate_imp.places,
+			predicate <- gate_imp.predicate
+		)
+	do{
+		thisModule.SANModel.gates <- thisModule.SANModel.gates.append(gate_san).debug();
+	}
+}
