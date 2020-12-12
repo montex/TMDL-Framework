@@ -1,4 +1,4 @@
-package com.egl;
+package org.modelspartiti.formalisms.san.mobius.egl;
 /*******************************************************************************
  * Copyright (c) 2008 The University of York.
  * This program and the accompanying materials
@@ -28,7 +28,7 @@ import org.eclipse.epsilon.eol.models.IRelativePathResolver;
  * 
  */
 
-public abstract class EpsilonStandaloneExample {
+public abstract class EpsilonStandalone {
 	
 	protected IEolModule module;
 	protected Collection<Variable> parameters = new ArrayList<>();
@@ -115,7 +115,7 @@ public abstract class EpsilonStandaloneExample {
 	}
 
 	protected java.net.URI getFileURI(String fileName) throws URISyntaxException {
-		java.net.URI binUri = EpsilonStandaloneExample.class.getResource(fileName).toURI();
+		java.net.URI binUri = EpsilonStandalone.class.getResource(fileName).toURI();
 		return binUri.toString().contains("bin") ? new java.net.URI(binUri.toString().replaceAll("bin", "src")) : binUri;
 	}
 }

@@ -48,7 +48,6 @@
 
 
 [% operation printExtendedPlace(curr_place : XMI!t_places, placesMap: Map<String, Tuple>) { %]
-[% var type = curr_place.c_type.first(); %]
 <class id="Mobius.AtomicModels.San.ExtendedPlacePanelObject">
 	<int id="ClassVersion">3</int>
 	<class id="Mobius.AtomicModels.San.PlacePanelObject">
@@ -190,7 +189,7 @@
 }%] 
 
 
-[%  //Nel caso ci siano array annidati nell'extended marking vengono salvati i loro valori analizzandoli in maniera ricorsiva'
+[%  //Nel caso ci siano array annidati nell'extended marking vengono salvati i loro valori analizzandoli in maniera ricorsiva
 	operation loadArrayValues(i:Integer, values : Map(Integer, String), array: XMI!t_leafnode){
 	var value: String;
 	for (leafnode in array.children.select(a|a.tagName = "leafnode")){

@@ -1,4 +1,4 @@
-package testpopupmenu.handlers;
+package org.modelspartiti.formalisms.san.mobius.handler;
 
 import java.io.File;
 
@@ -11,16 +11,6 @@ public class OutputFilter extends FileFilter{
 	    if (f.isDirectory()) {
 	        return true;
 	    }
-
-	    String extension = ExtensionUtils.getExtension(f);
-	    if (extension != null) {
-	        if (extension.equals(ExtensionUtils.san)) {
-	                return true;
-	        } else {
-	            return false;
-	        }
-	    }
-
 	    return false;
 	}
 

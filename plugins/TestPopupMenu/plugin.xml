@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
 
-<extension
+	<extension
          point="org.eclipse.ui.commands">
       <command
             categoryId="TestPopupMenu.commands.category"
@@ -13,7 +13,7 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="testpopupmenu.handlers.TransformationHandler"
+            class="org.modelspartiti.formalisms.san.mobius.handler.TransformationHandler"
             commandId="TestPopupMenu.commands.sampleCommand">
       </handler>
    </extension>

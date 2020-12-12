@@ -1,4 +1,4 @@
-package testpopupmenu.handlers;
+package org.modelspartiti.formalisms.san.mobius.handler;
 import java.io.File;
 
 public class ExtensionUtils {

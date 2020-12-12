@@ -38,11 +38,6 @@
 		}
 	}
 	map = addCoordToMap(namesMap);
-/*	
-	for (key in map.keySet){
-		key.println();
-		map.get(key).println();
-	}*/
 	
 	return map;
  }%] 

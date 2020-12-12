@@ -140,19 +140,19 @@
 			[%=printArc(place, gate.a_name, source_x, source_y, destination_x, destination_y, false)%]	
 [%				}
 			}
-			activity_list = gate.a_activity.asString.replace("#", "");
-			if (not activity_list.isEmpty){
-				for (activity in activity_list.split(" ")){
-					if (inputGatesMap.containsKey(gate.a_name.asString)){
-						source_x = inputGatesMap.get(gate.a_name.asString).x.asString; 
-						source_y = inputGatesMap.get(gate.a_name.asString).y.asString; 
-					}
-					if (AIRD.isDefined())
-	 					coord = getCoordActivity(activity, instantActivitiesMap, timedActivitiesMap);
-					else
-						coord = getCoordActivityDefault(activity, instantActivitiesMapDefault, timedActivitiesMapDefault);
-					destination_x = coord.x.asString; 
-					destination_y = coord.y.asString;%]
+	activity_list = gate.a_activity.asString.replace("#", "");
+	if (not activity_list.isEmpty){
+		for (activity in activity_list.split(" ")){
+				if (inputGatesMap.containsKey(gate.a_name.asString)){
+					source_x = inputGatesMap.get(gate.a_name.asString).x.asString; 
+					source_y = inputGatesMap.get(gate.a_name.asString).y.asString; 
+				}
+				if (AIRD.isDefined())
+ 					coord = getCoordActivity(activity, instantActivitiesMap, timedActivitiesMap);
+				else
+					coord = getCoordActivityDefault(activity, instantActivitiesMapDefault, timedActivitiesMapDefault);
+				destination_x = coord.x.asString; 
+				destination_y = coord.y.asString;%]
 			[%=printArc(gate.a_name, activity, source_x, source_y, destination_x, destination_y, false)%]	
 [%				}		
 			}
