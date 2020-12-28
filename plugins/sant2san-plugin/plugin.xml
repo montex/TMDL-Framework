@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="sant2sanplugin.handlers.Sant2SanTransformationHandler"
+            id="sant2san-plugin.command1"
+            name="Transform sant2san">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="sant2sanplugin.handlers.Sant2SanTransformationHandler"
+            commandId="sant2san-plugin.command1">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+   </extension>
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution allPopups="false"
+                  locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+            <command commandId="sant2san-plugin.command1"
+                  style="push">
+                  <visibleWhen checkEnabled="false">
+                  <with variable="selection">
+                        <count value="1">
+                        </count>
+                        <iterate>
+                              <adapt type="org.modelspartiti.formalisms.san.sant.SANT">
+                              </adapt>
+                        </iterate>
+                  </with>
+                  </visibleWhen>
+            </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

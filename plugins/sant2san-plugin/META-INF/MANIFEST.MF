@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sant2san-plugin
+Bundle-SymbolicName: sant2san-plugin;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.viatra.query.runtime;bundle-version="2.4.1",
+ org.modelspartiti.formalisms.san;bundle-version="0.1.0",
+ ViatraSANT2SAN;bundle-version="0.0.1"
+Automatic-Module-Name: sant2san.plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-14
