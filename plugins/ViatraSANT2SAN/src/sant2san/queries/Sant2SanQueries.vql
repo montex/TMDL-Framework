@@ -1,0 +1,28 @@
+package sant2san.queries
+
+import "http://www.modelspartiti.org/templates/san/san"
+import "http://www.modelspartiti.org/templates/san/sant"
+
+pattern SANTInstance ( sant : SANT ){
+	SANT(sant);
+}
+
+pattern PlaceInstance ( place: Place){
+	Place(place);
+}
+
+//TODO: generalize case
+pattern InstantActivityInstance ( activity : InstantaneousActivityTemplate, caseSpec : CasesSpecificationConcrete, cases : Case)
+{
+	InstantaneousActivityTemplate(activity);
+	CasesSpecificationConcrete.cases(caseSpec,cases);
+	InstantaneousActivityTemplate.casesTemplate(activity,caseSpec);
+}
+
+pattern InputArcInstance ( arc : InputArc ){
+	InputArc(arc);
+}
+
+pattern OutputArcInstance ( arc : OutputArc ){
+	OutputArc(arc);
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<paramlist:ParamList
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core"
+    xmlns:paramlist="sant2san.params"
+    xsi:schemaLocation="sant2san.params ParamList.ecore">
+  <assignments
+      xsi:type="core:AssignmentArray">
+    <parameter
+        href="../../../../org.modelspartiti.formalisms.san.examples/hidenets/template/user.sant#P"/>
+    <values>0.7</values>
+    <values>0.2</values>
+    <values>0.1</values>
+  </assignments>
+  <assignments
+      xsi:type="core:AssignmentArray">
+    <parameter
+        href="../../../../org.modelspartiti.formalisms.san.examples/hidenets/template/user.sant#S"/>
+    <values>1.0</values>
+    <values>6.0</values>
+    <values>7.0</values>
+  </assignments>
+</paramlist:ParamList>

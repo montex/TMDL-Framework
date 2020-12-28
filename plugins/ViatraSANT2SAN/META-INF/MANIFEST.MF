@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ViatraSANT2SAN
+Bundle-SymbolicName: ViatraSANT2SAN;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Export-Package: sant2san.queries
+Require-Bundle: org.modelspartiti.formalisms.san,
+ org.eclipse.viatra.transformation.runtime.emf,
+ org.eclipse.viatra.transformation.evm,
+ org.eclipse.emf.ecore,
+ org.eclipse.viatra.query.runtime,
+ org.eclipse.viatra.query.runtime.rete,
+ org.eclipse.viatra.query.runtime.localsearch,
+ org.eclipse.xtext.xbase.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.apache.log4j
