@@ -9,6 +9,9 @@ import org.modelspartiti.formalisms.san.sant.SANTPackage
 import org.modelspartiti.formalisms.san.san.SANPackage
 import org.modelspartiti.formalisms.san.sant.SANT
 import org.modelspartiti.formalisms.san.san.SAN
+import org.modelspartiti.infrastructure.tmdl.core.CorePackage
+import org.eclipse.emf.common.util.EList
+import org.modelspartiti.infrastructure.tmdl.core.Assignment
 
 class Sant2SanTransformation {
 	/** VIATRA Query Pattern group **/
@@ -17,6 +20,7 @@ class Sant2SanTransformation {
 	/** EMF metamodels **/
 	val extension SANTPackage santPackage = SANTPackage.eINSTANCE
 	val extension SANPackage sanPackage = SANPackage.eINSTANCE
+	val extension CorePackage corePackage = CorePackage.eINSTANCE
 	
     extension IModelManipulations manipulation
 
@@ -25,10 +29,12 @@ class Sant2SanTransformation {
 
 	val SANT sant
 	val SAN san
+	val EList<Assignment> params
 	
-    new(SANT sant, SAN san, ViatraQueryEngine engine) {
+    new(SANT sant, SAN san,EList<Assignment> params, ViatraQueryEngine engine) {
         this.sant = sant
         this.san = san
+        this.params = params
 	    resource = sant.eResource
         val scope = new EMFScope(resource)
         this.engine = ViatraQueryEngine.on(scope)
@@ -42,6 +48,10 @@ class Sant2SanTransformation {
 		san.set(SAN_Name,sant.name)
 		
 		val places = engine.getMatcher(placeInstance).allMatches
+		
+//		engine.getMatcher(placeTemplateInstance).allMatches
+//		println(params.get(0).eGet(assignmentArray_Parameter));
+//		println(params.get(0).eGet(assignmentArray_Values));
 		
 		
 		for (match : places) {

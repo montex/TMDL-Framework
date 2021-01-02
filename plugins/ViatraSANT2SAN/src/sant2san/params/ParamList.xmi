@@ -4,8 +4,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core"
-    xmlns:paramlist="sant2san.params"
-    xsi:schemaLocation="sant2san.params ParamList.ecore">
+    xmlns:paramlist="sant2san.params">
   <assignments
       xsi:type="core:AssignmentArray">
     <parameter

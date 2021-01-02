@@ -6,6 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.eclipse.ui,
  org.eclipse.viatra.query.runtime;bundle-version="2.4.1",
  org.modelspartiti.formalisms.san;bundle-version="0.1.0",
- ViatraSANT2SAN;bundle-version="0.0.1"
+ ViatraSANT2SAN;bundle-version="0.0.1",
+ org.modelspartiti.infrastructure
 Automatic-Module-Name: sant2san.plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-14

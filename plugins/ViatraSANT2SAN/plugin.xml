@@ -8,4 +8,8 @@
       <query-specification fqn="sant2san.queries.OutputArcInstance"/>
     </group>
   </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated ParamList -->
+    <package class="paramlist.ParamlistPackage" genModel="src/sant2san/params/ParamList.genmodel" uri="sant2san.params"/>
+  </extension>
 </plugin>
