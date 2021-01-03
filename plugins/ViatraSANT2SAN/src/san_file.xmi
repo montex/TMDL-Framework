@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<san:SAN xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:san="http://www.modelspartiti.org/templates/san/san" name="User">
-  <places name="Failed">
-    <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple"/>
-  </places>
+<san:SAN xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:san="http://www.modelspartiti.org/templates/san/san" name="User derived">
   <places name="Dropped">
     <type xsi:type="san:PrimitiveType"/>
     <marking xsi:type="san:MarkingSimple"/>
@@ -12,22 +8,38 @@
     <type xsi:type="san:PrimitiveType"/>
     <marking xsi:type="san:MarkingSimple" value="1"/>
   </places>
+  <places name="Failed">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple"/>
+  </places>
+  <places name="Req1.0">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple"/>
+  </places>
+  <places name="Req6.0">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple"/>
+  </places>
+  <places name="Req7.0">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple"/>
+  </places>
   <activities xsi:type="san:InstantaneousActivity" name="Drop">
     <cases>
       <p>
-        <segments xsi:type="san:ExpressionText" text="1"/>
+        <segments xsi:type="san:ExpressionText" text="1.0"/>
       </p>
     </cases>
   </activities>
   <activities xsi:type="san:InstantaneousActivity" name="Fail">
     <cases>
       <p>
-        <segments xsi:type="san:ExpressionText" text="1"/>
+        <segments xsi:type="san:ExpressionText" text="1.0"/>
       </p>
     </cases>
   </activities>
-  <arcs xsi:type="san:InputArc" source="Dropped" target="Drop"/>
   <arcs xsi:type="san:InputArc" source="Failed" target="Fail"/>
+  <arcs xsi:type="san:InputArc" source="Dropped" target="Drop"/>
   <arcs xsi:type="san:OutputArc" source="//@activities[name='Drop']/@cases[ID='0']" target="Idle"/>
   <arcs xsi:type="san:OutputArc" source="//@activities[name='Fail']/@cases[ID='0']" target="Idle"/>
 </san:SAN>

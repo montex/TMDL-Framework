@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated ParamList -->
+    <package class="paramlist.ParamlistPackage" genModel="src/sant2san/params/ParamList.genmodel" uri="sant2san.params"/>
+  </extension>
   <extension id="sant2san.queries.Sant2SanQueries" point="org.eclipse.viatra.query.runtime.queryspecification">
     <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:sant2san.queries.Sant2SanQueries" id="sant2san.queries.Sant2SanQueries">
       <query-specification fqn="sant2san.queries.SANTInstance"/>
       <query-specification fqn="sant2san.queries.PlaceInstance"/>
+      <query-specification fqn="sant2san.queries.PlaceTemplateInstance"/>
       <query-specification fqn="sant2san.queries.InstantActivityInstance"/>
       <query-specification fqn="sant2san.queries.InputArcInstance"/>
       <query-specification fqn="sant2san.queries.OutputArcInstance"/>
     </group>
-  </extension>
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <!-- @generated ParamList -->
-    <package class="paramlist.ParamlistPackage" genModel="src/sant2san/params/ParamList.genmodel" uri="sant2san.params"/>
   </extension>
 </plugin>

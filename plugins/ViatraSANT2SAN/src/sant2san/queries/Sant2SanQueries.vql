@@ -11,6 +11,10 @@ pattern PlaceInstance ( place: Place){
 	Place(place);
 }
 
+pattern PlaceTemplateInstance ( place: PlaceTemplate){
+	PlaceTemplate(place);
+}
+
 //TODO: generalize case
 pattern InstantActivityInstance ( activity : InstantaneousActivityTemplate, caseSpec : CasesSpecificationConcrete, cases : Case)
 {
