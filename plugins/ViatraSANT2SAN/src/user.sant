@@ -87,26 +87,28 @@
   <gates xsi:type="sant:InputGateTemplate"
       name="IGRequest"
       places="Idle"
-      activity="Request">
-    <function>
-      <segments
-          xsi:type="san:ExpressionText"
-          text=""/>
-    </function>
-    <predicate>
-      <segments
-          xsi:type="san:ExpressionText"
-          text=""/>
-    </predicate>
-  </gates>
-  <gates xsi:type="sant:OutputGateTemplate"
-      name="OGRequest"
       placeTemplate="Req"
       activity="Request">
     <function>
       <segments
           xsi:type="san:ExpressionText"
-          text=""/>
+          text="0"/>
+    </function>
+    <predicate>
+      <segments
+          xsi:type="san:ExpressionText"
+          text="0"/>
+    </predicate>
+  </gates>
+  <gates xsi:type="sant:OutputGateTemplate"
+      name="OGRequest"
+      places="Failed Dropped Idle"
+      placeTemplate="Req"
+      activity="Request">
+    <function>
+      <segments
+          xsi:type="san:ExpressionText"
+          text="1"/>
     </function>
   </gates>
   <arcs xsi:type="sant:InputArc"
