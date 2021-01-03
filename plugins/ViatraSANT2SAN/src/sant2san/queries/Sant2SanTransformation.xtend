@@ -119,6 +119,36 @@ class Sant2SanTransformation {
 
 		}
 
+		val timedActivitiesTemp = engine.getMatcher(timedActivityTemplateInstance).allMatches
+
+		for (match : timedActivitiesTemp) {
+			val casesAssign = match.activity.casesTemplate.eGet(
+				casesSpecificationProbabilityArray_CaseParameter) as ParameterArray
+			val probAssign = match.activity.casesTemplate.eGet(
+				casesSpecificationProbabilityArray_PValues) as ParameterArray
+			val casesIt = params.findFirst[it.parameter.name == casesAssign.name].values.iterator
+			val probIt = params.findFirst[it.parameter.name == probAssign.name].values.iterator
+
+			san.createChild(SAN_Activities, sanPackage.timedActivity) => [
+				set(namedElement_Name, match.activity.name)
+
+				it.set(timedActivity_TimeDistribution, match.activity.timeDistribution)
+
+				while (casesIt.hasNext) {
+					it.createChild(activity_Cases, sanPackage.^case) => [
+						set(case_ID, casesIt.next.intValue)
+						it.createChild(case_P, sanPackage.expression) => [
+							it.createChild(expression_Segments, expressionText) => [
+								set(expressionText_Text, probIt.next.toString)
+							]
+						]
+					]
+				}
+
+			]
+
+		}
+
 	}
 
 }

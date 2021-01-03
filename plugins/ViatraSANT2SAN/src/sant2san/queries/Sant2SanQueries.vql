@@ -23,6 +23,10 @@ pattern InstantActivityInstance ( activity : InstantaneousActivityTemplate, case
 	InstantaneousActivityTemplate.casesTemplate(activity,caseSpec);
 }
 
+pattern TimedActivityTemplateInstance ( activity : TimedActivityTemplate){
+	TimedActivityTemplate(activity);
+}
+
 pattern InputArcInstance ( arc : InputArc ){
 	InputArc(arc);
 }

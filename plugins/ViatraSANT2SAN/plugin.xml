@@ -9,6 +9,7 @@
       <query-specification fqn="sant2san.queries.PlaceInstance"/>
       <query-specification fqn="sant2san.queries.PlaceTemplateInstance"/>
       <query-specification fqn="sant2san.queries.InstantActivityInstance"/>
+      <query-specification fqn="sant2san.queries.TimedActivityTemplateInstance"/>
       <query-specification fqn="sant2san.queries.InputArcInstance"/>
       <query-specification fqn="sant2san.queries.OutputArcInstance"/>
     </group>

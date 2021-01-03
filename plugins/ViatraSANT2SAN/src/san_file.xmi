@@ -4,13 +4,13 @@
     <type xsi:type="san:PrimitiveType"/>
     <marking xsi:type="san:MarkingSimple"/>
   </places>
-  <places name="Idle">
-    <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple" value="1"/>
-  </places>
   <places name="Failed">
     <type xsi:type="san:PrimitiveType"/>
     <marking xsi:type="san:MarkingSimple"/>
+  </places>
+  <places name="Idle">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple" value="1"/>
   </places>
   <places name="Req1.0">
     <type xsi:type="san:PrimitiveType"/>
@@ -38,8 +38,33 @@
       </p>
     </cases>
   </activities>
-  <arcs xsi:type="san:InputArc" source="Failed" target="Fail"/>
+  <activities xsi:type="san:TimedActivity" name="Request">
+    <cases ID="1">
+      <p>
+        <segments xsi:type="san:ExpressionText" text="0.7"/>
+      </p>
+    </cases>
+    <cases ID="6">
+      <p>
+        <segments xsi:type="san:ExpressionText" text="0.2"/>
+      </p>
+    </cases>
+    <cases ID="7">
+      <p>
+        <segments xsi:type="san:ExpressionText" text="0.1"/>
+      </p>
+    </cases>
+    <timeDistribution xsi:type="san:Uniform" parameters="rate">
+      <lowerBound>
+        <segments xsi:type="san:ExpressionText" text="0"/>
+      </lowerBound>
+      <upperBound>
+        <segments xsi:type="san:ExpressionText" text="0"/>
+      </upperBound>
+    </timeDistribution>
+  </activities>
   <arcs xsi:type="san:InputArc" source="Dropped" target="Drop"/>
+  <arcs xsi:type="san:InputArc" source="Failed" target="Fail"/>
   <arcs xsi:type="san:OutputArc" source="//@activities[name='Drop']/@cases[ID='0']" target="Idle"/>
   <arcs xsi:type="san:OutputArc" source="//@activities[name='Fail']/@cases[ID='0']" target="Idle"/>
 </san:SAN>
