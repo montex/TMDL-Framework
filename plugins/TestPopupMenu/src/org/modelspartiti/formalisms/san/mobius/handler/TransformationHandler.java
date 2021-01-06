@@ -1,5 +1,4 @@
-package testpopupmenu.handlers;
-
+package org.modelspartiti.formalisms.san.mobius.handler;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -10,17 +9,21 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
-
-import com.egl.EglStandaloneExample;
+import org.modelspartiti.formalisms.san.mobius.egl.EglStandalone;
 
 import java.awt.event.*;
 import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 
 public class TransformationHandler extends AbstractHandler{
 	
-	private String xmiSource, airdSource, outputSource;
+	private String xmiSource, airdSource, outputSource, modelName;
+	public File config;
 	
 	@Override	
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -39,7 +42,40 @@ public class TransformationHandler extends AbstractHandler{
 			// get the path
 			IPath path = file.getLocation();
 			setXmiSource(path.toPortableString());
+			setModelName(file.getName().replace("."+file.getFileExtension(), ""));
 		}
+		
+		// Set the aird path if the file is in the  same directory of msan/xmi one
+		String path = getXmiSource().replace(".msan", ".aird");
+		path = path.replace(".xmi", ".aird");
+		File airdFile = new File(path);
+		if (airdFile.exists()) 
+			setAirdSource(path);
+		
+		//check if exists config file for the output folder
+		File curFolder = new File (TransformationHandler.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+		try {
+			  config = new File( curFolder, "M2TConfig.txt");
+			  if (config.exists()) {
+			      Scanner myReader = new Scanner(config);
+			      while (myReader.hasNextLine()) {
+			        String data = myReader.nextLine();
+			        setOutputSource(data);
+			      }
+			      myReader.close();  
+			  }
+			  else {
+				  config.createNewFile();
+			  }
+		} 
+		catch (IOException e) {
+		      System.out.println("An error occurred.");
+		      e.printStackTrace();
+		}
+		
+		
+		
+		
 		
     	// Create and set up a frame window
         JFrame.setDefaultLookAndFeelDecorated(true);
@@ -53,7 +89,7 @@ public class TransformationHandler extends AbstractHandler{
         panel.setSize(500, 500);
         panel.setLayout(layout);
          
-        JLabel lblUriModel = new JLabel("URI del file contenente il modello (file .xmi/.msan)");
+        JLabel lblUriModel = new JLabel("Path del file contenente il modello (file .xmi/.msan)");
         JTextField textUriModel = new JTextField("", 30);
         textUriModel.setText(getXmiSource());
         JButton buttonUriModel = new JButton("Browse..."); 
@@ -61,15 +97,17 @@ public class TransformationHandler extends AbstractHandler{
         panel.add(textUriModel);
         panel.add(buttonUriModel);
         
-        JLabel lblAird = new JLabel("URI del file contenente le coordinate (file .aird...)");
+        JLabel lblAird = new JLabel("Path del file contenente le coordinate (file .aird...)");
         JTextField textAird = new JTextField("", 30);
+        textAird.setText(getAirdSource());
         JButton buttonAird = new JButton("Browse..."); 
         panel.add(lblAird);
         panel.add(textAird);
         panel.add(buttonAird);
         
-        JLabel lblOutput = new JLabel("URI del file di output");
+        JLabel lblOutput = new JLabel("Path del progetto Mobius di output");
         JTextField textOutput = new JTextField("", 30);
+        textOutput.setText(getOutputSource());
         JButton buttonOutput = new JButton("Browse..."); 
         panel.add(lblOutput);
         panel.add(textOutput);
@@ -78,7 +116,7 @@ public class TransformationHandler extends AbstractHandler{
         JButton buttonRun = new JButton("Run"); 
         panel.add(buttonRun);
         
-        // Put constraint on components
+        // Layout
         addConstraints(layout, lblUriModel, textUriModel, buttonUriModel, panel);
         addConstraints(layout, lblAird, textAird, buttonAird, lblUriModel);
         addConstraints(layout, lblOutput, textOutput, buttonOutput, lblAird);
@@ -116,7 +154,7 @@ public class TransformationHandler extends AbstractHandler{
                 	setXmiSource(textUriModel.getText());
                 	setAirdSource(textAird.getText());
                 	setOutputSource(textOutput.getText());
-					myButtonRunClicked(e, getXmiSource(), getAirdSource(), getOutputSource());
+					myButtonRunClicked(e, getXmiSource(), getAirdSource(), getOutputSource(), getModelName());
 					frame.dispose();
                 } catch (Exception e1) {
 					JOptionPane.showMessageDialog(null, "Inserire tutti i file richiesti per l'esportazione.");
@@ -134,6 +172,14 @@ public class TransformationHandler extends AbstractHandler{
         return null;
 	}
 	
+	public String getModelName() {
+		return modelName;
+	}
+
+	public void setModelName(String modelName) {
+		this.modelName = modelName;
+	}
+
 	public static void addConstraints(
 			SpringLayout layout, 
 			JLabel label, 
@@ -166,14 +212,20 @@ public class TransformationHandler extends AbstractHandler{
 		ActionEvent e,
 		String xmiSource,
 		String airdSource,
-		String outputSource) throws Exception {	
+		String outputSource,
+		String modelName) throws Exception {	
 		if (xmiSource.isEmpty() || outputSource.isEmpty()) {
 			throw new Exception();
 		}
 		else {
 			try {
-				EglStandaloneExample egl = new EglStandaloneExample();
-	        	egl.Main(xmiSource, airdSource, outputSource);
+				File curFolder = new File (TransformationHandler.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+				File config = new File( curFolder, "M2TConfig.txt");
+				PrintWriter  myWriter = new PrintWriter(config);
+				myWriter.write(outputSource);
+			    myWriter.close();
+				EglStandalone egl = new EglStandalone();
+	        	egl.Main(xmiSource, airdSource, outputSource, modelName);
 	        }
 	        catch(Exception e1) {
 	        	 e1.printStackTrace();

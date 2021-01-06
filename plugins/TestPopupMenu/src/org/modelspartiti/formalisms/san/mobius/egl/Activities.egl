@@ -62,16 +62,21 @@
 		<string id="0"></string>[%	
 	}
 	else{
+		i = 0;
 		for(act_case in activity.children.select(a|a.tagName = "cases")){
 				if (act_case.children.size > 0){
 					segment = act_case.children.first().children.first();
-					text = getSegmentValue(segment);%] 
+					text = getSegmentValue(segment);
+					if (text.length > 0){%] 
 					<string id="[%=i%]">[%=text%]</string>[%			
-					i++;				
+					}
+					else{%]				
+						<string id="[%=i%]">Inserisci un valore per il case[%=i+1%]</string>[%								i++;		
+					}		
 				}
 				else{%]				
-					<string id="[%=i%]">Inserisci un valore per il case [%=i+1%]</string>[%								i++;		
-				}
+					<string id="[%=i%]">Inserisci un valore per il case[%=i+1%]</string>[%								i++;		
+				}	
 			}	
 	}%] 	
 		</vector>

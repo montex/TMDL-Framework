@@ -15,7 +15,7 @@
 	<int id="ClassVersion">1</int>
 	<class id="Mobius.BaseClasses.BaseInterfaceClass">
 		<int id="ClassVersion">3</int>
-		<string id="ModelName">Base</string>
+		<string id="ModelName"></string>
 		<class id="Mobius.AtomicModels.San.SanInfoClass">
 			<int id="ClassVersion">5</int>
 			<class id="Mobius.BaseClasses.BaseInfoClass">

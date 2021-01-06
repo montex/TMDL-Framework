@@ -1,4 +1,4 @@
-package testpopupmenu.handlers;
+package org.modelspartiti.formalisms.san.mobius.handler;
 
 import java.io.File;
 
@@ -8,10 +8,6 @@ public class ModelFilter extends FileFilter{
 
 	@Override
 	public boolean accept(File f) {
-	    if (f.isDirectory()) {
-	        return true;
-	    }
-
 	    String extension = ExtensionUtils.getExtension(f);
 	    if (extension != null) {
 	        if (extension.equals(ExtensionUtils.xmi) ||
