@@ -1,4 +1,4 @@
-package testpopupmenu.handlers;
+package org.modelspartiti.formalisms.san.mobius.handler;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
