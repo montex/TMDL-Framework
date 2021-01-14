@@ -17,6 +17,11 @@
       <url>${eclipse-repo.url}</url>
       <layout>p2</layout>
     </repository>
+      <repository>
+      <id>Epsilon Stable</id>
+      <url>http://download.eclipse.org/epsilon/updates/2.2/</url>
+      <layout>p2</layout>
+    </repository>
   </repositories>
 
   <build>

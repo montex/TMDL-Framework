@@ -15,6 +15,7 @@ The framework is implemented as a set of plugins for the Eclipse platform.
 |**org.modelspartiti.formalisms.san**|SAN and SAN-T metamodels|
 |**org.modelspartiti.formalisms.san.design**|Sirius editor for the SAN metamodel|
 |**org.modelspartiti.formalisms.san.examples**|Examples of SAN and SAN-T models|
+|**org.modelspartiti.formalisms.san.mobius**|Exporter from SAN models to the Möbius tool|
 |**org.modelspartiti.formalisms.sant.design**|Sirius editor for the SAN-T metamodel|
 |**org.modelspartiti.infrastructure**|TMDL metamodel|
 
@@ -30,6 +31,7 @@ To be able to use the framework the following dependencies are needed:
 - Eclipse Modeling Framework (EMF)
 - Eclipse OCL
 - Sirius
+- Epsilon
 
 All of them can be found in the Eclipse Marketplace or in the default update
 site that comes configured in the default installation of Eclipse.
@@ -72,6 +74,7 @@ A quick way to start using the framework is to import the plugin(s) with **examp
 
 - [Leonardo Montecchi](mailto:leonardo@ic.unicamp.br) (UNICAMP) 
 - Federico Moncini (UNIFI)
+- Denny Sbanchi (UNIFI)
 
 ## Publications
 

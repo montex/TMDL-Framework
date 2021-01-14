@@ -21,5 +21,6 @@
     <module>org.modelspartiti.formalisms.san.design</module>
     <module>org.modelspartiti.formalisms.sant.design</module>
     <module>org.modelspartiti.formalisms.san.examples</module>
+    <module>org.modelspartiti.formalisms.san.mobius</module>
   </modules>
 </project>
