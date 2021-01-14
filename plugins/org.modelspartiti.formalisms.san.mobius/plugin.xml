@@ -5,16 +5,16 @@
 	<extension
          point="org.eclipse.ui.commands">
       <command
-            categoryId="TestPopupMenu.commands.category"
-            id="TestPopupMenu.commands.sampleCommand"
-            name="Esporta modello in formato Mobius">
+            categoryId="org.modelspartiti.formalisms.san.mobius.commands.category"
+            id="org.modelspartiti.formalisms.san.mobius.commands.export"
+            name="Export SAN model to Möbius format">
       </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
             class="org.modelspartiti.formalisms.san.mobius.handler.TransformationHandler"
-            commandId="TestPopupMenu.commands.sampleCommand">
+            commandId="org.modelspartiti.formalisms.san.mobius.commands.export">
       </handler>
    </extension>
  
@@ -23,8 +23,8 @@
       <menuContribution
             locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu">
             <command
-                  commandId="TestPopupMenu.commands.sampleCommand"
-                  id="TestPopupMenu.menus.sampleCommand"
+                  commandId="org.modelspartiti.formalisms.san.mobius.commands.export"
+                  id="org.modelspartiti.formalisms.san.mobius.menus.export"
                   mnemonic="S">
  
                     <visibleWhen>
@@ -46,8 +46,8 @@
       <menuContribution
             locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu">
             <command
-                  commandId="TestPopupMenu.commands.sampleCommand"
-                  id="TestPopupMenu.menus.sampleCommand"
+                  commandId="org.modelspartiti.formalisms.san.mobius.commands.export"
+                  id="org.modelspartiti.formalisms.san.mobius.menus.export"
                   mnemonic="S">
  
                     <visibleWhen>

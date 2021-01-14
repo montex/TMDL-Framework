@@ -1,4 +1,4 @@
-package testpopupmenu;
+package org.modelspartiti.formalisms.san.mobius;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
