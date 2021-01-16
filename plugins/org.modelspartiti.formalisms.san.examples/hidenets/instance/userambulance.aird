@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:san="http://www.modelspartiti.org/templates/san/san" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_ytVrcPJfEemLgdPudL6YbQ" selectedViews="_2wYqIPJfEemLgdPudL6YbQ" version="14.1.0.201810161215">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:san="http://www.modelspartiti.org/templates/san/san" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_ytVrcPJfEemLgdPudL6YbQ" selectedViews="_2wYqIPJfEemLgdPudL6YbQ _cpDPoFenEeuDO48ZOAly1w" version="14.3.1.202003261200">
     <semanticResources>userambulance.msan</semanticResources>
+    <semanticResources>userambulance-gates.msan</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_2wYqIPJfEemLgdPudL6YbQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Fg7YoWIyEeqQOafySJ768w" name="Ambulance User" repPath="#_FgLxwGIyEeqQOafySJ768w">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Fg7YoWIyEeqQOafySJ768w" name="AmbulanceUser" repPath="#_FgLxwGIyEeqQOafySJ768w" changeId="9bcc98fa-2ffb-4040-af83-1f25265a3576">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']"/>
         <target xmi:type="san:SAN" href="userambulance.msan#Ambulance User"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_cpDPoFenEeuDO48ZOAly1w">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_E9hZAVeoEeuDO48ZOAly1w" name="AmbulanceUserWithGates" repPath="#_E9gK4FeoEeuDO48ZOAly1w" changeId="a7cd3c89-bbaa-4eda-99b2-385d841809cd">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']"/>
+        <target xmi:type="san:SAN" href="userambulance-gates.msan#Ambulance User"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram uid="_FgLxwGIyEeqQOafySJ768w" name="Ambulance User">
+  <diagram:DSemanticDiagram uid="_FgLxwGIyEeqQOafySJ768w">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_FgxnzWIyEeqQOafySJ768w" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_FgxnzmIyEeqQOafySJ768w"/>
     </ownedAnnotationEntries>
@@ -146,7 +154,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kOllcnQdEeqlQ7vAoGYMSQ" x="32" y="1" width="30" height="30"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Fh0wiGIyEeqQOafySJ768w" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fh0wiWIyEeqQOafySJ768w" x="480" y="188" width="40" height="40"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fh0wiWIyEeqQOafySJ768w" x="480" y="104" width="40" height="40"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_Fh0wkWIyEeqQOafySJ768w" type="2001" element="_Fgesv2IyEeqQOafySJ768w">
           <children xmi:type="notation:Node" xmi:id="_Fh0wlGIyEeqQOafySJ768w" type="5002">
@@ -179,7 +187,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jVbI0nQdEeqlQ7vAoGYMSQ" x="32" width="30" height="30"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Fh0wkmIyEeqQOafySJ768w" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fh0wk2IyEeqQOafySJ768w" x="480" y="110" width="40" height="40"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fh0wk2IyEeqQOafySJ768w" x="480" y="180" width="40" height="40"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_Fh0wlmIyEeqQOafySJ768w" type="2001" element="_Fgodv2IyEeqQOafySJ768w">
           <children xmi:type="notation:Node" xmi:id="_Fh0wmWIyEeqQOafySJ768w" type="5002">
@@ -194,7 +202,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiRcdWIyEeqQOafySJ768w"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_FiHrlGIyEeqQOafySJ768w" fontName="Segoe UI" fontHeight="12"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiHrlWIyEeqQOafySJ768w" x="22" y="33" width="10" height="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiHrlWIyEeqQOafySJ768w" x="22" y="17" width="10" height="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FiHrmGIyEeqQOafySJ768w" type="3001" element="_FgodymIyEeqQOafySJ768w">
             <children xmi:type="notation:Node" xmi:id="_FiHrm2IyEeqQOafySJ768w" visible="false" type="5001">
@@ -205,7 +213,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiRceGIyEeqQOafySJ768w"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_FiHrmWIyEeqQOafySJ768w" fontName="Segoe UI" fontHeight="12"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiHrmmIyEeqQOafySJ768w" x="22" y="9" width="10" height="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiHrmmIyEeqQOafySJ768w" x="22" y="37" width="10" height="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FiHrnWIyEeqQOafySJ768w" type="3001" element="_FgodzmIyEeqQOafySJ768w">
             <children xmi:type="notation:Node" xmi:id="_FiHroGIyEeqQOafySJ768w" type="5001">
@@ -344,67 +352,69 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FikXhGIyEeqQOafySJ768w" id="(0.1,0.475)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FikXhWIyEeqQOafySJ768w" id="(0.9,0.55)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_FikXkmIyEeqQOafySJ768w" type="4001" element="_FgxnuWIyEeqQOafySJ768w" source="_FiHrmGIyEeqQOafySJ768w" target="_Fh0wkWIyEeqQOafySJ768w">
-          <children xmi:type="notation:Node" xmi:id="_FikXlmIyEeqQOafySJ768w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FikXl2IyEeqQOafySJ768w" x="5" y="-3"/>
+        <edges xmi:type="notation:Edge" xmi:id="_jkA-AFekEeuFWKIoMFdAEQ" type="4001" element="_jiod8FekEeuFWKIoMFdAEQ" source="_FiHrmGIyEeqQOafySJ768w" target="_Fh0wkWIyEeqQOafySJ768w">
+          <children xmi:type="notation:Node" xmi:id="_jkBlEFekEeuFWKIoMFdAEQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkCMIFekEeuFWKIoMFdAEQ" x="-3" y="-9"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_FikXmGIyEeqQOafySJ768w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FikXmWIyEeqQOafySJ768w" x="-5" y="-3"/>
+          <children xmi:type="notation:Node" xmi:id="_jkDaQFekEeuFWKIoMFdAEQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkDaQVekEeuFWKIoMFdAEQ" x="3" y="7"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_FikXmmIyEeqQOafySJ768w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FikXm2IyEeqQOafySJ768w" x="-7" y="-2"/>
+          <children xmi:type="notation:Node" xmi:id="_jkDaQlekEeuFWKIoMFdAEQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkDaQ1ekEeuFWKIoMFdAEQ" x="2" y="8"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_FikXk2IyEeqQOafySJ768w"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_FikXlGIyEeqQOafySJ768w" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FikXlWIyEeqQOafySJ768w" points="[5, -1, -119, 6]$[124, -7, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FikXnGIyEeqQOafySJ768w" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FikXnWIyEeqQOafySJ768w" id="(0.5,1.0)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_jkA-AVekEeuFWKIoMFdAEQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_jkA-AlekEeuFWKIoMFdAEQ" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jkA-A1ekEeuFWKIoMFdAEQ" points="[5, 0, -119, -15]$[104, 12, -20, -3]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkDaRFekEeuFWKIoMFdAEQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkDaRVekEeuFWKIoMFdAEQ" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_FikXnmIyEeqQOafySJ768w" type="4001" element="_FgxnvmIyEeqQOafySJ768w" source="_FiHrk2IyEeqQOafySJ768w" target="_Fh0wh2IyEeqQOafySJ768w">
-          <children xmi:type="notation:Node" xmi:id="_FikXomIyEeqQOafySJ768w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FikXo2IyEeqQOafySJ768w" x="1" y="1"/>
+        <edges xmi:type="notation:Edge" xmi:id="_jkDaRlekEeuFWKIoMFdAEQ" type="4001" element="_jiod9VekEeuFWKIoMFdAEQ" source="_FiHrk2IyEeqQOafySJ768w" target="_Fh0wh2IyEeqQOafySJ768w">
+          <children xmi:type="notation:Node" xmi:id="_jkEBUFekEeuFWKIoMFdAEQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkEBUVekEeuFWKIoMFdAEQ" x="1" y="-8"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_FikXpGIyEeqQOafySJ768w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FikXpWIyEeqQOafySJ768w" x="-11" y="-7"/>
+          <children xmi:type="notation:Node" xmi:id="_jkEBUlekEeuFWKIoMFdAEQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkEBU1ekEeuFWKIoMFdAEQ" x="-4" y="4"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_FiuIYGIyEeqQOafySJ768w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiuIYWIyEeqQOafySJ768w" x="-12" y="-3"/>
+          <children xmi:type="notation:Node" xmi:id="_jkEBVFekEeuFWKIoMFdAEQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkEBVVekEeuFWKIoMFdAEQ" x="-5" y="5"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_FikXn2IyEeqQOafySJ768w"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_FikXoGIyEeqQOafySJ768w" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FikXoWIyEeqQOafySJ768w" points="[5, 0, -101, -20]$[104, 17, -2, -3]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FiuIYmIyEeqQOafySJ768w" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FiuIY2IyEeqQOafySJ768w" id="(0.05,0.325)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_jkDaR1ekEeuFWKIoMFdAEQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_jkDaSFekEeuFWKIoMFdAEQ" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jkDaSVekEeuFWKIoMFdAEQ" points="[5, -2, -119, 39]$[104, -35, -20, 6]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkEBVlekEeuFWKIoMFdAEQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkEBV1ekEeuFWKIoMFdAEQ" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_FiuIZGIyEeqQOafySJ768w" type="4001" element="_Fgxnw2IyEeqQOafySJ768w" source="_FiRcfGIyEeqQOafySJ768w" target="_Fh0wgmIyEeqQOafySJ768w">
-          <children xmi:type="notation:Node" xmi:id="_FiuIaGIyEeqQOafySJ768w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiuIaWIyEeqQOafySJ768w" x="13" y="-1"/>
+        <edges xmi:type="notation:Edge" xmi:id="_jkEoYFekEeuFWKIoMFdAEQ" type="4001" element="_jipFAlekEeuFWKIoMFdAEQ" source="_FiRcfGIyEeqQOafySJ768w" target="_Fh0wgmIyEeqQOafySJ768w">
+          <children xmi:type="notation:Node" xmi:id="_jkEoZFekEeuFWKIoMFdAEQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkEoZVekEeuFWKIoMFdAEQ" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_FiuIamIyEeqQOafySJ768w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiuIa2IyEeqQOafySJ768w" x="1" y="3"/>
+          <children xmi:type="notation:Node" xmi:id="_jkFPcFekEeuFWKIoMFdAEQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkFPcVekEeuFWKIoMFdAEQ" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_FiuIbGIyEeqQOafySJ768w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiuIbWIyEeqQOafySJ768w" y="4"/>
+          <children xmi:type="notation:Node" xmi:id="_jkFPclekEeuFWKIoMFdAEQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkFPc1ekEeuFWKIoMFdAEQ" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_FiuIZWIyEeqQOafySJ768w"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_FiuIZmIyEeqQOafySJ768w" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FiuIZ2IyEeqQOafySJ768w" points="[-5, -3, 167, 93]$[-152, -85, 20, 11]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FiuIbmIyEeqQOafySJ768w" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_jkEoYVekEeuFWKIoMFdAEQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_jkEoYlekEeuFWKIoMFdAEQ" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jkEoY1ekEeuFWKIoMFdAEQ" points="[-5, -3, 167, 93]$[-152, -85, 20, 11]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkFPdFekEeuFWKIoMFdAEQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkFPdVekEeuFWKIoMFdAEQ" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_FiuIcGIyEeqQOafySJ768w" type="4001" element="_FgxnyGIyEeqQOafySJ768w" source="_FiRch2IyEeqQOafySJ768w" target="_Fh0wgmIyEeqQOafySJ768w">
-          <children xmi:type="notation:Node" xmi:id="_FiuIdGIyEeqQOafySJ768w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiuIdWIyEeqQOafySJ768w" x="17" y="-2"/>
+        <edges xmi:type="notation:Edge" xmi:id="_jkFPdlekEeuFWKIoMFdAEQ" type="4001" element="_jipFB1ekEeuFWKIoMFdAEQ" source="_FiRch2IyEeqQOafySJ768w" target="_Fh0wgmIyEeqQOafySJ768w">
+          <children xmi:type="notation:Node" xmi:id="_jkF2gFekEeuFWKIoMFdAEQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkF2gVekEeuFWKIoMFdAEQ" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_FiuIdmIyEeqQOafySJ768w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiuId2IyEeqQOafySJ768w" x="5" y="3"/>
+          <children xmi:type="notation:Node" xmi:id="_jkF2glekEeuFWKIoMFdAEQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkF2g1ekEeuFWKIoMFdAEQ" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_FiuIeGIyEeqQOafySJ768w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FiuIeWIyEeqQOafySJ768w" x="-2" y="4"/>
+          <children xmi:type="notation:Node" xmi:id="_jkF2hFekEeuFWKIoMFdAEQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jkF2hVekEeuFWKIoMFdAEQ" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_FiuIcWIyEeqQOafySJ768w"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_FiuIcmIyEeqQOafySJ768w" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FiuIc2IyEeqQOafySJ768w" points="[-5, -6, 182, 195]$[-169, -181, 18, 20]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FiuIemIyEeqQOafySJ768w" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_jkFPd1ekEeuFWKIoMFdAEQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_jkFPeFekEeuFWKIoMFdAEQ" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jkFPeVekEeuFWKIoMFdAEQ" points="[-5, -5, 182, 196]$[-169, -181, 18, 20]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkF2hlekEeuFWKIoMFdAEQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jkF2h1ekEeuFWKIoMFdAEQ" id="(0.5,0.5)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -468,7 +478,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FgestmIyEeqQOafySJ768w" name="Idle" incomingEdges="_FgxnoGIyEeqQOafySJ768w _Fgxnw2IyEeqQOafySJ768w _FgxnyGIyEeqQOafySJ768w" width="4" height="4" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FgestmIyEeqQOafySJ768w" name="Idle" incomingEdges="_FgxnoGIyEeqQOafySJ768w _jipFAlekEeuFWKIoMFdAEQ _jipFB1ekEeuFWKIoMFdAEQ" width="4" height="4" resizeKind="NSEW">
       <target xmi:type="san:Place" href="userambulance.msan#Idle"/>
       <semanticElements xmi:type="san:Place" href="userambulance.msan#Idle"/>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_Fgods2IyEeqQOafySJ768w" name="short" width="6" height="2" resizeKind="NSEW">
@@ -495,7 +505,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FgesuWIyEeqQOafySJ768w" name="Req3" incomingEdges="_FgxnvmIyEeqQOafySJ768w" width="4" height="4" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FgesuWIyEeqQOafySJ768w" name="Req3" incomingEdges="_jiod9VekEeuFWKIoMFdAEQ" width="4" height="4" resizeKind="NSEW">
       <target xmi:type="san:Place" href="userambulance.msan#Req3"/>
       <semanticElements xmi:type="san:Place" href="userambulance.msan#Req3"/>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FgodtmIyEeqQOafySJ768w" name="short" width="6" height="2" resizeKind="NSEW">
@@ -525,7 +535,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgesv2IyEeqQOafySJ768w" name="Req7" incomingEdges="_FgxnuWIyEeqQOafySJ768w" width="4" height="4" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgesv2IyEeqQOafySJ768w" name="Req7" incomingEdges="_jiod8FekEeuFWKIoMFdAEQ" width="4" height="4" resizeKind="NSEW">
       <target xmi:type="san:Place" href="userambulance.msan#Req7"/>
       <semanticElements xmi:type="san:Place" href="userambulance.msan#Req7"/>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FgodvGIyEeqQOafySJ768w" name="short" width="6" height="2" resizeKind="NSEW">
@@ -558,7 +568,7 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgodv2IyEeqQOafySJ768w" name="Request" incomingEdges="_FgxnpWIyEeqQOafySJ768w" width="3" height="6" resizeKind="NSEW">
       <target xmi:type="san:TimedActivity" href="userambulance.msan#Request"/>
       <semanticElements xmi:type="san:TimedActivity" href="userambulance.msan#Request"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FgodxmIyEeqQOafySJ768w" outgoingEdges="_FgxnvmIyEeqQOafySJ768w" width="1" height="1" resizeKind="NSEW">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FgodxmIyEeqQOafySJ768w" outgoingEdges="_jiod9VekEeuFWKIoMFdAEQ" width="1" height="1" resizeKind="NSEW">
         <target xmi:type="san:Case" href="userambulance.msan#//@activities[name='Request']/@cases[ID='1']"/>
         <semanticElements xmi:type="san:Case" href="userambulance.msan#//@activities[name='Request']/@cases[ID='1']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_FgodyWIyEeqQOafySJ768w"/>
@@ -570,10 +580,13 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']"/>
       </ownedBorderedNodes>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FgodymIyEeqQOafySJ768w" outgoingEdges="_FgxnuWIyEeqQOafySJ768w" width="1" height="1" resizeKind="NSEW">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FgodymIyEeqQOafySJ768w" outgoingEdges="_jiod8FekEeuFWKIoMFdAEQ" width="1" height="1" resizeKind="NSEW">
         <target xmi:type="san:Case" href="userambulance.msan#//@activities[name='Request']/@cases[ID='2']"/>
         <semanticElements xmi:type="san:Case" href="userambulance.msan#//@activities[name='Request']/@cases[ID='2']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_FgodzWIyEeqQOafySJ768w"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Dot" uid="_Fgody2IyEeqQOafySJ768w" labelSize="12" hideLabelByDefault="true" backgroundColor="114,159,207">
           <description xmi:type="style:DotDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']/@style"/>
         </ownedStyle>
@@ -599,7 +612,7 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgod0WIyEeqQOafySJ768w" name="Fail" incomingEdges="_FgxnqmIyEeqQOafySJ768w" width="1" height="6" resizeKind="NSEW">
       <target xmi:type="san:InstantaneousActivity" href="userambulance.msan#Fail"/>
       <semanticElements xmi:type="san:InstantaneousActivity" href="userambulance.msan#Fail"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_Fgod12IyEeqQOafySJ768w" outgoingEdges="_Fgxnw2IyEeqQOafySJ768w" width="1" height="1" resizeKind="NSEW">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_Fgod12IyEeqQOafySJ768w" outgoingEdges="_jipFAlekEeuFWKIoMFdAEQ" width="1" height="1" resizeKind="NSEW">
         <target xmi:type="san:Case" href="userambulance.msan#//@activities[name='Fail']/@cases[ID='0']"/>
         <semanticElements xmi:type="san:Case" href="userambulance.msan#//@activities[name='Fail']/@cases[ID='0']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_Fgod2mIyEeqQOafySJ768w"/>
@@ -622,7 +635,7 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_Fgod1GIyEeqQOafySJ768w" name="Drop" incomingEdges="_Fgxnr2IyEeqQOafySJ768w" width="1" height="6" resizeKind="NSEW">
       <target xmi:type="san:InstantaneousActivity" href="userambulance.msan#Drop"/>
       <semanticElements xmi:type="san:InstantaneousActivity" href="userambulance.msan#Drop"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_Fgod22IyEeqQOafySJ768w" outgoingEdges="_FgxnyGIyEeqQOafySJ768w" width="1" height="1" resizeKind="NSEW">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_Fgod22IyEeqQOafySJ768w" outgoingEdges="_jipFB1ekEeuFWKIoMFdAEQ" width="1" height="1" resizeKind="NSEW">
         <target xmi:type="san:Case" href="userambulance.msan#//@activities[name='Drop']/@cases[ID='0']"/>
         <semanticElements xmi:type="san:Case" href="userambulance.msan#//@activities[name='Drop']/@cases[ID='0']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_Fgod3mIyEeqQOafySJ768w"/>
@@ -687,39 +700,39 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FgxnuWIyEeqQOafySJ768w" sourceNode="_FgodymIyEeqQOafySJ768w" targetNode="_Fgesv2IyEeqQOafySJ768w">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jiod8FekEeuFWKIoMFdAEQ" sourceNode="_FgodymIyEeqQOafySJ768w" targetNode="_Fgesv2IyEeqQOafySJ768w">
+      <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.2"/>
+      <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jiod8VekEeuFWKIoMFdAEQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_jiod8lekEeuFWKIoMFdAEQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jiod9VekEeuFWKIoMFdAEQ" sourceNode="_FgodxmIyEeqQOafySJ768w" targetNode="_FgesuWIyEeqQOafySJ768w">
       <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.3"/>
       <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.3"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FgxnumIyEeqQOafySJ768w" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jiod9lekEeuFWKIoMFdAEQ" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Fgxnu2IyEeqQOafySJ768w" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_jiod91ekEeuFWKIoMFdAEQ" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FgxnvmIyEeqQOafySJ768w" sourceNode="_FgodxmIyEeqQOafySJ768w" targetNode="_FgesuWIyEeqQOafySJ768w">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jipFAlekEeuFWKIoMFdAEQ" sourceNode="_Fgod12IyEeqQOafySJ768w" targetNode="_FgestmIyEeqQOafySJ768w">
       <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.4"/>
       <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.4"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Fgxnv2IyEeqQOafySJ768w" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jipFA1ekEeuFWKIoMFdAEQ" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FgxnwGIyEeqQOafySJ768w" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_jipFBFekEeuFWKIoMFdAEQ" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Fgxnw2IyEeqQOafySJ768w" sourceNode="_Fgod12IyEeqQOafySJ768w" targetNode="_FgestmIyEeqQOafySJ768w">
-      <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.6"/>
-      <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.6"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FgxnxGIyEeqQOafySJ768w" size="2">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jipFB1ekEeuFWKIoMFdAEQ" sourceNode="_Fgod22IyEeqQOafySJ768w" targetNode="_FgestmIyEeqQOafySJ768w">
+      <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.5"/>
+      <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.5"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jipFCFekEeuFWKIoMFdAEQ" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FgxnxWIyEeqQOafySJ768w" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FgxnyGIyEeqQOafySJ768w" sourceNode="_Fgod22IyEeqQOafySJ768w" targetNode="_FgestmIyEeqQOafySJ768w">
-      <target xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.7"/>
-      <semanticElements xmi:type="san:OutputArc" href="userambulance.msan#//@arcs.7"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FgxnyWIyEeqQOafySJ768w" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FgxnymIyEeqQOafySJ768w" labelSize="12"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_jipFCVekEeuFWKIoMFdAEQ" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
     </ownedDiagramElements>
@@ -727,5 +740,801 @@
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_FgLxwWIyEeqQOafySJ768w"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer"/>
     <target xmi:type="san:SAN" href="userambulance.msan#Ambulance User"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_E9gK4FeoEeuDO48ZOAly1w">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_E9iAEFeoEeuDO48ZOAly1w" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_E9iAEVeoEeuDO48ZOAly1w" type="Sirius" element="_E9gK4FeoEeuDO48ZOAly1w" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_E94lYFeoEeuDO48ZOAly1w" type="2001" element="_E9lDYFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E95zgFeoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E95zgVeoEeuDO48ZOAly1w" x="41" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-EyoFeoEeuDO48ZOAly1w" type="3001" element="_E9nfoleoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-Eyo1eoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-EypFeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-FZtVeoEeuDO48ZOAly1w" type="3003" element="_E9oGsFeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-FZtleoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-FZt1eoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-EyoVeoEeuDO48ZOAly1w" fontColor="16777215" fontName="Cantarell" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-EyoleoEeuDO48ZOAly1w" x="-10" y="32" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-EypVeoEeuDO48ZOAly1w" type="3001" element="_E9oGsleoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-FZsFeoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-FZsVeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-GAwFeoEeuDO48ZOAly1w" type="3017" element="_E9oGs1eoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-GAwVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-GAwleoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-EypleoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-Eyp1eoEeuDO48ZOAly1w" x="-22" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-FZsleoEeuDO48ZOAly1w" type="3002" element="_E9lqcFeoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-FZs1eoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-FZtFeoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E94lYVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E94lYleoEeuDO48ZOAly1w" x="391" y="279" width="40" height="40"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E97osFeoEeuDO48ZOAly1w" type="2001" element="_E9lqcleoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E97os1eoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E97otFeoEeuDO48ZOAly1w" x="-20" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-Gn0FeoEeuDO48ZOAly1w" type="3001" element="_E9otwVeoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-HO4FeoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-HO4VeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-JEEFeoEeuDO48ZOAly1w" type="3003" element="_E9otwleoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-JEEVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-JEEleoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-Gn0VeoEeuDO48ZOAly1w" fontColor="16777215" fontName="Cantarell" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-Gn0leoEeuDO48ZOAly1w" x="-10" y="32" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-H18FeoEeuDO48ZOAly1w" type="3001" element="_E9otxFeoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-H181eoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-IdAFeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-JEE1eoEeuDO48ZOAly1w" type="3017" element="_E9otxVeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-JEFFeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-JEFVeoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-H18VeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-H18leoEeuDO48ZOAly1w" x="-22" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-IdAVeoEeuDO48ZOAly1w" type="3002" element="_E9mRgFeoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-IdAleoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-IdA1eoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E97osVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E97osleoEeuDO48ZOAly1w" x="241" y="318" width="40" height="40"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E98PwFeoEeuDO48ZOAly1w" type="2001" element="_E9mRgleoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E9820FeoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E9820VeoEeuDO48ZOAly1w" x="-2" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-JEFleoEeuDO48ZOAly1w" type="3001" element="_E9pU0VeoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-JrIFeoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-JrIVeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-K5Q1eoEeuDO48ZOAly1w" type="3003" element="_E9pU0leoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-K5RFeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-K5RVeoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-JEF1eoEeuDO48ZOAly1w" fontColor="16777215" fontName="Cantarell" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-JEGFeoEeuDO48ZOAly1w" x="-10" y="32" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-KSMFeoEeuDO48ZOAly1w" type="3001" element="_E9pU1FeoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-KSM1eoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-KSNFeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-K5RleoEeuDO48ZOAly1w" type="3017" element="_E9pU1VeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-K5R1eoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-K5SFeoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-KSMVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-KSMleoEeuDO48ZOAly1w" x="32" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-K5QFeoEeuDO48ZOAly1w" type="3002" element="_E9m4kFeoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-K5QVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-K5QleoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E98PwVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E98PwleoEeuDO48ZOAly1w" x="110" y="80" width="40" height="40"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E99d4FeoEeuDO48ZOAly1w" type="2001" element="_E9m4kleoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E9-E8FeoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E9-E8VeoEeuDO48ZOAly1w" x="-7" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-K5SVeoEeuDO48ZOAly1w" type="3001" element="_E9p74FeoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-LgUFeoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-LgUVeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-NVgFeoEeuDO48ZOAly1w" type="3003" element="_E9p74VeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-NVgVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-NVgleoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-K5SleoEeuDO48ZOAly1w" fontColor="16777215" fontName="Cantarell" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-K5S1eoEeuDO48ZOAly1w" x="-10" y="32" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-LgUleoEeuDO48ZOAly1w" type="3001" element="_E9p741eoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-LgVVeoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-LgVleoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-NVg1eoEeuDO48ZOAly1w" type="3017" element="_E9p75FeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-NVhFeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-NVhVeoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-LgU1eoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-LgVFeoEeuDO48ZOAly1w" x="32" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-MHYFeoEeuDO48ZOAly1w" type="3002" element="_E9m4k1eoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-MHYVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-MHYleoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E99d4VeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E99d4leoEeuDO48ZOAly1w" x="745" y="80" width="40" height="40"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E9-sAFeoEeuDO48ZOAly1w" type="2001" element="_E9m4lVeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E9_TEFeoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E9_TEVeoEeuDO48ZOAly1w" x="-7" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-NVhleoEeuDO48ZOAly1w" type="3001" element="_E9qi8FeoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-N8kFeoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-N8kVeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-OjpVeoEeuDO48ZOAly1w" type="3003" element="_E9qi8VeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-OjpleoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-Ojp1eoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-NVh1eoEeuDO48ZOAly1w" fontColor="16777215" fontName="Cantarell" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-NViFeoEeuDO48ZOAly1w" x="-10" y="32" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-N8kleoEeuDO48ZOAly1w" type="3001" element="_E9qi81eoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-OjoFeoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-OjoVeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-PKsFeoEeuDO48ZOAly1w" type="3017" element="_E9qi9FeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-PKsVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-PKsleoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-N8k1eoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-N8lFeoEeuDO48ZOAly1w" x="32" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-OjoleoEeuDO48ZOAly1w" type="3002" element="_E9nfoFeoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-Ojo1eoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-OjpFeoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E9-sAVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E9-sAleoEeuDO48ZOAly1w" x="745" y="205" width="40" height="40"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E9_TEleoEeuDO48ZOAly1w" type="2001" element="_E9rKAFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E9_6IFeoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E9_6IVeoEeuDO48ZOAly1w" x="31" y="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-PKs1eoEeuDO48ZOAly1w" type="3001" element="_E9rKA1eoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-PKtleoEeuDO48ZOAly1w" visible="false" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-PKt1eoEeuDO48ZOAly1w" x="11" y="-15"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-SOA1eoEeuDO48ZOAly1w" type="3002" element="_E9rxEFeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-SOBFeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-SOBVeoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-PKtFeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-PKtVeoEeuDO48ZOAly1w" x="22" y="8" width="10" height="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-PxwFeoEeuDO48ZOAly1w" type="3001" element="_E9rxE1eoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-Pxw1eoEeuDO48ZOAly1w" visible="false" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-QY0FeoEeuDO48ZOAly1w" x="11"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-S1EFeoEeuDO48ZOAly1w" type="3002" element="_E9rxFFeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-S1EVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-S1EleoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-PxwVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-PxwleoEeuDO48ZOAly1w" x="22" y="51" width="10" height="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-Q_4FeoEeuDO48ZOAly1w" type="3001" element="_E9rxF1eoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-Rm8FeoEeuDO48ZOAly1w" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-Rm8VeoEeuDO48ZOAly1w" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-TcIFeoEeuDO48ZOAly1w" type="3003" element="_E9rxGFeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-TcIVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-TcIleoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-Q_4VeoEeuDO48ZOAly1w" fontName="Cantarell" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-Q_4leoEeuDO48ZOAly1w" x="-15" y="62" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-SOAFeoEeuDO48ZOAly1w" type="3003" element="_E9rKAVeoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-SOAVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-SOAleoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E9_TE1eoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E9_TFFeoEeuDO48ZOAly1w" x="430" y="119" width="30" height="70"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E9_6IleoEeuDO48ZOAly1w" type="2001" element="_E9sYIVeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E9_6JVeoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E9_6JleoEeuDO48ZOAly1w" x="11" y="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-UDMFeoEeuDO48ZOAly1w" type="3001" element="_E9s_MVeoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-UDM1eoEeuDO48ZOAly1w" visible="false" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-UDNFeoEeuDO48ZOAly1w" x="11" y="-15"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-VRUFeoEeuDO48ZOAly1w" type="3002" element="_E9s_MleoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-VRUVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-VRUleoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-UDMVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-UDMleoEeuDO48ZOAly1w" x="2" width="10" height="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-UqQFeoEeuDO48ZOAly1w" type="3003" element="_E9sYIleoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-UqQVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-UqQleoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E9_6I1eoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E9_6JFeoEeuDO48ZOAly1w" x="280" y="209" width="10" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E-AhMFeoEeuDO48ZOAly1w" type="2001" element="_E9sYJFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-AhM1eoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E-AhNFeoEeuDO48ZOAly1w" x="11" y="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-VRU1eoEeuDO48ZOAly1w" type="3001" element="_E9tmQFeoEeuDO48ZOAly1w">
+            <children xmi:type="notation:Node" xmi:id="_E-WfcFeoEeuDO48ZOAly1w" visible="false" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_E-WfcVeoEeuDO48ZOAly1w" x="11" y="-15"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E-YUoFeoEeuDO48ZOAly1w" type="3002" element="_E9tmQVeoEeuDO48ZOAly1w">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_E-YUoVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-YUoleoEeuDO48ZOAly1w"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-VRVFeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-VRVVeoEeuDO48ZOAly1w" x="2" y="10" width="10" height="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-XtkFeoEeuDO48ZOAly1w" type="3003" element="_E9sYJVeoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-XtkVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-XtkleoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E-AhMVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-AhMleoEeuDO48ZOAly1w" x="180" y="214" width="10" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E-BIQFeoEeuDO48ZOAly1w" type="2001" element="_E9uNUVeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-BIQ1eoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E-BIRFeoEeuDO48ZOAly1w" x="33" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-Y7sFeoEeuDO48ZOAly1w" type="3005" element="_E9uNUleoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-Y7sVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-Y7sleoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E-BIQVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-BIQleoEeuDO48ZOAly1w" x="280" y="114" width="32" height="32"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E-BIRVeoEeuDO48ZOAly1w" type="2001" element="_E9u0YFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-BvUFeoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E-BvUVeoEeuDO48ZOAly1w" x="33" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-Y7s1eoEeuDO48ZOAly1w" type="3005" element="_E9u0YVeoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-Y7tFeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-Y7tVeoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E-BIRleoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-BIR1eoEeuDO48ZOAly1w" x="580" y="157" width="32" height="32"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E-C9cFeoEeuDO48ZOAly1w" type="2001" element="_E9u0Y1eoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-DkgFeoEeuDO48ZOAly1w" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E-DkgVeoEeuDO48ZOAly1w" x="33" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-ZiwFeoEeuDO48ZOAly1w" type="3005" element="_E9u0ZFeoEeuDO48ZOAly1w">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-ZiwVeoEeuDO48ZOAly1w" fontName="Cantarell"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-ZiwleoEeuDO48ZOAly1w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E-C9cVeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-C9cleoEeuDO48ZOAly1w" x="585" y="114" width="32" height="32"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_E9iAEleoEeuDO48ZOAly1w"/>
+        <edges xmi:type="notation:Edge" xmi:id="_E-aJ0FeoEeuDO48ZOAly1w" type="4001" element="_E9wpkFeoEeuDO48ZOAly1w" source="_E-BIQFeoEeuDO48ZOAly1w" target="_E98PwFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-aJ1FeoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-aJ1VeoEeuDO48ZOAly1w" x="-33" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-aJ1leoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-aJ11eoEeuDO48ZOAly1w" x="-2" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-aJ2FeoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-aJ2VeoEeuDO48ZOAly1w" y="-10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-aJ0VeoEeuDO48ZOAly1w" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-aJ0leoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-aJ01eoEeuDO48ZOAly1w" points="[5, 8, 171, 2]$[-166, 8, 0, 2]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-aw4FeoEeuDO48ZOAly1w" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-aw4VeoEeuDO48ZOAly1w" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E-b_AFeoEeuDO48ZOAly1w" type="4001" element="_E9x3sFeoEeuDO48ZOAly1w" source="_E-BIQFeoEeuDO48ZOAly1w" target="_E9_TEleoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-cmEFeoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-cmEVeoEeuDO48ZOAly1w" x="-13" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-dNIFeoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-dNIVeoEeuDO48ZOAly1w" x="7" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-d0MFeoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-d0MVeoEeuDO48ZOAly1w" x="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-b_AVeoEeuDO48ZOAly1w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-b_AleoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-b_A1eoEeuDO48ZOAly1w" points="[8, 7, -151, -24]$[134, 27, -25, -4]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-d0MleoEeuDO48ZOAly1w" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-d0M1eoEeuDO48ZOAly1w" id="(0.8333333333333334,0.37142857142857144)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E-d0NFeoEeuDO48ZOAly1w" type="4001" element="_E9yewleoEeuDO48ZOAly1w" source="_E-BIRVeoEeuDO48ZOAly1w" target="_E-PxwFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-ebQFeoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-ebQVeoEeuDO48ZOAly1w" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-ebQleoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-ebQ1eoEeuDO48ZOAly1w" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-ebRFeoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-ebRVeoEeuDO48ZOAly1w" y="-10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-d0NVeoEeuDO48ZOAly1w" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-d0NleoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-d0N1eoEeuDO48ZOAly1w" points="[-9, 0, 130, -2]$[-134, 0, 5, -2]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-fCUFeoEeuDO48ZOAly1w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-fCUVeoEeuDO48ZOAly1w" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E-fCUleoEeuDO48ZOAly1w" type="4001" element="_E9zF0FeoEeuDO48ZOAly1w" source="_E-C9cFeoEeuDO48ZOAly1w" target="_E-PKs1eoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-fCVleoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-fCV1eoEeuDO48ZOAly1w" x="-43" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-fCWFeoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-fCWVeoEeuDO48ZOAly1w" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-fCWleoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-fCW1eoEeuDO48ZOAly1w" x="-12" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-fCU1eoEeuDO48ZOAly1w" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-fCVFeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-fCVVeoEeuDO48ZOAly1w" points="[-16, 5, 128, 3]$[-139, 5, 5, 3]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-fCXFeoEeuDO48ZOAly1w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-fCXVeoEeuDO48ZOAly1w" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E-fCXleoEeuDO48ZOAly1w" type="4001" element="_E9zF1VeoEeuDO48ZOAly1w" source="_E-BIRVeoEeuDO48ZOAly1w" target="_E9-sAFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-fpYFeoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-fpYVeoEeuDO48ZOAly1w" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-fpYleoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-fpY1eoEeuDO48ZOAly1w" x="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-fpZFeoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-fpZVeoEeuDO48ZOAly1w" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-fCX1eoEeuDO48ZOAly1w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-fCYFeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-fCYVeoEeuDO48ZOAly1w" points="[9, 16, -160, -72]$[9, 82, -160, -6]$[149, 82, -20, -6]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-fpZleoEeuDO48ZOAly1w" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-fpZ1eoEeuDO48ZOAly1w" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E-fpaFeoEeuDO48ZOAly1w" type="4001" element="_E9zs4FeoEeuDO48ZOAly1w" source="_E-C9cFeoEeuDO48ZOAly1w" target="_E99d4FeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-fpbFeoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-fpbVeoEeuDO48ZOAly1w" x="-2" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-gQcFeoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-gQcVeoEeuDO48ZOAly1w" x="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-gQcleoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-gQc1eoEeuDO48ZOAly1w" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-fpaVeoEeuDO48ZOAly1w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-fpaleoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-fpa1eoEeuDO48ZOAly1w" points="[0, 11, -148, 31]$[0, -31, -148, -11]$[19, -31, -129, -11]$[144, -20, -4, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-g3gFeoEeuDO48ZOAly1w" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-g3gVeoEeuDO48ZOAly1w" id="(0.1,0.35)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E-hekFeoEeuDO48ZOAly1w" type="4001" element="_E9zs5VeoEeuDO48ZOAly1w" source="_E94lYFeoEeuDO48ZOAly1w" target="_E9_6IleoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-helFeoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-helVeoEeuDO48ZOAly1w" x="-11" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-iFoFeoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-iFoVeoEeuDO48ZOAly1w" x="13"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-iFoleoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-iFo1eoEeuDO48ZOAly1w" x="11" y="1"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-hekVeoEeuDO48ZOAly1w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-hekleoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-hek1eoEeuDO48ZOAly1w" points="[0, 0, 126, 10]$[-126, -10, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-iFpFeoEeuDO48ZOAly1w" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-iFpVeoEeuDO48ZOAly1w" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E-issFeoEeuDO48ZOAly1w" type="4001" element="_E90T9FeoEeuDO48ZOAly1w" source="_E97osFeoEeuDO48ZOAly1w" target="_E-AhMFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-istFeoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-istVeoEeuDO48ZOAly1w" x="-9" y="3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-istleoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-ist1eoEeuDO48ZOAly1w" x="11" y="-4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-isuFeoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-isuVeoEeuDO48ZOAly1w" x="8" y="-4"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-issVeoEeuDO48ZOAly1w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-issleoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-iss1eoEeuDO48ZOAly1w" points="[0, 0, 76, 44]$[-76, -44, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-jTwFeoEeuDO48ZOAly1w" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-jTwVeoEeuDO48ZOAly1w" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E-jTwleoEeuDO48ZOAly1w" type="4001" element="_E907AFeoEeuDO48ZOAly1w" source="_E-UDMFeoEeuDO48ZOAly1w" target="_E98PwFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-jTxleoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-jTx1eoEeuDO48ZOAly1w" x="19" y="-4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-jTyFeoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-jTyVeoEeuDO48ZOAly1w" x="-11" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-jTyleoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-jTy1eoEeuDO48ZOAly1w" x="-14" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-jTw1eoEeuDO48ZOAly1w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-jTxFeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-jTxVeoEeuDO48ZOAly1w" points="[-5, -3, 152, 91]$[-157, -94, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-j60FeoEeuDO48ZOAly1w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-j60VeoEeuDO48ZOAly1w" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E-j60leoEeuDO48ZOAly1w" type="4001" element="_E91iEFeoEeuDO48ZOAly1w" source="_E-VRU1eoEeuDO48ZOAly1w" target="_E98PwFeoEeuDO48ZOAly1w">
+          <children xmi:type="notation:Node" xmi:id="_E-j61leoEeuDO48ZOAly1w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-j611eoEeuDO48ZOAly1w" x="18" y="-7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-j62FeoEeuDO48ZOAly1w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-j62VeoEeuDO48ZOAly1w" x="-13" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-j62leoEeuDO48ZOAly1w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-j621eoEeuDO48ZOAly1w" x="-13" y="7"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E-j601eoEeuDO48ZOAly1w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E-j61FeoEeuDO48ZOAly1w" fontName="Cantarell" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E-j61VeoEeuDO48ZOAly1w" points="[-3, -5, 54, 104]$[-57, -109, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-kh4FeoEeuDO48ZOAly1w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E-kh4VeoEeuDO48ZOAly1w" id="(0.5,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_E92JIFeoEeuDO48ZOAly1w" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_E92JIVeoEeuDO48ZOAly1w"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9lDYFeoEeuDO48ZOAly1w" name="Failed" outgoingEdges="_E9zs5VeoEeuDO48ZOAly1w" width="4" height="4" resizeKind="NSEW">
+      <target xmi:type="san:Place" href="userambulance-gates.msan#Failed"/>
+      <semanticElements xmi:type="san:Place" href="userambulance-gates.msan#Failed"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9nfoleoEeuDO48ZOAly1w" name="short" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Failed']/@type"/>
+        <semanticElements xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Failed']/@type"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_E9oGsFeoEeuDO48ZOAly1w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9oGsleoEeuDO48ZOAly1w" name="0" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Failed']/@marking"/>
+        <semanticElements xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Failed']/@marking"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_E9oGs1eoEeuDO48ZOAly1w" labelSize="12" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" uid="_E9lqcFeoEeuDO48ZOAly1w" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
+        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9lqcleoEeuDO48ZOAly1w" name="Dropped" outgoingEdges="_E90T9FeoEeuDO48ZOAly1w" width="4" height="4" resizeKind="NSEW">
+      <target xmi:type="san:Place" href="userambulance-gates.msan#Dropped"/>
+      <semanticElements xmi:type="san:Place" href="userambulance-gates.msan#Dropped"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9otwVeoEeuDO48ZOAly1w" name="short" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Dropped']/@type"/>
+        <semanticElements xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Dropped']/@type"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_E9otwleoEeuDO48ZOAly1w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9otxFeoEeuDO48ZOAly1w" name="0" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Dropped']/@marking"/>
+        <semanticElements xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Dropped']/@marking"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_E9otxVeoEeuDO48ZOAly1w" labelSize="12" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" uid="_E9mRgFeoEeuDO48ZOAly1w" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
+        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9mRgleoEeuDO48ZOAly1w" name="Idle" incomingEdges="_E9wpkFeoEeuDO48ZOAly1w _E907AFeoEeuDO48ZOAly1w _E91iEFeoEeuDO48ZOAly1w" width="4" height="4" resizeKind="NSEW">
+      <target xmi:type="san:Place" href="userambulance-gates.msan#Idle"/>
+      <semanticElements xmi:type="san:Place" href="userambulance-gates.msan#Idle"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9pU0VeoEeuDO48ZOAly1w" name="short" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Idle']/@type"/>
+        <semanticElements xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Idle']/@type"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_E9pU0leoEeuDO48ZOAly1w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9pU1FeoEeuDO48ZOAly1w" name="1" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Idle']/@marking"/>
+        <semanticElements xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Idle']/@marking"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_E9pU1VeoEeuDO48ZOAly1w" labelSize="12" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" uid="_E9m4kFeoEeuDO48ZOAly1w" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
+        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9m4kleoEeuDO48ZOAly1w" name="Req3" incomingEdges="_E9zs4FeoEeuDO48ZOAly1w" width="4" height="4" resizeKind="NSEW">
+      <target xmi:type="san:Place" href="userambulance-gates.msan#Req3"/>
+      <semanticElements xmi:type="san:Place" href="userambulance-gates.msan#Req3"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9p74FeoEeuDO48ZOAly1w" name="short" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Req3']/@type"/>
+        <semanticElements xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Req3']/@type"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_E9p74VeoEeuDO48ZOAly1w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9p741eoEeuDO48ZOAly1w" name="0" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Req3']/@marking"/>
+        <semanticElements xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Req3']/@marking"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_E9p75FeoEeuDO48ZOAly1w" labelSize="12" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" uid="_E9m4k1eoEeuDO48ZOAly1w" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
+        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9m4lVeoEeuDO48ZOAly1w" name="Req7" incomingEdges="_E9zF1VeoEeuDO48ZOAly1w" width="4" height="4" resizeKind="NSEW">
+      <target xmi:type="san:Place" href="userambulance-gates.msan#Req7"/>
+      <semanticElements xmi:type="san:Place" href="userambulance-gates.msan#Req7"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9qi8FeoEeuDO48ZOAly1w" name="short" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Req7']/@type"/>
+        <semanticElements xmi:type="san:PrimitiveType" href="userambulance-gates.msan#//@places[name='Req7']/@type"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_E9qi8VeoEeuDO48ZOAly1w" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9qi81eoEeuDO48ZOAly1w" name="0" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Req7']/@marking"/>
+        <semanticElements xmi:type="san:MarkingSimple" href="userambulance-gates.msan#//@places[name='Req7']/@marking"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_E9qi9FeoEeuDO48ZOAly1w" labelSize="12" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" uid="_E9nfoFeoEeuDO48ZOAly1w" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
+        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9rKAFeoEeuDO48ZOAly1w" name="Request" incomingEdges="_E9x3sFeoEeuDO48ZOAly1w" width="3" height="6" resizeKind="NSEW">
+      <target xmi:type="san:TimedActivity" href="userambulance-gates.msan#Request"/>
+      <semanticElements xmi:type="san:TimedActivity" href="userambulance-gates.msan#Request"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9rKA1eoEeuDO48ZOAly1w" incomingEdges="_E9zF0FeoEeuDO48ZOAly1w" width="1" height="1" resizeKind="NSEW">
+        <target xmi:type="san:Case" href="userambulance-gates.msan#//@activities[name='Request']/@cases[ID='1']"/>
+        <semanticElements xmi:type="san:Case" href="userambulance-gates.msan#//@activities[name='Request']/@cases[ID='1']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_E9rxEleoEeuDO48ZOAly1w"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Dot" uid="_E9rxEFeoEeuDO48ZOAly1w" labelSize="12" hideLabelByDefault="true" backgroundColor="114,159,207">
+          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9rxE1eoEeuDO48ZOAly1w" incomingEdges="_E9yewleoEeuDO48ZOAly1w" width="1" height="1" resizeKind="NSEW">
+        <target xmi:type="san:Case" href="userambulance-gates.msan#//@activities[name='Request']/@cases[ID='2']"/>
+        <semanticElements xmi:type="san:Case" href="userambulance-gates.msan#//@activities[name='Request']/@cases[ID='2']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_E9rxFleoEeuDO48ZOAly1w"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Dot" uid="_E9rxFFeoEeuDO48ZOAly1w" labelSize="12" hideLabelByDefault="true" backgroundColor="114,159,207">
+          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Case']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9rxF1eoEeuDO48ZOAly1w" name="Uniform" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:Uniform" href="userambulance-gates.msan#//@activities[name='Request']/@timeDistribution"/>
+        <semanticElements xmi:type="san:Uniform" href="userambulance-gates.msan#//@activities[name='Request']/@timeDistribution"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_E9rxGFeoEeuDO48ZOAly1w" labelSize="9" showIcon="false" labelPosition="node" width="6" height="2" color="138,226,52">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_E9rKAVeoEeuDO48ZOAly1w" labelSize="12" width="3" height="6" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='TimedActivity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9sYIVeoEeuDO48ZOAly1w" name="Fail" incomingEdges="_E9zs5VeoEeuDO48ZOAly1w" width="1" height="6" resizeKind="NSEW">
+      <target xmi:type="san:InstantaneousActivity" href="userambulance-gates.msan#Fail"/>
+      <semanticElements xmi:type="san:InstantaneousActivity" href="userambulance-gates.msan#Fail"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9s_MVeoEeuDO48ZOAly1w" outgoingEdges="_E907AFeoEeuDO48ZOAly1w" width="1" height="1" resizeKind="NSEW">
+        <target xmi:type="san:Case" href="userambulance-gates.msan#//@activities[name='Fail']/@cases[ID='0']"/>
+        <semanticElements xmi:type="san:Case" href="userambulance-gates.msan#//@activities[name='Fail']/@cases[ID='0']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_E9s_NFeoEeuDO48ZOAly1w"/>
+        <ownedStyle xmi:type="diagram:Dot" uid="_E9s_MleoEeuDO48ZOAly1w" labelSize="12" hideLabelByDefault="true" backgroundColor="114,159,207">
+          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_E9sYIleoEeuDO48ZOAly1w" labelSize="12" width="1" height="6" color="39,76,114">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9sYJFeoEeuDO48ZOAly1w" name="Drop" incomingEdges="_E90T9FeoEeuDO48ZOAly1w" width="1" height="6" resizeKind="NSEW">
+      <target xmi:type="san:InstantaneousActivity" href="userambulance-gates.msan#Drop"/>
+      <semanticElements xmi:type="san:InstantaneousActivity" href="userambulance-gates.msan#Drop"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_E9tmQFeoEeuDO48ZOAly1w" outgoingEdges="_E91iEFeoEeuDO48ZOAly1w" width="1" height="1" resizeKind="NSEW">
+        <target xmi:type="san:Case" href="userambulance-gates.msan#//@activities[name='Drop']/@cases[ID='0']"/>
+        <semanticElements xmi:type="san:Case" href="userambulance-gates.msan#//@activities[name='Drop']/@cases[ID='0']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_E9uNUFeoEeuDO48ZOAly1w"/>
+        <ownedStyle xmi:type="diagram:Dot" uid="_E9tmQVeoEeuDO48ZOAly1w" labelSize="12" hideLabelByDefault="true" backgroundColor="114,159,207">
+          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@borderedNodeMappings[name='Case']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_E9sYJVeoEeuDO48ZOAly1w" labelSize="12" width="1" height="6" color="39,76,114">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InstantaneousActivity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9uNUVeoEeuDO48ZOAly1w" name="IGRequest" outgoingEdges="_E9wpkFeoEeuDO48ZOAly1w _E9x3sFeoEeuDO48ZOAly1w" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="san:InputGate" href="userambulance-gates.msan#IGRequest"/>
+      <semanticElements xmi:type="san:InputGate" href="userambulance-gates.msan#IGRequest"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_E9uNUleoEeuDO48ZOAly1w" labelSize="12" showIcon="false" workspacePath="/org.modelspartiti.formalisms.san.design/icons/san_ingate.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InputGate']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='InputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9u0YFeoEeuDO48ZOAly1w" name="OGReq2" outgoingEdges="_E9yewleoEeuDO48ZOAly1w _E9zF1VeoEeuDO48ZOAly1w" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="san:OutputGate" href="userambulance-gates.msan#OGReq2"/>
+      <semanticElements xmi:type="san:OutputGate" href="userambulance-gates.msan#OGReq2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_E9u0YVeoEeuDO48ZOAly1w" labelSize="12" showIcon="false" workspacePath="/org.modelspartiti.formalisms.san.design/icons/san_outgate.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='OutputGate']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='OutputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E9u0Y1eoEeuDO48ZOAly1w" name="OGReq1" outgoingEdges="_E9zF0FeoEeuDO48ZOAly1w _E9zs4FeoEeuDO48ZOAly1w" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="san:OutputGate" href="userambulance-gates.msan#OGReq1"/>
+      <semanticElements xmi:type="san:OutputGate" href="userambulance-gates.msan#OGReq1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_E9u0ZFeoEeuDO48ZOAly1w" labelSize="12" showIcon="false" workspacePath="/org.modelspartiti.formalisms.san.design/icons/san_outgate.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='OutputGate']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='OutputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E9wpkFeoEeuDO48ZOAly1w" sourceNode="_E9uNUVeoEeuDO48ZOAly1w" targetNode="_E9mRgleoEeuDO48ZOAly1w">
+      <target xmi:type="san:InputGate" href="userambulance-gates.msan#IGRequest"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E9xQoFeoEeuDO48ZOAly1w" targetArrow="NoDecoration" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceInputGate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E9xQoVeoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceInputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E9x3sFeoEeuDO48ZOAly1w" sourceNode="_E9uNUVeoEeuDO48ZOAly1w" targetNode="_E9rKAFeoEeuDO48ZOAly1w">
+      <target xmi:type="san:InputGate" href="userambulance-gates.msan#IGRequest"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E9x3sVeoEeuDO48ZOAly1w" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetInputGate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E9x3sleoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetInputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E9yewleoEeuDO48ZOAly1w" sourceNode="_E9u0YFeoEeuDO48ZOAly1w" targetNode="_E9rxE1eoEeuDO48ZOAly1w">
+      <target xmi:type="san:OutputGate" href="userambulance-gates.msan#OGReq2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E9yew1eoEeuDO48ZOAly1w" targetArrow="NoDecoration" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceOutputGate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E9yexFeoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceOutputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E9zF0FeoEeuDO48ZOAly1w" sourceNode="_E9u0Y1eoEeuDO48ZOAly1w" targetNode="_E9rKA1eoEeuDO48ZOAly1w">
+      <target xmi:type="san:OutputGate" href="userambulance-gates.msan#OGReq1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E9zF0VeoEeuDO48ZOAly1w" targetArrow="NoDecoration" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceOutputGate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E9zF0leoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='sourceOutputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E9zF1VeoEeuDO48ZOAly1w" sourceNode="_E9u0YFeoEeuDO48ZOAly1w" targetNode="_E9m4lVeoEeuDO48ZOAly1w">
+      <target xmi:type="san:OutputGate" href="userambulance-gates.msan#OGReq2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E9zF1leoEeuDO48ZOAly1w" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetOutputGate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E9zF11eoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetOutputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E9zs4FeoEeuDO48ZOAly1w" sourceNode="_E9u0Y1eoEeuDO48ZOAly1w" targetNode="_E9m4kleoEeuDO48ZOAly1w">
+      <target xmi:type="san:OutputGate" href="userambulance-gates.msan#OGReq1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E9zs4VeoEeuDO48ZOAly1w" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetOutputGate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E9zs4leoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='targetOutputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E9zs5VeoEeuDO48ZOAly1w" sourceNode="_E9lDYFeoEeuDO48ZOAly1w" targetNode="_E9sYIVeoEeuDO48ZOAly1w">
+      <target xmi:type="san:InputArc" href="userambulance-gates.msan#//@arcs.0"/>
+      <semanticElements xmi:type="san:InputArc" href="userambulance-gates.msan#//@arcs.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E90T8FeoEeuDO48ZOAly1w" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E90T8VeoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E90T9FeoEeuDO48ZOAly1w" sourceNode="_E9lqcleoEeuDO48ZOAly1w" targetNode="_E9sYJFeoEeuDO48ZOAly1w">
+      <target xmi:type="san:InputArc" href="userambulance-gates.msan#//@arcs.1"/>
+      <semanticElements xmi:type="san:InputArc" href="userambulance-gates.msan#//@arcs.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E90T9VeoEeuDO48ZOAly1w" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E90T9leoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='InputArc']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E907AFeoEeuDO48ZOAly1w" sourceNode="_E9s_MVeoEeuDO48ZOAly1w" targetNode="_E9mRgleoEeuDO48ZOAly1w">
+      <target xmi:type="san:OutputArc" href="userambulance-gates.msan#//@arcs.2"/>
+      <semanticElements xmi:type="san:OutputArc" href="userambulance-gates.msan#//@arcs.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E907AVeoEeuDO48ZOAly1w" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E907AleoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E91iEFeoEeuDO48ZOAly1w" sourceNode="_E9tmQFeoEeuDO48ZOAly1w" targetNode="_E9mRgleoEeuDO48ZOAly1w">
+      <target xmi:type="san:OutputArc" href="userambulance-gates.msan#//@arcs.3"/>
+      <semanticElements xmi:type="san:OutputArc" href="userambulance-gates.msan#//@arcs.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E91iEVeoEeuDO48ZOAly1w" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E91iEleoEeuDO48ZOAly1w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@edgeMappings[name='OutputArc']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_E9gK4VeoEeuDO48ZOAly1w"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer"/>
+    <target xmi:type="san:SAN" href="userambulance-gates.msan#Ambulance User"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

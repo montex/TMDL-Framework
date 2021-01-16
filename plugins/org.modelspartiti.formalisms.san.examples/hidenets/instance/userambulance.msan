@@ -56,10 +56,8 @@
   </activities>
   <arcs xsi:type="san:InputArc" source="#Failed" target="#Fail"/>
   <arcs xsi:type="san:InputArc" source="#Dropped" target="#Drop"/>
-  <arcs xsi:type="san:OutputArc"/>
   <arcs xsi:type="san:OutputArc" source="#//@activities[name='Request']/@cases[ID='2']" target="#Req7"/>
   <arcs xsi:type="san:OutputArc" source="#//@activities[name='Request']/@cases[ID='1']" target="#Req3"/>
-  <arcs xsi:type="san:OutputArc" target="#Idle"/>
   <arcs xsi:type="san:OutputArc" source="#//@activities[name='Fail']/@cases[ID='0']" target="#Idle"/>
   <arcs xsi:type="san:OutputArc" source="#//@activities[name='Drop']/@cases[ID='0']" target="#Idle"/>
   <gates xsi:type="san:InputGate" name="IGRequest" places="#Idle" activity="#Request">

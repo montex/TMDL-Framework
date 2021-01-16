@@ -31,15 +31,15 @@
   <parameters xsi:type="core:ParameterArray" name="S"/>
   <gates xsi:type="sant:InputGateTemplate" name="IGRequest" places="Idle" activity="Request">
     <function>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments xsi:type="san:ExpressionText" text="Idle[@ALL]->Mark() = 0;"/>
     </function>
     <predicate>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments xsi:type="san:ExpressionText" text="Idle[@ALL]->Mark() > 0"/>
     </predicate>
   </gates>
   <gates xsi:type="sant:OutputGateTemplate" name="OGRequest" placeTemplate="Req" activity="Request">
     <function>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments xsi:type="san:ExpressionText" text="Req[@S[@CASE]]->Mark = 1;"/>
     </function>
   </gates>
   <arcs xsi:type="sant:InputArc" source="Failed" target="Fail"/>
