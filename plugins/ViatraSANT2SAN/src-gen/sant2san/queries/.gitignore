@@ -10,3 +10,9 @@
 /PlaceInstance.java
 /SANTInstance.java
 /Sant2SanQueries.java
+/.OutputGateTemplateInstance.java._trace
+/.InputGateTemplateInstance.java._trace
+/.PlaceTemplateInstance.java._trace
+/.TimedActivityTemplateInstance.java._trace
+/InputGateTemplateInstance.java
+/OutputGateTemplateInstance.java

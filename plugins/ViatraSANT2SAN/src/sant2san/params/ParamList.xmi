@@ -9,16 +9,14 @@
       xsi:type="core:AssignmentArray">
     <parameter
         href="/ViatraSANT2SAN/src/user.sant#P"/>
-    <values>0.7</values>
-    <values>0.2</values>
-    <values>0.1</values>
+    <values>0.6</values>
+    <values>0.4</values>
   </assignments>
   <assignments
       xsi:type="core:AssignmentArray">
     <parameter
         href="/ViatraSANT2SAN/src/user.sant#S"/>
-    <values>1.0</values>
-    <values>6.0</values>
+    <values>3.0</values>
     <values>7.0</values>
   </assignments>
 </paramlist:ParamList>

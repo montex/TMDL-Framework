@@ -41,7 +41,7 @@ import org.modelspartiti.formalisms.san.sant.TimedActivityTemplate;
  * 
  * <p>Original source:
  *         <code><pre>
- *         pattern TimedActivityTemplateInstance ( activity : TimedActivityTemplate){
+ *         pattern TimedActivityTemplateInstance ( activity : TimedActivityTemplate ){
  *         	TimedActivityTemplate(activity);
  *         }
  * </pre></code>
@@ -234,7 +234,7 @@ public final class TimedActivityTemplateInstance extends BaseGeneratedEMFQuerySp
    * 
    * <p>Original source:
    * <code><pre>
-   * pattern TimedActivityTemplateInstance ( activity : TimedActivityTemplate){
+   * pattern TimedActivityTemplateInstance ( activity : TimedActivityTemplate ){
    * 	TimedActivityTemplate(activity);
    * }
    * </pre></code>

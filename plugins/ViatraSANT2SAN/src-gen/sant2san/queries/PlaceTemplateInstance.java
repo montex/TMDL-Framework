@@ -41,7 +41,7 @@ import org.modelspartiti.formalisms.san.sant.PlaceTemplate;
  * 
  * <p>Original source:
  *         <code><pre>
- *         pattern PlaceTemplateInstance ( place: PlaceTemplate){
+ *         pattern PlaceTemplateInstance ( place: PlaceTemplate ){
  *         	PlaceTemplate(place);
  *         }
  * </pre></code>
@@ -234,7 +234,7 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
    * 
    * <p>Original source:
    * <code><pre>
-   * pattern PlaceTemplateInstance ( place: PlaceTemplate){
+   * pattern PlaceTemplateInstance ( place: PlaceTemplate ){
    * 	PlaceTemplate(place);
    * }
    * </pre></code>

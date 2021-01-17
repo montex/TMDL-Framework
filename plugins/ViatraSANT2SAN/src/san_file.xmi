@@ -4,19 +4,15 @@
     <type xsi:type="san:PrimitiveType"/>
     <marking xsi:type="san:MarkingSimple"/>
   </places>
+  <places name="Idle">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking xsi:type="san:MarkingSimple"/>
+  </places>
   <places name="Failed">
     <type xsi:type="san:PrimitiveType"/>
     <marking xsi:type="san:MarkingSimple"/>
   </places>
-  <places name="Idle">
-    <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple" value="1"/>
-  </places>
-  <places name="Req1.0">
-    <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple"/>
-  </places>
-  <places name="Req6.0">
+  <places name="Req3.0">
     <type xsi:type="san:PrimitiveType"/>
     <marking xsi:type="san:MarkingSimple"/>
   </places>
@@ -24,47 +20,45 @@
     <type xsi:type="san:PrimitiveType"/>
     <marking xsi:type="san:MarkingSimple"/>
   </places>
-  <activities xsi:type="san:InstantaneousActivity" name="Drop">
-    <cases>
-      <p>
-        <segments xsi:type="san:ExpressionText" text="1.0"/>
-      </p>
-    </cases>
-  </activities>
   <activities xsi:type="san:InstantaneousActivity" name="Fail">
     <cases>
       <p>
-        <segments xsi:type="san:ExpressionText" text="1.0"/>
+        <segments xsi:type="san:ExpressionText" text="1"/>
+      </p>
+    </cases>
+  </activities>
+  <activities xsi:type="san:InstantaneousActivity" name="Drop">
+    <cases>
+      <p>
+        <segments xsi:type="san:ExpressionText" text="1"/>
       </p>
     </cases>
   </activities>
   <activities xsi:type="san:TimedActivity" name="Request">
-    <cases ID="1">
+    <cases ID="3">
       <p>
-        <segments xsi:type="san:ExpressionText" text="0.7"/>
-      </p>
-    </cases>
-    <cases ID="6">
-      <p>
-        <segments xsi:type="san:ExpressionText" text="0.2"/>
+        <segments xsi:type="san:ExpressionText" text="0.6"/>
       </p>
     </cases>
     <cases ID="7">
       <p>
-        <segments xsi:type="san:ExpressionText" text="0.1"/>
+        <segments xsi:type="san:ExpressionText" text="0.4"/>
       </p>
     </cases>
-    <timeDistribution xsi:type="san:Uniform" parameters="rate">
-      <lowerBound>
-        <segments xsi:type="san:ExpressionText" text="0"/>
-      </lowerBound>
-      <upperBound>
-        <segments xsi:type="san:ExpressionText" text="0"/>
-      </upperBound>
-    </timeDistribution>
+    <timeDistribution xsi:type="san:Uniform" parameters="rate"/>
   </activities>
   <arcs xsi:type="san:InputArc" source="Dropped" target="Drop"/>
   <arcs xsi:type="san:InputArc" source="Failed" target="Fail"/>
   <arcs xsi:type="san:OutputArc" source="//@activities[name='Drop']/@cases[ID='0']" target="Idle"/>
   <arcs xsi:type="san:OutputArc" source="//@activities[name='Fail']/@cases[ID='0']" target="Idle"/>
+  <gates xsi:type="san:InputGate" name="IGRequest" places="Idle" activity="Request">
+    <function>
+      <segments xsi:type="san:ExpressionText" text="@ALL(Idle) { Idle->Mark() = 0 }; "/>
+    </function>
+    <predicate>
+      <segments xsi:type="san:ExpressionText" text="@ALL(Idle) { Idle->Mark() > 0 }"/>
+    </predicate>
+  </gates>
+  <gates xsi:type="san:OutputGate" name="OGRequest3" places="Req3.0" activityCase="//@activities[name='Request']/@cases[ID='3']"/>
+  <gates xsi:type="san:OutputGate" name="OGRequest7" places="Req7.0" activityCase="//@activities[name='Request']/@cases[ID='7']"/>
 </san:SAN>

@@ -12,6 +12,8 @@
       <query-specification fqn="sant2san.queries.TimedActivityTemplateInstance"/>
       <query-specification fqn="sant2san.queries.InputArcInstance"/>
       <query-specification fqn="sant2san.queries.OutputArcInstance"/>
+      <query-specification fqn="sant2san.queries.InputGateTemplateInstance"/>
+      <query-specification fqn="sant2san.queries.OutputGateTemplateInstance"/>
     </group>
   </extension>
 </plugin>
