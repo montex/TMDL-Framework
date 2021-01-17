@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:san="http://www.modelspartiti.org/templates/san/san" xmlns:sant="http://www.modelspartiti.org/templates/san/sant" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_dsw08E3CEeqMJOTn_REb9g" selectedViews="_r2V-wE3CEeqMJOTn_REb9g _r3KeIE3CEeqMJOTn_REb9g" version="14.1.0.201810161215">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:san="http://www.modelspartiti.org/templates/san/san" xmlns:sant="http://www.modelspartiti.org/templates/san/sant" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_dsw08E3CEeqMJOTn_REb9g" selectedViews="_r2V-wE3CEeqMJOTn_REb9g _r3KeIE3CEeqMJOTn_REb9g" version="14.3.1.202003261200">
     <semanticResources>user.sant</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_r2V-wE3CEeqMJOTn_REb9g">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']"/>
@@ -13,7 +13,7 @@
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']"/>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram uid="_0KYVMFZMEeq9pbT7dw7Rtw" name="User model SANT">
+  <diagram:DSemanticDiagram uid="_0KYVMFZMEeq9pbT7dw7Rtw">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_0KhfIFZMEeq9pbT7dw7Rtw" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_0KhfIVZMEeq9pbT7dw7Rtw"/>
     </ownedAnnotationEntries>

@@ -1,49 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sant:SANT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core" xmlns:san="http://www.modelspartiti.org/templates/san/san" xmlns:sant="http://www.modelspartiti.org/templates/san/sant" name="User">
-  <templatePlaces name="Req">
-    <multiplicity xsi:type="core:MultiplicityParametric" parameter="S"/>
+<sant:SANT xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core"
+    xmlns:san="http://www.modelspartiti.org/templates/san/san"
+    xmlns:sant="http://www.modelspartiti.org/templates/san/sant"
+    name="User">
+  <templatePlaces
+      name="Req">
+    <multiplicity
+        xsi:type="core:MultiplicityParametric"
+        parameter="S"/>
   </templatePlaces>
   <places name="Failed">
     <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple"/>
+    <marking
+        xsi:type="san:MarkingSimple"/>
   </places>
   <places name="Dropped">
     <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple"/>
+    <marking
+        xsi:type="san:MarkingSimple"/>
   </places>
   <places name="Idle">
     <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple" value="1"/>
+    <marking
+        xsi:type="san:MarkingSimple"/>
   </places>
-  <activityTemplates xsi:type="sant:InstantaneousActivityTemplate" name="Fail"/>
-  <activityTemplates xsi:type="sant:InstantaneousActivityTemplate" name="Drop"/>
-  <activityTemplates xsi:type="sant:TimedActivityTemplate" name="Request">
-    <casesTemplate xsi:type="sant:CasesSpecificationProbabilityArray" caseParameter="S" pValues="P"/>
-    <timeDistribution xsi:type="san:Uniform" parameters="rate"/>
+  <activityTemplates
+      xsi:type="sant:InstantaneousActivityTemplate"
+      name="Fail">
+    <casesTemplate
+        xsi:type="sant:CasesSpecificationConcrete">
+      <cases>
+        <p>
+          <segments
+              xsi:type="san:ExpressionText"
+              text="1"/>
+        </p>
+      </cases>
+    </casesTemplate>
+  </activityTemplates>
+  <activityTemplates
+      xsi:type="sant:InstantaneousActivityTemplate"
+      name="Drop">
+    <casesTemplate
+        xsi:type="sant:CasesSpecificationConcrete">
+      <cases>
+        <p>
+          <segments
+              xsi:type="san:ExpressionText"
+              text="1"/>
+        </p>
+      </cases>
+    </casesTemplate>
+  </activityTemplates>
+  <activityTemplates
+      xsi:type="sant:TimedActivityTemplate"
+      name="Request">
+    <casesTemplate
+        xsi:type="sant:CasesSpecificationProbabilityArray"
+        caseParameter="S"
+        pValues="P"/>
+    <timeDistribution
+        xsi:type="san:Uniform"
+        parameters="rate"/>
     <activation>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments
+          xsi:type="san:ExpressionText"
+          text=""/>
     </activation>
     <reactivation>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments
+          xsi:type="san:ExpressionText"
+          text=""/>
     </reactivation>
   </activityTemplates>
-  <parameters xsi:type="core:ParameterArray" name="P"/>
-  <parameters xsi:type="core:ParameterArray" name="S"/>
-  <gates xsi:type="sant:InputGateTemplate" name="IGRequest" places="Idle" activity="Request">
+  <parameters
+      xsi:type="core:ParameterArray"
+      name="P"/>
+  <parameters
+      xsi:type="core:ParameterArray"
+      name="S"/>
+  <gates xsi:type="sant:InputGateTemplate"
+      name="IGRequest"
+      places="Idle"
+      activity="Request">
     <function>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments
+          xsi:type="san:ExpressionText"
+          text="@ALL(Idle) { Idle->Mark() = 0 }; "/>
     </function>
     <predicate>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments
+          xsi:type="san:ExpressionText"
+          text="@ALL(Idle) { Idle->Mark() > 0 }"/>
     </predicate>
   </gates>
-  <gates xsi:type="sant:OutputGateTemplate" name="OGRequest" placeTemplate="Req" activity="Request">
+  <gates xsi:type="sant:OutputGateTemplate"
+      name="OGRequest"
+      placeTemplate="Req"
+      activity="Request">
     <function>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments
+          xsi:type="san:ExpressionText"
+          text="Req@S[@CASE]->Mark = 1;"/>
     </function>
   </gates>
-  <arcs xsi:type="sant:InputArc" source="Failed" target="Fail"/>
-  <arcs xsi:type="sant:InputArc" source="Dropped" target="Drop"/>
-  <arcs xsi:type="sant:OutputArc" source="Fail" target="Idle"/>
-  <arcs xsi:type="sant:OutputArc" source="Drop" target="Idle"/>
+  <arcs xsi:type="sant:InputArc"
+      source="Failed"
+      target="Fail"/>
+  <arcs xsi:type="sant:InputArc"
+      source="Dropped"
+      target="Drop"/>
+  <arcs xsi:type="sant:OutputArc"
+      source="Fail"
+      target="Idle"/>
+  <arcs xsi:type="sant:OutputArc"
+      source="Drop"
+      target="Idle"/>
 </sant:SANT>
