@@ -25,8 +25,7 @@
   <places name="Idle">
     <type xsi:type="san:PrimitiveType"/>
     <marking
-        xsi:type="san:MarkingSimple"
-        value="1"/>
+        xsi:type="san:MarkingSimple"/>
   </places>
   <activityTemplates
       xsi:type="sant:InstantaneousActivityTemplate"
@@ -37,7 +36,7 @@
         <p>
           <segments
               xsi:type="san:ExpressionText"
-              text="1.0"/>
+              text="1"/>
         </p>
       </cases>
     </casesTemplate>
@@ -51,7 +50,7 @@
         <p>
           <segments
               xsi:type="san:ExpressionText"
-              text="1.0"/>
+              text="1"/>
         </p>
       </cases>
     </casesTemplate>
@@ -65,18 +64,17 @@
         pValues="P"/>
     <timeDistribution
         xsi:type="san:Uniform"
-        parameters="rate">
-      <lowerBound>
-        <segments
-            xsi:type="san:ExpressionText"
-            text="0"/>
-      </lowerBound>
-      <upperBound>
-        <segments
-            xsi:type="san:ExpressionText"
-            text="0"/>
-      </upperBound>
-    </timeDistribution>
+        parameters="rate"/>
+    <activation>
+      <segments
+          xsi:type="san:ExpressionText"
+          text=""/>
+    </activation>
+    <reactivation>
+      <segments
+          xsi:type="san:ExpressionText"
+          text=""/>
+    </reactivation>
   </activityTemplates>
   <parameters
       xsi:type="core:ParameterArray"
@@ -87,28 +85,26 @@
   <gates xsi:type="sant:InputGateTemplate"
       name="IGRequest"
       places="Idle"
-      placeTemplate="Req"
       activity="Request">
     <function>
       <segments
           xsi:type="san:ExpressionText"
-          text="0"/>
+          text="@ALL(Idle) { Idle->Mark() = 0 }; "/>
     </function>
     <predicate>
       <segments
           xsi:type="san:ExpressionText"
-          text="0"/>
+          text="@ALL(Idle) { Idle->Mark() > 0 }"/>
     </predicate>
   </gates>
   <gates xsi:type="sant:OutputGateTemplate"
       name="OGRequest"
-      places="Failed Dropped Idle"
       placeTemplate="Req"
       activity="Request">
     <function>
       <segments
           xsi:type="san:ExpressionText"
-          text="1"/>
+          text="Req@S[@CASE]->Mark = 1;"/>
     </function>
   </gates>
   <arcs xsi:type="sant:InputArc"

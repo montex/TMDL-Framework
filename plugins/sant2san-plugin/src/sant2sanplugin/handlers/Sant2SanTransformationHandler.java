@@ -24,6 +24,7 @@ import org.modelspartiti.formalisms.san.sant.SANT;
 import org.modelspartiti.formalisms.san.sant.SANTPackage;
 import org.modelspartiti.infrastructure.tmdl.core.Assignment;
 import org.modelspartiti.infrastructure.tmdl.core.AssignmentArray;
+import org.modelspartiti.infrastructure.tmdl.core.AssignmentSimple;
 import org.modelspartiti.infrastructure.tmdl.core.CorePackage;
 
 import paramlist.ParamList;
@@ -63,7 +64,7 @@ public class Sant2SanTransformationHandler extends AbstractHandler implements IH
         IStructuredSelection selection =
             (IStructuredSelection) HandlerUtil.getCurrentSelection(event);
         
-        sant = (SANT) selection.getFirstElement();        
+        sant = (SANT) selection.getFirstElement();    
         san = SANFactory.eINSTANCE.createSAN();
         
         loadParamsFromXMI(URI.createFileURI("/ViatraSANT2SAN/src/sant2san/params/ParamList.xmi"),params);
@@ -132,13 +133,14 @@ public class Sant2SanTransformationHandler extends AbstractHandler implements IH
 //		}
 //        EcoreUtil.resolveAll(resSet);
     	
+    	//TODO fare semplicementa la add, togliere codice di debug
         for(Iterator it = paramsRes.getContents().get(0).eAllContents(); it.hasNext(); ) {
         	 Object assign = it.next();
         	if (assign instanceof AssignmentArray) {
         		String name = ((AssignmentArray) assign).getParameter().getName();
         		System.out.println(name);
             	params.add((AssignmentArray) assign);
-			}
+			} 
         }
         
 	}

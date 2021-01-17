@@ -1,25 +1,28 @@
 package sant2san.queries
 
+import org.eclipse.emf.common.util.BasicEList
+import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine
 import org.eclipse.viatra.query.runtime.emf.EMFScope
 import org.eclipse.viatra.transformation.runtime.emf.modelmanipulation.IModelManipulations
 import org.eclipse.viatra.transformation.runtime.emf.modelmanipulation.SimpleModelManipulations
-import org.eclipse.emf.ecore.resource.Resource
-import org.modelspartiti.formalisms.san.sant.SANTPackage
-import org.modelspartiti.formalisms.san.san.SANPackage
-import org.modelspartiti.formalisms.san.sant.SANT
-import org.modelspartiti.formalisms.san.san.SAN
-import org.modelspartiti.infrastructure.tmdl.core.CorePackage
-import org.eclipse.emf.common.util.EList
-import org.modelspartiti.infrastructure.tmdl.core.Assignment
-import org.modelspartiti.infrastructure.tmdl.core.ParameterArray
-import org.modelspartiti.infrastructure.tmdl.core.impl.ParameterArrayImpl
-import org.modelspartiti.infrastructure.tmdl.core.MultiplicityParametric
-import org.modelspartiti.infrastructure.tmdl.core.Multiplicity
-import org.modelspartiti.infrastructure.tmdl.core.impl.MultiplicityImpl
-import java.lang.reflect.Parameter
-import org.modelspartiti.infrastructure.tmdl.core.AssignmentArray
+import org.modelspartiti.formalisms.san.san.Activity
+import org.modelspartiti.formalisms.san.san.ExpressionText
 import org.modelspartiti.formalisms.san.san.Place
+import org.modelspartiti.formalisms.san.san.SAN
+import org.modelspartiti.formalisms.san.san.SANPackage
+import org.modelspartiti.formalisms.san.san.impl.InputGateImpl
+import org.modelspartiti.formalisms.san.san.impl.OutputGateImpl
+import org.modelspartiti.formalisms.san.sant.InputGateTemplate
+import org.modelspartiti.formalisms.san.sant.OutputGateTemplate
+import org.modelspartiti.formalisms.san.sant.SANT
+import org.modelspartiti.formalisms.san.sant.SANTPackage
+import org.modelspartiti.infrastructure.tmdl.core.AssignmentArray
+import org.modelspartiti.infrastructure.tmdl.core.CorePackage
+import org.modelspartiti.infrastructure.tmdl.core.MultiplicityParametric
+import org.modelspartiti.infrastructure.tmdl.core.ParameterArray
 
 class Sant2SanTransformation {
 	/** VIATRA Query Pattern group **/
@@ -35,6 +38,10 @@ class Sant2SanTransformation {
 	protected ViatraQueryEngine engine
 	protected Resource resource
 
+	/* costanti */
+	val FUNCTION_CONST = 0;
+	val PREDICATE_CONST = 1;
+
 	val SANT sant
 	val SAN san
 	val EList<AssignmentArray> params
@@ -45,6 +52,7 @@ class Sant2SanTransformation {
 		this.params = params
 		resource = sant.eResource
 		val scope = new EMFScope(resource)
+		// this.engine = engine
 		this.engine = ViatraQueryEngine.on(scope)
 		this.manipulation = new SimpleModelManipulations(engine)
 	// execute
@@ -148,6 +156,131 @@ class Sant2SanTransformation {
 			]
 
 		}
+
+		val inputGatesTemp = engine.getMatcher(inputGateTemplateInstance).allMatches
+
+		for (match : inputGatesTemp) {
+			val inputGate_temp = match.get(0) as InputGateTemplate
+
+			san.createChild(SAN_Gates, sanPackage.inputGate) => [
+
+				val EList<Activity> inputActivities = new BasicEList<Activity>()
+				val EList<Place> inputPlaces = new BasicEList<Place>()
+
+				for (act : inputGate_temp.activity) {
+					inputActivities.add(san.activities.findFirst[it.name == act.name])
+				}
+				for (place : inputGate_temp.places) {
+					inputPlaces.add(san.places.findFirst[it.name == place.name])
+				}
+				for (place : inputGate_temp.placeTemplate) {
+					inputPlaces.addAll(san.places.filter[it.name.matches(^place.name)])
+				}
+
+				add(inputGate_Activity, inputActivities)
+				set(namedElement_Name, inputGate_temp.name)
+				set(gate_Function, inputGate_temp.function)
+				set(inputGate_Predicate, inputGate_temp.predicate)
+				add(gate_Places, inputPlaces)
+			]
+
+		}
+
+		val outputGatesTemp = engine.getMatcher(outputGateTemplateInstance).allMatches
+
+		for (match : outputGatesTemp) {
+			val outputGate_temp = match.get(0) as OutputGateTemplate
+
+			for (act : outputGate_temp.activity) {
+				val cases = san.activities.findFirst[it.name == act.name].cases
+
+				for (cs : cases) {
+
+					san.createChild(SAN_Gates, sanPackage.outputGate) => [
+
+						// val EList<Case> outputActivityCases = new BasicEList<Case>()
+						val EList<Place> outuputPlaces = new BasicEList<Place>()
+
+						for (place : outputGate_temp.places) {
+							outuputPlaces.add(san.places.findFirst[it.name == place.name])
+						}
+						for (place : outputGate_temp.placeTemplate) {
+							outuputPlaces.add(san.places.findFirst[it.name.matches(place.name + cs.ID.toString + ".0")])
+						}
+
+						add(outputGate_ActivityCase, cs)
+						set(namedElement_Name, outputGate_temp.name.concat(cs.ID.toString))
+						add(gate_Places, outuputPlaces)
+						val exp = outputGate_temp.function.eAllContents.
+							findFirst[it instanceof ExpressionText] as ExpressionText
+						expEval(FUNCTION_CONST, exp.text, it)
+					// add(gate_Function, outputGate_temp.function)
+					]
+
+				}
+			// outputActivityCases.addAll(cases) // oridne giusto?
+			}
+
+		}
+
+	}
+
+	/*
+	 * expType: 0 = function, 1 = predicate
+	 * expText: testo expression
+	 */
+	private def String expEval(int expType, String expText, EObject gate) {
+
+		var subStr = ""
+		var expEvalued = expText
+
+		if (gate instanceof InputGateImpl) {
+//			if (expType == FUNCTION_CONST) {
+//				if (expText.matches(".*@ALL.*")) {
+//					println("entrato ALL")
+//					subStr = expText.substring(expText.indexOf("@ALL(") + 1, expText.indexOf(")") + 1)
+//					println(subStr)
+//				}
+//			} else if (expType == PREDICATE_CONST) {
+//				if (expText.matches(".*@ALL.*")) {
+//					println("entrato ALL")
+//					subStr = expText.substring(expText.indexOf("@ALL(") + 1, expText.indexOf(")") + 1)
+//					println(subStr)
+//
+//				}
+//			}
+		} else if (gate instanceof OutputGateImpl) {
+			if (expType == FUNCTION_CONST) {
+
+				if (expText.matches(".*@ALL.*")) {
+					println("entrato ALL")
+					subStr = expText.substring(expText.indexOf("@ALL(") + 1, expText.indexOf(")") + 1)
+					println(subStr)
+
+				} else if (expText.matches(".*@CASE.*")) {
+					println("entrato CASE")
+					expEvalued = expEvalued.replace("@CASE", gate.activityCase.get(0).ID.toString)
+					expEvalued = expEval(expType, expEvalued, gate)
+				}
+
+			}
+		}
+
+		if (expText.matches(".*@..*")) {
+			println("entrato Param")
+			subStr = expText.substring(expText.indexOf("@") + 1, expText.indexOf("@") + 2)
+			println(subStr)
+			
+			expEvalued = expEvalued.replace("@" + subStr, "Val") // TODO AssignmentArray -> Assignment
+			expEvalued = expEval(expType, expEvalued, gate)
+		} else if (expText.matches(".*@.\\[.*")) {
+			println("entrato vector")
+			subStr = expText.substring(expText.indexOf("@") + 1, expText.indexOf("@") + 2)
+			println(subStr)
+		}
+
+		println(expEvalued)
+		return expEvalued
 
 	}
 
