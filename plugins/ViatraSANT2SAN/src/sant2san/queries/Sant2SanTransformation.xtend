@@ -23,6 +23,11 @@ import org.modelspartiti.infrastructure.tmdl.core.AssignmentArray
 import org.modelspartiti.infrastructure.tmdl.core.CorePackage
 import org.modelspartiti.infrastructure.tmdl.core.MultiplicityParametric
 import org.modelspartiti.infrastructure.tmdl.core.ParameterArray
+import org.modelspartiti.formalisms.san.san.Expression
+import org.modelspartiti.formalisms.san.san.NamedElement
+import com.google.common.collect.Iterators
+import java.util.List
+import java.util.Iterator
 
 class Sant2SanTransformation {
 	/** VIATRA Query Pattern group **/
@@ -119,7 +124,7 @@ class Sant2SanTransformation {
 			for (placeVal : values) {
 				val place = match.place
 				san.createChild(SAN_Places, sanPackage.place) => [
-					set(namedElement_Name, place.name.concat(placeVal.toString))
+					set(namedElement_Name, place.name.concat(placeVal.intValue.toString))
 					it.createChild(place_Type, primitiveType)
 					it.createChild(place_Marking, markingSimple)
 				]
@@ -128,6 +133,7 @@ class Sant2SanTransformation {
 		}
 
 		val timedActivitiesTemp = engine.getMatcher(timedActivityTemplateInstance).allMatches
+		//TODO activation and reactivation expression transformation
 
 		for (match : timedActivitiesTemp) {
 			val casesAssign = match.activity.casesTemplate.eGet(
@@ -179,9 +185,24 @@ class Sant2SanTransformation {
 
 				add(inputGate_Activity, inputActivities)
 				set(namedElement_Name, inputGate_temp.name)
-				set(gate_Function, inputGate_temp.function)
-				set(inputGate_Predicate, inputGate_temp.predicate)
 				add(gate_Places, inputPlaces)
+				var exp = inputGate_temp.function.segments.get(0) as ExpressionText // TODO una solo expression text ad expression?
+				val func_text = expEval(FUNCTION_CONST, exp.text, it)
+				it.createChild(gate_Function, sanPackage.expression) => [
+					it.createChild(expression_Segments, expressionText) => [
+						set(expressionText_Text, func_text)
+					]
+				]
+
+				println()
+				exp = inputGate_temp.predicate.segments.get(0) as ExpressionText; // TODO una solo expression text ad expression?
+				val pred_text = expEval(PREDICATE_CONST, exp.text, it)
+				it.createChild(inputGate_Predicate, sanPackage.expression) => [
+					it.createChild(expression_Segments, expressionText) => [
+						set(expressionText_Text, pred_text)
+					]
+				]
+
 			]
 
 		}
@@ -205,25 +226,30 @@ class Sant2SanTransformation {
 							outuputPlaces.add(san.places.findFirst[it.name == place.name])
 						}
 						for (place : outputGate_temp.placeTemplate) {
-							outuputPlaces.add(san.places.findFirst[it.name.matches(place.name + cs.ID.toString + ".0")])
+							outuputPlaces.add(san.places.findFirst[it.name.matches(place.name + cs.ID.toString)])
 						}
 
 						add(outputGate_ActivityCase, cs)
 						set(namedElement_Name, outputGate_temp.name.concat(cs.ID.toString))
 						add(gate_Places, outuputPlaces)
-						val exp = outputGate_temp.function.eAllContents.
-							findFirst[it instanceof ExpressionText] as ExpressionText
-						expEval(FUNCTION_CONST, exp.text, it)
-					// add(gate_Function, outputGate_temp.function)
+						var exp = outputGate_temp.function.segments.get(0) as ExpressionText // TODO una solo expression text ad expression?
+						val func_text = expEval(FUNCTION_CONST, exp.text, it)
+						it.createChild(gate_Function, sanPackage.expression) => [
+							it.createChild(expression_Segments, expressionText) => [
+								set(expressionText_Text, func_text)
+							]
+						]
+
 					]
 
 				}
-			// outputActivityCases.addAll(cases) // oridne giusto?
+
 			}
 
 		}
 
 	}
+	
 
 	/*
 	 * expType: 0 = function, 1 = predicate
@@ -235,48 +261,91 @@ class Sant2SanTransformation {
 		var expEvalued = expText
 
 		if (gate instanceof InputGateImpl) {
-//			if (expType == FUNCTION_CONST) {
-//				if (expText.matches(".*@ALL.*")) {
-//					println("entrato ALL")
-//					subStr = expText.substring(expText.indexOf("@ALL(") + 1, expText.indexOf(")") + 1)
-//					println(subStr)
-//				}
-//			} else if (expType == PREDICATE_CONST) {
-//				if (expText.matches(".*@ALL.*")) {
-//					println("entrato ALL")
-//					subStr = expText.substring(expText.indexOf("@ALL(") + 1, expText.indexOf(")") + 1)
-//					println(subStr)
-//
-//				}
-//			}
-		} else if (gate instanceof OutputGateImpl) {
 			if (expType == FUNCTION_CONST) {
+				if (expEvalued.matches(".*@ALL.*")) {
+					val entity = expEvalued.substring(expEvalued.indexOf("(") + 1, expEvalued.indexOf(")"))
+					subStr = expEvalued.substring(expEvalued.indexOf("{") + 1, expEvalued.indexOf("}"))
 
-				if (expText.matches(".*@ALL.*")) {
-					println("entrato ALL")
-					subStr = expText.substring(expText.indexOf("@ALL(") + 1, expText.indexOf(")") + 1)
-					println(subStr)
+					var entities = san.eAllContents.filter [
+						it instanceof NamedElement && it.eGet(namedElement_Name).toString.matches(entity + ".")
+					]
 
-				} else if (expText.matches(".*@CASE.*")) {
-					println("entrato CASE")
-					expEvalued = expEvalued.replace("@CASE", gate.activityCase.get(0).ID.toString)
+					var text = ""
+					while (entities.hasNext) {
+						val tmp = subStr
+						text = text + tmp.replace(entity, entities.next.eGet(namedElement_Name).toString)
+						if (entities.hasNext)
+							text = text + ";"
+					}
+
+					expEvalued = expEvalued.replace(subStr, text).trim
+					expEvalued = expEvalued.replace("@ALL(" + entity + ")", "").trim
+					expEvalued = expEvalued.replace("{", "").trim
+					expEvalued = expEvalued.replace("}", "").trim
 					expEvalued = expEval(expType, expEvalued, gate)
 				}
+			} else if (expType == PREDICATE_CONST) {
+				if (expEvalued.matches(".*@ALL.*")) {
+					val entity = expEvalued.substring(expEvalued.indexOf("(") + 1, expEvalued.indexOf(")"))
+					subStr = expEvalued.substring(expEvalued.indexOf("{") + 1, expEvalued.indexOf("}"))
 
+					var entities = san.eAllContents.filter [
+						it instanceof NamedElement && it.eGet(namedElement_Name).toString.matches(entity + ".")
+					]
+
+					var text = ""
+					while (entities.hasNext) {
+						val tmp = subStr
+						text = text + tmp.replace(entity, entities.next.eGet(namedElement_Name).toString)
+						if (entities.hasNext)
+							text = text + " && "
+					}
+
+					expEvalued = expEvalued.replace(subStr, text).trim
+					expEvalued = expEvalued.replace("@ALL(" + entity + ")", "").trim
+					expEvalued = expEvalued.replace("{", "").trim
+					expEvalued = expEvalued.replace("}", "").trim
+					expEvalued = expEval(expType, expEvalued, gate)
+				}
+			}
+		} else if (gate instanceof OutputGateImpl) {
+			if (expType == FUNCTION_CONST) {
+				if (expEvalued.matches(".*@CASE.*")) {
+					expEvalued = expEvalued.replace("@CASE", gate.activityCase.get(0).ID.toString)
+					expEvalued = expEval(expType, expEvalued, gate)
+				} else if (expEvalued.matches(".*@ALL.*")) {
+					val entity = expEvalued.substring(expEvalued.indexOf("(") + 1, expEvalued.indexOf(")"))
+					subStr = expEvalued.substring(expEvalued.indexOf("{") + 1, expEvalued.indexOf("}"))
+
+					var entities = san.eAllContents.filter [
+						it instanceof NamedElement && it.eGet(namedElement_Name).toString.matches(entity + ".")
+					]
+
+					var text = ""
+					while (entities.hasNext) {
+						val tmp = subStr
+						text = text + tmp.replace(entity, entities.next.eGet(namedElement_Name).toString)
+						if (entities.hasNext)
+							text = text + " && "
+					}
+
+					expEvalued = expEvalued.replace(subStr, text).trim
+					expEvalued = expEvalued.replace("@ALL(" + entity + ")", "").trim
+					expEvalued = expEvalued.replace("{", "").trim
+					expEvalued = expEvalued.replace("}", "").trim
+					expEvalued = expEval(expType, expEvalued, gate)
+				}
 			}
 		}
 
-		if (expText.matches(".*@..*")) {
+		if (expEvalued.matches(".*@..*")) {
 			println("entrato Param")
-			subStr = expText.substring(expText.indexOf("@") + 1, expText.indexOf("@") + 2)
-			println(subStr)
-			
+			subStr = expEvalued.substring(expEvalued.indexOf("@") + 1, expEvalued.indexOf("@") + 2)
 			expEvalued = expEvalued.replace("@" + subStr, "Val") // TODO AssignmentArray -> Assignment
 			expEvalued = expEval(expType, expEvalued, gate)
-		} else if (expText.matches(".*@.\\[.*")) {
+		} else if (expEvalued.matches(".*@.\\[.*")) {
 			println("entrato vector")
-			subStr = expText.substring(expText.indexOf("@") + 1, expText.indexOf("@") + 2)
-			println(subStr)
+			subStr = expEvalued.substring(expEvalued.indexOf("@") + 1, expEvalued.indexOf("@") + 2)
 		}
 
 		println(expEvalued)
