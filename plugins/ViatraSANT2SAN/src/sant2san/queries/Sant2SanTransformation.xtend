@@ -133,8 +133,7 @@ class Sant2SanTransformation {
 		}
 
 		val timedActivitiesTemp = engine.getMatcher(timedActivityTemplateInstance).allMatches
-		//TODO activation and reactivation expression transformation
-
+		// TODO activation and reactivation expression transformation
 		for (match : timedActivitiesTemp) {
 			val casesAssign = match.activity.casesTemplate.eGet(
 				casesSpecificationProbabilityArray_CaseParameter) as ParameterArray
@@ -194,7 +193,6 @@ class Sant2SanTransformation {
 					]
 				]
 
-				println()
 				exp = inputGate_temp.predicate.segments.get(0) as ExpressionText; // TODO una solo expression text ad expression?
 				val pred_text = expEval(PREDICATE_CONST, exp.text, it)
 				it.createChild(inputGate_Predicate, sanPackage.expression) => [
@@ -249,7 +247,6 @@ class Sant2SanTransformation {
 		}
 
 	}
-	
 
 	/*
 	 * expType: 0 = function, 1 = predicate
@@ -264,10 +261,12 @@ class Sant2SanTransformation {
 			if (expType == FUNCTION_CONST) {
 				if (expEvalued.matches(".*@ALL.*")) {
 					val entity = expEvalued.substring(expEvalued.indexOf("(") + 1, expEvalued.indexOf(")"))
+					println(entity)
 					subStr = expEvalued.substring(expEvalued.indexOf("{") + 1, expEvalued.indexOf("}"))
-
+					println(subStr)
 					var entities = san.eAllContents.filter [
-						it instanceof NamedElement && it.eGet(namedElement_Name).toString.matches(entity + ".")
+						it instanceof NamedElement && it.eGet(namedElement_Name).toString.matches(entity + "[0-9\\.]*") ||
+							it.eGet(namedElement_Name).toString.matches(entity)
 					]
 
 					var text = ""
@@ -277,11 +276,12 @@ class Sant2SanTransformation {
 						if (entities.hasNext)
 							text = text + ";"
 					}
-
+					println(text)
 					expEvalued = expEvalued.replace(subStr, text).trim
 					expEvalued = expEvalued.replace("@ALL(" + entity + ")", "").trim
 					expEvalued = expEvalued.replace("{", "").trim
 					expEvalued = expEvalued.replace("}", "").trim
+					println(expEvalued)
 					expEvalued = expEval(expType, expEvalued, gate)
 				}
 			} else if (expType == PREDICATE_CONST) {
@@ -290,7 +290,8 @@ class Sant2SanTransformation {
 					subStr = expEvalued.substring(expEvalued.indexOf("{") + 1, expEvalued.indexOf("}"))
 
 					var entities = san.eAllContents.filter [
-						it instanceof NamedElement && it.eGet(namedElement_Name).toString.matches(entity + ".")
+						it instanceof NamedElement && it.eGet(namedElement_Name).toString.matches(entity + "[0-9\\.]*") ||
+							it.eGet(namedElement_Name).toString.matches(entity)
 					]
 
 					var text = ""
@@ -318,7 +319,8 @@ class Sant2SanTransformation {
 					subStr = expEvalued.substring(expEvalued.indexOf("{") + 1, expEvalued.indexOf("}"))
 
 					var entities = san.eAllContents.filter [
-						it instanceof NamedElement && it.eGet(namedElement_Name).toString.matches(entity + ".")
+						it instanceof NamedElement && it.eGet(namedElement_Name).toString.matches(entity + "[0-9\\.]*") ||
+							it.eGet(namedElement_Name).toString.matches(entity)
 					]
 
 					var text = ""
