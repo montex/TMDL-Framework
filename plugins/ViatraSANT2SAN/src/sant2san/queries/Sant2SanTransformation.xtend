@@ -51,7 +51,7 @@ class Sant2SanTransformation {
 	val SAN san
 	val EList<AssignmentArray> params
 
-	new(SANT sant, SAN san, EList<AssignmentArray> params, ViatraQueryEngine engine) {
+	new(SANT sant, SAN san, EList<AssignmentArray> params) {
 		this.sant = sant
 		this.san = san
 		this.params = params

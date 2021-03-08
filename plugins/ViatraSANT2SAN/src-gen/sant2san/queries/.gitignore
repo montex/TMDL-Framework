@@ -16,3 +16,5 @@
 /.TimedActivityTemplateInstance.java._trace
 /InputGateTemplateInstance.java
 /OutputGateTemplateInstance.java
+/PlaceTemplateInstance.java
+/TimedActivityTemplateInstance.java
