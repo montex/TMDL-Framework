@@ -1,0 +1,6 @@
+-- @path MM=/TMDL-Framework/plugins/org.modelspartiti.infrastructure/model/tmdl.ecore
+-- @path MM1=/TMDL-Framework/plugins/org.modelspartiti.infrastructure/model/instance.ecore
+
+module template2instance;
+create OUT : MM1 from IN : MM;
+
