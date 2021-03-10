@@ -1,6 +1,6 @@
 -- FILE UPDATED
 
--- @path MM=/TMDL-Framework/plugins/org.modelspartiti.infrastructure/model/tmdl.ecore
+-- @path MM=/TMDL-Framework/plugins/org.modelspartiti.infrastructure/model/template.ecore
 -- @path MM1=/TMDL-Framework/plugins/org.modelspartiti.infrastructure/model/instance.ecore
 
 --module template2instance;
