@@ -11,7 +11,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InstanceAtomic" eSuperTypes="#//Instance">
     <eStructuralFeatures xsi:type="ecore:EReference" name="assignment" upperBound="-1"
-        eType="#//Assignment" containment="true"/>
+        eType="#//Parameter" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceTemplate" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="instanceVariable" lowerBound="1"
@@ -33,9 +33,8 @@
         upperBound="-1" eType="#//StateVariable" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StateVariableAtomic" eSuperTypes="#//StateVariable"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Assignment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="val" lowerBound="1" eType="#//Value"
         containment="true"/>
   </eClassifiers>
