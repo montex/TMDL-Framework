@@ -529,7 +529,8 @@ helper context TPL!param def: getValue(m : TPL!model) : TPL!param_value =
 	
 helper context TPL!instof def: getMultiplicity(p: Map(String,TPL!value)) : Sequence(Integer) =
 	if self.mult.oclIsUndefined() then
-		1.toSequence()
+		--1.toSequence()
+		self.role.getMultiplicity(p)
 	else
 		self.mult.resolve(p)
 	endif;
@@ -548,8 +549,9 @@ helper context TPL!mergebyname def: getPrefixes() : Sequence(String) =
 	let s: Sequence(String) = self.prefixes in
 	if s.oclIsUndefined() then Sequence{} else s endif;
 
+--prefix dovrebbe essere una collection di stringhe, per adesso prendo solo il primo elemento con ->first()
 helper context TPL!interfarray def: getPrefix() : String =
-	let s: String = self.prefix in
+	let s: String = self.prefix->first() in
 	if s.oclIsUndefined() then '' else (s+'$') endif;
 
 helper context TPL!mergeitem def: toString() : String =
