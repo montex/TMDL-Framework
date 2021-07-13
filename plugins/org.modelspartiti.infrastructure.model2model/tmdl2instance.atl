@@ -1,23 +1,23 @@
--- @path TPL=/TMDL-Framework/plugins/org.modelspartiti.infrastructure/model/sba-templates.ecore
--- @path JR=/TMDL-Framework/plugins/org.modelspartiti.infrastructure/model/sba-joinrep.ecore
+-- @path TPL=/TMDL-Framework/plugins/org.modelspartiti.infrastructure/model/tmdl.ecore
+-- @path JR=/TMDL-Framework/plugins/org.modelspartiti.infrastructure/model/instance.ecore
 
 -- @atlcompiler atl2010
 
-module tmdl2rjl;
+module tmdl2instance;
 create OUT : JR from IN : TPL;
 
 --Global Variables
 --helper def: modelID : Integer = 1;
-helper def: ruleMapper : Map(TupleType(mrule: TPL!mergerule, m: JR!model),Sequence(JR!sharedstate)) = Map{};
+helper def: ruleMapper : Map(TupleType(mrule: TPL!CompositionRule, m: JR!model),Sequence(JR!sharedstate)) = Map{};
 
 helper def: stack: Sequence(JR!model) = Sequence{};
-helper def: modelinfo: Map(JR!model, TupleType(t: TPL!template, idx: Integer, p: Map(String,TPL!value))) = Map{};
-helper def: modelrole: Map(JR!model, TPL!block) = Map{};
+helper def: modelinfo: Map(JR!model, TupleType(t: TPL!TemplateSpecification, idx: Integer, p: Map(String,TPL!Value))) = Map{};
+helper def: modelrole: Map(JR!model, TPL!Block) = Map{};
 
 ---ENTRYPOINT
 entrypoint rule system() {
 	using {
-		s : TPL!scenario = TPL!scenario->allInstances().debug()->first().debug(); -- debug per stampare l'oggetto sul quale viene chiamata
+		s : TPL!Scenario = TPL!Scenario->allInstances().debug()->first().debug(); -- debug per stampare l'oggetto sul quale viene chiamata
 		s_out: JR!scenario = thisModule.scenario(s);
 	}
 	do {	
@@ -36,9 +36,9 @@ entrypoint rule system() {
 	}
 }
 
-rule instantiate(c: TPL!component, mult: Sequence(Integer), params: Map(String,TPL!value)) {
+rule instantiate(c: TPL!Variant, mult: Sequence(Integer), params: Map(String,TPL!Value)) {
 	using {
-		p: Map(String,TPL!value) = Map{};
+		p: Map(String,TPL!Value) = Map{};
 		out : Sequence(JR!model) = Sequence{}; 
 	}
 	do {
@@ -50,13 +50,13 @@ rule instantiate(c: TPL!component, mult: Sequence(Integer), params: Map(String,T
 		--Union with passed parameters. Passed parameters have the precedence (overwrite the others)
 		params <- params.union(p);
 				
-		out <- thisModule.instantiateFromTemplate(c.template, c.name, mult, params, c.subcomponents);
+		out <- thisModule.instantiateFromTemplate(c.template, c.name, mult, params, c.realizations);
 		out;
 --		'>>>>> RETURN instantiate'.debug();
 	}
 }
 
-rule instantiateDefaultSubcomponent(block: TPL!block, mult: TPL!multiplicity, params: Map(String,TPL!value)) {
+rule instantiateDefaultSubcomponent(block: TPL!Block, mult: TPL!Multiplicity, params: Map(String,TPL!Value)) {
 	using {
 		out: Sequence(JR!model) = Sequence{};
 	}
@@ -66,16 +66,16 @@ rule instantiateDefaultSubcomponent(block: TPL!block, mult: TPL!multiplicity, pa
 	}
 }
 
-rule instantiateFromTemplate(t: TPL!template, name: String, mult: Sequence(Integer), p: Map(String,TPL!value), subs: Sequence(TPL!instof)) {
+rule instantiateFromTemplate(t: TPL!TemplateSpecification, name: String, mult: Sequence(Integer), p: Map(String,TPL!Value), subs: Sequence(TPL!BlockRealization)) {
 	using {
 		myMult: Sequence(Integer) = if mult.oclIsUndefined() then Sequence{1} else mult endif;
 		tmp: JR!model = OclUndefined;
 		tmpModels: Sequence(JR!model) = Sequence{};
-		defaultSubs: Sequence(TPL!block) = if t.isAtomic() then Sequence{} else t.submodules endif;
-		defaultParams: Sequence(TPL!param) = t.parameters;
-		boundParams: Map(String,TPL!value) = Map{};
-		blockMapping: Map(TPL!block,Sequence(JR!model)) = Map{};
-		blockCurrent: TPL!block = OclUndefined;
+		defaultSubs: Sequence(TPL!Block) = if t.isAtomic() then Sequence{} else t.submodules endif;
+		defaultParams: Sequence(TPL!Parameter) = t.parameters;
+		boundParams: Map(String,TPL!Value) = Map{};
+		blockMapping: Map(TPL!Block,Sequence(JR!model)) = Map{};
+		blockCurrent: TPL!Block = OclUndefined;
 
 		out: Sequence(JR!model) = Sequence{};
 	}
@@ -120,7 +120,7 @@ rule instantiateFromTemplate(t: TPL!template, name: String, mult: Sequence(Integ
 						boundParams <- boundParams.including(bind.ref.name, p.get(bind.source.name));				
 					}
 					--Find related block in the template
-					blockCurrent <- s.role;
+					blockCurrent <- s.block;
 					if(blockCurrent.oclIsUndefined()) {
 						blockCurrent <- t.submodules->select(e | e.ref = s.ref.template)->first();	
 					}
@@ -142,7 +142,7 @@ rule instantiateFromTemplate(t: TPL!template, name: String, mult: Sequence(Integ
 				}
 				--cerca i blocchi per cui è necessario creare componenti di default
 				for(b in defaultSubs) { 
-					if(not subs->select(e | e.ref.template = b.ref and (e.role = b or e.role = OclUndefined)).isEmpty()) {
+					if(not subs->select(e | e.ref.template = b.ref and (e.block = b or e.block = OclUndefined)).isEmpty()) {
 						--se fra i sottocomponenti ce n'è uno che "copre" il blocco specificato,
 						--allora non è necessario creare il default 
 						defaultSubs <- defaultSubs.excluding(b);	
@@ -199,7 +199,7 @@ rule setSharedStates() {
 		for(model in thisModule.stack) {
 			--skip atomic models: they do not have merge rules to apply
 			if (not model.oclIsKindOf(JR!submodel)) {
-				for(s in thisModule.modelinfo.get(model).t.mergerules) {
+				for(s in thisModule.modelinfo.get(model).t.rules) {
 					tmp <- thisModule.applyMergeRule(s,model);
 					thisModule.ruleMapper <- thisModule.ruleMapper.including(Tuple{mrule=s,m=model},tmp);
 					model.sharedstates <- model.sharedstates->append(tmp)->flatten();				
@@ -209,11 +209,11 @@ rule setSharedStates() {
 	}
 }
 
-rule applyMergeRule(r : TPL!mergerule, m : JR!model) {
+rule applyMergeRule(r : TPL!CompositionRule, m : JR!model) {
 	using {
 		out : Sequence(JR!sharedstate) = Sequence{};
 		tmp : JR!sharedstate = OclUndefined;
-		selItems : Sequence(TPL!mergeitem) = if r.oclIsKindOf(TPL!forward) then Sequence{r.ref} else r.ref endif;
+		selItems : Sequence(TPL!CompItem) = if r.oclIsKindOf(TPL!CompositionRuleForwards) then Sequence{r.ref} else r.ref endif;
 		selModels : Sequence(JR!model) = Sequence{};
 		targetItems : Sequence(TupleType(m: JR!model, name: String)) = Sequence{};
 		myName : String = r.name + '[' + r.refImmediateComposite().getPrefix() + thisModule.modelinfo.get(m).idx + ']';
@@ -241,11 +241,11 @@ rule applyMergeRule(r : TPL!mergerule, m : JR!model) {
 			for(model in selModels) {
 				--For all submodels of m that are originated from a rule of the same type as the one referenced
 				--by the shared-state variable that is processed, expand the variable
-				if(sh.item.oclIsKindOf(TPL!interf)) {
+				if(sh.item.oclIsKindOf(TPL!ModelInterfSimple)) {
 					--It is a single interface, just add it to the target items
 					targetItems <- targetItems.append(Tuple{m=model,name=sh.item.name});
 				}
-				else if(sh.item.oclIsKindOf(TPL!interfarray)) {
+				else if(sh.item.oclIsKindOf(TPL!ModelInterfArray)) {
 					--It is an array of atomic interfaces: resolve the multiplicity
 					for(i in sh.item.mult.resolve(thisModule.modelinfo.get(model).p)) {
 						targetItems <- targetItems.append(Tuple{m=model,name=sh.item.name + '[' + sh.item.getPrefix() + i + ']'});
@@ -265,12 +265,12 @@ rule applyMergeRule(r : TPL!mergerule, m : JR!model) {
 --		'<<<<<TARGET ITEMS>>>>>>'.debug();
 		targetItems.size().debug();
 		if(not targetItems.isEmpty()) {
-			if(r.oclIsKindOf(TPL!mergeall)) {
+			if(r.oclIsKindOf(TPL!CompositionRuleAll)) {
 				--mergeall elements
 				tmp <- thisModule.newSharedState(myName);
 				tmp.children <- targetItems->collect(e | thisModule.newStateVariable(e.m,e.name));
 				out <- out.append(tmp);
-			}else if(r.oclIsKindOf(TPL!forward)) {
+			}else if(r.oclIsKindOf(TPL!CompositionRuleForwards)) {
 				--forward elements
 				for(e in targetItems) {
 					if(e.m.getPrefix().size()>0 and e.name->indexOf(e.m.getPrefix()) > 0) {
@@ -289,7 +289,7 @@ rule applyMergeRule(r : TPL!mergerule, m : JR!model) {
 					tmp.children <- tmp.children.append(thisModule.newStateVariable(e.m,e.name));
 					out <- out.append(tmp);
 				}
-			}else if(r.oclIsKindOf(TPL!mergebyname)) {
+			}else if(r.oclIsKindOf(TPL!CompositionRuleMatch)) {
 				--mergebyname elements	
 				for(str in targetItems) {
 					mergeSet <- Set{};
@@ -352,7 +352,7 @@ rule applyMergeRule(r : TPL!mergerule, m : JR!model) {
 
 rule serializeParameters() {
 	using {
-		p: Map(String,TPL!value) = Map{};	
+		p: Map(String,TPL!Value) = Map{};	
 	}
 	do {
 		for(m in JR!submodel.allInstances()) {
@@ -393,12 +393,12 @@ lazy rule newStateVariable {
 
 lazy rule build_atomic {
 	from
-		t: TPL!atomic,
+		t: TPL!TemplateAtomic,
 		name: String
 	to
 		s : JR!submodel
 		(
-			source <- t.body,
+			source <- t.source,
 			name <- name
 		)
 }
@@ -416,7 +416,7 @@ lazy rule build_join {
 lazy rule parameter {
 	from 
 		n: String, 	
-		v: TPL!value
+		v: TPL!Value
 	to 
 		p: JR!parameter 
 		(
@@ -427,7 +427,7 @@ lazy rule parameter {
 
 lazy rule scenario {
 	from
-		s: TPL!scenario
+		s: TPL!Scenario
 	to
 		sout: JR!scenario
 		(
@@ -449,7 +449,7 @@ lazy rule value_double {
 }
 lazy rule array_int {
 	from
-		v: TPL!array_int
+		v: TPL!ValueArrayInt
 	to 
 		vout: JR!value_int_array
 		( 
@@ -458,7 +458,7 @@ lazy rule array_int {
 }
 lazy rule array_double {
 	from
-		v: TPL!array_double
+		v: TPL!ValueArrayDouble
 	to 
 		vout: JR!value_double_array
 		( 
@@ -472,7 +472,7 @@ lazy rule array_double {
 
 --TPL helpers
 ---Is the template an atomic template?
-helper context TPL!template def: isAtomic() : Boolean = self.oclIsTypeOf(TPL!atomic);
+helper context TPL!TemplateSpecification def: isAtomic() : Boolean = self.oclIsTypeOf(TPL!TemplateAtomic);
 
 ---Generates a sequence of integers 1...n from an integer number n
 helper context Integer def: toSequence() : Sequence(Integer) = 
@@ -481,26 +481,26 @@ helper context Integer def: toSequence() : Sequence(Integer) =
 	else 
 		Sequence{}
 	endif;
-helper context TPL!assign def: toSequence() : Sequence(OclAny) = self.value.toSequence();
-helper context TPL!value_int def: toSequence() : Sequence(Integer) = self.value.toSequence();
-helper context TPL!value_double def: toSequence() : Sequence(Real) = self.value.toSequence();
-helper context TPL!array_int def: toSequence() : Sequence(Integer) = self.values->collect(e | e.value);
-helper context TPL!array_double def: toSequence() : Sequence(Real) = self.values->collect(e | e.value);
+helper context TPL!Assignment def: toSequence() : Sequence(OclAny) = self.value.toSequence();
+helper context TPL!ValueInt def: toSequence() : Sequence(Integer) = self.value.toSequence();
+helper context TPL!ValueDouble def: toSequence() : Sequence(Real) = self.value.toSequence();
+helper context TPL!ValueArrayInt def: toSequence() : Sequence(Integer) = self.values->collect(e | e.value);
+helper context TPL!ValueArrayDouble def: toSequence() : Sequence(Real) = self.values->collect(e | e.value);
 
-helper context TPL!value_int def: toString() : String = self.value.toString();
-helper context TPL!value_double def: toString() : String = self.value.toString();
-helper context TPL!array_int def: toString() : String = self.values->collect(e | e.toString());
-helper context TPL!array_double def: toString() : String = self.values->collect(e | e.toString());
+helper context TPL!ValueInt def: toString() : String = self.value.toString();
+helper context TPL!ValueDouble def: toString() : String = self.value.toString();
+helper context TPL!ValueArrayInt def: toString() : String = self.values->collect(e | e.toString());
+helper context TPL!ValueArrayDouble def: toString() : String = self.values->collect(e | e.toString());
 
-helper context TPL!value_int def: toJR() : JR!value_int = thisModule.value_int(self.value);
-helper context TPL!value_double def: toJR() : JR!value_double = thisModule.value_double(self.value);
-helper context TPL!array_int def: toJR() : JR!value_int_array = thisModule.array_int(self);
-helper context TPL!array_double def: toJR() : JR!value_double_array = thisModule.array_double(self);
+helper context TPL!ValueInt def: toJR() : JR!value_int = thisModule.value_int(self.value);
+helper context TPL!ValueDouble def: toJR() : JR!value_double = thisModule.value_double(self.value);
+helper context TPL!ValueArrayInt def: toJR() : JR!value_int_array = thisModule.array_int(self);
+helper context TPL!ValueArrayDouble def: toJR() : JR!value_double_array = thisModule.array_double(self);
 
 ---Resolves a 'multiplicity' value based on a set of parameter values
-helper context TPL!multiplicity def: resolve(p : Map(String,TPL!value)) : Sequence(Integer) =
+helper context TPL!Multiplicity def: resolve(p : Map(String,TPL!Value)) : Sequence(Integer) =
 	--if it is a parameter then find the value in the parameter list
-	if self.oclIsTypeOf(TPL!paramref) then
+	if self.oclIsTypeOf(TPL!Parametric) then
 		--if it is in the parameter list then select the value
 		if not p.get(self.ref.name).oclIsUndefined() then
 			p.get(self.ref.name).toSequence()
@@ -511,50 +511,53 @@ helper context TPL!multiplicity def: resolve(p : Map(String,TPL!value)) : Sequen
 		self.toSequence()
 	endif;
 
-helper context TPL!param def: getValue(m : TPL!model) : TPL!param_value =
-	if m.oclIsUndefined() then
-		if TPL!parambinding.allInstances()->select(pb | pb.ref = self)->size() > 0 then
-			1
-		else
-			self.default
-		endif
-	else
-		if not m.assignments.oclIsUndefined() then	--if parameters exist
-			let v: TPL!param_value = m.assignments->select(par | par.ref = self)->first() in
-			if v.oclIsUndefined() then 
-				self.default	--if the parameter instance is not found return the default value
-			else v.value endif		--else return the value of the parameter instance
-		else self.default endif	--else return the default value
-	endif;
-	
-helper context TPL!instof def: getMultiplicity(p: Map(String,TPL!value)) : Sequence(Integer) =
+--Commento questo helper perche non viene utilizzato e la classe param_value non esiste nel template
+
+--helper context TPL!Parameter def: getValue(m : TPL!model) : TPL!param_value =
+--	if m.oclIsUndefined() then
+--		if TPL!Parambinding.allInstances()->select(pb | pb.ref = self)->size() > 0 then
+--			1
+--		else
+--			self.default
+--		endif
+--	else
+--		if not m.assignments.oclIsUndefined() then	--if parameters exist
+--			let v: TPL!param_value = m.assignments->select(par | par.ref = self)->first() in
+--			if v.oclIsUndefined() then 
+--				self.default	--if the parameter instance is not found return the default value
+--			else v.value endif		--else return the value of the parameter instance
+--		else self.default endif	--else return the default value
+--	endif;
+--	
+helper context TPL!BlockRealization def: getMultiplicity(p: Map(String,TPL!Value)) : Sequence(Integer) =
 	if self.mult.oclIsUndefined() then
 		--1.toSequence()
-		self.role.getMultiplicity(p)
+		self.block.getMultiplicity(p)
 	else
 		self.mult.resolve(p)
 	endif;
-helper context TPL!block def: getMultiplicity(p: Map(String,TPL!value)) : Sequence(Integer) =
+helper context TPL!Block def: getMultiplicity(p: Map(String,TPL!Value)) : Sequence(Integer) =
 	if self.mult.oclIsUndefined() then
 		Sequence{}
 	else
 		self.mult.resolve(p)
 	endif;
 
-helper context TPL!template def: getPrefix() : String = 
-	let s: String = self.prefix in
+--prefix dovrebbe essere una collection di stringhe, per adesso prendo solo il primo elemento con ->first()
+helper context TPL!TemplateSpecification def: getPrefix() : String = 
+	let s: String = self.labels->first() in
 	if s.oclIsUndefined() then '' else (s+'$') endif;
 
-helper context TPL!mergebyname def: getPrefixes() : Sequence(String) =
-	let s: Sequence(String) = self.prefixes in
+helper context TPL!CompositionRuleMatch def: getPrefixes() : Sequence(String) =
+	let s: Sequence(String) = self.labels in
 	if s.oclIsUndefined() then Sequence{} else s endif;
 
 --prefix dovrebbe essere una collection di stringhe, per adesso prendo solo il primo elemento con ->first()
-helper context TPL!interfarray def: getPrefix() : String =
-	let s: String = self.prefix->first() in
+helper context TPL!ModelInterfArray def: getPrefix() : String =
+	let s: String = self.labels->first() in
 	if s.oclIsUndefined() then '' else (s+'$') endif;
 
-helper context TPL!mergeitem def: toString() : String =
+helper context TPL!CompItem def: toString() : String =
 	self.item.refImmediateComposite().toString() + '.' + self.item.name;
 
 --JR helpers
