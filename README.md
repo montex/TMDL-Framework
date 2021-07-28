@@ -70,7 +70,8 @@ A quick way to start using the framework is to import the plugin(s) with **examp
 
 ## Contributors
 
-- [Leonardo Montecchi](mailto:leonardo@ic.unicamp.br) (UNICAMP) 
+- [Leonardo Montecchi](mailto:leonardo@ic.unicamp.br) (UNICAMP) [maintainer]
+- Enrico Dolce (UNIFI)
 - Federico Moncini (UNIFI)
 
 ## Publications
