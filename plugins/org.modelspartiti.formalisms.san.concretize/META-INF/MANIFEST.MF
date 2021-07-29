@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ViatraSANT2SAN;singleton:=true
+Bundle-SymbolicName: org.modelspartiti.formalisms.san.concretize;singleton:=true
 Bundle-Version: 0.0.1.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -24,6 +24,6 @@ Require-Bundle: org.modelspartiti.formalisms.san,
  org.eclipse.collections;bundle-version="10.1.0"
 Import-Package: org.apache.log4j,
  org.eclipse.core.commands
-Automatic-Module-Name: ViatraSANT2SAN
+Automatic-Module-Name: org.modelspartiti.formalisms.san.concretize
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

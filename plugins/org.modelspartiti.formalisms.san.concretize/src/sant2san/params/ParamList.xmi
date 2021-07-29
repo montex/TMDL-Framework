@@ -8,14 +8,14 @@
   <assignments
       xsi:type="core:AssignmentArray">
     <parameter
-        href="/ViatraSANT2SAN/src/user.sant#P"/>
+        href="/org.modelspartiti.formalisms.san.concretize/src/user.sant#P"/>
     <values>0.6</values>
     <values>0.4</values>
   </assignments>
   <assignments
       xsi:type="core:AssignmentArray">
     <parameter
-        href="/ViatraSANT2SAN/src/user.sant#S"/>
+        href="/org.modelspartiti.formalisms.san.concretize/src/user.sant#S"/>
     <values>3.0</values>
     <values>7.0</values>
   </assignments>

@@ -1,5 +1,5 @@
 /**
- * Generated from platform:/resource/ViatraSANT2SAN/src/sant2san/queries/Sant2SanQueries.vql
+ * Generated from platform:/resource/org.modelspartiti.formalisms.san.concretize/src/sant2san/queries/Sant2SanQueries.vql
  */
 package sant2san.queries;
 
@@ -34,15 +34,15 @@ import org.eclipse.viatra.query.runtime.matchers.psystem.queries.PVisibility;
 import org.eclipse.viatra.query.runtime.matchers.tuple.Tuple;
 import org.eclipse.viatra.query.runtime.matchers.tuple.Tuples;
 import org.eclipse.viatra.query.runtime.util.ViatraQueryLoggingUtil;
-import org.modelspartiti.formalisms.san.sant.PlaceTemplate;
+import org.modelspartiti.formalisms.san.sant.TimedActivityTemplate;
 
 /**
  * A pattern-specific query specification that can instantiate Matcher in a type-safe way.
  * 
  * <p>Original source:
  *         <code><pre>
- *         pattern PlaceTemplateInstance ( place: PlaceTemplate ){
- *         	PlaceTemplate(place);
+ *         pattern TimedActivityTemplateInstance ( activity : TimedActivityTemplate ){
+ *         	TimedActivityTemplate(activity);
  *         }
  * </pre></code>
  * 
@@ -51,9 +51,9 @@ import org.modelspartiti.formalisms.san.sant.PlaceTemplate;
  * 
  */
 @SuppressWarnings("all")
-public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecification<PlaceTemplateInstance.Matcher> {
+public final class TimedActivityTemplateInstance extends BaseGeneratedEMFQuerySpecification<TimedActivityTemplateInstance.Matcher> {
   /**
-   * Pattern-specific match representation of the sant2san.queries.PlaceTemplateInstance pattern,
+   * Pattern-specific match representation of the sant2san.queries.TimedActivityTemplateInstance pattern,
    * to be used in conjunction with {@link Matcher}.
    * 
    * <p>Class fields correspond to parameters of the pattern. Fields with value null are considered unassigned.
@@ -65,18 +65,18 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
    * 
    */
   public static abstract class Match extends BasePatternMatch {
-    private PlaceTemplate fPlace;
+    private TimedActivityTemplate fActivity;
     
-    private static List<String> parameterNames = makeImmutableList("place");
+    private static List<String> parameterNames = makeImmutableList("activity");
     
-    private Match(final PlaceTemplate pPlace) {
-      this.fPlace = pPlace;
+    private Match(final TimedActivityTemplate pActivity) {
+      this.fActivity = pActivity;
     }
     
     @Override
     public Object get(final String parameterName) {
       switch(parameterName) {
-          case "place": return this.fPlace;
+          case "activity": return this.fActivity;
           default: return null;
       }
     }
@@ -84,60 +84,60 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
     @Override
     public Object get(final int index) {
       switch(index) {
-          case 0: return this.fPlace;
+          case 0: return this.fActivity;
           default: return null;
       }
     }
     
-    public PlaceTemplate getPlace() {
-      return this.fPlace;
+    public TimedActivityTemplate getActivity() {
+      return this.fActivity;
     }
     
     @Override
     public boolean set(final String parameterName, final Object newValue) {
       if (!isMutable()) throw new java.lang.UnsupportedOperationException();
-      if ("place".equals(parameterName) ) {
-          this.fPlace = (PlaceTemplate) newValue;
+      if ("activity".equals(parameterName) ) {
+          this.fActivity = (TimedActivityTemplate) newValue;
           return true;
       }
       return false;
     }
     
-    public void setPlace(final PlaceTemplate pPlace) {
+    public void setActivity(final TimedActivityTemplate pActivity) {
       if (!isMutable()) throw new java.lang.UnsupportedOperationException();
-      this.fPlace = pPlace;
+      this.fActivity = pActivity;
     }
     
     @Override
     public String patternName() {
-      return "sant2san.queries.PlaceTemplateInstance";
+      return "sant2san.queries.TimedActivityTemplateInstance";
     }
     
     @Override
     public List<String> parameterNames() {
-      return PlaceTemplateInstance.Match.parameterNames;
+      return TimedActivityTemplateInstance.Match.parameterNames;
     }
     
     @Override
     public Object[] toArray() {
-      return new Object[]{fPlace};
+      return new Object[]{fActivity};
     }
     
     @Override
-    public PlaceTemplateInstance.Match toImmutable() {
-      return isMutable() ? newMatch(fPlace) : this;
+    public TimedActivityTemplateInstance.Match toImmutable() {
+      return isMutable() ? newMatch(fActivity) : this;
     }
     
     @Override
     public String prettyPrint() {
       StringBuilder result = new StringBuilder();
-      result.append("\"place\"=" + prettyPrintValue(fPlace));
+      result.append("\"activity\"=" + prettyPrintValue(fActivity));
       return result.toString();
     }
     
     @Override
     public int hashCode() {
-      return Objects.hash(fPlace);
+      return Objects.hash(fActivity);
     }
     
     @Override
@@ -147,9 +147,9 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
       if (obj == null) {
           return false;
       }
-      if ((obj instanceof PlaceTemplateInstance.Match)) {
-          PlaceTemplateInstance.Match other = (PlaceTemplateInstance.Match) obj;
-          return Objects.equals(fPlace, other.fPlace);
+      if ((obj instanceof TimedActivityTemplateInstance.Match)) {
+          TimedActivityTemplateInstance.Match other = (TimedActivityTemplateInstance.Match) obj;
+          return Objects.equals(fActivity, other.fActivity);
       } else {
           // this should be infrequent
           if (!(obj instanceof IPatternMatch)) {
@@ -161,8 +161,8 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
     }
     
     @Override
-    public PlaceTemplateInstance specification() {
-      return PlaceTemplateInstance.instance();
+    public TimedActivityTemplateInstance specification() {
+      return TimedActivityTemplateInstance.instance();
     }
     
     /**
@@ -172,7 +172,7 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
      * @return the empty match.
      * 
      */
-    public static PlaceTemplateInstance.Match newEmptyMatch() {
+    public static TimedActivityTemplateInstance.Match newEmptyMatch() {
       return new Mutable(null);
     }
     
@@ -180,29 +180,29 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
      * Returns a mutable (partial) match.
      * Fields of the mutable match can be filled to create a partial match, usable as matcher input.
      * 
-     * @param pPlace the fixed value of pattern parameter place, or null if not bound.
+     * @param pActivity the fixed value of pattern parameter activity, or null if not bound.
      * @return the new, mutable (partial) match object.
      * 
      */
-    public static PlaceTemplateInstance.Match newMutableMatch(final PlaceTemplate pPlace) {
-      return new Mutable(pPlace);
+    public static TimedActivityTemplateInstance.Match newMutableMatch(final TimedActivityTemplate pActivity) {
+      return new Mutable(pActivity);
     }
     
     /**
      * Returns a new (partial) match.
      * This can be used e.g. to call the matcher with a partial match.
      * <p>The returned match will be immutable. Use {@link #newEmptyMatch()} to obtain a mutable match object.
-     * @param pPlace the fixed value of pattern parameter place, or null if not bound.
+     * @param pActivity the fixed value of pattern parameter activity, or null if not bound.
      * @return the (partial) match object.
      * 
      */
-    public static PlaceTemplateInstance.Match newMatch(final PlaceTemplate pPlace) {
-      return new Immutable(pPlace);
+    public static TimedActivityTemplateInstance.Match newMatch(final TimedActivityTemplate pActivity) {
+      return new Immutable(pActivity);
     }
     
-    private static final class Mutable extends PlaceTemplateInstance.Match {
-      Mutable(final PlaceTemplate pPlace) {
-        super(pPlace);
+    private static final class Mutable extends TimedActivityTemplateInstance.Match {
+      Mutable(final TimedActivityTemplate pActivity) {
+        super(pActivity);
       }
       
       @Override
@@ -211,9 +211,9 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
       }
     }
     
-    private static final class Immutable extends PlaceTemplateInstance.Match {
-      Immutable(final PlaceTemplate pPlace) {
-        super(pPlace);
+    private static final class Immutable extends TimedActivityTemplateInstance.Match {
+      Immutable(final TimedActivityTemplate pActivity) {
+        super(pActivity);
       }
       
       @Override
@@ -224,7 +224,7 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
   }
   
   /**
-   * Generated pattern matcher API of the sant2san.queries.PlaceTemplateInstance pattern,
+   * Generated pattern matcher API of the sant2san.queries.TimedActivityTemplateInstance pattern,
    * providing pattern-specific query methods.
    * 
    * <p>Use the pattern matcher on a given model via {@link #on(ViatraQueryEngine)},
@@ -234,16 +234,16 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
    * 
    * <p>Original source:
    * <code><pre>
-   * pattern PlaceTemplateInstance ( place: PlaceTemplate ){
-   * 	PlaceTemplate(place);
+   * pattern TimedActivityTemplateInstance ( activity : TimedActivityTemplate ){
+   * 	TimedActivityTemplate(activity);
    * }
    * </pre></code>
    * 
    * @see Match
-   * @see PlaceTemplateInstance
+   * @see TimedActivityTemplateInstance
    * 
    */
-  public static class Matcher extends BaseMatcher<PlaceTemplateInstance.Match> {
+  public static class Matcher extends BaseMatcher<TimedActivityTemplateInstance.Match> {
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
      * If the pattern matcher is already constructed in the engine, only a light-weight reference is returned.
@@ -252,7 +252,7 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
      * @throws ViatraQueryRuntimeException if an error occurs during pattern matcher creation
      * 
      */
-    public static PlaceTemplateInstance.Matcher on(final ViatraQueryEngine engine) {
+    public static TimedActivityTemplateInstance.Matcher on(final ViatraQueryEngine engine) {
       // check if matcher already exists
       Matcher matcher = engine.getExistingMatcher(querySpecification());
       if (matcher == null) {
@@ -267,13 +267,13 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
      * @noreference This method is for internal matcher initialization by the framework, do not call it manually.
      * 
      */
-    public static PlaceTemplateInstance.Matcher create() {
+    public static TimedActivityTemplateInstance.Matcher create() {
       return new Matcher();
     }
     
-    private static final int POSITION_PLACE = 0;
+    private static final int POSITION_ACTIVITY = 0;
     
-    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(PlaceTemplateInstance.Matcher.class);
+    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(TimedActivityTemplateInstance.Matcher.class);
     
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
@@ -289,12 +289,12 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
     
     /**
      * Returns the set of all matches of the pattern that conform to the given fixed values of some parameters.
-     * @param pPlace the fixed value of pattern parameter place, or null if not bound.
+     * @param pActivity the fixed value of pattern parameter activity, or null if not bound.
      * @return matches represented as a Match object.
      * 
      */
-    public Collection<PlaceTemplateInstance.Match> getAllMatches(final PlaceTemplate pPlace) {
-      return rawStreamAllMatches(new Object[]{pPlace}).collect(Collectors.toSet());
+    public Collection<TimedActivityTemplateInstance.Match> getAllMatches(final TimedActivityTemplate pActivity) {
+      return rawStreamAllMatches(new Object[]{pActivity}).collect(Collectors.toSet());
     }
     
     /**
@@ -303,101 +303,101 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
      * <strong>NOTE</strong>: It is important not to modify the source model while the stream is being processed.
      * If the match set of the pattern changes during processing, the contents of the stream is <strong>undefined</strong>.
      * In such cases, either rely on {@link #getAllMatches()} or collect the results of the stream in end-user code.
-     * @param pPlace the fixed value of pattern parameter place, or null if not bound.
+     * @param pActivity the fixed value of pattern parameter activity, or null if not bound.
      * @return a stream of matches represented as a Match object.
      * 
      */
-    public Stream<PlaceTemplateInstance.Match> streamAllMatches(final PlaceTemplate pPlace) {
-      return rawStreamAllMatches(new Object[]{pPlace});
+    public Stream<TimedActivityTemplateInstance.Match> streamAllMatches(final TimedActivityTemplate pActivity) {
+      return rawStreamAllMatches(new Object[]{pActivity});
     }
     
     /**
      * Returns an arbitrarily chosen match of the pattern that conforms to the given fixed values of some parameters.
      * Neither determinism nor randomness of selection is guaranteed.
-     * @param pPlace the fixed value of pattern parameter place, or null if not bound.
+     * @param pActivity the fixed value of pattern parameter activity, or null if not bound.
      * @return a match represented as a Match object, or null if no match is found.
      * 
      */
-    public Optional<PlaceTemplateInstance.Match> getOneArbitraryMatch(final PlaceTemplate pPlace) {
-      return rawGetOneArbitraryMatch(new Object[]{pPlace});
+    public Optional<TimedActivityTemplateInstance.Match> getOneArbitraryMatch(final TimedActivityTemplate pActivity) {
+      return rawGetOneArbitraryMatch(new Object[]{pActivity});
     }
     
     /**
      * Indicates whether the given combination of specified pattern parameters constitute a valid pattern match,
      * under any possible substitution of the unspecified parameters (if any).
-     * @param pPlace the fixed value of pattern parameter place, or null if not bound.
+     * @param pActivity the fixed value of pattern parameter activity, or null if not bound.
      * @return true if the input is a valid (partial) match of the pattern.
      * 
      */
-    public boolean hasMatch(final PlaceTemplate pPlace) {
-      return rawHasMatch(new Object[]{pPlace});
+    public boolean hasMatch(final TimedActivityTemplate pActivity) {
+      return rawHasMatch(new Object[]{pActivity});
     }
     
     /**
      * Returns the number of all matches of the pattern that conform to the given fixed values of some parameters.
-     * @param pPlace the fixed value of pattern parameter place, or null if not bound.
+     * @param pActivity the fixed value of pattern parameter activity, or null if not bound.
      * @return the number of pattern matches found.
      * 
      */
-    public int countMatches(final PlaceTemplate pPlace) {
-      return rawCountMatches(new Object[]{pPlace});
+    public int countMatches(final TimedActivityTemplate pActivity) {
+      return rawCountMatches(new Object[]{pActivity});
     }
     
     /**
      * Executes the given processor on an arbitrarily chosen match of the pattern that conforms to the given fixed values of some parameters.
      * Neither determinism nor randomness of selection is guaranteed.
-     * @param pPlace the fixed value of pattern parameter place, or null if not bound.
+     * @param pActivity the fixed value of pattern parameter activity, or null if not bound.
      * @param processor the action that will process the selected match.
      * @return true if the pattern has at least one match with the given parameter values, false if the processor was not invoked
      * 
      */
-    public boolean forOneArbitraryMatch(final PlaceTemplate pPlace, final Consumer<? super PlaceTemplateInstance.Match> processor) {
-      return rawForOneArbitraryMatch(new Object[]{pPlace}, processor);
+    public boolean forOneArbitraryMatch(final TimedActivityTemplate pActivity, final Consumer<? super TimedActivityTemplateInstance.Match> processor) {
+      return rawForOneArbitraryMatch(new Object[]{pActivity}, processor);
     }
     
     /**
      * Returns a new (partial) match.
      * This can be used e.g. to call the matcher with a partial match.
      * <p>The returned match will be immutable. Use {@link #newEmptyMatch()} to obtain a mutable match object.
-     * @param pPlace the fixed value of pattern parameter place, or null if not bound.
+     * @param pActivity the fixed value of pattern parameter activity, or null if not bound.
      * @return the (partial) match object.
      * 
      */
-    public PlaceTemplateInstance.Match newMatch(final PlaceTemplate pPlace) {
-      return PlaceTemplateInstance.Match.newMatch(pPlace);
+    public TimedActivityTemplateInstance.Match newMatch(final TimedActivityTemplate pActivity) {
+      return TimedActivityTemplateInstance.Match.newMatch(pActivity);
     }
     
     /**
-     * Retrieve the set of values that occur in matches for place.
+     * Retrieve the set of values that occur in matches for activity.
      * @return the Set of all values or empty set if there are no matches
      * 
      */
-    protected Stream<PlaceTemplate> rawStreamAllValuesOfplace(final Object[] parameters) {
-      return rawStreamAllValues(POSITION_PLACE, parameters).map(PlaceTemplate.class::cast);
+    protected Stream<TimedActivityTemplate> rawStreamAllValuesOfactivity(final Object[] parameters) {
+      return rawStreamAllValues(POSITION_ACTIVITY, parameters).map(TimedActivityTemplate.class::cast);
     }
     
     /**
-     * Retrieve the set of values that occur in matches for place.
+     * Retrieve the set of values that occur in matches for activity.
      * @return the Set of all values or empty set if there are no matches
      * 
      */
-    public Set<PlaceTemplate> getAllValuesOfplace() {
-      return rawStreamAllValuesOfplace(emptyArray()).collect(Collectors.toSet());
+    public Set<TimedActivityTemplate> getAllValuesOfactivity() {
+      return rawStreamAllValuesOfactivity(emptyArray()).collect(Collectors.toSet());
     }
     
     /**
-     * Retrieve the set of values that occur in matches for place.
+     * Retrieve the set of values that occur in matches for activity.
      * @return the Set of all values or empty set if there are no matches
      * 
      */
-    public Stream<PlaceTemplate> streamAllValuesOfplace() {
-      return rawStreamAllValuesOfplace(emptyArray());
+    public Stream<TimedActivityTemplate> streamAllValuesOfactivity() {
+      return rawStreamAllValuesOfactivity(emptyArray());
     }
     
     @Override
-    protected PlaceTemplateInstance.Match tupleToMatch(final Tuple t) {
+    protected TimedActivityTemplateInstance.Match tupleToMatch(final Tuple t) {
       try {
-          return PlaceTemplateInstance.Match.newMatch((PlaceTemplate) t.get(POSITION_PLACE));
+          return TimedActivityTemplateInstance.Match.newMatch((TimedActivityTemplate) t.get(POSITION_ACTIVITY));
       } catch(ClassCastException e) {
           LOGGER.error("Element(s) in tuple not properly typed!",e);
           return null;
@@ -405,9 +405,9 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
     }
     
     @Override
-    protected PlaceTemplateInstance.Match arrayToMatch(final Object[] match) {
+    protected TimedActivityTemplateInstance.Match arrayToMatch(final Object[] match) {
       try {
-          return PlaceTemplateInstance.Match.newMatch((PlaceTemplate) match[POSITION_PLACE]);
+          return TimedActivityTemplateInstance.Match.newMatch((TimedActivityTemplate) match[POSITION_ACTIVITY]);
       } catch(ClassCastException e) {
           LOGGER.error("Element(s) in array not properly typed!",e);
           return null;
@@ -415,9 +415,9 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
     }
     
     @Override
-    protected PlaceTemplateInstance.Match arrayToMatchMutable(final Object[] match) {
+    protected TimedActivityTemplateInstance.Match arrayToMatchMutable(final Object[] match) {
       try {
-          return PlaceTemplateInstance.Match.newMutableMatch((PlaceTemplate) match[POSITION_PLACE]);
+          return TimedActivityTemplateInstance.Match.newMutableMatch((TimedActivityTemplate) match[POSITION_ACTIVITY]);
       } catch(ClassCastException e) {
           LOGGER.error("Element(s) in array not properly typed!",e);
           return null;
@@ -429,12 +429,12 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
      * @throws ViatraQueryRuntimeException if the pattern definition could not be loaded
      * 
      */
-    public static IQuerySpecification<PlaceTemplateInstance.Matcher> querySpecification() {
-      return PlaceTemplateInstance.instance();
+    public static IQuerySpecification<TimedActivityTemplateInstance.Matcher> querySpecification() {
+      return TimedActivityTemplateInstance.instance();
     }
   }
   
-  private PlaceTemplateInstance() {
+  private TimedActivityTemplateInstance() {
     super(GeneratedPQuery.INSTANCE);
   }
   
@@ -443,7 +443,7 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
    * @throws ViatraQueryRuntimeException if the pattern definition could not be loaded
    * 
    */
-  public static PlaceTemplateInstance instance() {
+  public static TimedActivityTemplateInstance instance() {
     try{
         return LazyHolder.INSTANCE;
     } catch (ExceptionInInitializerError err) {
@@ -452,35 +452,35 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
   }
   
   @Override
-  protected PlaceTemplateInstance.Matcher instantiate(final ViatraQueryEngine engine) {
-    return PlaceTemplateInstance.Matcher.on(engine);
+  protected TimedActivityTemplateInstance.Matcher instantiate(final ViatraQueryEngine engine) {
+    return TimedActivityTemplateInstance.Matcher.on(engine);
   }
   
   @Override
-  public PlaceTemplateInstance.Matcher instantiate() {
-    return PlaceTemplateInstance.Matcher.create();
+  public TimedActivityTemplateInstance.Matcher instantiate() {
+    return TimedActivityTemplateInstance.Matcher.create();
   }
   
   @Override
-  public PlaceTemplateInstance.Match newEmptyMatch() {
-    return PlaceTemplateInstance.Match.newEmptyMatch();
+  public TimedActivityTemplateInstance.Match newEmptyMatch() {
+    return TimedActivityTemplateInstance.Match.newEmptyMatch();
   }
   
   @Override
-  public PlaceTemplateInstance.Match newMatch(final Object... parameters) {
-    return PlaceTemplateInstance.Match.newMatch((org.modelspartiti.formalisms.san.sant.PlaceTemplate) parameters[0]);
+  public TimedActivityTemplateInstance.Match newMatch(final Object... parameters) {
+    return TimedActivityTemplateInstance.Match.newMatch((org.modelspartiti.formalisms.san.sant.TimedActivityTemplate) parameters[0]);
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link PlaceTemplateInstance} to be created 
+   * Inner class allowing the singleton instance of {@link TimedActivityTemplateInstance} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link PlaceTemplateInstance#instance()}.
+   *     but rather at the first call to {@link TimedActivityTemplateInstance#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 
    */
   private static class LazyHolder {
-    private static final PlaceTemplateInstance INSTANCE = new PlaceTemplateInstance();
+    private static final TimedActivityTemplateInstance INSTANCE = new TimedActivityTemplateInstance();
     
     /**
      * Statically initializes the query specification <b>after</b> the field {@link #INSTANCE} is assigned.
@@ -498,11 +498,11 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
   }
   
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
-    private static final PlaceTemplateInstance.GeneratedPQuery INSTANCE = new GeneratedPQuery();
+    private static final TimedActivityTemplateInstance.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_place = new PParameter("place", "org.modelspartiti.formalisms.san.sant.PlaceTemplate", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.modelspartiti.org/templates/san/sant", "PlaceTemplate")), PParameterDirection.INOUT);
+    private final PParameter parameter_activity = new PParameter("activity", "org.modelspartiti.formalisms.san.sant.TimedActivityTemplate", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.modelspartiti.org/templates/san/sant", "TimedActivityTemplate")), PParameterDirection.INOUT);
     
-    private final List<PParameter> parameters = Arrays.asList(parameter_place);
+    private final List<PParameter> parameters = Arrays.asList(parameter_activity);
     
     private GeneratedPQuery() {
       super(PVisibility.PUBLIC);
@@ -510,12 +510,12 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
     
     @Override
     public String getFullyQualifiedName() {
-      return "sant2san.queries.PlaceTemplateInstance";
+      return "sant2san.queries.TimedActivityTemplateInstance";
     }
     
     @Override
     public List<String> getParameterNames() {
-      return Arrays.asList("place");
+      return Arrays.asList("activity");
     }
     
     @Override
@@ -529,13 +529,13 @@ public final class PlaceTemplateInstance extends BaseGeneratedEMFQuerySpecificat
       Set<PBody> bodies = new LinkedHashSet<>();
       {
           PBody body = new PBody(this);
-          PVariable var_place = body.getOrCreateVariableByName("place");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_place), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.modelspartiti.org/templates/san/sant", "PlaceTemplate")));
+          PVariable var_activity = body.getOrCreateVariableByName("activity");
+          new TypeConstraint(body, Tuples.flatTupleOf(var_activity), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.modelspartiti.org/templates/san/sant", "TimedActivityTemplate")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
-             new ExportedParameter(body, var_place, parameter_place)
+             new ExportedParameter(body, var_activity, parameter_activity)
           ));
-          // 	PlaceTemplate(place)
-          new TypeConstraint(body, Tuples.flatTupleOf(var_place), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.modelspartiti.org/templates/san/sant", "PlaceTemplate")));
+          // 	TimedActivityTemplate(activity)
+          new TypeConstraint(body, Tuples.flatTupleOf(var_activity), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.modelspartiti.org/templates/san/sant", "TimedActivityTemplate")));
           bodies.add(body);
       }
       return bodies;

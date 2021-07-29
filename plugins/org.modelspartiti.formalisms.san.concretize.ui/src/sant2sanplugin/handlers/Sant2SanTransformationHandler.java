@@ -49,8 +49,8 @@ public class Sant2SanTransformationHandler extends AbstractHandler implements IH
 		
 		san = SANFactory.eINSTANCE.createSAN();
 
-		loadParamsFromXMI(URI.createPlatformResourceURI("/ViatraSANT2SAN/src/sant2san/params/ParamList.xmi", true), params);
-		Resource sanRes = createXMI(URI.createPlatformResourceURI("/ViatraSANT2SAN/src/san_file.xmi", true));
+		loadParamsFromXMI(URI.createPlatformResourceURI("/org.modelspartiti.formalisms.san.concretize/src/sant2san/params/ParamList.xmi", true), params);
+		Resource sanRes = createXMI(URI.createPlatformResourceURI("/org.modelspartiti.formalisms.san.concretize/src/san_file.xmi", true));
 
 		// if (engine == null){
 //		ResourceSet santResSet = sant.eResource().getResourceSet();
