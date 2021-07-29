@@ -13,6 +13,8 @@ The framework is implemented as a set of plugins for the Eclipse platform.
 |Plugin|Description|
 |---|---|
 |**org.modelspartiti.formalisms.san**|SAN and SAN-T metamodels|
+|**org.modelspartiti.formalisms.san.concretize**|SAN-T to SAN transformation|
+|**org.modelspartiti.formalisms.san.concretize.ui**|UI controls for SAN-T to SAN transformation|
 |**org.modelspartiti.formalisms.san.design**|Sirius editor for the SAN metamodel|
 |**org.modelspartiti.formalisms.san.examples**|Examples of SAN and SAN-T models|
 |**org.modelspartiti.formalisms.sant.design**|Sirius editor for the SAN-T metamodel|
