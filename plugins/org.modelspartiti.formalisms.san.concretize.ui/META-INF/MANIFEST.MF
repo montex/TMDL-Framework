@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Sant2san-plugin
-Bundle-SymbolicName: sant2san-plugin;singleton:=true
+Bundle-SymbolicName: org.modelspartiti.formalisms.san.concretize.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.eclipse.ui,
  org.modelspartiti.formalisms.san;bundle-version="0.1.0",
