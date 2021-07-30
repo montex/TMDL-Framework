@@ -18,8 +18,11 @@
 
     <module>org.modelspartiti.infrastructure</module>
     <module>org.modelspartiti.formalisms.san</module>
+    <module>org.modelspartiti.formalisms.san.concretize</module>
+    <module>org.modelspartiti.formalisms.san.concretize.ui</module>
     <module>org.modelspartiti.formalisms.san.design</module>
     <module>org.modelspartiti.formalisms.sant.design</module>
     <module>org.modelspartiti.formalisms.san.examples</module>
   </modules>
+
 </project>

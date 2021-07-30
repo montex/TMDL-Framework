@@ -1,12 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Sant2san-plugin
+Bundle-Name: %pluginName
 Bundle-SymbolicName: org.modelspartiti.formalisms.san.concretize.ui;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.0.qualifier
+Bundle-Localization: plugin
+Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.modelspartiti.formalisms.san;bundle-version="0.1.0",
  org.modelspartiti.infrastructure,
  org.modelspartiti.formalisms.san.concretize;bundle-version="0.0.1",
  org.eclipse.viatra.query.runtime;bundle-version="2.4.1"
-Automatic-Module-Name: sant2san.plugin
+Automatic-Module-Name: org.modelspartiti.formalisms.san.concretize.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

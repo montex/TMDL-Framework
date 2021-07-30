@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.modelspartiti.formalisms.san.concretize;singleton:=true
-Bundle-Version: 0.0.1.qualifier
+Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
@@ -10,18 +10,17 @@ Export-Package: paramlist,
  paramlist.impl,
  paramlist.util,
  sant2san.queries
-Require-Bundle: org.modelspartiti.formalisms.san,
- org.eclipse.viatra.transformation.runtime.emf,
+Require-Bundle: org.eclipse.viatra.transformation.runtime.emf,
  org.eclipse.viatra.transformation.evm,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.modelspartiti.infrastructure;visibility:=reexport,
  org.eclipse.viatra.query.runtime,
  org.eclipse.viatra.query.runtime.rete,
  org.eclipse.viatra.query.runtime.localsearch,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.viatra.query.runtime.base.itc;bundle-version="2.4.1",
- org.eclipse.collections;bundle-version="10.1.0"
+ org.eclipse.collections;bundle-version="10.1.0",
+ org.modelspartiti.formalisms.san;bundle-version="0.1.0"
 Import-Package: org.apache.log4j,
  org.eclipse.core.commands
 Automatic-Module-Name: org.modelspartiti.formalisms.san.concretize
