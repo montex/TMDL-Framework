@@ -19,7 +19,10 @@ Export-Package: org.modelspartiti.infrastructure.tmdl.core,
  org.modelspartiti.infrastructure.tmdl.library.util,
  org.modelspartiti.infrastructure.tmdl.scenario,
  org.modelspartiti.infrastructure.tmdl.scenario.impl,
- org.modelspartiti.infrastructure.tmdl.scenario.util
+ org.modelspartiti.infrastructure.tmdl.scenario.util,
+ org.modelspartiti.infrastructure.tmdl,
+ org.modelspartiti.infrastructure.tmdl.impl,
+ org.modelspartiti.infrastructure.tmdl.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

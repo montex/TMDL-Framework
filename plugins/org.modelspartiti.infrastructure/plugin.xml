@@ -9,32 +9,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated tmdl -->
       <package
-            uri="http://www.modelspartiti.org/infrastructure/tmdl/scenario"
-            class="org.modelspartiti.infrastructure.tmdl.scenario.ScenarioPackage"
+            uri="http://www.modelspartiti.org/infrastructure/tmdl"
+            class="org.modelspartiti.infrastructure.tmdl.tmdlPackage"
             genModel="model/tmdl.genmodel"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated tmdl -->
-      <package
-            uri="http://www.modelspartiti.org/infrastructure/tmdl/library"
-            class="org.modelspartiti.infrastructure.tmdl.library.LibraryPackage"
-            genModel="model/tmdl.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated tmdl -->
-      <package
-            uri="http://www.modelspartiti.org/infrastructure/tmdl/core"
-            class="org.modelspartiti.infrastructure.tmdl.core.CorePackage"
-            genModel="model/tmdl.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated tmdl -->
-      <package
-            uri="http://www.modelspartiti.org/infrastructure/tmdl/expressions"
-            class="org.modelspartiti.infrastructure.tmdl.expressions.ExpressionsPackage"
-            genModel="model/tmdl.genmodel"/>
-   </extension>
 </plugin>

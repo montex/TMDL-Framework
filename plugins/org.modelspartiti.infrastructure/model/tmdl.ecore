@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SBATPL" nsURI="http://rcl.dsi.unifi.it/modeling/sba-templates.ecore"
-    nsPrefix="SBATPL">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tmdl" nsURI="http://www.modelspartiti.org/infrastructure/tmdl"
+    nsPrefix="tmdl">
   <eClassifiers xsi:type="ecore:EClass" name="TMDLSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="library" lowerBound="1"
         eType="#//Library" containment="true"/>
