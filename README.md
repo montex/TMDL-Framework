@@ -13,6 +13,8 @@ The framework is implemented as a set of plugins for the Eclipse platform.
 |Plugin|Description|
 |---|---|
 |**org.modelspartiti.formalisms.san**|SAN and SAN-T metamodels|
+|**org.modelspartiti.formalisms.san.concretize**|SAN-T to SAN transformation|
+|**org.modelspartiti.formalisms.san.concretize.ui**|UI controls for SAN-T to SAN transformation|
 |**org.modelspartiti.formalisms.san.design**|Sirius editor for the SAN metamodel|
 |**org.modelspartiti.formalisms.san.examples**|Examples of SAN and SAN-T models|
 |**org.modelspartiti.formalisms.san.mobius**|Exporter from SAN models to the Möbius tool|
@@ -72,9 +74,10 @@ A quick way to start using the framework is to import the plugin(s) with **examp
 
 ## Contributors
 
-- [Leonardo Montecchi](mailto:leonardo@ic.unicamp.br) (UNICAMP) 
-- Federico Moncini (UNIFI)
+- [Leonardo Montecchi](mailto:leonardo@ic.unicamp.br) (UNICAMP) [maintainer]
 - Denny Sbanchi (UNIFI)
+- Enrico Dolce (UNIFI)
+- Federico Moncini (UNIFI)
 
 ## Publications
 

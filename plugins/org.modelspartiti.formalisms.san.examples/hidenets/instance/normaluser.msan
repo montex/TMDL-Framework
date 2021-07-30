@@ -36,12 +36,26 @@
   <activities
       xsi:type="san:InstantaneousActivity"
       name="Fail">
-    <cases/>
+    <cases>
+      <p>
+        <segments
+            xsi:type="san:ExpressionText">
+          <text>1.0</text>
+        </segments>
+      </p>
+    </cases>
   </activities>
   <activities
       xsi:type="san:InstantaneousActivity"
       name="Drop">
-    <cases/>
+    <cases>
+      <p>
+        <segments
+            xsi:type="san:ExpressionText">
+          <text>1.0</text>
+        </segments>
+      </p>
+    </cases>
   </activities>
   <activities
       xsi:type="san:TimedActivity"
@@ -62,23 +76,30 @@
         </segments>
       </p>
     </cases>
-    <cases ID="3"/>
+    <cases ID="3">
+      <p>
+        <segments
+            xsi:type="san:ExpressionText">
+          <text>0.1</text>
+        </segments>
+      </p>
+    </cases>
     <timeDistribution
         xsi:type="san:Uniform"
-        parameters="rate"/>
-    <activation>
-      <segments
-          xsi:type="san:ExpressionText">
-        <text></text>
-      </segments>
-    </activation>
-    <reactivation>
-      <segments
-          xsi:type="san:ExpressionText">
-        <text>&#xD;
-</text>
-      </segments>
-    </reactivation>
+        parameters="rate">
+      <lowerBound>
+        <segments
+            xsi:type="san:ExpressionText">
+          <text>0</text>
+        </segments>
+      </lowerBound>
+      <upperBound>
+        <segments
+            xsi:type="san:ExpressionText">
+          <text>0</text>
+        </segments>
+      </upperBound>
+    </timeDistribution>
   </activities>
   <arcs xsi:type="san:InputArc"
       source="#Failed"
@@ -96,11 +117,11 @@
       source="#//@activities[name='Request']/@cases[ID='1']"
       target="#Req1"/>
   <arcs xsi:type="san:OutputArc"
-      source="#//@activities[name='Request']/@cases[ID='3']"
-      target="#Req7"/>
-  <arcs xsi:type="san:OutputArc"
       source="#//@activities[name='Request']/@cases[ID='2']"
       target="#Req6"/>
+  <arcs xsi:type="san:OutputArc"
+      source="#//@activities[name='Request']/@cases[ID='3']"
+      target="#Req7"/>
   <gates xsi:type="san:InputGate"
       name="IGRequest"
       places="#Idle"
