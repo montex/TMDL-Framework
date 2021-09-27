@@ -1,49 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sant:SANT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core" xmlns:san="http://www.modelspartiti.org/templates/san/san" xmlns:sant="http://www.modelspartiti.org/templates/san/sant" name="User">
-  <templatePlaces name="Req">
-    <multiplicity xsi:type="core:MultiplicityParametric" parameter="S"/>
+<sant:SANT xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core"
+    xmlns:san="http://www.modelspartiti.org/templates/san/san"
+    xmlns:sant="http://www.modelspartiti.org/templates/san/sant"
+    name="User">
+  <templatePlaces
+      name="Req">
+    <multiplicity
+        xsi:type="core:MultiplicityParametric"
+        parameter="user_services"/>
   </templatePlaces>
-  <places name="Failed">
-    <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple"/>
-  </places>
-  <places name="Dropped">
-    <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple"/>
-  </places>
+  <templatePlaces
+      name="ChannelCount">
+    <multiplicity
+        xsi:type="core:MultiplicityParametric"
+        parameter="user_services"/>
+  </templatePlaces>
   <places name="Idle">
     <type xsi:type="san:PrimitiveType"/>
-    <marking xsi:type="san:MarkingSimple" value="1"/>
+    <marking
+        xsi:type="san:MarkingSimple"
+        value="1"/>
   </places>
-  <activityTemplates xsi:type="sant:InstantaneousActivityTemplate" name="Fail"/>
-  <activityTemplates xsi:type="sant:InstantaneousActivityTemplate" name="Drop"/>
-  <activityTemplates xsi:type="sant:TimedActivityTemplate" name="Request">
-    <casesTemplate xsi:type="sant:CasesSpecificationProbabilityArray" caseParameter="S" pValues="P"/>
-    <timeDistribution xsi:type="san:Uniform" parameters="rate"/>
-    <activation>
-      <segments xsi:type="san:ExpressionText" text=""/>
-    </activation>
-    <reactivation>
-      <segments xsi:type="san:ExpressionText" text=""/>
-    </reactivation>
+  <activityTemplates
+      xsi:type="sant:TimedActivityTemplate"
+      name="Request">
+    <casesTemplate
+        xsi:type="sant:CasesSpecificationProbabilityArray"
+        caseParameter="user_services"
+        pValues="P"/>
+    <timeDistribution
+        xsi:type="san:Exponential"
+        parameters="rate"/>
   </activityTemplates>
-  <parameters xsi:type="core:ParameterArray" name="P"/>
-  <parameters xsi:type="core:ParameterArray" name="S"/>
-  <gates xsi:type="sant:InputGateTemplate" name="IGRequest" places="Idle" activity="Request">
+  <activityTemplates
+      xsi:type="sant:TimedActivityTemplate"
+      name="Completed">
+    <casesTemplate
+        xsi:type="sant:CasesSpecificationConcrete">
+      <cases/>
+    </casesTemplate>
+    <timeDistribution
+        xsi:type="san:Exponential"
+        parameters="rate"/>
+  </activityTemplates>
+  <activityTemplates
+      xsi:type="sant:InstantaneousActivityTemplate"
+      name="Failed_service">
+    <casesTemplate
+        xsi:type="sant:CasesSpecificationConcrete">
+      <cases/>
+    </casesTemplate>
+  </activityTemplates>
+  <parameters
+      xsi:type="core:ParameterArray"
+      name="P"/>
+  <parameters
+      xsi:type="core:ParameterArray"
+      name="user_services"/>
+  <gates xsi:type="sant:OutputGateTemplate"
+      name="OG_Request"
+      placeTemplate="Req"
+      activity="Request">
     <function>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments
+          xsi:type="san:ExpressionText"
+          text=""/>
+    </function>
+  </gates>
+  <gates xsi:type="sant:InputGateTemplate"
+      name="IG_Failed_service"
+      placeTemplate="Req ChannelCount"
+      activity="Failed_service">
+    <function>
+      <segments
+          xsi:type="san:ExpressionText"
+          text="for any place req if req n and !channel count n then true else false"/>
     </function>
     <predicate>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments
+          xsi:type="san:ExpressionText"
+          text="remove the token from req "/>
     </predicate>
   </gates>
-  <gates xsi:type="sant:OutputGateTemplate" name="OGRequest" placeTemplate="Req" activity="Request">
+  <gates xsi:type="sant:InputGateTemplate"
+      name="IG_Completed"
+      placeTemplate="Req ChannelCount"
+      activity="Completed">
     <function>
-      <segments xsi:type="san:ExpressionText" text=""/>
+      <segments
+          xsi:type="san:ExpressionText"
+          text="for any place req if req n and channel count n then true else false"/>
     </function>
+    <predicate>
+      <segments
+          xsi:type="san:ExpressionText"
+          text="remove the token from req "/>
+    </predicate>
   </gates>
-  <arcs xsi:type="sant:InputArc" source="Failed" target="Fail"/>
-  <arcs xsi:type="sant:InputArc" source="Dropped" target="Drop"/>
-  <arcs xsi:type="sant:OutputArc" source="Fail" target="Idle"/>
-  <arcs xsi:type="sant:OutputArc" source="Drop" target="Idle"/>
+  <arcs xsi:type="sant:InputArc"
+      source="Idle"
+      target="Request"/>
+  <arcs xsi:type="sant:OutputArc"
+      source="Failed_service"
+      target="Idle"/>
+  <arcs xsi:type="sant:OutputArc"
+      source="Completed"
+      target="Idle"/>
 </sant:SANT>

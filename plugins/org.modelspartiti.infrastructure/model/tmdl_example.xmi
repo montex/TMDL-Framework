@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SBATPL:TMDLSpecification
+<tmdl:TMDLSpecification
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:SBATPL="http://rcl.dsi.unifi.it/modeling/sba-templates.ecore"
-    xsi:schemaLocation="http://rcl.dsi.unifi.it/modeling/sba-templates.ecore sba-templates.ecore">
+    xmlns:tmdl="http://www.modelspartiti.org/infrastructure/tmdl"
+    xsi:schemaLocation="http://www.modelspartiti.org/infrastructure/tmdl tmdl.ecore">
   <library name="l1">
     <templates
-        xsi:type="SBATPL:TemplateAtomic"
+        xsi:type="tmdl:TemplateAtomic"
         name="a1"
         source="location.xmi">
       <parameters
           name="p1">
         <default
-            xsi:type="SBATPL:ValueInt"/>
+            xsi:type="tmdl:ValueInt"/>
       </parameters>
       <parameters
           name="p2">
         <default
-            xsi:type="SBATPL:ValueInt"/>
+            xsi:type="tmdl:ValueInt"/>
       </parameters>
       <interfaces
-          xsi:type="SBATPL:ModelInterfArray"
+          xsi:type="tmdl:ModelInterfArray"
           name="i1">
         <variables
             name="sm1"/>
         <variables
             name="sm2"/>
         <mult
-            xsi:type="SBATPL:Parametric"
+            xsi:type="tmdl:Parametric"
             ref="//@library/@templates.0/@parameters.0"/>
         <labels>serv</labels>
       </interfaces>
     </templates>
     <templates
-        xsi:type="SBATPL:TemplateComposite"
+        xsi:type="tmdl:TemplateComposite"
         name="c1">
       <interfaces
-          xsi:type="SBATPL:ModelInterfSimple"
+          xsi:type="tmdl:ModelInterfSimple"
           name="i2">
         <variables
             name="sm3"/>
@@ -45,17 +45,18 @@
             name="sm4"/>
       </interfaces>
       <rules
-          xsi:type="SBATPL:CompositionRuleAll"
+          xsi:type="tmdl:CompositionRuleAll"
           name="r1">
         <ref
-            item="//@library/@templates.0/@interfaces.0"/>
+            item="//@library/@templates.0/@interfaces.0"
+            block="//@library/@templates.1/@submodules.0"/>
       </rules>
       <submodules
           name="b1"
           ref="a1">
         <mult
-            xsi:type="SBATPL:ValueInt"
-            value="7"/>
+            xsi:type="tmdl:ValueInt"
+            value="3"/>
       </submodules>
     </templates>
   </library>
@@ -68,14 +69,14 @@
       <assignments
           ref="//@library/@templates.0/@parameters.0">
         <value
-            xsi:type="SBATPL:ValueInt"
-            value="42"/>
+            xsi:type="tmdl:ValueInt"
+            value="7"/>
       </assignments>
       <assignments
           ref="//@library/@templates.0/@parameters.1">
         <value
-            xsi:type="SBATPL:ValueInt"
-            value="35"/>
+            xsi:type="tmdl:ValueInt"
+            value="8"/>
       </assignments>
     </variants>
     <variants
@@ -86,4 +87,4 @@
           block="//@library/@templates.1/@submodules.0"/>
     </variants>
   </scenario>
-</SBATPL:TMDLSpecification>
+</tmdl:TMDLSpecification>

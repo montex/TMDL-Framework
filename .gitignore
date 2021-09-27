@@ -3,3 +3,4 @@
 .am3
 bin
 plugins/*/target
+/.metadata/
