@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:san="http://www.modelspartiti.org/templates/san/san" xmlns:sant="http://www.modelspartiti.org/templates/san/sant" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_ISEx8PUEEeuxjLpquTLVzg" selectedViews="_JiAv0PUEEeuxjLpquTLVzg _JkLTAPUEEeuxjLpquTLVzg" version="14.3.1.202003261200">
+    <semanticResources>basestation.sant</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_JiAv0PUEEeuxjLpquTLVzg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']"/>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_JkLTAPUEEeuxjLpquTLVzg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_JmXEUPUEEeuxjLpquTLVzg" name="SANT" repPath="#_JkcYwPUEEeuxjLpquTLVzg" changeId="e7eed5d2-e2d1-47e8-a3f4-fa320e35e134">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']"/>
+        <target xmi:type="sant:SANT" href="basestation.sant#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_JkcYwPUEEeuxjLpquTLVzg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_JmTZ8PUEEeuxjLpquTLVzg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_JmUBAPUEEeuxjLpquTLVzg"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_JmxUAPUEEeuxjLpquTLVzg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_JmxUAfUEEeuxjLpquTLVzg" type="Sirius" element="_JkcYwPUEEeuxjLpquTLVzg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_JmzwQPUEEeuxjLpquTLVzg" type="2001" element="_JmJB4PUEEeuxjLpquTLVzg">
+          <children xmi:type="notation:Node" xmi:id="_JmzwQ_UEEeuxjLpquTLVzg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_JmzwRPUEEeuxjLpquTLVzg" x="41" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Jm86MPUEEeuxjLpquTLVzg" type="3001" element="_JmLeJPUEEeuxjLpquTLVzg">
+            <children xmi:type="notation:Node" xmi:id="_Jm86M_UEEeuxjLpquTLVzg" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Jm86NPUEEeuxjLpquTLVzg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Jm-IU_UEEeuxjLpquTLVzg" type="3003" element="_JmLeJfUEEeuxjLpquTLVzg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm-IVPUEEeuxjLpquTLVzg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm-IVfUEEeuxjLpquTLVzg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm86MfUEEeuxjLpquTLVzg" fontColor="16777215" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm86MvUEEeuxjLpquTLVzg" x="-10" y="32" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Jm9hQPUEEeuxjLpquTLVzg" type="3001" element="_JmLeJ_UEEeuxjLpquTLVzg">
+            <children xmi:type="notation:Node" xmi:id="_Jm9hQ_UEEeuxjLpquTLVzg" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Jm9hRPUEEeuxjLpquTLVzg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Jm-IVvUEEeuxjLpquTLVzg" type="3017" element="_JmLeKPUEEeuxjLpquTLVzg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm-IV_UEEeuxjLpquTLVzg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm-IWPUEEeuxjLpquTLVzg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm9hQfUEEeuxjLpquTLVzg" fontName="Segoe UI" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm9hQvUEEeuxjLpquTLVzg" x="-22" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Jm-IUPUEEeuxjLpquTLVzg" type="3002" element="_JmJB4fUEEeuxjLpquTLVzg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm-IUfUEEeuxjLpquTLVzg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm-IUvUEEeuxjLpquTLVzg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_JmzwQfUEEeuxjLpquTLVzg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JmzwQvUEEeuxjLpquTLVzg" x="343" y="588" width="40" height="40"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Jm0XUPUEEeuxjLpquTLVzg" type="2001" element="_JmJB4_UEEeuxjLpquTLVzg">
+          <children xmi:type="notation:Node" xmi:id="_Jm0XU_UEEeuxjLpquTLVzg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Jm0XVPUEEeuxjLpquTLVzg" x="41" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Jm-vYPUEEeuxjLpquTLVzg" type="3001" element="_JmMFMPUEEeuxjLpquTLVzg">
+            <children xmi:type="notation:Node" xmi:id="_Jm-vY_UEEeuxjLpquTLVzg" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Jm-vZPUEEeuxjLpquTLVzg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Jm_9g_UEEeuxjLpquTLVzg" type="3003" element="_JmMFMfUEEeuxjLpquTLVzg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm_9hPUEEeuxjLpquTLVzg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm_9hfUEEeuxjLpquTLVzg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm-vYfUEEeuxjLpquTLVzg" fontColor="16777215" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm-vYvUEEeuxjLpquTLVzg" x="-10" y="32" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Jm-vZfUEEeuxjLpquTLVzg" type="3001" element="_JmMFM_UEEeuxjLpquTLVzg">
+            <children xmi:type="notation:Node" xmi:id="_Jm_WcPUEEeuxjLpquTLVzg" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Jm_WcfUEEeuxjLpquTLVzg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Jm_9hvUEEeuxjLpquTLVzg" type="3017" element="_JmMFNPUEEeuxjLpquTLVzg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm_9h_UEEeuxjLpquTLVzg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm_9iPUEEeuxjLpquTLVzg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm-vZvUEEeuxjLpquTLVzg" fontName="Segoe UI" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm-vZ_UEEeuxjLpquTLVzg" x="-22" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Jm_9gPUEEeuxjLpquTLVzg" type="3002" element="_JmJo8PUEEeuxjLpquTLVzg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm_9gfUEEeuxjLpquTLVzg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm_9gvUEEeuxjLpquTLVzg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm0XUfUEEeuxjLpquTLVzg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm0XUvUEEeuxjLpquTLVzg" x="686" y="595" width="40" height="40"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Jm3aofUEEeuxjLpquTLVzg" type="2003" element="_JmNTU_UEEeuxjLpquTLVzg">
+          <children xmi:type="notation:Node" xmi:id="_Jm4BsPUEEeuxjLpquTLVzg" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_Jm4BsfUEEeuxjLpquTLVzg" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_JnBLo_UEEeuxjLpquTLVzg" type="3010" element="_JmOhcPUEEeuxjLpquTLVzg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_JnBLpPUEEeuxjLpquTLVzg" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_JnBLpfUEEeuxjLpquTLVzg"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_Jm4BsvUEEeuxjLpquTLVzg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_Jm4Bs_UEEeuxjLpquTLVzg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Jm3aovUEEeuxjLpquTLVzg" fontName="Segoe UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jm3ao_UEEeuxjLpquTLVzg" x="1316" y="575"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_qE-2sAZmEeyq7u6vVdk6pA" type="2001" element="_qEuYAAZmEeyq7u6vVdk6pA">
+          <children xmi:type="notation:Node" xmi:id="_qE_dwAZmEeyq7u6vVdk6pA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_qE_dwQZmEeyq7u6vVdk6pA" x="33"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qFAE0AZmEeyq7u6vVdk6pA" type="3005" element="_qEuYAQZmEeyq7u6vVdk6pA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qFAE0QZmEeyq7u6vVdk6pA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qFAE0gZmEeyq7u6vVdk6pA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_qE-2sQZmEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qE-2sgZmEeyq7u6vVdk6pA" x="998" y="735" width="32" height="32"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tP4FYAZmEeyq7u6vVdk6pA" type="2001" element="_tPlxgAZmEeyq7u6vVdk6pA">
+          <children xmi:type="notation:Node" xmi:id="_tP4FYwZmEeyq7u6vVdk6pA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tP4FZAZmEeyq7u6vVdk6pA" x="33"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_tP5TgAZmEeyq7u6vVdk6pA" type="3005" element="_tPlxgQZmEeyq7u6vVdk6pA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_tP5TgQZmEeyq7u6vVdk6pA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tP5TggZmEeyq7u6vVdk6pA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tP4FYQZmEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tP4FYgZmEeyq7u6vVdk6pA" x="998" y="462" width="32" height="32"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_m0TzUAZqEeyq7u6vVdk6pA" type="2001" element="_m0ARUAZqEeyq7u6vVdk6pA">
+          <children xmi:type="notation:Node" xmi:id="_m0UaYAZqEeyq7u6vVdk6pA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_m0UaYQZqEeyq7u6vVdk6pA" x="-36" y="-33"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_m0YEwAZqEeyq7u6vVdk6pA" type="3001" element="_m0DUoAZqEeyq7u6vVdk6pA">
+            <children xmi:type="notation:Node" xmi:id="_m0Yr0AZqEeyq7u6vVdk6pA" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_m0Yr0QZqEeyq7u6vVdk6pA" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_m0ahAgZqEeyq7u6vVdk6pA" type="3003" element="_m0D7sAZqEeyq7u6vVdk6pA">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_m0ahAwZqEeyq7u6vVdk6pA" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0ahBAZqEeyq7u6vVdk6pA"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_m0YEwQZqEeyq7u6vVdk6pA" fontName="Segoe UI" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0YEwgZqEeyq7u6vVdk6pA" x="-15" y="52" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_m0Z58AZqEeyq7u6vVdk6pA" type="3003" element="_m0A4YAZqEeyq7u6vVdk6pA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_m0ahAAZqEeyq7u6vVdk6pA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0ahAQZqEeyq7u6vVdk6pA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_m0TzUQZqEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0TzUgZqEeyq7u6vVdk6pA" x="525" y="742" width="30" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_m0VogAZqEeyq7u6vVdk6pA" type="2001" element="_m0BfcQZqEeyq7u6vVdk6pA">
+          <children xmi:type="notation:Node" xmi:id="_m0WPkAZqEeyq7u6vVdk6pA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_m0WPkQZqEeyq7u6vVdk6pA" x="-29" y="-33"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_m0gnoAZqEeyq7u6vVdk6pA" type="3001" element="_m0FJ0AZqEeyq7u6vVdk6pA">
+            <children xmi:type="notation:Node" xmi:id="_m0hOsAZqEeyq7u6vVdk6pA" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_m0h1wAZqEeyq7u6vVdk6pA" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_m0ic0AZqEeyq7u6vVdk6pA" type="3003" element="_m0FJ0QZqEeyq7u6vVdk6pA">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_m0ic0QZqEeyq7u6vVdk6pA" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0ic0gZqEeyq7u6vVdk6pA"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_m0gnoQZqEeyq7u6vVdk6pA" fontName="Segoe UI" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0gnogZqEeyq7u6vVdk6pA" x="-15" y="52" width="60" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_m0h1wQZqEeyq7u6vVdk6pA" type="3003" element="_m0BfcgZqEeyq7u6vVdk6pA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_m0h1wgZqEeyq7u6vVdk6pA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0h1wwZqEeyq7u6vVdk6pA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_m0VogQZqEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0VoggZqEeyq7u6vVdk6pA" x="518" y="413" width="30" height="60"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_JmxUAvUEEeuxjLpquTLVzg"/>
+        <edges xmi:type="notation:Edge" xmi:id="_pCFZ0AZnEeyq7u6vVdk6pA" type="4001" element="_pBztAAZnEeyq7u6vVdk6pA" source="_qE-2sAZmEeyq7u6vVdk6pA" target="_Jm3aofUEEeuxjLpquTLVzg">
+          <children xmi:type="notation:Node" xmi:id="_pCGA4AZnEeyq7u6vVdk6pA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pCGA4QZnEeyq7u6vVdk6pA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pCGn8AZnEeyq7u6vVdk6pA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pCGn8QZnEeyq7u6vVdk6pA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pCGn8gZnEeyq7u6vVdk6pA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pCGn8wZnEeyq7u6vVdk6pA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_pCFZ0QZnEeyq7u6vVdk6pA" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_pCFZ0gZnEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pCFZ0wZnEeyq7u6vVdk6pA" points="[0, 0, -301, 177]$[301, -177, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pCH2EAZnEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pCH2EQZnEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_pCH2EgZnEeyq7u6vVdk6pA" type="4001" element="_pB07IAZnEeyq7u6vVdk6pA" source="_tP4FYAZmEeyq7u6vVdk6pA" target="_Jm3aofUEEeuxjLpquTLVzg">
+          <children xmi:type="notation:Node" xmi:id="_pCIdIAZnEeyq7u6vVdk6pA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pCIdIQZnEeyq7u6vVdk6pA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pCIdIgZnEeyq7u6vVdk6pA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pCIdIwZnEeyq7u6vVdk6pA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_pCIdJAZnEeyq7u6vVdk6pA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pCIdJQZnEeyq7u6vVdk6pA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_pCH2EwZnEeyq7u6vVdk6pA" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_pCH2FAZnEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pCH2FQZnEeyq7u6vVdk6pA" points="[0, 0, -301, -96]$[301, 96, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pCJEMAZnEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pCJEMQZnEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_4lANwAZqEeyq7u6vVdk6pA" type="4001" element="_4k11sAZqEeyq7u6vVdk6pA" source="_qE-2sAZmEeyq7u6vVdk6pA" target="_m0TzUAZqEeyq7u6vVdk6pA">
+          <children xmi:type="notation:Node" xmi:id="_4lA00AZqEeyq7u6vVdk6pA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lA00QZqEeyq7u6vVdk6pA" x="-3" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lA00gZqEeyq7u6vVdk6pA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lA00wZqEeyq7u6vVdk6pA" x="3" y="12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lA01AZqEeyq7u6vVdk6pA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lA01QZqEeyq7u6vVdk6pA" x="3" y="11"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_4lANwQZqEeyq7u6vVdk6pA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_4lANwgZqEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4lANwwZqEeyq7u6vVdk6pA" points="[-16, 0, 458, -21]$[-459, 20, 15, -1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lBb4AZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lBb4QZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_4lBb4gZqEeyq7u6vVdk6pA" type="4001" element="_4k2cwAZqEeyq7u6vVdk6pA" source="_tP4FYAZmEeyq7u6vVdk6pA" target="_m0VogAZqEeyq7u6vVdk6pA">
+          <children xmi:type="notation:Node" xmi:id="_4lBb5gZqEeyq7u6vVdk6pA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lBb5wZqEeyq7u6vVdk6pA" x="3" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lBb6AZqEeyq7u6vVdk6pA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lBb6QZqEeyq7u6vVdk6pA" x="-1" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lBb6gZqEeyq7u6vVdk6pA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lBb6wZqEeyq7u6vVdk6pA" x="-3" y="11"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_4lBb4wZqEeyq7u6vVdk6pA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_4lBb5AZqEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4lBb5QZqEeyq7u6vVdk6pA" points="[-16, -2, 465, 33]$[-466, -34, 15, 1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lCC8AZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lCC8QZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_4lCC8gZqEeyq7u6vVdk6pA" type="4001" element="_4k3q4AZqEeyq7u6vVdk6pA" source="_JmzwQPUEEeuxjLpquTLVzg" target="_m0VogAZqEeyq7u6vVdk6pA">
+          <children xmi:type="notation:Node" xmi:id="_4lCC9gZqEeyq7u6vVdk6pA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lCC9wZqEeyq7u6vVdk6pA" x="-1" y="-11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lCC-AZqEeyq7u6vVdk6pA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lCC-QZqEeyq7u6vVdk6pA" x="2" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lCC-gZqEeyq7u6vVdk6pA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lCC-wZqEeyq7u6vVdk6pA" x="1" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_4lCC8wZqEeyq7u6vVdk6pA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_4lCC9AZqEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4lCC9QZqEeyq7u6vVdk6pA" points="[20, -20, -150, 145]$[155, -151, -15, 14]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lCqAAZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lCqAQZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_4lCqAgZqEeyq7u6vVdk6pA" type="4001" element="_4k4R8AZqEeyq7u6vVdk6pA" source="_Jm0XUPUEEeuxjLpquTLVzg" target="_m0TzUAZqEeyq7u6vVdk6pA">
+          <children xmi:type="notation:Node" xmi:id="_4lCqBgZqEeyq7u6vVdk6pA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lCqBwZqEeyq7u6vVdk6pA" x="-1" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lCqCAZqEeyq7u6vVdk6pA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lCqCQZqEeyq7u6vVdk6pA" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lCqCgZqEeyq7u6vVdk6pA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lCqCwZqEeyq7u6vVdk6pA" x="2" y="13"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_4lCqAwZqEeyq7u6vVdk6pA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_4lCqBAZqEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4lCqBQZqEeyq7u6vVdk6pA" points="[-20, 18, 146, -139]$[-151, 142, 15, -15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lDREAZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lDREQZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_4lDREgZqEeyq7u6vVdk6pA" type="4001" element="_4k45AAZqEeyq7u6vVdk6pA" source="_m0VogAZqEeyq7u6vVdk6pA" target="_Jm0XUPUEEeuxjLpquTLVzg">
+          <children xmi:type="notation:Node" xmi:id="_4lDRFgZqEeyq7u6vVdk6pA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lDRFwZqEeyq7u6vVdk6pA" x="1" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lDRGAZqEeyq7u6vVdk6pA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lDRGQZqEeyq7u6vVdk6pA" x="-3" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lDRGgZqEeyq7u6vVdk6pA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lDRGwZqEeyq7u6vVdk6pA" x="-3" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_4lDREwZqEeyq7u6vVdk6pA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_4lDRFAZqEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4lDRFQZqEeyq7u6vVdk6pA" points="[15, 14, -158, -158]$[152, 152, -21, -20]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lD4IAZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lD4IQZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_4lFGQAZqEeyq7u6vVdk6pA" type="4001" element="_4k5gEgZqEeyq7u6vVdk6pA" source="_m0TzUAZqEeyq7u6vVdk6pA" target="_JmzwQPUEEeuxjLpquTLVzg">
+          <children xmi:type="notation:Node" xmi:id="_4lIJkAZqEeyq7u6vVdk6pA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lIJkQZqEeyq7u6vVdk6pA" x="3" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lJ-wAZqEeyq7u6vVdk6pA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lJ-wQZqEeyq7u6vVdk6pA" x="1" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_4lKl0AZqEeyq7u6vVdk6pA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4lKl0QZqEeyq7u6vVdk6pA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_4lFGQQZqEeyq7u6vVdk6pA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_4lFGQgZqEeyq7u6vVdk6pA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4lFGQwZqEeyq7u6vVdk6pA" points="[-15, -14, 162, 150]$[-157, -146, 20, 18]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lLM4AZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4lLM4QZqEeyq7u6vVdk6pA" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_JmJB4PUEEeuxjLpquTLVzg" name="Work" outgoingEdges="_4k3q4AZqEeyq7u6vVdk6pA" incomingEdges="_4k5gEgZqEeyq7u6vVdk6pA" width="4" height="4" resizeKind="NSEW">
+      <target xmi:type="san:Place" href="basestation.sant#Work"/>
+      <semanticElements xmi:type="san:Place" href="basestation.sant#Work"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JmLeJPUEEeuxjLpquTLVzg" name="short" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:PrimitiveType" href="basestation.sant#//@places.0/@type"/>
+        <semanticElements xmi:type="san:PrimitiveType" href="basestation.sant#//@places.0/@type"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_JmLeJfUEEeuxjLpquTLVzg" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JmLeJ_UEEeuxjLpquTLVzg" name="1" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="san:MarkingSimple" href="basestation.sant#//@places.0/@marking"/>
+        <semanticElements xmi:type="san:MarkingSimple" href="basestation.sant#//@places.0/@marking"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_JmLeKPUEEeuxjLpquTLVzg" labelSize="12" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" uid="_JmJB4fUEEeuxjLpquTLVzg" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
+        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_JmJB4_UEEeuxjLpquTLVzg" name="Down" outgoingEdges="_4k4R8AZqEeyq7u6vVdk6pA" incomingEdges="_4k45AAZqEeyq7u6vVdk6pA" width="4" height="4" resizeKind="NSEW">
+      <target xmi:type="san:Place" href="basestation.sant#Down"/>
+      <semanticElements xmi:type="san:Place" href="basestation.sant#Down"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JmMFMPUEEeuxjLpquTLVzg" name="short" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:PrimitiveType" href="basestation.sant#//@places.1/@type"/>
+        <semanticElements xmi:type="san:PrimitiveType" href="basestation.sant#//@places.1/@type"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_JmMFMfUEEeuxjLpquTLVzg" showIcon="false" labelColor="255,255,255" labelPosition="node" width="6" height="2" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='PrimitiveType']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JmMFM_UEEeuxjLpquTLVzg" name="0" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="san:MarkingSimple" href="basestation.sant#//@places.1/@marking"/>
+        <semanticElements xmi:type="san:MarkingSimple" href="basestation.sant#//@places.1/@marking"/>
+        <ownedStyle xmi:type="diagram:Lozenge" uid="_JmMFNPUEEeuxjLpquTLVzg" labelSize="12" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']/@borderedNodeMappings[name='MarkingSimple']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" uid="_JmJo8PUEEeuxjLpquTLVzg" labelSize="12" strokeSizeComputationExpression="3" backgroundColor="194,239,255">
+        <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.san.design/description/san.odesign#//@ownedViewpoints[name='SAN']/@ownedRepresentations[name='SAN%20diagram']/@defaultLayer/@nodeMappings[name='Place']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='Place']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_JmNTU_UEEeuxjLpquTLVzg" name="ChannelCount" incomingEdges="_pBztAAZnEeyq7u6vVdk6pA _pB07IAZnEeyq7u6vVdk6pA">
+      <target xmi:type="sant:PlaceTemplate" href="basestation.sant#ChannelCount"/>
+      <semanticElements xmi:type="sant:PlaceTemplate" href="basestation.sant#ChannelCount"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_JmNTVPUEEeuxjLpquTLVzg" labelSize="12" borderSize="2" borderSizeComputationExpression="2" backgroundColor="204,242,166">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_JmOhcPUEEeuxjLpquTLVzg" name="Parameter bs_services">
+        <target xmi:type="core:MultiplicityParametric" href="basestation.sant#//@templatePlaces[name='ChannelCount']/@multiplicity"/>
+        <semanticElements xmi:type="core:MultiplicityParametric" href="basestation.sant#//@templatePlaces[name='ChannelCount']/@multiplicity"/>
+        <ownedStyle xmi:type="diagram:Dot" uid="_JmOhcfUEEeuxjLpquTLVzg" labelSize="12" labelPosition="node">
+          <description xmi:type="style:DotDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']/@subNodeMappings[name='MultiplicityParametric']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@containerMappings[name='PlaceTemplate']/@subNodeMappings[name='MultiplicityParametric']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_qEuYAAZmEeyq7u6vVdk6pA" name="OG_Recover" outgoingEdges="_pBztAAZnEeyq7u6vVdk6pA _4k11sAZqEeyq7u6vVdk6pA" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="sant:OutputGateTemplate" href="basestation.sant#OG_Recover"/>
+      <semanticElements xmi:type="sant:OutputGateTemplate" href="basestation.sant#OG_Recover"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_qEuYAQZmEeyq7u6vVdk6pA" labelSize="12" workspacePath="/org.modelspartiti.formalisms.sant.design/icons/sant_outgate.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tPlxgAZmEeyq7u6vVdk6pA" name="OG_Fail_bs" outgoingEdges="_pB07IAZnEeyq7u6vVdk6pA _4k2cwAZqEeyq7u6vVdk6pA" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="sant:OutputGateTemplate" href="basestation.sant#OG_Fail_bs"/>
+      <semanticElements xmi:type="sant:OutputGateTemplate" href="basestation.sant#OG_Fail_bs"/>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_tPlxgQZmEeyq7u6vVdk6pA" labelSize="12" workspacePath="/org.modelspartiti.formalisms.sant.design/icons/sant_outgate.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='OutputGate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_pBztAAZnEeyq7u6vVdk6pA" sourceNode="_qEuYAAZmEeyq7u6vVdk6pA" targetNode="_JmNTU_UEEeuxjLpquTLVzg">
+      <target xmi:type="sant:OutputGateTemplate" href="basestation.sant#OG_Recover"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_pB0UEAZnEeyq7u6vVdk6pA" targetArrow="NoDecoration" size="5" routingStyle="manhattan" strokeColor="138,226,52">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGateTemplate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_pB0UEQZnEeyq7u6vVdk6pA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGateTemplate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_pB07IAZnEeyq7u6vVdk6pA" sourceNode="_tPlxgAZmEeyq7u6vVdk6pA" targetNode="_JmNTU_UEEeuxjLpquTLVzg">
+      <target xmi:type="sant:OutputGateTemplate" href="basestation.sant#OG_Fail_bs"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_pB07IQZnEeyq7u6vVdk6pA" targetArrow="NoDecoration" size="5" routingStyle="manhattan" strokeColor="138,226,52">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGateTemplate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_pB07IgZnEeyq7u6vVdk6pA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='targetOutputGateTemplate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m0ARUAZqEeyq7u6vVdk6pA" name="Recover" outgoingEdges="_4k5gEgZqEeyq7u6vVdk6pA" incomingEdges="_4k11sAZqEeyq7u6vVdk6pA _4k4R8AZqEeyq7u6vVdk6pA" width="3" height="6" resizeKind="NSEW">
+      <target xmi:type="sant:TimedActivityTemplate" href="basestation.sant#Recover"/>
+      <semanticElements xmi:type="sant:TimedActivityTemplate" href="basestation.sant#Recover"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_m0DUoAZqEeyq7u6vVdk6pA" name="Exponential" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:Exponential" href="basestation.sant#//@activityTemplates[name='Recover']/@timeDistribution"/>
+        <semanticElements xmi:type="san:Exponential" href="basestation.sant#//@activityTemplates[name='Recover']/@timeDistribution"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_m0D7sAZqEeyq7u6vVdk6pA" labelSize="9" showIcon="false" labelPosition="node" width="6" height="2" color="138,226,52">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_m0A4YAZqEeyq7u6vVdk6pA" labelSize="12" width="3" height="6" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_m0BfcQZqEeyq7u6vVdk6pA" name="Fail_bs" outgoingEdges="_4k45AAZqEeyq7u6vVdk6pA" incomingEdges="_4k2cwAZqEeyq7u6vVdk6pA _4k3q4AZqEeyq7u6vVdk6pA" width="3" height="6" resizeKind="NSEW">
+      <target xmi:type="sant:TimedActivityTemplate" href="basestation.sant#Fail_bs"/>
+      <semanticElements xmi:type="sant:TimedActivityTemplate" href="basestation.sant#Fail_bs"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_m0FJ0AZqEeyq7u6vVdk6pA" name="Exponential" width="6" height="2" resizeKind="NSEW">
+        <target xmi:type="san:Exponential" href="basestation.sant#//@activityTemplates[name='Fail_bs']/@timeDistribution"/>
+        <semanticElements xmi:type="san:Exponential" href="basestation.sant#//@activityTemplates[name='Fail_bs']/@timeDistribution"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_m0FJ0QZqEeyq7u6vVdk6pA" labelSize="9" showIcon="false" labelPosition="node" width="6" height="2" color="138,226,52">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@borderedNodeMappings[name='Distribution']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_m0BfcgZqEeyq7u6vVdk6pA" labelSize="12" width="3" height="6" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@nodeMappings[name='TimedActivity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4k11sAZqEeyq7u6vVdk6pA" sourceNode="_qEuYAAZmEeyq7u6vVdk6pA" targetNode="_m0ARUAZqEeyq7u6vVdk6pA">
+      <target xmi:type="sant:OutputGateTemplate" href="basestation.sant#OG_Recover"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_4k11sQZqEeyq7u6vVdk6pA" targetArrow="NoDecoration" size="5" strokeColor="138,226,52">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGateTemplate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_4k11sgZqEeyq7u6vVdk6pA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGateTemplate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4k2cwAZqEeyq7u6vVdk6pA" sourceNode="_tPlxgAZmEeyq7u6vVdk6pA" targetNode="_m0BfcQZqEeyq7u6vVdk6pA">
+      <target xmi:type="sant:OutputGateTemplate" href="basestation.sant#OG_Fail_bs"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_4k2cwQZqEeyq7u6vVdk6pA" targetArrow="NoDecoration" size="5" strokeColor="138,226,52">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGateTemplate']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_4k2cwgZqEeyq7u6vVdk6pA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='sourceOutputGateTemplate']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4k3q4AZqEeyq7u6vVdk6pA" sourceNode="_JmJB4PUEEeuxjLpquTLVzg" targetNode="_m0BfcQZqEeyq7u6vVdk6pA">
+      <target xmi:type="sant:InputArc" href="basestation.sant#//@arcs.0"/>
+      <semanticElements xmi:type="sant:InputArc" href="basestation.sant#//@arcs.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_4k3q4QZqEeyq7u6vVdk6pA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_4k3q4gZqEeyq7u6vVdk6pA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4k4R8AZqEeyq7u6vVdk6pA" sourceNode="_JmJB4_UEEeuxjLpquTLVzg" targetNode="_m0ARUAZqEeyq7u6vVdk6pA">
+      <target xmi:type="sant:InputArc" href="basestation.sant#//@arcs.2"/>
+      <semanticElements xmi:type="sant:InputArc" href="basestation.sant#//@arcs.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_4k4R8QZqEeyq7u6vVdk6pA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_4k4R8gZqEeyq7u6vVdk6pA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='InputArc']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4k45AAZqEeyq7u6vVdk6pA" sourceNode="_m0BfcQZqEeyq7u6vVdk6pA" targetNode="_JmJB4_UEEeuxjLpquTLVzg">
+      <target xmi:type="sant:OutputArc" href="basestation.sant#//@arcs.1"/>
+      <semanticElements xmi:type="sant:OutputArc" href="basestation.sant#//@arcs.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_4k45AQZqEeyq7u6vVdk6pA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_4k45AgZqEeyq7u6vVdk6pA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4k5gEgZqEeyq7u6vVdk6pA" sourceNode="_m0ARUAZqEeyq7u6vVdk6pA" targetNode="_JmJB4PUEEeuxjLpquTLVzg">
+      <target xmi:type="sant:OutputArc" href="basestation.sant#//@arcs.3"/>
+      <semanticElements xmi:type="sant:OutputArc" href="basestation.sant#//@arcs.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_4k5gEwZqEeyq7u6vVdk6pA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_4k5gFAZqEeyq7u6vVdk6pA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer/@edgeMappings[name='OutputArcFromActivityToPlace']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Jkc_0PUEEeuxjLpquTLVzg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/org.modelspartiti.formalisms.sant.design/description/sant.odesign#//@ownedViewpoints[name='SANT']/@ownedRepresentations[name='SANT']/@defaultLayer"/>
+    <target xmi:type="sant:SANT" href="basestation.sant#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

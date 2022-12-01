@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<instance:scenario xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:instance="http://www.modelspartiti.org/infrastructure/instance" name="v2">
+  <root xsi:type="instance:composedmodel" name="v2_v2[1]">
+    <sharedstates name="r1[1]">
+      <children model="v2_v2[1]_v1_1[1]" state="i1[serv$1]"/>
+      <children model="v2_v2[1]_v1_1[1]" state="i1[serv$2]"/>
+      <children model="v2_v2[1]_v1_1[1]" state="i1[serv$3]"/>
+      <children model="v2_v2[1]_v1_1[1]" state="i1[serv$4]"/>
+      <children model="v2_v2[1]_v1_1[1]" state="i1[serv$5]"/>
+      <children model="v2_v2[1]_v1_1[1]" state="i1[serv$6]"/>
+      <children model="v2_v2[1]_v1_1[1]" state="i1[serv$7]"/>
+      <children model="v2_v2[1]_v1_1[2]" state="i1[serv$1]"/>
+      <children model="v2_v2[1]_v1_1[2]" state="i1[serv$2]"/>
+      <children model="v2_v2[1]_v1_1[2]" state="i1[serv$3]"/>
+      <children model="v2_v2[1]_v1_1[2]" state="i1[serv$4]"/>
+      <children model="v2_v2[1]_v1_1[2]" state="i1[serv$5]"/>
+      <children model="v2_v2[1]_v1_1[2]" state="i1[serv$6]"/>
+      <children model="v2_v2[1]_v1_1[2]" state="i1[serv$7]"/>
+      <children model="v2_v2[1]_v1_1[3]" state="i1[serv$1]"/>
+      <children model="v2_v2[1]_v1_1[3]" state="i1[serv$2]"/>
+      <children model="v2_v2[1]_v1_1[3]" state="i1[serv$3]"/>
+      <children model="v2_v2[1]_v1_1[3]" state="i1[serv$4]"/>
+      <children model="v2_v2[1]_v1_1[3]" state="i1[serv$5]"/>
+      <children model="v2_v2[1]_v1_1[3]" state="i1[serv$6]"/>
+      <children model="v2_v2[1]_v1_1[3]" state="i1[serv$7]"/>
+    </sharedstates>
+    <submodels xsi:type="instance:submodel" name="v2_v2[1]_v1_1[1]" source="location.xmi">
+      <parameters name="p1">
+        <val xsi:type="instance:value_int" value="7"/>
+      </parameters>
+      <parameters name="p2">
+        <val xsi:type="instance:value_int" value="8"/>
+      </parameters>
+    </submodels>
+    <submodels xsi:type="instance:submodel" name="v2_v2[1]_v1_1[2]" source="location.xmi">
+      <parameters name="p1">
+        <val xsi:type="instance:value_int" value="7"/>
+      </parameters>
+      <parameters name="p2">
+        <val xsi:type="instance:value_int" value="8"/>
+      </parameters>
+    </submodels>
+    <submodels xsi:type="instance:submodel" name="v2_v2[1]_v1_1[3]" source="location.xmi">
+      <parameters name="p1">
+        <val xsi:type="instance:value_int" value="7"/>
+      </parameters>
+      <parameters name="p2">
+        <val xsi:type="instance:value_int" value="8"/>
+      </parameters>
+    </submodels>
+  </root>
+</instance:scenario>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sant:SANT xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:core="http://www.modelspartiti.org/infrastructure/tmdl/core"
+    xmlns:san="http://www.modelspartiti.org/templates/san/san"
+    xmlns:sant="http://www.modelspartiti.org/templates/san/sant"
+    name="Basestation">
+  <templatePlaces
+      name="ChannelCount">
+    <multiplicity
+        xsi:type="core:MultiplicityParametric"
+        parameter="bs_services"/>
+  </templatePlaces>
+  <places name="Work">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking
+        xsi:type="san:MarkingSimple"
+        value="1"/>
+  </places>
+  <places name="Down">
+    <type xsi:type="san:PrimitiveType"/>
+    <marking
+        xsi:type="san:MarkingSimple"/>
+  </places>
+  <activityTemplates
+      xsi:type="sant:TimedActivityTemplate"
+      name="Recover">
+    <timeDistribution
+        xsi:type="san:Exponential"
+        parameters="rate"/>
+  </activityTemplates>
+  <activityTemplates
+      xsi:type="sant:TimedActivityTemplate"
+      name="Fail_bs">
+    <timeDistribution
+        xsi:type="san:Exponential"
+        parameters="rate"/>
+  </activityTemplates>
+  <parameters
+      xsi:type="core:ParameterArray"
+      name="bs_services"/>
+  <gates xsi:type="sant:OutputGateTemplate"
+      name="OG_Recover"
+      placeTemplate="ChannelCount"
+      activity="Recover">
+    <function/>
+  </gates>
+  <gates xsi:type="sant:OutputGateTemplate"
+      name="OG_Fail_bs"
+      placeTemplate="ChannelCount"
+      activity="Fail_bs">
+    <function/>
+  </gates>
+  <arcs xsi:type="sant:InputArc"
+      source="Work"
+      target="Fail_bs"/>
+  <arcs xsi:type="sant:OutputArc"
+      source="Fail_bs"
+      target="Down"/>
+  <arcs xsi:type="sant:InputArc"
+      source="Down"
+      target="Recover"/>
+  <arcs xsi:type="sant:OutputArc"
+      source="Recover"
+      target="Work"/>
+</sant:SANT>
