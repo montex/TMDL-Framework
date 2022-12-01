@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="paramlist" nsURI="sant2san.params" nsPrefix="paramlist">
+  <eClassifiers xsi:type="ecore:EClass" name="ParamList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignments" upperBound="-1"
+        eType="ecore:EClass ../../../../org.modelspartiti.infrastructure/model/tmdl.ecore#//core/Assignment"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

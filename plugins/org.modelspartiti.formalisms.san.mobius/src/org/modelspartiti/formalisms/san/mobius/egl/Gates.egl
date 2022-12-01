@@ -1,0 +1,79 @@
+[% 
+	import "TransformEGL.egl"; //per riutilizzare la funzione getSegmentValue
+	import "CoordinatesGeneratorAIRD.egl";
+	var predicate : XMI!t_predicate;
+	var functionx : XMI!t_function; 
+	var predicate_text : String;
+	var functionx_text : String;
+	var inputGatesMap: Map<String, Tuple>;
+	var outputGatesMap: Map<String, Tuple>;
+	var gatesMap: Map<String, Tuple>;
+	
+	if(AIRD.isDefined()){
+		inputGatesMap = getInputGatesMap();
+		outputGatesMap = getOutputGatesMap();	
+	}
+	else{
+		inputGatesMap = inputGatesMapDefault;
+		outputGatesMap = outputGatesMapDefault;	
+	}
+
+	
+	for (gate in XMI!t_gates){
+		if (gate.getAttribute("xsi:type").asString.equals("san:InputGate")){ %]
+			<class id="Mobius.AtomicModels.San.InputGatePanelObject">
+[%			gatesMap = inputGatesMap;
+		}
+		else{ %]
+			<class id="Mobius.AtomicModels.San.OutputGatePanelObject">
+[%			gatesMap = outputGatesMap;
+		} %]
+	<int id="ClassVersion">1</int>
+	<class id="Mobius.BaseClasses.BaseVertexClass">
+		<int id="ClassVersion">3</int>
+		<class id="Mobius.BaseClasses.BasePanelObjectClass">
+			<int id="ClassVersion">5</int>
+			<string id="Name">[%=gate.a_name%]</string>
+			<boolean id="ContainsLabel">true</boolean>
+			<boolean id="IsLabelShown">true</boolean>
+		</class>
+		<point id="CenterPoint">
+			[%=printCoordGate(gate, gatesMap)%]
+		</point>
+	</class>
+	<boolean id="MirrorImage">false</boolean>
+[%		if (gate.children.select(a|a.tagName = "predicate").size() > 0){
+			predicate = gate.children.select(a|a.tagName = "predicate").first();
+			predicate_text = getSegmentValue(predicate.children.select(a|a.tagName = "segments").first());
+		}
+		if (gate.children.select(a|a.tagName = "function").size() > 0){
+			functionx = gate.children.select(a|a.tagName = "function").first();
+			functionx_text = getSegmentValue(functionx.children.select(a|a.tagName = "segments").first());
+		}
+		if (gate.getAttribute("xsi:type").asString.equals("san:InputGate")){ %]
+			<string id="Predicate">[%=predicate_text%]</string>
+			<string id="Function">[%=functionx_text%]</string>
+[%		}
+		else{ %]
+			<string id="Function">[%=functionx_text%]</string>
+[%		} %]
+</class>
+[%}%]
+
+[%  
+	@template
+	operation printCoordGate(gate: XMI!t_gates, gatesMap: Map<String, Tuple>){
+		var valx: Integer;
+		var valy: Integer;
+		
+		if (gatesMap.containsKey(gate.a_name)){
+			valx = gatesMap.get(gate.a_name).x; 
+			valy = gatesMap.get(gate.a_name).y; 
+		}
+		else{
+			valx = 0;
+			valy = 0;
+		}		
+%]		<int id="x">[%=valx%]</int>
+		<int id="y">[%=valy%]</int>
+[%}%]

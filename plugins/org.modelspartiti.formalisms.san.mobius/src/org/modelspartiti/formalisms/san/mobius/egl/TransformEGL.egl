@@ -1,0 +1,121 @@
+[% 
+	import "CoordinatesGeneratorDefault.egl";
+	var editor_width : Integer = 1875;
+   	var editor_height : Integer = 825;
+   	var segment: XMI!t_segments;
+   	var coordMaps: Map<String, Map<String, Tuple>>;
+   	var defaultPlacesMap: Map<String, Tuple>;
+   	if (XMI!t_initialization.all.size() > 0)
+   	   	segment = XMI!t_initialization.all.first().c_segments.first();
+   	if (not AIRD.isDefined())
+   		coordMaps = loadCoordMaps(editor_width);
+%]
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<class id="Mobius.AtomicModels.San.SanInterface">
+	<int id="ClassVersion">1</int>
+	<class id="Mobius.BaseClasses.BaseInterfaceClass">
+		<int id="ClassVersion">3</int>
+		<string id="ModelName"></string>
+		<class id="Mobius.AtomicModels.San.SanInfoClass">
+			<int id="ClassVersion">5</int>
+			<class id="Mobius.BaseClasses.BaseInfoClass">
+				<int id="ClassVersion">2</int>
+			</class>
+			<class id="Mobius.AtomicModels.San.SanTypeManager">
+				<int id="ClassVersion">1</int>
+				[% var CustomTypes : Template = TemplateFactory.load("CustomTypes.egl");%]
+				[%=CustomTypes.process()%]
+			</class>
+			<string id="CustomInitialization">[%=getSegmentValue(segment)%]</string>
+		</class>
+		<class id="Mobius.AtomicModels.San.SanEditor">
+			<int id="ClassVersion">3</int>
+			<class id="Mobius.BaseClasses.BaseEditorClass">
+				<int id="ClassVersion">3</int>
+				<boolean id="HasPanel">true</boolean>
+				<class id="Mobius.BaseClasses.BasePanelClass">
+					<int id="ClassVersion">2</int>
+					<point id="Size of Panel">
+						<int id="x">[%=editor_width%]</int>
+						<int id="y">[%=editor_height%]</int>
+					</point>
+					<double id="ZoomFactor">1.0</double>
+					<boolean id="ShowGridEnabled">true</boolean>
+					<int id="ShowGridStep">10</int>
+					<boolean id="SnapGridEnabled">true</boolean>
+					<int id="SnapGridStep">10</int>	
+					[% var Places : Template = TemplateFactory.load("Places.egl");%]
+					[% Places.populate("placesMapDefault", coordMaps.get("places")); %]
+					[%=Places.process()%]
+					[% var Gates : Template = TemplateFactory.load("Gates.egl");%]
+					[% Gates.populate("inputGatesMapDefault", coordMaps.get("inputGates")); %]
+					[% Gates.populate("outputGatesMapDefault", coordMaps.get("outputGates")); %]
+					[%=Gates.process()%]
+					[% var Activities : Template = TemplateFactory.load("Activities.egl");%]
+					[% Activities.populate("instantActivitiesMapDefault", coordMaps.get("instantActivities")); %]
+					[% Activities.populate("timedActivitiesMapDefault", coordMaps.get("timedActivities")); %]
+					[%=Activities.process()%]
+					[% var Arcs : Template = TemplateFactory.load("Arcs.egl");%]
+					[% Arcs.populate("placesMapDefault", coordMaps.get("places")); %]
+					[% Arcs.populate("inputGatesMapDefault", coordMaps.get("inputGates")); %]
+					[% Arcs.populate("outputGatesMapDefault", coordMaps.get("outputGates")); %]
+					[% Arcs.populate("instantActivitiesMapDefault", coordMaps.get("instantActivities")); %]
+					[% Arcs.populate("timedActivitiesMapDefault", coordMaps.get("timedActivities")); %]
+					[%=Arcs.process()%]
+				</class>
+					[% var GlobaVariables : Template = TemplateFactory.load("GlobalVariables.egl");%]
+					[%=GlobaVariables.process()%]
+				<boolean id="DisplayToolTips">true</boolean>
+			</class>
+		</class>
+		<boolean id="Valid">true</boolean>
+	</class>
+</class>
+
+
+[% function getSegmentValue(segment : XMI!t_segments): String {
+	var value : String;
+	if (segment != null){
+		switch(segment.getAttribute("xsi:type").asString){
+			case "san:ExpressionText": value = segment.getAttribute("text");
+			case "san:ExpressionVariable": value = segment.a_variable;
+			case "san:ExpressionMarking": value = segment.a_place;
+		}		
+	}
+	return value;
+}%]
+
+[% function loadCoordMaps(editor_width: Integer): Map<String, Map<String, Tuple>>{
+   	var x = 5;
+   	var y = 5;
+   	var coordResult: Tuple<Map, Integer, Integer>;
+   	var result: Map<String, Map<String, Tuple>>;
+   	
+   	coordResult = getPlacesMapDefault(x, y, editor_width);
+   	result.put("places", coordResult.map);
+   	x = coordResult.x;
+   	y = coordResult.y;
+   	
+   	coordResult = getInputGatesMapDefault(x, y, editor_width);
+   	result.put("inputGates", coordResult.map);
+   	x = coordResult.x;
+   	y = coordResult.y;
+
+   	coordResult = getOutputGatesMapDefault(x, y, editor_width);
+   	result.put("outputGates", coordResult.map);
+   	x = coordResult.x;
+   	y = coordResult.y;
+   
+   	coordResult = getInstantaneousActivitiesMapDefault(x, y, editor_width);
+   	result.put("instantActivities", coordResult.map);
+   	x = coordResult.x;
+   	y = coordResult.y;
+
+   	coordResult = getTimedActivitiesMapDefault(x, y, editor_width);
+   	result.put("timedActivities", coordResult.map);
+   	x = coordResult.x;
+   	y = coordResult.y;
+   	
+   	return result;
+}%]
+

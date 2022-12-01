@@ -13,8 +13,11 @@ The framework is implemented as a set of plugins for the Eclipse platform.
 |Plugin|Description|
 |---|---|
 |**org.modelspartiti.formalisms.san**|SAN and SAN-T metamodels|
+|**org.modelspartiti.formalisms.san.concretize**|SAN-T to SAN transformation|
+|**org.modelspartiti.formalisms.san.concretize.ui**|UI controls for SAN-T to SAN transformation|
 |**org.modelspartiti.formalisms.san.design**|Sirius editor for the SAN metamodel|
 |**org.modelspartiti.formalisms.san.examples**|Examples of SAN and SAN-T models|
+|**org.modelspartiti.formalisms.san.mobius**|Exporter from SAN models to the Möbius tool|
 |**org.modelspartiti.formalisms.sant.design**|Sirius editor for the SAN-T metamodel|
 |**org.modelspartiti.infrastructure**|TMDL metamodel|
 
@@ -30,6 +33,7 @@ To be able to use the framework the following dependencies are needed:
 - Eclipse Modeling Framework (EMF)
 - Eclipse OCL
 - Sirius
+- Epsilon
 
 All of them can be found in the Eclipse Marketplace or in the default update
 site that comes configured in the default installation of Eclipse.
@@ -70,10 +74,12 @@ A quick way to start using the framework is to import the plugin(s) with **examp
 
 ## Contributors
 
-- [Leonardo Montecchi](mailto:leonardo@ic.unicamp.br) (UNICAMP) 
+- [Leonardo Montecchi](mailto:leonardo@ic.unicamp.br) (UNICAMP) [maintainer]
+- Denny Sbanchi (UNIFI)
+- Enrico Dolce (UNIFI)
 - Federico Moncini (UNIFI)
 
 ## Publications
 
-* L. Montecchi, F. Moncini, P. Lollini, K. Keefe. [An Eclipse-Based Editor for SAN Templates](https://link.springer.com/chapter/10.1007%2F978-3-030-58462-7_13). In: 12th International Workshop on Software Engineering for Resilient Systems (SERENE 2020). Munich, Germany, September 7, 2020.
+* L. Montecchi, F. Moncini, P. Lollini, K. Keefe. [An Eclipse-Based Editor for SAN Templates](https://link.springer.com/chapter/10.1007/978-3-030-58462-7_13). In: 12th International Workshop on Software Engineering for Resilient Systems (SERENE 2020). Munich, Germany, September 7, 2020.
 *  L. Montecchi, P. Lollini, A. Bondavalli. [A Template-Based Methodology for the Specification and Automated Composition of Performability Models](https://ieeexplore.ieee.org/document/8710621). In: IEEE Transactions on Reliability, Vol. 69, Issue 1, pp. 293-309 (March 2020). 

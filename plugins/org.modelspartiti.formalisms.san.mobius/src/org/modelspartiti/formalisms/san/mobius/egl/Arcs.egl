@@ -1,0 +1,208 @@
+[%  
+	import "CoordinatesGeneratorAIRD.egl";
+	import "CoordinatesGeneratorDefault.egl";
+	var start_index : Integer;
+	var end_index : Integer;
+	var sourceString : String;
+	var source: String;
+	var destination : String;
+	var caseId: String;
+	var source_x: String;
+	var source_y: String;
+	var destination_x: String;
+	var destination_y: String;
+	var coord: Tuple;
+	var placesMap: Map<String, Tuple>;
+	var instantActivitiesMap: Map<String, Tuple>;
+	var timedActivitiesMap: Map<String, Tuple>;
+	
+	if (AIRD.isDefined()){
+		placesMap = getPlacesMap();
+		instantActivitiesMap = getInstantaneousActivitiesMap();
+		timedActivitiesMap = getTimedActivitiesMap();	
+	}
+	
+	for(arc in XMI!t_arcs){ 
+		if ((not arc.a_source.asString.isEmpty()) and (not arc.a_target.asString.isEmpty())){
+			if(arc.getAttribute("xsi:type").asString.equals("san:InputArc")){
+				source = arc.a_source.replace("#", "");
+			}
+			else{
+				start_index = arc.a_source.asString.indexof("'");
+				sourceString = arc.a_source.asString.substring(start_index+1).replace("#", "");
+				source = sourceString.substring(0, sourceString.indexof("'"));
+				source = source.replace("%20", " ");
+				start_index = sourceString.asString.indexof("'");
+				sourceString = sourceString.asString.substring(start_index+1);
+				start_index = sourceString.asString.indexof("'");
+				sourceString = sourceString.asString.substring(start_index+1);
+				caseId = sourceString.substring(0, sourceString.indexof("'"));
+			}
+			destination = arc.a_target.asString.replace("#", "");
+	 		if(arc.getAttribute("xsi:type").asString.equals("san:InputArc")){
+	 			if (AIRD.isDefined())
+	 				coord = getCoordPlace(source, placesMap);
+	 			else
+	 				coord = getCoordPlaceDefault(source, placesMapDefault);
+	 		} 
+			else{
+				if (AIRD.isDefined())
+					coord = getCoordCase(source, caseId);
+				else
+					coord = getCoordCaseDefault(source, caseId, instantActivitiesMapDefault, timedActivitiesMapDefault);
+			} 
+			source_x = coord.x.asString;
+	 		source_y = coord.y.asString;
+			if(arc.getAttribute("xsi:type").asString.equals("san:InputArc")){
+				if (AIRD.isDefined())
+		 			coord = getCoordActivity(destination, instantActivitiesMap, timedActivitiesMap);
+				else
+					coord = getCoordActivityDefault(destination, instantActivitiesMapDefault, timedActivitiesMapDefault);
+			}
+			else{
+				if (AIRD.isDefined())
+					coord = getCoordPlace(destination, placesMap);
+				else
+					coord = getCoordPlaceDefault(destination, placesMapDefault);
+			} 	
+			destination_x = coord.x.asString;
+			destination_y = coord.y.asString;		%]
+			[%=printArc(source, destination, source_x, source_y, destination_x, destination_y, true)%]	
+[%		}
+    }
+	printGatesArcs();	
+%]
+
+[%  @template
+	operation printArc(source, destination, source_x, source_y, destination_x, destination_y: String, arrow: Boolean){%]
+<class id="Mobius.BaseClasses.BaseEdgeClass">
+	<int id="ClassVersion">3</int>
+	<int id="LineType">0</int>	
+	<string id="StartVertex">[%=source%]</string>
+	<string id="FinishVertex">[%=destination%]</string>
+	<boolean id="Arrows">[%=arrow%]</boolean>
+	<vector id="PointList">
+		<point id="0">	
+			<int id="x">[%=source_x%]</int>
+			<int id="y">[%=source_y%]</int>	
+		</point>
+		<point id="1">
+			<int id="x">[%=destination_x%]</int>
+			<int id="y">[%=destination_y%]</int>	
+		</point>
+	</vector>
+</class>
+[%}%]
+
+[%
+	operation printGatesArcs(){
+	var inputGatesMap: Map<String, Tuple>;
+	var outputGatesMap: Map<String, Tuple>;	
+	
+	if(AIRD.isDefined()){
+		inputGatesMap = getInputGatesMap();
+		outputGatesMap = getOutputGatesMap();	
+	}
+	else{
+		inputGatesMap = inputGatesMapDefault;
+		outputGatesMap = outputGatesMapDefault;	
+	}
+	
+	for (gate in XMI!t_gates){
+		if (gate.getAttribute("xsi:type").asString.equals("san:InputGate")){ 
+			printInputGatesArcs(gate, inputGatesMap);
+		}
+		else{ 
+			printOutputGatesArcs(gate, outputGatesMap);
+		} 
+	}
+}
+%]
+
+[% operation printInputGatesArcs(gate: XMI!t_gates, inputGatesMap: Map<String, Tuple>){
+	var places_list: String;
+	var activity_list: String;
+	var coord: Tuple<Integer, Integer>;
+	
+	places_list = gate.a_places.asString.replace("#", "");
+	if (not places_list.isEmpty){
+		for (place in places_list.split(" ")){
+			if (AIRD.isDefined())
+	 			coord = getCoordPlace(place, placesMap);
+			else
+				coord = getCoordPlaceDefault(place, placesMapDefault); 	
+			source_x = coord.x.asString;
+			source_y = coord.y.asString;
+			if (inputGatesMap.containsKey(gate.a_name.asString)){
+				destination_x = inputGatesMap.get(gate.a_name.asString).x.asString; 
+				destination_y = inputGatesMap.get(gate.a_name.asString).y.asString; 
+			}%]
+			[%=printArc(place, gate.a_name, source_x, source_y, destination_x, destination_y, false)%]	
+[%				}
+			}
+	activity_list = gate.a_activity.asString.replace("#", "");
+	if (not activity_list.isEmpty){
+		for (activity in activity_list.split(" ")){
+				if (inputGatesMap.containsKey(gate.a_name.asString)){
+					source_x = inputGatesMap.get(gate.a_name.asString).x.asString; 
+					source_y = inputGatesMap.get(gate.a_name.asString).y.asString; 
+				}
+				if (AIRD.isDefined())
+ 					coord = getCoordActivity(activity, instantActivitiesMap, timedActivitiesMap);
+				else
+					coord = getCoordActivityDefault(activity, instantActivitiesMapDefault, timedActivitiesMapDefault);
+				destination_x = coord.x.asString; 
+				destination_y = coord.y.asString;%]
+			[%=printArc(gate.a_name, activity, source_x, source_y, destination_x, destination_y, false)%]	
+[%				}		
+			}
+}%]
+
+[% operation printOutputGatesArcs(gate: XMI!t_gates, outputGatesMap: Map<String, Tuple>){
+		var cases_list: String;
+		var places_list: String;
+		var coord: Tuple<Integer, Integer>;
+		
+		cases_list = gate.a_activityCase.asString.replace("#", "");
+		if (not cases_list.isEmpty){
+			for (caseAct in cases_list.split(" ")){
+				start_index = caseAct.indexof("'");
+				sourceString = caseAct.substring(start_index+1);
+				source = sourceString.substring(0, sourceString.indexof("'"));
+				source = source.replace("%20", " ");
+				start_index = sourceString.asString.indexof("'");
+				sourceString = sourceString.asString.substring(start_index+1);
+				start_index = sourceString.asString.indexof("'");
+				sourceString = sourceString.asString.substring(start_index+1);
+				caseId = sourceString.substring(0, sourceString.indexof("'"));
+				if (AIRD.isDefined())
+					coord = getCoordCase(source, caseId);
+				else
+					coord = getCoordCaseDefault(source, caseId, instantActivitiesMapDefault, timedActivitiesMapDefault);
+				source_x = coord.x.asString;
+				source_y = coord.y.asString;
+				if (outputGatesMap.containsKey(gate.a_name.asString)){
+					destination_x = outputGatesMap.get(gate.a_name.asString).x.asString; 
+					destination_y = outputGatesMap.get(gate.a_name.asString).y.asString; 
+				}%]
+				[%=printArc(source, gate.a_name, source_x, source_y, destination_x, destination_y, false)%]	
+[%				}			
+			}
+			places_list = gate.a_places.asString.replace("#", "");
+			if (not places_list.isEmpty){
+				for (place in places_list.split(" ")){
+					if (outputGatesMap.containsKey(gate.a_name.asString)){
+						source_x = outputGatesMap.get(gate.a_name.asString).x.asString; 
+						source_y = outputGatesMap.get(gate.a_name.asString).y.asString; 
+					}
+					if (AIRD.isDefined())
+			 			coord = getCoordPlace(place, placesMap);
+					else
+						coord = getCoordPlaceDefault(place, placesMapDefault); 		
+					destination_x = coord.x.asString;
+					destination_y = coord.y.asString;%]
+				[%=printArc(gate.a_name, place, source_x, source_y, destination_x, destination_y, false)%]	
+[%				}
+			}
+}%]
+

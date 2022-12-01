@@ -1,0 +1,7 @@
+[%
+	var TextGenerator : Template = TemplateFactory.load("TransformEGL.egl");%]
+ 	[%=TextGenerator.process()%]
+[%
+    //var t = TemplateFactory.load("TransformEGL.egl");
+    //t.generate("Output.xml");
+%]

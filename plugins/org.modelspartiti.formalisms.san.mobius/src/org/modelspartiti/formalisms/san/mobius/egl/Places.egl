@@ -1,0 +1,225 @@
+[% 
+	import "CustomTypes.egl"; //per riutilizzare la funzione loadCustomTypes
+	import "CoordinatesGeneratorAIRD.egl";
+    var places_x : Integer = 5;
+    var places_y : Integer = 5;
+    var i : Integer = 0;
+    var custom_types : Map;  //Creo una mappa con tutti i tipi customizzati creati per poterli riutilizzare nei places
+    var placesMap: Map<String, Tuple>;
+
+	if (AIRD.isDefined())
+		placesMap = getPlacesMap();
+	else
+		placesMap = placesMapDefault;
+
+    custom_types = loadCustomTypes();
+    for (place in XMI!t_places.all){
+		if (place.children.select(a|a.tagName = "type").size == 0 or place.c_type.first.getAttribute("xsi:type").asString.equals("san:PrimitiveType"))  
+	  		printSimplePlace(place, placesMap); 
+	 	else
+	  		printExtendedPlace(place, placesMap);
+ 	 } 
+%]
+
+
+ [% operation printSimplePlace(curr_place : XMI!t_places, placesMap: Map<String, Tuple>) { %]
+ <class id="Mobius.AtomicModels.San.PlacePanelObject">
+	<int id="ClassVersion">1</int>
+	<class id="Mobius.BaseClasses.BaseVertexClass">
+		<int id="ClassVersion">3</int>
+		<class id="Mobius.BaseClasses.BasePanelObjectClass">
+			<int id="ClassVersion">5</int>
+			<string id="Name">[%=curr_place.a_name%]</string>
+			<boolean id="ContainsLabel">true</boolean>
+			<boolean id="IsLabelShown">true</boolean>
+		</class>
+		<point id="CenterPoint">
+			[%=printCoordPlace(curr_place, placesMap)%]
+		</point>
+	</class>
+	<boolean id="ReadOnly">false</boolean>
+	<boolean id="ConstantMarking">true</boolean>
+	<int id="InitialState">[%=calculateMarkingValue(curr_place)%]</int> 
+</class>
+[% } %]
+
+
+
+
+
+[% operation printExtendedPlace(curr_place : XMI!t_places, placesMap: Map<String, Tuple>) { %]
+<class id="Mobius.AtomicModels.San.ExtendedPlacePanelObject">
+	<int id="ClassVersion">3</int>
+	<class id="Mobius.AtomicModels.San.PlacePanelObject">
+		<int id="ClassVersion">1</int>
+		<class id="Mobius.BaseClasses.BaseVertexClass">
+			<int id="ClassVersion">3</int>
+			<class id="Mobius.BaseClasses.BasePanelObjectClass">
+				<int id="ClassVersion">5</int>
+				<string id="Name">[%=curr_place.a_name%]</string>
+				<boolean id="ContainsLabel">true</boolean>
+				<boolean id="IsLabelShown">true</boolean>
+			</class>
+			<point id="CenterPoint">
+				[%=printCoordPlace(curr_place, placesMap)%]
+			</point>
+		</class>
+		<boolean id="ReadOnly">false</boolean>
+		<boolean id="ConstantMarking">true</boolean>
+		<string id="InitialState">[%=calculateMarkingValue(curr_place)%]</string> 
+	</class>
+	<string id="initialMarking">[%=calculateMarkingValue(curr_place)%]</string>	
+	[%=calculateExtendedParams(curr_place)%]
+</class>
+[% } %]
+
+[%  //Vengono calcolati l'Initial State e l'Initial Marking dell'Extended Place'
+	@template
+  operation calculateMarkingValue(curr_place : XMI!t_places) { 
+    var marking: XMI!t_marking; 
+    var value: String; 
+    var node: XMI!t_node;
+    if (curr_place.c_marking.isEmpty) { %]
+0
+[%  } 
+	else{
+		marking = curr_place.children.select(a|a.tagName = "marking").first();
+		switch(marking.getAttribute("xsi:type").asString){
+			case "san:MarkingSimple": value = marking.a_value.asString;
+			case "san:MarkingGlobalVariable": value = marking.a_variable.asString;
+			case "san:MarkingExtended":  
+				node = marking.children.select(a|a.tagName = "node").first;
+				value = node.children.select(a|a.tagName = "leafnode").last().a_value;
+				if (value.length() == 0)
+					value = "0";
+		}
+	}%]
+[%=value%]
+[%}%]
+
+
+
+[%  //Vengono calcolati e poi stampati i valori assegnati ai parametri definiti nel Complex Type esaminato
+	@template
+	operation calculateExtendedParams(curr_place : XMI!t_places) { %]
+[%  var type : XMI!t_type = curr_place.c_type.first();
+	var number_complex_type: Integer;
+	var complex_type_name;
+	var number_fields;
+
+	if (type.a_definition.asString.length() > 0){
+		number_complex_type = type.a_definition.asString.substring(14).asInteger;
+		complex_type_name = custom_types.get(number_complex_type.asInteger).a_name; %]
+		<string id="type">[%=complex_type_name.asString%]</string>
+		[%=printFields(curr_place, number_complex_type.asInteger)%]
+[%	}
+	else { %]
+		<string id="type">[%=type.a_type.asString%]</string>
+		<int id="fieldCount">1</int>
+		<string id="0">[%=calculateMarkingValue(curr_place)%]</string>
+[%	} 
+} %]
+
+[%	//Vengono stampati gli assegnamenti di valori rispetto ai field di cui è composto il Complex Type associato all'Extended Place che si sta analizzando'
+	@template
+	operation printFields(place : XMI!t_places, number_complex_type : Integer) { 
+	var i : Integer = 0;
+	var num_fields : Integer;
+	var type_field;
+	var type;
+	var value : String;
+	var values : Map(Integer, String);
+	var marking : XMI!t_marking;
+	var node : XMI!t_node;
+	var complex_type_name : String;	
+
+	type = place.c_type.first;
+	number_complex_type = type.a_definition.asString.substring(14).asInteger;
+	num_fields = getNumberOfFields(number_complex_type); 
+%]  <int id="fieldCount">[%=num_fields%]</int> 
+[%
+	if (place.c_marking.size() > 0){
+		marking = place.c_marking.first;
+		node = marking.c_node.first;
+		if(node.children.select(a|a.tagName = "leafnode").size() > 0){
+			for(leafnode in node.children.select(a|a.tagName = "leafnode")){
+				switch(leafnode.getAttribute("xsi:type")){
+					  case "san:LeafNodeString": values.put(i, leafnode.a_value);
+					  case "san:LeafNodeGlobalVariable": values.put(i, leafnode.a_variable);
+					  case "san:Array": loadArrayValues(i, values, leafnode);
+					}
+					i++;
+				}
+		}
+	}
+	i = 0;
+	while(i < num_fields) {
+		value = values.get(i);
+		if (i > values.size()-1){ %]
+			<string id="[%=i%]">0</string>	
+	[%	}
+		else{ 
+			if (value.length() == 0)
+				value = "0"; %]
+			<string id="[%=i%]">[%=value%]</string>
+	[%	}
+		i++;
+	}	
+}
+%]
+
+[%  //Viene calcolato in maniera ricorsiva di quanti parametri avrà bisogno la struttura associata all'extended place che si sta analizzando'
+	operation getNumberOfFields(num_type : Integer) : Integer{
+	var custom_type = custom_types.get(num_type);
+	var num_fields = 0;
+	var type_field : XMI!t_typeStruct;
+	if (custom_type.a_size.asString.length > 0)
+		num_fields = custom_type.a_size.asInteger;
+	else {
+		for(field in custom_type.children){ 
+			type_field = field.children.first();
+			if (type_field.a_definition.asString.length() > 0){ // se ho una struct o un'array come field devo contare il numero di fields che le compongono'
+				num_fields = num_fields + getNumberOfFields(type_field.a_definition.asString.substring(14).asInteger);
+			}
+			else
+				num_fields++;
+		}
+	}
+	return num_fields;
+}%] 
+
+
+[%  //Nel caso ci siano array annidati nell'extended marking vengono salvati i loro valori analizzandoli in maniera ricorsiva
+	operation loadArrayValues(i:Integer, values : Map(Integer, String), array: XMI!t_leafnode){
+	var value: String;
+	for (leafnode in array.children.select(a|a.tagName = "leafnode")){
+		switch(leafnode.getAttribute("xsi:type")){
+			case "san:LeafNodeString": value = leafnode.a_value;
+			case "san:LeafNodeGlobalVariable": value = leafnode.a_variable;
+			case "san:Array": loadArrayValues(i, values, leafnode);
+		}
+		if (value.length() == 0)
+			value = "0";
+		values.put(i, leafnode.a_value);
+		i++;
+	}
+}%]
+
+
+[%  
+	@template
+	operation printCoordPlace(place: XMI!t_places, placesMap: Map<String, Tuple>){
+		var valx: Integer;
+		var valy: Integer;
+		
+		if (placesMap.containsKey(place.a_name)){
+			valx = placesMap.get(place.a_name).x; 
+			valy = placesMap.get(place.a_name).y; 
+		}
+		else{
+			valx = 0;
+			valy = 0;
+		}		
+%]		<int id="x">[%=valx%]</int>
+		<int id="y">[%=valy%]</int>
+[%}%]

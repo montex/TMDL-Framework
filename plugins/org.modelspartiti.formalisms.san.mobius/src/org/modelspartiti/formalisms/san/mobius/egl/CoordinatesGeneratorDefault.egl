@@ -1,0 +1,231 @@
+[%  function getPlacesMapDefault(x, y, editor_width: Integer): Tuple{
+	var coordMap: Map<String, Tuple>;
+	var name: String;
+	var coord: Tuple<Integer, Integer>;
+	var result: Tuple<Map, Integer, Integer>;
+		
+	for (place in XMI!t_places.all){
+		name = place.a_name.asString;
+		coord = new Tuple(x = x, y = y);
+		coordMap.put(name, coord);
+		if(x < editor_width)
+			x = x+60;
+		else{
+			x = 5;
+			y = y+70;
+		}
+ 	} 
+ 	result = new Tuple(map = coordMap, x = x, y = y);
+ 	return result;
+}%]
+
+[%  operation getInputGatesMapDefault(x, y, editor_width: Integer): Tuple{
+	var coordMap: Map<String, Tuple>;
+	var name: String;
+	var coord: Tuple<Integer, Integer>;
+	var result: Tuple<Map, Integer, Integer>;
+		
+	for (gate in XMI!t_gates.all){
+		if (gate.getAttribute("xsi:type").asString.equals("san:InputGate")){
+			name = gate.a_name.asString;
+			coord = new Tuple(x = x, y = y);
+			coordMap.put(name, coord);
+			if(x < editor_width)
+				x = x+60;
+			else{
+				x = 5;
+				y = y+70;
+			}
+		}
+ 	} 
+ 	result = new Tuple(map = coordMap, x = x, y = y);
+ 	return result;
+}%]
+
+[%  operation getOutputGatesMapDefault(x, y, editor_width: Integer): Tuple{
+	var coordMap: Map<String, Tuple>;
+	var name: String;
+	var coord: Tuple<Integer, Integer>;
+	var result: Tuple<Map, Integer, Integer>;
+		
+	for (gate in XMI!t_gates.all){
+		if (gate.getAttribute("xsi:type").asString.equals("san:OutputGate")){
+			name = gate.a_name.asString;
+			coord = new Tuple(x = x, y = y);
+			coordMap.put(name, coord);
+			if(x < editor_width)
+				x = x+60;
+			else{
+				x = 5;
+				y = y+70;
+			}
+		}
+ 	} 
+ 	result = new Tuple(map = coordMap, x = x, y = y);
+ 	return result;
+}%]
+
+[%  operation getInstantaneousActivitiesMapDefault(x, y, editor_width: Integer): Tuple{
+	var coordMap: Map<String, Tuple>;
+	var name: String;
+	var coord: Tuple<Integer, Integer>;
+	var result: Tuple<Map, Integer, Integer>;
+		
+	for (activity in XMI!t_activities.all){
+		if (activity.getAttribute("xsi:type").asString.equals("san:InstantaneousActivity")){
+			name = activity.a_name.asString;
+			coord = new Tuple(x = x, y = y);
+			coordMap.put(name, coord);
+			if(x < editor_width)
+				x = x+60;
+			else{
+				x = 5;
+				y = y+70;
+			}
+		}
+ 	} 
+ 	result = new Tuple(map = coordMap, x = x, y = y);
+ 	return result;
+}%]
+
+[%  operation getTimedActivitiesMapDefault(x, y, editor_width: Integer): Tuple{
+	var coordMap: Map<String, Tuple>;
+	var name: String;
+	var coord: Tuple<Integer, Integer>;
+	var result: Tuple<Map, Integer, Integer>;
+		
+	for (activity in XMI!t_activities.all){
+		if (activity.getAttribute("xsi:type").asString.equals("san:TimedActivity")){
+			name = activity.a_name.asString;
+			coord = new Tuple(x = x, y = y);
+			coordMap.put(name, coord);
+			if(x < editor_width)
+				x = x+60;
+			else{
+				x = 5;
+				y = y+70;
+			}
+		}
+ 	} 
+ 	result = new Tuple(map = coordMap, x = x, y = y);
+ 	return result;
+}%]
+
+[%  operation getCasesMapDefault(activityName: String): Map<String, Tuple>{
+		return calculateCasesMap(activityName);
+}%]
+ 
+ 
+ 
+ 
+ [% operation calculateCasesMapDefault(activityName: String, activityX, activityY: Integer): Map<String, Tuple>{
+ 	var map: Map<String, Tuple>;
+ 	var key: String;
+ 	var coord: Tuple<x, y>;
+	var valx: Integer;
+	var valy: Integer;
+	var half_cases: Integer;
+	var val: Integer;
+	var listCorrectY: OrderedSet<Integer>;
+	var i: Integer;
+	var casesList: List<t_cases>;
+	
+	for (activity in XMI!t_activities){
+		if(activity.a_name.asString.equals(activityName)){
+			
+			casesList = activity.children.select(a|a.tagName="cases");
+	
+			half_cases = (casesList.size().asFloat/2.0).floor();
+			i = 1;
+			val = activityY - (10*(half_cases));
+			while (i<casesList.size()){
+				listCorrectY.add(val);
+				val = val + 10;
+				i++;
+			}
+			if ((casesList.size().asFloat/2.0).floor() == (casesList.size().asFloat/2.0).ceiling())
+				val = val + 10;
+				
+			listCorrectY.add(val);
+			
+			i = 0;
+			
+			for(caseAct in activity.children.select(a|a.tagName="cases")){
+				key = caseAct.a_ID.asString;
+				valx = activityX + 4;
+				valy = listCorrectY.at(i);
+				i ++;
+				coord = new Tuple(x = valx, y = valy);
+				map.put(key, coord);	
+			}
+		}
+	}
+	return map;
+ }%] 
+ 
+ 
+ [%  
+	operation getCoordPlaceDefault(name: String, placesMapDefault: Map<String, Tuple>): Tuple{
+		var valx: Integer;
+		var valy: Integer;
+		
+		if (placesMapDefault.containsKey(name)){
+	 		valx = placesMapDefault.get(name).x; 
+			valy = placesMapDefault.get(name).y;  				
+ 		}
+		else{
+			valx = 0;
+			valy = 0;
+		}		
+		coord = new Tuple(x = valx, y = valy);		
+		return coord;
+}%]
+ 
+ 
+[%  
+	operation getCoordActivityDefault(
+	  name: String, 
+	  instantActivitiesMapDefault: Map<String, Tuple>, 
+	  timedActivitiesMapDefault: Map<String, Tuple>): Tuple{
+		var valx: Integer;
+		var valy: Integer;
+		var coord: Tuple;
+		
+		
+		if (instantActivitiesMapDefault.containsKey(name)){
+			valx = instantActivitiesMapDefault.get(name).x; 
+			valy = instantActivitiesMapDefault.get(name).y; 
+		}
+		else if (timedActivitiesMapDefault.containsKey(name)){
+			valx = timedActivitiesMapDefault.get(name).x; 
+			valy = timedActivitiesMapDefault.get(name).y;		
+		}
+		else{
+			valx = 0;
+			valy = 0;
+		}	
+		coord = new Tuple(x = valx, y = valy);
+		return coord;	
+}%]
+ 
+ [%  
+	operation getCoordCaseDefault(
+	  activityName, caseId: String, 
+	  instantActivitiesMapDefault: Map<String, Tuple>, 
+	  timedActivitiesMapDefault: Map<String, Tuple>): Tuple{
+		var valx: Integer;
+		var valy: Integer;
+		var activityX: Integer;
+		var activityY: Integer;
+		var casesMap: Map<String, Tuple>;
+		var coord: Tuple;
+		
+		coord = getCoordActivityDefault(activityName, instantActivitiesMapDefault, timedActivitiesMapDefault);
+		casesMap = calculateCasesMapDefault(activityName, coord.x, coord.y);
+		if (casesMap.containsKey(caseId)){
+			valx = casesMap.get(caseId).x; 
+			valy = casesMap.get(caseId).y; 
+			coord = new Tuple(x = valx, y = valy);
+		}
+		return coord;	
+}%]
