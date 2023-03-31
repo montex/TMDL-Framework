@@ -28,6 +28,7 @@ release process, and to build the update site.
 
 The software in this repository has been create using the Eclipse Modeling
 distribution, and it is currently aligned with [version 2020-06](https://www.eclipse.org/downloads/packages/release/2020-06/r/eclipse-modeling-tools).
+You will need to have Java installed in your system; we recommend using Java 11, although newer versions might work as well.
 
 To be able to use the framework the following dependencies are needed:
 - Eclipse Modeling Framework (EMF)
