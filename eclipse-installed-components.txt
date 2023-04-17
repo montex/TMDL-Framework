@@ -1,0 +1,109 @@
+  Acceleo	3.7.10.202002210922	org.eclipse.acceleo.feature.group	Eclipse Modeling Project
+  Acceleo SDK	3.7.10.202002210922	org.eclipse.acceleo.sdk.feature.group	Eclipse Modeling Project
+  ATL - ATL Transformation Language	4.3.0.v202102071102	org.eclipse.m2m.atl.feature.group	Eclipse Modeling Project
+  ATL - ATL Transformation Language	4.3.0.v202102071102	org.eclipse.m2m.atl.emftvm.feature.group	Eclipse Modeling Project
+  ATL SDK - ATL Transformation Language SDK	4.3.0.v202102071102	org.eclipse.m2m.atl.sdk.feature.group	Eclipse Modeling Project
+  CDO Model Repository EPP	4.10.0.v20200610-0352	org.eclipse.emf.cdo.epp.feature.group	Eclipse Modeling Project
+  CodeTogether Collaboration	4.0.1.202104081007	com.genuitec.eclipse.codetogether.feature.feature.group	Genuitec, LLC
+  Corrosion: Rust edition in Eclipse IDE	1.2.0.202103130942	org.eclipse.corrosion.feature.feature.group	Eclipse Corrosion
+  Dandelion and CLISP (Linux, x86)	2.49.92	de.defmacro.dandelion.feature.clisp.linux.x86.feature.group	Michael Bohn
+  Dandelion and CLISP (MacOS X, Intel)	2.49.93	de.defmacro.dandelion.feature.clisp.mac.intel.feature.group	Michael Bohn
+  Dandelion and CLISP (MacOS X, ppc)	2.49.2	de.defmacro.dandelion.feature.clisp.mac.ppc.feature.group	Michael Bohn
+  Dandelion and CLISP (win, x86)	2.49.2	de.defmacro.dandelion.feature.clisp.win32.x86.feature.group	Michael Bohn
+  Dandelion and SBCL (Linux, x86)	2.0.1	de.defmacro.dandelion.feature.sbcl.linux.x86.feature.group	Michael Bohn
+  Dandelion and SBCL (MacOS X, Intel)	2.0.11	de.defmacro.dandelion.feature.sbcl.mac.intel.feature.group	Michael Bohn
+  Dandelion and SBCL (MacOS X, ppc)	1.1.10	de.defmacro.dandelion.feature.sbcl.mac.ppc.feature.group	Michael Bohn
+  Dandelion and SBCL (win, x86)	2.0.1	de.defmacro.dandelion.feature.sbcl.win32.x86.feature.group	Michael Bohn
+  Eclipse e4 Tools	4.16.0.v20200522-1402	org.eclipse.e4.core.tools.feature.feature.group	Eclipse.org
+  Eclipse Java Development Tools	3.18.400.v20200604-0540	org.eclipse.jdt.feature.group	Eclipse.org
+  Eclipse Modeling Tools	4.16.0.20200615-1200	epp.package.modeling	Eclipse Packaging Project
+  Eclipse Plug-in Development Environment	3.14.400.v20200604-0540	org.eclipse.pde.feature.group	Eclipse.org
+  Eclipse Project SDK	4.16.0.v20200604-0951	org.eclipse.sdk.feature.group	Eclipse.org
+  Ecore Diagram Editor	3.3.2.201909230743	org.eclipse.emf.ecoretools.design.feature.group	Eclipse Modeling Project
+  EMC Abstract Spreadsheet Driver	2.2.0.202009032353	org.eclipse.epsilon.emc.spreadsheets.feature.feature.group	Eclipse Modeling Project
+  EMC Google Spreadsheet Driver	2.2.0.202009032353	org.eclipse.epsilon.emc.spreadsheets.google.feature.feature.group	Eclipse Modeling Project
+  EMC Google Spreadsheet Driver Development Tools	2.2.0.202009032353	org.eclipse.epsilon.emc.spreadsheets.google.dt.feature.feature.group	Eclipse Modeling Project
+  EMC Microsoft Excel Spreadsheet Driver	2.2.0.202009032353	org.eclipse.epsilon.emc.spreadsheets.excel.feature.feature.group	Eclipse Modeling Project
+  EMC Microsoft Excel Spreadsheet Driver Development Tools	2.2.0.202009032353	org.eclipse.epsilon.emc.spreadsheets.excel.dt.feature.feature.group	Eclipse Modeling Project
+  EMF - Eclipse Modeling Framework SDK	2.22.0.v20200519-1135	org.eclipse.emf.sdk.feature.group	Eclipse Modeling Project
+  EMF Forms SDK	1.24.0.20200303-1319	org.eclipse.emf.ecp.emfforms.sdk.feature.feature.group	Eclipse Modeling Project
+  EMF Model Comparison for EUnit (EMF Compare 3.x / Kepler and after)	2.2.0.202009032353	org.eclipse.epsilon.eunit.dt.emf.feature.feature.group	Eclipse Modeling Project
+  EMF Model Query SDK	1.12.0.201805030653	org.eclipse.emf.query.sdk.feature.group	Eclipse Modeling Project
+  EMF Model Transaction SDK	1.12.0.201805140824	org.eclipse.emf.transaction.sdk.feature.group	Eclipse Modeling Project
+  EMF Parsley SDK	1.11.0.v20200424-1436	org.eclipse.emf.parsley.sdk.feature.group	Eclipse Modeling Project
+  EMF Parsley SDK Developer Resources	1.11.0.v20200424-1436	org.eclipse.emf.parsley.sdk.source.feature.group	Eclipse Modeling Project
+  EMF Validation Framework SDK	1.12.1.201812070911	org.eclipse.emf.validation.sdk.feature.group	Eclipse Modeling Project
+  Epsilon Core	2.2.0.202009032353	org.eclipse.epsilon.core.feature.feature.group	Eclipse Modeling Project
+  Epsilon Core Development Tools	2.2.0.202009032353	org.eclipse.epsilon.core.dt.feature.feature.group	Eclipse Modeling Project
+  Epsilon CSV Driver	2.2.0.202009032353	org.eclipse.epsilon.emc.csv.feature.feature.group	Eclipse Modeling Project
+  Epsilon CSV Driver Development Tools	2.2.0.202009032353	org.eclipse.epsilon.emc.csv.dt.feature.feature.group	Eclipse Modeling Project
+  Epsilon Development Tools for EMF	2.2.0.202009032353	org.eclipse.epsilon.emf.dt.feature.feature.group	Eclipse Modeling Project
+  Epsilon Development Tools for Simulink	2.2.0.202009032353	org.eclipse.epsilon.simulink.dt.feature.feature.group	Eclipse Modeling Project
+  Epsilon Development Tools for UML	2.2.0.202009032353	org.eclipse.epsilon.uml.dt.feature.feature.group	Eclipse Modeling Project
+  Epsilon EMF Integration	2.2.0.202009032353	org.eclipse.epsilon.emf.feature.feature.group	Eclipse Modeling Project
+  Epsilon GraphML Integration	2.2.0.202009032353	org.eclipse.epsilon.emc.graphml.feature.feature.group	Eclipse Modeling Project
+  Epsilon Simulink Integration	2.2.0.202009032353	org.eclipse.epsilon.simulink.feature.feature.group	Eclipse Modeling Project
+  Epsilon UML Integration	2.2.0.202009032353	org.eclipse.epsilon.uml.feature.feature.group	Eclipse Modeling Project
+  Epsilon Validation Language EMF Integration	2.2.0.202009032353	org.eclipse.epsilon.evl.emf.validation.feature.feature.group	Eclipse Modeling Project
+  Epsilon Wizard Language EMF Integration	2.2.0.202009032353	org.eclipse.epsilon.ewl.emf.feature.feature.group	Eclipse Modeling Project
+  Epsilon Wizard Language GMF Integration	2.2.0.202009032353	org.eclipse.epsilon.ewl.gmf.feature.feature.group	Eclipse Modeling Project
+  Eugenia	2.2.0.202009032353	org.eclipse.epsilon.eugenia.feature.feature.group	Eclipse Modeling Project
+  Flexmi	2.2.0.202009032353	org.eclipse.epsilon.flexmi.feature.feature.group	Eclipse Modeling Project
+  Flexmi Development Tools	2.2.0.202009032353	org.eclipse.epsilon.flexmi.dt.feature.feature.group	Eclipse Modeling Project
+  GEF (MVC) SDK	3.11.0.201606061308	org.eclipse.gef.sdk.feature.group	Eclipse GEF
+  Git integration for Eclipse	5.8.0.202006091008-r	org.eclipse.egit.feature.group	Eclipse EGit
+  Graphical Modeling Framework (GMF) Runtime SDK	1.13.0.202004160913	org.eclipse.gmf.runtime.sdk.feature.group	Eclipse Modeling Project
+  Human Usable Textual Notation Core	2.2.0.202009032353	org.eclipse.epsilon.hutn.feature.feature.group	Eclipse Modeling Project
+  Human Usable Textual Notation Development Tools	2.2.0.202009032353	org.eclipse.epsilon.hutn.dt.feature.feature.group	Eclipse Modeling Project
+  m2e - Maven Integration for Eclipse (includes Incubating components)	1.16.0.20200610-1735	org.eclipse.m2e.feature.feature.group	Eclipse.org - m2e
+  Marketplace Client	1.8.3.v20200526-1554	org.eclipse.epp.mpc.feature.group	Eclipse Marketplace Client
+  Model comparison (EMF Compare) - Core - SDK	3.3.11.202005260905	org.eclipse.emf.compare.source.feature.group	Eclipse Modeling Project
+  Model comparison (EMF Compare) - EGit support	3.3.11.202005260905	org.eclipse.emf.compare.egit.feature.group	Eclipse Modeling Project
+  Model comparison (EMF Compare) - SDK	3.3.11.202005260905	org.eclipse.emf.compare.ide.ui.source.feature.group	Eclipse Modeling Project
+  Model comparison (EMF Compare) - Sirius support (Experimental)- SDK	3.3.11.202005260905	org.eclipse.emf.compare.diagram.sirius.source.feature.group	Eclipse Modeling Project
+  MoDisco SDK	1.5.1.v20200309-1158	org.eclipse.modisco.sdk.feature.feature.group	Eclipse Modeling Project
+  MoDisco SDK Developer Resources	1.5.1.v20200309-1158	org.eclipse.modisco.sdk.feature.source.feature.group	Eclipse Modeling Project
+  Mylyn WikiText	3.0.36.202002070035	org.eclipse.mylyn.wikitext_feature.feature.group	Eclipse Mylyn
+  OCL Classic SDK: Ecore/UML Parsers,Evaluator,Edit	5.12.0.v20200608-1555	org.eclipse.ocl.all.sdk.feature.group	Eclipse OCL
+  OCL Classic SDK: Ecore/UML Parsers,Evaluator,Edit Developer Resources	5.12.0.v20200608-1555	org.eclipse.ocl.all.sdk.source.feature.group	Eclipse OCL
+  OCL Examples and Editors SDK	6.12.0.v20200608-1555	org.eclipse.ocl.examples.feature.group	Eclipse OCL
+  OCL Examples and Editors SDK Developer Resources	6.12.0.v20200608-1555	org.eclipse.ocl.examples.source.feature.group	Eclipse OCL
+  Papyrus base elements for code generation	2.0.0.202105261452	org.eclipse.papyrus.designer.languages.common.feature.feature.group	Eclipse Modeling Project
+  Papyrus base elements for code generation Developer Resources	2.0.0.202105261452	org.eclipse.papyrus.designer.languages.common.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus C code generation	2.0.0.202105150841	org.eclipse.papyrus.designer.languages.c.feature.feature.group	Eclipse Modeling Project
+  Papyrus C code generation Developer Resources	2.0.0.202105150841	org.eclipse.papyrus.designer.languages.c.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus C++ profile, view and code generation	2.0.0.202105261452	org.eclipse.papyrus.designer.languages.cpp.feature.feature.group	Eclipse Modeling Project
+  Papyrus C++ profile, view and code generation Developer Resources	2.0.0.202105261452	org.eclipse.papyrus.designer.languages.cpp.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus Designer Components, develop and deploy component based applications	2.0.0.202105261452	org.eclipse.papyrus.designer.components.main.feature.feature.group	Eclipse Modeling Project
+  Papyrus Designer Components, develop and deploy component based applications Developer Resources	2.0.0.202105261452	org.eclipse.papyrus.designer.components.main.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus Designer Monitoring	2.0.0.202105150841	org.eclipse.papyrus.designer.monitoring.feature.feature.group	Eclipse Modeling Project
+  Papyrus Designer Monitoring Developer Resources	2.0.0.202105150841	org.eclipse.papyrus.designer.monitoring.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus Designer Real Time	2.0.0.202105201954	org.eclipse.papyrus.designer.realtime.feature.feature.group	Eclipse Modeling Project
+  Papyrus Designer Real Time Developer Resources	2.0.0.202105201954	org.eclipse.papyrus.designer.realtime.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus Designer Transformation, develop and deploy component based applications	2.0.0.202105150841	org.eclipse.papyrus.designer.transformation.main.feature.feature.group	Eclipse Modeling Project
+  Papyrus Designer Transformation, develop and deploy component based applications Developer Resources	2.0.0.202105150841	org.eclipse.papyrus.designer.transformation.main.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus Designer Unified component model	2.0.0.202105150841	org.eclipse.papyrus.designer.ucm.feature.feature.group	Eclipse Modeling Project
+  Papyrus Designer Unified component model Developer Resources	2.0.0.202105150841	org.eclipse.papyrus.designer.ucm.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus for UML	4.8.0.202006100749	org.eclipse.papyrus.sdk.feature.feature.group	Eclipse Modeling Project
+  Papyrus IDL profile and code generation	2.0.0.202105150841	org.eclipse.papyrus.designer.languages.idl.feature.feature.group	Eclipse Modeling Project
+  Papyrus IDL profile and code generation Developer Resources	2.0.0.202105150841	org.eclipse.papyrus.designer.languages.idl.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus Java profile, library and code generation	2.0.0.202105150841	org.eclipse.papyrus.designer.languages.java.feature.feature.group	Eclipse Modeling Project
+  Papyrus Java profile, library and code generation Developer Resources	2.0.0.202105150841	org.eclipse.papyrus.designer.languages.java.feature.source.feature.group	Eclipse Modeling Project
+  Papyrus Tracing support for Designer	2.0.0.202105231718	org.eclipse.papyrus.designer.components.tracing.feature.feature.group	Eclipse Modeling Project
+  Papyrus Tracing support for Designer Developer Resources	2.0.0.202105231718	org.eclipse.papyrus.designer.components.tracing.feature.source.feature.group	Eclipse Modeling Project
+  Picto	2.2.0.202009032353	org.eclipse.epsilon.picto.feature.feature.group	Eclipse Modeling Project
+  PlantUML Ecore Feature	1.1.26	net.sourceforge.plantuml.ecore.feature.feature.group	PlantUML Team
+  PlantUML ELK Library Feature	0.7.1	net.sourceforge.plantuml.lib.elk.feature.feature.group	PlantUML Team
+  PlantUML Feature	1.1.26	net.sourceforge.plantuml.feature.feature.group	PlantUML Team
+  PlantUML JLatexMath Library Feature	1.0.7	net.sourceforge.plantuml.lib.jlatexmath.feature.feature.group	PlantUML Team
+  PlantUML Library Feature	1.2021.5	net.sourceforge.plantuml.lib.feature.feature.group	PlantUML Team
+  Sirius ELK Integration (Experimental)	6.4.1.202012210909	org.eclipse.sirius.diagram.elk.feature.feature.group	Eclipse Modeling Project
+  Sirius Specifier Environment	6.4.1.202012210909	org.eclipse.sirius.specifier.feature.group	Eclipse Modeling Project
+  Sirius Support for AQL	6.4.1.202012210909	org.eclipse.sirius.aql.feature.group	Eclipse Modeling Project
+  Tip of the Day UI Feature	0.2.1000.v20200522-1444	org.eclipse.tips.feature.feature.group	Eclipse.org
+  UML Support for VIATRA (Incubation)	2.5.0.202012091732	org.eclipse.viatra.integration.uml.feature.feature.group	Eclipse VIATRA Project
+  UML2 Extender SDK	5.5.1.v20200302-1312	org.eclipse.uml2.sdk.feature.group	Eclipse Modeling Project
+  VIATRA Query and Transformation SDK	2.5.0.202012091732	org.eclipse.viatra.query.sdk.feature.source.feature.group	Eclipse VIATRA Project
+  VIATRA Query and Transformation SDK Extensions (Incubation)	0.25.0.202012091732	org.eclipse.viatra.query.sdk.extensions.feature.feature.group	Eclipse VIATRA Project
+  XSD - XML Schema Definition SDK	2.22.0.v20200324-0723	org.eclipse.xsd.sdk.feature.group	Eclipse Modeling Project
+  Xtext Complete SDK	2.22.0.v20200602-1533	org.eclipse.xtext.sdk.feature.group	Eclipse Xtext

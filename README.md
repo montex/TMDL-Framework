@@ -35,8 +35,9 @@ To be able to use the framework the following dependencies are needed:
 - Sirius
 - Epsilon
 
-All of them can be found in the Eclipse Marketplace or in the default update
-site that comes configured in the default installation of Eclipse.
+All of them can be found in the Eclipse Marketplace or in the default update site that comes configured in the default installation of Eclipse.
+
+If you are unsure about versions or individual components, please see the file [eclipse-installed-components.txt](eclipse-installed-components.txt), which contains a list of all the features available in the Eclipse installation that has been used during development.
 
 For more information see the [CONTRIBUTING](CONTRIBUTING.md) file.
 
